@@ -6,13 +6,13 @@
 # data/ so the dashboard at threats.aegispub.com stays live.
 #
 # TOOL EXECUTION ORDER:
-#   Tool 05 → check VPS alive         → data/posture.json
-#   scp     → fetch Cowrie log        → /tmp/cowrie.json
+#   Tool 05 → check VPS alive            → data/posture.json
+#   scp     → fetch Cowrie log           → /tmp/cowrie.json
 #   Tool 26 → parse sessions → IR cases  → data/ir_cases.json
-#   Tool 27 → enrich attacker IPs     → data/threat_ips.json
-#   Tool 29 → filter false positives  → data/fp_filter.json
-#   Tool 30 → aggregate all metrics   → data/stats.json
-#   Tool 07 → verify data integrity   → (exit code check)
+#   Tool 27 → enrich attacker IPs        → data/threat_ips.json
+#   Tool 29 → filter false positives     → data/fp_filter.json
+#   Tool 30 → aggregate all metrics      → data/stats.json
+#   Tool 07 → verify data integrity      → (exit code check)
 #   git     → commit + push data/
 #
 # SECRETS REQUIRED (repo Settings → Secrets → Actions):
@@ -20,12 +20,6 @@
 #   ORACLE_VPS_IP         Public IP of AWS EC2 running Cowrie
 #   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
 #   OTX_API_KEY           AlienVault OTX free account
-#
-# FIRST-TIME SETUP (run once manually before enabling schedule):
-#   go run tools/07_file_integrity_live.go \
-#     --create-baseline data/integrity_baseline.json \
-#     --path data/
-#   git add data/integrity_baseline.json && git commit -m "init: integrity baseline" && git push
 
 name: THIR Live Pipeline
 
@@ -99,9 +93,11 @@ jobs:
 
       # ----------------------------------------------------------------
       # 5. Fetch Cowrie logs from AWS EC2
-      #    Cowrie writes one JSON event per line (NDJSON) to cowrie.json.
+      #    continue-on-error: true — if VPS unreachable, skip gracefully
       # ----------------------------------------------------------------
       - name: Fetch Cowrie logs from AWS EC2
+        id: fetch_logs
+        continue-on-error: true
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
@@ -115,8 +111,6 @@ jobs:
 
       # ----------------------------------------------------------------
       # 6. Tool 26 — parse Cowrie sessions → IR cases
-      #    Groups raw events by session ID, maps TTPs, scores severity.
-      #    Output: data/ir_cases.json
       # ----------------------------------------------------------------
       - name: Tool 26 — incident timeline (Cowrie → IR cases)
         run: |
@@ -141,7 +135,6 @@ jobs:
 
       # ----------------------------------------------------------------
       # 8. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
-      #    Output: data/threat_ips.json
       # ----------------------------------------------------------------
       - name: Tool 27 — threat intel feeder (IP enrichment)
         env:
@@ -155,7 +148,6 @@ jobs:
 
       # ----------------------------------------------------------------
       # 9. Tool 29 — false positive filter
-      #    Output: data/fp_filter.json
       # ----------------------------------------------------------------
       - name: Tool 29 — false positive tracker
         run: |
@@ -168,7 +160,6 @@ jobs:
 
       # ----------------------------------------------------------------
       # 10. Tool 30 — aggregate pipeline metrics
-      #     Output: data/stats.json
       # ----------------------------------------------------------------
       - name: Tool 30 — metric dashboard exporter
         run: |
@@ -204,8 +195,8 @@ jobs:
       # ----------------------------------------------------------------
       - name: Commit and push updated data
         run: |
-          git config user.name  "THIR Pipeline"
-          git config user.email "pipeline@thir.live"
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --staged --quiet; then
             echo "No data changes — nothing to commit"
