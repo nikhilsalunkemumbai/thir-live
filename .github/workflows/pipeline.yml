@@ -36,6 +36,7 @@ concurrency:
 jobs:
   update-threat-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 20   # kill the whole job if it hangs beyond 20 min
 
     # Write permission needed to push data/ updates back to repo
     permissions:
@@ -81,6 +82,7 @@ jobs:
       # ----------------------------------------------------------------
       - name: Tool 05 — network monitor (honeypot liveness)
         continue-on-error: true
+        timeout-minutes: 3
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
@@ -98,13 +100,16 @@ jobs:
       - name: Fetch Cowrie logs from AWS EC2
         id: fetch_logs
         continue-on-error: true
+        timeout-minutes: 5   # hard stop if SCP hangs
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
           scp \
             -i /tmp/vps_key \
             -o StrictHostKeyChecking=no \
-            -o ConnectTimeout=15 \
+            -o ConnectTimeout=60 \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=3 \
             "ubuntu@${VPS_IP}:/home/cowrie/cowrie/var/log/cowrie/cowrie.json" \
             /tmp/cowrie.json
           echo "Fetched $(wc -l < /tmp/cowrie.json) log lines"
@@ -137,6 +142,7 @@ jobs:
       # 8. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
       # ----------------------------------------------------------------
       - name: Tool 27 — threat intel feeder (IP enrichment)
+        timeout-minutes: 5
         env:
           ABUSEIPDB_API_KEY: ${{ secrets.ABUSEIPDB_API_KEY }}
           OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
@@ -162,6 +168,7 @@ jobs:
       # 10. Tool 30 — aggregate pipeline metrics
       # ----------------------------------------------------------------
       - name: Tool 30 — metric dashboard exporter
+        timeout-minutes: 3
         run: |
           go run tools/30_metric_exporter_live.go \
             --ir-cases   data/ir_cases.json   \
