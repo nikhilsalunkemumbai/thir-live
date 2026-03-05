@@ -94,7 +94,33 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 5. Fetch Cowrie logs from AWS EC2
+      # 5. Pre-flight — verify EC2 reachable via SSH
+      #    Checks: SSH auth, Cowrie log directory, cowrie.json exists.
+      #    continue-on-error: true — failure is logged but pipeline continues.
+      # ----------------------------------------------------------------
+      - name: Pre-flight — verify EC2 SSH + Cowrie log path
+        continue-on-error: true
+        timeout-minutes: 2
+        env:
+          VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
+        run: |
+          echo "━━━ [PRE-FLIGHT] Testing SSH connection to ${VPS_IP} ━━━"
+          ssh \
+            -i /tmp/vps_key \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=30 \
+            -o BatchMode=yes \
+            "ubuntu@${VPS_IP}" \
+            "echo '[OK] SSH auth success' && \
+             echo '[INFO] Hostname: '$(hostname) && \
+             echo '[INFO] Cowrie log dir contents:' && \
+             ls -lh /home/cowrie/cowrie/var/log/cowrie/ && \
+             echo '[INFO] cowrie.json size:' $(du -sh /home/cowrie/cowrie/var/log/cowrie/cowrie.json) && \
+             echo '[OK] Pre-flight passed'"
+          echo "━━━ [PRE-FLIGHT] Done ━━━"
+
+      # ----------------------------------------------------------------
+      # 6. Fetch Cowrie logs from AWS EC2
       #    continue-on-error: true — if VPS unreachable, skip gracefully
       # ----------------------------------------------------------------
       - name: Fetch Cowrie logs from AWS EC2
@@ -104,7 +130,8 @@ jobs:
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
-          scp \
+          echo "━━━ [SCP] Fetching cowrie.json from ${VPS_IP} ━━━"
+          scp -v \
             -i /tmp/vps_key \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=60 \
@@ -112,10 +139,11 @@ jobs:
             -o ServerAliveCountMax=3 \
             "ubuntu@${VPS_IP}:/home/cowrie/cowrie/var/log/cowrie/cowrie.json" \
             /tmp/cowrie.json
+          echo "━━━ [SCP] Exit code: $? ━━━"
           echo "Fetched $(wc -l < /tmp/cowrie.json) log lines"
 
       # ----------------------------------------------------------------
-      # 6. Tool 26 — parse Cowrie sessions → IR cases
+      # 7. Tool 26 — parse Cowrie sessions → IR cases
       # ----------------------------------------------------------------
       - name: Tool 26 — incident timeline (Cowrie → IR cases)
         run: |
@@ -125,7 +153,7 @@ jobs:
             --verbose
 
       # ----------------------------------------------------------------
-      # 7. Extract unique attacker IPs for Tool 27
+      # 8. Extract unique attacker IPs for Tool 27
       # ----------------------------------------------------------------
       - name: Extract attacker IPs from IR cases
         run: |
@@ -139,7 +167,7 @@ jobs:
           " > /tmp/attacker_ips.txt
 
       # ----------------------------------------------------------------
-      # 8. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
+      # 9. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
       # ----------------------------------------------------------------
       - name: Tool 27 — threat intel feeder (IP enrichment)
         timeout-minutes: 5
@@ -153,7 +181,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 9. Tool 29 — false positive filter
+      # 10. Tool 29 — false positive filter
       # ----------------------------------------------------------------
       - name: Tool 29 — false positive tracker
         run: |
@@ -165,7 +193,7 @@ jobs:
             --verbose
 
       # ----------------------------------------------------------------
-      # 10. Tool 30 — aggregate pipeline metrics
+      # 11. Tool 30 — aggregate pipeline metrics
       # ----------------------------------------------------------------
       - name: Tool 30 — metric dashboard exporter
         timeout-minutes: 3
@@ -179,7 +207,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 11. Tool 07 — file integrity verification
+      # 12. Tool 07 — file integrity verification
       # ----------------------------------------------------------------
       - name: Tool 07 — file integrity check
         continue-on-error: true
@@ -190,7 +218,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 12. Clean up sensitive files from runner
+      # 13. Clean up sensitive files from runner
       # ----------------------------------------------------------------
       - name: Clean up SSH key and temp files
         if: always()
@@ -198,7 +226,7 @@ jobs:
           rm -f /tmp/vps_key /tmp/cowrie.json /tmp/attacker_ips.txt
 
       # ----------------------------------------------------------------
-      # 13. Commit and push updated data/
+      # 14. Commit and push updated data/
       # ----------------------------------------------------------------
       - name: Commit and push updated data
         run: |
