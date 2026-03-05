@@ -1,0 +1,47 @@
+# THIR — .gitignore
+
+# Never commit secrets or keys
+*.pem
+*.key
+id_rsa
+id_ed25519
+.env
+.env.*
+secrets.yml
+secrets.yaml
+
+# Never commit raw honeypot logs (may contain sensitive attacker data)
+cowrie.json
+cowrie.log
+*.ndjson
+
+# Go build artifacts
+*.exe
+*.test
+/bin/
+/tmp/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+.venv/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# data/ JSON files are pipeline outputs — committed intentionally by the pipeline
+# Do NOT add data/*.json here

@@ -1,0 +1,217 @@
+# .github/workflows/pipeline.yml
+#
+# THIR LIVE PIPELINE
+# Runs every hour. Fetches Cowrie honeypot data from AWS EC2 Ubuntu,
+# processes it through the tool chain, and pushes updated JSON to
+# data/ so the dashboard at threats.aegispub.com stays live.
+#
+# TOOL EXECUTION ORDER:
+#   Tool 05 → check VPS alive         → data/posture.json
+#   scp     → fetch Cowrie log        → /tmp/cowrie.json
+#   Tool 26 → parse sessions → IR cases  → data/ir_cases.json
+#   Tool 27 → enrich attacker IPs     → data/threat_ips.json
+#   Tool 29 → filter false positives  → data/fp_filter.json
+#   Tool 30 → aggregate all metrics   → data/stats.json
+#   Tool 07 → verify data integrity   → (exit code check)
+#   git     → commit + push data/
+#
+# SECRETS REQUIRED (repo Settings → Secrets → Actions):
+#   ORACLE_VPS_SSH_KEY    Private SSH key for scp access to AWS EC2
+#   ORACLE_VPS_IP         Public IP of AWS EC2 running Cowrie
+#   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
+#   OTX_API_KEY           AlienVault OTX free account
+#
+# FIRST-TIME SETUP (run once manually before enabling schedule):
+#   go run tools/07_file_integrity_live.go \
+#     --create-baseline data/integrity_baseline.json \
+#     --path data/
+#   git add data/integrity_baseline.json && git commit -m "init: integrity baseline" && git push
+
+name: THIR Live Pipeline
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # every hour at :00
+  workflow_dispatch:        # manual trigger from Actions tab
+
+# Prevent overlapping runs if previous hour's job is still running
+concurrency:
+  group: thir-pipeline
+  cancel-in-progress: false
+
+jobs:
+  update-threat-data:
+    runs-on: ubuntu-latest
+
+    # Write permission needed to push data/ updates back to repo
+    permissions:
+      contents: write
+
+    steps:
+
+      # ----------------------------------------------------------------
+      # 1. Checkout
+      # ----------------------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # ----------------------------------------------------------------
+      # 2. Language runtimes
+      # ----------------------------------------------------------------
+      - name: Set up Go 1.21
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+          cache: false   # no go.mod in this repo — disable module cache
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # ----------------------------------------------------------------
+      # 3. Write SSH key for AWS EC2 access
+      # ----------------------------------------------------------------
+      - name: Prepare SSH key
+        run: |
+          echo "${{ secrets.ORACLE_VPS_SSH_KEY }}" > /tmp/vps_key
+          chmod 600 /tmp/vps_key
+
+      # ----------------------------------------------------------------
+      # 4. Tool 05 — check honeypot is alive
+      #    Writes data/posture.json with UP/DOWN status.
+      #    continue-on-error: true so pipeline keeps running even if
+      #    EC2 is temporarily unreachable.
+      # ----------------------------------------------------------------
+      - name: Tool 05 — network monitor (honeypot liveness)
+        continue-on-error: true
+        env:
+          VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
+        run: |
+          go run tools/05_network_monitor_live.go \
+            -h "$VPS_IP" \
+            -p 2222 \
+            --json \
+            -o data/posture.json \
+            -v
+
+      # ----------------------------------------------------------------
+      # 5. Fetch Cowrie logs from AWS EC2
+      #    Cowrie writes one JSON event per line (NDJSON) to cowrie.json.
+      # ----------------------------------------------------------------
+      - name: Fetch Cowrie logs from AWS EC2
+        env:
+          VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
+        run: |
+          scp \
+            -i /tmp/vps_key \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=15 \
+            "ubuntu@${VPS_IP}:/home/cowrie/cowrie/var/log/cowrie/cowrie.json" \
+            /tmp/cowrie.json
+          echo "Fetched $(wc -l < /tmp/cowrie.json) log lines"
+
+      # ----------------------------------------------------------------
+      # 6. Tool 26 — parse Cowrie sessions → IR cases
+      #    Groups raw events by session ID, maps TTPs, scores severity.
+      #    Output: data/ir_cases.json
+      # ----------------------------------------------------------------
+      - name: Tool 26 — incident timeline (Cowrie → IR cases)
+        run: |
+          python tools/26_incident_timeline_live.py \
+            --input-glob "/tmp/cowrie*.json" \
+            --output data/ir_cases.json \
+            --verbose
+
+      # ----------------------------------------------------------------
+      # 7. Extract unique attacker IPs for Tool 27
+      # ----------------------------------------------------------------
+      - name: Extract attacker IPs from IR cases
+        run: |
+          python -c "
+          import json, sys
+          with open('data/ir_cases.json') as f:
+              data = json.load(f)
+          ips = sorted({c['src_ip'] for c in data.get('cases', []) if c.get('src_ip')})
+          print(f'[INFO] Extracted {len(ips)} unique attacker IP(s)', file=sys.stderr)
+          print('\n'.join(ips))
+          " > /tmp/attacker_ips.txt
+
+      # ----------------------------------------------------------------
+      # 8. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
+      #    Output: data/threat_ips.json
+      # ----------------------------------------------------------------
+      - name: Tool 27 — threat intel feeder (IP enrichment)
+        env:
+          ABUSEIPDB_API_KEY: ${{ secrets.ABUSEIPDB_API_KEY }}
+          OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
+        run: |
+          go run tools/27_threat_intel_feeder_live.go \
+            --input /tmp/attacker_ips.txt \
+            --output data/threat_ips.json \
+            -v
+
+      # ----------------------------------------------------------------
+      # 9. Tool 29 — false positive filter
+      #    Output: data/fp_filter.json
+      # ----------------------------------------------------------------
+      - name: Tool 29 — false positive tracker
+        run: |
+          python tools/29_false_positive_live.py \
+            --input data/ir_cases.json \
+            --threat-ips data/threat_ips.json \
+            --output data/fp_filter.json \
+            --threshold 25 \
+            --verbose
+
+      # ----------------------------------------------------------------
+      # 10. Tool 30 — aggregate pipeline metrics
+      #     Output: data/stats.json
+      # ----------------------------------------------------------------
+      - name: Tool 30 — metric dashboard exporter
+        run: |
+          go run tools/30_metric_exporter_live.go \
+            --ir-cases   data/ir_cases.json   \
+            --fp-filter  data/fp_filter.json  \
+            --threat-ips data/threat_ips.json \
+            --posture    data/posture.json    \
+            --output     data/stats.json      \
+            -v
+
+      # ----------------------------------------------------------------
+      # 11. Tool 07 — file integrity verification
+      # ----------------------------------------------------------------
+      - name: Tool 07 — file integrity check
+        continue-on-error: true
+        run: |
+          go run tools/07_file_integrity_live.go \
+            --verify-baseline data/integrity_baseline.json \
+            --path data/ \
+            -v
+
+      # ----------------------------------------------------------------
+      # 12. Clean up sensitive files from runner
+      # ----------------------------------------------------------------
+      - name: Clean up SSH key and temp files
+        if: always()
+        run: |
+          rm -f /tmp/vps_key /tmp/cowrie.json /tmp/attacker_ips.txt
+
+      # ----------------------------------------------------------------
+      # 13. Commit and push updated data/
+      # ----------------------------------------------------------------
+      - name: Commit and push updated data
+        run: |
+          git config user.name  "THIR Pipeline"
+          git config user.email "pipeline@thir.live"
+          git add data/
+          if git diff --staged --quiet; then
+            echo "No data changes — nothing to commit"
+          else
+            TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
+            CASE_COUNT=$(python -c "import json; d=json.load(open('data/ir_cases.json')); print(d.get('total_cases',0))" 2>/dev/null || echo "?")
+            git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases)"
+            git push
+          fi
