@@ -76,7 +76,7 @@ jobs:
       # ----------------------------------------------------------------
       - name: Prepare SSH key
         run: |
-          echo "${{ secrets.ORACLE_VPS_SSH_KEY }}" > /tmp/vps_key
+          printf '%s\n' "${{ secrets.ORACLE_VPS_SSH_KEY }}" > /tmp/vps_key
           chmod 600 /tmp/vps_key
 
       # ----------------------------------------------------------------
