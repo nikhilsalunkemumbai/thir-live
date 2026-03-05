@@ -20,9 +20,15 @@
     <li><a href="#tools">Tools</a></li>
     <li><a href="#posture">Posture</a></li>
   </ul>
-  <div class="threat-level">
-    <div class="tl-dot" id="tl-dot"></div>
-    <span id="threat-label" style="color:var(--accent3)">LOADING</span>
+  <div style="display:flex;align-items:center;">
+    <div class="threat-level">
+      <div class="tl-dot" id="tl-dot"></div>
+      <span id="threat-label" style="color:var(--accent3)">LOADING</span>
+    </div>
+    <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark theme">
+      <span class="theme-toggle-icon" id="theme-icon">&#9788;</span>
+      <span id="theme-label">LIGHT</span>
+    </button>
   </div>
 </nav>
 
@@ -109,7 +115,7 @@
   <div class="attck-grid" id="attck-grid"></div>
   <div class="attck-legend">
     <div class="legend-item">
-      <div class="legend-dot" style="background:rgba(251,89,46,0.12);border-color:rgba(251,89,46,0.35)"></div>
+      <div class="legend-dot" style="background:rgba(255,61,113,0.12);border-color:rgba(255,61,113,0.35)"></div>
       <span style="color:#ff8aaa">Detected in honeypot / simulation</span>
     </div>
     <div class="legend-item">

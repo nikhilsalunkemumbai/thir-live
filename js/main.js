@@ -6,6 +6,40 @@
 // =============================================
 
 // --------------------------------------------------
+// Theme: dark / light toggle with localStorage persistence
+// --------------------------------------------------
+const THEME_KEY = 'thir-theme';
+
+function applyTheme(theme) {
+  const html  = document.documentElement;
+  const icon  = document.getElementById('theme-icon');
+  const label = document.getElementById('theme-label');
+
+  if (theme === 'light') {
+    html.setAttribute('data-theme', 'light');
+    if (icon)  icon.textContent  = '\u263D';  // crescent moon = click to go dark
+    if (label) label.textContent = 'DARK';
+  } else {
+    html.removeAttribute('data-theme');
+    if (icon)  icon.textContent  = '\u2600';  // sun = click to go light
+    if (label) label.textContent = 'LIGHT';
+  }
+}
+
+function initTheme() {
+  // Respect saved preference; default to dark
+  const saved = localStorage.getItem(THEME_KEY) || 'dark';
+  applyTheme(saved);
+
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+    const next    = current === 'light' ? 'dark' : 'light';
+    applyTheme(next);
+    localStorage.setItem(THEME_KEY, next);
+  });
+}
+
+// --------------------------------------------------
 // Simulation: rotate feed entries when pipeline offline
 // --------------------------------------------------
 function liveSimulate() {
@@ -33,9 +67,9 @@ function liveSimulate() {
 // Utility: animated number counter
 // --------------------------------------------------
 function animateCounter(el, target, duration = 1500) {
-  let current  = 0;
-  const step   = target / (duration / 16);
-  const timer  = setInterval(() => {
+  let current = 0;
+  const step  = target / (duration / 16);
+  const timer = setInterval(() => {
     current += step;
     if (current >= target) {
       el.textContent = target.toLocaleString();
@@ -61,6 +95,9 @@ document.getElementById('stat-iocs').textContent = '1,204';
 document.getElementById('stat-ttps').textContent = '23';
 
 document.addEventListener('DOMContentLoaded', async () => {
+  // Apply saved theme before anything renders (prevents flash)
+  initTheme();
+
   // Render static sections immediately (no fetch needed)
   renderTools();
   renderPosture();
@@ -82,13 +119,10 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadLiveData();
 
   if (pipelineOnline) {
-    // Re-render feeds with live data
     renderIPFeed();
     renderIOCFeed();
-    // Re-init map with live geo points if available
     if (liveMapPoints) initThreatMap();
   } else {
-    // Fall back to rotating simulation
     liveSimulate();
   }
 
