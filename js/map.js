@@ -6,11 +6,11 @@
 // =============================================
 
 const MAP_COLOR = {
-  brute:    '#ff3d71',
+  brute:    '#FB592E',
   c2:       '#ffaa00',
-  scan:     '#00aacc',
-  exploit:  '#ff3d71',
-  defender: '#39ff14',
+  scan:     '#0B67C3',
+  exploit:  '#FB592E',
+  defender: '#009A83',
 };
 
 // --------------------------------------------------
