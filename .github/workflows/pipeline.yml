@@ -207,15 +207,55 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
+      # 11.a Tool 30 — Tool 28 — SOC Handover Report
+      # ----------------------------------------------------------------
+      - name: Run Tool 28 — SOC Handover Report
+        run: |
+            python tools/28_soc_handover_live.py \
+              --ir-cases   data/ir_cases.json \
+              --threat-ips data/threat_ips.json \
+              --fp-filter  data/fp_filter.json \
+              --stats      data/stats.json \
+              --output     data/soc_handover.md \
+              --verbose
+          continue-on-error: true
+
+      # ----------------------------------------------------------------
       # 12. Tool 07 — file integrity verification
       # ----------------------------------------------------------------
-      - name: Tool 07 — file integrity check
-        continue-on-error: true
+      - name: Run Tool 07 — File Integrity Monitor
         run: |
-          go run tools/07_file_integrity_live.go \
-            --verify-baseline data/integrity_baseline.json \
-            --path data/ \
-            -v
+          BASELINE="data/integrity_baseline.json"
+          REBUILD=false
+
+          # Rebuild if baseline missing
+          if [ ! -f "$BASELINE" ]; then
+            echo "[Tool 07] Baseline missing — creating fresh baseline"
+            REBUILD=true
+          else
+            # Rebuild if baseline is older than 2 hours (7200 seconds)
+            BASELINE_AGE=$(( $(date +%s) - $(date -r "$BASELINE" +%s) ))
+            echo "[Tool 07] Baseline age: ${BASELINE_AGE}s"
+            if [ "$BASELINE_AGE" -gt 7200 ]; then
+              echo "[Tool 07] Baseline older than 2 hours — rebuilding"
+              REBUILD=true
+            fi
+          fi
+
+          if [ "$REBUILD" = "true" ]; then
+            go run tools/07_file_integrity_live.go \
+              --create-baseline "$BASELINE" \
+              --path data/ \
+              -v
+            echo "[Tool 07] Baseline created at $(date -u)"
+          else
+            echo "[Tool 07] Baseline is fresh — verifying"
+            go run tools/07_file_integrity_live.go \
+              --verify-baseline "$BASELINE" \
+              --path data/ \
+              -v
+          fi
+        continue-on-error: true
 
       # ----------------------------------------------------------------
       # 13. Clean up sensitive files from runner
