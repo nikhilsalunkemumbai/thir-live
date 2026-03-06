@@ -313,7 +313,7 @@ def build_ir_case(session_id: str, events: List[Dict]) -> Dict[str, Any]:
     duration_seconds = 0
     for e in events_sorted:
         if e.get("eventid") == "cowrie.session.closed":
-            duration_seconds = int(e.get("duration", 0))
+            duration_seconds = int(float(e.get("duration", 0)))
             break
 
     login_attempts = sum(1 for e in events_sorted if e.get("eventid") in
