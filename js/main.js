@@ -91,10 +91,11 @@ function updateClock() {
 // --------------------------------------------------
 // Bootstrap
 // --------------------------------------------------
-document.getElementById('stat-iocs').textContent = '1,204';
-document.getElementById('stat-ttps').textContent = '23';
-
 document.addEventListener('DOMContentLoaded', async () => {
+  const statIocs = document.getElementById('stat-iocs');
+  const statTtps = document.getElementById('stat-ttps');
+  if (statIocs) statIocs.textContent = '1,204';
+  if (statTtps) statTtps.textContent = '23';
   // Apply saved theme before anything renders (prevents flash)
   initTheme();
 
