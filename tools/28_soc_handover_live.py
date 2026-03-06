@@ -86,7 +86,9 @@ def build_report(ir, threats, fp, stats):
     total_cases       = (ir    or {}).get("total_cases",        0)
     confirmed_threats = (fp    or {}).get("confirmed_threats",  0)
     fp_count          = (fp    or {}).get("flagged_as_fp",       0)
-    fp_rate           = round((fp or {}).get("fp_rate", 0.0), 1)
+    raw_fp_rate       = (fp or {}).get("fp_rate", 0.0)
+    # fp_rate is stored as a fraction (0.925) not a percentage — convert
+    fp_rate           = round(raw_fp_rate * 100 if raw_fp_rate <= 1.0 else raw_fp_rate, 1)
     total_ips         = (threats or {}).get("total_ips",         0)
     hstatus           = (stats  or {}).get("honeypot_status",  "UNKNOWN")
     unique_countries  = (stats  or {}).get("unique_countries",   0)
@@ -167,10 +169,17 @@ def build_report(ir, threats, fp, stats):
         ln()
     else:
         for cc in clean_cases:
-            case_id = cc.get("case_id", "?")
-            src_ip  = cc.get("src_ip",  "?")
-            sev     = cc.get("severity","LOW")
-            full    = case_map.get(case_id, {})
+            # clean_cases can be plain strings (case_ids) or dicts
+            if isinstance(cc, str):
+                case_id = cc
+                full    = case_map.get(case_id, {})
+                src_ip  = full.get("src_ip",   "?")
+                sev     = full.get("severity", "LOW")
+            else:
+                case_id = cc.get("case_id", "?")
+                src_ip  = cc.get("src_ip",  "?")
+                sev     = cc.get("severity","LOW")
+                full    = case_map.get(case_id, {})
 
             login_success = full.get("login_success", False)
             attempts      = full.get("login_attempts", "?")
@@ -178,6 +187,14 @@ def build_report(ir, threats, fp, stats):
             downloads     = full.get("downloads", []) or []
             ttps          = full.get("ttps",      []) or []
             first_seen    = full.get("first_seen", "unknown")
+            last_seen     = full.get("last_seen",  "unknown")
+            duration      = full.get("duration_seconds", 0)
+            timeline      = full.get("timeline",  []) or []
+
+            # Detect special event types in timeline
+            tl_events     = [e.get("event","") for e in timeline]
+            has_tcpip     = any("direct-tcpip" in e for e in tl_events)
+            has_kex       = any("client.kex" in e for e in tl_events)
 
             ln(f"### {severity_badge(sev)} · {case_id}")
             ln()
@@ -185,9 +202,13 @@ def build_report(ir, threats, fp, stats):
             ln("|---|---|")
             ln(f"| **Source IP** | `{src_ip}` |")
             ln(f"| **First Seen** | {first_seen} |")
+            ln(f"| **Last Seen** | {last_seen} |")
+            ln(f"| **Session Duration** | {duration}s |")
             ln(f"| **Login Attempts** | {attempts} |")
             ln(f"| **Auth Success** | {'✅ Yes — session established' if login_success else '❌ No'} |")
 
+            if has_tcpip:
+                ln(f"| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt detected |")
             if commands:
                 ln(f"| **Commands Executed** | `{', '.join(commands[:5])}` |")
             if downloads:
@@ -196,11 +217,27 @@ def build_report(ir, threats, fp, stats):
                 ln(f"| **TTPs (MITRE)** | {' · '.join(ttps)} |")
             ln()
 
+            # Timeline
+            if timeline:
+                ln("**Attack Timeline:**")
+                ln()
+                ln("| Time (UTC) | Event |")
+                ln("|---|---|")
+                for e in timeline:
+                    ts  = e.get("timestamp", "?")[:19].replace("T", " ")
+                    evt = e.get("event", "?")
+                    ln(f"| `{ts}` | `{evt}` |")
+                ln()
+
             ln("**Recommended Actions:**")
             if sev in ("HIGH", "CRITICAL"):
                 ln(f"- [ ] Submit `{src_ip}` to AbuseIPDB if not already reported")
                 ln(f"- [ ] Block `{src_ip}` at perimeter firewall / security group")
-                ln(f"- [ ] Review commands for lateral movement indicators")
+                if has_tcpip:
+                    ln(f"- [ ] Investigate TCP tunnel target — attacker attempted port forwarding via honeypot")
+                    ln(f"- [ ] Check if target host/port in tunnel data is internal infrastructure")
+                if commands:
+                    ln(f"- [ ] Review commands for lateral movement indicators")
                 if downloads:
                     ln(f"- [ ] Submit download hashes to VirusTotal")
                     ln(f"- [ ] Run Tool 31 malware analyzer on captured payload")

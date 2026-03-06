@@ -8,60 +8,37 @@ Adapted from: InfraReadyPortfolio/06_soc_collaboration_tools/29_false_positive_t
 CHANGES FROM ORIGINAL (false_positive_tracker.py):
   1. read_alerts_csv()  REMOVED — read CSV with alert_id/signature_name/status
      REPLACED BY read_ir_cases_json() — reads data/ir_cases.json from Tool 26
-     KEPT: Path existence/is_file() checks, PermissionError/OSError handling, log_info pattern
 
   2. process_alerts()  REWORKED — same stats-dict accumulation pattern, new taxonomy
-     Original grouped by signature_name with "True/False Positive" status string
-     Live version groups by src_ip with AbuseIPDB score + ISP + session behaviour as FP signal
-     KEPT: missing-field skip+warning, log_info summary, stats dict structure
 
   3. generate_report()  REMOVED — CSV to stdout
      REPLACED BY write_fp_report() — writes data/fp_filter.json
 
   4. is_likely_fp()  NEW — three-signal FP decision function
      Signal 1: AbuseIPDB abuse_score below --threshold (default 25)
+               abuse_score >= 80 OVERRIDES all signals → always confirmed threat
      Signal 2: Known scanner/researcher ISP name match (Shodan, Censys, Rapid7 etc.)
      Signal 3: Mass-scanner behaviour pattern (no commands, no downloads, ≤2 failed logins)
+               Skipped if abuse_score >= 80 (high-confidence threat overrides behaviour)
      Returns (bool, str reason) — reason written to output for analyst review
 
   5. load_threat_ips()  NEW — optionally loads Tool 27 enrichment data
-     Builds {ip: enrichment_dict} lookup map
-     If --threat-ips not provided: runs without enrichment, signal 1 unavailable
 
   6. parse_args()  EXTENDED
-     REMOVED: --alerts-file
-     ADDED:   --input (ir_cases.json), --threat-ips (threat_ips.json, optional),
-              --output (fp_filter.json), --threshold (int, default 25)
-     KEPT:    -v/--verbose unchanged
 
-  7. log_info / log_warning / fatal_error  UNCHANGED — identical signatures and behaviour
+  7. log_info / log_warning / fatal_error  UNCHANGED
 
-ROLE IN THIR PIPELINE:
-  Reads data/ir_cases.json (Tool 26 output).
-  Optionally cross-references data/threat_ips.json (Tool 27 output) for AbuseIPDB scores.
-  Flags scanner bots / research IPs as false positives using three independent signals.
-  Writes data/fp_filter.json → pipeline and portfolio dashboard use clean_cases list only.
+v1.1 — HIGH CONFIDENCE OVERRIDE added:
+  IPs with AbuseIPDB score >= 80 are always confirmed threats regardless of
+  session behaviour. This prevents silent probes from high-risk IPs (score 100,
+  50 OTX pulses) being incorrectly filtered by Signal 3.
 
 GITHUB ACTIONS USAGE:
-  python tools/29_false_positive_live.py \
-    --input data/ir_cases.json \
-    --threat-ips data/threat_ips.json \
-    --output data/fp_filter.json \
+  python tools/29_false_positive_live.py \\
+    --input data/ir_cases.json \\
+    --threat-ips data/threat_ips.json \\
+    --output data/fp_filter.json \\
     --threshold 25
-
-OUTPUT FORMAT (data/fp_filter.json):
-  {
-    "generated_at": "2025-01-15T11:00:05Z",
-    "threshold_used": 25,
-    "total_cases_in":  10,
-    "confirmed_threats": 7,
-    "flagged_as_fp":    3,
-    "fp_rate":          0.3,
-    "fp_cases": [
-      {"case_id": "IR-def456", "src_ip": "45.142.212.100", "reason": "Known scanner ISP: Shodan"}
-    ],
-    "clean_cases": ["IR-abc123", "IR-ghi789", ...]
-  }
 """
 
 import argparse
@@ -85,15 +62,19 @@ KNOWN_SCANNER_ISPS = [
     "binaryedge",
     "ipip.net",
     "internet measurement",
-    "university",         # broad but catches most research scanners
+    "university",
     "research",
     "stretchoid",
     "internet-census",
 ]
 
+# AbuseIPDB score at or above this value is always a confirmed threat
+# regardless of session behaviour (silent probe override)
+HIGH_CONFIDENCE_SCORE = 80
+
 
 # ----------------------------
-# Logging helpers (unchanged from original)
+# Logging helpers
 # ----------------------------
 
 def log_info(message: str, verbose: bool = False) -> None:
@@ -111,15 +92,10 @@ def fatal_error(message: str, exit_code: int = 1) -> None:
 
 
 # ----------------------------
-# Data loading (replaces read_alerts_csv)
+# Data loading
 # ----------------------------
 
 def read_ir_cases_json(file_path: Path, verbose: bool = False) -> List[Dict]:
-    """
-    Load IR cases from data/ir_cases.json written by Tool 26.
-    Replaces read_alerts_csv() — same Path existence/type checks and
-    PermissionError/OSError handling pattern preserved.
-    """
     log_info(f"Attempting to read IR cases file: {file_path}", verbose)
 
     if not file_path.exists():
@@ -146,15 +122,10 @@ def read_ir_cases_json(file_path: Path, verbose: bool = False) -> List[Dict]:
     except OSError as exc:
         fatal_error(f"File I/O error: {exc}")
 
-    return []  # unreachable — keeps type checkers happy
+    return []
 
 
 def load_threat_ips(file_path: Optional[Path], verbose: bool = False) -> Dict[str, Dict]:
-    """
-    Optionally load enriched IP data from data/threat_ips.json (Tool 27 output).
-    Returns {ip_address: enrichment_dict} for O(1) lookup in is_likely_fp().
-    Returns empty dict if path not provided — tool runs without enrichment gracefully.
-    """
     if file_path is None:
         log_info("--threat-ips not provided — AbuseIPDB score signal unavailable", verbose)
         return {}
@@ -181,7 +152,7 @@ def load_threat_ips(file_path: Optional[Path], verbose: bool = False) -> Dict[st
 
 
 # ----------------------------
-# FP decision logic (new)
+# FP decision logic
 # ----------------------------
 
 def is_likely_fp(
@@ -192,6 +163,12 @@ def is_likely_fp(
     """
     Three-signal false positive detection for a single IR case.
 
+    HIGH CONFIDENCE OVERRIDE (runs before all signals):
+      If AbuseIPDB abuse_score >= HIGH_CONFIDENCE_SCORE (80), the IP is
+      always a confirmed threat — regardless of session behaviour.
+      This prevents silent probes from high-risk IPs being incorrectly
+      filtered by Signal 3 (mass-scanner pattern).
+
     Signal 1 — AbuseIPDB score (requires Tool 27 enrichment):
       abuse_score < threshold → likely scanner or researcher, not targeted attacker
 
@@ -200,18 +177,23 @@ def is_likely_fp(
 
     Signal 3 — Mass-scanner behaviour pattern (no enrichment needed):
       No commands executed AND no file downloads AND ≤ 2 login attempts
-      → pure port-scanner, no interactive session, typical for Shodan/Masscan sweeps
+      NOTE: Skipped if abuse_score >= HIGH_CONFIDENCE_SCORE
 
     Returns (is_fp: bool, reason: str)
     """
-    src_ip = case.get("src_ip", "")
+    src_ip     = case.get("src_ip", "")
     enrichment = threat_map.get(src_ip, {})
+    abuse_score = enrichment.get("abuse_score", -1) if enrichment else -1
 
-    # Signal 1: AbuseIPDB confidence score
-    if enrichment:
-        abuse_score = enrichment.get("abuse_score", -1)
-        if 0 <= abuse_score < threshold:
-            return True, f"AbuseIPDB score {abuse_score} below threshold {threshold}"
+    # HIGH CONFIDENCE OVERRIDE — score >= 80 always confirmed threat
+    # catches automated tools that probe silently (no login, no commands)
+    # but are known bad actors with high abuse scores and many OTX pulses
+    if abuse_score >= HIGH_CONFIDENCE_SCORE:
+        return False, ""
+
+    # Signal 1: AbuseIPDB confidence score below threshold
+    if enrichment and 0 <= abuse_score < threshold:
+        return True, f"AbuseIPDB score {abuse_score} below threshold {threshold}"
 
     # Signal 2: Known scanner ISP
     if enrichment:
@@ -220,11 +202,12 @@ def is_likely_fp(
             if known in isp:
                 return True, f"Known scanner ISP: {enrichment.get('isp', isp)}"
 
-    # Signal 3: Mass-scanner behaviour pattern (enrichment-independent)
-    commands   = case.get("commands", [])
-    downloads  = case.get("downloads", [])
+    # Signal 3: Mass-scanner behaviour pattern
+    # Only fires if no enrichment OR score is in ambiguous range (threshold..79)
+    commands       = case.get("commands",       [])
+    downloads      = case.get("downloads",      [])
     login_attempts = case.get("login_attempts", 0)
-    login_success  = case.get("login_success", False)
+    login_success  = case.get("login_success",  False)
 
     if (
         not commands
@@ -238,7 +221,7 @@ def is_likely_fp(
 
 
 # ----------------------------
-# Core processing (replaces process_alerts)
+# Core processing
 # ----------------------------
 
 def process_cases(
@@ -247,22 +230,13 @@ def process_cases(
     threshold: int,
     verbose: bool = False,
 ) -> Dict:
-    """
-    Evaluate every IR case for false positive signals.
-    Replaces process_alerts() — same stats-dict accumulation pattern,
-    same missing-field skip+warning, same log_info summary at end.
-
-    Original: grouped by signature_name, counted "False Positive" status strings
-    Live:     groups by src_ip, uses is_likely_fp() three-signal detection
-    """
-    fp_cases   = []
+    fp_cases    = []
     clean_cases = []
 
     for idx, case in enumerate(cases, start=1):
         case_id = case.get("case_id", "")
-        src_ip  = case.get("src_ip", "")
+        src_ip  = case.get("src_ip",  "")
 
-        # Missing field handling — same pattern as original process_alerts()
         if not case_id:
             log_warning(f"Case {idx}: Missing case_id; skipping")
             continue
@@ -283,11 +257,10 @@ def process_cases(
             clean_cases.append(case_id)
             log_info(f"Confirmed threat: {case_id} ({src_ip})", verbose)
 
-    total     = len(fp_cases) + len(clean_cases)
-    fp_count  = len(fp_cases)
-    fp_rate   = round(fp_count / total, 4) if total > 0 else 0.0
+    total    = len(fp_cases) + len(clean_cases)
+    fp_count = len(fp_cases)
+    fp_rate  = round(fp_count / total, 4) if total > 0 else 0.0
 
-    # Same log_info summary pattern as original process_alerts()
     log_info(
         f"Processed {total} case(s): {len(clean_cases)} confirmed threat(s), "
         f"{fp_count} FP(s) ({fp_rate:.1%})",
@@ -295,23 +268,19 @@ def process_cases(
     )
 
     return {
-        "fp_cases":   fp_cases,
+        "fp_cases":    fp_cases,
         "clean_cases": clean_cases,
-        "total":      total,
-        "fp_count":   fp_count,
-        "fp_rate":    fp_rate,
+        "total":       total,
+        "fp_count":    fp_count,
+        "fp_rate":     fp_rate,
     }
 
 
 # ----------------------------
-# JSON output (replaces generate_report)
+# JSON output
 # ----------------------------
 
 def write_fp_report(result: Dict, threshold: int, output_path: Path) -> None:
-    """
-    Write FP filter results to data/fp_filter.json.
-    Replaces generate_report() — same role, JSON output for pipeline and dashboard.
-    """
     report = {
         "generated_at":      datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "threshold_used":    threshold,
@@ -332,7 +301,7 @@ def write_fp_report(result: Dict, threshold: int, output_path: Path) -> None:
 
 
 # ----------------------------
-# CLI (extended from original)
+# CLI
 # ----------------------------
 
 def parse_args() -> argparse.Namespace:
@@ -340,33 +309,23 @@ def parse_args() -> argparse.Namespace:
         description="Filter false positives from Cowrie honeypot IR cases."
     )
     parser.add_argument(
-        "--input",
-        required=True,
-        type=Path,
+        "--input", required=True, type=Path,
         help="Path to data/ir_cases.json written by Tool 26",
     )
     parser.add_argument(
-        "--threat-ips",
-        type=Path,
-        default=None,
-        help="Path to data/threat_ips.json from Tool 27 (optional — enables AbuseIPDB signal)",
+        "--threat-ips", type=Path, default=None,
+        help="Path to data/threat_ips.json from Tool 27 (optional)",
     )
     parser.add_argument(
-        "--output",
-        required=True,
-        type=Path,
+        "--output", required=True, type=Path,
         help="Path to write fp_filter.json output",
     )
     parser.add_argument(
-        "--threshold",
-        type=int,
-        default=25,
+        "--threshold", type=int, default=25,
         help="AbuseIPDB score below which an IP is treated as FP (default: 25)",
     )
-    # -v/--verbose preserved unchanged from original
     parser.add_argument(
-        "-v", "--verbose",
-        action="store_true",
+        "-v", "--verbose", action="store_true",
         help="Enable verbose informational output",
     )
     return parser.parse_args()
@@ -377,21 +336,15 @@ def parse_args() -> argparse.Namespace:
 # ----------------------------
 
 def main() -> None:
-    args = parse_args()
+    args    = parse_args()
     verbose = args.verbose
 
     log_info("Starting False Positive Tracker (Cowrie Live)", verbose)
 
-    # Load IR cases from Tool 26
-    cases = read_ir_cases_json(args.input, verbose=verbose)
-
-    # Optionally load Tool 27 enrichment
+    cases      = read_ir_cases_json(args.input, verbose=verbose)
     threat_map = load_threat_ips(args.threat_ips, verbose=verbose)
+    result     = process_cases(cases, threat_map, args.threshold, verbose=verbose)
 
-    # Process — same flow as original: load → process → report
-    result = process_cases(cases, threat_map, args.threshold, verbose=verbose)
-
-    # Write JSON output
     write_fp_report(result, args.threshold, args.output)
 
     log_info(
