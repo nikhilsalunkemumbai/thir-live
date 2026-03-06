@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-03-06T10:43:20Z",
-  "total_attacks": 27,
-  "unique_ips": 18,
+  "generated_at": "2026-03-06T15:44:21Z",
+  "total_attacks": 39,
+  "unique_ips": 27,
   "confirmed_threats": 3,
-  "false_positives": 24,
-  "fp_rate": 0.8889,
+  "false_positives": 36,
+  "fp_rate": 0.9231,
   "high_severity": 3,
   "medium_severity": 0,
-  "low_severity": 24,
+  "low_severity": 36,
   "total_ttps": 3,
   "top_ttps": [
     "T1592",
@@ -16,5 +16,5 @@
   ],
   "honeypot_status": "HEALTHY",
   "integrity_status": "UNKNOWN",
-  "unique_countries": 5
+  "unique_countries": 7
 }
