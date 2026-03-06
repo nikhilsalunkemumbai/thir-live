@@ -6,13 +6,13 @@
 # data/ so the dashboard at threats.aegispub.com stays live.
 #
 # TOOL EXECUTION ORDER:
-#   Tool 05 → check VPS alive         → data/posture.json
-#   scp     → fetch Cowrie log        → /tmp/cowrie.json
+#   Tool 05 → check VPS alive            → data/posture.json
+#   scp     → fetch Cowrie log           → /tmp/cowrie.json
 #   Tool 26 → parse sessions → IR cases  → data/ir_cases.json
-#   Tool 27 → enrich attacker IPs     → data/threat_ips.json
-#   Tool 29 → filter false positives  → data/fp_filter.json
-#   Tool 30 → aggregate all metrics   → data/stats.json
-#   Tool 07 → verify data integrity   → (exit code check)
+#   Tool 27 → enrich attacker IPs        → data/threat_ips.json
+#   Tool 29 → filter false positives     → data/fp_filter.json
+#   Tool 30 → aggregate all metrics      → data/stats.json
+#   Tool 07 → verify data integrity      → (exit code check)
 #   git     → commit + push data/
 #
 # SECRETS REQUIRED (repo Settings → Secrets → Actions):
@@ -20,12 +20,6 @@
 #   ORACLE_VPS_IP         Public IP of AWS EC2 running Cowrie
 #   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
 #   OTX_API_KEY           AlienVault OTX free account
-#
-# FIRST-TIME SETUP (run once manually before enabling schedule):
-#   go run tools/07_file_integrity_live.go \
-#     --create-baseline data/integrity_baseline.json \
-#     --path data/
-#   git add data/integrity_baseline.json && git commit -m "init: integrity baseline" && git push
 
 name: THIR Live Pipeline
 
@@ -42,6 +36,7 @@ concurrency:
 jobs:
   update-threat-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 20   # kill the whole job if it hangs beyond 20 min
 
     # Write permission needed to push data/ updates back to repo
     permissions:
@@ -87,6 +82,7 @@ jobs:
       # ----------------------------------------------------------------
       - name: Tool 05 — network monitor (honeypot liveness)
         continue-on-error: true
+        timeout-minutes: 3
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
@@ -98,25 +94,56 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 5. Fetch Cowrie logs from AWS EC2
-      #    Cowrie writes one JSON event per line (NDJSON) to cowrie.json.
+      # 5. Pre-flight — verify EC2 reachable via SSH
+      #    Checks: SSH auth, Cowrie log directory, cowrie.json exists.
+      #    continue-on-error: true — failure is logged but pipeline continues.
       # ----------------------------------------------------------------
-      - name: Fetch Cowrie logs from AWS EC2
+      - name: Pre-flight — verify EC2 SSH + Cowrie log path
+        continue-on-error: true
+        timeout-minutes: 2
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
-          scp \
+          echo "━━━ [PRE-FLIGHT] Testing SSH connection to ${VPS_IP} ━━━"
+          ssh \
             -i /tmp/vps_key \
             -o StrictHostKeyChecking=no \
-            -o ConnectTimeout=15 \
+            -o ConnectTimeout=30 \
+            -o BatchMode=yes \
+            "ubuntu@${VPS_IP}" \
+            "echo '[OK] SSH auth success' && \
+             echo '[INFO] Hostname: '$(hostname) && \
+             echo '[INFO] Cowrie log dir contents:' && \
+             ls -lh /home/cowrie/cowrie/var/log/cowrie/ && \
+             echo '[INFO] cowrie.json size:' $(du -sh /home/cowrie/cowrie/var/log/cowrie/cowrie.json) && \
+             echo '[OK] Pre-flight passed'"
+          echo "━━━ [PRE-FLIGHT] Done ━━━"
+
+      # ----------------------------------------------------------------
+      # 6. Fetch Cowrie logs from AWS EC2
+      #    continue-on-error: true — if VPS unreachable, skip gracefully
+      # ----------------------------------------------------------------
+      - name: Fetch Cowrie logs from AWS EC2
+        id: fetch_logs
+        continue-on-error: true
+        timeout-minutes: 5   # hard stop if SCP hangs
+        env:
+          VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
+        run: |
+          echo "━━━ [SCP] Fetching cowrie.json from ${VPS_IP} ━━━"
+          scp -v \
+            -i /tmp/vps_key \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=60 \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=3 \
             "ubuntu@${VPS_IP}:/home/cowrie/cowrie/var/log/cowrie/cowrie.json" \
             /tmp/cowrie.json
+          echo "━━━ [SCP] Exit code: $? ━━━"
           echo "Fetched $(wc -l < /tmp/cowrie.json) log lines"
 
       # ----------------------------------------------------------------
-      # 6. Tool 26 — parse Cowrie sessions → IR cases
-      #    Groups raw events by session ID, maps TTPs, scores severity.
-      #    Output: data/ir_cases.json
+      # 7. Tool 26 — parse Cowrie sessions → IR cases
       # ----------------------------------------------------------------
       - name: Tool 26 — incident timeline (Cowrie → IR cases)
         run: |
@@ -126,7 +153,7 @@ jobs:
             --verbose
 
       # ----------------------------------------------------------------
-      # 7. Extract unique attacker IPs for Tool 27
+      # 8. Extract unique attacker IPs for Tool 27
       # ----------------------------------------------------------------
       - name: Extract attacker IPs from IR cases
         run: |
@@ -140,10 +167,10 @@ jobs:
           " > /tmp/attacker_ips.txt
 
       # ----------------------------------------------------------------
-      # 8. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
-      #    Output: data/threat_ips.json
+      # 9. Tool 27 — enrich attacker IPs (AbuseIPDB + OTX)
       # ----------------------------------------------------------------
       - name: Tool 27 — threat intel feeder (IP enrichment)
+        timeout-minutes: 5
         env:
           ABUSEIPDB_API_KEY: ${{ secrets.ABUSEIPDB_API_KEY }}
           OTX_API_KEY: ${{ secrets.OTX_API_KEY }}
@@ -154,8 +181,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 9. Tool 29 — false positive filter
-      #    Output: data/fp_filter.json
+      # 10. Tool 29 — false positive filter
       # ----------------------------------------------------------------
       - name: Tool 29 — false positive tracker
         run: |
@@ -167,10 +193,10 @@ jobs:
             --verbose
 
       # ----------------------------------------------------------------
-      # 10. Tool 30 — aggregate pipeline metrics
-      #     Output: data/stats.json
+      # 11. Tool 30 — aggregate pipeline metrics
       # ----------------------------------------------------------------
       - name: Tool 30 — metric dashboard exporter
+        timeout-minutes: 3
         run: |
           go run tools/30_metric_exporter_live.go \
             --ir-cases   data/ir_cases.json   \
@@ -181,7 +207,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 11. Tool 07 — file integrity verification
+      # 12. Tool 07 — file integrity verification
       # ----------------------------------------------------------------
       - name: Tool 07 — file integrity check
         continue-on-error: true
@@ -192,7 +218,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 12. Clean up sensitive files from runner
+      # 13. Clean up sensitive files from runner
       # ----------------------------------------------------------------
       - name: Clean up SSH key and temp files
         if: always()
@@ -200,12 +226,12 @@ jobs:
           rm -f /tmp/vps_key /tmp/cowrie.json /tmp/attacker_ips.txt
 
       # ----------------------------------------------------------------
-      # 13. Commit and push updated data/
+      # 14. Commit and push updated data/
       # ----------------------------------------------------------------
       - name: Commit and push updated data
         run: |
-          git config user.name  "THIR Pipeline"
-          git config user.email "pipeline@thir.live"
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/
           if git diff --staged --quiet; then
             echo "No data changes — nothing to commit"
