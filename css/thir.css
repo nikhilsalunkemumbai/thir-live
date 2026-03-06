@@ -1062,66 +1062,71 @@ footer a:hover { color: var(--accent); }
 [data-theme="light"] .hero-desc   { color: var(--text); border-color: var(--border); }
 
 /* ── 2 & 3. HERO MAP — MOBILE LAYOUT FIX ── */
-/* Default: overlay floats over map (desktop) */
-.hero-map {
-  position: relative;
-  height: 420px;
-  overflow: hidden;
-  margin-top: 52px;
-  border-bottom: 1px solid var(--border);
-  background: var(--bg);
-}
-
-/* On tablet/mobile: stack overlay BELOW the map */
+/* On mobile: stack the SVG map on top, stats panel below — no overlap */
 @media (max-width: 768px) {
-  /* Give the section more height to fit map + stats */
+
+  /* Section becomes a flex column, auto height to fit both */
   .hero-map {
-    height: auto;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: visible !important;
+  }
+
+  /* SVG map: fixed height, full width, on top */
+  .hero-map #threat-map {
+    width: 100% !important;
+    height: 200px !important;
+    min-height: 200px !important;
+    flex-shrink: 0;
+    order: 1;
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Overlay: pulled out of absolute, sits below map */
+  .hero-map-overlay {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100%;
+    order: 2;
+    z-index: 2;
+    padding: 0.8rem 1rem !important;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    pointer-events: auto;
+    gap: 0.5rem !important;
     display: flex;
     flex-direction: column;
   }
 
-  /* Map takes fixed height, sits on top */
-  .hero-map #threat-map {
-    width: 100%;
-    height: 220px;
-    flex-shrink: 0;
-    display: block;
-  }
+  /* Hide decorative text, keep stats */
+  .hmt-tag  { display: none !important; }
+  .hmt-h1   { display: none !important; }
+  .hmt-sub  { display: none !important; }
 
-  /* Overlay moves out of absolute positioning, flows below map */
-  .hero-map-overlay {
-    position: static;
-    padding: 1rem 1.2rem;
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    pointer-events: auto;
-    gap: 0.6rem;
-  }
-
-  /* Hide the big h1 on mobile to save space */
-  .hmt-h1 { font-size: 1.4rem; }
-  .hmt-tag { display: none; }
-
-  /* Stats row wraps tightly */
+  /* Stats: 2-column grid */
   .hero-map-stats {
-    gap: 0.5rem;
-    flex-wrap: wrap;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    margin-top: 0 !important;
   }
 
   .hms-item {
-    padding: 6px 10px;
-    flex: 1 1 calc(50% - 0.5rem);
-    min-width: 80px;
+    padding: 6px 10px !important;
+    backdrop-filter: none;
   }
 
-  .hms-val   { font-size: 1.2rem; }
-  .hms-label { font-size: 8px; }
+  .hms-val   { font-size: 1.1rem !important; }
+  .hms-label { font-size: 8px !important; }
 
-  /* Live badge repositioned */
+  /* Live badge sits over the map, not the overlay */
   .map-live-badge {
-    top: 0.6rem;
-    right: 0.8rem;
+    top: 0.5rem !important;
+    right: 0.8rem !important;
   }
 }
 
@@ -1147,4 +1152,9 @@ footer a:hover { color: var(--accent); }
 .theme-toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* Override 1024px rule that sets fixed height — mobile needs auto */
+@media (max-width: 768px) {
+  .hero-map { height: auto !important; }
 }
