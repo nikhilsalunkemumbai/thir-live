@@ -1,0 +1,16 @@
+{
+  "generated_at": "2026-03-06T06:55:44.639601581Z",
+  "services": [
+    {
+      "address": "13.235.92.17:2222",
+      "status": "UP",
+      "checked_at": "2026-03-06T06:55:44.424324938Z"
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "up": 1,
+    "down": 0,
+    "overall": "HEALTHY"
+  }
+}
