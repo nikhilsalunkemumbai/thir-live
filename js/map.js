@@ -24,15 +24,24 @@ function initThreatMap() {
   const existing = document.getElementById('threat-map');
   if (existing) existing.innerHTML = '';
 
-  const w = container.clientWidth  || 800;
-  const h = container.clientHeight || 420;
+  // Read the SVG element's own rendered size via getBoundingClientRect.
+  // This gives the true pixel dimensions of the SVG itself — not the
+  // container, which on mobile includes the absolutely-positioned overlay
+  // and inflates clientHeight making the map render too tall.
+  const svgEl = document.getElementById('threat-map');
+  const rect  = svgEl ? svgEl.getBoundingClientRect() : null;
+  const w     = (rect && rect.width  > 10) ? rect.width  : (container.clientWidth  || 800);
+  const h     = (rect && rect.height > 10) ? rect.height : 420;
 
   const svg = d3.select('#threat-map')
     .attr('width',  w)
     .attr('height', h);
 
+  // Cap scale so wide screens don't zoom in — 165 looks right at ~1000px+
+  const scale = Math.min(w / 6.3, 165);
+
   const projection = d3.geoNaturalEarth1()
-    .scale(w / 6.3)
+    .scale(scale)
     .translate([w / 2, h / 2]);
 
   const path = d3.geoPath().projection(projection);
