@@ -9,10 +9,9 @@
   --bg3: #0f1923;
   --panel: #111c26;
   --border: #1a2d3d;
-  --accent:  #FEBB31;
+  --accent: #FEBB31;
   --accent2: #FB592E;
   --accent3: #009A83;
-  --accent4: #0B67C3;
   --warn: #ffaa00;
   --text: #c8d8e8;
   --text-dim: #5a7a8a;
@@ -94,7 +93,7 @@ nav {
   transition: all 0.2s;
 }
 
-.nav-links a:hover { color: var(--accent); background: rgba(0,229,255,0.04); }
+.nav-links a:hover { color: var(--accent); background: rgba(254,187,49,0.04); }
 
 .threat-level {
   display: flex;
@@ -113,8 +112,8 @@ nav {
 }
 
 @keyframes pulse-green {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(57,255,20,0.4); }
-  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(57,255,20,0); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(0,154,131,0.4); }
+  50% { opacity: 0.8; box-shadow: 0 0 0 6px rgba(0,154,131,0); }
 }
 
 /* HERO */
@@ -131,8 +130,8 @@ nav {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(0,229,255,0.04) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 30% 80%, rgba(255,61,113,0.03) 0%, transparent 60%);
+    radial-gradient(ellipse 60% 50% at 70% 50%, rgba(254,187,49,0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 60% at 30% 80%, rgba(251,89,46,0.03) 0%, transparent 60%);
 }
 
 .hero-left {
@@ -347,7 +346,7 @@ h1 .accent { color: var(--accent); }
 .metric-val.red { color: var(--accent2); }
 .metric-val.green { color: var(--accent3); }
 .metric-val.yellow { color: var(--warn); }
-.metric-val.blue { color: var(--accent); }
+.metric-val.blue { color: #0B67C3; }
 
 .metric-key {
   font-family: var(--mono);
@@ -414,7 +413,7 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,229,255,0.03);
+  background: rgba(254,187,49,0.03);
 }
 
 .panel-title {
@@ -429,8 +428,8 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
   font-family: var(--mono);
   font-size: 9px;
   padding: 2px 8px;
-  background: rgba(0,229,255,0.1);
-  border: 1px solid rgba(0,229,255,0.2);
+  background: rgba(254,187,49,0.1);
+  border: 1px solid rgba(254,187,49,0.2);
   color: var(--accent);
   letter-spacing: 0.1em;
 }
@@ -457,7 +456,7 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
   transition: background 0.2s;
 }
 
-.feed-item:hover { background: rgba(0,229,255,0.03); }
+.feed-item:hover { background: rgba(254,187,49,0.03); }
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateX(-10px); }
@@ -473,9 +472,9 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
   min-width: 36px;
 }
 
-.score-high { background: rgba(255,61,113,0.15); color: var(--accent2); border: 1px solid rgba(255,61,113,0.3); }
+.score-high { background: rgba(251,89,46,0.15); color: var(--accent2); border: 1px solid rgba(251,89,46,0.3); }
 .score-med  { background: rgba(255,170,0,0.15);  color: var(--warn);    border: 1px solid rgba(255,170,0,0.3); }
-.score-low  { background: rgba(57,255,20,0.1);   color: var(--accent3); border: 1px solid rgba(57,255,20,0.2); }
+.score-low  { background: rgba(0,154,131,0.1);   color: var(--accent3); border: 1px solid rgba(0,154,131,0.2); }
 
 /* ATT&CK HEATMAP */
 #attck { background: var(--bg2); }
@@ -488,8 +487,8 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
 }
 
 .attck-tactic {
-  background: rgba(0,229,255,0.08);
-  border: 1px solid rgba(0,229,255,0.15);
+  background: rgba(254,187,49,0.08);
+  border: 1px solid rgba(254,187,49,0.15);
   padding: 6px 4px;
   text-align: center;
   font-size: 9px;
@@ -516,8 +515,8 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
 }
 
 .attck-technique.detected {
-  background: rgba(255,61,113,0.12);
-  border-color: rgba(255,61,113,0.35);
+  background: rgba(251,89,46,0.12);
+  border-color: rgba(251,89,46,0.35);
   color: #ff8aaa;
 }
 
@@ -585,7 +584,7 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
   box-shadow: 0 0 0 2px var(--accent);
 }
 
-.ir-case:hover { border-color: rgba(0,229,255,0.3); }
+.ir-case:hover { border-color: rgba(254,187,49,0.3); }
 
 .ir-case-head {
   display: flex;
@@ -617,8 +616,8 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
   border: 1px solid;
 }
 
-.tag-contained  { color: var(--accent3); border-color: rgba(57,255,20,0.3);  background: rgba(57,255,20,0.05); }
-.tag-active     { color: var(--accent2); border-color: rgba(255,61,113,0.3); background: rgba(255,61,113,0.05); animation: blink 1.5s infinite; }
+.tag-contained  { color: var(--accent3); border-color: rgba(0,154,131,0.3);  background: rgba(0,154,131,0.05); }
+.tag-active     { color: var(--accent2); border-color: rgba(251,89,46,0.3); background: rgba(251,89,46,0.05); animation: blink 1.5s infinite; }
 .tag-monitoring { color: var(--warn);   border-color: rgba(255,170,0,0.3);  background: rgba(255,170,0,0.05); }
 
 @keyframes blink { 50% { opacity: 0.5; } }
@@ -656,8 +655,8 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
 
 .ttp-tag {
   padding: 1px 6px;
-  background: rgba(0,229,255,0.05);
-  border: 1px solid rgba(0,229,255,0.1);
+  background: rgba(254,187,49,0.05);
+  border: 1px solid rgba(254,187,49,0.1);
   color: var(--accent);
 }
 
@@ -691,7 +690,7 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
 }
 
 .tool-card:hover::before { transform: scaleX(1); }
-.tool-card:hover { background: rgba(0,229,255,0.03); }
+.tool-card:hover { background: rgba(254,187,49,0.03); }
 
 .tool-lang {
   font-family: var(--mono);
@@ -710,7 +709,7 @@ h2 .dim { color: var(--text-dim); font-weight: 300; }
 }
 
 .lang-py { background: rgba(255,212,0,0.1);   color: #ffd400; border: 1px solid rgba(255,212,0,0.2); }
-.lang-go { background: rgba(0,173,216,0.1);   color: #00add8; border: 1px solid rgba(0,173,216,0.2); }
+.lang-go { background: rgba(11,103,195,0.1);   color: #0B67C3; border: 1px solid rgba(11,103,195,0.2); }
 .lang-rs { background: rgba(255,90,0,0.1);    color: #ff5a00; border: 1px solid rgba(255,90,0,0.2); }
 .lang-ps { background: rgba(0,122,204,0.1);   color: #007acc; border: 1px solid rgba(0,122,204,0.2); }
 .lang-cs { background: rgba(104,33,122,0.2);  color: #c792ea; border: 1px solid rgba(104,33,122,0.3); }
@@ -890,9 +889,9 @@ footer a:hover { color: var(--accent); }
 
 /* TICKER */
 .ticker-wrap {
-  background: rgba(0,229,255,0.04);
-  border-top: 1px solid rgba(0,229,255,0.1);
-  border-bottom: 1px solid rgba(0,229,255,0.1);
+  background: rgba(254,187,49,0.04);
+  border-top: 1px solid rgba(254,187,49,0.1);
+  border-bottom: 1px solid rgba(254,187,49,0.1);
   padding: 6px 0;
   overflow: hidden;
   white-space: nowrap;
@@ -954,47 +953,39 @@ footer a:hover { color: var(--accent); }
 .hms-item { display:flex; flex-direction:column; gap:2px; background:rgba(6,10,15,0.78); border:1px solid var(--border); padding:8px 14px; backdrop-filter:blur(4px); }
 .hms-val { font-family:var(--display); font-weight:900; font-size:1.6rem; color:var(--accent); line-height:1; }
 .hms-label { font-family:var(--mono); font-size:9px; color:var(--text-dim); letter-spacing:0.1em; text-transform:uppercase; }
-.map-live-badge { position:absolute; top:1.2rem; right:1.5rem; z-index:6; font-family:var(--mono); font-size:10px; color:var(--accent3); display:flex; align-items:center; gap:5px; letter-spacing:0.1em; background:rgba(6,10,15,0.8); border:1px solid rgba(57,255,20,0.2); padding:4px 10px; backdrop-filter:blur(4px); }
+.map-live-badge { position:absolute; top:1.2rem; right:1.5rem; z-index:6; font-family:var(--mono); font-size:10px; color:var(--accent3); display:flex; align-items:center; gap:5px; letter-spacing:0.1em; background:rgba(6,10,15,0.8); border:1px solid rgba(0,154,131,0.2); padding:4px 10px; backdrop-filter:blur(4px); }
 @media(max-width:1024px){ .hero-map{height:300px;} .hmt-h1{font-size:2rem;} }
 
 /* =============================================
-   LIGHT THEME
-   Overrides CSS variables only — all components
-   inherit the change automatically.
+   THIR · CSS PATCH v1.2
+   Fixes:
+   1. Light theme contrast — all text tokens darkened
+   2. Hero map overlay — stats below map on mobile
+   3. Small screen — map not covered by stats boxes
    ============================================= */
+
+/* ── 1. LIGHT THEME — IMPROVED CONTRAST ── */
 [data-theme="light"] {
   --bg:          #f0f4f8;
-  --bg2:         #e4eaf0;
-  --bg3:         #d8e0ea;
+  --bg2:         #e2eaf2;
+  --bg3:         #d4dde8;
   --panel:       #ffffff;
-  --border:      #b0c0d0;
-  --accent:      #0077aa;
-  --accent2:     #d6193f;
-  --accent3:     #1a8a00;
-  --warn:        #b86e00;
-  --text:        #2a3a4a;
-  --text-dim:    #6a8090;
-  --text-bright: #0d1f2d;
+  --border:      #8aa4bc;
+  --accent:      #005a8a;
+  --accent2:     #b01028;
+  --accent3:     #106800;
+  --warn:        #7a4500;
+  --text:        #111e2a;
+  --text-dim:    #2e4a60;
+  --text-bright: #020b14;
 }
 
-/* Soften scanline in light mode */
+/* Scanline softer in light mode */
 [data-theme="light"] body::after {
   background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(0,0,0,0.015) 2px,
-    rgba(0,0,0,0.015) 4px
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.012) 2px, rgba(0,0,0,0.012) 4px
   );
-}
-
-/* Hero map overlay */
-[data-theme="light"] .hms-item {
-  background: rgba(240,244,248,0.88);
-}
-[data-theme="light"] .map-live-badge {
-  background: rgba(240,244,248,0.88);
-  border-color: rgba(26,138,0,0.3);
 }
 
 /* Nav */
@@ -1002,29 +993,139 @@ footer a:hover { color: var(--accent); }
   background: rgba(240,244,248,0.97);
 }
 
-/* Panel head tint */
+/* Map overlay stats */
+[data-theme="light"] .hms-item {
+  background: rgba(240,244,248,0.92);
+  border-color: rgba(0,90,138,0.25);
+}
+[data-theme="light"] .hms-val  { color: var(--accent); }
+[data-theme="light"] .hms-label { color: var(--text-dim); }
+
+/* Live badge */
+[data-theme="light"] .map-live-badge {
+  background: rgba(240,244,248,0.92);
+  border-color: rgba(16,104,0,0.3);
+  color: var(--accent3);
+}
+
+/* Panel head */
 [data-theme="light"] .panel-head {
-  background: rgba(0,119,170,0.04);
+  background: rgba(0,90,138,0.05);
 }
 
 /* Score badges */
-[data-theme="light"] .score-high { background: rgba(214,25,63,0.10);  border-color: rgba(214,25,63,0.3); }
-[data-theme="light"] .score-med  { background: rgba(184,110,0,0.10);  border-color: rgba(184,110,0,0.3); }
-[data-theme="light"] .score-low  { background: rgba(26,138,0,0.08);   border-color: rgba(26,138,0,0.25); }
+[data-theme="light"] .score-high { background: rgba(176,16,40,0.10);  color: #8a0018; border-color: rgba(176,16,40,0.3); }
+[data-theme="light"] .score-med  { background: rgba(122,69,0,0.10);   color: #5a3000; border-color: rgba(122,69,0,0.3); }
+[data-theme="light"] .score-low  { background: rgba(16,104,0,0.08);   color: #0a4a00; border-color: rgba(16,104,0,0.25); }
 
-/* ATT&CK tactic header */
+/* ATT&CK */
 [data-theme="light"] .attck-tactic {
-  background: rgba(0,119,170,0.08);
-  border-color: rgba(0,119,170,0.2);
+  background: rgba(0,90,138,0.08);
+  border-color: rgba(0,90,138,0.2);
 }
+[data-theme="light"] .attck-technique { color: var(--text-dim); }
+[data-theme="light"] .attck-technique.detected { background: rgba(176,16,40,0.08); border-color: rgba(176,16,40,0.3); color: #8a0018; }
+[data-theme="light"] .attck-technique.monitored { background: rgba(122,69,0,0.07); border-color: rgba(122,69,0,0.25); color: #5a3000; }
 
 /* Ticker */
 [data-theme="light"] .ticker-wrap {
-  background: rgba(0,119,170,0.04);
-  border-color: rgba(0,119,170,0.15);
+  background: rgba(0,90,138,0.04);
+  border-color: rgba(0,90,138,0.15);
 }
 
-/* ── THEME TOGGLE BUTTON ── */
+/* Metric values */
+[data-theme="light"] .metric-val        { color: var(--text-bright); }
+[data-theme="light"] .metric-val.red    { color: var(--accent2); }
+[data-theme="light"] .metric-val.green  { color: var(--accent3); }
+[data-theme="light"] .metric-val.yellow { color: var(--warn); }
+[data-theme="light"] .metric-val.blue   { color: var(--accent); }
+[data-theme="light"] .metric-key        { color: var(--text-dim); }
+
+/* Feed items */
+[data-theme="light"] .feed-ip   { color: var(--accent); }
+[data-theme="light"] .feed-type { color: var(--text); }
+[data-theme="light"] .feed-item:hover { background: rgba(0,90,138,0.04); }
+
+/* IR cases */
+[data-theme="light"] .ir-title   { color: var(--text-bright); }
+[data-theme="light"] .ir-phase-val { color: var(--text); }
+[data-theme="light"] .ttp-tag { background: rgba(0,90,138,0.06); border-color: rgba(0,90,138,0.15); color: var(--accent); }
+
+/* Tool cards */
+[data-theme="light"] .tool-name { color: var(--text-bright); }
+[data-theme="light"] .tool-desc { color: var(--text-dim); }
+[data-theme="light"] .tool-meta { color: var(--text-dim); }
+
+/* Section headings */
+[data-theme="light"] h1, [data-theme="light"] h2 { color: var(--text-bright); }
+[data-theme="light"] .section-num { color: var(--text-dim); }
+[data-theme="light"] .hero-desc   { color: var(--text); border-color: var(--border); }
+
+/* ── 2 & 3. HERO MAP — MOBILE LAYOUT FIX ── */
+/* Default: overlay floats over map (desktop) */
+.hero-map {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  margin-top: 52px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+/* On tablet/mobile: stack overlay BELOW the map */
+@media (max-width: 768px) {
+  /* Give the section more height to fit map + stats */
+  .hero-map {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Map takes fixed height, sits on top */
+  .hero-map #threat-map {
+    width: 100%;
+    height: 220px;
+    flex-shrink: 0;
+    display: block;
+  }
+
+  /* Overlay moves out of absolute positioning, flows below map */
+  .hero-map-overlay {
+    position: static;
+    padding: 1rem 1.2rem;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    pointer-events: auto;
+    gap: 0.6rem;
+  }
+
+  /* Hide the big h1 on mobile to save space */
+  .hmt-h1 { font-size: 1.4rem; }
+  .hmt-tag { display: none; }
+
+  /* Stats row wraps tightly */
+  .hero-map-stats {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hms-item {
+    padding: 6px 10px;
+    flex: 1 1 calc(50% - 0.5rem);
+    min-width: 80px;
+  }
+
+  .hms-val   { font-size: 1.2rem; }
+  .hms-label { font-size: 8px; }
+
+  /* Live badge repositioned */
+  .map-live-badge {
+    top: 0.6rem;
+    right: 0.8rem;
+  }
+}
+
+/* ── THEME TOGGLE BUTTON (ensure it stays visible) ── */
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -1040,14 +1141,10 @@ footer a:hover { color: var(--accent); }
   cursor: pointer;
   transition: all 0.2s;
   margin-left: 1rem;
+  white-space: nowrap;
 }
 
 .theme-toggle:hover {
   border-color: var(--accent);
   color: var(--accent);
-}
-
-.theme-toggle-icon {
-  font-size: 13px;
-  line-height: 1;
 }
