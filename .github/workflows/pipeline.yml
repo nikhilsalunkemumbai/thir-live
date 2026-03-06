@@ -207,7 +207,7 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 11.a Tool 30 — Tool 28 — SOC Handover Report
+      # 11.a Tool 28 — SOC Handover Report
       # ----------------------------------------------------------------
       - name: Run Tool 28 — SOC Handover Report
         run: |
