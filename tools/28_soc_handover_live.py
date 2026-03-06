@@ -236,9 +236,15 @@ def build_report(ir, threats, fp, stats):
         ln("| TTP ID | Count |")
         ln("|---|---|")
         for t in top_ttps:
-            ttp_id   = t.get("ttp", "?")
+            # top_ttps can be plain strings ["T1110"] or dicts [{"ttp":"T1110","count":5}]
+            if isinstance(t, dict):
+                ttp_id = t.get("ttp", "?")
+                count  = t.get("count", "—")
+            else:
+                ttp_id = str(t)
+                count  = "—"
             ttp_link = f"https://attack.mitre.org/techniques/{ttp_id.replace('.', '/')}"
-            ln(f"| [{ttp_id}]({ttp_link}) | {t.get('count', '?')} |")
+            ln(f"| [{ttp_id}]({ttp_link}) | {count} |")
         ln()
 
     # FP summary
