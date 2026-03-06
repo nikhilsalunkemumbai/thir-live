@@ -1,25 +1,7 @@
 {
-  "generated_at": "2026-03-06T18:56:10Z",
-  "total_ips": 31,
+  "generated_at": "2026-03-06T19:38:59Z",
+  "total_ips": 32,
   "ips": [
-    {
-      "indicator": "106.221.219.179",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "IN",
-      "isp": "Bharti Airtel Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "20.172.6.73",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
     {
       "indicator": "64.236.200.88",
       "type": "ip",
@@ -27,34 +9,16 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
+      "last_seen": "2026-03-06T19:38:50Z"
     },
     {
-      "indicator": "20.109.38.246",
+      "indicator": "20.169.76.181",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
       "isp": "Microsoft Corporation",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "118.196.78.37",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-      "otx_pulses": 30,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "57.151.129.39",
-      "type": "ip",
-      "abuse_score": 99,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 2,
-      "last_seen": "2026-03-06T18:56:01Z"
+      "last_seen": "2026-03-06T19:38:50Z"
     },
     {
       "indicator": "20.161.58.231",
@@ -63,169 +27,7 @@
       "country": "US",
       "isp": "Microsoft Corporation",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "52.159.229.2",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "135.232.208.183",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "64.236.187.245",
-      "type": "ip",
-      "abuse_score": 2,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "172.214.44.8",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:01Z"
-    },
-    {
-      "indicator": "172.182.193.103",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "3.141.168.125",
-      "type": "ip",
-      "abuse_score": 99,
-      "country": "US",
-      "isp": "Amazon Technologies Inc.",
-      "otx_pulses": 9,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "172.208.126.96",
-      "type": "ip",
-      "abuse_score": 13,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "64.236.193.16",
-      "type": "ip",
-      "abuse_score": 64,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "172.215.208.194",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "172.182.224.164",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "20.3.221.180",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "4.154.22.3",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "135.232.200.8",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "172.212.201.77",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "20.124.87.15",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "45.82.78.122",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "SG",
-      "isp": "Detai Prosperous Technologies Limited",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "192.109.200.213",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "DE",
-      "isp": "Telco power Ltd",
-      "otx_pulses": 32,
-      "last_seen": "2026-03-06T18:56:02Z"
-    },
-    {
-      "indicator": "205.210.31.109",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "Palo Alto Networks, Inc",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-06T18:56:03Z"
+      "last_seen": "2026-03-06T19:38:50Z"
     },
     {
       "indicator": "120.157.18.252",
@@ -234,16 +36,142 @@
       "country": "AU",
       "isp": "Telstra Limited",
       "otx_pulses": 1,
-      "last_seen": "2026-03-06T18:56:08Z"
+      "last_seen": "2026-03-06T19:38:51Z"
     },
     {
-      "indicator": "145.132.100.86",
+      "indicator": "4.154.22.3",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "118.196.78.37",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+      "otx_pulses": 30,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "172.182.193.103",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:09Z"
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "64.236.193.16",
+      "type": "ip",
+      "abuse_score": 64,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "135.232.208.183",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "106.221.219.179",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "IN",
+      "isp": "Bharti Airtel Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "64.236.187.245",
+      "type": "ip",
+      "abuse_score": 2,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "172.182.224.164",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "20.3.221.180",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "3.141.168.125",
+      "type": "ip",
+      "abuse_score": 99,
+      "country": "US",
+      "isp": "Amazon Technologies Inc.",
+      "otx_pulses": 9,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "52.159.229.2",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "57.151.129.39",
+      "type": "ip",
+      "abuse_score": 99,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 2,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "20.109.38.246",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "45.82.78.122",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "SG",
+      "isp": "Detai Prosperous Technologies Limited",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-06T19:38:51Z"
+    },
+    {
+      "indicator": "135.232.200.8",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:51Z"
     },
     {
       "indicator": "172.184.213.240",
@@ -252,25 +180,25 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:09Z"
+      "last_seen": "2026-03-06T19:38:52Z"
     },
     {
-      "indicator": "20.109.38.116",
+      "indicator": "172.215.208.194",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:52Z"
+    },
+    {
+      "indicator": "20.172.6.73",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
       "isp": "Microsoft Corporation",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:09Z"
-    },
-    {
-      "indicator": "93.123.109.222",
-      "type": "ip",
-      "abuse_score": 32,
-      "country": "NL",
-      "isp": "TECHOFF_SRV_LIMITED",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:09Z"
+      "last_seen": "2026-03-06T19:38:52Z"
     },
     {
       "indicator": "172.183.91.2",
@@ -279,7 +207,88 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-06T18:56:10Z"
+      "last_seen": "2026-03-06T19:38:52Z"
+    },
+    {
+      "indicator": "93.123.109.222",
+      "type": "ip",
+      "abuse_score": 32,
+      "country": "NL",
+      "isp": "TECHOFF_SRV_LIMITED",
+      "otx_pulses": 7,
+      "last_seen": "2026-03-06T19:38:52Z"
+    },
+    {
+      "indicator": "192.109.200.213",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "DE",
+      "isp": "Telco power Ltd",
+      "otx_pulses": 32,
+      "last_seen": "2026-03-06T19:38:52Z"
+    },
+    {
+      "indicator": "205.210.31.109",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Palo Alto Networks, Inc",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-06T19:38:52Z"
+    },
+    {
+      "indicator": "172.212.201.77",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-06T19:38:53Z"
+    },
+    {
+      "indicator": "20.124.87.15",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-06T19:38:54Z"
+    },
+    {
+      "indicator": "145.132.100.86",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:56Z"
+    },
+    {
+      "indicator": "20.109.38.116",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:58Z"
+    },
+    {
+      "indicator": "172.214.44.8",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:58Z"
+    },
+    {
+      "indicator": "172.208.126.96",
+      "type": "ip",
+      "abuse_score": 13,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-06T19:38:59Z"
     }
   ]
 }
