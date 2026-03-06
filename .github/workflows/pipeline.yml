@@ -218,7 +218,7 @@ jobs:
               --stats      data/stats.json \
               --output     data/soc_handover.md \
               --verbose
-          continue-on-error: true
+        continue-on-error: true
 
       # ----------------------------------------------------------------
       # 12. Tool 07 — file integrity verification
