@@ -961,10 +961,15 @@ footer a:hover { color: var(--accent); }
    Fixes:
    1. Light theme contrast — all text tokens darkened
    2. Hero map overlay — stats below map on mobile
-   3. Small screen — map not covered by stats boxes
+
+/* =============================================
+   THIR · CSS PATCH v1.3
+   1. Light theme — improved contrast
+   2. Mobile map — overlay anchored to bottom, never over map
+   3. Map resize handled in map.js (ResizeObserver)
    ============================================= */
 
-/* ── 1. LIGHT THEME — IMPROVED CONTRAST ── */
+/* ── 1. LIGHT THEME CONTRAST ── */
 [data-theme="light"] {
   --bg:          #f0f4f8;
   --bg2:         #e2eaf2;
@@ -979,158 +984,39 @@ footer a:hover { color: var(--accent); }
   --text-dim:    #2e4a60;
   --text-bright: #020b14;
 }
-
-/* Scanline softer in light mode */
 [data-theme="light"] body::after {
-  background: repeating-linear-gradient(
-    0deg, transparent, transparent 2px,
-    rgba(0,0,0,0.012) 2px, rgba(0,0,0,0.012) 4px
-  );
+  background: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.012) 2px,rgba(0,0,0,0.012) 4px);
 }
-
-/* Nav */
-[data-theme="light"] nav {
-  background: rgba(240,244,248,0.97);
-}
-
-/* Map overlay stats */
-[data-theme="light"] .hms-item {
-  background: rgba(240,244,248,0.92);
-  border-color: rgba(0,90,138,0.25);
-}
-[data-theme="light"] .hms-val  { color: var(--accent); }
-[data-theme="light"] .hms-label { color: var(--text-dim); }
-
-/* Live badge */
-[data-theme="light"] .map-live-badge {
-  background: rgba(240,244,248,0.92);
-  border-color: rgba(16,104,0,0.3);
-  color: var(--accent3);
-}
-
-/* Panel head */
-[data-theme="light"] .panel-head {
-  background: rgba(0,90,138,0.05);
-}
-
-/* Score badges */
-[data-theme="light"] .score-high { background: rgba(176,16,40,0.10);  color: #8a0018; border-color: rgba(176,16,40,0.3); }
-[data-theme="light"] .score-med  { background: rgba(122,69,0,0.10);   color: #5a3000; border-color: rgba(122,69,0,0.3); }
-[data-theme="light"] .score-low  { background: rgba(16,104,0,0.08);   color: #0a4a00; border-color: rgba(16,104,0,0.25); }
-
-/* ATT&CK */
-[data-theme="light"] .attck-tactic {
-  background: rgba(0,90,138,0.08);
-  border-color: rgba(0,90,138,0.2);
-}
+[data-theme="light"] nav { background: rgba(240,244,248,0.97); }
+[data-theme="light"] .hms-item { background: rgba(240,244,248,0.92); border-color: rgba(0,90,138,0.25); }
+[data-theme="light"] .map-live-badge { background: rgba(240,244,248,0.92); border-color: rgba(16,104,0,0.3); color: var(--accent3); }
+[data-theme="light"] .panel-head { background: rgba(0,90,138,0.05); }
+[data-theme="light"] .score-high { background: rgba(176,16,40,0.10); color: #8a0018; border-color: rgba(176,16,40,0.3); }
+[data-theme="light"] .score-med  { background: rgba(122,69,0,0.10);  color: #5a3000; border-color: rgba(122,69,0,0.3); }
+[data-theme="light"] .score-low  { background: rgba(16,104,0,0.08);  color: #0a4a00; border-color: rgba(16,104,0,0.25); }
+[data-theme="light"] .attck-tactic { background: rgba(0,90,138,0.08); border-color: rgba(0,90,138,0.2); }
 [data-theme="light"] .attck-technique { color: var(--text-dim); }
 [data-theme="light"] .attck-technique.detected { background: rgba(176,16,40,0.08); border-color: rgba(176,16,40,0.3); color: #8a0018; }
 [data-theme="light"] .attck-technique.monitored { background: rgba(122,69,0,0.07); border-color: rgba(122,69,0,0.25); color: #5a3000; }
-
-/* Ticker */
-[data-theme="light"] .ticker-wrap {
-  background: rgba(0,90,138,0.04);
-  border-color: rgba(0,90,138,0.15);
-}
-
-/* Metric values */
+[data-theme="light"] .ticker-wrap { background: rgba(0,90,138,0.04); border-color: rgba(0,90,138,0.15); }
 [data-theme="light"] .metric-val        { color: var(--text-bright); }
 [data-theme="light"] .metric-val.red    { color: var(--accent2); }
 [data-theme="light"] .metric-val.green  { color: var(--accent3); }
 [data-theme="light"] .metric-val.yellow { color: var(--warn); }
 [data-theme="light"] .metric-val.blue   { color: var(--accent); }
 [data-theme="light"] .metric-key        { color: var(--text-dim); }
-
-/* Feed items */
-[data-theme="light"] .feed-ip   { color: var(--accent); }
-[data-theme="light"] .feed-type { color: var(--text); }
-[data-theme="light"] .feed-item:hover { background: rgba(0,90,138,0.04); }
-
-/* IR cases */
-[data-theme="light"] .ir-title   { color: var(--text-bright); }
-[data-theme="light"] .ir-phase-val { color: var(--text); }
+[data-theme="light"] .feed-ip           { color: var(--accent); }
+[data-theme="light"] .feed-type         { color: var(--text); }
+[data-theme="light"] .feed-item:hover   { background: rgba(0,90,138,0.04); }
+[data-theme="light"] .ir-title          { color: var(--text-bright); }
+[data-theme="light"] .ir-phase-val      { color: var(--text); }
 [data-theme="light"] .ttp-tag { background: rgba(0,90,138,0.06); border-color: rgba(0,90,138,0.15); color: var(--accent); }
-
-/* Tool cards */
-[data-theme="light"] .tool-name { color: var(--text-bright); }
-[data-theme="light"] .tool-desc { color: var(--text-dim); }
-[data-theme="light"] .tool-meta { color: var(--text-dim); }
-
-/* Section headings */
+[data-theme="light"] .tool-name         { color: var(--text-bright); }
+[data-theme="light"] .tool-desc         { color: var(--text-dim); }
 [data-theme="light"] h1, [data-theme="light"] h2 { color: var(--text-bright); }
-[data-theme="light"] .section-num { color: var(--text-dim); }
-[data-theme="light"] .hero-desc   { color: var(--text); border-color: var(--border); }
+[data-theme="light"] .hero-desc         { color: var(--text); border-color: var(--border); }
 
-/* ── 2 & 3. HERO MAP — MOBILE LAYOUT FIX ── */
-/* On mobile: stack the SVG map on top, stats panel below — no overlap */
-@media (max-width: 768px) {
-
-  /* Section becomes a flex column, auto height to fit both */
-  .hero-map {
-    height: auto !important;
-    display: flex !important;
-    flex-direction: column !important;
-    overflow: visible !important;
-  }
-
-  /* SVG map: fixed height, full width, on top */
-  .hero-map #threat-map {
-    width: 100% !important;
-    height: 200px !important;
-    min-height: 200px !important;
-    flex-shrink: 0;
-    order: 1;
-    display: block;
-    position: relative;
-    z-index: 1;
-  }
-
-  /* Overlay: pulled out of absolute, sits below map */
-  .hero-map-overlay {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100%;
-    order: 2;
-    z-index: 2;
-    padding: 0.8rem 1rem !important;
-    background: var(--bg2);
-    border-top: 1px solid var(--border);
-    pointer-events: auto;
-    gap: 0.5rem !important;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Hide decorative text, keep stats */
-  .hmt-tag  { display: none !important; }
-  .hmt-h1   { display: none !important; }
-  .hmt-sub  { display: none !important; }
-
-  /* Stats: 2-column grid */
-  .hero-map-stats {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.4rem;
-    margin-top: 0 !important;
-  }
-
-  .hms-item {
-    padding: 6px 10px !important;
-    backdrop-filter: none;
-  }
-
-  .hms-val   { font-size: 1.1rem !important; }
-  .hms-label { font-size: 8px !important; }
-
-  /* Live badge sits over the map, not the overlay */
-  .map-live-badge {
-    top: 0.5rem !important;
-    right: 0.8rem !important;
-  }
-}
-
-/* ── THEME TOGGLE BUTTON (ensure it stays visible) ── */
+/* ── THEME TOGGLE BUTTON ── */
 .theme-toggle {
   display: flex;
   align-items: center;
@@ -1148,13 +1034,63 @@ footer a:hover { color: var(--accent); }
   margin-left: 1rem;
   white-space: nowrap;
 }
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.theme-toggle-icon  { font-size: 13px; line-height: 1; }
 
-.theme-toggle:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+/* ── 2. MOBILE MAP — overlay pinned to bottom, stats 2×2 grid ──
+   Strategy: keep overlay position:absolute always (so it never
+   affects clientHeight that map.js reads), but anchor to BOTTOM
+   of the map container instead of TOP. Title stays visible at top,
+   stats sit at the bottom. No overlap, no layout shift.
+   ──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Taller map so title + stats both fit without covering the globe */
+  .hero-map {
+    height: 380px !important;
+  }
+
+  /* Overlay: stays absolute, moves to bottom-left */
+  .hero-map-overlay {
+    top: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 0.7rem 1rem !important;
+    gap: 0.4rem !important;
+    background: linear-gradient(to top, rgba(6,10,15,0.92) 60%, transparent) !important;
+  }
+
+  /* Title: smaller but visible */
+  .hmt-tag { display: none; }
+  .hmt-h1  { font-size: 1.3rem !important; margin-bottom: 0 !important; }
+  .hmt-sub { font-size: 9px !important; }
+
+  /* Stats: compact 2×2 grid at bottom of overlay */
+  .hero-map-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.3rem !important;
+    margin-top: 0.2rem !important;
+  }
+
+  .hms-item {
+    padding: 4px 8px !important;
+    backdrop-filter: none;
+  }
+
+  .hms-val   { font-size: 1rem !important; }
+  .hms-label { font-size: 8px !important; }
 }
 
-/* Override 1024px rule that sets fixed height — mobile needs auto */
+/* Light mode gradient override for mobile overlay */
+[data-theme="light"] .hero-map-overlay {
+  background: none !important;
+}
 @media (max-width: 768px) {
-  .hero-map { height: auto !important; }
+  [data-theme="light"] .hero-map-overlay {
+    background: linear-gradient(to top, rgba(240,244,248,0.93) 60%, transparent) !important;
+  }
+  [data-theme="light"] .hms-item {
+    background: rgba(240,244,248,0.88) !important;
+  }
 }

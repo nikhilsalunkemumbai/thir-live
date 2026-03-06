@@ -160,3 +160,44 @@ function addThreatPoints(g, projection) {
     }
   });
 }
+
+// --------------------------------------------------
+// Resize: redraw map when container changes size
+// Uses ResizeObserver (supported in all modern browsers).
+// Debounced 200ms to avoid thrashing during drag-resize.
+// --------------------------------------------------
+(function initMapResize() {
+  let resizeTimer = null;
+
+  function redraw() {
+    const container = document.querySelector('.hero-map');
+    if (!container) return;
+    // Only redraw if dimensions actually changed
+    const svg = document.getElementById('threat-map');
+    if (!svg) return;
+    const newW = container.clientWidth;
+    const newH = container.clientHeight;
+    if (parseInt(svg.getAttribute('width'))  === newW &&
+        parseInt(svg.getAttribute('height')) === newH) return;
+    initThreatMap();
+  }
+
+  // ResizeObserver fires when the .hero-map element changes size
+  if (window.ResizeObserver) {
+    const ro = new ResizeObserver(() => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(redraw, 200);
+    });
+    // Attach after DOM is ready
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.querySelector('.hero-map');
+      if (container) ro.observe(container);
+    });
+  } else {
+    // Fallback: window resize event for older browsers
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(redraw, 200);
+    });
+  }
+})();
