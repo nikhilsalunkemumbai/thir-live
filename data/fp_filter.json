@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-06T12:59:43Z",
+  "generated_at": "2026-03-06T13:09:59Z",
   "threshold_used": 25,
-  "total_cases_in": 34,
+  "total_cases_in": 35,
   "confirmed_threats": 3,
-  "flagged_as_fp": 31,
-  "fp_rate": 0.9118,
+  "flagged_as_fp": 32,
+  "fp_rate": 0.9143,
   "fp_cases": [
     {
       "case_id": "IR-e0434e05033d",
@@ -159,6 +159,11 @@
     {
       "case_id": "IR-2969b752e0e7",
       "src_ip": "52.159.229.2",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-5b81ce064c27",
+      "src_ip": "20.172.6.73",
       "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
