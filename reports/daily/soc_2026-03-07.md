@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-07 |
-| **Generated At** | 2026-03-07T13:00:13Z |
-| **Shift Time** | 13:00 UTC |
+| **Generated At** | 2026-03-07T13:46:41Z |
+| **Shift Time** | 13:46 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,18 +14,18 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **174** |
-| Confirmed Threats | **26** |
-| False Positives Filtered | **148** (85.1%) |
-| Unique Attacker IPs | **29** |
+| Total Sessions Captured | **204** |
+| Confirmed Threats | **28** |
+| False Positives Filtered | **176** (86.3%) |
+| Unique Attacker IPs | **35** |
 | Countries of Origin | **12** |
 | High Severity Cases | **17** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **157** |
+| Low Severity Cases | **187** |
 
 ---
 
-## 🚨 Confirmed Threats (26)
+## 🚨 Confirmed Threats (28)
 
 ### 🔴 HIGH · IR-91073fd0fd5a
 
@@ -773,22 +773,66 @@
 - [ ] Monitor for repeat activity from `98.82.11.67`
 - [ ] No immediate escalation required
 
+### 🟢 LOW · IR-a594e04eda5a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `49.88.156.34` |
+| **First Seen** | 2026-03-07T13:20:23.631221Z |
+| **Last Seen** | 2026-03-07T13:22:23.633301Z |
+| **Session Duration** | 120s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 13:20:23` | `cowrie.session.connect` |
+| `2026-03-07 13:22:23` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `49.88.156.34`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-e2141c532a34
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `153.246.198.45` |
+| **First Seen** | 2026-03-07T13:23:34.274446Z |
+| **Last Seen** | 2026-03-07T13:24:05.021846Z |
+| **Session Duration** | 30s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 13:23:34` | `cowrie.session.connect` |
+| `2026-03-07 13:24:05` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `153.246.198.45`
+- [ ] No immediate escalation required
+
 ---
 
 ## 🌐 Top Attacker IPs by Abuse Score
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `98.82.11.67` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 29 |
+| `1.225.62.211` | KR | SK Broadband Co Ltd | **100** ⚠️ | 11 |
+| `210.165.134.111` | JP | InfoSphere (NTT PC Communications, Inc.) | **100** ⚠️ | 5 |
+| `120.48.124.94` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 19 |
 | `129.146.81.203` | US | Oracle Corporation | **100** ⚠️ | 18 |
 | `220.135.110.10` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 1 |
-| `210.165.134.111` | JP | InfoSphere (NTT PC Communications, Inc.) | **100** ⚠️ | 5 |
+| `183.87.217.222` | IN | Ishan Netsol Pvt Ltd | **100** ⚠️ | 32 |
 | `209.14.28.89` | BR | WIX NET DO BRASIL LTDA | **100** ⚠️ | 2 |
-| `120.48.124.94` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 19 |
-| `203.236.109.13` | KR | Korea Telecom | **100** ⚠️ | 30 |
-| `1.225.62.211` | KR | SK Broadband Co Ltd | **100** ⚠️ | 11 |
-| `183.87.217.222` | IN | Ishan Netsol Pvt Ltd | **100** ⚠️ | 31 |
+| `98.82.11.67` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 29 |
 | `176.32.195.85` | AM | Interactive TV LLC | **100** ⚠️ | 50 |
+| `49.88.156.34` | CN | CHINANET jiangsu province network | **100** ⚠️ | 50 |
 
 ---
 
@@ -803,17 +847,18 @@
 
 ---
 
-## 🔕 False Positive Summary (148 filtered)
+## 🔕 False Positive Summary (176 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 8 |
+| AbuseIPDB score 0 below threshold 25 | 9 |
+| AbuseIPDB score 16 below threshold 25 | 26 |
 | AbuseIPDB score 17 below threshold 25 | 1 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
 | AbuseIPDB score 3 below threshold 25 | 1 |
 | AbuseIPDB score 7 below threshold 25 | 1 |
 | AbuseIPDB score 8 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 135 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 136 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -824,9 +869,9 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 174 cases |
-| Tool 27 | Threat Intel Feeder         | ✅ 29 IPs enriched |
-| Tool 29 | False Positive Tracker      | ✅ 148 filtered (85.1%) |
+| Tool 26 | Incident Timeline Generator | ✅ 204 cases |
+| Tool 27 | Threat Intel Feeder         | ✅ 35 IPs enriched |
+| Tool 29 | False Positive Tracker      | ✅ 176 filtered (86.3%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
@@ -844,4 +889,4 @@
 
 _Generated by THIR · Tool 28 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-07T13:00:13Z_
+_Report time: 2026-03-07T13:46:41Z_
