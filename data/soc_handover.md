@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-07 |
-| **Generated At** | 2026-03-07T15:30:30Z |
-| **Shift Time** | 15:30 UTC |
+| **Generated At** | 2026-03-07T16:35:46Z |
+| **Shift Time** | 16:35 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,18 +14,18 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **230** |
-| Confirmed Threats | **44** |
-| False Positives Filtered | **186** (80.9%) |
-| Unique Attacker IPs | **47** |
+| Total Sessions Captured | **235** |
+| Confirmed Threats | **47** |
+| False Positives Filtered | **188** (80.0%) |
+| Unique Attacker IPs | **51** |
 | Countries of Origin | **15** |
 | High Severity Cases | **22** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **208** |
+| Low Severity Cases | **213** |
 
 ---
 
-## 🚨 Confirmed Threats (44)
+## 🚨 Confirmed Threats (47)
 
 ### 🔴 HIGH · IR-91073fd0fd5a
 
@@ -1248,22 +1248,95 @@
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
+### 🟢 LOW · IR-50a1ca75ba1e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `13.89.125.255` |
+| **First Seen** | 2026-03-07T15:53:16.495120Z |
+| **Last Seen** | 2026-03-07T15:53:26.733337Z |
+| **Session Duration** | 10s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 15:53:16` | `cowrie.session.connect` |
+| `2026-03-07 15:53:26` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `13.89.125.255`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-2f1b6535588b
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `13.89.125.255` |
+| **First Seen** | 2026-03-07T15:53:26.988158Z |
+| **Last Seen** | 2026-03-07T15:53:27.248933Z |
+| **Session Duration** | 0s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 15:53:26` | `cowrie.session.connect` |
+| `2026-03-07 15:53:27` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `13.89.125.255`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-06de2b5e6694
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `139.19.117.130` |
+| **First Seen** | 2026-03-07T16:12:38.892540Z |
+| **Last Seen** | 2026-03-07T16:12:48.893348Z |
+| **Session Duration** | 10s |
+| **Login Attempts** | 2 |
+| **Auth Success** | ❌ No |
+| **TTPs (MITRE)** | T1110.001 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 16:12:38` | `cowrie.session.connect` |
+| `2026-03-07 16:12:38` | `cowrie.client.version` |
+| `2026-03-07 16:12:39` | `cowrie.client.kex` |
+| `2026-03-07 16:12:39` | `cowrie.client.fingerprint` |
+| `2026-03-07 16:12:39` | `cowrie.login.failed` |
+| `2026-03-07 16:12:39` | `cowrie.client.fingerprint` |
+| `2026-03-07 16:12:39` | `cowrie.login.failed` |
+| `2026-03-07 16:12:48` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `139.19.117.130`
+- [ ] No immediate escalation required
+
 ---
 
 ## 🌐 Top Attacker IPs by Abuse Score
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `70.162.251.153` | US | Cox Communications | **100** ⚠️ | 7 |
-| `176.32.195.85` | AM | Interactive TV LLC | **100** ⚠️ | 50 |
 | `120.241.79.66` | CN | China Mobile Communications Corporation | **100** ⚠️ | 36 |
+| `172.212.224.104` | US | Microsoft Limited | **100** ⚠️ | 50 |
 | `101.200.236.207` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 48 |
-| `98.82.11.67` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 29 |
-| `153.246.198.45` | JP | Open Computer Network | **100** ⚠️ | 30 |
+| `176.32.195.85` | AM | Interactive TV LLC | **100** ⚠️ | 50 |
+| `220.135.110.10` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 1 |
+| `129.146.81.203` | US | Oracle Corporation | **100** ⚠️ | 18 |
+| `70.162.251.153` | US | Cox Communications | **100** ⚠️ | 7 |
 | `183.87.217.222` | IN | Ishan Netsol Pvt Ltd | **100** ⚠️ | 32 |
-| `49.88.156.34` | CN | CHINANET jiangsu province network | **100** ⚠️ | 50 |
-| `120.48.124.94` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 19 |
-| `134.199.171.189` | AU | DigitalOcean, LLC | **100** ⚠️ | 2 |
+| `210.165.134.111` | JP | InfoSphere (NTT PC Communications, Inc.) | **100** ⚠️ | 5 |
+| `153.246.198.45` | JP | Open Computer Network | **100** ⚠️ | 30 |
 
 ---
 
@@ -1278,16 +1351,16 @@
 
 ---
 
-## 🔕 False Positive Summary (186 filtered)
+## 🔕 False Positive Summary (188 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 11 |
-| AbuseIPDB score 16 below threshold 25 | 27 |
-| AbuseIPDB score 17 below threshold 25 | 1 |
+| AbuseIPDB score 0 below threshold 25 | 12 |
+| AbuseIPDB score 16 below threshold 25 | 28 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
 | AbuseIPDB score 3 below threshold 25 | 1 |
 | AbuseIPDB score 4 below threshold 25 | 1 |
+| AbuseIPDB score 5 below threshold 25 | 1 |
 | AbuseIPDB score 7 below threshold 25 | 1 |
 | AbuseIPDB score 8 below threshold 25 | 1 |
 | Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 142 |
@@ -1301,9 +1374,9 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 230 cases |
-| Tool 27 | Threat Intel Feeder         | ✅ 47 IPs enriched |
-| Tool 29 | False Positive Tracker      | ✅ 186 filtered (80.9%) |
+| Tool 26 | Incident Timeline Generator | ✅ 235 cases |
+| Tool 27 | Threat Intel Feeder         | ✅ 51 IPs enriched |
+| Tool 29 | False Positive Tracker      | ✅ 188 filtered (80.0%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
@@ -1321,4 +1394,4 @@
 
 _Generated by THIR · Tool 28 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-07T15:30:30Z_
+_Report time: 2026-03-07T16:35:46Z_
