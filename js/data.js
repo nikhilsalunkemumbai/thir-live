@@ -133,14 +133,54 @@ let IR_CASES = [
 
 // --------------------------------------------------
 // Tool portfolio static data
+// Tools 05, 07, 26–32 (all pipeline + analysis tools)
 // --------------------------------------------------
 const TOOLS_DATA = [
-  { name: 'Incident Timeline Generator', langs: ['py'], desc: 'Parses Cowrie NDJSON logs into structured IR cases. Groups events by session, maps TTPs to MITRE ATT&CK, scores severity. Output: data/ir_cases.json.', domain: 'Incident Response', lines: 375 },
-  { name: 'Threat Intel Feeder',         langs: ['go'], desc: 'Enriches attacker IPs via AbuseIPDB and AlienVault OTX concurrently. Deduplicates across sessions, maps country codes for visualisation. Output: data/threat_ips.json.', domain: 'Threat Intelligence', lines: 411 },
-  { name: 'False Positive Tracker',      langs: ['py'], desc: 'Three-signal FP detection: AbuseIPDB score threshold, known scanner ISP matching (Shodan/Censys/Rapid7), mass-scanner behaviour pattern. Output: data/fp_filter.json.', domain: 'Alert Triage', lines: 407 },
-  { name: 'Metric Dashboard Exporter',   langs: ['go'], desc: 'Aggregates all pipeline outputs into a single stats object. Derives severity breakdown, top TTPs by frequency, unique country count, honeypot status. Output: data/stats.json.', domain: 'Metrics & Reporting', lines: 459 },
-  { name: 'Network Service Monitor',     langs: ['go'], desc: 'Concurrent TCP port checker. Verifies Cowrie honeypot liveness on Oracle VPS port 2222. Writes structured JSON posture report. Runs before each pipeline cycle.', domain: 'Infrastructure', lines: 220 },
-  { name: 'File Integrity Monitor',      langs: ['go'], desc: 'SHA-256 baseline verification for all data/ pipeline outputs. Detects unauthorised modification between pipeline runs. Alerts via GitHub Actions annotation.', domain: 'Data Integrity', lines: 198 },
+  {
+    name: 'Incident Timeline Generator', langs: ['py'],
+    desc: 'Parses Cowrie NDJSON logs into structured IR cases. Groups events by session, maps TTPs to MITRE ATT&CK, scores severity. Output: data/ir_cases.json.',
+    domain: 'Incident Response', lines: 375,
+  },
+  {
+    name: 'Threat Intel Feeder', langs: ['go'],
+    desc: 'Enriches attacker IPs via AbuseIPDB and AlienVault OTX concurrently. Deduplicates across sessions, maps country codes for visualisation. Output: data/threat_ips.json.',
+    domain: 'Threat Intelligence', lines: 411,
+  },
+  {
+    name: 'False Positive Tracker', langs: ['py'],
+    desc: 'Three-signal FP detection: AbuseIPDB score threshold, known scanner ISP matching (Shodan/Censys/Rapid7), mass-scanner behaviour pattern. Output: data/fp_filter.json.',
+    domain: 'Alert Triage', lines: 407,
+  },
+  {
+    name: 'Metric Dashboard Exporter', langs: ['go'],
+    desc: 'Aggregates all pipeline outputs into a single stats object. Derives severity breakdown, top TTPs by frequency, unique country count, honeypot status. Output: data/stats.json.',
+    domain: 'Metrics & Reporting', lines: 459,
+  },
+  {
+    name: 'Network Service Monitor', langs: ['go'],
+    desc: 'Concurrent TCP port checker. Verifies Cowrie honeypot liveness on Oracle VPS port 2222. Writes structured JSON posture report. Runs before each pipeline cycle.',
+    domain: 'Infrastructure', lines: 220,
+  },
+  {
+    name: 'File Integrity Monitor', langs: ['go'],
+    desc: 'SHA-256 baseline verification for all data/ pipeline outputs. Detects unauthorised modification between pipeline runs. Alerts via GitHub Actions annotation.',
+    domain: 'Data Integrity', lines: 198,
+  },
+  {
+    name: 'SOC Handover Reporter', langs: ['py'],
+    desc: 'Generates structured Markdown SOC handover reports from pipeline outputs (ir_cases, threat_ips, fp_filter, stats). One report per pipeline run. Output: data/soc_handover.md.',
+    domain: 'SOC Operations', lines: 312,
+  },
+  {
+    name: 'Malware Analyzer', langs: ['py'],
+    desc: 'Analyzes files captured by Cowrie. Detects type via magic bytes (ELF/PE/script), computes MD5/SHA1/SHA256 hashes, scans for 30+ suspicious string patterns, and optionally queries VirusTotal API. Output: data/malware_report.json.',
+    domain: 'Malware Analysis', lines: 298,
+  },
+  {
+    name: 'Report Lifecycle Manager', langs: ['py'],
+    desc: 'Tiered report retention: saves daily SOC reports, rolls up weekly summaries on Monday, generates monthly archives on the 1st. Tracks peak session/IP/threat high-water marks in stats.json. Prunes reports beyond 6-month retention.',
+    domain: 'Reporting & Retention', lines: 410,
+  },
 ];
 
 // --------------------------------------------------
@@ -169,14 +209,23 @@ const POSTURE_CONTROLS = [
   // Tool 07 — file_integrity_live.go: SHA-256 baseline check on all data/ outputs
   { id: 'PR.DS-6',  name: 'Pipeline Output Integrity',      status: 'active',     tool: 'Tool 07' },
 
-  // GitHub Actions: structured Cowrie NDJSON → IR case archive with TTP tags
+  // Tool 26: structured Cowrie NDJSON → IR case archive with TTP tags
   { id: 'RS.AN-2',  name: 'TTP Mapping (MITRE ATT&CK)',     status: 'active',     tool: 'Tool 26' },
 
-  // Planned: SOC handover report (Tool 28) not yet built
-  { id: 'RS.CO-3',  name: 'Automated Handover Reporting',   status: 'planned',    tool: 'Tool 28' },
+  // Tool 28 — soc_handover_live.py: structured SOC report per pipeline run
+  { id: 'RS.CO-3',  name: 'Automated Handover Reporting',   status: 'active',     tool: 'Tool 28' },
 
-  // Planned: malware analyzer for ELF binaries downloaded via Cowrie
-  { id: 'DE.CM-4',  name: 'Malware Sample Analysis',        status: 'planned',    tool: 'Planned' },
+  // Tool 31 — malware_analyzer_live.py: hash + string scan + VT lookup
+  { id: 'DE.CM-4',  name: 'Malware Sample Analysis',        status: 'active',     tool: 'Tool 31' },
+
+  // Tool 32 — report_lifecycle.py: daily save, weekly/monthly rollup, peak stats
+  { id: 'RS.CO-2',  name: 'Report Lifecycle & Retention',   status: 'active',     tool: 'Tool 32' },
+
+  // Tool 32: peak stats tracking in stats.json
+  { id: 'DE.AE-1',  name: 'Peak Threat Tracking',           status: 'active',     tool: 'Tool 32' },
+
+  // Planned: YARA rule scanning for downloaded samples
+  { id: 'DE.CM-5',  name: 'YARA Rule Matching',             status: 'planned',    tool: 'Planned' },
 ];
 
 // --------------------------------------------------
