@@ -1,34 +1,7 @@
 {
-  "generated_at": "2026-03-07T10:30:43Z",
-  "total_ips": 13,
+  "generated_at": "2026-03-07T11:26:40Z",
+  "total_ips": 21,
   "ips": [
-    {
-      "indicator": "135.232.224.117",
-      "type": "ip",
-      "abuse_score": 30,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "52.190.182.224",
-      "type": "ip",
-      "abuse_score": 7,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "138.197.147.214",
-      "type": "ip",
-      "abuse_score": 56,
-      "country": "CA",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
     {
       "indicator": "128.24.163.84",
       "type": "ip",
@@ -36,52 +9,7 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "172.215.211.18",
-      "type": "ip",
-      "abuse_score": 17,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "135.232.224.82",
-      "type": "ip",
-      "abuse_score": 8,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "209.14.28.89",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "BR",
-      "isp": "WIX NET DO BRASIL LTDA",
-      "otx_pulses": 2,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "209.38.80.132",
-      "type": "ip",
-      "abuse_score": 43,
-      "country": "AU",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
-    },
-    {
-      "indicator": "27.123.241.169",
-      "type": "ip",
-      "abuse_score": 43,
-      "country": "IN",
-      "isp": "Ani Network Pvt Ltd",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:35Z"
+      "last_seen": "2026-03-07T11:26:32Z"
     },
     {
       "indicator": "1.225.62.211",
@@ -90,16 +18,7 @@
       "country": "KR",
       "isp": "SK Broadband Co Ltd",
       "otx_pulses": 11,
-      "last_seen": "2026-03-07T10:30:36Z"
-    },
-    {
-      "indicator": "183.87.217.222",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "IN",
-      "isp": "Ishan Netsol Pvt Ltd",
-      "otx_pulses": 31,
-      "last_seen": "2026-03-07T10:30:36Z"
+      "last_seen": "2026-03-07T11:26:32Z"
     },
     {
       "indicator": "106.195.15.225",
@@ -108,7 +27,160 @@
       "country": "IN",
       "isp": "Bharti Airtel Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:36Z"
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "209.14.28.89",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "BR",
+      "isp": "WIX NET DO BRASIL LTDA",
+      "otx_pulses": 2,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "103.72.9.87",
+      "type": "ip",
+      "abuse_score": 34,
+      "country": "IN",
+      "isp": "SWIFTIFY PRIVATE LIMITED",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "4.246.135.65",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "172.215.211.18",
+      "type": "ip",
+      "abuse_score": 17,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "135.232.224.117",
+      "type": "ip",
+      "abuse_score": 30,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "46.101.42.97",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "GB",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "27.123.241.4",
+      "type": "ip",
+      "abuse_score": 48,
+      "country": "IN",
+      "isp": "Ani Network Pvt Ltd",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "138.197.147.214",
+      "type": "ip",
+      "abuse_score": 56,
+      "country": "CA",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "209.38.80.132",
+      "type": "ip",
+      "abuse_score": 43,
+      "country": "AU",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "27.123.241.169",
+      "type": "ip",
+      "abuse_score": 43,
+      "country": "IN",
+      "isp": "Ani Network Pvt Ltd",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "85.172.77.15",
+      "type": "ip",
+      "abuse_score": 52,
+      "country": "RU",
+      "isp": "OJSC Rostelecom Macroregional Branch South",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "66.175.213.237",
+      "type": "ip",
+      "abuse_score": 3,
+      "country": "US",
+      "isp": "Linode",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "135.232.224.82",
+      "type": "ip",
+      "abuse_score": 8,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:32Z"
+    },
+    {
+      "indicator": "129.146.81.203",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Oracle Corporation",
+      "otx_pulses": 18,
+      "last_seen": "2026-03-07T11:26:33Z"
+    },
+    {
+      "indicator": "52.190.182.224",
+      "type": "ip",
+      "abuse_score": 7,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T11:26:33Z"
+    },
+    {
+      "indicator": "176.32.195.85",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "AM",
+      "isp": "Interactive TV LLC",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-07T11:26:33Z"
+    },
+    {
+      "indicator": "183.87.217.222",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "IN",
+      "isp": "Ishan Netsol Pvt Ltd",
+      "otx_pulses": 31,
+      "last_seen": "2026-03-07T11:26:33Z"
     },
     {
       "indicator": "205.210.31.14",
@@ -117,7 +189,7 @@
       "country": "US",
       "isp": "Palo Alto Networks, Inc",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T10:30:43Z"
+      "last_seen": "2026-03-07T11:26:40Z"
     }
   ]
 }
