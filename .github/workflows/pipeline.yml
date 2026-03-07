@@ -15,6 +15,8 @@
 #   Tool 28 → SOC handover report        → data/soc_handover.md
 #   Tool 32 → save daily + peak stats    → reports/daily/soc_YYYY-MM-DD.md
 #   Tool 32 → weekly/monthly rollup      → reports/weekly/ or reports/monthly/
+#   [cond]  → fetch downloads (if any)   → /tmp/cowrie-downloads/
+#   Tool 31 → malware analysis (if any)  → data/malware_report.json
 #   Tool 07 → verify data integrity      → (exit code check)
 #   git     → commit + push data/ reports/
 #
@@ -23,6 +25,7 @@
 #   ORACLE_VPS_IP         Public IP of AWS EC2 running Cowrie
 #   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
 #   OTX_API_KEY           AlienVault OTX free account
+#   VIRUSTOTAL_API_KEY    VirusTotal free account (optional — Tool 31)
 
 name: THIR Live Pipeline
 
@@ -131,7 +134,7 @@ jobs:
       - name: Fetch Cowrie logs from AWS EC2
         id: fetch_logs
         continue-on-error: true
-        timeout-minutes: 5   # hard stop if SCP hangs
+        timeout-minutes: 5
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
@@ -215,6 +218,7 @@ jobs:
       # 11.a Tool 28 — SOC Handover Report
       # ----------------------------------------------------------------
       - name: Tool 28 — SOC Handover Report
+        continue-on-error: true
         run: |
           python tools/28_soc_handover_live.py \
             --ir-cases   data/ir_cases.json \
@@ -223,7 +227,6 @@ jobs:
             --stats      data/stats.json \
             --output     data/soc_handover.md \
             --verbose
-        continue-on-error: true
 
       # ----------------------------------------------------------------
       # 11.b Tool 32 — Save daily report + update peak stats (every run)
@@ -234,13 +237,13 @@ jobs:
       #     never overwrites a busy day (40 sessions).
       # ----------------------------------------------------------------
       - name: Tool 32 — Save daily report + peak stats
+        continue-on-error: true
         run: |
           python tools/32_report_lifecycle.py \
             --save-daily \
             --report data/soc_handover.md \
             --stats  data/stats.json \
             --verbose
-        continue-on-error: true
 
       # ----------------------------------------------------------------
       # 11.c Tool 32 — Conditional rollup (weekly / monthly)
@@ -259,6 +262,7 @@ jobs:
       #   All other runs → no-op, exits cleanly in ~1 second
       # ----------------------------------------------------------------
       - name: Tool 32 — Conditional rollup (weekly / monthly)
+        continue-on-error: true
         run: |
           DAY_OF_WEEK=$(date -u +%u)    # 1=Mon … 7=Sun
           DAY_OF_MONTH=$(date -u +%d)   # 01–31
@@ -266,7 +270,7 @@ jobs:
 
           echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
 
-          # Monthly rollup — 1st of month, hour 00 (runs before weekly check)
+          # Monthly rollup — 1st of month, hour 00 (checked first — 1st can also be Monday)
           if [ "$DAY_OF_MONTH" = "01" ] && [ "$HOUR" = "00" ]; then
             echo "[Tool 32] Triggering MONTHLY rollup"
             python tools/32_report_lifecycle.py \
@@ -285,22 +289,142 @@ jobs:
           else
             echo "[Tool 32] No rollup needed this run — skipping"
           fi
+
+      # ----------------------------------------------------------------
+      # 11.d Check for Cowrie downloads — sets DOWNLOADS_FOUND output
+      #
+      #   Reads ir_cases.json and checks whether any confirmed case has
+      #   a non-empty downloads list. Only if true do the next two steps
+      #   run — avoids wasted SSH calls on quiet brute-force-only runs.
+      #
+      #   Output variable: DOWNLOADS_FOUND = "true" | "false"
+      # ----------------------------------------------------------------
+      - name: Check for Cowrie downloads in IR cases
+        id: check_downloads
+        run: |
+          DOWNLOADS_FOUND=$(python -c "
+          import json, sys
+          try:
+              with open('data/ir_cases.json') as f:
+                  data = json.load(f)
+              has_downloads = any(
+                  c.get('downloads') for c in data.get('cases', [])
+              )
+              print('true' if has_downloads else 'false')
+          except Exception:
+              print('false')
+          ")
+          echo "DOWNLOADS_FOUND=${DOWNLOADS_FOUND}" >> $GITHUB_OUTPUT
+          echo "[Tool 31] Downloads detected in IR cases: ${DOWNLOADS_FOUND}"
+
+      # ----------------------------------------------------------------
+      # 11.e Fetch Cowrie downloads from VPS (on-demand)
+      #
+      #   Only runs when step 11.d detected downloads in ir_cases.json.
+      #   SCPs the entire downloads/ folder from the VPS to the runner.
+      #   Capped at 50 files — abnormal volume halts to avoid abuse.
+      # ----------------------------------------------------------------
+      - name: Fetch Cowrie downloads from VPS (on-demand)
+        id: fetch_downloads
+        if: steps.check_downloads.outputs.DOWNLOADS_FOUND == 'true'
         continue-on-error: true
+        timeout-minutes: 5
+        env:
+          VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
+        run: |
+          echo "━━━ [SCP] Downloads detected — fetching from ${VPS_IP} ━━━"
+          mkdir -p /tmp/cowrie-downloads
+
+          scp -r \
+            -i /tmp/vps_key \
+            -o StrictHostKeyChecking=no \
+            -o ConnectTimeout=60 \
+            -o ServerAliveInterval=30 \
+            -o ServerAliveCountMax=3 \
+            "ubuntu@${VPS_IP}:/home/cowrie/cowrie/var/lib/cowrie/downloads/." \
+            /tmp/cowrie-downloads/
+
+          FILE_COUNT=$(find /tmp/cowrie-downloads -type f | wc -l)
+          echo "━━━ [SCP] Fetched ${FILE_COUNT} file(s) ━━━"
+
+          # Sanity cap — refuse to analyze if >50 files (abnormal volume)
+          if [ "$FILE_COUNT" -gt 50 ]; then
+            echo "[WARN] Unusually high file count (${FILE_COUNT}) — capping at 50"
+            find /tmp/cowrie-downloads -type f | sort | tail -n +51 | xargs rm -f
+          fi
+
+      # ----------------------------------------------------------------
+      # 11.f Tool 31 — Malware Analyzer (on-demand)
+      #
+      #   Only runs when downloads were found AND fetched successfully.
+      #   Analyzes each captured binary for:
+      #     - File type via magic bytes (ELF/PE/script/archive)
+      #     - MD5 / SHA1 / SHA256 hashes
+      #     - 30+ suspicious string indicators
+      #     - ELF architecture (ARM/MIPS = IoT botnet indicators)
+      #     - VirusTotal hash lookup (optional — VIRUSTOTAL_API_KEY secret)
+      #
+      #   Output: data/malware_report.json
+      #   HIGH severity findings are surfaced directly in the Actions log.
+      #   If no downloads exist both this step and 11.e are fully skipped —
+      #   zero extra SSH overhead, zero VT API quota consumed.
+      # ----------------------------------------------------------------
+      - name: Tool 31 — Malware Analyzer (on-demand)
+        if: steps.check_downloads.outputs.DOWNLOADS_FOUND == 'true'
+        continue-on-error: true
+        timeout-minutes: 10
+        env:
+          VIRUSTOTAL_API_KEY: ${{ secrets.VIRUSTOTAL_API_KEY }}
+        run: |
+          FILE_COUNT=$(find /tmp/cowrie-downloads -type f 2>/dev/null | wc -l)
+
+          if [ "$FILE_COUNT" -eq 0 ]; then
+            echo "[Tool 31] No files in /tmp/cowrie-downloads — skipping"
+            exit 0
+          fi
+
+          echo "━━━ [Tool 31] Analyzing ${FILE_COUNT} captured file(s) ━━━"
+
+          python tools/31_malware_analyzer_live.py \
+            --input   /tmp/cowrie-downloads \
+            --output  data/malware_report.json \
+            --vt-key  "${VIRUSTOTAL_API_KEY}" \
+            --verbose
+
+          # Surface HIGH severity findings directly in the Actions log
+          python -c "
+          import json, sys
+          try:
+              with open('data/malware_report.json') as f:
+                  report = json.load(f)
+              high = [s for s in report.get('samples', []) if s.get('severity') == 'HIGH']
+              if high:
+                  print(f'[Tool 31] ⚠️  HIGH SEVERITY: {len(high)} sample(s)')
+                  for s in high:
+                      print(f'  → {s[\"file_name\"]} | score:{s[\"threat_score\"]} | {s[\"file_type\"]}')
+                      vt = s.get('virustotal')
+                      if vt and vt.get('malicious', 0) > 0:
+                          print(f'    VT: {vt[\"malicious\"]}/{vt[\"total\"]} detections — {vt[\"vt_link\"]}')
+              else:
+                  total = report.get('total_files', 0)
+                  print(f'[Tool 31] {total} file(s) analyzed — no HIGH severity findings')
+          except Exception as e:
+              print(f'[Tool 31] Could not parse report: {e}', file=sys.stderr)
+          "
 
       # ----------------------------------------------------------------
       # 12. Tool 07 — file integrity verification
       # ----------------------------------------------------------------
       - name: Run Tool 07 — File Integrity Monitor
+        continue-on-error: true
         run: |
           BASELINE="data/integrity_baseline.json"
           REBUILD=false
 
-          # Rebuild if baseline missing
           if [ ! -f "$BASELINE" ]; then
             echo "[Tool 07] Baseline missing — creating fresh baseline"
             REBUILD=true
           else
-            # Rebuild if baseline is older than 2 hours (7200 seconds)
             BASELINE_AGE=$(( $(date +%s) - $(date -r "$BASELINE" +%s) ))
             echo "[Tool 07] Baseline age: ${BASELINE_AGE}s"
             if [ "$BASELINE_AGE" -gt 7200 ]; then
@@ -322,7 +446,6 @@ jobs:
               --path data/ \
               -v
           fi
-        continue-on-error: true
 
       # ----------------------------------------------------------------
       # 13. Clean up sensitive files from runner
@@ -330,7 +453,8 @@ jobs:
       - name: Clean up SSH key and temp files
         if: always()
         run: |
-          rm -f /tmp/vps_key /tmp/cowrie.json /tmp/attacker_ips.txt
+          rm -f  /tmp/vps_key /tmp/cowrie.json /tmp/attacker_ips.txt
+          rm -rf /tmp/cowrie-downloads
 
       # ----------------------------------------------------------------
       # 14. Commit and push updated data/ and reports/
@@ -341,10 +465,15 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/ reports/
           if git diff --staged --quiet; then
-            echo "No data changes — nothing to commit"
+            echo "No changes — nothing to commit"
           else
             TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
             CASE_COUNT=$(python -c "import json; d=json.load(open('data/ir_cases.json')); print(d.get('total_cases',0))" 2>/dev/null || echo "?")
-            git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases)"
+            MALWARE_COUNT=$(python -c "import json; d=json.load(open('data/malware_report.json')); print(d.get('total_files',0))" 2>/dev/null || echo "0")
+            if [ "$MALWARE_COUNT" != "0" ]; then
+              git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases, ${MALWARE_COUNT} malware sample(s))"
+            else
+              git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases)"
+            fi
             git push
           fi
