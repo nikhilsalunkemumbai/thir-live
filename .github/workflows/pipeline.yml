@@ -12,8 +12,11 @@
 #   Tool 27 → enrich attacker IPs        → data/threat_ips.json
 #   Tool 29 → filter false positives     → data/fp_filter.json
 #   Tool 30 → aggregate all metrics      → data/stats.json
+#   Tool 28 → SOC handover report        → data/soc_handover.md
+#   Tool 32 → save daily + peak stats    → reports/daily/soc_YYYY-MM-DD.md
+#   Tool 32 → weekly/monthly rollup      → reports/weekly/ or reports/monthly/
 #   Tool 07 → verify data integrity      → (exit code check)
-#   git     → commit + push data/
+#   git     → commit + push data/ reports/
 #
 # SECRETS REQUIRED (repo Settings → Secrets → Actions):
 #   ORACLE_VPS_SSH_KEY    Private SSH key for scp access to AWS EC2
@@ -25,8 +28,10 @@ name: THIR Live Pipeline
 
 on:
   schedule:
-    - cron: '0 * * * *'   # every hour at :00
-  workflow_dispatch:        # manual trigger from Actions tab
+    - cron: '0 * * * *'      # every hour — normal pipeline run
+    - cron: '5 0 * * 1'      # Monday 00:05 UTC — weekly rollup trigger
+    - cron: '10 0 1 * *'     # 1st of month 00:10 UTC — monthly rollup trigger
+  workflow_dispatch:          # manual trigger from Actions tab
 
 # Prevent overlapping runs if previous hour's job is still running
 concurrency:
@@ -209,15 +214,77 @@ jobs:
       # ----------------------------------------------------------------
       # 11.a Tool 28 — SOC Handover Report
       # ----------------------------------------------------------------
-      - name: Run Tool 28 — SOC Handover Report
+      - name: Tool 28 — SOC Handover Report
         run: |
-            python tools/28_soc_handover_live.py \
-              --ir-cases   data/ir_cases.json \
-              --threat-ips data/threat_ips.json \
-              --fp-filter  data/fp_filter.json \
-              --stats      data/stats.json \
-              --output     data/soc_handover.md \
+          python tools/28_soc_handover_live.py \
+            --ir-cases   data/ir_cases.json \
+            --threat-ips data/threat_ips.json \
+            --fp-filter  data/fp_filter.json \
+            --stats      data/stats.json \
+            --output     data/soc_handover.md \
+            --verbose
+        continue-on-error: true
+
+      # ----------------------------------------------------------------
+      # 11.b Tool 32 — Save daily report + update peak stats (every run)
+      #   - Copies data/soc_handover.md → reports/daily/soc_YYYY-MM-DD.md
+      #     Same-day file is overwritten — latest hourly run wins.
+      #   - Updates peak_sessions / peak_unique_ips / peak_confirmed_threats
+      #     in data/stats.json as high-water marks. A quiet day (3 sessions)
+      #     never overwrites a busy day (40 sessions).
+      # ----------------------------------------------------------------
+      - name: Tool 32 — Save daily report + peak stats
+        run: |
+          python tools/32_report_lifecycle.py \
+            --save-daily \
+            --report data/soc_handover.md \
+            --stats  data/stats.json \
+            --verbose
+        continue-on-error: true
+
+      # ----------------------------------------------------------------
+      # 11.c Tool 32 — Conditional rollup (weekly / monthly)
+      #
+      #   Monday 00:00 UTC  → --rollup weekly
+      #     Reads reports/daily/*.md from past 7 days
+      #     Writes reports/weekly/soc_week_YYYY-WNN.md
+      #     Deletes the rolled-up daily files
+      #
+      #   1st of month 00:00 UTC → --rollup monthly
+      #     Reads reports/weekly/*.md from past month
+      #     Writes reports/monthly/soc_YYYY-MM.md
+      #     Deletes the rolled-up weekly files
+      #     Prunes monthly reports older than 6 months
+      #
+      #   All other runs → no-op, exits cleanly in ~1 second
+      # ----------------------------------------------------------------
+      - name: Tool 32 — Conditional rollup (weekly / monthly)
+        run: |
+          DAY_OF_WEEK=$(date -u +%u)    # 1=Mon … 7=Sun
+          DAY_OF_MONTH=$(date -u +%d)   # 01–31
+          HOUR=$(date -u +%H)           # 00–23
+
+          echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
+
+          # Monthly rollup — 1st of month, hour 00 (runs before weekly check)
+          if [ "$DAY_OF_MONTH" = "01" ] && [ "$HOUR" = "00" ]; then
+            echo "[Tool 32] Triggering MONTHLY rollup"
+            python tools/32_report_lifecycle.py \
+              --rollup monthly \
+              --stats data/stats.json \
               --verbose
+
+          # Weekly rollup — Monday, hour 00
+          elif [ "$DAY_OF_WEEK" = "1" ] && [ "$HOUR" = "00" ]; then
+            echo "[Tool 32] Triggering WEEKLY rollup"
+            python tools/32_report_lifecycle.py \
+              --rollup weekly \
+              --stats data/stats.json \
+              --verbose
+
+          else
+            echo "[Tool 32] No rollup needed this run — skipping"
+          fi
         continue-on-error: true
 
       # ----------------------------------------------------------------
@@ -266,13 +333,13 @@ jobs:
           rm -f /tmp/vps_key /tmp/cowrie.json /tmp/attacker_ips.txt
 
       # ----------------------------------------------------------------
-      # 14. Commit and push updated data/
+      # 14. Commit and push updated data/ and reports/
       # ----------------------------------------------------------------
       - name: Commit and push updated data
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/
+          git add data/ reports/
           if git diff --staged --quiet; then
             echo "No data changes — nothing to commit"
           else
