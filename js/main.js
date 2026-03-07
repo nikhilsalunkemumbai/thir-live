@@ -40,6 +40,47 @@ function initTheme() {
 }
 
 // --------------------------------------------------
+// Mobile nav: hamburger toggle for .nav-drawer
+// --------------------------------------------------
+function initMobileNav() {
+  const btn    = document.getElementById('nav-menu-btn');
+  const drawer = document.getElementById('nav-drawer');
+  if (!btn || !drawer) return;
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    drawer.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+
+  // Close when any drawer link is tapped
+  drawer.querySelectorAll('.nav-drawer-link').forEach(link => {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // Close on outside click
+  document.addEventListener('click', function (e) {
+    if (!drawer.contains(e.target) && !btn.contains(e.target)) closeDrawer();
+  });
+
+  // Close on Escape
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+}
+
+// --------------------------------------------------
 // Simulation: rotate feed entries when pipeline offline
 // --------------------------------------------------
 function liveSimulate() {
@@ -96,8 +137,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   const statTtps = document.getElementById('stat-ttps');
   if (statIocs) statIocs.textContent = '1,204';
   if (statTtps) statTtps.textContent = '23';
+
   // Apply saved theme before anything renders (prevents flash)
   initTheme();
+
+  // Wire mobile nav drawer
+  initMobileNav();
 
   // Render static sections immediately (no fetch needed)
   renderTools();

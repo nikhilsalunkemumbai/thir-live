@@ -22,7 +22,7 @@
     <li><a href="#tools">Tools</a></li>
     <li><a href="#posture">Posture</a></li>
   </ul>
-  <div style="display:flex;align-items:center;">
+  <div style="display:flex;align-items:center;gap:0.25rem;">
     <div class="threat-level">
       <div class="tl-dot" id="tl-dot"></div>
       <span id="threat-label" style="color:var(--accent3)">LOADING</span>
@@ -31,8 +31,21 @@
       <span class="theme-toggle-icon" id="theme-icon">&#9788;</span>
       <span id="theme-label">LIGHT</span>
     </button>
+    <!-- Hamburger — visible only on mobile (≤1024px via CSS) -->
+    <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-drawer">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- MOBILE NAV DRAWER — rendered outside <nav> so it sits below the fixed bar -->
+<div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#intel"    class="nav-drawer-link">Threat Intel</a>
+  <a href="#attck"    class="nav-drawer-link">ATT&CK</a>
+  <a href="#timeline" class="nav-drawer-link">IR Cases</a>
+  <a href="#tools"    class="nav-drawer-link">Tools</a>
+  <a href="#posture"  class="nav-drawer-link">Posture</a>
+</div>
 
 <!-- HERO — FULL-WIDTH THREAT MAP -->
 <section class="hero-map" id="home">
