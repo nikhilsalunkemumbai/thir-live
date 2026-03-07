@@ -26,6 +26,10 @@
 #   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
 #   OTX_API_KEY           AlienVault OTX free account
 #   VIRUSTOTAL_API_KEY    VirusTotal free account (optional — Tool 31)
+#
+# NOTE: All SSH/SCP connections use port 22222 (real EC2 management port).
+#       Port 22 on EC2 is redirected to Cowrie via iptables — never use
+#       port 22 for pipeline access or you will land in the honeypot.
 
 name: THIR Live Pipeline
 
@@ -84,6 +88,7 @@ jobs:
 
       # ----------------------------------------------------------------
       # 4. Tool 05 — check honeypot is alive
+      #    Checks Cowrie SSH port 2222 (not 22 — 22 goes to honeypot).
       #    Writes data/posture.json with UP/DOWN status.
       #    continue-on-error: true so pipeline keeps running even if
       #    EC2 is temporarily unreachable.
@@ -102,8 +107,9 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 5. Pre-flight — verify EC2 reachable via SSH
-      #    Checks: SSH auth, Cowrie log directory, cowrie.json exists.
+      # 5. Pre-flight — verify EC2 reachable via SSH on port 22222
+      #    IMPORTANT: Uses port 22222 — the real EC2 management port.
+      #    Port 22 on this EC2 redirects to Cowrie honeypot via iptables.
       #    continue-on-error: true — failure is logged but pipeline continues.
       # ----------------------------------------------------------------
       - name: Pre-flight — verify EC2 SSH + Cowrie log path
@@ -112,9 +118,10 @@ jobs:
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
-          echo "━━━ [PRE-FLIGHT] Testing SSH connection to ${VPS_IP} ━━━"
+          echo "━━━ [PRE-FLIGHT] Testing SSH connection to ${VPS_IP}:22222 ━━━"
           ssh \
             -i /tmp/vps_key \
+            -p 22222 \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=30 \
             -o BatchMode=yes \
@@ -129,6 +136,7 @@ jobs:
 
       # ----------------------------------------------------------------
       # 6. Fetch Cowrie logs from AWS EC2
+      #    Uses port 22222 for SCP — NOT port 22 (that goes to Cowrie).
       #    continue-on-error: true — if VPS unreachable, skip gracefully
       # ----------------------------------------------------------------
       - name: Fetch Cowrie logs from AWS EC2
@@ -138,8 +146,9 @@ jobs:
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
-          echo "━━━ [SCP] Fetching cowrie.json from ${VPS_IP} ━━━"
-          scp -v \
+          echo "━━━ [SCP] Fetching cowrie.json from ${VPS_IP}:22222 ━━━"
+          scp \
+            -P 22222 \
             -i /tmp/vps_key \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=60 \
@@ -231,10 +240,8 @@ jobs:
       # ----------------------------------------------------------------
       # 11.b Tool 32 — Save daily report + update peak stats (every run)
       #   - Copies data/soc_handover.md → reports/daily/soc_YYYY-MM-DD.md
-      #     Same-day file is overwritten — latest hourly run wins.
       #   - Updates peak_sessions / peak_unique_ips / peak_confirmed_threats
-      #     in data/stats.json as high-water marks. A quiet day (3 sessions)
-      #     never overwrites a busy day (40 sessions).
+      #     in data/stats.json — never overwritten by a quieter day
       # ----------------------------------------------------------------
       - name: Tool 32 — Save daily report + peak stats
         continue-on-error: true
@@ -247,30 +254,19 @@ jobs:
 
       # ----------------------------------------------------------------
       # 11.c Tool 32 — Conditional rollup (weekly / monthly)
-      #
-      #   Monday 00:00 UTC  → --rollup weekly
-      #     Reads reports/daily/*.md from past 7 days
-      #     Writes reports/weekly/soc_week_YYYY-WNN.md
-      #     Deletes the rolled-up daily files
-      #
-      #   1st of month 00:00 UTC → --rollup monthly
-      #     Reads reports/weekly/*.md from past month
-      #     Writes reports/monthly/soc_YYYY-MM.md
-      #     Deletes the rolled-up weekly files
-      #     Prunes monthly reports older than 6 months
-      #
-      #   All other runs → no-op, exits cleanly in ~1 second
+      #   Monday 00:00 UTC  → weekly rollup
+      #   1st of month 00:00 UTC → monthly rollup + 6-month prune
+      #   All other runs → no-op
       # ----------------------------------------------------------------
       - name: Tool 32 — Conditional rollup (weekly / monthly)
         continue-on-error: true
         run: |
-          DAY_OF_WEEK=$(date -u +%u)    # 1=Mon … 7=Sun
-          DAY_OF_MONTH=$(date -u +%d)   # 01–31
-          HOUR=$(date -u +%H)           # 00–23
+          DAY_OF_WEEK=$(date -u +%u)
+          DAY_OF_MONTH=$(date -u +%d)
+          HOUR=$(date -u +%H)
 
           echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
 
-          # Monthly rollup — 1st of month, hour 00 (checked first — 1st can also be Monday)
           if [ "$DAY_OF_MONTH" = "01" ] && [ "$HOUR" = "00" ]; then
             echo "[Tool 32] Triggering MONTHLY rollup"
             python tools/32_report_lifecycle.py \
@@ -278,7 +274,6 @@ jobs:
               --stats data/stats.json \
               --verbose
 
-          # Weekly rollup — Monday, hour 00
           elif [ "$DAY_OF_WEEK" = "1" ] && [ "$HOUR" = "00" ]; then
             echo "[Tool 32] Triggering WEEKLY rollup"
             python tools/32_report_lifecycle.py \
@@ -292,12 +287,6 @@ jobs:
 
       # ----------------------------------------------------------------
       # 11.d Check for Cowrie downloads — sets DOWNLOADS_FOUND output
-      #
-      #   Reads ir_cases.json and checks whether any confirmed case has
-      #   a non-empty downloads list. Only if true do the next two steps
-      #   run — avoids wasted SSH calls on quiet brute-force-only runs.
-      #
-      #   Output variable: DOWNLOADS_FOUND = "true" | "false"
       # ----------------------------------------------------------------
       - name: Check for Cowrie downloads in IR cases
         id: check_downloads
@@ -315,14 +304,12 @@ jobs:
               print('false')
           ")
           echo "DOWNLOADS_FOUND=${DOWNLOADS_FOUND}" >> $GITHUB_OUTPUT
-          echo "[Tool 31] Downloads detected in IR cases: ${DOWNLOADS_FOUND}"
+          echo "[Tool 31] Downloads detected: ${DOWNLOADS_FOUND}"
 
       # ----------------------------------------------------------------
       # 11.e Fetch Cowrie downloads from VPS (on-demand)
-      #
-      #   Only runs when step 11.d detected downloads in ir_cases.json.
-      #   SCPs the entire downloads/ folder from the VPS to the runner.
-      #   Capped at 50 files — abnormal volume halts to avoid abuse.
+      #    Uses port 22222 for SCP — NOT port 22.
+      #    Only runs when downloads detected in IR cases.
       # ----------------------------------------------------------------
       - name: Fetch Cowrie downloads from VPS (on-demand)
         id: fetch_downloads
@@ -332,10 +319,11 @@ jobs:
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
-          echo "━━━ [SCP] Downloads detected — fetching from ${VPS_IP} ━━━"
+          echo "━━━ [SCP] Downloads detected — fetching from ${VPS_IP}:22222 ━━━"
           mkdir -p /tmp/cowrie-downloads
 
           scp -r \
+            -P 22222 \
             -i /tmp/vps_key \
             -o StrictHostKeyChecking=no \
             -o ConnectTimeout=60 \
@@ -347,7 +335,6 @@ jobs:
           FILE_COUNT=$(find /tmp/cowrie-downloads -type f | wc -l)
           echo "━━━ [SCP] Fetched ${FILE_COUNT} file(s) ━━━"
 
-          # Sanity cap — refuse to analyze if >50 files (abnormal volume)
           if [ "$FILE_COUNT" -gt 50 ]; then
             echo "[WARN] Unusually high file count (${FILE_COUNT}) — capping at 50"
             find /tmp/cowrie-downloads -type f | sort | tail -n +51 | xargs rm -f
@@ -355,19 +342,8 @@ jobs:
 
       # ----------------------------------------------------------------
       # 11.f Tool 31 — Malware Analyzer (on-demand)
-      #
-      #   Only runs when downloads were found AND fetched successfully.
-      #   Analyzes each captured binary for:
-      #     - File type via magic bytes (ELF/PE/script/archive)
-      #     - MD5 / SHA1 / SHA256 hashes
-      #     - 30+ suspicious string indicators
-      #     - ELF architecture (ARM/MIPS = IoT botnet indicators)
-      #     - VirusTotal hash lookup (optional — VIRUSTOTAL_API_KEY secret)
-      #
-      #   Output: data/malware_report.json
-      #   HIGH severity findings are surfaced directly in the Actions log.
-      #   If no downloads exist both this step and 11.e are fully skipped —
-      #   zero extra SSH overhead, zero VT API quota consumed.
+      #    Only runs when downloads were found and fetched.
+      #    Output: data/malware_report.json
       # ----------------------------------------------------------------
       - name: Tool 31 — Malware Analyzer (on-demand)
         if: steps.check_downloads.outputs.DOWNLOADS_FOUND == 'true'
@@ -391,7 +367,6 @@ jobs:
             --vt-key  "${VIRUSTOTAL_API_KEY}" \
             --verbose
 
-          # Surface HIGH severity findings directly in the Actions log
           python -c "
           import json, sys
           try:
@@ -406,8 +381,7 @@ jobs:
                       if vt and vt.get('malicious', 0) > 0:
                           print(f'    VT: {vt[\"malicious\"]}/{vt[\"total\"]} detections — {vt[\"vt_link\"]}')
               else:
-                  total = report.get('total_files', 0)
-                  print(f'[Tool 31] {total} file(s) analyzed — no HIGH severity findings')
+                  print(f'[Tool 31] {report.get(\"total_files\",0)} file(s) analyzed — no HIGH severity')
           except Exception as e:
               print(f'[Tool 31] Could not parse report: {e}', file=sys.stderr)
           "
