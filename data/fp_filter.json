@@ -1,49 +1,56 @@
 {
-  "generated_at": "2026-03-07T06:51:52Z",
+  "generated_at": "2026-03-07T09:13:05Z",
   "threshold_used": 25,
   "total_cases_in": 9,
-  "confirmed_threats": 2,
-  "flagged_as_fp": 7,
-  "fp_rate": 0.7778,
+  "confirmed_threats": 0,
+  "flagged_as_fp": 9,
+  "fp_rate": 1.0,
   "fp_cases": [
     {
-      "case_id": "IR-2cf7c11fd028",
-      "src_ip": "13.83.161.81",
-      "reason": "AbuseIPDB score 7 below threshold 25"
-    },
-    {
-      "case_id": "IR-27329fb733b6",
-      "src_ip": "104.209.12.65",
-      "reason": "AbuseIPDB score 0 below threshold 25"
-    },
-    {
-      "case_id": "IR-7c4acb368d7b",
-      "src_ip": "135.232.224.115",
-      "reason": "AbuseIPDB score 1 below threshold 25"
-    },
-    {
-      "case_id": "IR-6771271cad9e",
+      "case_id": "IR-887f838b2016",
       "src_ip": "106.195.15.225",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
-      "case_id": "IR-af83ea1001dc",
+      "case_id": "IR-4552652733c6",
       "src_ip": "106.195.15.225",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
-      "case_id": "IR-e1785c4a9052",
+      "case_id": "IR-b55b3e0ce4e9",
       "src_ip": "106.195.15.225",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
-      "case_id": "IR-e4fabea93cde",
-      "src_ip": "20.161.58.224",
+      "case_id": "IR-a377b3f97e85",
+      "src_ip": "106.195.15.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c4023869d265",
+      "src_ip": "106.195.15.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-fc1d7934748e",
+      "src_ip": "172.215.211.18",
+      "reason": "AbuseIPDB score 17 below threshold 25"
+    },
+    {
+      "case_id": "IR-17f170beba84",
+      "src_ip": "135.232.224.117",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-399973645a10",
+      "src_ip": "205.210.31.14",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-31bbdf4d7c5f",
+      "src_ip": "128.24.163.84",
       "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
-  "clean_cases": [
-    "IR-2d5717eaea28",
-    "IR-3f99acaa54fb"
-  ]
+  "clean_cases": []
 }
