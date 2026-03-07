@@ -1,7 +1,16 @@
 {
-  "generated_at": "2026-03-07T09:13:05Z",
-  "total_ips": 5,
+  "generated_at": "2026-03-07T09:35:54Z",
+  "total_ips": 7,
   "ips": [
+    {
+      "indicator": "138.197.147.214",
+      "type": "ip",
+      "abuse_score": 42,
+      "country": "CA",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T09:35:46Z"
+    },
     {
       "indicator": "172.215.211.18",
       "type": "ip",
@@ -9,7 +18,16 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T09:12:57Z"
+      "last_seen": "2026-03-07T09:35:46Z"
+    },
+    {
+      "indicator": "52.190.182.224",
+      "type": "ip",
+      "abuse_score": 7,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-07T09:35:46Z"
     },
     {
       "indicator": "128.24.163.84",
@@ -18,7 +36,7 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T09:12:57Z"
+      "last_seen": "2026-03-07T09:35:46Z"
     },
     {
       "indicator": "135.232.224.117",
@@ -27,7 +45,7 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T09:12:57Z"
+      "last_seen": "2026-03-07T09:35:46Z"
     },
     {
       "indicator": "106.195.15.225",
@@ -36,7 +54,7 @@
       "country": "IN",
       "isp": "Bharti Airtel Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T09:12:57Z"
+      "last_seen": "2026-03-07T09:35:46Z"
     },
     {
       "indicator": "205.210.31.14",
@@ -45,7 +63,7 @@
       "country": "US",
       "isp": "Palo Alto Networks, Inc",
       "otx_pulses": 0,
-      "last_seen": "2026-03-07T09:13:05Z"
+      "last_seen": "2026-03-07T09:35:54Z"
     }
   ]
 }
