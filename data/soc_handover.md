@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-07 |
-| **Generated At** | 2026-03-07T22:30:19Z |
-| **Shift Time** | 22:30 UTC |
+| **Generated At** | 2026-03-07T23:29:44Z |
+| **Shift Time** | 23:29 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,18 +14,18 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **337** |
-| Confirmed Threats | **81** |
-| False Positives Filtered | **256** (76.0%) |
-| Unique Attacker IPs | **85** |
-| Countries of Origin | **20** |
+| Total Sessions Captured | **346** |
+| Confirmed Threats | **87** |
+| False Positives Filtered | **259** (74.9%) |
+| Unique Attacker IPs | **93** |
+| Countries of Origin | **21** |
 | High Severity Cases | **24** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **313** |
+| Low Severity Cases | **322** |
 
 ---
 
-## 🚨 Confirmed Threats (81)
+## 🚨 Confirmed Threats (87)
 
 ### 🔴 HIGH · IR-91073fd0fd5a
 
@@ -2119,22 +2119,164 @@
 - [ ] Monitor for repeat activity from `120.241.79.66`
 - [ ] No immediate escalation required
 
+### 🟢 LOW · IR-5e1c104678a0
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `172.178.115.138` |
+| **First Seen** | 2026-03-07T22:30:43.972114Z |
+| **Last Seen** | 2026-03-07T22:30:53.987604Z |
+| **Session Duration** | 10s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+| **TTPs (MITRE)** | T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 22:30:43` | `cowrie.session.connect` |
+| `2026-03-07 22:30:43` | `cowrie.client.version` |
+| `2026-03-07 22:30:44` | `cowrie.client.kex` |
+| `2026-03-07 22:30:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `172.178.115.138`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-c10ddf3297e5
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `172.178.115.138` |
+| **First Seen** | 2026-03-07T22:30:44.810040Z |
+| **Last Seen** | 2026-03-07T22:30:44.812996Z |
+| **Session Duration** | 0s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+| **TTPs (MITRE)** | T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 22:30:44` | `cowrie.session.connect` |
+| `2026-03-07 22:30:44` | `cowrie.client.version` |
+| `2026-03-07 22:30:44` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `172.178.115.138`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-de8d95351423
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.231.89.73` |
+| **First Seen** | 2026-03-07T22:53:08.066082Z |
+| **Last Seen** | 2026-03-07T22:53:08.084508Z |
+| **Session Duration** | 0s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+| **TTPs (MITRE)** | T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 22:53:08` | `cowrie.session.connect` |
+| `2026-03-07 22:53:08` | `cowrie.client.version` |
+| `2026-03-07 22:53:08` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.231.89.73`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-886a919a612e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.231.89.76` |
+| **First Seen** | 2026-03-07T22:53:08.341306Z |
+| **Last Seen** | 2026-03-07T22:53:11.347365Z |
+| **Session Duration** | 3s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 22:53:08` | `cowrie.session.connect` |
+| `2026-03-07 22:53:11` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.231.89.76`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-5afbca9df2f1
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.196.152.206` |
+| **First Seen** | 2026-03-07T22:55:10.293455Z |
+| **Last Seen** | 2026-03-07T22:55:11.738495Z |
+| **Session Duration** | 1s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+| **TTPs (MITRE)** | T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 22:55:10` | `cowrie.session.connect` |
+| `2026-03-07 22:55:10` | `cowrie.client.version` |
+| `2026-03-07 22:55:10` | `cowrie.client.kex` |
+| `2026-03-07 22:55:11` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.196.152.206`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-bb27c6ba21e3
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `126.38.30.84` |
+| **First Seen** | 2026-03-07T23:01:28.269218Z |
+| **Last Seen** | 2026-03-07T23:01:42.218001Z |
+| **Session Duration** | 13s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-07 23:01:28` | `cowrie.session.connect` |
+| `2026-03-07 23:01:42` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `126.38.30.84`
+- [ ] No immediate escalation required
+
 ---
 
 ## 🌐 Top Attacker IPs by Abuse Score
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `116.140.209.208` | CN | China United Network Communications Corporation Limited | **100** ⚠️ | 6 |
-| `210.165.134.111` | JP | InfoSphere (NTT PC Communications, Inc.) | **100** ⚠️ | 5 |
-| `91.196.152.176` | FR | FR ONYPHE | **100** ⚠️ | 50 |
-| `14.103.99.176` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 1 |
-| `120.48.124.94` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 19 |
-| `176.32.195.85` | AM | Interactive TV LLC | **100** ⚠️ | 50 |
-| `190.215.90.80` | CL | Gtd Internet S.A. | **100** ⚠️ | 16 |
-| `66.228.53.162` | US | Linode | **100** ⚠️ | 50 |
+| `45.33.12.214` | US | Linode | **100** ⚠️ | 48 |
+| `220.135.110.10` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 1 |
+| `209.14.28.89` | BR | WIX NET DO BRASIL LTDA | **100** ⚠️ | 2 |
+| `95.99.117.67` | NL | Odido Netherlands B.V. | **100** ⚠️ | 5 |
+| `70.162.251.153` | US | Cox Communications | **100** ⚠️ | 7 |
+| `91.196.152.208` | FR | FR ONYPHE | **100** ⚠️ | 50 |
+| `172.212.224.104` | US | Microsoft Limited | **100** ⚠️ | 50 |
+| `103.174.102.89` | IN | IDIGITALCAMP WEB SERVICES | **100** ⚠️ | 6 |
+| `139.19.117.130` | DE | Max-Planck-Institut fuer Informatik | **100** ⚠️ | 50 |
 | `91.196.152.223` | FR | FR ONYPHE | **100** ⚠️ | 50 |
-| `49.142.149.113` | KR | HYUNDAI HCN Chungbuk Systems Co.Ltd | **100** ⚠️ | 7 |
 
 ---
 
@@ -2149,11 +2291,11 @@
 
 ---
 
-## 🔕 False Positive Summary (256 filtered)
+## 🔕 False Positive Summary (259 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 35 |
+| AbuseIPDB score 0 below threshold 25 | 37 |
 | AbuseIPDB score 14 below threshold 25 | 1 |
 | AbuseIPDB score 16 below threshold 25 | 28 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
@@ -2164,7 +2306,7 @@
 | AbuseIPDB score 5 below threshold 25 | 16 |
 | AbuseIPDB score 7 below threshold 25 | 1 |
 | AbuseIPDB score 8 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 168 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 169 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -2175,9 +2317,9 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 337 cases |
-| Tool 27 | Threat Intel Feeder         | ✅ 85 IPs enriched |
-| Tool 29 | False Positive Tracker      | ✅ 256 filtered (76.0%) |
+| Tool 26 | Incident Timeline Generator | ✅ 346 cases |
+| Tool 27 | Threat Intel Feeder         | ✅ 93 IPs enriched |
+| Tool 29 | False Positive Tracker      | ✅ 259 filtered (74.9%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
@@ -2195,4 +2337,4 @@
 
 _Generated by THIR · Tool 28 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-07T22:30:19Z_
+_Report time: 2026-03-07T23:29:44Z_
