@@ -31,15 +31,15 @@
       <span class="theme-toggle-icon" id="theme-icon">&#9788;</span>
       <span id="theme-label">LIGHT</span>
     </button>
-    <!-- Hamburger — visible only on mobile (≤1024px via CSS) -->
-    <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-drawer">
+    <!-- Mobile hamburger — shown via CSS at ≤1024px -->
+    <button class="nav-menu-btn" id="nav-menu-btn" aria-label="Open navigation" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- MOBILE NAV DRAWER — rendered outside <nav> so it sits below the fixed bar -->
-<div class="nav-drawer" id="nav-drawer" role="navigation" aria-label="Mobile navigation" aria-hidden="true">
+<!-- MOBILE NAV DRAWER — rendered outside fixed bar so it overlays content -->
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
   <a href="#intel"    class="nav-drawer-link">Threat Intel</a>
   <a href="#attck"    class="nav-drawer-link">ATT&CK</a>
   <a href="#timeline" class="nav-drawer-link">IR Cases</a>
@@ -86,8 +86,8 @@
     <div class="metric-key">TTPs Mapped</div>
   </div>
   <div class="metric">
-    <div class="metric-val green"  id="m-uptime">99.97%</div>
-    <div class="metric-key">Site Uptime</div>
+    <div class="metric-val green"  id="m-uptime">--</div>
+    <div class="metric-key">Honeypot Status</div>
   </div>
   <div class="metric">
     <div class="metric-val"        id="m-cases">--</div>
@@ -128,13 +128,18 @@
     <div class="section-line"></div>
   </div>
   <div class="attck-grid" id="attck-grid"></div>
+
+  <!-- FIX-8: Legend dot rgba values updated to match thir.css v1.5 palette.
+       Old values used rgba(255,61,113,…) and rgba(255,170,0,…) which no
+       longer matched the .attck-technique.detected / .monitored cell colours
+       after the cyberpunk palette update. Now uses matching rgba references. -->
   <div class="attck-legend">
     <div class="legend-item">
-      <div class="legend-dot" style="background:rgba(255,61,113,0.12);border-color:rgba(255,61,113,0.35)"></div>
-      <span style="color:#ff8aaa">Detected in honeypot / simulation</span>
+      <div class="legend-dot" style="background:rgba(255,45,120,0.13);border-color:rgba(255,45,120,0.42)"></div>
+      <span style="color:#ff80bb">Detected in honeypot / simulation</span>
     </div>
     <div class="legend-item">
-      <div class="legend-dot" style="background:rgba(255,170,0,0.08);border-color:rgba(255,170,0,0.25)"></div>
+      <div class="legend-dot" style="background:rgba(255,204,0,0.08);border-color:rgba(255,204,0,0.3)"></div>
       <span style="color:var(--warn)">Actively monitoring</span>
     </div>
     <div class="legend-item">

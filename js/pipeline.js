@@ -4,9 +4,23 @@
 // by GitHub Actions every hour. Falls back to
 // hardcoded demo data (data.js) if offline.
 // Depends on: data.js, render.js
+//
+// PATCHES:
+//   FIX-2: Added threatIPsLoaded flag — tracks whether threat_ips.json
+//          loaded successfully, independently of pipelineOnline.
+//          main.js uses this to decide whether liveSimulate() runs,
+//          preventing the IP feed going silently static when only
+//          stats.json or ir_cases.json loads but threat_ips.json fails.
+//   FIX-3: ATTCK_DATA.detected merge now wrapped in new Set() to
+//          deduplicate. Without this, re-renders (e.g. future auto-
+//          refresh) double the array on every call.
+//   FIX-5: IR_CASES now replaced (not prepended) with live cases when
+//          available. Demo cases (SIM-001/002/003) were always appended
+//          below real honeypot events — they are fallback data only.
 // =============================================
 
 let pipelineOnline  = false;
+let threatIPsLoaded = false;   // FIX-2: per-source load flag
 let liveMapPoints   = null;
 
 // --------------------------------------------------
@@ -37,9 +51,11 @@ async function loadLiveData() {
 
   if (threatResult.status === 'fulfilled') {
     bindThreatIPs(threatResult.value);
-    pipelineOnline = true;
+    pipelineOnline  = true;
+    threatIPsLoaded = true;   // FIX-2: mark threat feed as loaded
   } else {
     console.warn('[THIR] threat_ips.json unavailable — using demo IPs');
+    // threatIPsLoaded stays false → main.js will start liveSimulate()
   }
 
   updateNavStatus();
@@ -117,11 +133,16 @@ function bindIRCases(data) {
     live:    true,
   }));
 
-  IR_CASES = [...liveCases, ...IR_CASES];
+  // FIX-5: Replace IR_CASES with live data when available.
+  //        Demo cases (SIM-001/002/003) are fallback only — they should
+  //        not appear alongside real honeypot events on a live pipeline.
+  IR_CASES = liveCases;
 
+  // FIX-3: Deduplicate ATT&CK detected array with new Set() to prevent
+  //        array growth if bindIRCases() is ever called more than once.
   const allTTPs = new Set(cases.flatMap(c => c.ttps || []));
   if (allTTPs.size > 0) {
-    ATTCK_DATA.detected = [...allTTPs, ...ATTCK_DATA.detected];
+    ATTCK_DATA.detected = [...new Set([...allTTPs, ...ATTCK_DATA.detected])];
   }
 
   buildLiveTicker(cases);
@@ -172,13 +193,13 @@ function bindThreatIPs(data) {
 // --------------------------------------------------
 function classifyIP(ip) {
   const isp = (ip.isp || '').toLowerCase();
-  if (isp.includes('tor') || isp.includes('exit'))                        return 'TOR Exit · SSH Attack';
-  if (isp.includes('shodan'))                                              return 'Mass Scanner (Shodan)';
-  if (isp.includes('censys'))                                              return 'Mass Scanner (Censys)';
-  if (isp.includes('digitalocean') || isp.includes('linode') || isp.includes('vultr')) return 'VPS · Brute Force';
-  if (ip.otx_pulses > 5)                                                  return 'Known Threat Actor';
-  if (ip.abuse_score >= 90)                                               return 'High-Confidence Attacker';
-  if (ip.abuse_score >= 50)                                               return 'SSH Brute Force';
+  if (isp.includes('tor') || isp.includes('exit'))                                            return 'TOR Exit · SSH Attack';
+  if (isp.includes('shodan'))                                                                  return 'Mass Scanner (Shodan)';
+  if (isp.includes('censys'))                                                                  return 'Mass Scanner (Censys)';
+  if (isp.includes('digitalocean') || isp.includes('linode') || isp.includes('vultr'))        return 'VPS · Brute Force';
+  if (ip.otx_pulses > 5)                                                                       return 'Known Threat Actor';
+  if (ip.abuse_score >= 90)                                                                    return 'High-Confidence Attacker';
+  if (ip.abuse_score >= 50)                                                                    return 'SSH Brute Force';
   return 'Credential Scanning';
 }
 
@@ -242,28 +263,20 @@ function buildLiveTicker(cases) {
 }
 
 // --------------------------------------------------
-// Nav status indicator
+// Helper: update nav threat label based on pipeline state
 // --------------------------------------------------
 function updateNavStatus() {
   const label = document.getElementById('threat-label');
   const dot   = document.getElementById('tl-dot');
   if (!label) return;
 
-  if (!pipelineOnline) {
-    label.textContent  = 'OFFLINE';
-    label.style.color  = 'var(--text-dim)';
-    if (dot) dot.style.background = 'var(--text-dim)';
-    return;
-  }
-
-  const hasHigh = IR_CASES.some(c => c.live && (c.severity === 'HIGH' || c.severity === 'CRITICAL'));
-  if (hasHigh) {
-    label.textContent = 'ELEVATED';
-    label.style.color = 'var(--accent2)';
-    if (dot) { dot.style.background = 'var(--accent2)'; dot.style.animation = 'pulse-green 1s infinite'; }
-  } else {
-    label.textContent = 'MONITORING';
+  if (pipelineOnline) {
+    label.textContent = 'LIVE';
     label.style.color = 'var(--accent3)';
     if (dot) dot.style.background = 'var(--accent3)';
+  } else {
+    label.textContent = 'OFFLINE';
+    label.style.color = 'var(--warn)';
+    if (dot) dot.style.background = 'var(--warn)';
   }
 }

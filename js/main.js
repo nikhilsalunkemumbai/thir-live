@@ -3,6 +3,14 @@
 // Wires up DOMContentLoaded, live simulation
 // fallback, animated counters, and the footer clock.
 // Depends on: data.js, pipeline.js, render.js, map.js
+//
+// PATCHES:
+//   FIX-1: Removed hardcoded stat-iocs / stat-ttps overrides —
+//          bindStats() in pipeline.js sets these correctly from
+//          live data; the hardcoded values were silently masking
+//          real honeypot numbers on every page load.
+//   FIX-7: animateCounter target now strips commas before parseInt
+//          so "2,847" → 2847 rather than 2 (parseInt stops at comma).
 // =============================================
 
 // --------------------------------------------------
@@ -27,7 +35,6 @@ function applyTheme(theme) {
 }
 
 function initTheme() {
-  // Respect saved preference; default to dark
   const saved = localStorage.getItem(THEME_KEY) || 'dark';
   applyTheme(saved);
 
@@ -64,17 +71,14 @@ function initMobileNav() {
     drawer.classList.contains('open') ? closeDrawer() : openDrawer();
   });
 
-  // Close when any drawer link is tapped
   drawer.querySelectorAll('.nav-drawer-link').forEach(link => {
     link.addEventListener('click', closeDrawer);
   });
 
-  // Close on outside click
   document.addEventListener('click', function (e) {
     if (!drawer.contains(e.target) && !btn.contains(e.target)) closeDrawer();
   });
 
-  // Close on Escape
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeDrawer();
   });
@@ -106,6 +110,7 @@ function liveSimulate() {
 
 // --------------------------------------------------
 // Utility: animated number counter
+// FIX-7: strip commas before parseInt so "2,847" → 2847
 // --------------------------------------------------
 function animateCounter(el, target, duration = 1500) {
   let current = 0;
@@ -133,10 +138,9 @@ function updateClock() {
 // Bootstrap
 // --------------------------------------------------
 document.addEventListener('DOMContentLoaded', async () => {
-  const statIocs = document.getElementById('stat-iocs');
-  const statTtps = document.getElementById('stat-ttps');
-  if (statIocs) statIocs.textContent = '1,204';
-  if (statTtps) statTtps.textContent = '23';
+  // FIX-1: Removed hardcoded stat-iocs / stat-ttps lines that were here.
+  //        bindStats() in pipeline.js sets these from live data correctly.
+  //        Hardcoding them here was overwriting real honeypot numbers.
 
   // Apply saved theme before anything renders (prevents flash)
   initTheme();
@@ -165,20 +169,28 @@ document.addEventListener('DOMContentLoaded', async () => {
   await loadLiveData();
 
   if (pipelineOnline) {
-    renderIPFeed();
-    renderIOCFeed();
+    // renderIPFeed / renderIOCFeed already called inside bindThreatIPs
+    // only re-init map if live points were loaded
     if (liveMapPoints) initThreatMap();
-  } else {
+  }
+
+  // FIX-2 (partial): if threat IPs failed to load, simulate the feed
+  if (!threatIPsLoaded) {
     liveSimulate();
   }
 
-  // Animate metric counters once numbers are in the DOM
+  // Animate metric counters once live numbers are in the DOM
+  // FIX-7: strip commas before parseInt
   setTimeout(() => {
     const blocked = document.getElementById('m-blocked');
     const iocs    = document.getElementById('m-iocs');
-    if (blocked && !isNaN(parseInt(blocked.textContent)))
-      animateCounter(blocked, parseInt(blocked.textContent));
-    if (iocs && !isNaN(parseInt(iocs.textContent)))
-      animateCounter(iocs, parseInt(iocs.textContent));
+    if (blocked) {
+      const val = parseInt((blocked.textContent || '').replace(/,/g, ''));
+      if (!isNaN(val)) animateCounter(blocked, val);
+    }
+    if (iocs) {
+      const val = parseInt((iocs.textContent || '').replace(/,/g, ''));
+      if (!isNaN(val)) animateCounter(iocs, val);
+    }
   }, 300);
 });

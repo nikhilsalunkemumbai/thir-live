@@ -227,6 +227,7 @@ jobs:
       # 11.a Tool 28 — SOC Handover Report
       # ----------------------------------------------------------------
       - name: Tool 28 — SOC Handover Report
+        timeout-minutes: 3          # ← only change
         continue-on-error: true
         run: |
           python tools/28_soc_handover_live.py \
