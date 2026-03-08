@@ -189,6 +189,9 @@ const TOOLS_DATA = [
 // Each maps directly to one or more pipeline tools.
 // --------------------------------------------------
 const POSTURE_CONTROLS = [
+  // Tool 05 — assets flag: writes data/assets.json with registered infrastructure nodes
+  { id: 'ID.AM-1',  name: 'Asset Inventory',                 status: 'active',     tool: 'Tool 05' },
+
   // Tool 05 — network_monitor_live.go: TCP checks Cowrie port 2222 every hour
   { id: 'DE.CM-1',  name: 'Honeypot Liveness Monitoring',   status: 'active',     tool: 'Tool 05' },
 
@@ -223,6 +226,9 @@ const POSTURE_CONTROLS = [
 
   // Tool 32: peak stats tracking in stats.json
   { id: 'DE.AE-1',  name: 'Peak Threat Tracking',           status: 'active',     tool: 'Tool 32' },
+
+  // Runbook: documented EC2 rebuild procedure — version-controlled in docs/
+  { id: 'RC.RP-1',  name: 'Recovery Planning',              status: 'active',     tool: 'Runbook' },
 
   // Planned: YARA rule scanning for downloaded samples
   { id: 'DE.CM-5',  name: 'YARA Rule Matching',             status: 'planned',    tool: 'Planned' },

@@ -104,6 +104,7 @@ jobs:
             -p 2222 \
             --json \
             -o data/posture.json \
+            --assets data/assets.json \
             -v
 
       # ----------------------------------------------------------------
