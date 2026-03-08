@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-08T06:53:24Z",
+  "generated_at": "2026-03-08T07:35:35Z",
   "threshold_used": 25,
-  "total_cases_in": 206,
-  "confirmed_threats": 100,
-  "flagged_as_fp": 106,
-  "fp_rate": 0.5146,
+  "total_cases_in": 238,
+  "confirmed_threats": 131,
+  "flagged_as_fp": 107,
+  "fp_rate": 0.4496,
   "fp_cases": [
     {
       "case_id": "IR-1d49488eb535",
@@ -535,6 +535,11 @@
       "case_id": "IR-619ec960f351",
       "src_ip": "172.171.254.146",
       "reason": "AbuseIPDB score 2 below threshold 25"
+    },
+    {
+      "case_id": "IR-db242b5c4d86",
+      "src_ip": "68.154.118.244",
+      "reason": "AbuseIPDB score 12 below threshold 25"
     }
   ],
   "clean_cases": [
@@ -637,6 +642,37 @@
     "IR-8dff935b5e3b",
     "IR-a59b8c988619",
     "IR-312cc7cb23cc",
-    "IR-a88c7955dbfc"
+    "IR-a88c7955dbfc",
+    "IR-0c21d5fc556c",
+    "IR-b465671ca4c4",
+    "IR-2982646cb72c",
+    "IR-455a297bf8d5",
+    "IR-fc7d27aff5ad",
+    "IR-57d34110d080",
+    "IR-a08c7d24c073",
+    "IR-d8c3b9df9db9",
+    "IR-2b693ed254d0",
+    "IR-851beac152e0",
+    "IR-c4fd55d96f87",
+    "IR-b414578761e8",
+    "IR-8183acdd26e2",
+    "IR-2dc31642a629",
+    "IR-bd9d0df839bb",
+    "IR-16aaef4b7be6",
+    "IR-87685f6baca8",
+    "IR-7f688998cd98",
+    "IR-dc140a9295b8",
+    "IR-bdc1619481bb",
+    "IR-d291430d7f38",
+    "IR-d8b18af79210",
+    "IR-a74d71bee547",
+    "IR-165533e282ed",
+    "IR-aadc98705d4d",
+    "IR-2eac9fa63316",
+    "IR-6c0847c4cc3f",
+    "IR-c8542685c00a",
+    "IR-3822e6254854",
+    "IR-5a24fc97623e",
+    "IR-1d2fba54df26"
   ]
 }

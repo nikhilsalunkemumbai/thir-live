@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-08 |
-| **Generated At** | 2026-03-08T06:53:24Z |
-| **Shift Time** | 06:53 UTC |
+| **Generated At** | 2026-03-08T07:35:35Z |
+| **Shift Time** | 07:35 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,18 +14,18 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **206** |
-| Confirmed Threats | **100** |
-| False Positives Filtered | **106** (51.5%) |
-| Unique Attacker IPs | **39** |
-| Countries of Origin | **16** |
+| Total Sessions Captured | **238** |
+| Confirmed Threats | **131** |
+| False Positives Filtered | **107** (45.0%) |
+| Unique Attacker IPs | **47** |
+| Countries of Origin | **18** |
 | High Severity Cases | **8** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **198** |
+| Low Severity Cases | **230** |
 
 ---
 
-## 🚨 Confirmed Threats (100)
+## 🚨 Confirmed Threats (131)
 
 ### 🟢 LOW · IR-8526eb874c00
 
@@ -2269,22 +2269,706 @@
 - [ ] Monitor for repeat activity from `223.123.43.7`
 - [ ] No immediate escalation required
 
+### 🟢 LOW · IR-0c21d5fc556c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `172.104.93.159` |
+| **First Seen** | 2026-03-08T06:55:19.170554Z |
+| **Last Seen** | 2026-03-08T06:55:29.299850Z |
+| **Session Duration** | 10s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 06:55:19` | `cowrie.session.connect` |
+| `2026-03-08 06:55:29` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `172.104.93.159`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-b465671ca4c4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T06:59:38.367664Z |
+| **Last Seen** | 2026-03-08T06:59:51.213519Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 06:59:38` | `cowrie.session.connect` |
+| `2026-03-08 06:59:51` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-2982646cb72c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T06:59:51.304865Z |
+| **Last Seen** | 2026-03-08T07:00:04.207137Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 06:59:51` | `cowrie.session.connect` |
+| `2026-03-08 07:00:04` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-455a297bf8d5
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:00:04.293649Z |
+| **Last Seen** | 2026-03-08T07:00:17.194049Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:00:04` | `cowrie.session.connect` |
+| `2026-03-08 07:00:17` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-fc7d27aff5ad
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:00:17.281945Z |
+| **Last Seen** | 2026-03-08T07:00:30.228255Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:00:17` | `cowrie.session.connect` |
+| `2026-03-08 07:00:30` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-57d34110d080
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:00:30.316576Z |
+| **Last Seen** | 2026-03-08T07:00:43.224396Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:00:30` | `cowrie.session.connect` |
+| `2026-03-08 07:00:43` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-a08c7d24c073
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:00:43.315033Z |
+| **Last Seen** | 2026-03-08T07:00:56.221187Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:00:43` | `cowrie.session.connect` |
+| `2026-03-08 07:00:56` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-d8c3b9df9db9
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:00:56.311481Z |
+| **Last Seen** | 2026-03-08T07:01:09.210905Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:00:56` | `cowrie.session.connect` |
+| `2026-03-08 07:01:09` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-2b693ed254d0
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:01:09.305141Z |
+| **Last Seen** | 2026-03-08T07:01:22.238342Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:01:09` | `cowrie.session.connect` |
+| `2026-03-08 07:01:22` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-851beac152e0
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:01:22.327728Z |
+| **Last Seen** | 2026-03-08T07:01:35.216208Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:01:22` | `cowrie.session.connect` |
+| `2026-03-08 07:01:35` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-c4fd55d96f87
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:01:35.307667Z |
+| **Last Seen** | 2026-03-08T07:01:48.236104Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:01:35` | `cowrie.session.connect` |
+| `2026-03-08 07:01:48` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-b414578761e8
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:01:48.329179Z |
+| **Last Seen** | 2026-03-08T07:02:01.258809Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:01:48` | `cowrie.session.connect` |
+| `2026-03-08 07:02:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-8183acdd26e2
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:02:01.344044Z |
+| **Last Seen** | 2026-03-08T07:02:14.227471Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:01` | `cowrie.session.connect` |
+| `2026-03-08 07:02:14` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-2dc31642a629
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:02:14.314173Z |
+| **Last Seen** | 2026-03-08T07:02:27.215767Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:14` | `cowrie.session.connect` |
+| `2026-03-08 07:02:27` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-bd9d0df839bb
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `185.226.196.20` |
+| **First Seen** | 2026-03-08T07:02:21.901609Z |
+| **Last Seen** | 2026-03-08T07:02:27.176160Z |
+| **Session Duration** | 5s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:21` | `cowrie.session.connect` |
+| `2026-03-08 07:02:27` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `185.226.196.20`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-16aaef4b7be6
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:02:27.303823Z |
+| **Last Seen** | 2026-03-08T07:02:40.218052Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:27` | `cowrie.session.connect` |
+| `2026-03-08 07:02:40` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-87685f6baca8
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `185.226.196.20` |
+| **First Seen** | 2026-03-08T07:02:27.454174Z |
+| **Last Seen** | 2026-03-08T07:02:32.995166Z |
+| **Session Duration** | 5s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+| **TTPs (MITRE)** | T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:27` | `cowrie.session.connect` |
+| `2026-03-08 07:02:27` | `cowrie.client.version` |
+| `2026-03-08 07:02:32` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `185.226.196.20`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-7f688998cd98
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:02:40.309281Z |
+| **Last Seen** | 2026-03-08T07:02:53.200798Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:40` | `cowrie.session.connect` |
+| `2026-03-08 07:02:53` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-dc140a9295b8
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:02:53.289013Z |
+| **Last Seen** | 2026-03-08T07:03:06.212346Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:02:53` | `cowrie.session.connect` |
+| `2026-03-08 07:03:06` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-bdc1619481bb
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:03:06.302963Z |
+| **Last Seen** | 2026-03-08T07:03:19.224294Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:03:06` | `cowrie.session.connect` |
+| `2026-03-08 07:03:19` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-d291430d7f38
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:03:19.309051Z |
+| **Last Seen** | 2026-03-08T07:03:32.211033Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:03:19` | `cowrie.session.connect` |
+| `2026-03-08 07:03:32` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-d8b18af79210
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:03:32.300166Z |
+| **Last Seen** | 2026-03-08T07:03:45.236020Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:03:32` | `cowrie.session.connect` |
+| `2026-03-08 07:03:45` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-a74d71bee547
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:03:45.324461Z |
+| **Last Seen** | 2026-03-08T07:03:58.222862Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:03:45` | `cowrie.session.connect` |
+| `2026-03-08 07:03:58` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-165533e282ed
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:03:58.312263Z |
+| **Last Seen** | 2026-03-08T07:04:11.233911Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:03:58` | `cowrie.session.connect` |
+| `2026-03-08 07:04:11` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-aadc98705d4d
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:04:11.324295Z |
+| **Last Seen** | 2026-03-08T07:04:24.217207Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:04:11` | `cowrie.session.connect` |
+| `2026-03-08 07:04:24` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-2eac9fa63316
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:04:24.304451Z |
+| **Last Seen** | 2026-03-08T07:04:37.220613Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:04:24` | `cowrie.session.connect` |
+| `2026-03-08 07:04:37` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-6c0847c4cc3f
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `223.123.41.65` |
+| **First Seen** | 2026-03-08T07:04:37.313150Z |
+| **Last Seen** | 2026-03-08T07:04:50.166417Z |
+| **Session Duration** | 12s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:04:37` | `cowrie.session.connect` |
+| `2026-03-08 07:04:50` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `223.123.41.65`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-c8542685c00a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.231.89.238` |
+| **First Seen** | 2026-03-08T07:04:51.325191Z |
+| **Last Seen** | 2026-03-08T07:04:51.326003Z |
+| **Session Duration** | 0s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:04:51` | `cowrie.session.connect` |
+| `2026-03-08 07:04:51` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.231.89.238`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-3822e6254854
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.231.89.144` |
+| **First Seen** | 2026-03-08T07:04:51.465670Z |
+| **Last Seen** | 2026-03-08T07:05:01.606693Z |
+| **Session Duration** | 10s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:04:51` | `cowrie.session.connect` |
+| `2026-03-08 07:05:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.231.89.144`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-5a24fc97623e
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.231.89.150` |
+| **First Seen** | 2026-03-08T07:05:17.082038Z |
+| **Last Seen** | 2026-03-08T07:05:17.083467Z |
+| **Session Duration** | 0s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:05:17` | `cowrie.session.connect` |
+| `2026-03-08 07:05:17` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.231.89.150`
+- [ ] No immediate escalation required
+
+### 🟢 LOW · IR-1d2fba54df26
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `91.231.89.145` |
+| **First Seen** | 2026-03-08T07:05:17.351146Z |
+| **Last Seen** | 2026-03-08T07:05:20.354400Z |
+| **Session Duration** | 3s |
+| **Login Attempts** | 0 |
+| **Auth Success** | ❌ No |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-08 07:05:17` | `cowrie.session.connect` |
+| `2026-03-08 07:05:20` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Monitor for repeat activity from `91.231.89.145`
+- [ ] No immediate escalation required
+
 ---
 
 ## 🌐 Top Attacker IPs by Abuse Score
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `115.137.64.30` | KR | LG POWERCOMM | **100** ⚠️ | 4 |
-| `125.237.27.181` | NZ | SPARK NEW ZEALAND TRADING LIMITED | **100** ⚠️ | 6 |
-| `172.236.228.245` | US | Linode | **100** ⚠️ | 50 |
-| `45.79.207.181` | US | Linode | **100** ⚠️ | 50 |
-| `165.22.121.5` | GB | DigitalOcean, LLC | **100** ⚠️ | 0 |
-| `175.183.10.183` | TW | New Century InfoComm Tech. Co., Ltd. | **100** ⚠️ | 15 |
-| `140.249.20.190` | CN | CHINANET SHANDONG PROVINCE NETWORK | **100** ⚠️ | 4 |
+| `91.231.89.150` | FR | FR ONYPHE | **100** ⚠️ | 50 |
 | `72.179.72.28` | US | Charter Communications Inc | **100** ⚠️ | 26 |
+| `91.231.89.238` | FR | FR ONYPHE | **100** ⚠️ | 50 |
+| `94.231.206.203` | SG | FR ONYPHE | **100** ⚠️ | 31 |
+| `91.231.89.145` | FR | FR ONYPHE | **100** ⚠️ | 50 |
+| `172.236.228.245` | US | Linode | **100** ⚠️ | 50 |
 | `68.220.61.198` | US | Microsoft Corporation | **100** ⚠️ | 0 |
-| `77.90.185.16` | LT | Inside Network LTD | **100** ⚠️ | 50 |
+| `61.39.73.37` | KR | Bangga Bangga | **100** ⚠️ | 15 |
+| `223.123.43.7` | PK | CMPak Limited | **100** ⚠️ | 23 |
+| `115.137.64.30` | KR | LG POWERCOMM | **100** ⚠️ | 4 |
 
 ---
 
@@ -2300,12 +2984,12 @@
 
 ---
 
-## 🔕 False Positive Summary (106 filtered)
+## 🔕 False Positive Summary (107 filtered)
 
 | Reason | Count |
 |---|---|
 | AbuseIPDB score 0 below threshold 25 | 17 |
-| AbuseIPDB score 12 below threshold 25 | 1 |
+| AbuseIPDB score 12 below threshold 25 | 2 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
 | AbuseIPDB score 23 below threshold 25 | 1 |
 | AbuseIPDB score 5 below threshold 25 | 52 |
@@ -2320,9 +3004,9 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 206 cases |
-| Tool 27 | Threat Intel Feeder         | ✅ 39 IPs enriched |
-| Tool 29 | False Positive Tracker      | ✅ 106 filtered (51.5%) |
+| Tool 26 | Incident Timeline Generator | ✅ 238 cases |
+| Tool 27 | Threat Intel Feeder         | ✅ 47 IPs enriched |
+| Tool 29 | False Positive Tracker      | ✅ 107 filtered (45.0%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
@@ -2340,4 +3024,4 @@
 
 _Generated by THIR · Tool 28 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-08T06:53:24Z_
+_Report time: 2026-03-08T07:35:35Z_
