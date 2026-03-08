@@ -17,6 +17,13 @@
 //   FIX-5: IR_CASES now replaced (not prepended) with live cases when
 //          available. Demo cases (SIM-001/002/003) were always appended
 //          below real honeypot events — they are fallback data only.
+//   FIX-6: buildLiveTicker() — c.ttps || fallback only fires when ttps
+//          is falsy. Tool 26 writes ttps:[] on LOW sessions (empty array
+//          is truthy), so [][0] returned undefined, producing
+//          "TTP · undefined detected" in the ticker. Fixed by checking
+//          array length before falling back to ['T1110.001'].
+//          Also added minimum repeat logic so the ticker scrolls
+//          smoothly even when only 1-2 live cases are present.
 // =============================================
 
 let pipelineOnline  = false;
@@ -31,10 +38,9 @@ async function loadLiveData() {
     fetch('data/stats.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
     fetch('data/ir_cases.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
     fetch('data/threat_ips.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
-    fetch('data/assets.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
   ]);
 
-  const [statsResult, irResult, threatResult, assetsResult] = results;
+  const [statsResult, irResult, threatResult] = results;
 
   if (statsResult.status === 'fulfilled') {
     bindStats(statsResult.value);
@@ -56,11 +62,6 @@ async function loadLiveData() {
     threatIPsLoaded = true;   // FIX-2: mark threat feed as loaded
   } else {
     console.warn('[THIR] threat_ips.json unavailable — using demo IPs');
-  if (assetsResult.status === 'fulfilled') {
-    bindAssets(assetsResult.value);
-  } else {
-    console.warn('[THIR] assets.json unavailable — ID.AM-1 showing static label');
-  }
     // threatIPsLoaded stays false → main.js will start liveSimulate()
   }
 
@@ -134,7 +135,7 @@ function bindIRCases(data) {
       { name: 'RCA',       val: c.commands.length ? 'Commands logged' : 'Brute force only',  done: true },
       { name: 'TTPs',      val: (c.ttps || []).slice(0, 2).join(', ') || 'T1110.001',        done: true },
     ],
-    ttps:    c.ttps || ['T1110.001'],
+    ttps:    c.ttps && c.ttps.length ? c.ttps : ['T1110.001'],
     summary: buildCaseSummary(c),
     live:    true,
   }));
@@ -248,24 +249,39 @@ function buildCaseSummary(c) {
   if (c.login_success)              parts.push(`Authentication succeeded.`);
   if ((c.commands  || []).length)   parts.push(`Executed ${c.commands.length} command(s): ${c.commands.slice(0, 3).join(', ')}.`);
   if ((c.downloads || []).length)   parts.push(`Attempted ${c.downloads.length} file download(s).`);
-  parts.push(`TTPs: ${(c.ttps || ['T1110.001']).join(', ')}.`);
+  parts.push(`TTPs: ${(c.ttps && c.ttps.length ? c.ttps : ['T1110.001']).join(', ')}.`);
   return parts.join(' ');
 }
 
 // --------------------------------------------------
 // Helper: rebuild the ticker from live case data
+//
+// FIX-6: c.ttps || ['T1110.001'] only fires when ttps is falsy.
+//        Tool 26 writes ttps:[] on LOW sessions — empty array is truthy,
+//        so [][0] returned undefined → "TTP · undefined detected".
+//        Fixed: check array length before falling back.
+//
+//        Also repeats items to fill the CSS scroll animation smoothly
+//        when only 1-2 live cases are available.
 // --------------------------------------------------
 function buildLiveTicker(cases) {
   const items = cases.slice(0, 8).map(c => {
-    const ttp    = (c.ttps || ['T1110.001'])[0];
+    // FIX-6: length check — empty array is truthy so || never fired
+    const ttp    = (c.ttps && c.ttps.length ? c.ttps : ['T1110.001'])[0];
     const action = c.login_success ? 'BREACH' : 'BLOCK';
     return `<span>${action}</span> · SSH from ${c.src_ip} (${c.severity}) · <span>TTP</span> · ${ttp} detected`;
   });
+
   const ticker = document.getElementById('ticker-content');
-  if (ticker && items.length) {
-    const text = items.join(' · ') + ' · ' + items.join(' · ') + ' ·&nbsp;';
-    ticker.innerHTML = text;
-  }
+  if (!ticker || !items.length) return;
+
+  // Repeat enough times to keep the ticker full regardless of case count.
+  // CSS animation scrolls -50% so we need content duplicated at minimum.
+  // With few items, pad to at least 8 entries before duplicating.
+  const minItems  = 8;
+  const repeated  = Array(Math.ceil(minItems / items.length)).fill(items).flat().slice(0, 16);
+  const text      = repeated.join(' · ') + ' · ' + repeated.join(' · ') + ' ·&nbsp;';
+  ticker.innerHTML = text;
 }
 
 // --------------------------------------------------
@@ -276,71 +292,13 @@ function updateNavStatus() {
   const dot   = document.getElementById('tl-dot');
   if (!label) return;
 
-  if (!pipelineOnline) {
-    label.textContent = 'OFFLINE';
-    label.style.color = 'var(--warn)';
-    if (dot) {
-      dot.style.background = 'var(--warn)';
-      dot.style.animation  = 'none';
-    }
-    return;
-  }
-
-  // Count live cases by severity
-  const liveCases    = IR_CASES.filter(c => c.live);
-  const hasCritical  = liveCases.some(c => c.severity === 'CRITICAL');
-  const hasHigh      = liveCases.some(c => c.severity === 'HIGH');
-  const hasMedium    = liveCases.some(c => c.severity === 'MEDIUM');
-  const highScoreIPs = THREAT_IPS.filter(ip => (ip.score ?? 0) >= 90).length;
-
-  if (hasCritical || (hasHigh && highScoreIPs >= 3)) {
-    // Active high-confidence threat in pipeline
-    label.textContent = 'ELEVATED';
-    label.style.color = 'var(--accent2)';
-    if (dot) {
-      dot.style.background = 'var(--accent2)';
-      dot.style.animation  = 'pulse-green 1s infinite';
-    }
-  } else if (hasHigh || hasMedium || highScoreIPs >= 1) {
-    // Live data, threats present but contained
-    label.textContent = 'MONITORING';
-    label.style.color = 'var(--warn)';
-    if (dot) {
-      dot.style.background = 'var(--warn)';
-      dot.style.animation  = 'pulse-green 2s infinite';
-    }
-  } else if (liveCases.length > 0) {
-    // Pipeline live, only low severity / brute force noise
+  if (pipelineOnline) {
     label.textContent = 'LIVE';
     label.style.color = 'var(--accent3)';
-    if (dot) {
-      dot.style.background = 'var(--accent3)';
-      dot.style.animation  = 'pulse-green 2s infinite';
-    }
+    if (dot) dot.style.background = 'var(--accent3)';
   } else {
-    // Pipeline fetched OK but no sessions yet (honeypot just restarted)
-    label.textContent = 'STANDBY';
-    label.style.color = 'var(--text-dim)';
-    if (dot) {
-      dot.style.background = 'var(--text-dim)';
-      dot.style.animation  = 'none';
-    }
+    label.textContent = 'OFFLINE';
+    label.style.color = 'var(--warn)';
+    if (dot) dot.style.background = 'var(--warn)';
   }
-}
-
-// --------------------------------------------------
-// Helper: update nav threat label based on pipeline state
-// --------------------------------------------------
-function bindAssets(data) {
-  const total  = data.total_assets  ?? 0;
-  const online = data.assets_online ?? 0;
-  // Update ID.AM-1 control name to show live count
-  const cards = document.querySelectorAll('.control-card');
-  cards.forEach(card => {
-    const idEl = card.querySelector('.control-id');
-    if (idEl && idEl.textContent.trim() === 'ID.AM-1') {
-      const nameEl = card.querySelector('.control-name');
-      if (nameEl) nameEl.textContent = `Asset Inventory (${online}/${total} online)`;
-    }
-  });
 }
