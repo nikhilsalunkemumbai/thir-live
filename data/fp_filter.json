@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-08T10:09:46Z",
+  "generated_at": "2026-03-08T10:32:29Z",
   "threshold_used": 25,
-  "total_cases_in": 368,
-  "confirmed_threats": 141,
-  "flagged_as_fp": 227,
-  "fp_rate": 0.6168,
+  "total_cases_in": 393,
+  "confirmed_threats": 144,
+  "flagged_as_fp": 249,
+  "fp_rate": 0.6336,
   "fp_cases": [
     {
       "case_id": "IR-1d49488eb535",
@@ -1140,6 +1140,116 @@
       "case_id": "IR-1ca605e33058",
       "src_ip": "135.232.201.240",
       "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-a6edd68fe522",
+      "src_ip": "103.181.160.110",
+      "reason": "AbuseIPDB score 23 below threshold 25"
+    },
+    {
+      "case_id": "IR-0a6fbe19fae0",
+      "src_ip": "181.212.88.162",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-cdca095de14e",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-40b204931986",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-ee975d3a8e31",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-5cb562c909c9",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-8d7c91208179",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-1ea20c1c582b",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-06cf86d1bc17",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-2e9d6ff65894",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-56c077793414",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-59e42aa09b76",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-4d0bdc468ede",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-fc7569f48333",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-76dc4349291e",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-2a9b45bcd364",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-eecf34fd80ba",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-8caec5630745",
+      "src_ip": "120.92.10.110",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-2c6af964c6f8",
+      "src_ip": "119.117.245.75",
+      "reason": "AbuseIPDB score 5 below threshold 25"
+    },
+    {
+      "case_id": "IR-941dfb79c9ae",
+      "src_ip": "205.210.31.249",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-21d6525f793f",
+      "src_ip": "120.92.10.110",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-d1958aa094c1",
+      "src_ip": "132.196.82.131",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
     }
   ],
   "clean_cases": [
@@ -1283,6 +1393,9 @@
     "IR-3e45b168284d",
     "IR-fa78ee44e11d",
     "IR-5b7e4060d46e",
-    "IR-d6841c0121e4"
+    "IR-d6841c0121e4",
+    "IR-976a92293af5",
+    "IR-0e44afbb94ee",
+    "IR-f43f41e412c1"
   ]
 }
