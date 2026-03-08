@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-08T02:41:21Z",
-  "total_ips": 18,
+  "generated_at": "2026-03-08T04:48:27Z",
+  "total_ips": 32,
   "ips": [
     {
       "indicator": "119.109.251.104",
@@ -9,25 +9,16 @@
       "country": "CN",
       "isp": "China Unicom Liaoning province network",
       "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:12Z"
+      "last_seen": "2026-03-08T04:48:18Z"
     },
     {
-      "indicator": "110.36.88.237",
-      "type": "ip",
-      "abuse_score": 93,
-      "country": "PK",
-      "isp": "National Wimax/IMS environment",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "125.237.27.181",
+      "indicator": "68.220.61.198",
       "type": "ip",
       "abuse_score": 100,
-      "country": "NZ",
-      "isp": "SPARK NEW ZEALAND TRADING LIMITED",
-      "otx_pulses": 6,
-      "last_seen": "2026-03-08T02:41:12Z"
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:18Z"
     },
     {
       "indicator": "180.149.212.146",
@@ -36,61 +27,7 @@
       "country": "PK",
       "isp": "Delta Networks",
       "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "165.22.121.5",
-      "type": "ip",
-      "abuse_score": 20,
-      "country": "GB",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "123.193.146.30",
-      "type": "ip",
-      "abuse_score": 23,
-      "country": "TW",
-      "isp": "kbro CO. Ltd.",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "20.161.70.163",
-      "type": "ip",
-      "abuse_score": 12,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "8.217.99.201",
-      "type": "ip",
-      "abuse_score": 36,
-      "country": "HK",
-      "isp": "Aliyun Computing Co.LTD",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "172.236.228.245",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Linode",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-08T02:41:12Z"
-    },
-    {
-      "indicator": "115.55.50.58",
-      "type": "ip",
-      "abuse_score": 6,
-      "country": "CN",
-      "isp": "China Unicom Henan province network",
-      "otx_pulses": 3,
-      "last_seen": "2026-03-08T02:41:13Z"
+      "last_seen": "2026-03-08T04:48:18Z"
     },
     {
       "indicator": "175.183.10.183",
@@ -99,25 +36,88 @@
       "country": "TW",
       "isp": "New Century InfoComm Tech. Co., Ltd.",
       "otx_pulses": 15,
-      "last_seen": "2026-03-08T02:41:13Z"
+      "last_seen": "2026-03-08T04:48:18Z"
     },
     {
-      "indicator": "14.1.107.160",
+      "indicator": "66.167.147.2",
       "type": "ip",
-      "abuse_score": 84,
+      "abuse_score": 74,
       "country": "PK",
-      "isp": "Cyber Internet Services Pakistan",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-08T02:41:13Z"
+      "isp": "Cyber Internet Services (Pvt) Ltd.",
+      "otx_pulses": 2,
+      "last_seen": "2026-03-08T04:48:18Z"
     },
     {
-      "indicator": "115.137.64.30",
+      "indicator": "165.22.121.5",
       "type": "ip",
       "abuse_score": 100,
-      "country": "KR",
-      "isp": "LG POWERCOMM",
-      "otx_pulses": 4,
-      "last_seen": "2026-03-08T02:41:15Z"
+      "country": "GB",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "223.123.43.7",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "PK",
+      "isp": "CMPak Limited",
+      "otx_pulses": 23,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "20.161.70.163",
+      "type": "ip",
+      "abuse_score": 12,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "93.123.109.222",
+      "type": "ip",
+      "abuse_score": 31,
+      "country": "NL",
+      "isp": "TECHOFF_SRV_LIMITED",
+      "otx_pulses": 7,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "103.219.44.8",
+      "type": "ip",
+      "abuse_score": 16,
+      "country": "IN",
+      "isp": "LOKENATH ELECTRONICS PVT. LTD.",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "114.34.10.103",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "TW",
+      "isp": "Chunghwa Telecom Co.,Ltd.",
+      "otx_pulses": 36,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "125.237.27.181",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "NZ",
+      "isp": "SPARK NEW ZEALAND TRADING LIMITED",
+      "otx_pulses": 6,
+      "last_seen": "2026-03-08T04:48:18Z"
+    },
+    {
+      "indicator": "123.193.146.30",
+      "type": "ip",
+      "abuse_score": 23,
+      "country": "TW",
+      "isp": "kbro CO. Ltd.",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:19Z"
     },
     {
       "indicator": "45.79.207.181",
@@ -126,34 +126,124 @@
       "country": "US",
       "isp": "Linode",
       "otx_pulses": 50,
-      "last_seen": "2026-03-08T02:41:15Z"
+      "last_seen": "2026-03-08T04:48:19Z"
     },
     {
-      "indicator": "184.105.139.70",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "The Shadowserver Foundation, Inc.",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:20Z"
-    },
-    {
-      "indicator": "194.187.176.7",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "DE",
-      "isp": "Alpha Strike Labs GmbH",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:20Z"
-    },
-    {
-      "indicator": "216.180.246.11",
+      "indicator": "134.199.174.181",
       "type": "ip",
       "abuse_score": 0,
-      "country": "US",
-      "isp": "NETWORK TRANSIT HOLDINGS LLC",
+      "country": "AU",
+      "isp": "DigitalOcean, LLC",
       "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:20Z"
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "49.88.156.34",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "CHINANET jiangsu province network",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "61.39.73.37",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "KR",
+      "isp": "Bangga Bangga",
+      "otx_pulses": 15,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "94.231.206.203",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "SG",
+      "isp": "FR ONYPHE",
+      "otx_pulses": 31,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "115.137.64.30",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "KR",
+      "isp": "LG POWERCOMM",
+      "otx_pulses": 4,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "110.36.88.237",
+      "type": "ip",
+      "abuse_score": 93,
+      "country": "PK",
+      "isp": "National Wimax/IMS environment",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "198.235.24.119",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "TW",
+      "isp": "Palo Alto Networks, Inc",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "8.217.99.201",
+      "type": "ip",
+      "abuse_score": 36,
+      "country": "HK",
+      "isp": "Aliyun Computing Co.LTD",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "14.1.107.160",
+      "type": "ip",
+      "abuse_score": 84,
+      "country": "PK",
+      "isp": "Cyber Internet Services Pakistan",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "121.134.151.223",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "KR",
+      "isp": "Korea Telecom",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "77.90.185.16",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "LT",
+      "isp": "Inside Network LTD",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "115.55.50.58",
+      "type": "ip",
+      "abuse_score": 5,
+      "country": "CN",
+      "isp": "China Unicom Henan province network",
+      "otx_pulses": 4,
+      "last_seen": "2026-03-08T04:48:19Z"
+    },
+    {
+      "indicator": "172.236.228.245",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Linode",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-08T04:48:20Z"
     },
     {
       "indicator": "135.237.126.210",
@@ -162,7 +252,43 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 0,
-      "last_seen": "2026-03-08T02:41:21Z"
+      "last_seen": "2026-03-08T04:48:26Z"
+    },
+    {
+      "indicator": "216.180.246.11",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "NETWORK TRANSIT HOLDINGS LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:26Z"
+    },
+    {
+      "indicator": "198.235.24.29",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "TW",
+      "isp": "Palo Alto Networks, Inc",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:27Z"
+    },
+    {
+      "indicator": "184.105.139.70",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "The Shadowserver Foundation, Inc.",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:27Z"
+    },
+    {
+      "indicator": "194.187.176.7",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "DE",
+      "isp": "Alpha Strike Labs GmbH",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-08T04:48:27Z"
     }
   ]
 }
