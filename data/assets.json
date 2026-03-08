@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-03-08T11:27:16.153009504Z",
+  "nist_control": "ID.AM-1",
+  "nist_function": "IDENTIFY",
+  "description": "Physical devices and systems within the THIR honeypot infrastructure are inventoried. Updated hourly by Tool 05.",
+  "total_assets": 1,
+  "assets_online": 1,
+  "assets_offline": 0,
+  "assets": [
+    {
+      "asset_id": "thir-honeypot-13.235.92.17-2222",
+      "hostname": "13.235.92.17",
+      "ip_address": "13.235.92.17",
+      "port": 2222,
+      "role": "Cowrie SSH Honeypot",
+      "classification": "PUBLIC",
+      "owner": "Joy Dane — THIR Project",
+      "platform": "AWS EC2 Ubuntu",
+      "status": "UP",
+      "first_seen": "2026-03-08T10:09:22.669814933Z",
+      "last_seen": "2026-03-08T11:27:16.153005456Z",
+      "last_checked": "2026-03-08T11:27:16.153005456Z",
+      "nist_control": "ID.AM-1",
+      "nist_function": "IDENTIFY"
+    }
+  ]
+}
