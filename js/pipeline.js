@@ -31,9 +31,10 @@ async function loadLiveData() {
     fetch('data/stats.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
     fetch('data/ir_cases.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
     fetch('data/threat_ips.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
+    fetch('data/assets.json').then(r => r.ok ? r.json() : Promise.reject(r.status)),
   ]);
 
-  const [statsResult, irResult, threatResult] = results;
+  const [statsResult, irResult, threatResult, assetsResult] = results;
 
   if (statsResult.status === 'fulfilled') {
     bindStats(statsResult.value);
@@ -55,6 +56,11 @@ async function loadLiveData() {
     threatIPsLoaded = true;   // FIX-2: mark threat feed as loaded
   } else {
     console.warn('[THIR] threat_ips.json unavailable — using demo IPs');
+  if (assetsResult.status === 'fulfilled') {
+    bindAssets(assetsResult.value);
+  } else {
+    console.warn('[THIR] assets.json unavailable — ID.AM-1 showing static label');
+  }
     // threatIPsLoaded stays false → main.js will start liveSimulate()
   }
 
@@ -270,13 +276,71 @@ function updateNavStatus() {
   const dot   = document.getElementById('tl-dot');
   if (!label) return;
 
-  if (pipelineOnline) {
-    label.textContent = 'LIVE';
-    label.style.color = 'var(--accent3)';
-    if (dot) dot.style.background = 'var(--accent3)';
-  } else {
+  if (!pipelineOnline) {
     label.textContent = 'OFFLINE';
     label.style.color = 'var(--warn)';
-    if (dot) dot.style.background = 'var(--warn)';
+    if (dot) {
+      dot.style.background = 'var(--warn)';
+      dot.style.animation  = 'none';
+    }
+    return;
   }
+
+  // Count live cases by severity
+  const liveCases    = IR_CASES.filter(c => c.live);
+  const hasCritical  = liveCases.some(c => c.severity === 'CRITICAL');
+  const hasHigh      = liveCases.some(c => c.severity === 'HIGH');
+  const hasMedium    = liveCases.some(c => c.severity === 'MEDIUM');
+  const highScoreIPs = THREAT_IPS.filter(ip => (ip.score ?? 0) >= 90).length;
+
+  if (hasCritical || (hasHigh && highScoreIPs >= 3)) {
+    // Active high-confidence threat in pipeline
+    label.textContent = 'ELEVATED';
+    label.style.color = 'var(--accent2)';
+    if (dot) {
+      dot.style.background = 'var(--accent2)';
+      dot.style.animation  = 'pulse-green 1s infinite';
+    }
+  } else if (hasHigh || hasMedium || highScoreIPs >= 1) {
+    // Live data, threats present but contained
+    label.textContent = 'MONITORING';
+    label.style.color = 'var(--warn)';
+    if (dot) {
+      dot.style.background = 'var(--warn)';
+      dot.style.animation  = 'pulse-green 2s infinite';
+    }
+  } else if (liveCases.length > 0) {
+    // Pipeline live, only low severity / brute force noise
+    label.textContent = 'LIVE';
+    label.style.color = 'var(--accent3)';
+    if (dot) {
+      dot.style.background = 'var(--accent3)';
+      dot.style.animation  = 'pulse-green 2s infinite';
+    }
+  } else {
+    // Pipeline fetched OK but no sessions yet (honeypot just restarted)
+    label.textContent = 'STANDBY';
+    label.style.color = 'var(--text-dim)';
+    if (dot) {
+      dot.style.background = 'var(--text-dim)';
+      dot.style.animation  = 'none';
+    }
+  }
+}
+
+// --------------------------------------------------
+// Helper: update nav threat label based on pipeline state
+// --------------------------------------------------
+function bindAssets(data) {
+  const total  = data.total_assets  ?? 0;
+  const online = data.assets_online ?? 0;
+  // Update ID.AM-1 control name to show live count
+  const cards = document.querySelectorAll('.control-card');
+  cards.forEach(card => {
+    const idEl = card.querySelector('.control-id');
+    if (idEl && idEl.textContent.trim() === 'ID.AM-1') {
+      const nameEl = card.querySelector('.control-name');
+      if (nameEl) nameEl.textContent = `Asset Inventory (${online}/${total} online)`;
+    }
+  });
 }
