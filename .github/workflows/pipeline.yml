@@ -6,19 +6,23 @@
 # data/ so the dashboard at threats.aegispub.com stays live.
 #
 # TOOL EXECUTION ORDER:
-#   Tool 05 → check VPS alive            → data/posture.json
+#   Tool 05 → check VPS alive            → data/posture.json + data/assets.json
 #   scp     → fetch Cowrie log           → /tmp/cowrie.json
 #   Tool 26 → parse sessions → IR cases  → data/ir_cases.json
 #   Tool 27 → enrich attacker IPs        → data/threat_ips.json
 #   Tool 29 → filter false positives     → data/fp_filter.json
 #   Tool 30 → aggregate all metrics      → data/stats.json
+#   [cond]  → check for downloads        → (bool flag)
+#   [cond]  → fetch downloads (if any)   → /tmp/cowrie-downloads/
+#   Tool 31 → malware analysis (if any)  → data/malware_report.json
 #   Tool 28 → SOC handover report        → data/soc_handover.md
 #   Tool 32 → save daily + peak stats    → reports/daily/soc_YYYY-MM-DD.md
 #   Tool 32 → weekly/monthly rollup      → reports/weekly/ or reports/monthly/
-#   [cond]  → fetch downloads (if any)   → /tmp/cowrie-downloads/
-#   Tool 31 → malware analysis (if any)  → data/malware_report.json
 #   Tool 07 → verify data integrity      → (exit code check)
 #   git     → commit + push data/ reports/
+#
+# IMPORTANT: Tool 31 runs BEFORE Tool 28 so the SOC handover report
+#            always contains current-run malware analysis results.
 #
 # SECRETS REQUIRED (repo Settings → Secrets → Actions):
 #   ORACLE_VPS_SSH_KEY    Private SSH key for scp access to AWS EC2
@@ -90,10 +94,11 @@ jobs:
       # 4. Tool 05 — check honeypot is alive
       #    Checks Cowrie SSH port 2222 (not 22 — 22 goes to honeypot).
       #    Writes data/posture.json with UP/DOWN status.
+      #    Writes data/assets.json with live asset inventory (ID.AM-1).
       #    continue-on-error: true so pipeline keeps running even if
       #    EC2 is temporarily unreachable.
       # ----------------------------------------------------------------
-      - name: Tool 05 — network monitor (honeypot liveness)
+      - name: Tool 05 — network monitor (honeypot liveness + asset inventory)
         continue-on-error: true
         timeout-minutes: 3
         env:
@@ -225,70 +230,12 @@ jobs:
             -v
 
       # ----------------------------------------------------------------
-      # 11.a Tool 28 — SOC Handover Report
-      # ----------------------------------------------------------------
-      - name: Tool 28 — SOC Handover Report
-        timeout-minutes: 3          # ← only change
-        continue-on-error: true
-        run: |
-          python tools/28_soc_handover_live.py \
-            --ir-cases   data/ir_cases.json \
-            --threat-ips data/threat_ips.json \
-            --fp-filter  data/fp_filter.json \
-            --stats      data/stats.json \
-            --output     data/soc_handover.md \
-            --verbose
-
-      # ----------------------------------------------------------------
-      # 11.b Tool 32 — Save daily report + update peak stats (every run)
-      #   - Copies data/soc_handover.md → reports/daily/soc_YYYY-MM-DD.md
-      #   - Updates peak_sessions / peak_unique_ips / peak_confirmed_threats
-      #     in data/stats.json — never overwritten by a quieter day
-      # ----------------------------------------------------------------
-      - name: Tool 32 — Save daily report + peak stats
-        continue-on-error: true
-        run: |
-          python tools/32_report_lifecycle.py \
-            --save-daily \
-            --report data/soc_handover.md \
-            --stats  data/stats.json \
-            --verbose
-
-      # ----------------------------------------------------------------
-      # 11.c Tool 32 — Conditional rollup (weekly / monthly)
-      #   Monday 00:00 UTC  → weekly rollup
-      #   1st of month 00:00 UTC → monthly rollup + 6-month prune
-      #   All other runs → no-op
-      # ----------------------------------------------------------------
-      - name: Tool 32 — Conditional rollup (weekly / monthly)
-        continue-on-error: true
-        run: |
-          DAY_OF_WEEK=$(date -u +%u)
-          DAY_OF_MONTH=$(date -u +%d)
-          HOUR=$(date -u +%H)
-
-          echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
-
-          if [ "$DAY_OF_MONTH" = "01" ] && [ "$HOUR" = "00" ]; then
-            echo "[Tool 32] Triggering MONTHLY rollup"
-            python tools/32_report_lifecycle.py \
-              --rollup monthly \
-              --stats data/stats.json \
-              --verbose
-
-          elif [ "$DAY_OF_WEEK" = "1" ] && [ "$HOUR" = "00" ]; then
-            echo "[Tool 32] Triggering WEEKLY rollup"
-            python tools/32_report_lifecycle.py \
-              --rollup weekly \
-              --stats data/stats.json \
-              --verbose
-
-          else
-            echo "[Tool 32] No rollup needed this run — skipping"
-          fi
-
-      # ----------------------------------------------------------------
-      # 11.d Check for Cowrie downloads — sets DOWNLOADS_FOUND output
+      # 11.a Check for Cowrie downloads — sets DOWNLOADS_FOUND output
+      #
+      # Runs HERE (before Tool 28) so that Tool 31 can complete and
+      # write malware_report.json before the SOC report is generated.
+      # Tool 28 reads malware_report.json — if Tool 31 runs after it,
+      # the SOC report always contains stale or missing malware data.
       # ----------------------------------------------------------------
       - name: Check for Cowrie downloads in IR cases
         id: check_downloads
@@ -309,9 +256,10 @@ jobs:
           echo "[Tool 31] Downloads detected: ${DOWNLOADS_FOUND}"
 
       # ----------------------------------------------------------------
-      # 11.e Fetch Cowrie downloads from VPS (on-demand)
+      # 11.b Fetch Cowrie downloads from VPS (on-demand)
       #    Uses port 22222 for SCP — NOT port 22.
       #    Only runs when downloads detected in IR cases.
+      #    Caps at 50 files to avoid runaway storage/time usage.
       # ----------------------------------------------------------------
       - name: Fetch Cowrie downloads from VPS (on-demand)
         id: fetch_downloads
@@ -343,9 +291,18 @@ jobs:
           fi
 
       # ----------------------------------------------------------------
-      # 11.f Tool 31 — Malware Analyzer (on-demand)
+      # 11.c Tool 31 — Malware Analyzer (on-demand)
       #    Only runs when downloads were found and fetched.
       #    Output: data/malware_report.json
+      #
+      #    Runs BEFORE Tool 28 so the SOC handover report contains
+      #    current-run malware findings, not stale data from last run.
+      #
+      #    Tool 31 handles:
+      #      - 0-byte files (empty upload attempts) — recorded with notes
+      #      - Hidden files (.gitignore, etc.) — silently skipped
+      #      - Known-clean hashes (e3b0c442...) — excluded from report
+      #      - VirusTotal lookup (optional, free tier safe)
       # ----------------------------------------------------------------
       - name: Tool 31 — Malware Analyzer (on-demand)
         if: steps.check_downloads.outputs.DOWNLOADS_FOUND == 'true'
@@ -389,7 +346,85 @@ jobs:
           "
 
       # ----------------------------------------------------------------
+      # 11.d Tool 28 — SOC Handover Report
+      #
+      #    Runs AFTER Tool 31 — malware_report.json is now current.
+      #    Reads all pipeline outputs and generates a structured Markdown
+      #    shift handover report with:
+      #      - Priority Cases (auth success / commands / downloads)
+      #      - Reconnaissance table (grouped by IP, 120-min window)
+      #      - Malware analysis results (from Tool 31 this run)
+      #      - Top attacker IPs, TTPs, FP summary, pipeline health
+      # ----------------------------------------------------------------
+      - name: Tool 28 — SOC Handover Report
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          python tools/28_soc_handover_live.py \
+            --ir-cases       data/ir_cases.json \
+            --threat-ips     data/threat_ips.json \
+            --fp-filter      data/fp_filter.json \
+            --stats          data/stats.json \
+            --malware-report data/malware_report.json \
+            --output         data/soc_handover.md \
+            --verbose
+
+      # ----------------------------------------------------------------
+      # 11.e Tool 32 — Save daily report + update peak stats (every run)
+      #   - Copies data/soc_handover.md → reports/daily/soc_YYYY-MM-DD.md
+      #   - Updates peak_sessions / peak_unique_ips / peak_confirmed_threats
+      #     in data/stats.json — never overwritten by a quieter day
+      #
+      #   Runs after Tool 28 so the archived daily report is complete,
+      #   including malware findings from Tool 31.
+      # ----------------------------------------------------------------
+      - name: Tool 32 — Save daily report + peak stats
+        continue-on-error: true
+        run: |
+          python tools/32_report_lifecycle.py \
+            --save-daily \
+            --report data/soc_handover.md \
+            --stats  data/stats.json \
+            --verbose
+
+      # ----------------------------------------------------------------
+      # 11.f Tool 32 — Conditional rollup (weekly / monthly)
+      #   Monday 00:00 UTC       → weekly rollup
+      #   1st of month 00:00 UTC → monthly rollup + 6-month prune
+      #   All other runs         → no-op
+      # ----------------------------------------------------------------
+      - name: Tool 32 — Conditional rollup (weekly / monthly)
+        continue-on-error: true
+        run: |
+          DAY_OF_WEEK=$(date -u +%u)
+          DAY_OF_MONTH=$(date -u +%d)
+          HOUR=$(date -u +%H)
+
+          echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
+
+          if [ "$DAY_OF_MONTH" = "01" ] && [ "$HOUR" = "00" ]; then
+            echo "[Tool 32] Triggering MONTHLY rollup"
+            python tools/32_report_lifecycle.py \
+              --rollup monthly \
+              --stats data/stats.json \
+              --verbose
+
+          elif [ "$DAY_OF_WEEK" = "1" ] && [ "$HOUR" = "00" ]; then
+            echo "[Tool 32] Triggering WEEKLY rollup"
+            python tools/32_report_lifecycle.py \
+              --rollup weekly \
+              --stats data/stats.json \
+              --verbose
+
+          else
+            echo "[Tool 32] No rollup needed this run — skipping"
+          fi
+
+      # ----------------------------------------------------------------
       # 12. Tool 07 — file integrity verification
+      #    Baseline is recreated if missing or older than 2 hours.
+      #    On fresh baseline: create and record SHA-256 of all data/ files.
+      #    On existing baseline: verify no unexpected modifications.
       # ----------------------------------------------------------------
       - name: Run Tool 07 — File Integrity Monitor
         continue-on-error: true
@@ -425,6 +460,8 @@ jobs:
 
       # ----------------------------------------------------------------
       # 13. Clean up sensitive files from runner
+      #    Runs even if earlier steps failed (if: always()).
+      #    Removes SSH key, Cowrie logs, IP list, and download dir.
       # ----------------------------------------------------------------
       - name: Clean up SSH key and temp files
         if: always()
@@ -434,6 +471,9 @@ jobs:
 
       # ----------------------------------------------------------------
       # 14. Commit and push updated data/ and reports/
+      #    Commit message includes case count always.
+      #    Includes malware sample count when Tool 31 produced output.
+      #    No-op if nothing changed (idempotent on quiet hours).
       # ----------------------------------------------------------------
       - name: Commit and push updated data
         run: |
