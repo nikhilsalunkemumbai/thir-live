@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-08 |
-| **Generated At** | 2026-03-08T13:01:56Z |
-| **Shift Time** | 13:01 UTC |
+| **Generated At** | 2026-03-08T14:31:25Z |
+| **Shift Time** | 14:31 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **414** |
-| Confirmed Threats | **159** |
-| False Positives Filtered | **255** (61.6%) |
-| Unique Attacker IPs | **81** |
+| Total Sessions Captured | **445** |
+| Confirmed Threats | **165** |
+| False Positives Filtered | **280** (62.9%) |
+| Unique Attacker IPs | **85** |
 | Countries of Origin | **23** |
 | High Severity Cases | **9** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **405** |
+| Low Severity Cases | **436** |
 | Malware Analysis | ⚠️ malware_report.json not available (Tool 31 not run) |
 
 ---
@@ -101,6 +101,7 @@
 | `223.123.42.190` | **11** | 2026-03-08 11:18 | 2026-03-08 11:21 | 2m | 0 | `T1592` | 🟠 MEDIUM |
 | `165.22.121.5` | **7** | 2026-03-08 02:22 | 2026-03-08 02:27 | 0m | 6 | `T1110.001 · T1592` | 🟢 LOW |
 | `18.218.118.203` | **5** | 2026-03-08 09:21 | 2026-03-08 09:23 | 0m | 0 | `T1592` | 🟢 LOW |
+| `3.129.92.250` | **3** | 2026-03-08 13:31 | 2026-03-08 13:31 | 0m | 0 | `T1592` | 🟢 LOW |
 | `120.92.10.110` | **2** | 2026-03-08 10:28 | 2026-03-08 10:28 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
 | `135.237.126.210` | **2** | 2026-03-08 01:45 | 2026-03-08 01:45 | 0m | 0 | `T1592` | 🟢 LOW |
 | `172.236.228.245` | **2** | 2026-03-08 00:17 | 2026-03-08 00:17 | 0m | 0 | `T1592` | 🟢 LOW |
@@ -114,14 +115,17 @@
 | `14.1.107.160` | 1 | 2026-03-08 00:25 | 2026-03-08 00:25 | 12s | 0 | `T1592` | 🟢 LOW |
 | `172.104.93.159` | 1 | 2026-03-08 06:55 | 2026-03-08 06:55 | 10s | 0 | `T1592` | 🟢 LOW |
 | `175.183.10.183` | 1 | 2026-03-08 02:23 | 2026-03-08 02:23 | 30s | 0 | `T1592` | 🟢 LOW |
+| `180.149.212.146` | 1 | 2026-03-08 00:31 | 2026-03-08 00:31 | 13s | 0 | `T1592` | 🟢 LOW |
 | `184.105.139.70` | 1 | 2026-03-08 01:37 | 2026-03-08 01:37 | 0s | 0 | `T1592` | 🟢 LOW |
 | `185.247.137.25` | 1 | 2026-03-08 12:14 | 2026-03-08 12:14 | 2s | 0 | `T1592` | 🟢 LOW |
 | `194.187.176.7` | 1 | 2026-03-08 01:42 | 2026-03-08 01:42 | 4s | 0 | `T1592` | 🟢 LOW |
 | `41.38.56.120` | 1 | 2026-03-08 09:09 | 2026-03-08 09:10 | 14s | 0 | `T1592` | 🟢 LOW |
+| `44.220.188.47` | 1 | 2026-03-08 14:14 | 2026-03-08 14:14 | 1s | 0 | `T1592` | 🟢 LOW |
 | `45.79.207.181` | 1 | 2026-03-08 00:36 | 2026-03-08 00:36 | 0s | 0 | `T1592` | 🟢 LOW |
 | `45.91.64.7` | 1 | 2026-03-08 10:17 | 2026-03-08 10:17 | 0s | 0 | `T1592` | 🟢 LOW |
 | `47.16.201.182` | 1 | 2026-03-08 10:14 | 2026-03-08 10:15 | 30s | 0 | `T1592` | 🟢 LOW |
 | `49.88.156.34` | 1 | 2026-03-08 02:59 | 2026-03-08 03:01 | 120s | 0 | `T1592` | 🟢 LOW |
+| `49.88.156.34` | 1 | 2026-03-08 13:04 | 2026-03-08 13:06 | 120s | 0 | `T1592` | 🟢 LOW |
 | `61.39.73.37` | 1 | 2026-03-08 03:08 | 2026-03-08 03:09 | 30s | 0 | `T1592` | 🟢 LOW |
 | `68.220.61.198` | 1 | 2026-03-08 04:48 | 2026-03-08 04:48 | 0s | 0 | `T1592` | 🟢 LOW |
 | `72.179.72.28` | 1 | 2026-03-08 06:23 | 2026-03-08 06:23 | 31s | 0 | `T1592` | 🟢 LOW |
@@ -141,16 +145,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `120.92.10.110` | CN | Beijing Kingsoft Cloud Internet Technology Co., Ltd. | **100** ⚠️ | 0 |
-| `140.249.20.190` | CN | CHINANET SHANDONG PROVINCE NETWORK | **100** ⚠️ | 4 |
-| `93.40.14.230` | IT | Fastweb SpA | **100** ⚠️ | 5 |
-| `41.38.56.120` | EG | TE Data | **100** ⚠️ | 12 |
-| `91.231.89.238` | FR | FR ONYPHE | **100** ⚠️ | 50 |
+| `47.16.201.182` | US | Optimum Online (Cablevision Systems) | **100** ⚠️ | 6 |
 | `223.123.41.65` | PK | CMPak Limited | **100** ⚠️ | 6 |
-| `98.94.49.146` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 26 |
-| `115.137.64.30` | KR | LG POWERCOMM | **100** ⚠️ | 4 |
+| `77.90.185.16` | LT | Inside Network LTD | **100** ⚠️ | 50 |
 | `223.123.43.7` | PK | CMPak Limited | **100** ⚠️ | 23 |
-| `61.77.88.90` | KR | Korea Telecom | **100** ⚠️ | 50 |
+| `1.34.138.22` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 5 |
+| `18.218.118.203` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
+| `115.137.64.30` | KR | LG POWERCOMM | **100** ⚠️ | 4 |
+| `98.94.49.146` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 26 |
+| `61.39.73.37` | KR | Bangga Bangga | **100** ⚠️ | 15 |
+| `45.91.64.7` | RU | F6 | **100** ⚠️ | 50 |
 
 ---
 
@@ -166,7 +170,7 @@
 
 ---
 
-## 🔕 False Positive Summary (255 filtered)
+## 🔕 False Positive Summary (280 filtered)
 
 | Reason | Count |
 |---|---|
@@ -182,7 +186,8 @@
 | AbuseIPDB score 22 below threshold 25 | 1 |
 | AbuseIPDB score 23 below threshold 25 | 1 |
 | AbuseIPDB score 5 below threshold 25 | 51 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 103 |
+| AbuseIPDB score 7 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 127 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -193,14 +198,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 414 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 81 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 255 filtered (61.6%) |
+| Tool 26 | Incident Timeline Generator | ✅ 445 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 85 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 280 filtered (62.9%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ⚠️ malware_report.json not found — check pipeline order |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 2 priority case(s) shown individually · 39 recon entry/entries in table (11 group(s) consolidating 129 session(s)).
+> **Report grouping:** 2 priority case(s) shown individually · 43 recon entry/entries in table (12 group(s) consolidating 132 session(s)).
 
 ---
 
@@ -216,4 +221,4 @@
 
 _Generated by THIR · Tool 28 v2 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-08T13:01:56Z_
+_Report time: 2026-03-08T14:31:25Z_
