@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-09 |
-| **Generated At** | 2026-03-09T02:22:27Z |
-| **Shift Time** | 02:22 UTC |
+| **Generated At** | 2026-03-09T02:42:50Z |
+| **Shift Time** | 02:42 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **52** |
-| Confirmed Threats | **44** |
-| False Positives Filtered | **8** (15.4%) |
-| Unique Attacker IPs | **16** |
-| Countries of Origin | **8** |
+| Total Sessions Captured | **57** |
+| Confirmed Threats | **47** |
+| False Positives Filtered | **10** (17.5%) |
+| Unique Attacker IPs | **21** |
+| Countries of Origin | **10** |
 | High Severity Cases | **2** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **50** |
+| Low Severity Cases | **55** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
@@ -111,12 +111,15 @@
 | `113.44.38.145` | **10** | 2026-03-09 01:48 | 2026-03-09 02:14 | 20m | 0 | `T1592` | 🟠 MEDIUM |
 | `112.53.99.37` | **2** | 2026-03-09 01:43 | 2026-03-09 01:43 | 0m | 0 | `T1592` | 🟢 LOW |
 | `172.174.200.225` | **2** | 2026-03-09 02:13 | 2026-03-09 02:13 | 0m | 0 | `T1592` | 🟢 LOW |
+| `1.213.214.233` | 1 | 2026-03-09 02:31 | 2026-03-09 02:31 | 30s | 0 | `T1592` | 🟢 LOW |
 | `101.200.236.207` | 1 | 2026-03-09 01:33 | 2026-03-09 01:35 | 120s | 0 | `T1592` | 🟢 LOW |
+| `113.108.79.152` | 1 | 2026-03-09 02:35 | 2026-03-09 02:37 | 120s | 0 | `T1592` | 🟢 LOW |
 | `113.249.103.89` | 1 | 2026-03-09 01:48 | 2026-03-09 01:50 | 120s | 0 | `T1592` | 🟢 LOW |
 | `120.48.175.69` | 1 | 2026-03-09 00:18 | 2026-03-09 00:20 | 120s | 0 | `T1592` | 🟢 LOW |
 | `124.29.225.50` | 1 | 2026-03-09 01:01 | 2026-03-09 01:01 | 13s | 0 | `T1592` | 🟢 LOW |
 | `131.196.22.217` | 1 | 2026-03-09 01:15 | 2026-03-09 01:15 | 31s | 0 | `T1592` | 🟢 LOW |
 | `150.246.249.149` | 1 | 2026-03-09 00:23 | 2026-03-09 00:24 | 31s | 0 | `T1592` | 🟢 LOW |
+| `183.250.89.44` | 1 | 2026-03-09 02:34 | 2026-03-09 02:36 | 120s | 0 | `T1592` | 🟢 LOW |
 | `47.236.83.218` | 1 | 2026-03-09 00:53 | 2026-03-09 00:53 | 30s | 0 | `T1592` | 🟢 LOW |
 | `47.251.72.8` | 1 | 2026-03-09 01:46 | 2026-03-09 01:46 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 
@@ -134,15 +137,15 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
+| `47.251.72.8` | US | Alibaba Cloud - US | **100** ⚠️ | 1 |
+| `112.53.99.37` | CN | China Mobile Communications Corporation | **100** ⚠️ | 37 |
 | `223.123.41.71` | PK | CMPak Limited | **100** ⚠️ | 2 |
+| `1.213.214.233` | KR | LG DACOM Corporation | **100** ⚠️ | 15 |
 | `124.29.225.50` | PK | Broadband Services | **100** ⚠️ | 21 |
 | `131.196.22.217` | BR | CYBER TELECOM LTDA | **100** ⚠️ | 0 |
-| `47.251.72.8` | US | Alibaba Cloud - US | **100** ⚠️ | 1 |
 | `101.200.236.207` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 48 |
-| `113.44.38.145` | CN | Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co) | **100** ⚠️ | 3 |
-| `120.48.175.69` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 50 |
-| `113.249.103.89` | CN | CHINANET Chongqing Province Network | **100** ⚠️ | 35 |
-| `112.53.99.37` | CN | China Mobile Communications Corporation | **100** ⚠️ | 37 |
+| `113.108.79.152` | CN | CHINANET Guangdong province network | **100** ⚠️ | 2 |
+| `47.236.83.218` | SG | Alibaba Cloud LLC | **100** ⚠️ | 50 |
 | `150.246.249.149` | JP | So-net Service | **100** ⚠️ | 50 |
 
 ---
@@ -153,20 +156,22 @@
 |---|---|
 | [T1592](https://attack.mitre.org/techniques/T1592) | — |
 | [T1078](https://attack.mitre.org/techniques/T1078) | — |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | — |
 | [T1021.004](https://attack.mitre.org/techniques/T1021/004) | — |
 | [T1105](https://attack.mitre.org/techniques/T1105) | — |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | — |
 
 ---
 
-## 🔕 False Positive Summary (8 filtered)
+## 🔕 False Positive Summary (10 filtered)
 
 | Reason | Count |
 |---|---|
 | AbuseIPDB score 0 below threshold 25 | 1 |
+| AbuseIPDB score 10 below threshold 25 | 1 |
 | AbuseIPDB score 15 below threshold 25 | 5 |
 | AbuseIPDB score 24 below threshold 25 | 1 |
 | AbuseIPDB score 5 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -177,14 +182,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 52 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 16 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 8 filtered (15.4%) |
+| Tool 26 | Incident Timeline Generator | ✅ 57 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 21 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 10 filtered (17.5%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 1 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 2 priority case(s) shown individually · 12 recon entry/entries in table (4 group(s) consolidating 34 session(s)).
+> **Report grouping:** 2 priority case(s) shown individually · 15 recon entry/entries in table (4 group(s) consolidating 34 session(s)).
 
 ---
 
@@ -200,4 +205,4 @@
 
 _Generated by THIR · Tool 28 v2 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-09T02:22:27Z_
+_Report time: 2026-03-09T02:42:50Z_
