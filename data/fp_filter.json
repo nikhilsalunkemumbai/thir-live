@@ -1,20 +1,30 @@
 {
-  "generated_at": "2026-03-09T17:51:56Z",
+  "generated_at": "2026-03-09T19:01:54Z",
   "threshold_used": 25,
-  "total_cases_in": 414,
-  "confirmed_threats": 286,
-  "flagged_as_fp": 128,
-  "fp_rate": 0.3092,
+  "total_cases_in": 456,
+  "confirmed_threats": 198,
+  "flagged_as_fp": 258,
+  "fp_rate": 0.5658,
   "fp_cases": [
     {
       "case_id": "IR-43e307b9703f",
       "src_ip": "74.192.190.235",
-      "reason": "AbuseIPDB score 24 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-2160ea6259f9",
       "src_ip": "186.32.187.156",
       "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-0488f28e774c",
+      "src_ip": "47.236.83.218",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-03bb026c8572",
+      "src_ip": "131.196.22.217",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-bc5d13bcf0c0",
@@ -42,6 +52,71 @@
       "reason": "AbuseIPDB score 15 below threshold 25"
     },
     {
+      "case_id": "IR-1c129d6e93ae",
+      "src_ip": "47.251.72.8",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-2fcf01164014",
+      "src_ip": "47.251.72.8",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-21231c6abfab",
+      "src_ip": "47.251.72.8",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-33af55a6acf6",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-11cb8dcb3c1a",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-b2ddb5149169",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-94e162dc4594",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4f3478373a2a",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4fb4aeb00184",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-5be03c5019d1",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-ae37064f5b00",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-497c93517286",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4243244ccd7c",
+      "src_ip": "113.44.38.145",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-4575d8cc4bf4",
       "src_ip": "52.173.162.39",
       "reason": "AbuseIPDB score 0 below threshold 25"
@@ -52,6 +127,11 @@
       "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
     },
     {
+      "case_id": "IR-eddda01e9e9a",
+      "src_ip": "1.213.214.233",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-db99a651e776",
       "src_ip": "20.161.44.227",
       "reason": "AbuseIPDB score 10 below threshold 25"
@@ -59,12 +139,17 @@
     {
       "case_id": "IR-6d37ef1723ca",
       "src_ip": "218.212.153.190",
-      "reason": "AbuseIPDB score 14 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-89c8b2db07cd",
       "src_ip": "45.79.130.91",
       "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-4c5ff68ac1d5",
+      "src_ip": "43.224.126.107",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-1783fc33d4b9",
@@ -142,6 +227,46 @@
       "reason": "AbuseIPDB score 4 below threshold 25"
     },
     {
+      "case_id": "IR-f1352634d47d",
+      "src_ip": "138.68.169.179",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-297ad79fa19d",
+      "src_ip": "138.68.169.179",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-48a351d28731",
+      "src_ip": "138.68.169.179",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-68fcad25aafa",
+      "src_ip": "138.68.169.179",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-b396e2c33019",
+      "src_ip": "20.64.105.169",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4d686219ba60",
+      "src_ip": "20.64.105.169",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-10c78dbd0bbb",
+      "src_ip": "110.37.18.101",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-99723fc98aa1",
+      "src_ip": "180.76.250.38",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-95400da84291",
       "src_ip": "187.110.129.229",
       "reason": "AbuseIPDB score 5 below threshold 25"
@@ -152,6 +277,21 @@
       "reason": "AbuseIPDB score 1 below threshold 25"
     },
     {
+      "case_id": "IR-6bc987387b27",
+      "src_ip": "43.142.113.25",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-bdef166a5cf0",
+      "src_ip": "35.229.135.179",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-7d042066b53b",
+      "src_ip": "125.133.1.182",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-5ae533ea662b",
       "src_ip": "182.186.145.182",
       "reason": "AbuseIPDB score 0 below threshold 25"
@@ -159,6 +299,86 @@
     {
       "case_id": "IR-57b6d7eb86b7",
       "src_ip": "128.24.163.71",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-2c42ec1799d8",
+      "src_ip": "71.6.199.87",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4afe794a0581",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-b0247f5e8808",
+      "src_ip": "183.56.216.153",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-52265ad66681",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-3012da84bd6c",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-6db0a377ee18",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-84417b00c60c",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-7df3bb3c0e71",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-3f43eab2dd90",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-e6642ee91e4d",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c1bfe203ad32",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-0ed5f1d5c759",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-1ad4a399c72e",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-e37cd0bb9e80",
+      "src_ip": "180.76.185.165",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-434fcfa78371",
+      "src_ip": "157.15.59.104",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4061086d8b25",
+      "src_ip": "157.15.59.111",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
@@ -189,17 +409,17 @@
     {
       "case_id": "IR-08b98a4e1838",
       "src_ip": "45.82.78.118",
-      "reason": "AbuseIPDB score 3 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-5688c87bedfd",
       "src_ip": "45.82.78.118",
-      "reason": "AbuseIPDB score 3 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-74d55ebb45b9",
       "src_ip": "45.82.78.118",
-      "reason": "AbuseIPDB score 3 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-dfef5d9ef684",
@@ -210,6 +430,11 @@
       "case_id": "IR-12c5d75fead3",
       "src_ip": "45.79.170.198",
       "reason": "AbuseIPDB score 15 below threshold 25"
+    },
+    {
+      "case_id": "IR-586f30a57bf9",
+      "src_ip": "103.146.202.84",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-b38c69de93c0",
@@ -229,7 +454,7 @@
     {
       "case_id": "IR-2c706528130d",
       "src_ip": "45.82.78.118",
-      "reason": "AbuseIPDB score 3 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-3a5c1b3653e8",
@@ -237,9 +462,29 @@
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
+      "case_id": "IR-9367b6fdd26f",
+      "src_ip": "37.143.61.140",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-bb636f45da39",
+      "src_ip": "37.143.61.140",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-4d8c3bd6d751",
       "src_ip": "82.79.113.142",
       "reason": "AbuseIPDB score 15 below threshold 25"
+    },
+    {
+      "case_id": "IR-ee53ff106ad1",
+      "src_ip": "180.103.119.98",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4b8424c9bc2b",
+      "src_ip": "120.48.80.70",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-dbc1d9f02bce",
@@ -264,7 +509,7 @@
     {
       "case_id": "IR-2895c2f61b2b",
       "src_ip": "104.209.5.155",
-      "reason": "AbuseIPDB score 19 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-ea79ed68ddc4",
@@ -305,6 +550,26 @@
       "case_id": "IR-1235089eb795",
       "src_ip": "13.83.216.102",
       "reason": "AbuseIPDB score 13 below threshold 25"
+    },
+    {
+      "case_id": "IR-aaea5e442afe",
+      "src_ip": "101.36.122.186",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-71b7877647ae",
+      "src_ip": "101.36.122.186",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c3fdc93a086c",
+      "src_ip": "101.36.122.186",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c88ac919b3f6",
+      "src_ip": "180.184.52.206",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-f5cc1a0aeda2",
@@ -412,9 +677,24 @@
       "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
     },
     {
+      "case_id": "IR-3918d2838f8a",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-59240b7cf1e9",
       "src_ip": "68.183.2.147",
       "reason": "AbuseIPDB score 13 below threshold 25"
+    },
+    {
+      "case_id": "IR-9f0b2ea05185",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-daa3ba681170",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-340dbf715b1c",
@@ -422,14 +702,34 @@
       "reason": "AbuseIPDB score 13 below threshold 25"
     },
     {
+      "case_id": "IR-0229035f1869",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-99fcdf757337",
       "src_ip": "68.183.2.147",
       "reason": "AbuseIPDB score 13 below threshold 25"
     },
     {
+      "case_id": "IR-ce4e356b0e04",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-0d5d11e0e18e",
       "src_ip": "68.183.2.147",
       "reason": "AbuseIPDB score 13 below threshold 25"
+    },
+    {
+      "case_id": "IR-40ac56cfeca0",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-b4ced83a8b87",
+      "src_ip": "159.223.43.225",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-191b68b03f31",
@@ -447,6 +747,76 @@
       "reason": "AbuseIPDB score 13 below threshold 25"
     },
     {
+      "case_id": "IR-2fbe40cc29d3",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-96accd689378",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-af34881766a5",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-9eb40a4c4511",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-1c445483dd2f",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-bd2c915d57eb",
+      "src_ip": "165.232.176.32",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-a13233d4b9f7",
+      "src_ip": "165.232.176.32",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-49f8e4463acf",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-51f8ffae2e1a",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-00763a7d703f",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-3a05b5437120",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-ea975bcbcda0",
+      "src_ip": "101.36.109.176",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-bca13e778bdc",
+      "src_ip": "40.124.178.49",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-2f8aaf93750e",
+      "src_ip": "40.124.178.49",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-62f58f830c3e",
       "src_ip": "172.208.127.39",
       "reason": "AbuseIPDB score 0 below threshold 25"
@@ -459,7 +829,7 @@
     {
       "case_id": "IR-67ac75279fb4",
       "src_ip": "165.227.32.33",
-      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-a3dd8a889e6a",
@@ -469,12 +839,62 @@
     {
       "case_id": "IR-9654ec295bb8",
       "src_ip": "165.227.32.33",
-      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-8511a9f66e8c",
+      "src_ip": "165.227.32.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-540c043f4c9a",
+      "src_ip": "165.227.32.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-60323a319010",
+      "src_ip": "165.227.32.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-b06638dcec75",
+      "src_ip": "165.227.32.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-7dfc34360eb9",
+      "src_ip": "165.227.32.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-e64c76adb64b",
       "src_ip": "165.227.32.33",
-      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-1b302a21ede7",
+      "src_ip": "165.227.32.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-16ce0cc62751",
+      "src_ip": "199.45.155.94",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-25cbadadc005",
+      "src_ip": "103.105.214.20",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-379f8fc8e201",
+      "src_ip": "220.135.64.218",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-a1c5f991efc8",
+      "src_ip": "49.88.156.34",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-28232c826d23",
@@ -484,47 +904,47 @@
     {
       "case_id": "IR-9d572282ac39",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-3c1fc7f1dbf4",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-2a7aa69f2b4b",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-e162aed57dbf",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-bc493fdfb795",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-1d57e1fa8aa7",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-159b77418dd7",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-2bde39699b5d",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-a49b1dfadd6c",
       "src_ip": "134.209.29.110",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-b25fdeec711b",
@@ -582,14 +1002,34 @@
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
+      "case_id": "IR-281d6789bacf",
+      "src_ip": "177.67.48.5",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-086876dd7cd6",
       "src_ip": "198.235.24.98",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
+      "case_id": "IR-5a068ed8c123",
+      "src_ip": "180.184.51.110",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-43e5bb72e1a3",
       "src_ip": "45.79.190.80",
-      "reason": "AbuseIPDB score 8 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-0b9dd4761372",
+      "src_ip": "186.193.69.104",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-22b146441759",
+      "src_ip": "186.193.69.104",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-0c4df4326a8f",
@@ -599,7 +1039,7 @@
     {
       "case_id": "IR-145f33643736",
       "src_ip": "66.205.238.49",
-      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-194dfaac821f",
@@ -609,11 +1049,21 @@
     {
       "case_id": "IR-4892d497408b",
       "src_ip": "218.90.28.58",
-      "reason": "AbuseIPDB score 24 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
       "case_id": "IR-dd09cba23cb5",
       "src_ip": "159.65.91.215",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c2306fe8b2d8",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-f07a98476272",
+      "src_ip": "180.76.146.235",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
@@ -622,8 +1072,18 @@
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
+      "case_id": "IR-2eb67d46b5fb",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-2f2c847e3c29",
       "src_ip": "159.65.91.215",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-b9956dfd989c",
+      "src_ip": "180.76.146.235",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
@@ -632,8 +1092,23 @@
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
+      "case_id": "IR-b70276e03183",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-ab2705e42692",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-a290f58aa079",
       "src_ip": "159.65.91.215",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-867d448d895c",
+      "src_ip": "180.76.146.235",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
@@ -642,15 +1117,189 @@
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
+      "case_id": "IR-3e75df898feb",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-d1553c41b81a",
+      "src_ip": "113.194.203.31",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-07af20dd3542",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-15f0b968a8ca",
+      "src_ip": "180.76.146.235",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
       "case_id": "IR-9ac527d6da6b",
       "src_ip": "172.171.254.147",
-      "reason": "AbuseIPDB score 7 below threshold 25"
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-ecf497c4e255",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-673358430c42",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-4698a83966bf",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-7999a9fb2594",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-8d9f5f5df26b",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-bd92c1b5184b",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-d779202d5a8c",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-55e19c664d1b",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-08fb236daba2",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c29b20106a2c",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-9f2e046cff2b",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-64e6ed0fb8f3",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-1b52f36fa944",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c0c38258aa2e",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-52d81f72a881",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-e0f60a65ef1e",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-e90b469ececc",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-aeb0742bb7d6",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-d209205e0fe6",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-ca840f174a86",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-dbf90f78c264",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-7dee10a11172",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-0663a77596cc",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-50f63810fa12",
+      "src_ip": "147.185.133.100",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-fbe7a63ab933",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-0e8abf3689f4",
+      "src_ip": "223.123.43.7",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c7a612c109ea",
+      "src_ip": "162.142.125.33",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-3d965930e2a1",
+      "src_ip": "81.213.78.31",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-d217957c2d77",
+      "src_ip": "49.88.156.34",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-841bf4f73627",
+      "src_ip": "172.184.211.163",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-42fbf79b3b0c",
+      "src_ip": "49.88.156.34",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
   "clean_cases": [
     "IR-4caed1df73cf",
     "IR-de2dc5143c2a",
-    "IR-0488f28e774c",
     "IR-cf69dfef9ed8",
     "IR-c90b142e7bac",
     "IR-01813325e02d",
@@ -662,7 +1311,6 @@
     "IR-eac247589279",
     "IR-14da8fc31aa3",
     "IR-37a80c3159b4",
-    "IR-03bb026c8572",
     "IR-279107c426c0",
     "IR-1fb7decfa8e7",
     "IR-1c36fc6da592",
@@ -676,23 +1324,9 @@
     "IR-58e8c5cc0fd9",
     "IR-dd5709ef96a1",
     "IR-f138ae731be5",
-    "IR-1c129d6e93ae",
-    "IR-2fcf01164014",
-    "IR-21231c6abfab",
     "IR-f73896f8d956",
-    "IR-33af55a6acf6",
-    "IR-11cb8dcb3c1a",
-    "IR-b2ddb5149169",
-    "IR-94e162dc4594",
-    "IR-4f3478373a2a",
-    "IR-4fb4aeb00184",
-    "IR-5be03c5019d1",
-    "IR-ae37064f5b00",
-    "IR-497c93517286",
-    "IR-4243244ccd7c",
     "IR-6a61e0270d3b",
     "IR-0a2408c245f9",
-    "IR-eddda01e9e9a",
     "IR-1cfb83c27576",
     "IR-9ba43576e65f",
     "IR-33344a62f55f",
@@ -702,7 +1336,6 @@
     "IR-1a0a7aa005a9",
     "IR-ed7a899d18a0",
     "IR-28c9220c6108",
-    "IR-4c5ff68ac1d5",
     "IR-0762fb00177e",
     "IR-e26d338d028d",
     "IR-853f17a4e175",
@@ -724,20 +1357,12 @@
     "IR-96d9765da3aa",
     "IR-a307d2b3a1de",
     "IR-fd7bcd0e1ed1",
-    "IR-f1352634d47d",
-    "IR-297ad79fa19d",
     "IR-bc6d0013c2b9",
     "IR-b8f169b48c62",
-    "IR-48a351d28731",
-    "IR-68fcad25aafa",
     "IR-2f8c266caef7",
-    "IR-b396e2c33019",
-    "IR-4d686219ba60",
-    "IR-10c78dbd0bbb",
     "IR-ffd7746ac318",
     "IR-73707918047f",
     "IR-3ff3db877095",
-    "IR-99723fc98aa1",
     "IR-5cf1f26e52d6",
     "IR-453d6d1dfeb4",
     "IR-55b1e97014d0",
@@ -756,30 +1381,13 @@
     "IR-90b345c0d156",
     "IR-b1f0dc0d3197",
     "IR-92597fc938b3",
-    "IR-6bc987387b27",
-    "IR-bdef166a5cf0",
-    "IR-7d042066b53b",
     "IR-f70dacd9eee9",
     "IR-a76ebf7bd55b",
     "IR-13d42f51c468",
     "IR-4b45db05c485",
     "IR-cfb76ae7d4e2",
     "IR-21a70a38586b",
-    "IR-2c42ec1799d8",
-    "IR-4afe794a0581",
     "IR-f371ce772472",
-    "IR-b0247f5e8808",
-    "IR-52265ad66681",
-    "IR-3012da84bd6c",
-    "IR-6db0a377ee18",
-    "IR-84417b00c60c",
-    "IR-7df3bb3c0e71",
-    "IR-3f43eab2dd90",
-    "IR-e6642ee91e4d",
-    "IR-c1bfe203ad32",
-    "IR-0ed5f1d5c759",
-    "IR-1ad4a399c72e",
-    "IR-e37cd0bb9e80",
     "IR-5b9af85bbbfb",
     "IR-ed5ebeef6d00",
     "IR-ed48595ce412",
@@ -788,10 +1396,8 @@
     "IR-6a7d1e2ad535",
     "IR-19bcefcd299d",
     "IR-878be35ec3c3",
-    "IR-434fcfa78371",
     "IR-95cb97df6ab5",
     "IR-ba08c5ff3183",
-    "IR-4061086d8b25",
     "IR-1ca2623ee1a0",
     "IR-acc042990518",
     "IR-4c110052cd5c",
@@ -809,7 +1415,6 @@
     "IR-8290a66d0c38",
     "IR-44ab477ad308",
     "IR-fec23ae2ac3b",
-    "IR-586f30a57bf9",
     "IR-d619931b3bf0",
     "IR-337a934e5ddc",
     "IR-0b24bf6199ea",
@@ -828,20 +1433,12 @@
     "IR-4d6671dd9519",
     "IR-62c90926caaf",
     "IR-2aadce555fef",
-    "IR-9367b6fdd26f",
     "IR-401074c17ea8",
-    "IR-bb636f45da39",
-    "IR-ee53ff106ad1",
-    "IR-4b8424c9bc2b",
     "IR-8585d5bea480",
     "IR-50f966f50409",
     "IR-c7f8d3b5018e",
     "IR-3548884cf3f4",
-    "IR-aaea5e442afe",
-    "IR-71b7877647ae",
-    "IR-c3fdc93a086c",
     "IR-ddd6818d65d3",
-    "IR-c88ac919b3f6",
     "IR-c3cd80425659",
     "IR-1888f2c99b2b",
     "IR-0126dd36b5e6",
@@ -854,27 +1451,6 @@
     "IR-c55558d23e90",
     "IR-72b10f87be9e",
     "IR-29672efc2721",
-    "IR-3918d2838f8a",
-    "IR-9f0b2ea05185",
-    "IR-daa3ba681170",
-    "IR-0229035f1869",
-    "IR-ce4e356b0e04",
-    "IR-40ac56cfeca0",
-    "IR-b4ced83a8b87",
-    "IR-2fbe40cc29d3",
-    "IR-96accd689378",
-    "IR-af34881766a5",
-    "IR-9eb40a4c4511",
-    "IR-1c445483dd2f",
-    "IR-bd2c915d57eb",
-    "IR-a13233d4b9f7",
-    "IR-49f8e4463acf",
-    "IR-51f8ffae2e1a",
-    "IR-00763a7d703f",
-    "IR-3a05b5437120",
-    "IR-ea975bcbcda0",
-    "IR-bca13e778bdc",
-    "IR-2f8aaf93750e",
     "IR-6e6ba39df7b9",
     "IR-1eb4bc7049da",
     "IR-01389393d0ea",
@@ -882,30 +1458,23 @@
     "IR-47c463a242f0",
     "IR-3150a1715cb9",
     "IR-c813c9b390e7",
-    "IR-8511a9f66e8c",
-    "IR-540c043f4c9a",
-    "IR-60323a319010",
     "IR-a1c51db6c328",
-    "IR-b06638dcec75",
     "IR-31c0f2f4ff5e",
     "IR-711385aced81",
     "IR-39670d84982a",
     "IR-87329d6b1015",
     "IR-31d03cf62a47",
-    "IR-7dfc34360eb9",
     "IR-9af68dfa0517",
     "IR-33ca3228b959",
     "IR-7b56c401b468",
     "IR-69b085e338ce",
     "IR-a157f1969725",
-    "IR-1b302a21ede7",
     "IR-ac4777f1e70e",
     "IR-bd9adb1026d4",
     "IR-0c6085095a65",
     "IR-9713046bbfb7",
     "IR-c11135da657e",
     "IR-78e4be822121",
-    "IR-16ce0cc62751",
     "IR-3e58d04712db",
     "IR-3d89a825bdbc",
     "IR-59e5d26c7bf8",
@@ -914,25 +1483,18 @@
     "IR-5d6d7185d25c",
     "IR-832fa4ddb473",
     "IR-f1b1b6c01f1c",
-    "IR-25cbadadc005",
-    "IR-379f8fc8e201",
-    "IR-a1c5f991efc8",
-    "IR-281d6789bacf",
-    "IR-5a068ed8c123",
-    "IR-0b9dd4761372",
-    "IR-22b146441759",
-    "IR-c2306fe8b2d8",
-    "IR-f07a98476272",
-    "IR-2eb67d46b5fb",
-    "IR-b9956dfd989c",
-    "IR-b70276e03183",
-    "IR-ab2705e42692",
-    "IR-867d448d895c",
-    "IR-3e75df898feb",
-    "IR-d1553c41b81a",
-    "IR-07af20dd3542",
-    "IR-15f0b968a8ca",
     "IR-7d62b2d6b545",
-    "IR-b72aefd25ebb"
+    "IR-b72aefd25ebb",
+    "IR-99c305cb62b6",
+    "IR-42f26c4a378d",
+    "IR-dfd2ce367ec9",
+    "IR-dc64a63c85fa",
+    "IR-e0133dce357e",
+    "IR-85d3bc5bbaa5",
+    "IR-6b2e551a9a90",
+    "IR-35ae4246d5fb",
+    "IR-abf537a364bb",
+    "IR-0ce0a1e23f4c",
+    "IR-411b1fbf21c9"
   ]
 }
