@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-09T07:53:23Z",
+  "generated_at": "2026-03-09T08:54:26Z",
   "threshold_used": 25,
-  "total_cases_in": 182,
-  "confirmed_threats": 143,
-  "flagged_as_fp": 39,
-  "fp_rate": 0.2143,
+  "total_cases_in": 200,
+  "confirmed_threats": 154,
+  "flagged_as_fp": 46,
+  "fp_rate": 0.23,
   "fp_cases": [
     {
       "case_id": "IR-43e307b9703f",
@@ -200,6 +200,41 @@
       "case_id": "IR-4ee7c40abd16",
       "src_ip": "172.215.209.177",
       "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-62e911080d3a",
+      "src_ip": "138.197.172.49",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-3c3e43459698",
+      "src_ip": "138.197.172.49",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-d8d8aaab9d48",
+      "src_ip": "138.197.172.49",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-08b98a4e1838",
+      "src_ip": "45.82.78.118",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-5688c87bedfd",
+      "src_ip": "45.82.78.118",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-74d55ebb45b9",
+      "src_ip": "45.82.78.118",
+      "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-dfef5d9ef684",
+      "src_ip": "172.184.211.152",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
   "clean_cases": [
@@ -345,6 +380,17 @@
     "IR-95cb97df6ab5",
     "IR-ba08c5ff3183",
     "IR-4061086d8b25",
-    "IR-110238021815"
+    "IR-110238021815",
+    "IR-96fa3a929293",
+    "IR-5e9205b17451",
+    "IR-fcbd8c6416b8",
+    "IR-528bf6bcf0e0",
+    "IR-0c23ed1df415",
+    "IR-9255855886ce",
+    "IR-334a9d293780",
+    "IR-fa8a979cbee1",
+    "IR-92bc4a1318ee",
+    "IR-8290a66d0c38",
+    "IR-44ab477ad308"
   ]
 }
