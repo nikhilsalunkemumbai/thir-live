@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-09 |
-| **Generated At** | 2026-03-09T11:41:22Z |
-| **Shift Time** | 11:41 UTC |
+| **Generated At** | 2026-03-09T13:18:29Z |
+| **Shift Time** | 13:18 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **238** |
-| Confirmed Threats | **184** |
-| False Positives Filtered | **54** (22.7%) |
-| Unique Attacker IPs | **84** |
-| Countries of Origin | **26** |
-| High Severity Cases | **32** |
+| Total Sessions Captured | **249** |
+| Confirmed Threats | **187** |
+| False Positives Filtered | **62** (24.9%) |
+| Unique Attacker IPs | **90** |
+| Countries of Origin | **27** |
+| High Severity Cases | **36** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **206** |
+| Low Severity Cases | **213** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
@@ -1199,14 +1199,17 @@
 | `120.48.80.70` | 1 | 2026-03-09 11:20 | 2026-03-09 11:21 | 39s | 0 | `T1592` | 🟢 LOW |
 | `124.29.225.50` | 1 | 2026-03-09 01:01 | 2026-03-09 01:01 | 13s | 0 | `T1592` | 🟢 LOW |
 | `125.133.1.182` | 1 | 2026-03-09 05:36 | 2026-03-09 05:36 | 13s | 0 | `T1592` | 🟢 LOW |
+| `13.218.248.210` | 1 | 2026-03-09 12:54 | 2026-03-09 12:54 | 0s | 0 | `T1592` | 🟢 LOW |
 | `131.196.22.217` | 1 | 2026-03-09 01:15 | 2026-03-09 01:15 | 31s | 0 | `T1592` | 🟢 LOW |
 | `150.246.249.149` | 1 | 2026-03-09 00:23 | 2026-03-09 00:24 | 31s | 0 | `T1592` | 🟢 LOW |
 | `157.15.59.111` | 1 | 2026-03-09 06:51 | 2026-03-09 06:51 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `172.104.13.79` | 1 | 2026-03-09 04:58 | 2026-03-09 04:59 | 32s | 0 | `T1592` | 🟢 LOW |
+| `177.75.49.5` | 1 | 2026-03-09 13:17 | 2026-03-09 13:17 | 12s | 0 | `T1592` | 🟢 LOW |
 | `180.103.119.98` | 1 | 2026-03-09 11:19 | 2026-03-09 11:21 | 120s | 0 | `T1592` | 🟢 LOW |
 | `180.76.250.38` | 1 | 2026-03-09 04:16 | 2026-03-09 04:18 | 120s | 0 | `T1592` | 🟢 LOW |
 | `183.250.89.44` | 1 | 2026-03-09 02:34 | 2026-03-09 02:36 | 120s | 0 | `T1592` | 🟢 LOW |
 | `183.56.216.153` | 1 | 2026-03-09 06:11 | 2026-03-09 06:13 | 120s | 0 | `T1592` | 🟢 LOW |
+| `186.39.72.50` | 1 | 2026-03-09 12:43 | 2026-03-09 12:43 | 0s | 0 | `T1592` | 🟢 LOW |
 | `200.74.84.36` | 1 | 2026-03-09 09:06 | 2026-03-09 09:07 | 31s | 0 | `T1592` | 🟢 LOW |
 | `31.13.194.206` | 1 | 2026-03-09 02:53 | 2026-03-09 02:54 | 13s | 0 | `T1592` | 🟢 LOW |
 | `43.142.113.25` | 1 | 2026-03-09 05:18 | 2026-03-09 05:18 | 31s | 0 | `T1592` | 🟢 LOW |
@@ -1226,7 +1229,7 @@
 | File | Type | SHA-256 (short) | Threat Score | Severity | VT Detections |
 |---|---|---|---|---|---|
 | `01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b` | Unknown binary | `01ba4719c80b6fe9...` | 0/100 | 🟢 LOW | 0/76 ✅ |
-| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 11/100 | 🟢 LOW | **29/76** 🔴 |
+| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 10/100 | 🟢 LOW | **27/76** 🔴 |
 
 ---
 
@@ -1234,16 +1237,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `80.13.82.58` | FR | LNPUT657 Puteaux | **100** ⚠️ | 3 |
-| `66.240.223.240` | US | CariNet, Inc. | **100** ⚠️ | 50 |
+| `223.123.41.71` | PK | CMPak Limited | **100** ⚠️ | 3 |
+| `47.251.72.8` | US | Alibaba Cloud - US | **100** ⚠️ | 1 |
 | `78.181.19.18` | TR | Turk Telekomunikasyon Anonim Sirketi | **100** ⚠️ | 2 |
-| `125.133.1.182` | KR | Korea Telecom | **100** ⚠️ | 17 |
-| `71.6.199.87` | US | CariNet, Inc. | **100** ⚠️ | 50 |
-| `102.88.137.213` | NG | MTN Nigeria | **100** ⚠️ | 50 |
-| `110.38.211.186` | PK | National Wimax/IMS environment | **100** ⚠️ | 0 |
-| `20.64.105.169` | US | Microsoft Corporation | **100** ⚠️ | 50 |
-| `157.15.59.120` | NP | Global Trading And IT Solution Pvt. Ltd. | **100** ⚠️ | 2 |
-| `183.56.216.153` | CN | CHINANET Guangdong province network | **100** ⚠️ | 50 |
+| `3.131.220.121` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
+| `206.189.106.227` | NL | DigitalOcean, LLC | **100** ⚠️ | 4 |
+| `35.229.135.179` | TW | Google LLC | **100** ⚠️ | 0 |
+| `47.236.83.218` | SG | Alibaba Cloud LLC | **100** ⚠️ | 50 |
+| `177.75.49.5` | BR | EXPLORERNET INFOLINK TECNOLOGIA E TELECOMUNICACOES | **100** ⚠️ | 11 |
+| `157.15.59.111` | NP | Global Trading And IT Solution Pvt. Ltd. | **100** ⚠️ | 3 |
+| `112.53.99.37` | CN | China Mobile Communications Corporation | **100** ⚠️ | 37 |
 
 ---
 
@@ -1259,22 +1262,22 @@
 
 ---
 
-## 🔕 False Positive Summary (54 filtered)
+## 🔕 False Positive Summary (62 filtered)
 
 | Reason | Count |
 |---|---|
 | AbuseIPDB score 0 below threshold 25 | 10 |
 | AbuseIPDB score 1 below threshold 25 | 1 |
 | AbuseIPDB score 10 below threshold 25 | 1 |
-| AbuseIPDB score 13 below threshold 25 | 1 |
+| AbuseIPDB score 13 below threshold 25 | 2 |
 | AbuseIPDB score 15 below threshold 25 | 7 |
 | AbuseIPDB score 19 below threshold 25 | 1 |
 | AbuseIPDB score 2 below threshold 25 | 4 |
 | AbuseIPDB score 24 below threshold 25 | 1 |
-| AbuseIPDB score 3 below threshold 25 | 1 |
-| AbuseIPDB score 4 below threshold 25 | 14 |
-| AbuseIPDB score 5 below threshold 25 | 2 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 11 |
+| AbuseIPDB score 3 below threshold 25 | 7 |
+| AbuseIPDB score 4 below threshold 25 | 15 |
+| AbuseIPDB score 5 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 12 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -1285,14 +1288,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 238 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 84 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 54 filtered (22.7%) |
+| Tool 26 | Incident Timeline Generator | ✅ 249 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 90 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 62 filtered (24.9%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 2 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 32 priority case(s) shown individually · 54 recon entry/entries in table (20 group(s) consolidating 118 session(s)).
+> **Report grouping:** 32 priority case(s) shown individually · 57 recon entry/entries in table (20 group(s) consolidating 118 session(s)).
 
 ---
 
@@ -1308,4 +1311,4 @@
 
 _Generated by THIR · Tool 28 v2 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-09T11:41:22Z_
+_Report time: 2026-03-09T13:18:29Z_
