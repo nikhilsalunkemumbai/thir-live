@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-09 |
-| **Generated At** | 2026-03-09T16:07:27Z |
-| **Shift Time** | 16:07 UTC |
+| **Generated At** | 2026-03-09T17:52:06Z |
+| **Shift Time** | 17:52 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **364** |
-| Confirmed Threats | **269** |
-| False Positives Filtered | **95** (26.1%) |
-| Unique Attacker IPs | **111** |
-| Countries of Origin | **28** |
-| High Severity Cases | **59** |
+| Total Sessions Captured | **414** |
+| Confirmed Threats | **286** |
+| False Positives Filtered | **128** (30.9%) |
+| Unique Attacker IPs | **130** |
+| Countries of Origin | **29** |
+| High Severity Cases | **69** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **305** |
+| Low Severity Cases | **345** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
@@ -1910,6 +1910,7 @@
 | `101.36.123.173` | **10** | 2026-03-09 04:09 | 2026-03-09 04:31 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `102.88.137.80` | **10** | 2026-03-09 10:28 | 2026-03-09 10:42 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `113.44.38.145` | **10** | 2026-03-09 01:48 | 2026-03-09 02:14 | 20m | 0 | `T1592` | 🟠 MEDIUM |
+| `180.76.146.235` | **10** | 2026-03-09 17:26 | 2026-03-09 17:34 | 15m | 2 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `157.15.59.120` | **9** | 2026-03-09 06:26 | 2026-03-09 06:48 | 0m | 9 | `T1110.001 · T1592` | 🟢 LOW |
 | `3.131.220.121` | **6** | 2026-03-09 05:49 | 2026-03-09 05:49 | 0m | 0 | `T1592` | 🟢 LOW |
 | `101.126.129.179` | **2** | 2026-03-09 03:47 | 2026-03-09 03:51 | 4m | 0 | `T1592` | 🟢 LOW |
@@ -1920,7 +1921,9 @@
 | `159.223.43.225` | **2** | 2026-03-09 13:45 | 2026-03-09 13:46 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `170.64.177.28` | **2** | 2026-03-09 07:34 | 2026-03-09 07:36 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `172.174.200.225` | **2** | 2026-03-09 02:13 | 2026-03-09 02:13 | 0m | 0 | `T1592` | 🟢 LOW |
+| `186.193.69.104` | **2** | 2026-03-09 17:08 | 2026-03-09 17:08 | 1m | 0 | `T1592` | 🟢 LOW |
 | `20.64.105.169` | **2** | 2026-03-09 04:13 | 2026-03-09 04:13 | 0m | 0 | `T1592` | 🟢 LOW |
+| `20.64.105.81` | **2** | 2026-03-09 17:45 | 2026-03-09 17:45 | 0m | 0 | `T1592` | 🟢 LOW |
 | `206.189.106.227` | **2** | 2026-03-09 02:49 | 2026-03-09 02:50 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `209.38.85.24` | **2** | 2026-03-09 15:35 | 2026-03-09 15:36 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `34.140.186.44` | **2** | 2026-03-09 09:24 | 2026-03-09 09:24 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -1937,6 +1940,7 @@
 | `110.37.18.101` | 1 | 2026-03-09 04:14 | 2026-03-09 04:14 | 16s | 0 | `T1592` | 🟢 LOW |
 | `110.38.211.186` | 1 | 2026-03-09 11:35 | 2026-03-09 11:35 | 14s | 0 | `T1592` | 🟢 LOW |
 | `113.108.79.152` | 1 | 2026-03-09 02:35 | 2026-03-09 02:37 | 120s | 0 | `T1592` | 🟢 LOW |
+| `113.194.203.31` | 1 | 2026-03-09 17:31 | 2026-03-09 17:33 | 120s | 0 | `T1592` | 🟢 LOW |
 | `113.219.209.170` | 1 | 2026-03-09 10:31 | 2026-03-09 10:33 | 120s | 0 | `T1592` | 🟢 LOW |
 | `113.249.103.89` | 1 | 2026-03-09 01:48 | 2026-03-09 01:50 | 120s | 0 | `T1592` | 🟢 LOW |
 | `115.42.71.140` | 1 | 2026-03-09 04:48 | 2026-03-09 04:48 | 13s | 0 | `T1592` | 🟢 LOW |
@@ -1951,8 +1955,10 @@
 | `157.15.59.111` | 1 | 2026-03-09 06:51 | 2026-03-09 06:51 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `165.232.176.32` | 1 | 2026-03-09 14:06 | 2026-03-09 14:06 | 0s | 0 | `T1592` | 🟢 LOW |
 | `172.104.13.79` | 1 | 2026-03-09 04:58 | 2026-03-09 04:59 | 32s | 0 | `T1592` | 🟢 LOW |
+| `177.67.48.5` | 1 | 2026-03-09 16:44 | 2026-03-09 16:44 | 31s | 0 | `T1592` | 🟢 LOW |
 | `177.75.49.5` | 1 | 2026-03-09 13:17 | 2026-03-09 13:17 | 12s | 0 | `T1592` | 🟢 LOW |
 | `180.103.119.98` | 1 | 2026-03-09 11:19 | 2026-03-09 11:21 | 120s | 0 | `T1592` | 🟢 LOW |
+| `180.184.51.110` | 1 | 2026-03-09 16:58 | 2026-03-09 17:00 | 120s | 0 | `T1592` | 🟢 LOW |
 | `180.184.52.206` | 1 | 2026-03-09 13:27 | 2026-03-09 13:29 | 120s | 0 | `T1592` | 🟢 LOW |
 | `180.184.86.82` | 1 | 2026-03-09 13:33 | 2026-03-09 13:35 | 120s | 0 | `T1592` | 🟢 LOW |
 | `180.76.250.38` | 1 | 2026-03-09 04:16 | 2026-03-09 04:18 | 120s | 0 | `T1592` | 🟢 LOW |
@@ -1989,16 +1995,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `47.251.72.8` | US | Alibaba Cloud - US | **100** ⚠️ | 1 |
-| `220.135.64.218` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 20 |
 | `159.223.43.225` | SG | DigitalOcean, LLC | **100** ⚠️ | 0 |
-| `43.142.113.25` | CN | Tencent Cloud Computing (Beijing) Co., Ltd | **100** ⚠️ | 28 |
-| `20.64.105.169` | US | Microsoft Corporation | **100** ⚠️ | 50 |
-| `177.75.49.5` | BR | EXPLORERNET INFOLINK TECNOLOGIA E TELECOMUNICACOES | **100** ⚠️ | 11 |
-| `71.6.199.87` | US | CariNet, Inc. | **100** ⚠️ | 50 |
-| `180.184.52.206` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 50 |
-| `120.48.181.192` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 50 |
-| `40.124.178.49` | US | Microsoft Corporation | **100** ⚠️ | 50 |
+| `1.213.214.233` | KR | LG DACOM Corporation | **100** ⚠️ | 15 |
+| `165.232.176.32` | IN | DigitalOcean, LLC | **100** ⚠️ | 0 |
+| `80.13.82.58` | FR | LNPUT657 Puteaux | **100** ⚠️ | 3 |
+| `1.225.62.211` | KR | SK Broadband Co Ltd | **100** ⚠️ | 11 |
+| `103.105.214.20` | PH | Fil Products Residential Fiber Internet | **100** ⚠️ | 17 |
+| `120.92.15.204` | CN | Beijing Kingsoft Cloud Internet Technology Co., Ltd. | **100** ⚠️ | 6 |
+| `183.250.89.44` | CN | China Mobile Communications Corporation | **100** ⚠️ | 50 |
+| `43.224.126.107` | LK | Lanka Government Cloud | **100** ⚠️ | 50 |
+| `223.123.38.35` | PK | CMPak Limited | **100** ⚠️ | 34 |
 
 ---
 
@@ -2014,22 +2020,25 @@
 
 ---
 
-## 🔕 False Positive Summary (95 filtered)
+## 🔕 False Positive Summary (128 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 9 |
+| AbuseIPDB score 0 below threshold 25 | 29 |
 | AbuseIPDB score 1 below threshold 25 | 1 |
 | AbuseIPDB score 10 below threshold 25 | 1 |
 | AbuseIPDB score 13 below threshold 25 | 9 |
+| AbuseIPDB score 14 below threshold 25 | 1 |
 | AbuseIPDB score 15 below threshold 25 | 8 |
 | AbuseIPDB score 19 below threshold 25 | 1 |
 | AbuseIPDB score 2 below threshold 25 | 4 |
-| AbuseIPDB score 24 below threshold 25 | 1 |
-| AbuseIPDB score 3 below threshold 25 | 11 |
+| AbuseIPDB score 24 below threshold 25 | 2 |
+| AbuseIPDB score 3 below threshold 25 | 10 |
 | AbuseIPDB score 4 below threshold 25 | 15 |
 | AbuseIPDB score 5 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 34 |
+| AbuseIPDB score 7 below threshold 25 | 10 |
+| AbuseIPDB score 8 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 35 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -2040,14 +2049,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 364 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 111 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 95 filtered (26.1%) |
+| Tool 26 | Incident Timeline Generator | ✅ 414 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 130 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 128 filtered (30.9%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 2 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 52 priority case(s) shown individually · 72 recon entry/entries in table (27 group(s) consolidating 172 session(s)).
+> **Report grouping:** 52 priority case(s) shown individually · 78 recon entry/entries in table (30 group(s) consolidating 186 session(s)).
 
 ---
 
@@ -2063,4 +2072,4 @@
 
 _Generated by THIR · Tool 28 v2 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-09T16:07:27Z_
+_Report time: 2026-03-09T17:52:06Z_
