@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-10 |
-| **Generated At** | 2026-03-10T14:45:43Z |
-| **Shift Time** | 14:45 UTC |
+| **Generated At** | 2026-03-10T16:55:20Z |
+| **Shift Time** | 16:55 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **662** |
-| Confirmed Threats | **399** |
-| False Positives Filtered | **263** (39.7%) |
-| Unique Attacker IPs | **125** |
-| Countries of Origin | **29** |
+| Total Sessions Captured | **672** |
+| Confirmed Threats | **404** |
+| False Positives Filtered | **268** (39.9%) |
+| Unique Attacker IPs | **134** |
+| Countries of Origin | **30** |
 | High Severity Cases | **55** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **607** |
+| Low Severity Cases | **617** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
@@ -1429,6 +1429,7 @@
 | `49.88.156[.]34` | **2** | 2026-03-10 09:29 | 2026-03-10 09:33 | 4m | 0 | `T1592` | 🟢 LOW |
 | `101.71.37[.]214` | 1 | 2026-03-10 02:27 | 2026-03-10 02:27 | 14s | 0 | `T1592` | 🟢 LOW |
 | `101.71.37[.]90` | 1 | 2026-03-10 00:48 | 2026-03-10 00:49 | 13s | 0 | `T1592` | 🟢 LOW |
+| `103.226.187[.]112` | 1 | 2026-03-10 15:06 | 2026-03-10 15:06 | 13s | 0 | `T1592` | 🟢 LOW |
 | `106.1.127[.]182` | 1 | 2026-03-10 05:37 | 2026-03-10 05:37 | 17s | 0 | `T1592` | 🟢 LOW |
 | `106.75.162[.]193` | 1 | 2026-03-10 07:37 | 2026-03-10 07:39 | 120s | 0 | `T1592` | 🟢 LOW |
 | `107.173.82[.]99` | 1 | 2026-03-10 03:14 | 2026-03-10 03:15 | 30s | 0 | `T1592` | 🟢 LOW |
@@ -1436,12 +1437,15 @@
 | `114.171.170[.]38` | 1 | 2026-03-10 06:40 | 2026-03-10 06:40 | 30s | 0 | `T1592` | 🟢 LOW |
 | `116.176.58[.]252` | 1 | 2026-03-10 12:15 | 2026-03-10 12:17 | 120s | 0 | `T1592` | 🟢 LOW |
 | `118.186.208[.]20` | 1 | 2026-03-10 06:00 | 2026-03-10 06:02 | 120s | 0 | `T1592` | 🟢 LOW |
+| `118.194.231[.]208` | 1 | 2026-03-10 16:23 | 2026-03-10 16:23 | 0s | 0 | `T1592` | 🟢 LOW |
 | `118.196.29[.]193` | 1 | 2026-03-10 05:59 | 2026-03-10 05:59 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `120.230.180[.]198` | 1 | 2026-03-10 02:11 | 2026-03-10 02:13 | 120s | 0 | `T1592` | 🟢 LOW |
 | `120.240.236[.]178` | 1 | 2026-03-10 03:20 | 2026-03-10 03:22 | 120s | 0 | `T1592` | 🟢 LOW |
 | `120.48.39[.]73` | 1 | 2026-03-10 05:57 | 2026-03-10 05:59 | 120s | 0 | `T1592` | 🟢 LOW |
 | `120.55.242[.]50` | 1 | 2026-03-10 07:51 | 2026-03-10 07:51 | 0s | 0 | `T1592` | 🟢 LOW |
+| `120.55.242[.]50` | 1 | 2026-03-10 15:37 | 2026-03-10 15:37 | 0s | 0 | `T1592` | 🟢 LOW |
 | `121.161.149[.]104` | 1 | 2026-03-10 07:29 | 2026-03-10 07:29 | 13s | 0 | `T1592` | 🟢 LOW |
+| `122.117.161[.]39` | 1 | 2026-03-10 15:00 | 2026-03-10 15:00 | 31s | 0 | `T1592` | 🟢 LOW |
 | `14.103.107[.]29` | 1 | 2026-03-10 02:38 | 2026-03-10 02:40 | 120s | 0 | `T1592` | 🟢 LOW |
 | `151.237.28[.]235` | 1 | 2026-03-10 07:53 | 2026-03-10 07:54 | 13s | 0 | `T1592` | 🟢 LOW |
 | `162.243.162[.]30` | 1 | 2026-03-10 04:16 | 2026-03-10 04:16 | 10s | 0 | `T1592` | 🟢 LOW |
@@ -1461,6 +1465,7 @@
 | `212.41.44[.]13` | 1 | 2026-03-10 13:46 | 2026-03-10 13:47 | 14s | 0 | `T1592` | 🟢 LOW |
 | `223.18.99[.]81` | 1 | 2026-03-10 03:03 | 2026-03-10 03:04 | 30s | 0 | `T1592` | 🟢 LOW |
 | `3.80.137[.]207` | 1 | 2026-03-10 12:56 | 2026-03-10 12:56 | 1s | 0 | `T1592` | 🟢 LOW |
+| `35.216.254[.]237` | 1 | 2026-03-10 15:08 | 2026-03-10 15:08 | 0s | 0 | `T1592` | 🟢 LOW |
 | `49.88.156[.]34` | 1 | 2026-03-10 02:54 | 2026-03-10 02:55 | 38s | 0 | `T1592` | 🟢 LOW |
 | `60.167.165[.]58` | 1 | 2026-03-10 07:48 | 2026-03-10 07:50 | 120s | 0 | `T1592` | 🟢 LOW |
 | `61.77.88[.]90` | 1 | 2026-03-10 04:14 | 2026-03-10 04:14 | 30s | 0 | `T1592` | 🟢 LOW |
@@ -1486,16 +1491,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `78.188.173[.]81` | TR | Turk Telekomunikasyon Anonim Sirketi | **100** ⚠️ | 8 |
-| `3.80.137[.]207` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 36 |
-| `159.54.179[.]138` | US | Oracle Corporation | **100** ⚠️ | 4 |
-| `91.230.168[.]111` | US | FR ONYPHE | **100** ⚠️ | 50 |
 | `159.223.228[.]242` | NL | DigitalOcean, LLC | **100** ⚠️ | 2 |
-| `195.184.76[.]39` | US | FR ONYPHE | **100** ⚠️ | 50 |
-| `114.171.170[.]38` | JP | Open Computer Network | **100** ⚠️ | 1 |
-| `211.106.54[.]198` | KR | Korea Telecom | **100** ⚠️ | 50 |
-| `162.243.162[.]30` | US | DigitalOcean, LLC | **100** ⚠️ | 36 |
+| `209.38.93[.]128` | AU | DigitalOcean, LLC | **100** ⚠️ | 3 |
+| `195.184.76[.]246` | US | FR ONYPHE | **100** ⚠️ | 50 |
+| `3.141.153[.]201` | US | Amazon Technologies Inc. | **100** ⚠️ | 9 |
 | `101.47.142[.]2` | SG | BYTEPLUS | **100** ⚠️ | 32 |
+| `113.133.166[.]150` | CN | CHINANET SHAANXI PROVINCE NETWORK | **100** ⚠️ | 20 |
+| `151.237.28[.]235` | BG | PON.BG Ltd. | **100** ⚠️ | 16 |
+| `180.100.198[.]252` | CN | Chinanet Jiangsu Province Network | **100** ⚠️ | 5 |
+| `106.75.162[.]193` | CN | Shanghai UCloud Information Technology Company Limited | **100** ⚠️ | 31 |
+| `180.76.141[.]1` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 35 |
 
 ---
 
@@ -1511,14 +1516,14 @@
 
 ---
 
-## 🔕 False Positive Summary (263 filtered)
+## 🔕 False Positive Summary (268 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 14 |
+| AbuseIPDB score 0 below threshold 25 | 17 |
 | AbuseIPDB score 1 below threshold 25 | 1 |
 | AbuseIPDB score 12 below threshold 25 | 1 |
-| AbuseIPDB score 14 below threshold 25 | 11 |
+| AbuseIPDB score 14 below threshold 25 | 12 |
 | AbuseIPDB score 16 below threshold 25 | 54 |
 | AbuseIPDB score 18 below threshold 25 | 1 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
@@ -1530,7 +1535,7 @@
 | AbuseIPDB score 5 below threshold 25 | 51 |
 | AbuseIPDB score 8 below threshold 25 | 1 |
 | AbuseIPDB score 9 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 95 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 96 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -1541,14 +1546,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 662 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 125 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 263 filtered (39.7%) |
+| Tool 26 | Incident Timeline Generator | ✅ 672 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 134 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 268 filtered (39.9%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 2 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 41 priority case(s) shown individually · 75 recon entry/entries in table (32 group(s) consolidating 315 session(s)).
+> **Report grouping:** 41 priority case(s) shown individually · 80 recon entry/entries in table (32 group(s) consolidating 315 session(s)).
 
 ---
 
@@ -1564,4 +1569,4 @@
 
 _Generated by THIR · Tool 28 v2.1 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-10T14:45:43Z_
+_Report time: 2026-03-10T16:55:20Z_
