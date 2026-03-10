@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-10 |
-| **Generated At** | 2026-03-10T10:37:23Z |
-| **Shift Time** | 10:37 UTC |
+| **Generated At** | 2026-03-10T12:56:04Z |
+| **Shift Time** | 12:56 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **425** |
-| Confirmed Threats | **268** |
-| False Positives Filtered | **157** (36.9%) |
-| Unique Attacker IPs | **99** |
+| Total Sessions Captured | **544** |
+| Confirmed Threats | **308** |
+| False Positives Filtered | **236** (43.4%) |
+| Unique Attacker IPs | **112** |
 | Countries of Origin | **28** |
-| High Severity Cases | **38** |
+| High Severity Cases | **41** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **387** |
+| Low Severity Cases | **503** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
@@ -945,6 +945,7 @@
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
+| `206.135.170[.]0` | **25** | 2026-03-10 11:57 | 2026-03-10 12:03 | 5m | 0 | `T1592` | 🟠 MEDIUM |
 | `216.180.127[.]201` | **22** | 2026-03-10 00:04 | 2026-03-10 02:31 | 0m | 22 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `113.88.240[.]151` | **14** | 2026-03-10 06:26 | 2026-03-10 06:50 | 22m | 3 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `101.36.125[.]241` | **11** | 2026-03-10 02:14 | 2026-03-10 02:36 | 0m | 11 | `T1110.001 · T1592` | 🟠 MEDIUM |
@@ -953,6 +954,7 @@
 | `118.193.61[.]170` | **11** | 2026-03-10 05:14 | 2026-03-10 05:37 | 0m | 11 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `120.48.112[.]118` | **11** | 2026-03-10 06:47 | 2026-03-10 06:59 | 15m | 2 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `120.48.26[.]185` | **11** | 2026-03-10 02:19 | 2026-03-10 02:33 | 14m | 4 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `172.214.209[.]153` | **11** | 2026-03-10 11:00 | 2026-03-10 11:22 | 0m | 11 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `180.76.98[.]88` | **11** | 2026-03-10 01:04 | 2026-03-10 01:14 | 13m | 4 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `183.237.78[.]117` | **11** | 2026-03-10 02:37 | 2026-03-10 02:54 | 18m | 2 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `113.249.103[.]89` | **10** | 2026-03-10 05:58 | 2026-03-10 06:14 | 14m | 3 | `T1110.001 · T1592` | 🟠 MEDIUM |
@@ -977,7 +979,9 @@
 | `106.1.127[.]182` | 1 | 2026-03-10 05:37 | 2026-03-10 05:37 | 17s | 0 | `T1592` | 🟢 LOW |
 | `106.75.162[.]193` | 1 | 2026-03-10 07:37 | 2026-03-10 07:39 | 120s | 0 | `T1592` | 🟢 LOW |
 | `107.173.82[.]99` | 1 | 2026-03-10 03:14 | 2026-03-10 03:15 | 30s | 0 | `T1592` | 🟢 LOW |
+| `110.37.79[.]235` | 1 | 2026-03-10 11:21 | 2026-03-10 11:22 | 13s | 0 | `T1592` | 🟢 LOW |
 | `114.171.170[.]38` | 1 | 2026-03-10 06:40 | 2026-03-10 06:40 | 30s | 0 | `T1592` | 🟢 LOW |
+| `116.176.58[.]252` | 1 | 2026-03-10 12:15 | 2026-03-10 12:17 | 120s | 0 | `T1592` | 🟢 LOW |
 | `118.186.208[.]20` | 1 | 2026-03-10 06:00 | 2026-03-10 06:02 | 120s | 0 | `T1592` | 🟢 LOW |
 | `118.196.29[.]193` | 1 | 2026-03-10 05:59 | 2026-03-10 05:59 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `120.230.180[.]198` | 1 | 2026-03-10 02:11 | 2026-03-10 02:13 | 120s | 0 | `T1592` | 🟢 LOW |
@@ -990,8 +994,10 @@
 | `162.243.162[.]30` | 1 | 2026-03-10 04:16 | 2026-03-10 04:16 | 10s | 0 | `T1592` | 🟢 LOW |
 | `162.83.243[.]81` | 1 | 2026-03-10 08:21 | 2026-03-10 08:21 | 13s | 0 | `T1592` | 🟢 LOW |
 | `176.32.195[.]85` | 1 | 2026-03-10 08:19 | 2026-03-10 08:19 | 0s | 0 | `T1592` | 🟢 LOW |
+| `180.100.198[.]252` | 1 | 2026-03-10 11:19 | 2026-03-10 11:21 | 120s | 0 | `T1592` | 🟢 LOW |
 | `180.177.50[.]106` | 1 | 2026-03-10 09:45 | 2026-03-10 09:45 | 17s | 0 | `T1592` | 🟢 LOW |
 | `180.76.141[.]1` | 1 | 2026-03-10 03:07 | 2026-03-10 03:09 | 120s | 0 | `T1592` | 🟢 LOW |
+| `180.76.176[.]249` | 1 | 2026-03-10 11:11 | 2026-03-10 11:12 | 34s | 0 | `T1592` | 🟢 LOW |
 | `185.242.226[.]18` | 1 | 2026-03-10 04:59 | 2026-03-10 04:59 | 0s | 0 | `T1592` | 🟢 LOW |
 | `193.112.105[.]97` | 1 | 2026-03-10 07:40 | 2026-03-10 07:40 | 31s | 0 | `T1592` | 🟢 LOW |
 | `195.184.76[.]246` | 1 | 2026-03-10 03:45 | 2026-03-10 03:45 | 3s | 0 | `T1592` | 🟢 LOW |
@@ -1015,7 +1021,7 @@
 | File | Type | SHA-256 (short) | Threat Score | Severity | VT Detections |
 |---|---|---|---|---|---|
 | `01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b` | Unknown binary | `01ba4719c80b6fe9...` | 0/100 | 🟢 LOW | 0/76 ✅ |
-| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 11/100 | 🟢 LOW | **28/76** 🔴 |
+| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 11/100 | 🟢 LOW | **29/76** 🔴 |
 
 ---
 
@@ -1023,16 +1029,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
+| `167.71.0[.]105` | NL | DigitalOcean, LLC | **100** ⚠️ | 0 |
 | `159.223.228[.]242` | NL | DigitalOcean, LLC | **100** ⚠️ | 2 |
-| `165.232.44[.]56` | GB | DigitalOcean, LLC | **100** ⚠️ | 0 |
-| `3.130.168[.]2` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
-| `118.196.29[.]193` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 6 |
-| `106.1.127[.]182` | TW | kbro CO. Ltd. | **100** ⚠️ | 15 |
-| `195.184.76[.]246` | US | FR ONYPHE | **100** ⚠️ | 50 |
-| `162.243.162[.]30` | US | DigitalOcean, LLC | **100** ⚠️ | 36 |
-| `3.141.153[.]201` | US | Amazon Technologies Inc. | **100** ⚠️ | 9 |
-| `113.133.166[.]150` | CN | CHINANET SHAANXI PROVINCE NETWORK | **100** ⚠️ | 20 |
+| `16.58.56[.]214` | US | Amazon.com, Inc. | **100** ⚠️ | 50 |
+| `116.176.58[.]252` | CN | China United Network Communications Corporation Limited | **100** ⚠️ | 4 |
+| `91.144.21[.]210` | SY | Tarassul Inetnet Service Provider | **100** ⚠️ | 45 |
+| `101.71.37[.]90` | CN | UNICOM ZheJiang Province Network | **100** ⚠️ | 2 |
 | `113.88.240[.]151` | CN | CHINANET Guangdong province network | **100** ⚠️ | 0 |
+| `151.237.28[.]235` | BG | PON.BG Ltd. | **100** ⚠️ | 16 |
+| `91.230.168[.]111` | US | FR ONYPHE | **100** ⚠️ | 50 |
+| `223.18.99[.]81` | HK | HGC Global Communications Limited | **100** ⚠️ | 14 |
 
 ---
 
@@ -1048,25 +1054,25 @@
 
 ---
 
-## 🔕 False Positive Summary (157 filtered)
+## 🔕 False Positive Summary (236 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 13 |
+| AbuseIPDB score 0 below threshold 25 | 14 |
 | AbuseIPDB score 1 below threshold 25 | 1 |
 | AbuseIPDB score 12 below threshold 25 | 1 |
 | AbuseIPDB score 14 below threshold 25 | 11 |
-| AbuseIPDB score 16 below threshold 25 | 1 |
+| AbuseIPDB score 16 below threshold 25 | 46 |
 | AbuseIPDB score 18 below threshold 25 | 1 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
 | AbuseIPDB score 20 below threshold 25 | 1 |
-| AbuseIPDB score 23 below threshold 25 | 15 |
+| AbuseIPDB score 23 below threshold 25 | 16 |
 | AbuseIPDB score 24 below threshold 25 | 4 |
 | AbuseIPDB score 3 below threshold 25 | 8 |
 | AbuseIPDB score 4 below threshold 25 | 3 |
-| AbuseIPDB score 5 below threshold 25 | 27 |
+| AbuseIPDB score 5 below threshold 25 | 52 |
 | AbuseIPDB score 9 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 69 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 76 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -1077,14 +1083,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 425 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 99 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 157 filtered (36.9%) |
+| Tool 26 | Incident Timeline Generator | ✅ 544 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 112 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 236 filtered (43.4%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 2 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 27 priority case(s) shown individually · 62 recon entry/entries in table (27 group(s) consolidating 206 session(s)).
+> **Report grouping:** 27 priority case(s) shown individually · 68 recon entry/entries in table (29 group(s) consolidating 242 session(s)).
 
 ---
 
@@ -1100,4 +1106,4 @@
 
 _Generated by THIR · Tool 28 v2.1 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-10T10:37:23Z_
+_Report time: 2026-03-10T12:56:04Z_
