@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-10 |
-| **Generated At** | 2026-03-10T08:38:57Z |
-| **Shift Time** | 08:38 UTC |
+| **Generated At** | 2026-03-10T10:37:23Z |
+| **Shift Time** | 10:37 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,19 +14,19 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **370** |
-| Confirmed Threats | **247** |
-| False Positives Filtered | **123** (33.2%) |
-| Unique Attacker IPs | **86** |
-| Countries of Origin | **26** |
-| High Severity Cases | **27** |
+| Total Sessions Captured | **425** |
+| Confirmed Threats | **268** |
+| False Positives Filtered | **157** (36.9%) |
+| Unique Attacker IPs | **99** |
+| Countries of Origin | **28** |
+| High Severity Cases | **38** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **343** |
+| Low Severity Cases | **387** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (25)
+## 🚨 Priority Cases — Immediate Attention (27)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
@@ -866,6 +866,76 @@
 - [ ] Block `106.75.162[.]193` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
+### 🔴 HIGH · IR-6640ec440473
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `134.209.186[.]111` |
+| **First Seen** | 2026-03-10 09:35 |
+| **Last Seen** | 2026-03-10 09:35 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; , uname -s -v -n -m 2 > /dev/null, uname -m 2 > /dev/null, cat /proc/uptime 2 > /dev/null | cut -d. -f1` |
+| **TTPs (MITRE)** | T1078 · T1083 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-10 09:35:28` | `cowrie.session.connect` |
+| `2026-03-10 09:35:28` | `cowrie.client.version` |
+| `2026-03-10 09:35:28` | `cowrie.client.kex` |
+| `2026-03-10 09:35:28` | `cowrie.login.success` |
+| `2026-03-10 09:35:29` | `cowrie.session.params` |
+| `2026-03-10 09:35:29` | `cowrie.command.input` |
+| `2026-03-10 09:35:29` | `cowrie.command.input` |
+| `2026-03-10 09:35:29` | `cowrie.command.input` |
+| `2026-03-10 09:35:29` | `cowrie.command.input` |
+| `2026-03-10 09:35:29` | `cowrie.log.closed` |
+| `2026-03-10 09:35:29` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `134.209.186[.]111` to AbuseIPDB if not already reported
+- [ ] Block `134.209.186[.]111` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-63ce02e6bff9
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `134.209.186[.]111` |
+| **First Seen** | 2026-03-10 09:36 |
+| **Last Seen** | 2026-03-10 09:36 |
+| **Session Duration** | 2s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c "^processor" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E "model name|Hardware" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,"",$2); print $2; exit}' ; , uname -s -v -n -m 2 > /dev/null, uname -m 2 > /dev/null, cat /proc/uptime 2 > /dev/null | cut -d. -f1` |
+| **TTPs (MITRE)** | T1078 · T1083 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-10 09:36:43` | `cowrie.session.connect` |
+| `2026-03-10 09:36:43` | `cowrie.client.version` |
+| `2026-03-10 09:36:43` | `cowrie.client.kex` |
+| `2026-03-10 09:36:44` | `cowrie.login.success` |
+| `2026-03-10 09:36:45` | `cowrie.session.params` |
+| `2026-03-10 09:36:45` | `cowrie.command.input` |
+| `2026-03-10 09:36:45` | `cowrie.command.input` |
+| `2026-03-10 09:36:45` | `cowrie.command.input` |
+| `2026-03-10 09:36:45` | `cowrie.command.input` |
+| `2026-03-10 09:36:45` | `cowrie.log.closed` |
+| `2026-03-10 09:36:45` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `134.209.186[.]111` to AbuseIPDB if not already reported
+- [ ] Block `134.209.186[.]111` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
 ---
 
 ## 📡 Reconnaissance Activity — Grouped by Source IP
@@ -891,12 +961,17 @@
 | `16.58.56[.]214` | **7** | 2026-03-10 05:22 | 2026-03-10 05:33 | 0m | 6 | `T1110.001` | 🟢 LOW |
 | `101.126.143[.]178` | **6** | 2026-03-10 00:00 | 2026-03-10 00:08 | 9m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `165.232.44[.]56` | **6** | 2026-03-10 08:11 | 2026-03-10 08:15 | 0m | 5 | `T1110.001 · T1592` | 🟢 LOW |
+| `3.130.168[.]2` | **6** | 2026-03-10 08:54 | 2026-03-10 09:06 | 0m | 0 | `T1592` | 🟢 LOW |
 | `167.71.0[.]105` | **5** | 2026-03-10 00:13 | 2026-03-10 00:19 | 0m | 3 | `T1110.001 · T1592` | 🟢 LOW |
 | `212.72.14[.]244` | **5** | 2026-03-10 02:43 | 2026-03-10 02:50 | 0m | 4 | `T1110.001 · T1592` | 🟢 LOW |
+| `34.78.39[.]23` | **4** | 2026-03-10 09:29 | 2026-03-10 09:30 | 0m | 0 | `T1592` | 🟢 LOW |
+| `3.141.153[.]201` | **3** | 2026-03-10 10:15 | 2026-03-10 10:15 | 0m | 0 | `T1592` | 🟢 LOW |
 | `91.144.21[.]210` | **3** | 2026-03-10 03:29 | 2026-03-10 03:30 | 0m | 0 | `T1592` | 🟢 LOW |
 | `94.198.1[.]136` | **3** | 2026-03-10 05:15 | 2026-03-10 05:16 | 0m | 0 | `T1592` | 🟢 LOW |
 | `159.223.228[.]242` | **2** | 2026-03-10 01:04 | 2026-03-10 01:05 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `180.101.184[.]85` | **2** | 2026-03-10 00:33 | 2026-03-10 00:33 | 0m | 0 | `T1592` | 🟢 LOW |
+| `34.79.252[.]163` | **2** | 2026-03-10 09:29 | 2026-03-10 09:29 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `49.88.156[.]34` | **2** | 2026-03-10 09:29 | 2026-03-10 09:33 | 4m | 0 | `T1592` | 🟢 LOW |
 | `101.71.37[.]214` | 1 | 2026-03-10 02:27 | 2026-03-10 02:27 | 14s | 0 | `T1592` | 🟢 LOW |
 | `101.71.37[.]90` | 1 | 2026-03-10 00:48 | 2026-03-10 00:49 | 13s | 0 | `T1592` | 🟢 LOW |
 | `106.1.127[.]182` | 1 | 2026-03-10 05:37 | 2026-03-10 05:37 | 17s | 0 | `T1592` | 🟢 LOW |
@@ -915,6 +990,7 @@
 | `162.243.162[.]30` | 1 | 2026-03-10 04:16 | 2026-03-10 04:16 | 10s | 0 | `T1592` | 🟢 LOW |
 | `162.83.243[.]81` | 1 | 2026-03-10 08:21 | 2026-03-10 08:21 | 13s | 0 | `T1592` | 🟢 LOW |
 | `176.32.195[.]85` | 1 | 2026-03-10 08:19 | 2026-03-10 08:19 | 0s | 0 | `T1592` | 🟢 LOW |
+| `180.177.50[.]106` | 1 | 2026-03-10 09:45 | 2026-03-10 09:45 | 17s | 0 | `T1592` | 🟢 LOW |
 | `180.76.141[.]1` | 1 | 2026-03-10 03:07 | 2026-03-10 03:09 | 120s | 0 | `T1592` | 🟢 LOW |
 | `185.242.226[.]18` | 1 | 2026-03-10 04:59 | 2026-03-10 04:59 | 0s | 0 | `T1592` | 🟢 LOW |
 | `193.112.105[.]97` | 1 | 2026-03-10 07:40 | 2026-03-10 07:40 | 31s | 0 | `T1592` | 🟢 LOW |
@@ -927,6 +1003,7 @@
 | `60.167.165[.]58` | 1 | 2026-03-10 07:48 | 2026-03-10 07:50 | 120s | 0 | `T1592` | 🟢 LOW |
 | `61.77.88[.]90` | 1 | 2026-03-10 04:14 | 2026-03-10 04:14 | 30s | 0 | `T1592` | 🟢 LOW |
 | `78.188.173[.]81` | 1 | 2026-03-10 02:12 | 2026-03-10 02:12 | 12s | 0 | `T1592` | 🟢 LOW |
+| `87.121.84[.]78` | 1 | 2026-03-10 10:01 | 2026-03-10 10:01 | 0s | 0 | `T1592` | 🟢 LOW |
 | `91.230.168[.]111` | 1 | 2026-03-10 04:27 | 2026-03-10 04:27 | 0s | 0 | `T1592` | 🟢 LOW |
 | `91.230.168[.]205` | 1 | 2026-03-10 04:27 | 2026-03-10 04:27 | 0s | 0 | `T1592` | 🟢 LOW |
 | `93.48.24[.]181` | 1 | 2026-03-10 00:14 | 2026-03-10 00:14 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -938,7 +1015,7 @@
 | File | Type | SHA-256 (short) | Threat Score | Severity | VT Detections |
 |---|---|---|---|---|---|
 | `01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b` | Unknown binary | `01ba4719c80b6fe9...` | 0/100 | 🟢 LOW | 0/76 ✅ |
-| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 5/100 | 🟢 LOW | **15/76** 🔴 |
+| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 11/100 | 🟢 LOW | **28/76** 🔴 |
 
 ---
 
@@ -946,16 +1023,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `162.83.243[.]81` | US | Verizon Internet Services | **100** ⚠️ | 5 |
-| `120.230.180[.]198` | CN | China Mobile Communications Corporation | **100** ⚠️ | 5 |
-| `211.106.54[.]198` | KR | Korea Telecom | **100** ⚠️ | 50 |
-| `113.88.240[.]151` | CN | CHINANET Guangdong province network | **100** ⚠️ | 0 |
-| `120.48.26[.]185` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 16 |
-| `118.186.208[.]20` | CN | Beijing xhxt technology development co., LTD | **100** ⚠️ | 50 |
-| `223.18.99[.]81` | HK | HGC Global Communications Limited | **100** ⚠️ | 14 |
-| `103.153.190[.]105` | ID | PT Wahyu Adidaya Network | **100** ⚠️ | 50 |
+| `159.223.228[.]242` | NL | DigitalOcean, LLC | **100** ⚠️ | 2 |
+| `165.232.44[.]56` | GB | DigitalOcean, LLC | **100** ⚠️ | 0 |
+| `3.130.168[.]2` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
+| `118.196.29[.]193` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 6 |
+| `106.1.127[.]182` | TW | kbro CO. Ltd. | **100** ⚠️ | 15 |
 | `195.184.76[.]246` | US | FR ONYPHE | **100** ⚠️ | 50 |
-| `120.48.112[.]118` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 24 |
+| `162.243.162[.]30` | US | DigitalOcean, LLC | **100** ⚠️ | 36 |
+| `3.141.153[.]201` | US | Amazon Technologies Inc. | **100** ⚠️ | 9 |
+| `113.133.166[.]150` | CN | CHINANET SHAANXI PROVINCE NETWORK | **100** ⚠️ | 20 |
+| `113.88.240[.]151` | CN | CHINANET Guangdong province network | **100** ⚠️ | 0 |
 
 ---
 
@@ -971,22 +1048,25 @@
 
 ---
 
-## 🔕 False Positive Summary (123 filtered)
+## 🔕 False Positive Summary (157 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 16 |
+| AbuseIPDB score 0 below threshold 25 | 13 |
 | AbuseIPDB score 1 below threshold 25 | 1 |
 | AbuseIPDB score 12 below threshold 25 | 1 |
-| AbuseIPDB score 17 below threshold 25 | 1 |
+| AbuseIPDB score 14 below threshold 25 | 11 |
+| AbuseIPDB score 16 below threshold 25 | 1 |
 | AbuseIPDB score 18 below threshold 25 | 1 |
+| AbuseIPDB score 2 below threshold 25 | 1 |
 | AbuseIPDB score 20 below threshold 25 | 1 |
-| AbuseIPDB score 23 below threshold 25 | 5 |
-| AbuseIPDB score 24 below threshold 25 | 2 |
-| AbuseIPDB score 3 below threshold 25 | 1 |
+| AbuseIPDB score 23 below threshold 25 | 15 |
+| AbuseIPDB score 24 below threshold 25 | 4 |
+| AbuseIPDB score 3 below threshold 25 | 8 |
 | AbuseIPDB score 4 below threshold 25 | 3 |
 | AbuseIPDB score 5 below threshold 25 | 27 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 64 |
+| AbuseIPDB score 9 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 69 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -997,14 +1077,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 370 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 86 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 123 filtered (33.2%) |
+| Tool 26 | Incident Timeline Generator | ✅ 425 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 99 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 157 filtered (36.9%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 2 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 25 priority case(s) shown individually · 55 recon entry/entries in table (22 group(s) consolidating 189 session(s)).
+> **Report grouping:** 27 priority case(s) shown individually · 62 recon entry/entries in table (27 group(s) consolidating 206 session(s)).
 
 ---
 
@@ -1020,4 +1100,4 @@
 
 _Generated by THIR · Tool 28 v2.1 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-10T08:38:57Z_
+_Report time: 2026-03-10T10:37:23Z_
