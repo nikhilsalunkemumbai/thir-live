@@ -38,11 +38,25 @@ CHANGES vs original:
         Window: 120 minutes between consecutive sessions from same IP
         Min sessions to trigger grouping: 2
         Merged severity: MEDIUM if ≥10 sessions, LOW otherwise
+
+    v2.1 — 2026-03-10
+    4. IOC defanging added to all report output
+       All IPs, URLs, and domains written into the markdown report are
+       defanged to prevent AV/EDR heuristic false positives (e.g. Norton
+       BV:Downloader-ADK[Drp]). Defanging is report-only — source JSON
+       data is never modified.
+       Rules applied:
+         - IPv4: last octet dot → [.]   e.g. 1.2.3.4 → 1.2.3[.]4
+         - http:// → hxxp://
+         - https:// → hxxps://
+         - ftp:// → fxxp://
+         - Bare domain dots (in known bad context): example[.]com
 """
 
 import argparse
 import json
 import os
+import re
 import sys
 from datetime import datetime, timezone
 
@@ -54,6 +68,75 @@ from datetime import datetime, timezone
 GROUP_WINDOW_MINUTES = 120   # max gap between sessions to stay in same group
 GROUP_MIN_SESSIONS   = 2     # need at least this many sessions to group
 GROUP_MEDIUM_THRESH  = 10    # sessions ≥ this → MEDIUM severity on the group
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Defang helpers  (report-only — source JSON is never touched)
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Compiled patterns for performance
+_RE_IPV4 = re.compile(
+    r'\b(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\b'
+)
+_RE_URL_SCHEME = re.compile(
+    r'(?i)(https?|ftp)://'
+)
+_RE_DOMAIN = re.compile(
+    r'(?<!\[)\.(?!com\b|net\b|org\b|gov\b|io\b|ru\b|cn\b|de\b|uk\b|xyz\b|info\b)',
+    # NOTE: This pattern is intentionally NOT used for generic text;
+    # use defang_domain() explicitly only when you know the value is a domain.
+)
+
+
+def defang_ip(text: str) -> str:
+    """
+    Defang all IPv4 addresses in text.
+    1.2.3.4  →  1.2.3[.]4
+    Only the LAST dot is bracketed (industry standard).
+    """
+    return _RE_IPV4.sub(r'\1.\2.\3[.]\4', str(text))
+
+
+def defang_url(text: str) -> str:
+    """
+    Defang URL schemes in text.
+    http://  →  hxxp://
+    https:// →  hxxps://
+    ftp://   →  fxxp://
+    """
+    def _replace(m):
+        scheme = m.group(1).lower()
+        if scheme == "https":
+            return "hxxps://"
+        if scheme == "http":
+            return "hxxp://"
+        if scheme == "ftp":
+            return "fxxp://"
+        return m.group(0)
+    return _RE_URL_SCHEME.sub(_replace, str(text))
+
+
+def defang_domain(text: str) -> str:
+    """
+    Defang a bare domain or hostname by bracketing ALL dots.
+    example.com  →  example[.]com
+    sub.evil.ru  →  sub[.]evil[.]ru
+    Use this only when you KNOW the value is a domain/hostname,
+    not for generic text (would break markdown links etc.).
+    """
+    return str(text).replace(".", "[.]")
+
+
+def defang(text: str) -> str:
+    """
+    Full defang pipeline for generic text fields that may contain
+    IPs, URLs, and attacker command output.
+    Order matters: URLs first (so IP inside URL gets both treatments),
+    then IPs.
+    """
+    text = defang_url(str(text))
+    text = defang_ip(text)
+    return text
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -330,7 +413,7 @@ def render_priority_case(case, malware_index, L):
         L.append(s)
 
     case_id       = case.get("case_id", "?")
-    src_ip        = case.get("src_ip", "?")
+    src_ip        = defang_ip(case.get("src_ip", "?"))
     sev           = case.get("severity", "LOW")
     login_success = case.get("login_success", False)
     attempts      = case.get("login_attempts", "?")
@@ -344,6 +427,19 @@ def render_priority_case(case, malware_index, L):
 
     tl_events = [e.get("event", "") for e in timeline]
     has_tcpip = any("direct-tcpip" in e for e in tl_events)
+
+    # Defang commands (may contain wget/curl URLs and IPs)
+    commands_defanged  = [defang(cmd) for cmd in commands]
+
+    # Defang download references (URLs / hashes in string form)
+    downloads_defanged = []
+    for d in downloads:
+        if isinstance(d, dict):
+            downloads_defanged.append(
+                defang(d.get("url") or d.get("filename") or d.get("sha256") or str(d))
+            )
+        else:
+            downloads_defanged.append(defang(str(d)))
 
     # Malware findings for this case
     malware_hits = get_malware_for_case(case, malware_index)
@@ -360,7 +456,9 @@ def render_priority_case(case, malware_index, L):
             ln(f"   SHA256: {m.get('sha256','?')[:48]}...")
             ln(f"   Score : {m.get('threat_score','?')}/100  |  {det}")
             for ind in (m.get("suspicious_indicators") or [])[:4]:
-                ln(f"   ↳ {ind.get('indicator','?')}: {ind.get('match','')[:60]}")
+                # Defang indicator match strings (may contain IPs/URLs)
+                match_defanged = defang(ind.get('match', '')[:60])
+                ln(f"   ↳ {ind.get('indicator','?')}: {match_defanged}")
         ln("```")
         ln()
 
@@ -377,10 +475,10 @@ def render_priority_case(case, malware_index, L):
 
     if has_tcpip:
         ln(f"| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |")
-    if commands:
-        ln(f"| **Commands Executed** | `{', '.join(commands[:5])}` |")
-    if downloads:
-        ln(f"| **Download Attempts** | {', '.join(str(d) for d in downloads[:3])} |")
+    if commands_defanged:
+        ln(f"| **Commands Executed** | `{', '.join(commands_defanged[:5])}` |")
+    if downloads_defanged:
+        ln(f"| **Download Attempts** | {', '.join(downloads_defanged[:3])} |")
     if malware_hits:
         malware_sum = ", ".join(
             f"{m.get('file_name','?')} ({m.get('severity','?')})" for m in malware_hits
@@ -390,7 +488,7 @@ def render_priority_case(case, malware_index, L):
         ln(f"| **TTPs (MITRE)** | {' · '.join(ttps)} |")
     ln()
 
-    # Timeline
+    # Timeline — defang event strings
     if timeline:
         ln("**Attack Timeline:**")
         ln()
@@ -398,11 +496,11 @@ def render_priority_case(case, malware_index, L):
         ln("|---|---|")
         for e in timeline:
             ts  = fmt_ts(e.get("timestamp", "?"), 19)
-            evt = e.get("event", "?")
+            evt = defang(e.get("event", "?"))
             ln(f"| `{ts}` | `{evt}` |")
         ln()
 
-    # Recommended actions
+    # Recommended actions — defang IP in action items
     ln("**Recommended Actions:**")
     if sev in ("HIGH", "CRITICAL"):
         ln(f"- [ ] Submit `{src_ip}` to AbuseIPDB if not already reported")
@@ -410,9 +508,9 @@ def render_priority_case(case, malware_index, L):
         if has_tcpip:
             ln(f"- [ ] Investigate TCP tunnel target — port forwarding via honeypot")
             ln(f"- [ ] Confirm tunnel target is not internal infrastructure")
-        if commands:
+        if commands_defanged:
             ln(f"- [ ] Review commands for lateral movement indicators")
-        if downloads:
+        if downloads_defanged:
             ln(f"- [ ] Submit download hash(es) to VirusTotal")
             if not malware_hits:
                 ln(f"- [ ] Run Tool 31 malware analyzer on captured payload(s)")
@@ -420,11 +518,12 @@ def render_priority_case(case, malware_index, L):
             for m in high_malware:
                 vt_link = (m.get("virustotal") or {}).get("vt_link", "")
                 if vt_link:
-                    ln(f"- [ ] Review VT report: {vt_link}")
+                    # Defang VT link — it's a legitimate URL but AV may flag it
+                    ln(f"- [ ] Review VT report: {defang_url(vt_link)}")
         ln(f"- [ ] Escalate to Tier 2 if pattern repeats next shift")
     else:
         ln(f"- [ ] Monitor for repeat activity from `{src_ip}`")
-        if downloads:
+        if downloads_defanged:
             ln(f"- [ ] Run Tool 31 malware analyzer on captured payload(s)")
         ln(f"- [ ] No immediate escalation required")
     ln()
@@ -601,8 +700,9 @@ def build_report(ir, threats, fp, stats, malware):
                 duration_min = (g["total_duration_seconds"] or 0) // 60
                 ttps_str     = " · ".join(g["ttps"][:3])
                 sev_ico      = severity_icon(g["severity"])
+                ip_defanged  = defang_ip(g["src_ip"])
                 ln(
-                    f"| `{g['src_ip']}` | **{g['session_count']}** | "
+                    f"| `{ip_defanged}` | **{g['session_count']}** | "
                     f"{fmt_ts(g['first_seen'])} | {fmt_ts(g['last_seen'])} | "
                     f"{duration_min}m | {g['total_login_attempts']} | "
                     f"`{ttps_str}` | {sev_ico} {g['severity']} |"
@@ -615,8 +715,9 @@ def build_report(ir, threats, fp, stats, malware):
                 sev_ico      = severity_icon(sev)
                 duration     = c.get("duration_seconds", 0)
                 attempts     = c.get("login_attempts", 0)
+                ip_defanged  = defang_ip(c.get("src_ip", "?"))
                 ln(
-                    f"| `{c.get('src_ip','?')}` | 1 | "
+                    f"| `{ip_defanged}` | 1 | "
                     f"{fmt_ts(c.get('first_seen'))} | {fmt_ts(c.get('last_seen'))} | "
                     f"{duration}s | {attempts} | "
                     f"`{ttps_str}` | {sev_ico} {sev} |"
@@ -663,7 +764,9 @@ def build_report(ir, threats, fp, stats, malware):
                 if indicators:
                     ln(f"_`{sample.get('file_name','?')}` ({sample.get('sha256','?')[:24]}...)_")
                     for ind in indicators:
-                        ln(f"- `{ind.get('indicator','?')}` — `{ind.get('match','')[:80]}`")
+                        # Defang match strings — these often contain IPs/URLs/commands
+                        match_defanged = defang(ind.get('match', '')[:80])
+                        ln(f"- `{ind.get('indicator','?')}` — `{match_defanged}`")
                     ln()
 
     elif malware_empty > 0:
@@ -688,8 +791,9 @@ def build_report(ir, threats, fp, stats, malware):
         ln("| IP | Country | ISP | Abuse Score | OTX Pulses |")
         ln("|---|---|---|---|---|")
         for ip in top_ips:
+            ip_defanged = defang_ip(ip.get("indicator", "?"))
             ln(
-                f"| `{ip.get('indicator','?')}` | {ip.get('country','?')} | "
+                f"| `{ip_defanged}` | {ip.get('country','?')} | "
                 f"{ip.get('isp','?')} | {score_badge(ip.get('abuse_score',0))} | "
                 f"{ip.get('otx_pulses',0)} |"
             )
@@ -774,7 +878,7 @@ def build_report(ir, threats, fp, stats, malware):
     # ── Footer ────────────────────────────────────────────────────────────────
     ln("---")
     ln()
-    ln("_Generated by THIR · Tool 28 v2 · SOC Handover Report Generator_  ")
+    ln("_Generated by THIR · Tool 28 v2.1 · SOC Handover Report Generator_  ")
     ln("_Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  ")
     ln(f"_Report time: {now_str}_")
     ln()
@@ -788,7 +892,7 @@ def build_report(ir, threats, fp, stats, malware):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Tool 28 v2 — THIR SOC Handover Report Generator (with grouping)"
+        description="Tool 28 v2.1 — THIR SOC Handover Report Generator (with grouping + defang)"
     )
     parser.add_argument("--ir-cases",       default="data/ir_cases.json")
     parser.add_argument("--threat-ips",     default="data/threat_ips.json")
@@ -800,7 +904,7 @@ def main():
     parser.add_argument("--verbose", "-v",  action="store_true")
     args = parser.parse_args()
 
-    log("Tool 28 v2 — SOC Handover Report Generator started", "INFO", True)
+    log("Tool 28 v2.1 — SOC Handover Report Generator started", "INFO", True)
 
     ir      = load_json(args.ir_cases,       "ir_cases.json",       args.verbose)
     threats = load_json(args.threat_ips,     "threat_ips.json",     args.verbose)
@@ -822,7 +926,7 @@ def main():
         log(f"Failed to write report: {e}", "ERROR", True)
         sys.exit(1)
 
-    log("Tool 28 v2 — SOC Handover Report Generator completed successfully", "INFO", True)
+    log("Tool 28 v2.1 — SOC Handover Report Generator completed successfully", "INFO", True)
 
 
 if __name__ == "__main__":
