@@ -39,7 +39,7 @@ name: THIR Live Pipeline
 
 on:
   schedule:
-    - cron: '0 * * * *'      # every hour — normal pipeline run
+    - cron: '0 */2 * * *'    # every 2 hours — normal pipeline run
     - cron: '5 0 * * 1'      # Monday 00:05 UTC — weekly rollup trigger
     - cron: '10 0 1 * *'     # 1st of month 00:10 UTC — monthly rollup trigger
   workflow_dispatch:          # manual trigger from Actions tab
