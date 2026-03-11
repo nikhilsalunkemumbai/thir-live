@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-11 |
-| **Generated At** | 2026-03-11T06:51:07Z |
-| **Shift Time** | 06:51 UTC |
+| **Generated At** | 2026-03-11T08:38:28Z |
+| **Shift Time** | 08:38 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **115** |
-| Confirmed Threats | **81** |
-| False Positives Filtered | **34** (29.6%) |
-| Unique Attacker IPs | **41** |
+| Total Sessions Captured | **132** |
+| Confirmed Threats | **94** |
+| False Positives Filtered | **38** (28.8%) |
+| Unique Attacker IPs | **48** |
 | Countries of Origin | **16** |
 | High Severity Cases | **12** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **103** |
+| Low Severity Cases | **120** |
 | Malware Samples Analyzed | **0** HIGH · **0** MED · 0 empty upload attempt(s) |
 
 ---
@@ -213,6 +213,7 @@
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
 | `223.123.43[.]2` | **25** | 2026-03-11 04:38 | 2026-03-11 04:43 | 5m | 0 | `T1592` | 🟠 MEDIUM |
+| `172.208.69[.]47` | **11** | 2026-03-11 08:01 | 2026-03-11 08:25 | 0m | 11 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `83.111.76[.]194` | **11** | 2026-03-11 01:49 | 2026-03-11 02:12 | 0m | 11 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `3.129.187[.]38` | **6** | 2026-03-11 06:21 | 2026-03-11 06:26 | 0m | 6 | `T1110.001` | 🟢 LOW |
 | `118.194.249[.]72` | **4** | 2026-03-11 00:27 | 2026-03-11 00:27 | 0m | 0 | `T1592` | 🟢 LOW |
@@ -228,11 +229,13 @@
 | `117.251.207[.]153` | 1 | 2026-03-11 01:37 | 2026-03-11 01:38 | 13s | 0 | `T1592` | 🟢 LOW |
 | `120.241.79[.]66` | 1 | 2026-03-11 03:59 | 2026-03-11 04:01 | 120s | 0 | `T1592` | 🟢 LOW |
 | `14.103.149[.]244` | 1 | 2026-03-11 03:07 | 2026-03-11 03:07 | 8s | 0 | `T1592` | 🟢 LOW |
+| `170.64.114[.]194` | 1 | 2026-03-11 07:59 | 2026-03-11 07:59 | 13s | 0 | `T1592` | 🟢 LOW |
 | `176.32.195[.]85` | 1 | 2026-03-11 05:04 | 2026-03-11 05:05 | 31s | 0 | `T1592` | 🟢 LOW |
 | `211.250.12[.]75` | 1 | 2026-03-11 03:13 | 2026-03-11 03:13 | 13s | 0 | `T1592` | 🟢 LOW |
 | `24.193.152[.]228` | 1 | 2026-03-11 04:20 | 2026-03-11 04:20 | 12s | 0 | `T1592` | 🟢 LOW |
 | `37.34.242[.]99` | 1 | 2026-03-11 00:01 | 2026-03-11 00:01 | 14s | 0 | `T1592` | 🟢 LOW |
 | `49.88.156[.]34` | 1 | 2026-03-11 06:09 | 2026-03-11 06:11 | 120s | 0 | `T1592` | 🟢 LOW |
+| `61.78.98[.]181` | 1 | 2026-03-11 07:30 | 2026-03-11 07:31 | 30s | 0 | `T1592` | 🟢 LOW |
 | `68.199.97[.]245` | 1 | 2026-03-11 01:14 | 2026-03-11 01:15 | 30s | 0 | `T1592` | 🟢 LOW |
 | `69.164.217[.]245` | 1 | 2026-03-11 05:34 | 2026-03-11 05:34 | 0s | 0 | `T1592` | 🟢 LOW |
 | `91.215.35[.]25` | 1 | 2026-03-11 00:48 | 2026-03-11 00:49 | 30s | 0 | `T1592` | 🟢 LOW |
@@ -252,16 +255,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `172.212.201[.]77` | US | Microsoft Limited | **100** ⚠️ | 50 |
-| `45.156.129[.]179` | US | INAP-CHI-1 | **100** ⚠️ | 39 |
-| `164.92.151[.]106` | NL | DigitalOcean, LLC | **100** ⚠️ | 37 |
-| `24.193.152[.]228` | US | Charter Communications Inc | **100** ⚠️ | 2 |
 | `3.129.187[.]38` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
-| `68.199.97[.]245` | US | Optimum Online (Cablevision Systems) | **100** ⚠️ | 7 |
-| `45.79.181[.]94` | US | Linode | **100** ⚠️ | 50 |
-| `176.32.195[.]85` | AM | Interactive TV LLC | **100** ⚠️ | 50 |
+| `45.156.129[.]179` | US | INAP-CHI-1 | **100** ⚠️ | 39 |
+| `24.193.152[.]228` | US | Charter Communications Inc | **100** ⚠️ | 2 |
+| `49.88.156[.]34` | CN | CHINANET jiangsu province network | **100** ⚠️ | 50 |
 | `223.123.43[.]2` | PK | CMPak Limited | **100** ⚠️ | 31 |
-| `66.228.53[.]174` | US | Linode | **100** ⚠️ | 50 |
+| `176.32.195[.]85` | AM | Interactive TV LLC | **100** ⚠️ | 50 |
+| `37.34.242[.]99` | KW | ZAIN KW | **100** ⚠️ | 8 |
+| `101.200.243[.]197` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 50 |
+| `45.79.181[.]94` | US | Linode | **100** ⚠️ | 50 |
+| `164.92.151[.]106` | NL | DigitalOcean, LLC | **100** ⚠️ | 37 |
 
 ---
 
@@ -277,16 +280,18 @@
 
 ---
 
-## 🔕 False Positive Summary (34 filtered)
+## 🔕 False Positive Summary (38 filtered)
 
 | Reason | Count |
 |---|---|
 | AbuseIPDB score 0 below threshold 25 | 17 |
 | AbuseIPDB score 1 below threshold 25 | 1 |
+| AbuseIPDB score 12 below threshold 25 | 1 |
 | AbuseIPDB score 16 below threshold 25 | 1 |
 | AbuseIPDB score 17 below threshold 25 | 7 |
+| AbuseIPDB score 22 below threshold 25 | 1 |
 | AbuseIPDB score 5 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 7 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 9 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -297,14 +302,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 115 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 41 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 34 filtered (29.6%) |
+| Tool 26 | Incident Timeline Generator | ✅ 132 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 48 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 38 filtered (28.8%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 2 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 5 priority case(s) shown individually · 24 recon entry/entries in table (12 group(s) consolidating 64 session(s)).
+> **Report grouping:** 5 priority case(s) shown individually · 27 recon entry/entries in table (13 group(s) consolidating 75 session(s)).
 
 ---
 
@@ -320,4 +325,4 @@
 
 _Generated by THIR · Tool 28 v2.1 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-11T06:51:07Z_
+_Report time: 2026-03-11T08:38:28Z_
