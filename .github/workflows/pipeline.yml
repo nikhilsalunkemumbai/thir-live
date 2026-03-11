@@ -398,7 +398,6 @@ jobs:
         run: |
           DAY_OF_WEEK=$(date -u +%u)
           DAY_OF_MONTH=$(date -u +%d)
-          HOUR=$(date -u +%H)
 
           echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
 
