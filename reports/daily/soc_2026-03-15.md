@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-15 |
-| **Generated At** | 2026-03-15T18:36:08Z |
-| **Shift Time** | 18:36 UTC |
+| **Generated At** | 2026-03-15T20:27:21Z |
+| **Shift Time** | 20:27 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **735** |
+| Total Sessions Captured | **792** |
 | Confirmed Threats | **0** |
-| False Positives Filtered | **735** (100.0%) |
-| Unique Attacker IPs | **153** |
+| False Positives Filtered | **792** (100.0%) |
+| Unique Attacker IPs | **165** |
 | Countries of Origin | **0** |
-| High Severity Cases | **118** |
+| High Severity Cases | **127** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **617** |
+| Low Severity Cases | **665** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,18 +30,18 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **401** |
-| Unique Credential Pairs | **306** |
-| Unique Usernames | **197** |
-| Unique Passwords | **205** |
-| Successful Auth Pairs | **113** |
+| Total Auth Attempts | **422** |
+| Unique Credential Pairs | **322** |
+| Unique Usernames | **204** |
+| Unique Passwords | **216** |
+| Successful Auth Pairs | **122** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 127 |
-| `345gs5662d34` | 17 |
+| `root` | 137 |
+| `345gs5662d34` | 18 |
 | `admin` | 15 |
 | `pi` | 5 |
 | `deploy` | 4 |
@@ -53,15 +53,15 @@
 | `123456` | 39 |
 | `12345` | 21 |
 | `password` | 20 |
-| `345gs5662d34` | 17 |
-| `3245gs5662d34` | 17 |
+| `345gs5662d34` | 18 |
+| `3245gs5662d34` | 18 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `345gs5662d34` | `345gs5662d34` | 17 |
-| `root` | `3245gs5662d34` | 17 |
+| `345gs5662d34` | `345gs5662d34` | 18 |
+| `root` | `3245gs5662d34` | 18 |
 | `root` | `123456` | 5 |
 | `root` | `123456789` | 5 |
 | `root` | `admin` | 5 |
@@ -183,6 +183,15 @@
 | `root` | `3245gs5662d34` | `112.184.119.22` | 2026-03-15T17:30:30 |
 | `root` | `Zh123456.` | `103.158.132.160` | 2026-03-15T18:19:36 |
 | `root` | `3245gs5662d34` | `103.158.132.160` | 2026-03-15T18:19:38 |
+| `root` | `Qwert12` | `183.232.212.207` | 2026-03-15T20:00:45 |
+| `root` | `3245gs5662d34` | `183.232.212.207` | 2026-03-15T20:00:51 |
+| `root` | `root1` | `68.183.91.110` | 2026-03-15T20:08:29 |
+| `root` | `root12` | `68.183.91.110` | 2026-03-15T20:09:13 |
+| `root` | `root123` | `68.183.91.110` | 2026-03-15T20:09:59 |
+| `root` | `123qwe` | `68.183.91.110` | 2026-03-15T20:10:49 |
+| `root` | `123qwerty` | `68.183.91.110` | 2026-03-15T20:11:31 |
+| `root` | `qwerty` | `68.183.91.110` | 2026-03-15T20:12:12 |
+| `root` | `wasd` | `68.183.91.110` | 2026-03-15T20:12:52 |
 
 ---
 
@@ -190,8 +199,8 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **153** |
-| Unique ASNs | **68** |
+| Total IPs Analysed | **165** |
+| Unique ASNs | **73** |
 | High-Risk ASNs | **0** |
 | Anon Infrastructure ASNs | **0** |
 
@@ -199,14 +208,14 @@
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS8075` | Microsoft Corporation | 18 | LOW |
-| `AS14061` | DigitalOcean, LLC | 18 | LOW |
+| `AS8075` | Microsoft Corporation | 20 | LOW |
+| `AS14061` | DigitalOcean, LLC | 19 | LOW |
+| `AS63949` | Akamai Connected Cloud | 7 | LOW |
 | `AS38365` | Beijing Baidu Netcom Science and Technology Co., Ltd. | 7 | LOW |
-| `AS9808` | China Mobile Communications Group Co., Ltd. | 6 | LOW |
-| `AS4837` | CHINA UNICOM China169 Backbone | 6 | LOW |
-| `AS63949` | Akamai Connected Cloud | 6 | LOW |
+| `AS9808` | China Mobile Communications Group Co., Ltd. | 7 | LOW |
 | `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 6 | LOW |
-| `AS137718` | Beijing Volcano Engine Technology Co., Ltd. | 5 | LOW |
+| `AS4837` | CHINA UNICOM China169 Backbone | 6 | LOW |
+| `AS16509` | Amazon.com, Inc. | 5 | LOW |
 
 ---
 
@@ -239,7 +248,7 @@ _No reconnaissance sessions this shift._
 | `7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d` | ELF Binary (Linux executable) (x86-64 64-bit) | `7a9da7d10aa80b0f...` | 45/100 | 🟡 MEDIUM | **39/76** 🔴 |
 | `98babd858ec296d43844c96d53ff8713c44a451ba6e05b89d64c772828a0514d` | ELF Binary (Linux executable) (x86-64 64-bit) | `98babd858ec296d4...` | 44/100 | 🟡 MEDIUM | **36/76** 🔴 |
 | `a04ac6d98ad989312783d4fe3456c53730b212c79a426fb215708b6c6daa3de3` | ELF Binary (Linux executable) (ARM 32-bit) | `a04ac6d98ad98931...` | 48/100 | 🟡 MEDIUM | **46/76** 🔴 |
-| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 10/100 | 🟢 LOW | **27/76** 🔴 |
+| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 11/100 | 🟢 LOW | **29/76** 🔴 |
 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
 | `f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd` | ELF Binary (Linux executable) (x86-64 64-bit) | `f200744b6900aeb0...` | 42/100 | 🟡 MEDIUM | **32/76** 🔴 |
 | `tmpzmvvpi6d` | ELF Binary (Linux executable) (ARM 32-bit) | `a04ac6d98ad98931...` | 48/100 | 🟡 MEDIUM | **46/76** 🔴 |
@@ -256,19 +265,19 @@ _No enriched IPs with abuse scores available._
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 474 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 279 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 118 |
-| [T1083](https://attack.mitre.org/techniques/T1083) | 49 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 20 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 498 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 291 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 127 |
+| [T1083](https://attack.mitre.org/techniques/T1083) | 56 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 21 |
 
 ---
 
-## 🔕 False Positive Summary (735 filtered)
+## 🔕 False Positive Summary (792 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 735 |
+| AbuseIPDB score 0 below threshold 25 | 792 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -279,14 +288,14 @@ _No enriched IPs with abuse scores available._
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 735 cases |
-| Tool 34  | Credential Extractor        | ✅ 401 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 792 cases |
+| Tool 34  | Credential Extractor        | ✅ 422 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 153 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 735 filtered (100.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 165 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 792 filtered (100.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 68 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 73 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 9 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
@@ -307,4 +316,4 @@ _No enriched IPs with abuse scores available._
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-15T18:36:08Z_
+_Report time: 2026-03-15T20:27:21Z_

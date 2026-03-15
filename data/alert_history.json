@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 5,
-      "last_fired": "2026-03-15T18:36:09.144090+00:00",
+      "fired_count": 6,
+      "last_fired": "2026-03-15T20:27:21.288818+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 5,
-      "last_fired": "2026-03-15T18:36:09.144093+00:00",
+      "fired_count": 6,
+      "last_fired": "2026-03-15T20:27:21.288823+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -377,6 +377,30 @@
       "last_fired": "2026-03-15T18:36:09.144119+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS398324 (Censys, Inc.)"
+    },
+    "749960f04de38438": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288800+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, Rootkit, XMRig"
+    },
+    "e34bf6ad3e8f610f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288813+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, Rootkit, Sora, XMRig"
+    },
+    "cc43a51d40bf4010": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288828+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 183.232.212.207"
+    },
+    "e285310ec5bbd06e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288832+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 68.183.91.110"
     }
   },
   "credential_ips": {
@@ -410,32 +434,34 @@
       "180.76.141.1": "2026-03-15T18:36:09.143811+00:00",
       "186.4.240.226": "2026-03-15T18:36:09.143811+00:00",
       "112.184.119.22": "2026-03-15T18:36:09.143811+00:00",
-      "103.158.132.160": "2026-03-15T18:36:09.143811+00:00"
+      "103.158.132.160": "2026-03-15T18:36:09.143811+00:00",
+      "183.232.212.207": "2026-03-15T20:27:21.288570+00:00",
+      "68.183.91.110": "2026-03-15T20:27:21.288570+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS16509",
-      "AS63949",
-      "AS135377",
-      "AS4766",
-      "AS4134",
-      "AS137718",
-      "AS4811",
       "AS14618",
-      "AS8075",
-      "AS138423",
-      "AS398324",
-      "AS45102",
-      "AS141412",
       "AS9808",
-      "AS4837",
-      "AS396982",
-      "AS14061",
-      "AS38365",
       "AS22773",
+      "AS9829",
+      "AS38365",
+      "AS141412",
+      "AS138423",
       "AS45775",
-      "AS9829"
+      "AS398324",
+      "AS396982",
+      "AS45102",
+      "AS4134",
+      "AS4766",
+      "AS4837",
+      "AS135377",
+      "AS63949",
+      "AS137718",
+      "AS8075",
+      "AS14061",
+      "AS16509",
+      "AS4811"
     ]
   }
 }
