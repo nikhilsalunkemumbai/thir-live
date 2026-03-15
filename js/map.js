@@ -45,15 +45,16 @@ function initThreatMap() {
     return;
   }
 
-  // Remove pixel width/height — CSS (width:100%; height:100%) fills the panel.
-  // viewBox defines the D3 coordinate space; preserveAspectRatio scales it in.
+  // width/height="100%" lets CSS fill the panel; viewBox sets D3 coordinate
+  // space to the measured pixel size; preserveAspectRatio="none" means the
+  // viewBox stretches to fill every pixel — no letterboxing, no truncation.
   const svg = d3.select('#threat-map')
-    .attr('width',  null)
-    .attr('height', null)
+    .attr('width',  '100%')
+    .attr('height', '100%')
     .attr('viewBox', `0 0 ${w} ${h}`)
-    .attr('preserveAspectRatio', 'xMidYMid meet');
+    .attr('preserveAspectRatio', 'none');
 
-  // fitSize fits the full world sphere inside the coordinate space [w, h]
+  // fitSize scales the projection so the world fills exactly [w × h]
   const projection = d3.geoNaturalEarth1()
     .fitSize([w, h], { type: 'Sphere' });
 
