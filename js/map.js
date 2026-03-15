@@ -27,23 +27,33 @@ const MAP_COLOR = {
 // Init: build the SVG, projection, and world paths
 // --------------------------------------------------
 function initThreatMap() {
-  const container = document.querySelector('.hero-map') || document.querySelector('.hero-right');
+  const container = document.querySelector('.hero-map-panel') || document.querySelector('.hero-map') || document.querySelector('.hero-right');
   if (!container) return;
 
-  // Remove any existing SVG to allow re-init with live points
+  // Remove any existing SVG content to allow re-init with live points
   const existing = document.getElementById('threat-map');
   if (existing) existing.innerHTML = '';
 
-  const w = container.clientWidth  || 800;
-  const h = container.clientHeight || 420;
+  // Use getBoundingClientRect for accurate post-layout dimensions
+  const rect = container.getBoundingClientRect();
+  const w = rect.width  || container.offsetWidth  || 800;
+  const h = rect.height || container.offsetHeight || 420;
+
+  if (w < 10 || h < 10) {
+    // Layout hasn't painted yet — defer one animation frame and retry
+    requestAnimationFrame(() => initThreatMap());
+    return;
+  }
 
   const svg = d3.select('#threat-map')
     .attr('width',  w)
-    .attr('height', h);
+    .attr('height', h)
+    .attr('viewBox', `0 0 ${w} ${h}`)
+    .attr('preserveAspectRatio', 'xMidYMid meet');
 
+  // fitSize fits the full world sphere exactly inside [w, h] — no overflow
   const projection = d3.geoNaturalEarth1()
-    .scale(w / 6.3)
-    .translate([w / 2, h / 2]);
+    .fitSize([w, h], { type: 'Sphere' });
 
   const path = d3.geoPath().projection(projection);
   const g    = svg.append('g');

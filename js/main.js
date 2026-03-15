@@ -162,8 +162,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   updateClock();
   setInterval(updateClock, 1000);
 
-  // Init threat map with hardcoded points
-  initThreatMap();
+  // Init threat map — deferred so flex layout has fully painted
+  // and getBoundingClientRect() returns accurate panel dimensions
+  requestAnimationFrame(() => initThreatMap());
 
   // Attempt to fetch live pipeline data
   await loadLiveData();
