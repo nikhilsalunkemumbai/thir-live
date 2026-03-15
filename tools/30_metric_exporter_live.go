@@ -56,7 +56,7 @@
 //     "medium_severity":    18,
 //     "low_severity":       17,
 //     "total_ttps":          8,
-//     "top_ttps":           ["T1110.001","T1078","T1059.004","T1105","T1003.008"],
+//     "top_ttps":           [{"ttp":"T1110.001","count":67},{"ttp":"T1078","count":44},...],
 //     "honeypot_status":   "UP",
 //     "integrity_status":  "OK",
 //     "unique_countries":   14,
@@ -106,11 +106,17 @@ type DashboardStats struct {
 	MediumSeverity   int      `json:"medium_severity"`
 	LowSeverity      int      `json:"low_severity"`
 	TotalTTPs        int      `json:"total_ttps"`
-	TopTTPs          []string `json:"top_ttps"`
+	TopTTPs          []TTPStat `json:"top_ttps"`
 	HoneypotStatus   string   `json:"honeypot_status"`
 	IntegrityStatus  string   `json:"integrity_status"`
 	UniqueCountries  int      `json:"unique_countries"`
 	Metrics          []Metric `json:"metrics,omitempty"`
+}
+
+// TTPStat holds a TTP ID and its observed frequency.
+type TTPStat struct {
+	TTP   string `json:"ttp"`
+	Count int    `json:"count"`
 }
 
 // -----------------------------------------------------------------------
@@ -253,7 +259,7 @@ func aggregateStats(
 		GeneratedAt:     time.Now().UTC().Format(time.RFC3339),
 		HoneypotStatus:  "UNKNOWN",
 		IntegrityStatus: "UNKNOWN",
-		TopTTPs:         []string{},
+		TopTTPs:         []TTPStat{},
 		Metrics:         extraMetrics,
 	}
 
@@ -314,7 +320,7 @@ func aggregateStats(
 			limit = len(freqs)
 		}
 		for _, f := range freqs[:limit] {
-			stats.TopTTPs = append(stats.TopTTPs, f.TTP)
+			stats.TopTTPs = append(stats.TopTTPs, TTPStat{TTP: f.TTP, Count: f.Count})
 		}
 	} else {
 		logWarning("ir_cases.json not loaded — attack metrics will be zero")

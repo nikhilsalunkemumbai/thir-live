@@ -43,6 +43,12 @@
 //         "abuse_score": 100,
 //         "country": "DE",
 //         "isp": "Tor Project",
+//         "asn": "AS14061",
+//         "asn_name": "DigitalOcean, LLC",
+//         "org": "AS14061 DigitalOcean, LLC",
+//         "is_tor": false,
+//         "is_proxy": false,
+//         "is_vpn": false,
 //         "otx_pulses": 47,
 //         "last_seen": "2025-01-15T11:00:01Z"
 //       }
@@ -73,6 +79,12 @@ type IOC struct {
 	AbuseScore int    `json:"abuse_score"`
 	Country    string `json:"country"`
 	ISP        string `json:"isp"`
+	ASN        string `json:"asn"`
+	ASNName    string `json:"asn_name"`
+	Org        string `json:"org"`
+	IsTor      bool   `json:"is_tor"`
+	IsProxy    bool   `json:"is_proxy"`
+	IsVPN      bool   `json:"is_vpn"`
 	OTXPulses  int    `json:"otx_pulses"`
 	LastSeen   string `json:"last_seen"`
 }
@@ -91,6 +103,16 @@ type abuseIPDBResponse struct {
 		CountryCode          string `json:"countryCode"`
 		ISP                  string `json:"isp"`
 	} `json:"data"`
+}
+
+// ipinfo.io API response shape (no key required for basic lookups)
+type ipinfoResponse struct {
+	Org     string `json:"org"` // "AS14061 DigitalOcean, LLC"
+	Privacy struct {
+		VPN   bool `json:"vpn"`
+		Proxy bool `json:"proxy"`
+		Tor   bool `json:"tor"`
+	} `json:"privacy"`
 }
 
 // OTX API response shape (only fields we use)
@@ -249,6 +271,47 @@ func enrichIP(ioc IOC, apiKey string, client *http.Client) IOC {
 	return ioc
 }
 
+// enrichASN calls ipinfo.io for ASN, org, and anonymous-infrastructure flags.
+// No API key required (free tier: 50K lookups/month).
+// Falls back gracefully — leaves ASN fields empty on any error.
+func enrichASN(ioc IOC, client *http.Client) IOC {
+	url := fmt.Sprintf("https://ipinfo.io/%s/json", ioc.Indicator)
+
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil { return ioc }
+	req.Header.Set("Accept", "application/json")
+
+	resp, err := client.Do(req)
+	if err != nil { return ioc }
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK { return ioc }
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil { return ioc }
+
+	var parsed ipinfoResponse
+	if err := json.Unmarshal(body, &parsed); err != nil { return ioc }
+
+	ioc.Org = parsed.Org
+	if parsed.Org != "" {
+		parts := strings.SplitN(parsed.Org, " ", 2)
+		if len(parts) == 2 {
+			ioc.ASN     = parts[0]
+			ioc.ASNName = parts[1]
+		} else {
+			ioc.ASN = parsed.Org
+		}
+	}
+	ioc.IsTor   = parsed.Privacy.Tor
+	ioc.IsProxy = parsed.Privacy.Proxy
+	ioc.IsVPN   = parsed.Privacy.VPN
+
+	logInfo("ipinfo: %s → asn=%s name=%s tor=%v proxy=%v vpn=%v",
+		ioc.Indicator, ioc.ASN, ioc.ASNName, ioc.IsTor, ioc.IsProxy, ioc.IsVPN)
+	return ioc
+}
+
 // enrichOTX calls AlienVault OTX IPv4 general endpoint for a single IP.
 // Returns updated IOC with OTXPulses populated.
 // Falls back gracefully on any error.
@@ -312,6 +375,7 @@ func enrichAll(iocs []IOC, abuseKey, otxKey string) []IOC {
 		go func(i IOC) {
 			defer wg.Done()
 			i = enrichIP(i, abuseKey, client)
+			i = enrichASN(i, client)
 			i = enrichOTX(i, otxKey, client)
 			i.LastSeen = time.Now().UTC().Format(time.RFC3339)
 			results <- i
