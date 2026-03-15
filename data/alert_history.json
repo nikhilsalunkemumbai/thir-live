@@ -1,0 +1,34 @@
+{
+  "alerts": {
+    "f30b317cde021f4f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T10:27:36.830393+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Downloader, XMRig, Rootkit, Mushtik"
+    },
+    "cbf5b01c71c655f3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T10:27:36.830406+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
+    },
+    "2839681e67a9d320": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T10:27:36.830412+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit"
+    },
+    "6093fd870375fa34": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T10:27:36.830423+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit"
+    }
+  },
+  "credential_ips": {
+    "seen_success_ips": {}
+  },
+  "asn_seen": {
+    "seen_asns": []
+  }
+}
