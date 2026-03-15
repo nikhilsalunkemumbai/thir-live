@@ -136,7 +136,7 @@ function initThreatMap() {
         .attr('stroke',       '#00ffe5')
         .attr('stroke-width', 0.6)
         .attr('stroke-opacity', 0.55)
-        .attr('filter', 'url(#glow-border)');
+        //.attr('filter', 'url(#glow-border)');
 
       addThreatPoints(g, projection);
     })
