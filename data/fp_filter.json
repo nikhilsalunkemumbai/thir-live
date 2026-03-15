@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-15T06:54:01Z",
+  "generated_at": "2026-03-15T07:17:55Z",
   "threshold_used": 25,
-  "total_cases_in": 183,
-  "confirmed_threats": 143,
-  "flagged_as_fp": 40,
-  "fp_rate": 0.2186,
+  "total_cases_in": 195,
+  "confirmed_threats": 146,
+  "flagged_as_fp": 49,
+  "fp_rate": 0.2513,
   "fp_cases": [
     {
       "case_id": "IR-b46ba3148858",
@@ -205,6 +205,51 @@
       "case_id": "IR-301918af0d75",
       "src_ip": "74.235.123.2",
       "reason": "AbuseIPDB score 0 below threshold 25"
+    },
+    {
+      "case_id": "IR-c82e4adf72ec",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-31d93d0551b3",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-7aff7e74f37b",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-e7629b84df68",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-ac3a0b03b7a3",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-34e41687b373",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-c6991f8b0149",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-10576795b28f",
+      "src_ip": "46.101.119.234",
+      "reason": "AbuseIPDB score 3 below threshold 25"
+    },
+    {
+      "case_id": "IR-474497575e4d",
+      "src_ip": "172.184.214.211",
+      "reason": "AbuseIPDB score 15 below threshold 25"
     }
   ],
   "clean_cases": [
@@ -350,6 +395,9 @@
     "IR-9f075ca36038",
     "IR-feca4f517438",
     "IR-656ad85a715a",
-    "IR-c8cc14025a98"
+    "IR-c8cc14025a98",
+    "IR-b02aa2dac191",
+    "IR-4b919c56a802",
+    "IR-79eb9ae3f618"
   ]
 }
