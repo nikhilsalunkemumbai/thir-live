@@ -968,6 +968,13 @@ footer a:hover { color: var(--accent); }
   border-right: 1px solid var(--border);
   background: var(--bg);
   z-index: 5;
+  min-width: 0;
+}
+
+.hmo-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .hero-map-panel {
