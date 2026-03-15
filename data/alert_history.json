@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 2,
-      "last_fired": "2026-03-15T12:48:39.336989+00:00",
+      "fired_count": 3,
+      "last_fired": "2026-03-15T14:28:55.070466+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 2,
-      "last_fired": "2026-03-15T12:48:39.336992+00:00",
+      "fired_count": 3,
+      "last_fired": "2026-03-15T14:28:55.070469+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -245,6 +245,36 @@
       "last_fired": "2026-03-15T12:48:39.337141+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS22773 (Cox Communications Inc.)"
+    },
+    "2e32cf6c66ba1248": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070457+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Gafgyt, Downloader, XMRig, Rootkit"
+    },
+    "ffd608ffea48eb12": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070462+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Sora, Gafgyt, Downloader, XMRig, Rootkit"
+    },
+    "de4495a8481ffe54": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070471+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 64.227.132.19"
+    },
+    "204fbea2f16000bb": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070473+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS14618 (Amazon.com, Inc.)"
+    },
+    "3e13fc77a1f1bc61": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070476+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS9829 (National Internet Backbone)"
     }
   },
   "credential_ips": {
@@ -268,26 +298,29 @@
       "112.81.45.208": "2026-03-15T12:48:39.336695+00:00",
       "167.99.95.73": "2026-03-15T12:48:39.336695+00:00",
       "104.248.59.8": "2026-03-15T12:48:39.336695+00:00",
-      "143.110.244.207": "2026-03-15T12:48:39.336695+00:00"
+      "143.110.244.207": "2026-03-15T12:48:39.336695+00:00",
+      "64.227.132.19": "2026-03-15T14:28:55.070265+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS63949",
-      "AS16509",
-      "AS4134",
-      "AS8075",
-      "AS138423",
-      "AS45775",
-      "AS45102",
       "AS22773",
       "AS38365",
-      "AS4766",
+      "AS138423",
       "AS137718",
-      "AS14061",
+      "AS4766",
+      "AS45102",
+      "AS16509",
+      "AS9829",
+      "AS14618",
       "AS135377",
-      "AS4837",
-      "AS9808"
+      "AS45775",
+      "AS8075",
+      "AS9808",
+      "AS14061",
+      "AS63949",
+      "AS4134",
+      "AS4837"
     ]
   }
 }
