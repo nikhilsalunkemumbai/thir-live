@@ -158,8 +158,8 @@ const TOOLS_DATA = [
   },
   {
     name: 'Network Service Monitor', langs: ['go'],
-    desc: 'Concurrent TCP port checker. Verifies Cowrie honeypot liveness on Oracle VPS port 2222. Writes structured JSON posture report. Runs before each pipeline cycle.',
-    domain: 'Infrastructure', lines: 220,
+    desc: 'Concurrent TCP port checker. Verifies Cowrie honeypot liveness on AWS EC2 port 2222. Writes data/posture.json (DE.CM-1) and data/assets.json — a live asset inventory covering NIST ID.AM-1. Runs before each pipeline cycle.',
+    domain: 'Infrastructure', lines: 280,
   },
   {
     name: 'File Integrity Monitor', langs: ['go'],
