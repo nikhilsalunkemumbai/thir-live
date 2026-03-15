@@ -1121,7 +1121,7 @@ def main():
     creds   = load_json(args.credentials,       "credentials.json",      args.verbose)
     ssh_fps = load_json(args.ssh_fingerprints,  "ssh_fingerprints.json", args.verbose)
     cmd_cls = load_json(args.command_clusters,  "command_clusters.json", args.verbose)
-    asn_cls = load_json(args.asn_cls,      "asn_clusters.json",     args.verbose)
+    asn_cls = load_json(args.asn_clusters,      "asn_clusters.json",     args.verbose)
     yara    = load_json(args.yara_matches,      "yara_matches.json",     args.verbose)
 
     report = build_report(ir, threats, fp, stats, malware, creds, ssh_fps, cmd_cls, asn_cls, yara)
