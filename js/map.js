@@ -60,9 +60,16 @@ function initThreatMap() {
   const scaleByHeight = (h / 500) * 153.5;
   const scale         = Math.min(scaleByWidth, scaleByHeight) * MAP_ZOOM;
 
+  // Natural map height at this scale (NaturalEarth1 native height = 500 at scale 153.5)
+  const naturalMapH = (scale / 153.5) * 500;
+  // If map is taller than panel, anchor top of map to top of panel
+  // by shifting the projection centre down by half the overflow.
+  const overflow     = Math.max(0, naturalMapH - h);
+  const translateY   = h / 2 + overflow / 2;
+
   const projection = d3.geoNaturalEarth1()
     .scale(scale)
-    .translate([w / 2, h / 2]);
+    .translate([w / 2, translateY]);
 
   const path = d3.geoPath().projection(projection);
   const g    = svg.append('g');
