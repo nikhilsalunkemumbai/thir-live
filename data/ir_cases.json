@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-15T05:26:55Z",
-  "total_cases": 176,
+  "generated_at": "2026-03-15T06:21:10Z",
+  "total_cases": 179,
   "cases": [
     {
       "case_id": "IR-b46ba3148858",
@@ -6801,6 +6801,75 @@
         },
         {
           "timestamp": "2026-03-15T05:26:46.618884Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-0ab35c635c8c",
+      "src_ip": "188.36.7.196",
+      "first_seen": "2026-03-15T05:40:16.432139Z",
+      "last_seen": "2026-03-15T05:40:47.206121Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-15T05:40:16.432139Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-15T05:40:47.206121Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-9f075ca36038",
+      "src_ip": "47.236.192.183",
+      "first_seen": "2026-03-15T06:18:37.180676Z",
+      "last_seen": "2026-03-15T06:19:08.041774Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-15T06:18:37.180676Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-15T06:19:08.041774Z",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-0d3b1a37d758",
+      "src_ip": "64.236.131.240",
+      "first_seen": "2026-03-15T06:21:01.191498Z",
+      "last_seen": "2026-03-15T06:21:01.192619Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "timestamp": "2026-03-15T06:21:01.191498Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "timestamp": "2026-03-15T06:21:01.192619Z",
           "event": "cowrie.session.closed"
         }
       ]
