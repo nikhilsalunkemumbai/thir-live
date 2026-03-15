@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 4,
-      "last_fired": "2026-03-15T16:30:17.104337+00:00",
+      "fired_count": 5,
+      "last_fired": "2026-03-15T18:36:09.144090+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 4,
-      "last_fired": "2026-03-15T16:30:17.104341+00:00",
+      "fired_count": 5,
+      "last_fired": "2026-03-15T18:36:09.144093+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -329,6 +329,54 @@
       "last_fired": "2026-03-15T16:30:17.104371+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS396982 (Google LLC)"
+    },
+    "a58a30cd01fa1bd1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144082+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Downloader, Mushtik, Gafgyt, XMRig"
+    },
+    "c554479af0c7d359": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144087+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Rootkit, Mushtik, Sora, Gafgyt, XMRig"
+    },
+    "b7527c36f34c2e8e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144095+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.76.141.1"
+    },
+    "5dba62e4510f1842": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144098+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 186.4.240.226"
+    },
+    "3cfd364e5c067bc1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144103+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.184.119.22"
+    },
+    "eca08219b66036c4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144108+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.158.132.160"
+    },
+    "a96104ee3bf5c24e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144115+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS141412 (RAMDIA ONLINE)"
+    },
+    "883791dea6426702": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144119+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS398324 (Censys, Inc.)"
     }
   },
   "credential_ips": {
@@ -358,30 +406,36 @@
       "157.15.59.120": "2026-03-15T16:30:17.104062+00:00",
       "157.245.70.163": "2026-03-15T16:30:17.104062+00:00",
       "124.239.153.90": "2026-03-15T16:30:17.104062+00:00",
-      "102.210.149.105": "2026-03-15T16:30:17.104062+00:00"
+      "102.210.149.105": "2026-03-15T16:30:17.104062+00:00",
+      "180.76.141.1": "2026-03-15T18:36:09.143811+00:00",
+      "186.4.240.226": "2026-03-15T18:36:09.143811+00:00",
+      "112.184.119.22": "2026-03-15T18:36:09.143811+00:00",
+      "103.158.132.160": "2026-03-15T18:36:09.143811+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS38365",
-      "AS14618",
-      "AS9829",
-      "AS45775",
-      "AS135377",
-      "AS138423",
-      "AS4811",
-      "AS45102",
-      "AS4837",
-      "AS4134",
-      "AS9808",
-      "AS8075",
-      "AS396982",
-      "AS137718",
-      "AS4766",
-      "AS14061",
+      "AS16509",
       "AS63949",
+      "AS135377",
+      "AS4766",
+      "AS4134",
+      "AS137718",
+      "AS4811",
+      "AS14618",
+      "AS8075",
+      "AS138423",
+      "AS398324",
+      "AS45102",
+      "AS141412",
+      "AS9808",
+      "AS4837",
+      "AS396982",
+      "AS14061",
+      "AS38365",
       "AS22773",
-      "AS16509"
+      "AS45775",
+      "AS9829"
     ]
   }
 }
