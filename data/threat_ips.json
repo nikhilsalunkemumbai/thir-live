@@ -1,295 +1,7 @@
 {
-  "generated_at": "2026-03-15T07:26:21Z",
-  "total_ips": 62,
+  "generated_at": "2026-03-15T07:33:25Z",
+  "total_ips": 63,
   "ips": [
-    {
-      "indicator": "190.57.233.133",
-      "type": "ip",
-      "abuse_score": 35,
-      "country": "AR",
-      "isp": "Gigared S.A.",
-      "otx_pulses": 9,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "192.241.179.235",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 14,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "52.159.243.193",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 3,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "2.55.70.124",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "IL",
-      "isp": "Partner Communications Ltd.",
-      "otx_pulses": 25,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "117.245.139.153",
-      "type": "ip",
-      "abuse_score": 94,
-      "country": "IN",
-      "isp": "BSNL GSM North Zone, O/o Sr GM (CMTS), NC, Chandigarh",
-      "otx_pulses": 2,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "176.193.104.135",
-      "type": "ip",
-      "abuse_score": 23,
-      "country": "RU",
-      "isp": "Net By Net Holding LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "112.30.7.45",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 24,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "46.101.119.234",
-      "type": "ip",
-      "abuse_score": 3,
-      "country": "DE",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "20.161.70.162",
-      "type": "ip",
-      "abuse_score": 57,
-      "country": "US",
-      "isp": "Microsoft Corporation",
-      "otx_pulses": 6,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "188.36.7.196",
-      "type": "ip",
-      "abuse_score": 36,
-      "country": "HU",
-      "isp": "Magyar Telekom Plc.",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:13Z"
-    },
-    {
-      "indicator": "105.27.148.94",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "KE",
-      "isp": "SEACOM Limited",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "172.184.214.211",
-      "type": "ip",
-      "abuse_score": 15,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "183.239.54.162",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 15,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "161.248.201.228",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "BD",
-      "isp": "ExtentIT Solution Limited",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "120.48.80.70",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "otx_pulses": 26,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "101.71.37.70",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "UNICOM ZheJiang Province Network",
-      "otx_pulses": 3,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "119.237.27.185",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "HK",
-      "isp": "Hong Kong Telecommunications (HKT) Limited Mass Internet",
-      "otx_pulses": 17,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "103.220.82.87",
-      "type": "ip",
-      "abuse_score": 99,
-      "country": "IN",
-      "isp": "Mach1 Broadband Nagpur Pvt Ltd",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "172.210.53.192",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Microsoft Limited",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "98.170.57.236",
-      "type": "ip",
-      "abuse_score": 46,
-      "country": "US",
-      "isp": "Cox Communications",
-      "otx_pulses": 22,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "189.152.42.213",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "MX",
-      "isp": "Gestión de direccionamiento UniNet",
-      "otx_pulses": 2,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "45.33.65.27",
-      "type": "ip",
-      "abuse_score": 16,
-      "country": "US",
-      "isp": "Linode",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "118.193.36.245",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "HK",
-      "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "otx_pulses": 36,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "170.64.139.60",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "AU",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 4,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "44.205.14.108",
-      "type": "ip",
-      "abuse_score": 66,
-      "country": "US",
-      "isp": "Amazon Data Services Northern Virginia",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:14Z"
-    },
-    {
-      "indicator": "101.126.55.179",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "216.126.86.145",
-      "type": "ip",
-      "abuse_score": 34,
-      "country": "CA",
-      "isp": "Frontier Networks Inc",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "47.74.15.24",
-      "type": "ip",
-      "abuse_score": 46,
-      "country": "JP",
-      "isp": "Alibaba Cloud - JP",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "54.212.12.222",
-      "type": "ip",
-      "abuse_score": 60,
-      "country": "US",
-      "isp": "Amazon.com, Inc.",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "8.219.236.6",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "SG",
-      "isp": "Alibaba Cloud (Singapore) Private Limited",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "64.227.108.146",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 22,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "61.186.50.71",
-      "type": "ip",
-      "abuse_score": 35,
-      "country": "CN",
-      "isp": "CHINANET Hainan province network",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
     {
       "indicator": "183.99.131.197",
       "type": "ip",
@@ -297,34 +9,7 @@
       "country": "KR",
       "isp": "Korea Telecom",
       "otx_pulses": 6,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "120.198.138.185",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 21,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "35.130.111.146",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Charter Communications LLC",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "198.199.94.79",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "DigitalOcean, LLC",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:15Z"
+      "last_seen": "2026-03-15T07:33:16Z"
     },
     {
       "indicator": "64.236.131.240",
@@ -333,223 +18,52 @@
       "country": "US",
       "isp": "Microsoft Limited",
       "otx_pulses": 5,
-      "last_seen": "2026-03-15T07:26:15Z"
+      "last_seen": "2026-03-15T07:33:16Z"
     },
     {
-      "indicator": "183.239.25.115",
+      "indicator": "170.64.139.60",
       "type": "ip",
       "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "3.14.84.197",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Amazon Technologies Inc.",
-      "otx_pulses": 16,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "167.71.132.83",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "GB",
+      "country": "AU",
       "isp": "DigitalOcean, LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:15Z"
+      "otx_pulses": 4,
+      "last_seen": "2026-03-15T07:33:16Z"
     },
     {
-      "indicator": "74.235.123.2",
+      "indicator": "98.170.57.236",
       "type": "ip",
-      "abuse_score": 0,
+      "abuse_score": 46,
+      "country": "US",
+      "isp": "Cox Communications",
+      "otx_pulses": 22,
+      "last_seen": "2026-03-15T07:33:16Z"
+    },
+    {
+      "indicator": "20.161.70.162",
+      "type": "ip",
+      "abuse_score": 57,
       "country": "US",
       "isp": "Microsoft Corporation",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-15T07:26:15Z"
+      "otx_pulses": 6,
+      "last_seen": "2026-03-15T07:33:16Z"
     },
     {
-      "indicator": "120.240.236.178",
+      "indicator": "192.241.179.235",
       "type": "ip",
       "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "104.200.135.42",
-      "type": "ip",
-      "abuse_score": 42,
       "country": "US",
-      "isp": "Total Server Solutions L.L.C.",
-      "otx_pulses": 11,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "129.222.203.37",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CO",
-      "isp": "SpaceX Services, Inc.",
-      "otx_pulses": 2,
-      "last_seen": "2026-03-15T07:26:15Z"
-    },
-    {
-      "indicator": "174.64.199.77",
-      "type": "ip",
-      "abuse_score": 58,
-      "country": "US",
-      "isp": "Cox Communications Inc.",
-      "otx_pulses": 21,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "101.126.24.58",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "179.183.192.58",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "BR",
-      "isp": "TELEFÔNICA BRASIL S.A",
-      "otx_pulses": 5,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "206.189.138.45",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "IN",
       "isp": "DigitalOcean, LLC",
-      "otx_pulses": 1,
-      "last_seen": "2026-03-15T07:26:16Z"
+      "otx_pulses": 14,
+      "last_seen": "2026-03-15T07:33:16Z"
     },
     {
-      "indicator": "206.168.34.38",
+      "indicator": "46.101.119.234",
       "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Censys, Inc.",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "49.88.156.34",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "CHINANET jiangsu province network",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "52.154.20.197",
-      "type": "ip",
-      "abuse_score": 2,
-      "country": "US",
-      "isp": "Microsoft Corporation",
+      "abuse_score": 3,
+      "country": "DE",
+      "isp": "DigitalOcean, LLC",
       "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "118.194.230.250",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "JP",
-      "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "18.218.118.203",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Amazon Technologies Inc.",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "79.143.42.170",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "UA",
-      "isp": "Telecommunication Company Vinteleport Ltd.",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "120.48.20.170",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "otx_pulses": 43,
-      "last_seen": "2026-03-15T07:26:16Z"
-    },
-    {
-      "indicator": "111.14.162.81",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 48,
-      "last_seen": "2026-03-15T07:26:17Z"
-    },
-    {
-      "indicator": "101.52.130.122",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "GDS CHANGAN SERVICES Ltd.",
-      "otx_pulses": 35,
-      "last_seen": "2026-03-15T07:26:17Z"
-    },
-    {
-      "indicator": "120.48.52.58",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "otx_pulses": 26,
-      "last_seen": "2026-03-15T07:26:17Z"
-    },
-    {
-      "indicator": "112.30.127.9",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "otx_pulses": 31,
-      "last_seen": "2026-03-15T07:26:17Z"
-    },
-    {
-      "indicator": "180.184.82.249",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-      "otx_pulses": 50,
-      "last_seen": "2026-03-15T07:26:18Z"
-    },
-    {
-      "indicator": "216.180.246.199",
-      "type": "ip",
-      "abuse_score": 0,
-      "country": "US",
-      "isp": "NETWORK TRANSIT HOLDINGS LLC",
-      "otx_pulses": 0,
-      "last_seen": "2026-03-15T07:26:21Z"
+      "last_seen": "2026-03-15T07:33:16Z"
     },
     {
       "indicator": "47.236.192.183",
@@ -558,7 +72,502 @@
       "country": "SG",
       "isp": "Alibaba Cloud LLC",
       "otx_pulses": 17,
-      "last_seen": "2026-03-15T07:26:21Z"
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "2.55.70.124",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "IL",
+      "isp": "Partner Communications Ltd.",
+      "otx_pulses": 25,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "35.130.111.146",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Charter Communications LLC",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "104.200.135.42",
+      "type": "ip",
+      "abuse_score": 42,
+      "country": "US",
+      "isp": "Total Server Solutions L.L.C.",
+      "otx_pulses": 11,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "172.210.53.192",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "190.57.233.133",
+      "type": "ip",
+      "abuse_score": 35,
+      "country": "AR",
+      "isp": "Gigared S.A.",
+      "otx_pulses": 9,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "167.71.132.83",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "GB",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "180.184.82.249",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "112.30.127.9",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 31,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "120.48.52.58",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "otx_pulses": 26,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "176.193.104.135",
+      "type": "ip",
+      "abuse_score": 23,
+      "country": "RU",
+      "isp": "Net By Net Holding LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "172.184.214.211",
+      "type": "ip",
+      "abuse_score": 15,
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "183.239.54.162",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 15,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "74.235.123.2",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-15T07:33:17Z"
+    },
+    {
+      "indicator": "183.239.25.115",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "44.205.14.108",
+      "type": "ip",
+      "abuse_score": 66,
+      "country": "US",
+      "isp": "Amazon Data Services Northern Virginia",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "206.189.138.45",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "IN",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "54.212.12.222",
+      "type": "ip",
+      "abuse_score": 60,
+      "country": "US",
+      "isp": "Amazon.com, Inc.",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "20.161.28.177",
+      "type": "ip",
+      "abuse_score": 27,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "120.198.138.185",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 21,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "119.237.27.185",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "HK",
+      "isp": "Hong Kong Telecommunications (HKT) Limited Mass Internet",
+      "otx_pulses": 17,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "118.193.36.245",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "HK",
+      "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "otx_pulses": 36,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "47.74.15.24",
+      "type": "ip",
+      "abuse_score": 46,
+      "country": "JP",
+      "isp": "Alibaba Cloud - JP",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "79.143.42.170",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "UA",
+      "isp": "Telecommunication Company Vinteleport Ltd.",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "52.159.243.193",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 3,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "179.183.192.58",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "BR",
+      "isp": "TELEFÔNICA BRASIL S.A",
+      "otx_pulses": 5,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "105.27.148.94",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "KE",
+      "isp": "SEACOM Limited",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "174.64.199.77",
+      "type": "ip",
+      "abuse_score": 58,
+      "country": "US",
+      "isp": "Cox Communications Inc.",
+      "otx_pulses": 21,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "8.219.236.6",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "SG",
+      "isp": "Alibaba Cloud (Singapore) Private Limited",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "61.186.50.71",
+      "type": "ip",
+      "abuse_score": 35,
+      "country": "CN",
+      "isp": "CHINANET Hainan province network",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "117.245.139.153",
+      "type": "ip",
+      "abuse_score": 94,
+      "country": "IN",
+      "isp": "BSNL GSM North Zone, O/o Sr GM (CMTS), NC, Chandigarh",
+      "otx_pulses": 2,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "64.227.108.146",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 22,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "101.126.24.58",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:18Z"
+    },
+    {
+      "indicator": "118.194.230.250",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "JP",
+      "isp": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "129.222.203.37",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CO",
+      "isp": "SpaceX Services, Inc.",
+      "otx_pulses": 2,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "188.36.7.196",
+      "type": "ip",
+      "abuse_score": 36,
+      "country": "HU",
+      "isp": "Magyar Telekom Plc.",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "101.71.37.70",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "UNICOM ZheJiang Province Network",
+      "otx_pulses": 3,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "216.126.86.145",
+      "type": "ip",
+      "abuse_score": 34,
+      "country": "CA",
+      "isp": "Frontier Networks Inc",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "52.154.20.197",
+      "type": "ip",
+      "abuse_score": 2,
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "101.52.130.122",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "GDS CHANGAN SERVICES Ltd.",
+      "otx_pulses": 35,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "18.218.118.203",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Amazon Technologies Inc.",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "112.30.7.45",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 24,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "206.168.34.38",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Censys, Inc.",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "103.220.82.87",
+      "type": "ip",
+      "abuse_score": 99,
+      "country": "IN",
+      "isp": "Mach1 Broadband Nagpur Pvt Ltd",
+      "otx_pulses": 1,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "45.33.65.27",
+      "type": "ip",
+      "abuse_score": 16,
+      "country": "US",
+      "isp": "Linode",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "120.48.80.70",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "otx_pulses": 26,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "120.240.236.178",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "189.152.42.213",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "MX",
+      "isp": "Gestión de direccionamiento UniNet",
+      "otx_pulses": 2,
+      "last_seen": "2026-03-15T07:33:19Z"
+    },
+    {
+      "indicator": "111.14.162.81",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "otx_pulses": 48,
+      "last_seen": "2026-03-15T07:33:20Z"
+    },
+    {
+      "indicator": "3.14.84.197",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Amazon Technologies Inc.",
+      "otx_pulses": 16,
+      "last_seen": "2026-03-15T07:33:20Z"
+    },
+    {
+      "indicator": "198.199.94.79",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "DigitalOcean, LLC",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:20Z"
+    },
+    {
+      "indicator": "161.248.201.228",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "BD",
+      "isp": "ExtentIT Solution Limited",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:20Z"
+    },
+    {
+      "indicator": "120.48.20.170",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "otx_pulses": 43,
+      "last_seen": "2026-03-15T07:33:20Z"
+    },
+    {
+      "indicator": "49.88.156.34",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "CHINANET jiangsu province network",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:21Z"
+    },
+    {
+      "indicator": "101.126.55.179",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+      "otx_pulses": 50,
+      "last_seen": "2026-03-15T07:33:22Z"
+    },
+    {
+      "indicator": "216.180.246.199",
+      "type": "ip",
+      "abuse_score": 0,
+      "country": "US",
+      "isp": "NETWORK TRANSIT HOLDINGS LLC",
+      "otx_pulses": 0,
+      "last_seen": "2026-03-15T07:33:25Z"
     }
   ]
 }
