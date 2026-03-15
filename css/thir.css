@@ -963,7 +963,8 @@ footer a:hover { color: var(--accent); }
   flex: 0 0 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   padding: 2rem 2.5rem;
   border-right: 1px solid var(--border);
   background: var(--bg);
