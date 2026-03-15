@@ -45,18 +45,22 @@ function initThreatMap() {
     return;
   }
 
-  // width/height="100%" lets CSS fill the panel; viewBox sets D3 coordinate
-  // space to the measured pixel size; preserveAspectRatio="none" means the
-  // viewBox stretches to fill every pixel — no letterboxing, no truncation.
+  // Set SVG to exact panel pixel dimensions
   const svg = d3.select('#threat-map')
-    .attr('width',  '100%')
-    .attr('height', '100%')
-    .attr('viewBox', `0 0 ${w} ${h}`)
-    .attr('preserveAspectRatio', 'none');
+    .attr('width',  w)
+    .attr('height', h)
+    .style('width',  w + 'px')
+    .style('height', h + 'px');
 
-  // fitSize scales the projection so the world fills exactly [w × h]
+  // NaturalEarth1 default scale is 153.5 at 960×500 (aspect ~1.92).
+  // Scale proportionally to fill the panel width, then centre vertically.
+  const scale     = (w / 960) * 153.5;
+  const translateX = w / 2;
+  const translateY = h / 2;
+
   const projection = d3.geoNaturalEarth1()
-    .fitSize([w, h], { type: 'Sphere' });
+    .scale(scale)
+    .translate([translateX, translateY]);
 
   const path = d3.geoPath().projection(projection);
   const g    = svg.append('g');
