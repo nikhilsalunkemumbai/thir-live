@@ -181,6 +181,49 @@ const TOOLS_DATA = [
     desc: 'Tiered report retention: saves daily SOC reports, rolls up weekly summaries on Monday, generates monthly archives on the 1st. Tracks peak session/IP/threat high-water marks in stats.json. Prunes reports beyond 6-month retention.',
     domain: 'Reporting & Retention', lines: 410,
   },
+  // ── Phase 2 — Intelligence layer ────────────────────────────────────────────
+  {
+    name: 'Credential Extractor',
+    langs: ['py'],
+    desc: 'Parses raw Cowrie NDJSON logs to aggregate all login attempts. Surfaces top usernames, passwords, and credential pairs. Flags every successful auth separately for immediate cross-reference with IR cases. Output: data/credentials.json.',
+    domain: 'Credential Intelligence',
+    lines: 330,
+  },
+  {
+    name: 'SSH Fingerprint Aggregator',
+    langs: ['py'],
+    desc: 'Computes HASSH fingerprints (MD5 of KEX/enc/MAC/compression algorithms) per session. Groups attackers by SSH client tool and infrastructure even when rotating IPs. Maps to known botnet KEX signatures. Output: data/ssh_fingerprints.json.',
+    domain: 'Attacker Attribution',
+    lines: 295,
+  },
+  {
+    name: 'Command Clustering',
+    langs: ['py'],
+    desc: 'Groups sessions by Jaccard similarity of command sequences. Labels clusters as campaigns when multiple IPs run identical commands. Auto-detects mdrfckr SSH key injection, XMRig, Mirai, and Tsunami campaigns. Output: data/command_clusters.json.',
+    domain: 'Campaign Detection',
+    lines: 370,
+  },
+  {
+    name: 'ASN Clustering',
+    langs: ['go'],
+    desc: 'Groups attacker IPs by Autonomous System Number. Reveals which cloud providers and hosting networks are most heavily used for attacks. Flags Tor/VPN/proxy-heavy ASNs as anonymous infrastructure. Output: data/asn_clusters.json.',
+    domain: 'Infrastructure Analysis',
+    lines: 215,
+  },
+  {
+    name: 'YARA Classifier',
+    langs: ['py'],
+    desc: 'Runs compiled YARA rules (Mirai, XMRig, Gafgyt, crypto miner) against Cowrie-captured download samples. Falls back to heuristic byte-string matching if yara-python unavailable. Output: data/yara_matches.json.',
+    domain: 'Malware Analysis',
+    lines: 270,
+  },
+  {
+    name: 'Alert Engine',
+    langs: ['py'],
+    desc: 'Monitors all pipeline JSON outputs each run. Fires on HIGH/CRITICAL malware, new successful-auth IPs, first-seen ASN clusters, TCP tunnel attempts, and active campaigns. Deduplicates with per-severity windows. Supports Slack webhook and SMTP. Output: data/alert_history.json.',
+    domain: 'Alerting',
+    lines: 510,
+  },
 ];
 
 // --------------------------------------------------
@@ -231,7 +274,25 @@ const POSTURE_CONTROLS = [
   { id: 'RC.RP-1',  name: 'Recovery Planning',              status: 'active',     tool: 'Runbook' },
 
   // Planned: YARA rule scanning for downloaded samples
-  { id: 'DE.CM-5',  name: 'YARA Rule Matching',             status: 'planned',    tool: 'Planned' },
+  { id: 'DE.CM-5',  name: 'YARA Rule Matching',             status: 'active',     tool: 'Tool 33' },
+
+  // Tool 34: credential pair extraction + successful auth flagging
+  { id: 'DE.CM-3',  name: 'Credential Pair Intelligence',       status: 'active',  tool: 'Tool 34' },
+
+  // Tool 35: HASSH fingerprinting, botnet KEX signature matching
+  { id: 'DE.AE-1b', name: 'SSH Client Fingerprinting (HASSH)',  status: 'active',  tool: 'Tool 35' },
+
+  // Tool 36: Jaccard clustering, known campaign detection
+  { id: 'DE.AE-2b', name: 'Attack Campaign Detection',          status: 'active',  tool: 'Tool 36' },
+
+  // Tool 30b: ASN grouping, cloud/anon infrastructure tagging
+  { id: 'DE.AE-5b', name: 'ASN / Infrastructure Clustering',    status: 'active',  tool: 'Tool 30b' },
+
+  // Tool 33: YARA family classification on captured samples
+  { id: 'DE.CM-4b', name: 'YARA Malware Classification',        status: 'active',  tool: 'Tool 33' },
+
+  // Tool 37: alert engine fires on HIGH/CRITICAL events each run
+  { id: 'RS.CO-2b', name: 'Real-Time Threat Alerting',          status: 'active',  tool: 'Tool 37' },
 ];
 
 // --------------------------------------------------

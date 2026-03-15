@@ -418,7 +418,8 @@ def main():
     parser.add_argument("--slack-webhook",    default=os.environ.get("SLACK_WEBHOOK_URL", ""))
     # Email
     parser.add_argument("--smtp-host",        default=os.environ.get("SMTP_HOST", ""))
-    parser.add_argument("--smtp-port",        type=int, default=int(os.environ.get("SMTP_PORT", "587")))
+    _smtp_port_env = os.environ.get("SMTP_PORT", "").strip()
+    parser.add_argument("--smtp-port",        type=int, default=int(_smtp_port_env) if _smtp_port_env else 587)
     parser.add_argument("--smtp-user",        default=os.environ.get("SMTP_USER", ""))
     parser.add_argument("--smtp-pass",        default=os.environ.get("SMTP_PASS", ""))
     parser.add_argument("--email-from",       default=os.environ.get("ALERT_EMAIL_FROM", ""))
