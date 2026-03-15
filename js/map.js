@@ -55,7 +55,7 @@ function initThreatMap() {
   // NaturalEarth1 default renders at 960×500 with scale 153.5.
   // Compute scale that fits both axes — take the smaller so no edge clips.
   // MAP_ZOOM is a simple multiplier to scale up the map — tweak as needed.
-  const MAP_ZOOM      = 1.2;
+  const MAP_ZOOM      = 1.5;
   const scaleByWidth  = (w / 960) * 153.5;
   const scaleByHeight = (h / 500) * 153.5;
   const scale         = Math.min(scaleByWidth, scaleByHeight) * MAP_ZOOM;
@@ -67,33 +67,73 @@ function initThreatMap() {
   const path = d3.geoPath().projection(projection);
   const g    = svg.append('g');
 
-  // Graticule (grid lines)
+  // ── SVG glow filters ──────────────────────────────
+  const defs = svg.append('defs');
+
+  // Soft teal glow for country borders
+  const glowBorder = defs.append('filter').attr('id', 'glow-border').attr('x', '-20%').attr('y', '-20%').attr('width', '140%').attr('height', '140%');
+  glowBorder.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '2').attr('result', 'blur');
+  const feMerge1 = glowBorder.append('feMerge');
+  feMerge1.append('feMergeNode').attr('in', 'blur');
+  feMerge1.append('feMergeNode').attr('in', 'blur');
+  feMerge1.append('feMergeNode').attr('in', 'SourceGraphic');
+
+  // Strong glow for threat dots
+  const glowDot = defs.append('filter').attr('id', 'glow-dot').attr('x', '-100%').attr('y', '-100%').attr('width', '300%').attr('height', '300%');
+  glowDot.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '4').attr('result', 'blur');
+  const feMerge2 = glowDot.append('feMerge');
+  feMerge2.append('feMergeNode').attr('in', 'blur');
+  feMerge2.append('feMergeNode').attr('in', 'blur');
+  feMerge2.append('feMergeNode').attr('in', 'SourceGraphic');
+
+  // Subtle glow for graticule grid
+  const glowGrid = defs.append('filter').attr('id', 'glow-grid').attr('x', '-10%').attr('y', '-10%').attr('width', '120%').attr('height', '120%');
+  glowGrid.append('feGaussianBlur').attr('in', 'SourceGraphic').attr('stdDeviation', '1').attr('result', 'blur');
+  const feMerge3 = glowGrid.append('feMerge');
+  feMerge3.append('feMergeNode').attr('in', 'blur');
+  feMerge3.append('feMergeNode').attr('in', 'SourceGraphic');
+  // ─────────────────────────────────────────────────
+
+  // Graticule (grid lines) with subtle glow
   const graticule = d3.geoGraticule();
   g.append('path')
     .datum(graticule())
     .attr('d', path)
     .attr('fill', 'none')
-    .attr('stroke', 'rgba(30,48,69,0.6)')
-    .attr('stroke-width', 0.5);
+    .attr('stroke', 'rgba(0,255,229,0.12)')
+    .attr('stroke-width', 0.4)
+    .attr('filter', 'url(#glow-grid)');
 
   // Load world topology from CDN
   fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
     .then(r => r.json())
     .then(world => {
       const countries = topojson.feature(world, world.objects.countries);
+
+      // Country fill — dark base
       g.selectAll('.country')
         .data(countries.features)
         .enter().append('path')
         .attr('class', 'country')
         .attr('d', path)
-        .attr('fill',         'rgba(12,18,32,0.9)')
-        .attr('stroke',       'rgba(30,48,69,0.8)')
-        .attr('stroke-width', 0.5);
+        .attr('fill',         'rgba(8,14,26,0.95)')
+        .attr('stroke',       'none');
+
+      // Glowing border layer drawn on top
+      g.selectAll('.country-glow')
+        .data(countries.features)
+        .enter().append('path')
+        .attr('class', 'country-glow')
+        .attr('d', path)
+        .attr('fill',         'none')
+        .attr('stroke',       '#00ffe5')
+        .attr('stroke-width', 0.6)
+        .attr('stroke-opacity', 0.55)
+        .attr('filter', 'url(#glow-border)');
 
       addThreatPoints(g, projection);
     })
     .catch(() => {
-      // Graceful fallback: render points without base map
       addThreatPoints(g, projection);
       g.append('text')
         .attr('x', w / 2).attr('y', h / 2)
@@ -122,9 +162,10 @@ function addThreatPoints(g, projection) {
       .attr('x1', start[0]).attr('y1', start[1])
       .attr('x2', end[0]).attr('y2', end[1])
       .attr('stroke',           MAP_COLOR[loc.type])
-      .attr('stroke-width',     0.5)
-      .attr('stroke-opacity',   0.18)
-      .attr('stroke-dasharray', '3,3');
+      .attr('stroke-width',     0.8)
+      .attr('stroke-opacity',   0.3)
+      .attr('stroke-dasharray', '3,3')
+      .attr('filter', 'url(#glow-dot)');
 
     const dot = g.append('circle')
       .attr('r',       2)
@@ -171,12 +212,13 @@ function addThreatPoints(g, projection) {
         })();
       });
 
-    // Solid centre dot
+    // Solid centre dot with glow
     g.append('circle')
       .attr('cx', pt[0]).attr('cy', pt[1])
       .attr('r',       isDefender ? 5 : 3)
       .attr('fill',    color)
-      .attr('opacity', isDefender ? 1 : 0.85);
+      .attr('opacity', isDefender ? 1 : 0.9)
+      .attr('filter', 'url(#glow-dot)');
 
     // Label for the honeypot marker only
     if (isDefender) {
