@@ -55,7 +55,7 @@ function initThreatMap() {
   // NaturalEarth1 default renders at 960×500 with scale 153.5.
   // Compute scale that fits both axes — take the smaller so no edge clips.
   // MAP_ZOOM is a simple multiplier to scale up the map — tweak as needed.
-  const MAP_ZOOM      = 1.2;
+  const MAP_ZOOM      = 1.4;
   const scaleByWidth  = (w / 960) * 153.5;
   const scaleByHeight = (h / 500) * 153.5;
   const scale         = Math.min(scaleByWidth, scaleByHeight) * MAP_ZOOM;
