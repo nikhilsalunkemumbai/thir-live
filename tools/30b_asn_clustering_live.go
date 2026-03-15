@@ -24,7 +24,7 @@ import (
 // ── Input schema (threat_ips.json) ──────────────────────────────────────────
 
 type ThreatIP struct {
-	IP          string  `json:"ip"`
+	IP          string  `json:"indicator"`
 	AbuseScore  int     `json:"abuse_score"`
 	TotalReports int    `json:"total_reports"`
 	Country     string  `json:"country"`

@@ -183,6 +183,21 @@ jobs:
             --output data/ir_cases.json \
             --verbose
 
+      # ----------------------------------------------------------------
+      # 7.a Tool 34 — credential extractor
+      #    Reads /tmp/cowrie*.json directly (same log fetched in Step 6).
+      #    Extracts all username/password pairs (failed + success),
+      #    top usernames, top passwords, top pairs, and success pairs.
+      #    Output: data/credentials.json  (consumed by Tool 28 + 37).
+      # ----------------------------------------------------------------
+      - name: Tool 34 — credential extractor
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          python tools/34_credential_extractor_live.py \
+            --input  /tmp/cowrie.json \
+            --output data/credentials.json \
+            --verbose
 
       # ----------------------------------------------------------------
       # 7.b Tool 35 — SSH fingerprint aggregator
