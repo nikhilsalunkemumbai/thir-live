@@ -1,0 +1,228 @@
+{
+  "generated_at": "2026-03-15T08:15:47Z",
+  "source_file": "data/threat_ips.json",
+  "total_ips_analyzed": 70,
+  "unique_asns": 1,
+  "top_attack_asns": [
+    {
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 0,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    }
+  ],
+  "high_risk_asns": [
+    {
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 0,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    }
+  ],
+  "anon_infrastructure": [],
+  "country_summary": [
+    {
+      "country": "US",
+      "code": "",
+      "count": 25
+    },
+    {
+      "country": "CN",
+      "code": "",
+      "count": 19
+    },
+    {
+      "country": "IN",
+      "code": "",
+      "count": 3
+    },
+    {
+      "country": "JP",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "HK",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "GB",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "SG",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "RU",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "CO",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "CA",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "BD",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "UA",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IT",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "AU",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "AR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IL",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "KE",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "HU",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "DE",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "KR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "MX",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "BR",
+      "code": "",
+      "count": 1
+    }
+  ],
+  "clusters": [
+    {
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 0,
+      "unique_ips": [],
+      "countries": [
+        "AR",
+        "AU",
+        "BD",
+        "BR",
+        "CA",
+        "CN",
+        "CO",
+        "DE",
+        "GB",
+        "HK",
+        "HU",
+        "IL",
+        "IN",
+        "IT",
+        "JP",
+        "KE",
+        "KR",
+        "MX",
+        "RU",
+        "SG",
+        "UA",
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 74.38571428571429,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-03-15T08:15:35Z",
+      "last_seen": "2026-03-15T08:15:46Z",
+      "isps": [
+        "Alibaba Cloud (Singapore) Private Limited",
+        "Alibaba Cloud - JP",
+        "Alibaba Cloud LLC",
+        "Amazon Data Services Northern Virginia",
+        "Amazon Technologies Inc.",
+        "Amazon.com, Inc.",
+        "BSNL GSM North Zone, O/o Sr GM (CMTS), NC, Chandigarh",
+        "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+        "Beijing Volcano Engine Technology Co., Ltd.",
+        "CHINANET Hainan province network",
+        "CHINANET jiangsu province network",
+        "Censys, Inc.",
+        "Charter Communications LLC",
+        "China Mobile Communications Corporation",
+        "China Unicom Neimeng province network",
+        "Cox Communications",
+        "Cox Communications Inc.",
+        "DigitalOcean, LLC",
+        "ExtentIT Solution Limited",
+        "Frontier Networks Inc",
+        "GDS CHANGAN SERVICES Ltd.",
+        "Gestión de direccionamiento UniNet",
+        "Gigared S.A.",
+        "Hong Kong Telecommunications (HKT) Limited Mass Internet",
+        "Korea Telecom",
+        "Linode",
+        "Mach1 Broadband Nagpur Pvt Ltd",
+        "Magyar Telekom Plc.",
+        "Microsoft Corporation",
+        "Microsoft Limited",
+        "NETWORK TRANSIT HOLDINGS LLC",
+        "Net By Net Holding LLC",
+        "Partner Communications Ltd.",
+        "SEACOM Limited",
+        "SpaceX Services, Inc.",
+        "TELEFÔNICA BRASIL S.A",
+        "Telecom Italia S.p.A.",
+        "Telecommunication Company Vinteleport Ltd.",
+        "Total Server Solutions L.L.C.",
+        "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+        "UNICOM ZheJiang Province Network"
+      ]
+    }
+  ]
+}

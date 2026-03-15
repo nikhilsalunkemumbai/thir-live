@@ -1,0 +1,10 @@
+{
+  "generated_at": "2026-03-15T08:15:31.427525+00:00",
+  "total_sessions_parsed": 0,
+  "sessions_with_fingerprint": 0,
+  "sessions_without_kex": 0,
+  "unique_fingerprints": 0,
+  "top_families": [],
+  "botnet_signals": [],
+  "fingerprints": []
+}
