@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-15T08:15:47Z",
+  "generated_at": "2026-03-15T08:34:28Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 70,
+  "total_ips_analyzed": 74,
   "unique_asns": 1,
   "top_attack_asns": [
     {
@@ -26,30 +26,30 @@
     {
       "country": "US",
       "code": "",
-      "count": 25
+      "count": 26
     },
     {
       "country": "CN",
       "code": "",
-      "count": 19
+      "count": 20
     },
     {
       "country": "IN",
       "code": "",
-      "count": 3
-    },
-    {
-      "country": "JP",
-      "code": "",
-      "count": 2
+      "count": 4
     },
     {
       "country": "HK",
       "code": "",
-      "count": 2
+      "count": 3
     },
     {
       "country": "GB",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "JP",
       "code": "",
       "count": 2
     },
@@ -59,52 +59,12 @@
       "count": 2
     },
     {
-      "country": "RU",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "CO",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "CA",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "BD",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "UA",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "IT",
-      "code": "",
-      "count": 1
-    },
-    {
       "country": "AU",
       "code": "",
       "count": 1
     },
     {
-      "country": "AR",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "IL",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "KE",
+      "country": "IT",
       "code": "",
       "count": 1
     },
@@ -119,12 +79,52 @@
       "count": 1
     },
     {
-      "country": "KR",
+      "country": "IL",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "CA",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "CO",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "KE",
       "code": "",
       "count": 1
     },
     {
       "country": "MX",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "KR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "UA",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "BD",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "AR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "RU",
       "code": "",
       "count": 1
     },
@@ -165,7 +165,7 @@
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 74.38571428571429,
+      "avg_abuse_score": 72.48648648648648,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -178,8 +178,8 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-03-15T08:15:35Z",
-      "last_seen": "2026-03-15T08:15:46Z",
+      "first_seen": "2026-03-15T08:34:20Z",
+      "last_seen": "2026-03-15T08:34:28Z",
       "isps": [
         "Alibaba Cloud (Singapore) Private Limited",
         "Alibaba Cloud - JP",
@@ -195,6 +195,7 @@
         "Censys, Inc.",
         "Charter Communications LLC",
         "China Mobile Communications Corporation",
+        "China Unicom Liaoning province network",
         "China Unicom Neimeng province network",
         "Cox Communications",
         "Cox Communications Inc.",
@@ -204,6 +205,7 @@
         "GDS CHANGAN SERVICES Ltd.",
         "Gestión de direccionamiento UniNet",
         "Gigared S.A.",
+        "Hong Kong Broadband Network Ltd",
         "Hong Kong Telecommunications (HKT) Limited Mass Internet",
         "Korea Telecom",
         "Linode",

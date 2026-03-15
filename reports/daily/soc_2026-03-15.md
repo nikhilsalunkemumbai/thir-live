@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-15 |
-| **Generated At** | 2026-03-15T08:16:11Z |
-| **Shift Time** | 08:16 UTC |
+| **Generated At** | 2026-03-15T08:34:52Z |
+| **Shift Time** | 08:34 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **212** |
-| Confirmed Threats | **154** |
-| False Positives Filtered | **58** (27.4%) |
-| Unique Attacker IPs | **70** |
+| Total Sessions Captured | **218** |
+| Confirmed Threats | **156** |
+| False Positives Filtered | **62** (28.4%) |
+| Unique Attacker IPs | **74** |
 | Countries of Origin | **22** |
-| High Severity Cases | **44** |
+| High Severity Cases | **45** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **168** |
+| Low Severity Cases | **173** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,7 +30,7 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **70** |
+| Total IPs Analysed | **74** |
 | Unique ASNs | **1** |
 | High-Risk ASNs | **1** |
 | Anon Infrastructure ASNs | **0** |
@@ -45,7 +45,7 @@
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (34)
+## 🚨 Priority Cases — Immediate Attention (35)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
@@ -1228,6 +1228,33 @@
 - [ ] Block `172.210.53[.]192` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
+### 🔴 HIGH · IR-ba8d79c38ac6
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `172.210.53[.]192` |
+| **First Seen** | 2026-03-15 08:23 |
+| **Last Seen** | 2026-03-15 08:23 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-15 08:23:25` | `cowrie.session.connect` |
+| `2026-03-15 08:23:25` | `cowrie.client.version` |
+| `2026-03-15 08:23:26` | `cowrie.client.kex` |
+| `2026-03-15 08:23:26` | `cowrie.login.success` |
+| `2026-03-15 08:23:26` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `172.210.53[.]192` to AbuseIPDB if not already reported
+- [ ] Block `172.210.53[.]192` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
 ---
 
 ## 📡 Reconnaissance Activity — Grouped by Source IP
@@ -1256,6 +1283,7 @@
 | `111.14.162[.]81` | 1 | 2026-03-15 04:22 | 2026-03-15 04:22 | 13s | 0 | `T1592` | 🟢 LOW |
 | `112.30.127[.]9` | 1 | 2026-03-15 01:09 | 2026-03-15 01:09 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `112.30.7[.]45` | 1 | 2026-03-15 00:50 | 2026-03-15 00:50 | 1s | 0 | `T1592` | 🟢 LOW |
+| `113.239.82[.]81` | 1 | 2026-03-15 08:33 | 2026-03-15 08:34 | 13s | 0 | `T1592` | 🟢 LOW |
 | `117.245.139[.]153` | 1 | 2026-03-15 07:01 | 2026-03-15 07:02 | 30s | 0 | `T1592` | 🟢 LOW |
 | `119.237.27[.]185` | 1 | 2026-03-15 04:15 | 2026-03-15 04:16 | 30s | 0 | `T1592` | 🟢 LOW |
 | `120.198.138[.]185` | 1 | 2026-03-15 03:02 | 2026-03-15 03:02 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -1303,16 +1331,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `35.130.111[.]146` | US | Charter Communications LLC | **100** ⚠️ | 50 |
-| `192.241.179[.]235` | US | DigitalOcean, LLC | **100** ⚠️ | 14 |
-| `79.143.42[.]170` | UA | Telecommunication Company Vinteleport Ltd. | **100** ⚠️ | 50 |
-| `3.14.84[.]197` | US | Amazon Technologies Inc. | **100** ⚠️ | 16 |
-| `101.71.37[.]70` | CN | UNICOM ZheJiang Province Network | **100** ⚠️ | 3 |
-| `120.48.20[.]170` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 43 |
-| `112.30.127[.]9` | CN | China Mobile Communications Corporation | **100** ⚠️ | 31 |
+| `120.48.124[.]94` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 29 |
+| `198.199.94[.]79` | US | DigitalOcean, LLC | **100** ⚠️ | 50 |
+| `113.239.82[.]81` | CN | China Unicom Liaoning province network | **100** ⚠️ | 0 |
 | `170.64.139[.]60` | AU | DigitalOcean, LLC | **100** ⚠️ | 4 |
-| `2.55.70[.]124` | IL | Partner Communications Ltd. | **100** ⚠️ | 25 |
-| `118.193.36[.]245` | HK | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | **100** ⚠️ | 36 |
+| `49.88.156[.]34` | CN | CHINANET jiangsu province network | **100** ⚠️ | 50 |
+| `172.210.53[.]192` | US | Microsoft Limited | **100** ⚠️ | 0 |
+| `129.222.203[.]37` | CO | SpaceX Services, Inc. | **100** ⚠️ | 2 |
+| `206.168.34[.]38` | US | Censys, Inc. | **100** ⚠️ | 50 |
+| `112.30.127[.]9` | CN | China Mobile Communications Corporation | **100** ⚠️ | 33 |
+| `192.241.179[.]235` | US | DigitalOcean, LLC | **100** ⚠️ | 14 |
 
 ---
 
@@ -1324,11 +1352,11 @@
 | [T1110.001](https://attack.mitre.org/techniques/T1110/001) | — |
 | [T1078](https://attack.mitre.org/techniques/T1078) | — |
 | [T1083](https://attack.mitre.org/techniques/T1083) | — |
-| [T1105](https://attack.mitre.org/techniques/T1105) | — |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | — |
 
 ---
 
-## 🔕 False Positive Summary (58 filtered)
+## 🔕 False Positive Summary (62 filtered)
 
 | Reason | Count |
 |---|---|
@@ -1336,11 +1364,12 @@
 | AbuseIPDB score 15 below threshold 25 | 1 |
 | AbuseIPDB score 16 below threshold 25 | 1 |
 | AbuseIPDB score 2 below threshold 25 | 1 |
+| AbuseIPDB score 20 below threshold 25 | 2 |
 | AbuseIPDB score 23 below threshold 25 | 1 |
 | AbuseIPDB score 24 below threshold 25 | 1 |
-| AbuseIPDB score 3 below threshold 25 | 8 |
+| AbuseIPDB score 3 below threshold 25 | 9 |
 | AbuseIPDB score 8 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 17 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 18 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -1351,19 +1380,19 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 212 cases |
+| Tool 26  | Incident Timeline Generator | ✅ 218 cases |
 | Tool 34  | Credential Extractor        | ⚠️ skipped  |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 70 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 58 filtered (27.4%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 74 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 62 filtered (28.4%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
 | Tool 30b | ASN Clustering              | ✅ 1 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 9 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 34 priority case(s) shown individually · 43 recon entry/entries in table (13 group(s) consolidating 90 session(s)).
+> **Report grouping:** 35 priority case(s) shown individually · 44 recon entry/entries in table (13 group(s) consolidating 90 session(s)).
 
 ---
 
@@ -1379,4 +1408,4 @@
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-15T08:16:11Z_
+_Report time: 2026-03-15T08:34:52Z_
