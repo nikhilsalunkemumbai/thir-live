@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-03-15T07:46:48Z",
+  "generated_at": "2026-03-15T08:15:46Z",
   "threshold_used": 25,
-  "total_cases_in": 202,
-  "confirmed_threats": 148,
-  "flagged_as_fp": 54,
-  "fp_rate": 0.2673,
+  "total_cases_in": 212,
+  "confirmed_threats": 154,
+  "flagged_as_fp": 58,
+  "fp_rate": 0.2736,
   "fp_cases": [
     {
       "case_id": "IR-b46ba3148858",
@@ -275,6 +275,26 @@
       "case_id": "IR-9ec3e14103bf",
       "src_ip": "20.97.198.243",
       "reason": "AbuseIPDB score 8 below threshold 25"
+    },
+    {
+      "case_id": "IR-740afd11ca8d",
+      "src_ip": "161.35.170.148",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-7784cb4166f4",
+      "src_ip": "161.35.170.148",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-f31511619b95",
+      "src_ip": "79.11.115.237",
+      "reason": "Mass-scanner pattern: no commands, no downloads, \u22642 login attempts"
+    },
+    {
+      "case_id": "IR-dba074c9be9e",
+      "src_ip": "172.172.87.192",
+      "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
   "clean_cases": [
@@ -425,6 +445,12 @@
     "IR-4b919c56a802",
     "IR-79eb9ae3f618",
     "IR-773100ae5473",
-    "IR-b09a7f063f09"
+    "IR-b09a7f063f09",
+    "IR-348a22bee8e7",
+    "IR-704ca55293e7",
+    "IR-501e7184b07c",
+    "IR-583c08f16c83",
+    "IR-73d4f1e59ad5",
+    "IR-abdf83769f42"
   ]
 }
