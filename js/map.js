@@ -171,8 +171,7 @@ function addThreatPoints(g, projection) {
       .attr('stroke',           MAP_COLOR[loc.type])
       .attr('stroke-width',     0.8)
       .attr('stroke-opacity',   0.3)
-      .attr('stroke-dasharray', '3,3')
-      .attr('filter', 'url(#glow-dot)');
+      .attr('stroke-dasharray', '3,3');
 
     const dot = g.append('circle')
       .attr('r',       2)
@@ -219,13 +218,12 @@ function addThreatPoints(g, projection) {
         })();
       });
 
-    // Solid centre dot with glow
+    // Solid centre dot
     g.append('circle')
       .attr('cx', pt[0]).attr('cy', pt[1])
       .attr('r',       isDefender ? 5 : 3)
       .attr('fill',    color)
-      .attr('opacity', isDefender ? 1 : 0.9)
-      .attr('filter', 'url(#glow-dot)');
+      .attr('opacity', isDefender ? 1 : 0.9);
 
     // Label for the honeypot marker only
     if (isDefender) {
