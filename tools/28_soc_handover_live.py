@@ -767,9 +767,9 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
             ln()
 
     # ── ⚔️ Attack Campaign Intelligence (Tool 36) ─────────────────────────────
-    if cmd_clusters and cmd_clusters.get("campaign_clusters", 0) > 0:
-        active_campaigns = cmd_clusters.get("active_campaigns", [])
-        all_clusters     = (cmd_clusters.get("clusters") or [])
+    if cmd_cls and cmd_cls.get("campaign_clusters", 0) > 0:
+        active_campaigns = cmd_cls.get("active_campaigns", [])
+        all_clusters     = (cmd_cls.get("clusters") or [])
 
         ln("---")
         ln()
@@ -777,9 +777,9 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
         ln()
         ln("| Metric | Value |")
         ln("|---|---|")
-        ln(f"| Total Command Clusters | **{cmd_clusters.get('total_clusters', 0)}** |")
-        ln(f"| Campaign Clusters | **{cmd_clusters.get('campaign_clusters', 0)}** |")
-        ln(f"| Highest Severity | **{cmd_clusters.get('highest_severity', 'NONE')}** |")
+        ln(f"| Total Command Clusters | **{cmd_cls.get('total_clusters', 0)}** |")
+        ln(f"| Campaign Clusters | **{cmd_cls.get('campaign_clusters', 0)}** |")
+        ln(f"| Highest Severity | **{cmd_cls.get('highest_severity', 'NONE')}** |")
         ln()
 
         if active_campaigns:
@@ -813,10 +813,10 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
             ln()
 
     # ── 🌐 ASN Cluster Intelligence (Tool 30b) ─────────────────────────────────
-    if asn_clusters and asn_clusters.get("unique_asns", 0) > 0:
-        top_asns      = (asn_clusters.get("top_attack_asns") or [])[:8]
-        high_risk_asns = asn_clusters.get("high_risk_asns",  [])
-        anon_infra    = asn_clusters.get("anon_infrastructure", [])
+    if asn_cls and asn_cls.get("unique_asns", 0) > 0:
+        top_asns      = (asn_cls.get("top_attack_asns") or [])[:8]
+        high_risk_asns = asn_cls.get("high_risk_asns",  [])
+        anon_infra    = asn_cls.get("anon_infrastructure", [])
 
         ln("---")
         ln()
@@ -824,8 +824,8 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
         ln()
         ln("| Metric | Value |")
         ln("|---|---|")
-        ln(f"| Total IPs Analysed | **{asn_clusters.get('total_ips_analyzed', 0)}** |")
-        ln(f"| Unique ASNs | **{asn_clusters.get('unique_asns', 0)}** |")
+        ln(f"| Total IPs Analysed | **{asn_cls.get('total_ips_analyzed', 0)}** |")
+        ln(f"| Unique ASNs | **{asn_cls.get('unique_asns', 0)}** |")
         ln(f"| High-Risk ASNs | **{len(high_risk_asns)}** |")
         ln(f"| Anon Infrastructure ASNs | **{len(anon_infra)}** |")
         ln()
@@ -1043,11 +1043,11 @@ def build_report(ir, threats, fp, stats, malware, creds=None, ssh_fps=None, cmd_
     ln(f"| Tool 26  | Incident Timeline Generator | {'✅' if total_cases > 0 else '⚠️'} {total_cases} cases |")
     ln(f"| Tool 34  | Credential Extractor        | {'✅' if creds else '⚠️ skipped'} {'%d attempts' % (creds or {}).get('total_attempts',0) if creds else ''} |")
     ln(f"| Tool 35  | SSH Fingerprint Aggregator  | {'✅' if ssh_fps else '⚠️ skipped'} {'%d fingerprints' % (ssh_fps or {}).get('unique_fingerprints',0) if ssh_fps else ''} |")
-    ln(f"| Tool 36  | Command Clustering          | {'✅' if cmd_clusters else '⚠️ skipped'} {'%d clusters' % (cmd_clusters or {}).get('total_clusters',0) if cmd_clusters else ''} |")
+    ln(f"| Tool 36  | Command Clustering          | {'✅' if cmd_cls else '⚠️ skipped'} {'%d clusters' % (cmd_cls or {}).get('total_clusters',0) if cmd_cls else ''} |")
     ln(f"| Tool 27  | Threat Intel Feeder         | {'✅' if total_ips > 0 else '⚠️'} {total_ips} IPs enriched |")
     ln(f"| Tool 29  | False Positive Tracker      | ✅ {fp_count} filtered ({fp_rate}%) |")
     ln(f"| Tool 30  | Metric Exporter             | {'✅ stats.json written' if stats else '❌ no output'} |")
-    ln(f"| Tool 30b | ASN Clustering              | {'✅' if asn_clusters else '⚠️ skipped'} {'%d ASNs' % (asn_clusters or {}).get('unique_asns',0) if asn_clusters else ''} |")
+    ln(f"| Tool 30b | ASN Clustering              | {'✅' if asn_cls else '⚠️ skipped'} {'%d ASNs' % (asn_cls or {}).get('unique_asns',0) if asn_cls else ''} |")
     ln(f"| Tool 31  | Malware Analyzer            | {'✅' if malware_found else '— no downloads'} {'%d files' % (malware or {}).get('total_files',0) if malware_found else ''} |")
     ln(f"| Tool 33  | YARA Classifier             | {'✅' if yara_found else '— no downloads'} {'%d classified' % (yara or {}).get('files_classified',0) if yara_found else ''} |")
     ln(f"| Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |")
@@ -1121,7 +1121,7 @@ def main():
     creds   = load_json(args.credentials,       "credentials.json",      args.verbose)
     ssh_fps = load_json(args.ssh_fingerprints,  "ssh_fingerprints.json", args.verbose)
     cmd_cls = load_json(args.command_clusters,  "command_clusters.json", args.verbose)
-    asn_cls = load_json(args.asn_clusters,      "asn_clusters.json",     args.verbose)
+    asn_cls = load_json(args.asn_cls,      "asn_clusters.json",     args.verbose)
     yara    = load_json(args.yara_matches,      "yara_matches.json",     args.verbose)
 
     report = build_report(ir, threats, fp, stats, malware, creds, ssh_fps, cmd_cls, asn_cls, yara)
