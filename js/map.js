@@ -52,15 +52,15 @@ function initThreatMap() {
     .style('width',  w + 'px')
     .style('height', h + 'px');
 
-  // NaturalEarth1 default scale is 153.5 at 960×500 (aspect ~1.92).
-  // Scale proportionally to fill the panel width, then centre vertically.
-  const scale     = (w / 960) * 153.5;
-  const translateX = w / 2;
-  const translateY = h / 2;
+  // NaturalEarth1 default renders at 960×500 with scale 153.5.
+  // Compute scale that fits both axes — take the smaller so no edge clips.
+  const scaleByWidth  = (w / 960) * 153.5;
+  const scaleByHeight = (h / 500) * 153.5;
+  const scale         = Math.min(scaleByWidth, scaleByHeight);
 
   const projection = d3.geoNaturalEarth1()
     .scale(scale)
-    .translate([translateX, translateY]);
+    .translate([w / 2, h / 2]);
 
   const path = d3.geoPath().projection(projection);
   const g    = svg.append('g');
