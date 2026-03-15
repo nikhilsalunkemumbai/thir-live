@@ -981,6 +981,7 @@ footer a:hover { color: var(--accent); }
   flex: 1 1 60%;
   position: relative;
   overflow: hidden;
+  min-width: 0;
 }
 
 .hero-map #threat-map {
