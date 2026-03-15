@@ -942,24 +942,16 @@ footer a:hover { color: var(--accent); }
   .attck-grid   { grid-template-columns: repeat(4, 1fr); }
 }
 
-/* ── HERO MAP ──
+/* ── HERO MAP ── side-by-side layout
  *
- * FIX: .hero-map-overlay previously had only top:0 and left:0 — no
- * right or bottom edge. Without those, the element had no bounding box
- * and expanded freely with its content instead of filling the parent.
- *
- * Changes from original:
- *   .hero-map #threat-map  — added position:absolute so the SVG is
- *                            pulled out of document flow and can never
- *                            push the section's height around.
- *   .hero-map-overlay      — added right:0 + bottom:0 (the actual fix)
- *                            and justify-content:space-between so the
- *                            title group sits at the top and .hero-map-stats
- *                            sits at the bottom with the map visible between.
- *                            Removed gap:1rem — space-between handles it.
+ * .hero-map        — flex row: left panel (overlay) + right panel (map)
+ * .hero-map-overlay — left ~40% — title, subtitle, stats stacked vertically
+ * .hero-map-panel  — right ~60% — contains SVG + LIVE badge, relative positioned
+ * .hero-map #threat-map — fills the right panel absolutely
  */
 .hero-map {
-  position: relative;
+  display: flex;
+  flex-direction: row;
   height: 420px;
   overflow: hidden;
   margin-top: 52px;
@@ -967,27 +959,30 @@ footer a:hover { color: var(--accent); }
   background: var(--bg);
 }
 
+.hero-map-overlay {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 2.5rem;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  z-index: 5;
+}
+
+.hero-map-panel {
+  flex: 1 1 60%;
+  position: relative;
+  overflow: hidden;
+}
+
 .hero-map #threat-map {
-  position: absolute;   /* pulled out of flow — cannot affect section height */
+  position: absolute;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
   display: block;
   z-index: 1;
-}
-
-.hero-map-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;                       /* ← was missing */
-  bottom: 0;                      /* ← was missing */
-  z-index: 5;
-  padding: 2rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* title top · stats bottom */
-  pointer-events: none;           /* clicks pass through to map */
 }
 
 .hmt-tag {
@@ -1078,8 +1073,26 @@ footer a:hover { color: var(--accent); }
 }
 
 @media (max-width: 1024px) {
-  .hero-map  { height: 300px; }
-  .hmt-h1    { font-size: 2rem; }
+  .hero-map         { height: 300px; }
+  .hmt-h1           { font-size: 2rem; }
+  .hero-map-overlay { flex: 0 0 42%; }
+}
+
+@media (max-width: 700px) {
+  .hero-map {
+    flex-direction: column;
+    height: auto;
+  }
+  .hero-map-overlay {
+    flex: none;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1.5rem;
+  }
+  .hero-map-panel {
+    flex: none;
+    height: 260px;
+  }
 }
 
 /* =============================================
