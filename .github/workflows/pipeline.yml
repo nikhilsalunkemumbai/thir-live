@@ -15,7 +15,12 @@
 #   [cond]  → check for downloads        → (bool flag)
 #   [cond]  → fetch downloads (if any)   → /tmp/cowrie-downloads/
 #   Tool 31 → malware analysis (if any)  → data/malware_report.json
+#   Tool 35 → SSH fingerprint aggregator → data/ssh_fingerprints.json
+#   Tool 36 → command clustering         → data/command_clusters.json
+#   Tool 30b→ ASN clustering             → data/asn_clusters.json
+#   Tool 33 → YARA classifier (cond.)    → data/yara_matches.json
 #   Tool 28 → SOC handover report        → data/soc_handover.md
+#   Tool 37 → alert engine               → data/alert_history.json
 #   Tool 32 → save daily + peak stats    → reports/daily/soc_YYYY-MM-DD.md
 #   Tool 32 → weekly/monthly rollup      → reports/weekly/ or reports/monthly/
 #   Tool 07 → verify data integrity      → (exit code check)
@@ -30,6 +35,9 @@
 #   ABUSEIPDB_API_KEY     AbuseIPDB free account (1000 checks/day)
 #   OTX_API_KEY           AlienVault OTX free account
 #   VIRUSTOTAL_API_KEY    VirusTotal free account (optional — Tool 31)
+#   ALERT_CHANNEL         slack|email|both|dry-run (optional — Tool 37, default: dry-run)
+#   SLACK_WEBHOOK_URL     Slack incoming webhook URL (optional — Tool 37)
+#   SMTP_HOST/USER/PASS   SMTP credentials (optional — Tool 37 email)
 #
 # NOTE: All SSH/SCP connections use port 22222 (real EC2 management port).
 #       Port 22 on EC2 is redirected to Cowrie via iptables — never use
@@ -175,6 +183,37 @@ jobs:
             --output data/ir_cases.json \
             --verbose
 
+
+      # ----------------------------------------------------------------
+      # 7.b Tool 35 — SSH fingerprint aggregator
+      #    Reads data/ir_cases.json (Tool 26 output).
+      #    Computes HASSH fingerprints, maps client families, detects
+      #    botnet KEX signatures. Output: data/ssh_fingerprints.json.
+      # ----------------------------------------------------------------
+      - name: Tool 35 — SSH fingerprint aggregator
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          python tools/35_ssh_fingerprint_live.py \
+            --input  data/ir_cases.json \
+            --output data/ssh_fingerprints.json
+
+      # ----------------------------------------------------------------
+      # 7.c Tool 36 — command clustering
+      #    Reads data/ir_cases.json (Tool 26 output).
+      #    Groups sessions by Jaccard similarity of command sequences.
+      #    Detects known campaigns (mdrfckr, XMRig, Mirai, Tsunami).
+      #    Output: data/command_clusters.json.
+      # ----------------------------------------------------------------
+      - name: Tool 36 — command clustering
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          python tools/36_command_clustering_live.py \
+            --input     data/ir_cases.json \
+            --output    data/command_clusters.json \
+            --threshold 0.7
+
       # ----------------------------------------------------------------
       # 8. Extract unique attacker IPs for Tool 27
       # ----------------------------------------------------------------
@@ -228,6 +267,22 @@ jobs:
             --posture    data/posture.json    \
             --output     data/stats.json      \
             -v
+
+
+      # ----------------------------------------------------------------
+      # 11.b2 Tool 30b — ASN clustering
+      #    Reads data/threat_ips.json (Tool 27 output).
+      #    Groups attacker IPs by ASN, tags Tor/VPN/proxy infrastructure.
+      #    Output: data/asn_clusters.json → read by Tool 28 + Tool 37.
+      #    continue-on-error: true — missing file won't break pipeline.
+      # ----------------------------------------------------------------
+      - name: Tool 30b — ASN clustering
+        continue-on-error: true
+        timeout-minutes: 3
+        run: |
+          go run tools/30b_asn_clustering_live.go \
+            --input  data/threat_ips.json \
+            --output data/asn_clusters.json
 
       # ----------------------------------------------------------------
       # 11.a Check for Cowrie downloads — sets DOWNLOADS_FOUND output
@@ -345,6 +400,25 @@ jobs:
               print(f'[Tool 31] Could not parse report: {e}', file=sys.stderr)
           "
 
+
+      # ----------------------------------------------------------------
+      # 11.c2 Tool 33 — YARA classifier (on-demand)
+      #    Runs after Tool 31 — same download files, different analysis.
+      #    Classifies malware families via YARA rules + heuristic fallback.
+      #    Only runs when downloads were fetched (same condition as Tool 31).
+      #    Output: data/yara_matches.json → read by Tool 28 + Tool 37.
+      # ----------------------------------------------------------------
+      - name: Tool 33 — YARA classifier (on-demand)
+        if: steps.check_downloads.outputs.DOWNLOADS_FOUND == 'true'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: |
+          python tools/33_yara_classifier_live.py \
+            --downloads   /tmp/cowrie-downloads \
+            --rules       tools/yara_rules \
+            --output      data/yara_matches.json \
+            --max-size-mb 50
+
       # ----------------------------------------------------------------
       # 11.d Tool 28 — SOC Handover Report
       #
@@ -368,6 +442,38 @@ jobs:
             --malware-report data/malware_report.json \
             --output         data/soc_handover.md \
             --verbose
+
+
+      # ----------------------------------------------------------------
+      # 11.d2 Tool 37 — alert engine
+      #    Fires on HIGH/CRITICAL malware, new successful-auth IPs,
+      #    new ASN clusters, TCP tunnel attempts, active campaigns.
+      #    Channel set via ALERT_CHANNEL secret (slack/email/both/dry-run).
+      #    Defaults to dry-run if secret not set — safe on first deploy.
+      #    Output: data/alert_history.json (dedup state).
+      # ----------------------------------------------------------------
+      - name: Tool 37 — alert engine
+        continue-on-error: true
+        timeout-minutes: 3
+        env:
+          ALERT_CHANNEL:    ${{ secrets.ALERT_CHANNEL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SMTP_HOST:        ${{ secrets.SMTP_HOST }}
+          SMTP_PORT:        ${{ secrets.SMTP_PORT }}
+          SMTP_USER:        ${{ secrets.SMTP_USER }}
+          SMTP_PASS:        ${{ secrets.SMTP_PASS }}
+          ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
+          ALERT_EMAIL_TO:   ${{ secrets.ALERT_EMAIL_TO }}
+        run: |
+          python tools/37_alerts_live.py \
+            --malware-report   data/malware_report.json \
+            --yara-matches     data/yara_matches.json \
+            --credentials      data/credentials.json \
+            --asn-clusters     data/asn_clusters.json \
+            --ir-cases         data/ir_cases.json \
+            --command-clusters data/command_clusters.json \
+            --alert-history    data/alert_history.json \
+            --channel          "${ALERT_CHANNEL:-dry-run}"
 
       # ----------------------------------------------------------------
       # 11.e Tool 32 — Save daily report + update peak stats (every run)
