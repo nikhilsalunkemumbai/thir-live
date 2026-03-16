@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 17,
-      "last_fired": "2026-03-16T20:37:07.149745+00:00",
+      "fired_count": 18,
+      "last_fired": "2026-03-16T22:31:36.110396+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 17,
-      "last_fired": "2026-03-16T20:37:07.149747+00:00",
+      "fired_count": 18,
+      "last_fired": "2026-03-16T22:31:36.110399+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -1049,6 +1049,48 @@
       "last_fired": "2026-03-16T20:37:07.149757+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS36947 (Telecom Algeria)"
+    },
+    "a861f2b347b9ca40": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110386+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Downloader, Rootkit, Mushtik"
+    },
+    "e83ab773b07e6517": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110393+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Downloader, Rootkit, Mushtik, Sora"
+    },
+    "1afb1997b2c8847c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110401+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 159.203.188.188"
+    },
+    "995bd2b5bd5b7d32": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110404+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 36.134.96.76"
+    },
+    "e5c263267e56e2a1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110407+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.210.249.152"
+    },
+    "1971712204198c03": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110410+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 204.168.132.131"
+    },
+    "7efac34e57977c43": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110413+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS45758 (Triple T Broadband Public Company Limited)"
     }
   },
   "credential_ips": {
@@ -1145,55 +1187,60 @@
       "172.172.131.149": "2026-03-16T17:00:28.064480+00:00",
       "178.20.55.16": "2026-03-16T18:59:23.353446+00:00",
       "8.220.210.5": "2026-03-16T20:37:07.149384+00:00",
-      "47.236.84.126": "2026-03-16T20:37:07.149384+00:00"
+      "47.236.84.126": "2026-03-16T20:37:07.149384+00:00",
+      "159.203.188.188": "2026-03-16T22:31:36.109916+00:00",
+      "36.134.96.76": "2026-03-16T22:31:36.109916+00:00",
+      "172.210.249.152": "2026-03-16T22:31:36.109916+00:00",
+      "204.168.132.131": "2026-03-16T22:31:36.109916+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
+      "AS22773",
+      "AS9498",
+      "AS398324",
+      "AS4134",
+      "AS63949",
+      "AS24158",
+      "AS38365",
+      "AS14061",
+      "AS1267",
+      "AS37963",
+      "AS45775",
       "AS4818",
+      "AS9541",
+      "AS212512",
+      "AS151729",
+      "AS137718",
+      "AS7922",
+      "AS14618",
       "AS36947",
-      "AS135377",
       "AS8075",
+      "AS42961",
+      "AS16509",
+      "AS141412",
+      "AS138423",
+      "AS10439",
+      "AS135377",
+      "AS3462",
+      "AS10030",
+      "AS4766",
+      "AS45758",
+      "AS18881",
+      "AS9808",
+      "AS45899",
+      "AS4837",
+      "AS3786",
+      "AS4811",
+      "AS18403",
+      "AS17421",
+      "AS6128",
+      "AS33765",
       "AS45102",
       "AS396982",
-      "AS22773",
-      "AS138423",
-      "AS137718",
-      "AS4766",
-      "AS18403",
-      "AS9829",
-      "AS4811",
-      "AS16509",
-      "AS45775",
-      "AS1267",
-      "AS24158",
-      "AS4837",
-      "AS398324",
-      "AS7922",
       "AS4812",
-      "AS42961",
-      "AS18881",
-      "AS9541",
-      "AS37963",
-      "AS33765",
-      "AS6128",
-      "AS10439",
-      "AS38365",
-      "AS63949",
-      "AS17421",
-      "AS212512",
-      "AS3462",
-      "AS9808",
-      "AS141412",
-      "AS10030",
-      "AS46562",
-      "AS151729",
-      "AS45899",
-      "AS3786",
-      "AS4134",
-      "AS9498",
-      "AS14061",
-      "AS14618"
+      "AS9829",
+      "AS46562"
     ]
   }
 }
