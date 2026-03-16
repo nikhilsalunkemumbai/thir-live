@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 16,
-      "last_fired": "2026-03-16T18:59:23.353802+00:00",
+      "fired_count": 17,
+      "last_fired": "2026-03-16T20:37:07.149745+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 16,
-      "last_fired": "2026-03-16T18:59:23.353806+00:00",
+      "fired_count": 17,
+      "last_fired": "2026-03-16T20:37:07.149747+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -1013,6 +1013,42 @@
       "last_fired": "2026-03-16T18:59:23.353810+00:00",
       "severity": "HIGH",
       "title": "Successful Auth from New IP: 178.20.55.16"
+    },
+    "4e82a854a5ab32b4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149735+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Rootkit, Mushtik, Downloader"
+    },
+    "faa54c9f93b2438e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149741+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Sora, Mushtik, Rootkit, Downloader"
+    },
+    "9ec0099a33da6d50": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149749+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 8.220.210.5"
+    },
+    "7f7e366abb30fad4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149751+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.236.84.126"
+    },
+    "856ad39f2dc042e6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149754+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS151729 (SWIFTIFY PRIVATE LIMITED)"
+    },
+    "d82365e9c0601a51": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149757+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS36947 (Telecom Algeria)"
     }
   },
   "credential_ips": {
@@ -1107,53 +1143,57 @@
       "206.189.192.239": "2026-03-16T17:00:28.064480+00:00",
       "157.245.81.49": "2026-03-16T17:00:28.064480+00:00",
       "172.172.131.149": "2026-03-16T17:00:28.064480+00:00",
-      "178.20.55.16": "2026-03-16T18:59:23.353446+00:00"
+      "178.20.55.16": "2026-03-16T18:59:23.353446+00:00",
+      "8.220.210.5": "2026-03-16T20:37:07.149384+00:00",
+      "47.236.84.126": "2026-03-16T20:37:07.149384+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS396982",
-      "AS10030",
-      "AS398324",
       "AS4818",
-      "AS17421",
-      "AS42961",
-      "AS22773",
-      "AS14061",
+      "AS36947",
       "AS135377",
+      "AS8075",
       "AS45102",
+      "AS396982",
+      "AS22773",
+      "AS138423",
+      "AS137718",
       "AS4766",
-      "AS46562",
-      "AS6128",
-      "AS37963",
+      "AS18403",
+      "AS9829",
       "AS4811",
-      "AS9498",
-      "AS212512",
+      "AS16509",
       "AS45775",
       "AS1267",
-      "AS8075",
-      "AS141412",
-      "AS45899",
-      "AS38365",
-      "AS63949",
-      "AS138423",
-      "AS3786",
-      "AS18881",
-      "AS14618",
-      "AS4134",
-      "AS7922",
-      "AS137718",
-      "AS3462",
-      "AS9829",
-      "AS18403",
-      "AS9541",
-      "AS4812",
-      "AS10439",
-      "AS16509",
-      "AS33765",
       "AS24158",
       "AS4837",
-      "AS9808"
+      "AS398324",
+      "AS7922",
+      "AS4812",
+      "AS42961",
+      "AS18881",
+      "AS9541",
+      "AS37963",
+      "AS33765",
+      "AS6128",
+      "AS10439",
+      "AS38365",
+      "AS63949",
+      "AS17421",
+      "AS212512",
+      "AS3462",
+      "AS9808",
+      "AS141412",
+      "AS10030",
+      "AS46562",
+      "AS151729",
+      "AS45899",
+      "AS3786",
+      "AS4134",
+      "AS9498",
+      "AS14061",
+      "AS14618"
     ]
   }
 }

@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-16 |
-| **Generated At** | 2026-03-16T18:59:23Z |
-| **Shift Time** | 18:59 UTC |
+| **Generated At** | 2026-03-16T20:37:06Z |
+| **Shift Time** | 20:37 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **1063** |
+| Total Sessions Captured | **1196** |
 | Confirmed Threats | **0** |
-| False Positives Filtered | **1063** (100.0%) |
-| Unique Attacker IPs | **237** |
+| False Positives Filtered | **1196** (100.0%) |
+| Unique Attacker IPs | **258** |
 | Countries of Origin | **0** |
-| High Severity Cases | **199** |
+| High Severity Cases | **211** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **864** |
+| Low Severity Cases | **985** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,38 +30,38 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **729** |
-| Unique Credential Pairs | **520** |
-| Unique Usernames | **249** |
-| Unique Passwords | **382** |
-| Successful Auth Pairs | **193** |
+| Total Auth Attempts | **831** |
+| Unique Credential Pairs | **570** |
+| Unique Usernames | **284** |
+| Unique Passwords | **411** |
+| Successful Auth Pairs | **201** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 204 |
-| `345gs5662d34` | 18 |
+| `root` | 216 |
+| `345gs5662d34` | 24 |
 | `user` | 17 |
 | `test` | 13 |
-| `admin` | 12 |
+| `admin` | 13 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `123456` | 70 |
-| `123` | 24 |
-| `345gs5662d34` | 18 |
-| `3245gs5662d34` | 18 |
-| `1234` | 15 |
+| `123456` | 80 |
+| `123` | 32 |
+| `345gs5662d34` | 24 |
+| `3245gs5662d34` | 24 |
+| `1234` | 21 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `345gs5662d34` | `345gs5662d34` | 18 |
-| `root` | `3245gs5662d34` | 18 |
+| `345gs5662d34` | `345gs5662d34` | 24 |
+| `root` | `3245gs5662d34` | 24 |
 | `root` | `toor` | 5 |
 | `admin` | `admin` | 5 |
 | `elasticsearch` | `elasticsearch` | 4 |
@@ -263,6 +263,14 @@
 | `root` | `Mm123456@` | `172.172.131.149` | 2026-03-16T16:26:46 |
 | `root` | `3245gs5662d34` | `172.172.131.149` | 2026-03-16T16:27:10 |
 | `root` | `admin` | `178.20.55.16` | 2026-03-16T18:12:27 |
+| `root` | `7ujm&UJM` | `8.220.210.5` | 2026-03-16T19:37:39 |
+| `root` | `3245gs5662d34` | `8.220.210.5` | 2026-03-16T19:37:42 |
+| `root` | `WS@yckj2019` | `47.236.84.126` | 2026-03-16T19:56:40 |
+| `root` | `3245gs5662d34` | `47.236.84.126` | 2026-03-16T19:56:42 |
+| `root` | `qwer123` | `47.236.84.126` | 2026-03-16T19:58:46 |
+| `root` | `HanTianKV` | `47.236.84.126` | 2026-03-16T19:59:36 |
+| `root` | `Abcde12345` | `47.236.84.126` | 2026-03-16T20:02:15 |
+| `root` | `Cloud@123456` | `47.236.84.126` | 2026-03-16T20:08:34 |
 
 ---
 
@@ -270,8 +278,8 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **237** |
-| Unique ASNs | **100** |
+| Total IPs Analysed | **258** |
+| Unique ASNs | **105** |
 | High-Risk ASNs | **0** |
 | Anon Infrastructure ASNs | **0** |
 
@@ -279,14 +287,14 @@
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS8075` | Microsoft Corporation | 15 | LOW |
-| `AS33765` | TANZANIA TELECOMMUNICATIONS CO. LTD | 12 | LOW |
-| `AS4837` | CHINA UNICOM China169 Backbone | 10 | LOW |
+| `AS8075` | Microsoft Corporation | 18 | LOW |
+| `AS33765` | TANZANIA TELECOMMUNICATIONS CO. LTD | 14 | LOW |
+| `AS4837` | CHINA UNICOM China169 Backbone | 11 | LOW |
 | `AS14061` | DigitalOcean, LLC | 10 | LOW |
-| `AS4766` | Korea Telecom | 9 | LOW |
+| `AS4766` | Korea Telecom | 10 | LOW |
 | `AS22773` | Cox Communications Inc. | 9 | LOW |
-| `AS396982` | Google LLC | 7 | LOW |
-| `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 6 | LOW |
+| `AS45102` | Alibaba (US) Technology Co., Ltd. | 8 | LOW |
+| `AS396982` | Google LLC | 8 | LOW |
 
 ---
 
@@ -336,19 +344,19 @@ _No enriched IPs with abuse scores available._
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 823 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 526 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 199 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 18 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 18 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 928 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 616 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 211 |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 24 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 24 |
 
 ---
 
-## 🔕 False Positive Summary (1063 filtered)
+## 🔕 False Positive Summary (1196 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 1063 |
+| AbuseIPDB score 0 below threshold 25 | 1196 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -359,14 +367,14 @@ _No enriched IPs with abuse scores available._
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 1063 cases |
-| Tool 34  | Credential Extractor        | ✅ 729 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 1196 cases |
+| Tool 34  | Credential Extractor        | ✅ 831 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 237 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 1063 filtered (100.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 258 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 1196 filtered (100.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 100 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 105 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 9 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
@@ -387,4 +395,4 @@ _No enriched IPs with abuse scores available._
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-16T18:59:23Z_
+_Report time: 2026-03-16T20:37:06Z_
