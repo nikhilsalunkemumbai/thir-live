@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 7,
-      "last_fired": "2026-03-15T22:25:39.260445+00:00",
+      "fired_count": 8,
+      "last_fired": "2026-03-16T02:09:23.782447+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 7,
-      "last_fired": "2026-03-15T22:25:39.260448+00:00",
+      "fired_count": 8,
+      "last_fired": "2026-03-16T02:09:23.782452+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -437,6 +437,42 @@
       "last_fired": "2026-03-15T22:25:39.260458+00:00",
       "severity": "HIGH",
       "title": "Successful Auth from New IP: 113.141.171.139"
+    },
+    "59e418c88a430bb1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782433+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Downloader, Gafgyt, Rootkit, Mushtik"
+    },
+    "17964baeebbaee89": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782443+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Sora, Downloader, Gafgyt, Rootkit, Mushtik"
+    },
+    "0ee95faa6cfd1b04": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782455+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 80.71.227.151"
+    },
+    "4b2e9381c0be4762": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782459+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 102.88.137.213"
+    },
+    "a3159f9261f93b93": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782463+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.237.163.130"
+    },
+    "85faab7a164548b3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782467+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 38.137.11.14"
     }
   },
   "credential_ips": {
@@ -476,32 +512,36 @@
       "101.126.67.255": "2026-03-15T22:25:39.260145+00:00",
       "192.241.148.145": "2026-03-15T22:25:39.260145+00:00",
       "68.183.22.159": "2026-03-15T22:25:39.260145+00:00",
-      "113.141.171.139": "2026-03-15T22:25:39.260145+00:00"
+      "113.141.171.139": "2026-03-15T22:25:39.260145+00:00",
+      "80.71.227.151": "2026-03-16T02:09:23.782287+00:00",
+      "102.88.137.213": "2026-03-16T02:09:23.782287+00:00",
+      "47.237.163.130": "2026-03-16T02:09:23.782287+00:00",
+      "38.137.11.14": "2026-03-16T02:09:23.782287+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS16509",
-      "AS22773",
-      "AS38365",
-      "AS4811",
-      "AS45775",
-      "AS4837",
-      "AS4134",
-      "AS45102",
-      "AS14618",
-      "AS137718",
       "AS135377",
-      "AS396982",
-      "AS138423",
+      "AS22773",
+      "AS9808",
+      "AS14618",
+      "AS45102",
+      "AS4837",
+      "AS137718",
+      "AS38365",
       "AS14061",
-      "AS8075",
-      "AS398324",
+      "AS396982",
       "AS63949",
-      "AS141412",
-      "AS9829",
+      "AS45775",
       "AS4766",
-      "AS9808"
+      "AS4134",
+      "AS9829",
+      "AS16509",
+      "AS8075",
+      "AS141412",
+      "AS138423",
+      "AS4811",
+      "AS398324"
     ]
   }
 }
