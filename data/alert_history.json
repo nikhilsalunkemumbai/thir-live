@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 12,
-      "last_fired": "2026-03-16T10:52:23.511940+00:00",
+      "fired_count": 13,
+      "last_fired": "2026-03-16T13:07:06.382642+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 12,
-      "last_fired": "2026-03-16T10:52:23.511943+00:00",
+      "fired_count": 13,
+      "last_fired": "2026-03-16T13:07:06.382646+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -821,6 +821,66 @@
       "last_fired": "2026-03-16T10:52:23.511961+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS46562 (Performive LLC)"
+    },
+    "3623433de384d100": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382628+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Gafgyt, Rootkit, XMRig, Downloader"
+    },
+    "6895d53e08db0eec": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382637+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Gafgyt, Rootkit, Sora, XMRig, Downloader"
+    },
+    "2861b3909c07d15b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382650+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 14.224.217.104"
+    },
+    "a3b58fbfffa3fd9e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382654+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 143.198.176.181"
+    },
+    "bdce761259c5ccce": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382660+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.245.86.152"
+    },
+    "7bb2415fa607eaf0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382665+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS18881 (TELEF\u00d4NICA BRASIL S.A)"
+    },
+    "8a61d102da33edc2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382670+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS18403 (FPT Telecom Company)"
+    },
+    "e14ab721875ccf5a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382675+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS45899 (VNPT Corp)"
+    },
+    "909117f412eda589": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382679+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS212512 (Detai Prosperous Technologies Limited)"
+    },
+    "c42d9055fe25c5bc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382683+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS9541 (Cyber Internet Services (Pvt) Ltd.)"
     }
   },
   "credential_ips": {
@@ -902,42 +962,50 @@
       "179.33.186.150": "2026-03-16T08:54:42.413648+00:00",
       "118.185.85.137": "2026-03-16T10:52:23.511672+00:00",
       "34.93.128.179": "2026-03-16T10:52:23.511672+00:00",
-      "178.62.120.127": "2026-03-16T10:52:23.511672+00:00"
+      "178.62.120.127": "2026-03-16T10:52:23.511672+00:00",
+      "14.224.217.104": "2026-03-16T13:07:06.382317+00:00",
+      "143.198.176.181": "2026-03-16T13:07:06.382317+00:00",
+      "157.245.86.152": "2026-03-16T13:07:06.382317+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS14061",
-      "AS14618",
-      "AS22773",
-      "AS137718",
-      "AS135377",
-      "AS4811",
       "AS45102",
-      "AS141412",
-      "AS38365",
-      "AS9829",
-      "AS6128",
-      "AS3462",
-      "AS45775",
-      "AS16509",
-      "AS63949",
-      "AS138423",
-      "AS33765",
-      "AS4766",
-      "AS8075",
       "AS9808",
-      "AS396982",
-      "AS9498",
+      "AS14061",
+      "AS10030",
+      "AS63949",
       "AS7922",
-      "AS24158",
-      "AS17421",
+      "AS45775",
+      "AS9541",
       "AS46562",
+      "AS8075",
+      "AS135377",
+      "AS6128",
+      "AS16509",
       "AS4837",
+      "AS141412",
+      "AS9829",
+      "AS24158",
+      "AS22773",
+      "AS17421",
+      "AS4766",
+      "AS9498",
       "AS398324",
       "AS4134",
-      "AS10030",
-      "AS4818"
+      "AS14618",
+      "AS137718",
+      "AS33765",
+      "AS4811",
+      "AS396982",
+      "AS18403",
+      "AS4818",
+      "AS138423",
+      "AS38365",
+      "AS45899",
+      "AS3462",
+      "AS18881",
+      "AS212512"
     ]
   }
 }

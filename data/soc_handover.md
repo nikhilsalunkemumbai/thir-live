@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-16 |
-| **Generated At** | 2026-03-16T10:52:23Z |
-| **Shift Time** | 10:52 UTC |
+| **Generated At** | 2026-03-16T13:07:06Z |
+| **Shift Time** | 13:07 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **623** |
-| Confirmed Threats | **519** |
-| False Positives Filtered | **104** (16.7%) |
-| Unique Attacker IPs | **142** |
-| Countries of Origin | **34** |
-| High Severity Cases | **123** |
+| Total Sessions Captured | **784** |
+| Confirmed Threats | **546** |
+| False Positives Filtered | **238** (30.4%) |
+| Unique Attacker IPs | **168** |
+| Countries of Origin | **35** |
+| High Severity Cases | **158** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **500** |
+| Low Severity Cases | **626** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,28 +30,28 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **417** |
-| Unique Credential Pairs | **333** |
-| Unique Usernames | **160** |
-| Unique Passwords | **248** |
-| Successful Auth Pairs | **119** |
+| Total Auth Attempts | **545** |
+| Unique Credential Pairs | **420** |
+| Unique Usernames | **194** |
+| Unique Passwords | **315** |
+| Successful Auth Pairs | **154** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 127 |
+| `root` | 162 |
+| `user` | 13 |
 | `345gs5662d34` | 12 |
-| `oracle` | 9 |
-| `user` | 8 |
-| `admin` | 8 |
+| `admin` | 10 |
+| `oracle` | 10 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `123456` | 39 |
-| `123` | 15 |
+| `123456` | 57 |
+| `123` | 18 |
 | `345gs5662d34` | 12 |
 | `3245gs5662d34` | 12 |
 | `1234` | 10 |
@@ -63,8 +63,8 @@
 | `345gs5662d34` | `345gs5662d34` | 12 |
 | `root` | `3245gs5662d34` | 12 |
 | `root` | `toor` | 5 |
+| `admin` | `admin` | 4 |
 | `elasticsearch` | `elasticsearch` | 3 |
-| `root` | `root1234567890` | 3 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
@@ -189,6 +189,41 @@
 | `root` | `a123456A` | `34.93.128.179` | 2026-03-16T09:56:42 |
 | `root` | `12345` | `178.62.120.127` | 2026-03-16T09:57:31 |
 | `root` | `Hello1234` | `118.194.250.47` | 2026-03-16T10:02:17 |
+| `root` | `222222` | `14.224.217.104` | 2026-03-16T10:53:37 |
+| `root` | `testpass123` | `143.198.176.181` | 2026-03-16T12:05:50 |
+| `root` | `qazwsxedc` | `143.198.176.181` | 2026-03-16T12:06:25 |
+| `root` | `p@ssword` | `143.198.176.181` | 2026-03-16T12:06:32 |
+| `root` | `1qaz@WSX` | `143.198.176.181` | 2026-03-16T12:06:45 |
+| `root` | `zaq12wsx` | `143.198.176.181` | 2026-03-16T12:07:19 |
+| `root` | `aa123456` | `143.198.176.181` | 2026-03-16T12:08:27 |
+| `root` | `Welcome@123` | `143.198.176.181` | 2026-03-16T12:08:34 |
+| `root` | `12345678` | `143.198.176.181` | 2026-03-16T12:08:54 |
+| `root` | `qwerty` | `143.198.176.181` | 2026-03-16T12:09:08 |
+| `root` | `root1234` | `143.198.176.181` | 2026-03-16T12:10:02 |
+| `root` | `Pass1234` | `143.198.176.181` | 2026-03-16T12:10:22 |
+| `root` | `kali` | `143.198.176.181` | 2026-03-16T12:10:49 |
+| `root` | `phuvanduc` | `157.245.86.152` | 2026-03-16T12:30:26 |
+| `root` | `root123456` | `157.245.86.152` | 2026-03-16T12:30:40 |
+| `root` | `huawei` | `157.245.86.152` | 2026-03-16T12:31:40 |
+| `root` | `qwerty` | `157.245.86.152` | 2026-03-16T12:31:53 |
+| `root` | `aB123456` | `157.245.86.152` | 2026-03-16T12:31:59 |
+| `root` | `1029384756` | `157.245.86.152` | 2026-03-16T12:32:06 |
+| `root` | `Aa123456` | `157.245.86.152` | 2026-03-16T12:32:12 |
+| `root` | `Aa123456.` | `157.245.86.152` | 2026-03-16T12:32:25 |
+| `root` | `!QAZ2wsx3edc` | `157.245.86.152` | 2026-03-16T12:32:32 |
+| `root` | `Admin123!` | `157.245.86.152` | 2026-03-16T12:33:12 |
+| `root` | `welcome1` | `157.245.86.152` | 2026-03-16T12:33:18 |
+| `root` | `aA123456` | `157.245.86.152` | 2026-03-16T12:34:17 |
+| `root` | `Pass@123` | `157.245.86.152` | 2026-03-16T12:34:29 |
+| `root` | `t0talc0ntr0l4!` | `157.245.86.152` | 2026-03-16T12:35:02 |
+| `root` | `1qaz@wsx` | `157.245.86.152` | 2026-03-16T12:35:21 |
+| `root` | `passw0rd` | `157.245.86.152` | 2026-03-16T12:35:27 |
+| `root` | `Admin@123` | `157.245.86.152` | 2026-03-16T12:35:47 |
+| `root` | `0000` | `157.245.86.152` | 2026-03-16T12:36:26 |
+| `root` | `Huawei12` | `157.245.86.152` | 2026-03-16T12:37:05 |
+| `root` | `LeitboGi0ro` | `157.245.86.152` | 2026-03-16T12:37:12 |
+| `root` | `abc123` | `157.245.86.152` | 2026-03-16T12:37:24 |
+| `root` | `huawei@123` | `157.245.86.152` | 2026-03-16T12:38:10 |
 
 ---
 
@@ -196,29 +231,29 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **142** |
-| Unique ASNs | **75** |
-| High-Risk ASNs | **62** |
+| Total IPs Analysed | **168** |
+| Unique ASNs | **83** |
+| High-Risk ASNs | **70** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
+| `AS8075` | Microsoft Corporation | 10 | HIGH |
+| `AS33765` | TANZANIA TELECOMMUNICATIONS CO. LTD | 9 | LOW |
 | `AS4837` | CHINA UNICOM China169 Backbone | 8 | HIGH |
-| `AS8075` | Microsoft Corporation | 8 | HIGH |
 | `AS4766` | Korea Telecom | 7 | HIGH |
-| `AS33765` | TANZANIA TELECOMMUNICATIONS CO. LTD | 6 | LOW |
+| `AS9808` | China Mobile Communications Group Co., Ltd. | 6 | HIGH |
+| `AS14061` | DigitalOcean, LLC | 6 | HIGH |
 | `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 5 | HIGH |
-| `AS9808` | China Mobile Communications Group Co., Ltd. | 5 | HIGH |
-| `AS9829` | National Internet Backbone | 4 | HIGH |
-| `AS396982` | Google LLC | 4 | HIGH |
+| `AS396982` | Google LLC | 5 | HIGH |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (119)
+## 🚨 Priority Cases — Immediate Attention (120)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
@@ -4038,6 +4073,37 @@
 - [ ] Block `118.194.250[.]47` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
+### 🔴 HIGH · IR-1efd04c10a16
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `14.224.217[.]104` |
+| **First Seen** | 2026-03-16 10:53 |
+| **Last Seen** | 2026-03-16 10:53 |
+| **Session Duration** | 7s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-03-16 10:53:35` | `cowrie.session.connect` |
+| `2026-03-16 10:53:35` | `cowrie.client.version` |
+| `2026-03-16 10:53:35` | `cowrie.client.kex` |
+| `2026-03-16 10:53:37` | `cowrie.login.success` |
+| `2026-03-16 10:53:37` | `cowrie.direct-tcpip.request` |
+| `2026-03-16 10:53:42` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `14.224.217[.]104` to AbuseIPDB if not already reported
+- [ ] Block `14.224.217[.]104` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
 ---
 
 ## 📡 Reconnaissance Activity — Grouped by Source IP
@@ -4059,6 +4125,7 @@
 | `172.208.24[.]217` | **10** | 2026-03-16 00:08 | 2026-03-16 00:28 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `180.184.178[.]165` | **10** | 2026-03-16 00:29 | 2026-03-16 00:38 | 14m | 1 | `T1110.001 · T1592` | 🟠 MEDIUM |
 | `38.137.11[.]14` | **10** | 2026-03-16 01:29 | 2026-03-16 01:37 | 0m | 10 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `113.219.245[.]57` | **9** | 2026-03-16 12:37 | 2026-03-16 12:57 | 9m | 4 | `T1110.001 · T1592` | 🟢 LOW |
 | `16.58.56[.]214` | **5** | 2026-03-16 03:25 | 2026-03-16 03:27 | 0m | 0 | `T1592` | 🟢 LOW |
 | `101.126.55[.]67` | **4** | 2026-03-16 02:29 | 2026-03-16 02:43 | 2m | 2 | `T1110.001 · T1592` | 🟢 LOW |
 | `112.32.139[.]197` | **4** | 2026-03-16 10:00 | 2026-03-16 10:26 | 8m | 0 | `T1592` | 🟢 LOW |
@@ -4066,7 +4133,10 @@
 | `183.237.121[.]226` | **4** | 2026-03-16 05:27 | 2026-03-16 05:27 | 0m | 3 | `T1110.001 · T1592` | 🟢 LOW |
 | `18.220.248[.]172` | **3** | 2026-03-16 08:40 | 2026-03-16 08:40 | 0m | 0 | `T1592` | 🟢 LOW |
 | `41.111.162[.]34` | **3** | 2026-03-16 07:32 | 2026-03-16 07:37 | 0m | 3 | `T1110.001 · T1592` | 🟢 LOW |
+| `117.71.53[.]210` | **2** | 2026-03-16 11:36 | 2026-03-16 11:56 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
 | `118.185.85[.]137` | **2** | 2026-03-16 09:43 | 2026-03-16 09:44 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
+| `120.241.79[.]66` | **2** | 2026-03-16 11:35 | 2026-03-16 11:43 | 3m | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `13.89.124[.]223` | **2** | 2026-03-16 12:39 | 2026-03-16 12:39 | 0m | 0 | `T1592` | 🟢 LOW |
 | `20.168.122[.]81` | **2** | 2026-03-16 00:47 | 2026-03-16 00:48 | 0m | 0 | `T1592` | 🟢 LOW |
 | `209.38.80[.]6` | **2** | 2026-03-16 05:17 | 2026-03-16 05:18 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `34.78.65[.]246` | **2** | 2026-03-16 09:16 | 2026-03-16 09:16 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -4079,11 +4149,14 @@
 | `102.88.137[.]213` | 1 | 2026-03-16 00:29 | 2026-03-16 00:29 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `106.1.94[.]107` | 1 | 2026-03-16 01:10 | 2026-03-16 01:11 | 15s | 0 | `T1592` | 🟢 LOW |
 | `112.168.71[.]109` | 1 | 2026-03-16 04:44 | 2026-03-16 04:44 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `112.19.44[.]93` | 1 | 2026-03-16 11:52 | 2026-03-16 11:52 | 6s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `112.6.11[.]184` | 1 | 2026-03-16 12:16 | 2026-03-16 12:16 | 1s | 0 | `T1592` | 🟢 LOW |
 | `114.33.44[.]32` | 1 | 2026-03-16 06:56 | 2026-03-16 06:57 | 30s | 0 | `T1592` | 🟢 LOW |
 | `117.175.160[.]58` | 1 | 2026-03-16 02:35 | 2026-03-16 02:37 | 120s | 0 | `T1592` | 🟢 LOW |
 | `117.192.42[.]14` | 1 | 2026-03-16 02:34 | 2026-03-16 02:34 | 1s | 0 | `T1592` | 🟢 LOW |
 | `117.245.138[.]2` | 1 | 2026-03-16 08:18 | 2026-03-16 08:18 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `118.145.74[.]48` | 1 | 2026-03-16 00:33 | 2026-03-16 00:35 | 120s | 0 | `T1592` | 🟢 LOW |
+| `118.163.178[.]146` | 1 | 2026-03-16 11:29 | 2026-03-16 11:31 | 117s | 0 | `T1592` | 🟢 LOW |
 | `118.26.153[.]102` | 1 | 2026-03-16 07:59 | 2026-03-16 07:59 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `119.148.49[.]82` | 1 | 2026-03-16 01:07 | 2026-03-16 01:07 | 0s | 0 | `T1592` | 🟢 LOW |
 | `120.48.29[.]51` | 1 | 2026-03-16 00:10 | 2026-03-16 00:12 | 120s | 0 | `T1592` | 🟢 LOW |
@@ -4094,6 +4167,7 @@
 | `153.178.184[.]51` | 1 | 2026-03-16 03:43 | 2026-03-16 03:44 | 30s | 0 | `T1592` | 🟢 LOW |
 | `160.242.105[.]108` | 1 | 2026-03-16 06:45 | 2026-03-16 06:45 | 30s | 0 | `T1592` | 🟢 LOW |
 | `179.185.29[.]233` | 1 | 2026-03-16 10:31 | 2026-03-16 10:31 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `179.189.85[.]66` | 1 | 2026-03-16 12:11 | 2026-03-16 12:11 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `179.33.186[.]150` | 1 | 2026-03-16 07:49 | 2026-03-16 07:49 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `180.149.212[.]146` | 1 | 2026-03-16 06:02 | 2026-03-16 06:02 | 13s | 0 | `T1592` | 🟢 LOW |
 | `180.166.162[.]78` | 1 | 2026-03-16 03:48 | 2026-03-16 03:48 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -4104,18 +4178,24 @@
 | `183.171.148[.]181` | 1 | 2026-03-16 02:40 | 2026-03-16 02:40 | 35s | 0 | `T1592` | 🟢 LOW |
 | `183.93.165[.]103` | 1 | 2026-03-16 03:21 | 2026-03-16 03:23 | 100s | 0 | `T1592` | 🟢 LOW |
 | `186.148.187[.]172` | 1 | 2026-03-16 02:42 | 2026-03-16 02:42 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `186.215.204[.]109` | 1 | 2026-03-16 11:30 | 2026-03-16 11:30 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `195.33.218[.]186` | 1 | 2026-03-16 12:16 | 2026-03-16 12:16 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `197.155.225[.]93` | 1 | 2026-03-16 09:16 | 2026-03-16 09:16 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `197.251.193[.]6` | 1 | 2026-03-16 02:43 | 2026-03-16 02:43 | 2s | 0 | `T1592` | 🟢 LOW |
 | `203.204.75[.]226` | 1 | 2026-03-16 02:54 | 2026-03-16 02:55 | 13s | 0 | `T1592` | 🟢 LOW |
 | `210.212.28[.]137` | 1 | 2026-03-16 07:10 | 2026-03-16 07:10 | 13s | 0 | `T1592` | 🟢 LOW |
+| `210.245.95[.]11` | 1 | 2026-03-16 11:16 | 2026-03-16 11:16 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `211.20.26[.]201` | 1 | 2026-03-16 08:36 | 2026-03-16 08:38 | 120s | 0 | `T1592` | 🟢 LOW |
 | `221.153.12[.]93` | 1 | 2026-03-16 08:04 | 2026-03-16 08:04 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `221.206.81[.]77` | 1 | 2026-03-16 01:51 | 2026-03-16 01:52 | 13s | 0 | `T1592` | 🟢 LOW |
 | `222.252.21[.]240` | 1 | 2026-03-16 02:35 | 2026-03-16 02:35 | 1s | 0 | `T1592` | 🟢 LOW |
 | `35.130.111[.]146` | 1 | 2026-03-16 02:38 | 2026-03-16 02:40 | 120s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `35.202.9[.]133` | 1 | 2026-03-16 10:59 | 2026-03-16 11:00 | 40s | 0 | `T1592` | 🟢 LOW |
 | `37.34.181[.]111` | 1 | 2026-03-16 06:19 | 2026-03-16 06:19 | 13s | 0 | `T1592` | 🟢 LOW |
 | `42.113.255[.]234` | 1 | 2026-03-16 00:14 | 2026-03-16 00:14 | 0s | 0 | `T1592` | 🟢 LOW |
 | `42.55.12[.]161` | 1 | 2026-03-16 07:41 | 2026-03-16 07:41 | 13s | 0 | `T1592` | 🟢 LOW |
+| `45.239.203[.]145` | 1 | 2026-03-16 12:12 | 2026-03-16 12:12 | 31s | 0 | `T1592` | 🟢 LOW |
+| `45.61.184[.]133` | 1 | 2026-03-16 11:08 | 2026-03-16 11:08 | 0s | 0 | `T1592` | 🟢 LOW |
 | `47.16.201[.]182` | 1 | 2026-03-16 03:28 | 2026-03-16 03:29 | 30s | 0 | `T1592` | 🟢 LOW |
 | `48.214.55[.]51` | 1 | 2026-03-16 08:53 | 2026-03-16 08:53 | 0s | 0 | `T1592` | 🟢 LOW |
 | `49.124.151[.]67` | 1 | 2026-03-16 05:28 | 2026-03-16 05:28 | 0s | 0 | `T1592` | 🟢 LOW |
@@ -4127,6 +4207,7 @@
 | `71.6.199[.]65` | 1 | 2026-03-16 05:42 | 2026-03-16 05:42 | 10s | 0 | `T1592` | 🟢 LOW |
 | `8.220.132[.]38` | 1 | 2026-03-16 02:25 | 2026-03-16 02:26 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `80.71.227[.]151` | 1 | 2026-03-16 00:28 | 2026-03-16 00:28 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `98.93.245[.]202` | 1 | 2026-03-16 12:57 | 2026-03-16 12:57 | 0s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -4139,7 +4220,7 @@
 | `7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d` | ELF Binary (Linux executable) (x86-64 64-bit) | `7a9da7d10aa80b0f...` | 45/100 | 🟡 MEDIUM | **39/76** 🔴 |
 | `98babd858ec296d43844c96d53ff8713c44a451ba6e05b89d64c772828a0514d` | ELF Binary (Linux executable) (x86-64 64-bit) | `98babd858ec296d4...` | 44/100 | 🟡 MEDIUM | **36/76** 🔴 |
 | `a04ac6d98ad989312783d4fe3456c53730b212c79a426fb215708b6c6daa3de3` | ELF Binary (Linux executable) (ARM 32-bit) | `a04ac6d98ad98931...` | 48/100 | 🟡 MEDIUM | **46/76** 🔴 |
-| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 11/100 | 🟢 LOW | **29/76** 🔴 |
+| `a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2` | Unknown binary | `a8460f446be54041...` | 10/100 | 🟢 LOW | **26/76** 🔴 |
 | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
 | `f200744b6900aeb0a27df08c71fc28a7f07b0aee21e844beca214eb8c4ab58dd` | ELF Binary (Linux executable) (x86-64 64-bit) | `f200744b6900aeb0...` | 42/100 | 🟡 MEDIUM | **32/76** 🔴 |
 | `tmpzmvvpi6d` | ELF Binary (Linux executable) (ARM 32-bit) | `a04ac6d98ad98931...` | 48/100 | 🟡 MEDIUM | **46/76** 🔴 |
@@ -4150,16 +4231,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `101.13.4[.]128` | TW | Taiwan Mobile Co., Ltd. | **100** ⚠️ | 25 |
-| `122.187.225[.]220` | IN | BHARTI TELENET LTD. NEW DELHI | **100** ⚠️ | 31 |
-| `61.79.227[.]51` | KR | Korea Telecom | **100** ⚠️ | 13 |
-| `34.79.154[.]157` | BE | Google LLC | **100** ⚠️ | 0 |
-| `49.124.151[.]67` | MY | DiGi Telecommunications Sdn Bhd | **100** ⚠️ | 14 |
-| `102.38.3[.]181` | LY | Giga for Telecommunication and Technology Limited | **100** ⚠️ | 5 |
-| `47.16.201[.]182` | US | Optimum Online (Cablevision Systems) | **100** ⚠️ | 10 |
-| `151.48.3[.]141` | IT | WIND Telecomunicazioni S.p.A | **100** ⚠️ | 2 |
-| `67.43.240[.]149` | US | Fidelity Communication International Inc. | **100** ⚠️ | 5 |
-| `221.153.12[.]93` | KR | Korea Telecom | **100** ⚠️ | 8 |
+| `112.32.139[.]197` | CN | China Mobile Communications Corporation | **100** ⚠️ | 2 |
+| `111.70.23[.]239` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 24 |
+| `42.113.255[.]234` | VN | FPT Telecom Company | **100** ⚠️ | 4 |
+| `49.124.153[.]12` | MY | DiGi Telecommunications Sdn Bhd | **100** ⚠️ | 11 |
+| `183.171.11[.]192` | MY | Celcom Axiata Berhad | **100** ⚠️ | 7 |
+| `210.212.28[.]137` | IN | National Internet Backbone | **100** ⚠️ | 5 |
+| `210.245.95[.]11` | VN | FPT Telecom Company | **100** ⚠️ | 50 |
+| `183.134.76[.]186` | CN | CHINANET-ZJ Shaoxing node network | **100** ⚠️ | 8 |
+| `98.93.245[.]202` | US | Amazon Data Services Northern Virginia | **100** ⚠️ | 4 |
+| `172.208.24[.]217` | US | Microsoft Limited | **100** ⚠️ | 50 |
 
 ---
 
@@ -4167,28 +4248,30 @@
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 487 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 294 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 123 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 12 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 627 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 387 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 158 |
 | [T1105](https://attack.mitre.org/techniques/T1105) | 12 |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 12 |
 
 ---
 
-## 🔕 False Positive Summary (104 filtered)
+## 🔕 False Positive Summary (238 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 31 |
-| AbuseIPDB score 13 below threshold 25 | 1 |
-| AbuseIPDB score 15 below threshold 25 | 3 |
+| AbuseIPDB score 0 below threshold 25 | 6 |
+| AbuseIPDB score 13 below threshold 25 | 5 |
+| AbuseIPDB score 14 below threshold 25 | 1 |
 | AbuseIPDB score 17 below threshold 25 | 1 |
 | AbuseIPDB score 21 below threshold 25 | 1 |
-| AbuseIPDB score 22 below threshold 25 | 2 |
-| AbuseIPDB score 23 below threshold 25 | 1 |
-| AbuseIPDB score 3 below threshold 25 | 7 |
+| AbuseIPDB score 22 below threshold 25 | 3 |
+| AbuseIPDB score 23 below threshold 25 | 50 |
+| AbuseIPDB score 24 below threshold 25 | 1 |
+| AbuseIPDB score 3 below threshold 25 | 76 |
 | AbuseIPDB score 4 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 56 |
+| AbuseIPDB score 5 below threshold 25 | 26 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 67 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -4199,19 +4282,19 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 623 cases |
-| Tool 34  | Credential Extractor        | ✅ 417 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 784 cases |
+| Tool 34  | Credential Extractor        | ✅ 545 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 142 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 104 filtered (16.7%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 168 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 238 filtered (30.4%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 75 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 83 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 9 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 119 priority case(s) shown individually · 80 recon entry/entries in table (26 group(s) consolidating 346 session(s)).
+> **Report grouping:** 120 priority case(s) shown individually · 95 recon entry/entries in table (30 group(s) consolidating 361 session(s)).
 
 ---
 
@@ -4227,4 +4310,4 @@
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-16T10:52:23Z_
+_Report time: 2026-03-16T13:07:06Z_
