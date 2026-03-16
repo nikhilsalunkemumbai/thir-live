@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-16 |
-| **Generated At** | 2026-03-16T05:48:56Z |
-| **Shift Time** | 05:48 UTC |
+| **Generated At** | 2026-03-16T07:14:06Z |
+| **Shift Time** | 07:14 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **482** |
-| Confirmed Threats | **429** |
-| False Positives Filtered | **53** (11.0%) |
-| Unique Attacker IPs | **90** |
-| Countries of Origin | **27** |
+| Total Sessions Captured | **495** |
+| Confirmed Threats | **436** |
+| False Positives Filtered | **59** (11.9%) |
+| Unique Attacker IPs | **100** |
+| Countries of Origin | **29** |
 | High Severity Cases | **101** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **381** |
+| Low Severity Cases | **394** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,10 +30,10 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **356** |
-| Unique Credential Pairs | **305** |
+| Total Auth Attempts | **357** |
+| Unique Credential Pairs | **306** |
 | Unique Usernames | **147** |
-| Unique Passwords | **226** |
+| Unique Passwords | **227** |
 | Successful Auth Pairs | **101** |
 
 **Top Usernames:**
@@ -178,23 +178,23 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **90** |
-| Unique ASNs | **58** |
-| High-Risk ASNs | **50** |
+| Total IPs Analysed | **100** |
+| Unique ASNs | **62** |
+| High-Risk ASNs | **54** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
+| `AS8075` | Microsoft Corporation | 6 | HIGH |
 | `AS4766` | Korea Telecom | 6 | HIGH |
-| `AS8075` | Microsoft Corporation | 5 | HIGH |
 | `AS4837` | CHINA UNICOM China169 Backbone | 5 | HIGH |
 | `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 4 | HIGH |
-| `AS14061` | DigitalOcean, LLC | 3 | HIGH |
-| `AS9808` | China Mobile Communications Group Co., Ltd. | 3 | HIGH |
+| `AS9829` | National Internet Backbone | 3 | HIGH |
+| `AS4818` | DiGi Telecommunications Sdn. Bhd. | 3 | HIGH |
 | `AS17421` | Mobile Business Group | 3 | HIGH |
-| `AS38365` | Beijing Baidu Netcom Science and Technology Co., Ltd. | 3 | HIGH |
+| `AS14061` | DigitalOcean, LLC | 3 | HIGH |
 
 ---
 
@@ -3447,10 +3447,12 @@
 | `183.237.121[.]226` | **4** | 2026-03-16 05:27 | 2026-03-16 05:27 | 0m | 3 | `T1110.001 · T1592` | 🟢 LOW |
 | `20.168.122[.]81` | **2** | 2026-03-16 00:47 | 2026-03-16 00:48 | 0m | 0 | `T1592` | 🟢 LOW |
 | `209.38.80[.]6` | **2** | 2026-03-16 05:17 | 2026-03-16 05:18 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `101.13.5[.]50` | 1 | 2026-03-16 06:22 | 2026-03-16 06:22 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `102.38.3[.]181` | 1 | 2026-03-16 02:50 | 2026-03-16 02:50 | 8s | 0 | `T1592` | 🟢 LOW |
 | `102.88.137[.]213` | 1 | 2026-03-16 00:29 | 2026-03-16 00:29 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `106.1.94[.]107` | 1 | 2026-03-16 01:10 | 2026-03-16 01:11 | 15s | 0 | `T1592` | 🟢 LOW |
 | `112.168.71[.]109` | 1 | 2026-03-16 04:44 | 2026-03-16 04:44 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `114.33.44[.]32` | 1 | 2026-03-16 06:56 | 2026-03-16 06:57 | 30s | 0 | `T1592` | 🟢 LOW |
 | `117.175.160[.]58` | 1 | 2026-03-16 02:35 | 2026-03-16 02:37 | 120s | 0 | `T1592` | 🟢 LOW |
 | `117.192.42[.]14` | 1 | 2026-03-16 02:34 | 2026-03-16 02:34 | 1s | 0 | `T1592` | 🟢 LOW |
 | `118.145.74[.]48` | 1 | 2026-03-16 00:33 | 2026-03-16 00:35 | 120s | 0 | `T1592` | 🟢 LOW |
@@ -3460,6 +3462,8 @@
 | `138.97.64[.]146` | 1 | 2026-03-16 02:30 | 2026-03-16 02:31 | 14s | 0 | `T1592` | 🟢 LOW |
 | `151.48.3[.]141` | 1 | 2026-03-16 05:27 | 2026-03-16 05:27 | 14s | 0 | `T1592` | 🟢 LOW |
 | `153.178.184[.]51` | 1 | 2026-03-16 03:43 | 2026-03-16 03:44 | 30s | 0 | `T1592` | 🟢 LOW |
+| `160.242.105[.]108` | 1 | 2026-03-16 06:45 | 2026-03-16 06:45 | 30s | 0 | `T1592` | 🟢 LOW |
+| `180.149.212[.]146` | 1 | 2026-03-16 06:02 | 2026-03-16 06:02 | 13s | 0 | `T1592` | 🟢 LOW |
 | `180.166.162[.]78` | 1 | 2026-03-16 03:48 | 2026-03-16 03:48 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `180.184.182[.]87` | 1 | 2026-03-16 00:32 | 2026-03-16 00:34 | 120s | 0 | `T1592` | 🟢 LOW |
 | `180.76.105[.]165` | 1 | 2026-03-16 00:28 | 2026-03-16 00:30 | 120s | 0 | `T1592` | 🟢 LOW |
@@ -3468,12 +3472,15 @@
 | `186.148.187[.]172` | 1 | 2026-03-16 02:42 | 2026-03-16 02:42 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `197.251.193[.]6` | 1 | 2026-03-16 02:43 | 2026-03-16 02:43 | 2s | 0 | `T1592` | 🟢 LOW |
 | `203.204.75[.]226` | 1 | 2026-03-16 02:54 | 2026-03-16 02:55 | 13s | 0 | `T1592` | 🟢 LOW |
+| `210.212.28[.]137` | 1 | 2026-03-16 07:10 | 2026-03-16 07:10 | 13s | 0 | `T1592` | 🟢 LOW |
 | `221.206.81[.]77` | 1 | 2026-03-16 01:51 | 2026-03-16 01:52 | 13s | 0 | `T1592` | 🟢 LOW |
 | `222.252.21[.]240` | 1 | 2026-03-16 02:35 | 2026-03-16 02:35 | 1s | 0 | `T1592` | 🟢 LOW |
 | `35.130.111[.]146` | 1 | 2026-03-16 02:38 | 2026-03-16 02:40 | 120s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `37.34.181[.]111` | 1 | 2026-03-16 06:19 | 2026-03-16 06:19 | 13s | 0 | `T1592` | 🟢 LOW |
 | `42.113.255[.]234` | 1 | 2026-03-16 00:14 | 2026-03-16 00:14 | 0s | 0 | `T1592` | 🟢 LOW |
 | `47.16.201[.]182` | 1 | 2026-03-16 03:28 | 2026-03-16 03:29 | 30s | 0 | `T1592` | 🟢 LOW |
 | `49.124.151[.]67` | 1 | 2026-03-16 05:28 | 2026-03-16 05:28 | 0s | 0 | `T1592` | 🟢 LOW |
+| `49.124.152[.]5` | 1 | 2026-03-16 06:04 | 2026-03-16 06:04 | 0s | 0 | `T1592` | 🟢 LOW |
 | `49.124.153[.]12` | 1 | 2026-03-16 02:22 | 2026-03-16 02:22 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 | `61.108.29[.]102` | 1 | 2026-03-16 04:15 | 2026-03-16 04:15 | 12s | 0 | `T1592` | 🟢 LOW |
 | `65.20.202[.]4` | 1 | 2026-03-16 02:45 | 2026-03-16 02:45 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
@@ -3503,16 +3510,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `42.113.255[.]234` | VN | FPT Telecom Company | **100** ⚠️ | 3 |
-| `76.132.238[.]43` | US | Comcast Cable Communications, LLC | **100** ⚠️ | 41 |
-| `83.206.50[.]182` | FR | Orange Business Services | **100** ⚠️ | 11 |
 | `151.48.3[.]141` | IT | WIND Telecomunicazioni S.p.A | **100** ⚠️ | 2 |
-| `222.252.21[.]240` | VN | Hanoi Post and Telecom Company | **100** ⚠️ | 8 |
-| `65.20.202[.]4` | IQ | Earthlink Telecommunications Equipment Trading & Services DMCC | **100** ⚠️ | 21 |
-| `183.171.148[.]181` | MY | Celcom Axiata Berhad | **100** ⚠️ | 0 |
-| `119.148.49[.]82` | BD | Agni Systems Limited, | **100** ⚠️ | 31 |
-| `101.36.122[.]186` | HK | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | **100** ⚠️ | 15 |
-| `47.16.201[.]182` | US | Optimum Online (Cablevision Systems) | **100** ⚠️ | 10 |
+| `114.33.44[.]32` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 14 |
+| `51.68.226[.]171` | FR | OVH SAS | **100** ⚠️ | 38 |
+| `83.206.50[.]182` | FR | Orange Business Services | **100** ⚠️ | 11 |
+| `117.175.160[.]58` | CN | China Mobile Communications Corporation | **100** ⚠️ | 26 |
+| `71.6.199[.]65` | US | CariNet, Inc. | **100** ⚠️ | 50 |
+| `80.71.227[.]151` | NL | SpaceCore.pro Hosting | **100** ⚠️ | 2 |
+| `180.149.212[.]146` | PK | Delta Networks | **100** ⚠️ | 2 |
+| `125.20.228[.]146` | IN | Bharti Televentures Limited A/c ABTS MP | **100** ⚠️ | 13 |
+| `16.58.56[.]214` | US | Amazon.com, Inc. | **100** ⚠️ | 50 |
 
 ---
 
@@ -3520,15 +3527,15 @@
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 408 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 255 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 409 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 256 |
 | [T1078](https://attack.mitre.org/techniques/T1078) | 101 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 4 |
 | [T1105](https://attack.mitre.org/techniques/T1105) | 4 |
+| [T1083](https://attack.mitre.org/techniques/T1083) | 4 |
 
 ---
 
-## 🔕 False Positive Summary (53 filtered)
+## 🔕 False Positive Summary (59 filtered)
 
 | Reason | Count |
 |---|---|
@@ -3538,8 +3545,10 @@
 | AbuseIPDB score 17 below threshold 25 | 1 |
 | AbuseIPDB score 22 below threshold 25 | 1 |
 | AbuseIPDB score 23 below threshold 25 | 1 |
+| AbuseIPDB score 3 below threshold 25 | 1 |
+| AbuseIPDB score 4 below threshold 25 | 1 |
 | AbuseIPDB score 5 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 43 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 47 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -3550,19 +3559,19 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 482 cases |
-| Tool 34  | Credential Extractor        | ✅ 356 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 495 cases |
+| Tool 34  | Credential Extractor        | ✅ 357 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 90 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 53 filtered (11.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 100 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 59 filtered (11.9%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 58 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 62 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 9 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 101 priority case(s) shown individually · 48 recon entry/entries in table (15 group(s) consolidating 295 session(s)).
+> **Report grouping:** 101 priority case(s) shown individually · 55 recon entry/entries in table (15 group(s) consolidating 295 session(s)).
 
 ---
 
@@ -3578,4 +3587,4 @@
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-16T05:48:56Z_
+_Report time: 2026-03-16T07:14:06Z_

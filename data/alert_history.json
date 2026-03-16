@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 9,
-      "last_fired": "2026-03-16T05:48:56.373313+00:00",
+      "fired_count": 10,
+      "last_fired": "2026-03-16T07:14:06.541389+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 9,
-      "last_fired": "2026-03-16T05:48:56.373317+00:00",
+      "fired_count": 10,
+      "last_fired": "2026-03-16T07:14:06.541392+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -713,6 +713,30 @@
       "last_fired": "2026-03-16T05:48:56.373429+00:00",
       "severity": "HIGH",
       "title": "New Attack ASN: AS9498 (BHARTI Airtel Ltd.)"
+    },
+    "dcfcce6b7df12021": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T07:14:06.541372+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Mushtik, Gafgyt, Downloader"
+    },
+    "0c9c61575d65bbc9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T07:14:06.541386+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Mushtik, Gafgyt, Sora, Downloader"
+    },
+    "58eaca774182d8c4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T07:14:06.541394+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS3462 (Data Communication Business Group)"
+    },
+    "17c3d004293a436f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T07:14:06.541397+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS24158 (Taiwan Mobile Co., Ltd.)"
     }
   },
   "credential_ips": {
@@ -793,31 +817,33 @@
   },
   "asn_seen": {
     "seen_asns": [
-      "AS38365",
-      "AS4766",
-      "AS4837",
-      "AS63949",
-      "AS137718",
-      "AS396982",
-      "AS17421",
-      "AS8075",
-      "AS16509",
-      "AS138423",
-      "AS398324",
-      "AS45102",
-      "AS4134",
-      "AS14061",
-      "AS4818",
-      "AS45775",
-      "AS9808",
-      "AS141412",
       "AS135377",
       "AS4811",
+      "AS137718",
+      "AS45102",
+      "AS14061",
+      "AS16509",
+      "AS141412",
+      "AS17421",
+      "AS4766",
+      "AS3462",
       "AS6128",
-      "AS9498",
-      "AS9829",
+      "AS9808",
+      "AS38365",
+      "AS45775",
       "AS14618",
-      "AS22773"
+      "AS24158",
+      "AS22773",
+      "AS9829",
+      "AS4134",
+      "AS398324",
+      "AS396982",
+      "AS138423",
+      "AS63949",
+      "AS4818",
+      "AS9498",
+      "AS8075",
+      "AS4837"
     ]
   }
 }
