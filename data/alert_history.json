@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 10,
-      "last_fired": "2026-03-16T07:14:06.541389+00:00",
+      "fired_count": 11,
+      "last_fired": "2026-03-16T08:54:42.413919+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 10,
-      "last_fired": "2026-03-16T07:14:06.541392+00:00",
+      "fired_count": 11,
+      "last_fired": "2026-03-16T08:54:42.413923+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -737,6 +737,42 @@
       "last_fired": "2026-03-16T07:14:06.541397+00:00",
       "severity": "HIGH",
       "title": "New Attack ASN: AS24158 (Taiwan Mobile Co., Ltd.)"
+    },
+    "2ac9bfa63f56d130": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413906+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, XMRig, Rootkit, Gafgyt"
+    },
+    "7e5e779b9a0bd5f0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413913+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, XMRig, Sora, Rootkit, Gafgyt"
+    },
+    "a44f83c09f5e89fc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413926+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 120.48.80.70"
+    },
+    "4a17ce58122ef7d7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413930+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 49.43.32.40"
+    },
+    "6cd750a1c70b61be": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413938+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 179.33.186.150"
+    },
+    "153b3365c968f608": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413943+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS33765 (TANZANIA TELECOMMUNICATIONS CO. LTD)"
     }
   },
   "credential_ips": {
@@ -812,38 +848,42 @@
       "147.182.140.188": "2026-03-16T05:48:56.372997+00:00",
       "120.48.199.28": "2026-03-16T05:48:56.372997+00:00",
       "209.38.80.6": "2026-03-16T05:48:56.372997+00:00",
-      "183.237.121.226": "2026-03-16T05:48:56.372997+00:00"
+      "183.237.121.226": "2026-03-16T05:48:56.372997+00:00",
+      "120.48.80.70": "2026-03-16T08:54:42.413648+00:00",
+      "49.43.32.40": "2026-03-16T08:54:42.413648+00:00",
+      "179.33.186.150": "2026-03-16T08:54:42.413648+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS135377",
-      "AS4811",
-      "AS137718",
-      "AS45102",
-      "AS14061",
-      "AS16509",
-      "AS141412",
-      "AS17421",
-      "AS4766",
-      "AS3462",
-      "AS6128",
-      "AS9808",
       "AS38365",
-      "AS45775",
-      "AS14618",
       "AS24158",
-      "AS22773",
-      "AS9829",
-      "AS4134",
-      "AS398324",
-      "AS396982",
+      "AS17421",
+      "AS4837",
+      "AS16509",
       "AS138423",
-      "AS63949",
+      "AS14061",
+      "AS4811",
       "AS4818",
+      "AS22773",
+      "AS6128",
+      "AS141412",
+      "AS137718",
+      "AS9829",
+      "AS45102",
+      "AS396982",
+      "AS135377",
+      "AS33765",
       "AS9498",
+      "AS9808",
+      "AS45775",
+      "AS3462",
+      "AS14618",
+      "AS398324",
+      "AS4766",
+      "AS4134",
       "AS8075",
-      "AS4837"
+      "AS63949"
     ]
   }
 }
