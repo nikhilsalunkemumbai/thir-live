@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 11,
-      "last_fired": "2026-03-16T08:54:42.413919+00:00",
+      "fired_count": 12,
+      "last_fired": "2026-03-16T10:52:23.511940+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 11,
-      "last_fired": "2026-03-16T08:54:42.413923+00:00",
+      "fired_count": 12,
+      "last_fired": "2026-03-16T10:52:23.511943+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -773,6 +773,54 @@
       "last_fired": "2026-03-16T08:54:42.413943+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS33765 (TANZANIA TELECOMMUNICATIONS CO. LTD)"
+    },
+    "57a3ee03dddcb04c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511932+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Downloader, Mushtik, XMRig"
+    },
+    "a5ddf7c7124b4626": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511938+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Sora, Downloader, Mushtik, XMRig"
+    },
+    "22e19e38b36264bf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511945+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.185.85.137"
+    },
+    "5abb82f5da75798d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511948+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 34.93.128.179"
+    },
+    "71644247b1eca3c4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511950+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 178.62.120.127"
+    },
+    "f687ed2815750a0e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511953+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS10030 (Celcom Axiata Berhad)"
+    },
+    "9c80b84c049f7bdf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511957+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS7922 (Comcast Cable Communications, LLC)"
+    },
+    "e6fc0d56765185e3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511961+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS46562 (Performive LLC)"
     }
   },
   "credential_ips": {
@@ -851,39 +899,45 @@
       "183.237.121.226": "2026-03-16T05:48:56.372997+00:00",
       "120.48.80.70": "2026-03-16T08:54:42.413648+00:00",
       "49.43.32.40": "2026-03-16T08:54:42.413648+00:00",
-      "179.33.186.150": "2026-03-16T08:54:42.413648+00:00"
+      "179.33.186.150": "2026-03-16T08:54:42.413648+00:00",
+      "118.185.85.137": "2026-03-16T10:52:23.511672+00:00",
+      "34.93.128.179": "2026-03-16T10:52:23.511672+00:00",
+      "178.62.120.127": "2026-03-16T10:52:23.511672+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
+      "AS14061",
+      "AS14618",
+      "AS22773",
+      "AS137718",
+      "AS135377",
+      "AS4811",
+      "AS45102",
+      "AS141412",
       "AS38365",
+      "AS9829",
+      "AS6128",
+      "AS3462",
+      "AS45775",
+      "AS16509",
+      "AS63949",
+      "AS138423",
+      "AS33765",
+      "AS4766",
+      "AS8075",
+      "AS9808",
+      "AS396982",
+      "AS9498",
+      "AS7922",
       "AS24158",
       "AS17421",
+      "AS46562",
       "AS4837",
-      "AS16509",
-      "AS138423",
-      "AS14061",
-      "AS4811",
-      "AS4818",
-      "AS22773",
-      "AS6128",
-      "AS141412",
-      "AS137718",
-      "AS9829",
-      "AS45102",
-      "AS396982",
-      "AS135377",
-      "AS33765",
-      "AS9498",
-      "AS9808",
-      "AS45775",
-      "AS3462",
-      "AS14618",
       "AS398324",
-      "AS4766",
       "AS4134",
-      "AS8075",
-      "AS63949"
+      "AS10030",
+      "AS4818"
     ]
   }
 }
