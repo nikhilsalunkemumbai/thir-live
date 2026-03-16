@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 15,
-      "last_fired": "2026-03-16T17:00:28.064919+00:00",
+      "fired_count": 16,
+      "last_fired": "2026-03-16T18:59:23.353802+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 15,
-      "last_fired": "2026-03-16T17:00:28.064923+00:00",
+      "fired_count": 16,
+      "last_fired": "2026-03-16T18:59:23.353806+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -995,6 +995,24 @@
       "last_fired": "2026-03-16T17:00:28.064982+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS37963 (Hangzhou Alibaba Advertising Co.,Ltd.)"
+    },
+    "58aea4ebfa5ec516": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T18:59:23.353783+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, XMRig, Gafgyt, Rootkit, Mushtik"
+    },
+    "a1e924350fa4d4cf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T18:59:23.353792+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, XMRig, Gafgyt, Sora, Rootkit, Mushtik"
+    },
+    "eafdfbd0b67f60ae": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T18:59:23.353810+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 178.20.55.16"
     }
   },
   "credential_ips": {
@@ -1088,53 +1106,54 @@
       "185.255.47.190": "2026-03-16T17:00:28.064480+00:00",
       "206.189.192.239": "2026-03-16T17:00:28.064480+00:00",
       "157.245.81.49": "2026-03-16T17:00:28.064480+00:00",
-      "172.172.131.149": "2026-03-16T17:00:28.064480+00:00"
+      "172.172.131.149": "2026-03-16T17:00:28.064480+00:00",
+      "178.20.55.16": "2026-03-16T18:59:23.353446+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS3462",
-      "AS138423",
-      "AS16509",
-      "AS9808",
-      "AS8075",
-      "AS63949",
-      "AS398324",
-      "AS33765",
-      "AS45775",
-      "AS24158",
-      "AS10030",
-      "AS4812",
-      "AS6128",
-      "AS14061",
       "AS396982",
-      "AS3786",
-      "AS14618",
-      "AS137718",
+      "AS10030",
+      "AS398324",
       "AS4818",
-      "AS141412",
+      "AS17421",
+      "AS42961",
+      "AS22773",
+      "AS14061",
       "AS135377",
-      "AS4837",
+      "AS45102",
+      "AS4766",
+      "AS46562",
+      "AS6128",
+      "AS37963",
+      "AS4811",
+      "AS9498",
+      "AS212512",
+      "AS45775",
+      "AS1267",
+      "AS8075",
+      "AS141412",
+      "AS45899",
       "AS38365",
-      "AS10439",
+      "AS63949",
+      "AS138423",
+      "AS3786",
+      "AS18881",
+      "AS14618",
+      "AS4134",
+      "AS7922",
+      "AS137718",
+      "AS3462",
+      "AS9829",
       "AS18403",
       "AS9541",
-      "AS42961",
-      "AS18881",
-      "AS4134",
-      "AS45102",
-      "AS45899",
-      "AS17421",
-      "AS22773",
-      "AS46562",
-      "AS9498",
-      "AS37963",
-      "AS212512",
-      "AS1267",
-      "AS4811",
-      "AS7922",
-      "AS4766",
-      "AS9829"
+      "AS4812",
+      "AS10439",
+      "AS16509",
+      "AS33765",
+      "AS24158",
+      "AS4837",
+      "AS9808"
     ]
   }
 }
