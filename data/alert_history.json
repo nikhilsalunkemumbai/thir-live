@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 21,
-      "last_fired": "2026-03-17T07:02:07.048646+00:00",
+      "fired_count": 22,
+      "last_fired": "2026-03-17T08:52:40.680216+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 21,
-      "last_fired": "2026-03-17T07:02:07.048650+00:00",
+      "fired_count": 22,
+      "last_fired": "2026-03-17T08:52:40.680220+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -1211,6 +1211,72 @@
       "last_fired": "2026-03-17T07:02:07.048686+00:00",
       "severity": "HIGH",
       "title": "New Attack ASN: AS141153 (LCX International Technology Co., Limited)"
+    },
+    "2f068f515a4a87fa": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680202+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, XMRig, Downloader, Mushtik"
+    },
+    "3bd851ec8cfc3a0f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680212+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Sora, Gafgyt, XMRig, Downloader, Mushtik"
+    },
+    "6c4a260c24ba8cd8": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680224+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 183.81.33.183"
+    },
+    "0c5abb5c7fbdf358": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680232+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.36.106.113"
+    },
+    "63edff8263fc691a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680237+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.214.209.153"
+    },
+    "7f168873277bec41": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680242+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.139.154.160"
+    },
+    "19825459afccb1c8": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680247+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 35.237.94.18"
+    },
+    "b37c3ccad87b0fb7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680255+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.99.80.40"
+    },
+    "3cb066c39621c33a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680259+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 170.64.231.91"
+    },
+    "947591eb38fe3fdc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680263+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 181.49.3.38"
+    },
+    "c793ed2953c27eb4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680267+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS12400 (Partner Communications Ltd.)"
     }
   },
   "credential_ips": {
@@ -1326,57 +1392,66 @@
       "103.192.39.37": "2026-03-17T07:02:07.048395+00:00",
       "103.192.39.42": "2026-03-17T07:02:07.048395+00:00",
       "134.122.18.242": "2026-03-17T07:02:07.048395+00:00",
-      "172.174.5.146": "2026-03-17T07:02:07.048395+00:00"
+      "172.174.5.146": "2026-03-17T07:02:07.048395+00:00",
+      "183.81.33.183": "2026-03-17T08:52:40.679932+00:00",
+      "101.36.106.113": "2026-03-17T08:52:40.679932+00:00",
+      "172.214.209.153": "2026-03-17T08:52:40.679932+00:00",
+      "103.139.154.160": "2026-03-17T08:52:40.679932+00:00",
+      "35.237.94.18": "2026-03-17T08:52:40.679932+00:00",
+      "118.99.80.40": "2026-03-17T08:52:40.679932+00:00",
+      "170.64.231.91": "2026-03-17T08:52:40.679932+00:00",
+      "181.49.3.38": "2026-03-17T08:52:40.679932+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS22773",
-      "AS1267",
-      "AS398324",
-      "AS14061",
-      "AS3786",
-      "AS33765",
-      "AS14618",
-      "AS212512",
-      "AS42961",
-      "AS46562",
-      "AS45102",
-      "AS45775",
-      "AS396982",
-      "AS36947",
-      "AS9808",
-      "AS16509",
       "AS9829",
-      "AS10439",
-      "AS17421",
-      "AS9541",
-      "AS63949",
-      "AS4811",
-      "AS37963",
-      "AS141153",
-      "AS9498",
       "AS141412",
-      "AS18403",
-      "AS135377",
-      "AS4812",
-      "AS151729",
-      "AS138423",
+      "AS9541",
       "AS38365",
-      "AS45758",
-      "AS4818",
-      "AS4837",
-      "AS45899",
-      "AS4134",
-      "AS8075",
-      "AS4766",
-      "AS3462",
-      "AS10030",
-      "AS7922",
-      "AS24158",
+      "AS4811",
       "AS6128",
+      "AS42961",
+      "AS137718",
+      "AS7922",
+      "AS37963",
+      "AS45102",
+      "AS24158",
+      "AS14061",
       "AS18881",
-      "AS137718"
+      "AS63949",
+      "AS45758",
+      "AS22773",
+      "AS10030",
+      "AS396982",
+      "AS16509",
+      "AS4812",
+      "AS4818",
+      "AS3786",
+      "AS45775",
+      "AS9808",
+      "AS45899",
+      "AS36947",
+      "AS46562",
+      "AS212512",
+      "AS3462",
+      "AS33765",
+      "AS151729",
+      "AS1267",
+      "AS4837",
+      "AS141153",
+      "AS4766",
+      "AS9498",
+      "AS10439",
+      "AS8075",
+      "AS135377",
+      "AS12400",
+      "AS398324",
+      "AS18403",
+      "AS138423",
+      "AS14618",
+      "AS4134",
+      "AS17421"
     ]
   }
 }
