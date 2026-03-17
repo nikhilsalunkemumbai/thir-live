@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 18,
-      "last_fired": "2026-03-16T22:31:36.110396+00:00",
+      "fired_count": 19,
+      "last_fired": "2026-03-17T01:56:04.251840+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 18,
-      "last_fired": "2026-03-16T22:31:36.110399+00:00",
+      "fired_count": 19,
+      "last_fired": "2026-03-17T01:56:04.251842+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -1051,14 +1051,14 @@
       "title": "New Attack ASN: AS36947 (Telecom Algeria)"
     },
     "a861f2b347b9ca40": {
-      "fired_count": 1,
-      "last_fired": "2026-03-16T22:31:36.110386+00:00",
+      "fired_count": 2,
+      "last_fired": "2026-03-17T01:56:04.251827+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Gafgyt, XMRig, Downloader, Rootkit, Mushtik"
     },
     "e83ab773b07e6517": {
-      "fired_count": 1,
-      "last_fired": "2026-03-16T22:31:36.110393+00:00",
+      "fired_count": 2,
+      "last_fired": "2026-03-17T01:56:04.251833+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Gafgyt, XMRig, Downloader, Rootkit, Mushtik, Sora"
     },
@@ -1091,6 +1091,12 @@
       "last_fired": "2026-03-16T22:31:36.110413+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS45758 (Triple T Broadband Public Company Limited)"
+    },
+    "5bfd9feba8f21faa": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T01:56:04.251845+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 196.11.86.134"
     }
   },
   "credential_ips": {
@@ -1191,56 +1197,57 @@
       "159.203.188.188": "2026-03-16T22:31:36.109916+00:00",
       "36.134.96.76": "2026-03-16T22:31:36.109916+00:00",
       "172.210.249.152": "2026-03-16T22:31:36.109916+00:00",
-      "204.168.132.131": "2026-03-16T22:31:36.109916+00:00"
+      "204.168.132.131": "2026-03-16T22:31:36.109916+00:00",
+      "196.11.86.134": "2026-03-17T01:56:04.251723+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS22773",
-      "AS9498",
-      "AS398324",
-      "AS4134",
-      "AS63949",
-      "AS24158",
+      "AS37963",
+      "AS138423",
+      "AS45775",
+      "AS4812",
+      "AS135377",
+      "AS7922",
+      "AS45899",
+      "AS45758",
+      "AS6128",
       "AS38365",
       "AS14061",
-      "AS1267",
-      "AS37963",
-      "AS45775",
-      "AS4818",
-      "AS9541",
-      "AS212512",
-      "AS151729",
-      "AS137718",
-      "AS7922",
       "AS14618",
-      "AS36947",
-      "AS8075",
-      "AS42961",
-      "AS16509",
-      "AS141412",
-      "AS138423",
-      "AS10439",
-      "AS135377",
-      "AS3462",
-      "AS10030",
-      "AS4766",
-      "AS45758",
-      "AS18881",
+      "AS17421",
       "AS9808",
-      "AS45899",
-      "AS4837",
+      "AS63949",
+      "AS9541",
+      "AS137718",
+      "AS36947",
+      "AS10030",
+      "AS8075",
+      "AS4818",
+      "AS9498",
+      "AS45102",
+      "AS398324",
       "AS3786",
+      "AS10439",
+      "AS18881",
+      "AS1267",
+      "AS4134",
+      "AS141412",
+      "AS4766",
+      "AS46562",
+      "AS22773",
+      "AS42961",
       "AS4811",
       "AS18403",
-      "AS17421",
-      "AS6128",
-      "AS33765",
-      "AS45102",
-      "AS396982",
-      "AS4812",
       "AS9829",
-      "AS46562"
+      "AS396982",
+      "AS212512",
+      "AS3462",
+      "AS151729",
+      "AS16509",
+      "AS4837",
+      "AS24158",
+      "AS33765"
     ]
   }
 }
