@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-17 |
-| **Generated At** | 2026-03-17T20:37:32Z |
-| **Shift Time** | 20:37 UTC |
+| **Generated At** | 2026-03-17T22:32:01Z |
+| **Shift Time** | 22:32 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **23690** |
+| Total Sessions Captured | **23816** |
 | Confirmed Threats | **0** |
-| False Positives Filtered | **23690** (100.0%) |
-| Unique Attacker IPs | **241** |
+| False Positives Filtered | **23816** (100.0%) |
+| Unique Attacker IPs | **259** |
 | Countries of Origin | **0** |
-| High Severity Cases | **22738** |
+| High Severity Cases | **22767** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **952** |
+| Low Severity Cases | **1049** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,27 +30,27 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **23159** |
-| Unique Credential Pairs | **22983** |
-| Unique Usernames | **247** |
-| Unique Passwords | **22845** |
-| Successful Auth Pairs | **22729** |
+| Total Auth Attempts | **23272** |
+| Unique Credential Pairs | **23061** |
+| Unique Usernames | **279** |
+| Unique Passwords | **22895** |
+| Successful Auth Pairs | **22758** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 22744 |
-| `ubuntu` | 40 |
+| `root` | 22774 |
+| `ubuntu` | 49 |
+| `admin` | 23 |
 | `345gs5662d34` | 23 |
-| `admin` | 19 |
-| `minecraft` | 7 |
+| `minecraft` | 10 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `123456` | 39 |
+| `123456` | 52 |
 | `345gs5662d34` | 23 |
 | `3245gs5662d34` | 23 |
 | `12345` | 14 |
@@ -62,9 +62,9 @@
 |---|---|---|
 | `345gs5662d34` | `345gs5662d34` | 23 |
 | `root` | `3245gs5662d34` | 23 |
-| `admin` | `admin` | 5 |
+| `admin` | `admin` | 6 |
 | `root` | `ubuntu` | 4 |
-| `root` | `123456` | 4 |
+| `root` | `admin` | 4 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
@@ -22799,6 +22799,35 @@
 | `root` | `Admin121` | `183.81.33.183` | 2026-03-17T19:59:50 |
 | `root` | `Admin122` | `183.81.33.183` | 2026-03-17T20:15:48 |
 | `root` | `Admin123` | `183.81.33.183` | 2026-03-17T20:32:15 |
+| `root` | `Admin124` | `183.81.33.183` | 2026-03-17T20:49:10 |
+| `root` | `Admin125` | `183.81.33.183` | 2026-03-17T21:05:37 |
+| `root` | `Admin126` | `183.81.33.183` | 2026-03-17T21:23:22 |
+| `root` | `aa123456` | `192.241.143.237` | 2026-03-17T21:28:43 |
+| `root` | `123456789` | `192.241.143.237` | 2026-03-17T21:29:18 |
+| `root` | `Aa123456.` | `192.241.143.237` | 2026-03-17T21:30:37 |
+| `root` | `1qaz@WSX3edc` | `192.241.143.237` | 2026-03-17T21:31:17 |
+| `root` | `admin` | `93.62.72.229` | 2026-03-17T21:31:47 |
+| `root` | `Admin127` | `183.81.33.183` | 2026-03-17T21:39:38 |
+| `root` | `0` | `165.22.187.225` | 2026-03-17T21:40:25 |
+| `root` | `Welcome123` | `165.22.187.225` | 2026-03-17T21:40:31 |
+| `root` | `qq123456` | `165.22.187.225` | 2026-03-17T21:40:51 |
+| `root` | `Pass@123` | `165.22.187.225` | 2026-03-17T21:41:05 |
+| `root` | `Test1234` | `165.22.187.225` | 2026-03-17T21:41:11 |
+| `root` | `1q2w3e4r` | `165.22.187.225` | 2026-03-17T21:41:17 |
+| `root` | `abcd@1234` | `165.22.187.225` | 2026-03-17T21:42:16 |
+| `root` | `!qaz@WSX` | `165.22.187.225` | 2026-03-17T21:42:29 |
+| `root` | `111` | `165.22.187.225` | 2026-03-17T21:43:02 |
+| `root` | `test@123` | `165.22.187.225` | 2026-03-17T21:43:15 |
+| `root` | `Password@123` | `165.22.187.225` | 2026-03-17T21:43:35 |
+| `root` | `12qwaszx` | `165.22.187.225` | 2026-03-17T21:44:14 |
+| `root` | `!Q2w3e4r` | `165.22.187.225` | 2026-03-17T21:44:20 |
+| `root` | `qwertyuiop` | `165.22.187.225` | 2026-03-17T21:45:06 |
+| `root` | `1qaz@wsx` | `165.22.187.225` | 2026-03-17T21:45:19 |
+| `root` | `toor` | `165.22.187.225` | 2026-03-17T21:45:25 |
+| `root` | `Huawei123` | `165.22.187.225` | 2026-03-17T21:46:29 |
+| `root` | `Admin128` | `183.81.33.183` | 2026-03-17T21:56:35 |
+| `root` | `Admin129` | `183.81.33.183` | 2026-03-17T22:12:56 |
+| `root` | `Admin1210` | `183.81.33.183` | 2026-03-17T22:29:44 |
 
 ---
 
@@ -22806,8 +22835,8 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **241** |
-| Unique ASNs | **113** |
+| Total IPs Analysed | **259** |
+| Unique ASNs | **119** |
 | High-Risk ASNs | **0** |
 | Anon Infrastructure ASNs | **0** |
 
@@ -22815,14 +22844,14 @@
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS8075` | Microsoft Corporation | 16 | LOW |
+| `AS8075` | Microsoft Corporation | 17 | LOW |
+| `AS14061` | DigitalOcean, LLC | 13 | LOW |
 | `AS4837` | CHINA UNICOM China169 Backbone | 10 | LOW |
-| `AS14061` | DigitalOcean, LLC | 10 | LOW |
+| `AS22773` | Cox Communications Inc. | 10 | LOW |
 | `AS141153` | LCX International Technology Co., Limited | 9 | LOW |
-| `AS22773` | Cox Communications Inc. | 9 | LOW |
-| `AS46562` | Performive LLC | 8 | LOW |
-| `AS4134` | CHINANET-BACKBONE | 8 | LOW |
-| `AS38365` | Beijing Baidu Netcom Science and Technology Co., Ltd. | 7 | LOW |
+| `AS4134` | CHINANET-BACKBONE | 9 | LOW |
+| `AS46562` | Performive LLC | 9 | LOW |
+| `AS45102` | Alibaba (US) Technology Co., Ltd. | 8 | LOW |
 
 ---
 
@@ -22873,19 +22902,19 @@ _No enriched IPs with abuse scores available._
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 23416 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 22738 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 417 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 23534 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 22767 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 499 |
 | [T1105](https://attack.mitre.org/techniques/T1105) | 27 |
 | [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 23 |
 
 ---
 
-## 🔕 False Positive Summary (23690 filtered)
+## 🔕 False Positive Summary (23816 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 23690 |
+| AbuseIPDB score 0 below threshold 25 | 23816 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -22896,14 +22925,14 @@ _No enriched IPs with abuse scores available._
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 23690 cases |
-| Tool 34  | Credential Extractor        | ✅ 23159 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 23816 cases |
+| Tool 34  | Credential Extractor        | ✅ 23272 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 241 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 23690 filtered (100.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 259 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 23816 filtered (100.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 113 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 119 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 10 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
@@ -22924,4 +22953,4 @@ _No enriched IPs with abuse scores available._
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-17T20:37:32Z_
+_Report time: 2026-03-17T22:32:01Z_
