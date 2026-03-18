@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-17T22:32:01.492772+00:00",
+  "generated_at": "2026-03-18T02:00:29.144149+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 9,
@@ -42,10 +42,10 @@
       "filename": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
-        "Rootkit",
         "XMRig",
         "Downloader",
         "Gafgyt",
+        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL"
@@ -54,11 +54,11 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "Rootkit",
-        "Sora",
         "XMRig",
+        "Sora",
         "Downloader",
         "Gafgyt",
+        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL"
@@ -108,10 +108,10 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
         "XMRig",
         "Downloader",
         "Gafgyt",
+        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL",
@@ -221,11 +221,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
-        "Sora",
         "XMRig",
+        "Sora",
         "Downloader",
         "Gafgyt",
+        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL",
