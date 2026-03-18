@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 36,
-      "last_fired": "2026-03-18T15:01:38.061275+00:00",
+      "fired_count": 37,
+      "last_fired": "2026-03-18T16:58:25.304892+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 36,
-      "last_fired": "2026-03-18T15:01:38.061278+00:00",
+      "fired_count": 37,
+      "last_fired": "2026-03-18T16:58:25.304896+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -739,8 +739,8 @@
       "title": "New Attack ASN: AS24158 (Taiwan Mobile Co., Ltd.)"
     },
     "2ac9bfa63f56d130": {
-      "fired_count": 1,
-      "last_fired": "2026-03-16T08:54:42.413906+00:00",
+      "fired_count": 2,
+      "last_fired": "2026-03-18T16:58:25.304877+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Downloader, Mushtik, XMRig, Rootkit, Gafgyt"
     },
@@ -1727,6 +1727,42 @@
       "last_fired": "2026-03-18T15:01:38.061283+00:00",
       "severity": "HIGH",
       "title": "Successful Auth from New IP: 103.153.190.105"
+    },
+    "196d2111fb52cdd9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304887+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, Sora, XMRig, Rootkit, Gafgyt"
+    },
+    "0e98cfbf1a112207": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304900+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 114.98.63.18"
+    },
+    "a1cda8e76839b7f3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304904+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 179.32.33.161"
+    },
+    "3921a4a103a9755e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304908+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.167.96.50"
+    },
+    "8bcb8ea72f4b26b1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304914+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.137.40.250"
+    },
+    "b471a2fb112cdc53": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304920+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS203214 (Hulum Almustakbal Company for Communication Engineering and Services Ltd)"
     }
   },
   "credential_ips": {
@@ -1895,66 +1931,71 @@
       "180.76.175.142": "2026-03-18T13:07:02.296891+00:00",
       "43.100.77.140": "2026-03-18T13:07:02.296891+00:00",
       "67.205.184.189": "2026-03-18T15:01:38.060995+00:00",
-      "103.153.190.105": "2026-03-18T15:01:38.060995+00:00"
+      "103.153.190.105": "2026-03-18T15:01:38.060995+00:00",
+      "114.98.63.18": "2026-03-18T16:58:25.304585+00:00",
+      "179.32.33.161": "2026-03-18T16:58:25.304585+00:00",
+      "180.167.96.50": "2026-03-18T16:58:25.304585+00:00",
+      "113.137.40.250": "2026-03-18T16:58:25.304585+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS4134",
-      "AS36947",
-      "AS7922",
+      "AS151729",
+      "AS141153",
+      "AS17421",
+      "AS33765",
       "AS24158",
       "AS8075",
-      "AS141153",
-      "AS45102",
-      "AS55836",
-      "AS9808",
-      "AS24086",
-      "AS18403",
-      "AS141412",
-      "AS396982",
-      "AS10099",
-      "AS18881",
-      "AS9541",
-      "AS10030",
-      "AS10439",
-      "AS4811",
-      "AS14061",
-      "AS9498",
-      "AS4766",
-      "AS45758",
-      "AS4812",
-      "AS6128",
-      "AS4837",
-      "AS398324",
-      "AS12400",
-      "AS212512",
-      "AS17421",
-      "AS25159",
-      "AS9829",
       "AS37963",
+      "AS55836",
+      "AS4811",
+      "AS4812",
+      "AS141412",
       "AS63949",
-      "AS56046",
+      "AS22773",
+      "AS42961",
+      "AS45102",
+      "AS4134",
+      "AS18403",
       "AS45775",
-      "AS134420",
+      "AS9541",
+      "AS4766",
       "AS38365",
-      "AS16509",
-      "AS138423",
+      "AS25159",
+      "AS396982",
+      "AS7922",
+      "AS10099",
       "AS1267",
-      "AS46562",
-      "AS17488",
-      "AS137718",
-      "AS151729",
+      "AS9829",
+      "AS36947",
+      "AS45758",
       "AS45899",
       "AS135377",
-      "AS4760",
+      "AS24086",
+      "AS9498",
+      "AS9808",
+      "AS10030",
+      "AS46562",
+      "AS18881",
       "AS3786",
-      "AS42961",
+      "AS16509",
       "AS3462",
+      "AS203214",
+      "AS14061",
+      "AS4837",
       "AS4818",
-      "AS22773",
+      "AS4760",
+      "AS12400",
+      "AS6128",
+      "AS17488",
+      "AS56046",
       "AS14618",
-      "AS33765"
+      "AS134420",
+      "AS398324",
+      "AS212512",
+      "AS10439",
+      "AS138423",
+      "AS137718"
     ]
   }
 }
