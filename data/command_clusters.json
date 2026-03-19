@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-19T18:55:06.509784+00:00",
-  "total_sessions_with_commands": 26,
+  "generated_at": "2026-03-19T20:34:38.310649+00:00",
+  "total_sessions_with_commands": 29,
   "total_clusters": 4,
   "campaign_clusters": 3,
   "singleton_clusters": 1,
@@ -42,8 +42,8 @@
       "cluster_id": "CLU-004",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 13,
-      "unique_ip_count": 9,
+      "session_count": 16,
+      "unique_ip_count": 11,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -76,8 +76,8 @@
       ],
       "session_count": 2,
       "unique_ips": [
-        "45.132.19.15",
-        "14.103.41.98"
+        "14.103.41.98",
+        "45.132.19.15"
       ],
       "unique_ip_count": 2,
       "sequence_hash": "302bd2c62bb5cd8c",
@@ -358,19 +358,21 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 13,
+      "session_count": 16,
       "unique_ips": [
-        "78.42.241.233",
-        "118.193.39.127",
-        "118.127.40.41",
-        "113.219.244.16",
-        "101.36.123.173",
-        "61.240.156.16",
-        "161.35.87.209",
+        "118.193.37.79",
         "196.29.34.170",
-        "101.36.122.186"
+        "118.193.39.127",
+        "101.36.122.186",
+        "161.35.87.209",
+        "78.42.241.233",
+        "61.240.156.16",
+        "118.127.40.41",
+        "101.36.124.127",
+        "101.36.123.173",
+        "113.219.244.16"
       ],
-      "unique_ip_count": 9,
+      "unique_ip_count": 11,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -502,6 +504,30 @@
           "isp": "",
           "command_count": 2,
           "timestamp": "2026-03-19T17:08:56.037303Z"
+        },
+        {
+          "session_id": "IR-34d879f3709c",
+          "src_ip": "101.36.123.173",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-19T19:16:11.575441Z"
+        },
+        {
+          "session_id": "IR-a38c854b31db",
+          "src_ip": "101.36.124.127",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-19T19:21:12.107618Z"
+        },
+        {
+          "session_id": "IR-d4156250afb5",
+          "src_ip": "118.193.37.79",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-19T20:20:51.525093Z"
         }
       ]
     }
