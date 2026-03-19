@@ -109,7 +109,20 @@ def load_ir_cases(path: str) -> list:
 
 
 def extract_command_sessions(cases: list) -> list:
-    """Extract sessions with their command sequences."""
+    """Extract sessions with their command sequences.
+
+    Supports two IR case formats:
+      1. Raw Cowrie format — commands stored as cowrie.command.input events
+         inside case["events"] (original honeypot log structure).
+      2. Tool 26 normalized format — commands stored directly in case["commands"]
+         as a plain list of strings; case["events"] contains only timeline entries
+         (no "input" field). This is the format written by Tool 26 in THIR Live.
+
+    Bug fixed (2026-03-19): Tool 36 previously only checked case["events"] for
+    cowrie.command.input eventids. Tool 26 normalizes commands into case["commands"]
+    and writes an empty or timeline-only events list. This caused 0 sessions to be
+    extracted despite 200+ cases with commands present in ir_cases.json.
+    """
     sessions = []
     for case in cases:
         src_ip = case.get("src_ip", case.get("attacker_ip", ""))
@@ -121,6 +134,7 @@ def extract_command_sessions(cases: list) -> list:
         commands = []
         ts_first = None
 
+        # Path 1: raw Cowrie events array (cowrie.command.input entries with "input" field)
         for evt in events:
             etype = evt.get("eventid", evt.get("event_type", ""))
             if etype == "cowrie.command.input":
@@ -130,6 +144,17 @@ def extract_command_sessions(cases: list) -> list:
                     ts = evt.get("timestamp", "")
                     if ts and (not ts_first or ts < ts_first):
                         ts_first = ts
+
+        # Path 2: Tool 26 normalized format — commands stored directly on the case
+        # Only use this fallback when Path 1 found nothing (avoids double-counting
+        # if a future format ever populates both fields).
+        if not commands:
+            for cmd in case.get("commands", []):
+                cmd = (cmd or "").strip()
+                if cmd:
+                    commands.append(cmd)
+            if commands:
+                ts_first = case.get("first_seen", case.get("timestamp", ""))
 
         if commands:
             sessions.append({
