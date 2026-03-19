@@ -13,22 +13,2211 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 1,
-      "last_fired": "2026-03-15T10:27:36.830412+00:00",
+      "fired_count": 44,
+      "last_fired": "2026-03-19T08:39:57.044963+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 1,
-      "last_fired": "2026-03-15T10:27:36.830423+00:00",
+      "fired_count": 44,
+      "last_fired": "2026-03-19T08:39:57.044968+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
+    },
+    "798aec9fdc1e7a37": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.336981+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Gafgyt, Downloader, Mushtik"
+    },
+    "dd6d0f8163aa47d9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.336986+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Sora, Rootkit, XMRig, Gafgyt, Downloader, Mushtik"
+    },
+    "6b4bd22ef0d10e44": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.336994+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 167.71.132.83"
+    },
+    "2238390a6731bca2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.336996+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.194.230.250"
+    },
+    "56108a59084cd79c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.336999+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.52.130.122"
+    },
+    "b2ceea597de00501": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337002+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 105.27.148.94"
+    },
+    "a6506ef3f6a4ae94": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337005+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 189.152.42.213"
+    },
+    "60d71ba0374a840e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337007+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 179.183.192.58"
+    },
+    "334ab39f8ded2c6c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337009+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.193.36.245"
+    },
+    "4bd7e372df885be8": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337015+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 206.189.138.45"
+    },
+    "556b96d17863bda4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337017+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 129.222.203.37"
+    },
+    "316a48217c66500e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337019+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.210.53.192"
+    },
+    "626bc110fb359bc6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337021+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 46.101.119.234"
+    },
+    "6ab48a411479e0b3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337023+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 161.35.170.148"
+    },
+    "1d9259d4e3258840": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337027+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 165.22.214.235"
+    },
+    "cc8c61f262477e06": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337035+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.194.250.47"
+    },
+    "fd57f48b2d319093": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337040+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.95.13.221"
+    },
+    "3fd9b610e765f14b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337044+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 143.244.140.97"
+    },
+    "80f014d741ddbacb": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337049+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.81.45.208"
+    },
+    "4b05bad8ac542f43": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337053+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 167.99.95.73"
+    },
+    "c04f81f4aba9f68f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337057+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 104.248.59.8"
+    },
+    "3ac9ae7d1242b3d2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337060+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 143.110.244.207"
+    },
+    "e428c975f467b716": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337064+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS14061 (DigitalOcean, LLC)"
+    },
+    "029d4799accbbe07": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337068+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS8075 (Microsoft Corporation)"
+    },
+    "43ab10782ffc7df6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337071+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS9808 (China Mobile Communications Group Co., Ltd.)"
+    },
+    "daf3a63e47a4e26b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337074+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS38365 (Beijing Baidu Netcom Science and Technology Co., Ltd.)"
+    },
+    "2093bfe403ac99ec": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337078+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS63949 (Akamai Connected Cloud)"
+    },
+    "b0141aad012a674d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337082+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS4837 (CHINA UNICOM China169 Backbone)"
+    },
+    "d7988645427a28b2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337085+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS137718 (Beijing Volcano Engine Technology Co., Ltd.)"
+    },
+    "e7c82c7793499824": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337089+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS16509 (Amazon.com, Inc.)"
+    },
+    "4cbe02ee0f9299c9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337092+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS135377 (UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED)"
+    },
+    "3bdd7fdeef543133": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337096+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS4134 (CHINANET-BACKBONE)"
+    },
+    "a690a959cc310ecc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337125+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS45102 (Alibaba (US) Technology Co., Ltd.)"
+    },
+    "51fc98f89ec15599": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337130+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS4766 (Korea Telecom)"
+    },
+    "12639ae9208c698d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337134+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS138423 (CMPak Limited)"
+    },
+    "4b7dffa5e5593275": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337138+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS45775 (WISH NET PRIVATE LIMITED)"
+    },
+    "d535d998105da532": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T12:48:39.337141+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS22773 (Cox Communications Inc.)"
+    },
+    "2e32cf6c66ba1248": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070457+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Gafgyt, Downloader, XMRig, Rootkit"
+    },
+    "ffd608ffea48eb12": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070462+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Sora, Gafgyt, Downloader, XMRig, Rootkit"
+    },
+    "de4495a8481ffe54": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070471+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 64.227.132.19"
+    },
+    "204fbea2f16000bb": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070473+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS14618 (Amazon.com, Inc.)"
+    },
+    "3e13fc77a1f1bc61": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T14:28:55.070476+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS9829 (National Internet Backbone)"
+    },
+    "033c9140c2ac9e52": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104323+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Rootkit, Gafgyt, XMRig, Mushtik"
+    },
+    "3f024beb64518ebc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104332+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Rootkit, Sora, Gafgyt, XMRig, Mushtik"
+    },
+    "fbf94e88f3f5d487": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104344+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 68.183.29.199"
+    },
+    "a698b2cbf745ef96": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104348+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.15.59.120"
+    },
+    "2e5ec592abbf6eb0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104351+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.245.70.163"
+    },
+    "45b398f2f8e15d97": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104356+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 124.239.153.90"
+    },
+    "05409fbba63e4b5c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104362+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 102.210.149.105"
+    },
+    "e5c0bcb4beaea460": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104367+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS4811 (China Telecom (Group))"
+    },
+    "c88e62888f89b42f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T16:30:17.104371+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS396982 (Google LLC)"
+    },
+    "a58a30cd01fa1bd1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144082+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Downloader, Mushtik, Gafgyt, XMRig"
+    },
+    "c554479af0c7d359": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144087+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Rootkit, Mushtik, Sora, Gafgyt, XMRig"
+    },
+    "b7527c36f34c2e8e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144095+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.76.141.1"
+    },
+    "5dba62e4510f1842": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144098+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 186.4.240.226"
+    },
+    "3cfd364e5c067bc1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144103+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.184.119.22"
+    },
+    "eca08219b66036c4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144108+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.158.132.160"
+    },
+    "a96104ee3bf5c24e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144115+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS141412 (RAMDIA ONLINE)"
+    },
+    "883791dea6426702": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T18:36:09.144119+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS398324 (Censys, Inc.)"
+    },
+    "749960f04de38438": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288800+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, Rootkit, XMRig"
+    },
+    "e34bf6ad3e8f610f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288813+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, Rootkit, Sora, XMRig"
+    },
+    "cc43a51d40bf4010": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288828+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 183.232.212.207"
+    },
+    "e285310ec5bbd06e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T20:27:21.288832+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 68.183.91.110"
+    },
+    "6a0f9dbbb264cfcc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T22:25:39.260438+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, Rootkit, Gafgyt, XMRig"
+    },
+    "af57f8191e68e2e6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T22:25:39.260443+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Sora, Mushtik, Rootkit, Gafgyt, XMRig"
+    },
+    "97c6e8062cd40612": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T22:25:39.260450+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.126.67.255"
+    },
+    "1d9af94e245b71e4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T22:25:39.260453+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 192.241.148.145"
+    },
+    "ae2e768c1f61fe3d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T22:25:39.260455+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 68.183.22.159"
+    },
+    "298a864e5e78ea89": {
+      "fired_count": 1,
+      "last_fired": "2026-03-15T22:25:39.260458+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.141.171.139"
+    },
+    "59e418c88a430bb1": {
+      "fired_count": 2,
+      "last_fired": "2026-03-18T02:00:29.502094+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Downloader, Gafgyt, Rootkit, Mushtik"
+    },
+    "17964baeebbaee89": {
+      "fired_count": 2,
+      "last_fired": "2026-03-18T02:00:29.502098+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Sora, Downloader, Gafgyt, Rootkit, Mushtik"
+    },
+    "0ee95faa6cfd1b04": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782455+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 80.71.227.151"
+    },
+    "4b2e9381c0be4762": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782459+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 102.88.137.213"
+    },
+    "a3159f9261f93b93": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782463+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.237.163.130"
+    },
+    "85faab7a164548b3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:09:23.782467+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 38.137.11.14"
+    },
+    "0c8219f4ba4c9690": {
+      "fired_count": 2,
+      "last_fired": "2026-03-19T06:56:27.580453+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, XMRig, Rootkit"
+    },
+    "809ba62ee3d0e656": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361378+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, XMRig, Sora, Rootkit"
+    },
+    "c9451ca138deef2e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361381+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 182.53.52.68"
+    },
+    "1f8828693759233f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361384+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 119.200.229.33"
+    },
+    "730c81ac7cf1d36c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361386+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 200.105.141.172"
+    },
+    "f90f2516155faa07": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361389+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 211.223.41.90"
+    },
+    "a2314cb37cef889d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361391+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 218.149.235.152"
+    },
+    "1a8ecbcdbb6f711b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361395+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 83.206.50.182"
+    },
+    "8d32630b80f49f9c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T02:35:00.361398+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 24.47.243.113"
+    },
+    "c9ca9348332bfce7": {
+      "fired_count": 2,
+      "last_fired": "2026-03-18T04:31:07.819286+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Mushtik, Rootkit, Downloader"
+    },
+    "bd5a3d668208c116": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373308+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Sora, XMRig, Mushtik, Rootkit, Downloader"
+    },
+    "fc7ede570aecd974": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373321+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.220.91.138"
+    },
+    "fea5fd61aa658aa4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373324+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 111.70.23.239"
+    },
+    "a88c6329d704b998": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373328+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 222.116.9.180"
+    },
+    "b848c53b53b74d9e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373337+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 111.70.49.180"
+    },
+    "4e36b57dfde9e27b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373342+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 61.79.227.51"
+    },
+    "cc239b8d5c13d143": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373347+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 117.205.3.26"
+    },
+    "3e4ee6f5c0344896": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373351+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 37.153.194.108"
+    },
+    "900ba8ad7d392eb9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373354+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.36.109.176"
+    },
+    "f30f306cbea69455": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373358+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 76.132.238.43"
+    },
+    "db80c167a0e53ca1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373362+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 67.43.240.149"
+    },
+    "aa6a53b63e1f8a03": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373365+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 125.20.228.146"
+    },
+    "0a12e3173cac742a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373369+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 111.70.23.236"
+    },
+    "29998e662d56463a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373373+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 68.7.114.69"
+    },
+    "f7b0b0bac936d680": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373377+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 60.220.241.50"
+    },
+    "dde186428ce25af5": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373380+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.13.4.128"
+    },
+    "896735d4c5b1cd00": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373384+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 122.187.225.220"
+    },
+    "e5260d54a162d139": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373387+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.194.142.167"
+    },
+    "5058eb3f2a322dff": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373390+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 111.171.127.190"
+    },
+    "86d28a6cc3665992": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373393+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 51.68.226.171"
+    },
+    "2e7660cdd4cf9b5a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373397+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 122.170.111.140"
+    },
+    "ea1d7f1423f4c44e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373400+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 59.34.17.130"
+    },
+    "2dadd9113eeec9b7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373408+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 147.182.140.188"
+    },
+    "6ef1372589dd4084": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373414+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 120.48.199.28"
+    },
+    "71f6a10e1e87b773": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373419+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 209.38.80.6"
+    },
+    "171cb204092091a4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373421+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 183.237.121.226"
+    },
+    "439f0fcdeae1d2db": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373423+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS17421 (Mobile Business Group)"
+    },
+    "a7dc1247259e505f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373426+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS4818 (DiGi Telecommunications Sdn. Bhd.)"
+    },
+    "5eec6a74fd36244b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373428+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS6128 (Cablevision Systems Corp.)"
+    },
+    "171625d3467c6c5d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T05:48:56.373429+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS9498 (BHARTI Airtel Ltd.)"
+    },
+    "dcfcce6b7df12021": {
+      "fired_count": 3,
+      "last_fired": "2026-03-19T02:01:04.718432+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Mushtik, Gafgyt, Downloader"
+    },
+    "0c9c61575d65bbc9": {
+      "fired_count": 3,
+      "last_fired": "2026-03-19T02:01:04.718437+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Mushtik, Gafgyt, Sora, Downloader"
+    },
+    "58eaca774182d8c4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T07:14:06.541394+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS3462 (Data Communication Business Group)"
+    },
+    "17c3d004293a436f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T07:14:06.541397+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS24158 (Taiwan Mobile Co., Ltd.)"
+    },
+    "2ac9bfa63f56d130": {
+      "fired_count": 2,
+      "last_fired": "2026-03-18T16:58:25.304877+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, XMRig, Rootkit, Gafgyt"
+    },
+    "7e5e779b9a0bd5f0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413913+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, XMRig, Sora, Rootkit, Gafgyt"
+    },
+    "a44f83c09f5e89fc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413926+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 120.48.80.70"
+    },
+    "4a17ce58122ef7d7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413930+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 49.43.32.40"
+    },
+    "6cd750a1c70b61be": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413938+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 179.33.186.150"
+    },
+    "153b3365c968f608": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T08:54:42.413943+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS33765 (TANZANIA TELECOMMUNICATIONS CO. LTD)"
+    },
+    "57a3ee03dddcb04c": {
+      "fired_count": 2,
+      "last_fired": "2026-03-18T07:00:20.287265+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Downloader, Mushtik, XMRig"
+    },
+    "a5ddf7c7124b4626": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511938+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Sora, Downloader, Mushtik, XMRig"
+    },
+    "22e19e38b36264bf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511945+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.185.85.137"
+    },
+    "5abb82f5da75798d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511948+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 34.93.128.179"
+    },
+    "71644247b1eca3c4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511950+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 178.62.120.127"
+    },
+    "f687ed2815750a0e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511953+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS10030 (Celcom Axiata Berhad)"
+    },
+    "9c80b84c049f7bdf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511957+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS7922 (Comcast Cable Communications, LLC)"
+    },
+    "e6fc0d56765185e3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T10:52:23.511961+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS46562 (Performive LLC)"
+    },
+    "3623433de384d100": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382628+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Gafgyt, Rootkit, XMRig, Downloader"
+    },
+    "6895d53e08db0eec": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382637+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Gafgyt, Rootkit, Sora, XMRig, Downloader"
+    },
+    "2861b3909c07d15b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382650+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 14.224.217.104"
+    },
+    "a3b58fbfffa3fd9e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382654+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 143.198.176.181"
+    },
+    "bdce761259c5ccce": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382660+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.245.86.152"
+    },
+    "7bb2415fa607eaf0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382665+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS18881 (TELEF\u00d4NICA BRASIL S.A)"
+    },
+    "8a61d102da33edc2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382670+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS18403 (FPT Telecom Company)"
+    },
+    "e14ab721875ccf5a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382675+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS45899 (VNPT Corp)"
+    },
+    "909117f412eda589": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382679+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS212512 (Detai Prosperous Technologies Limited)"
+    },
+    "c42d9055fe25c5bc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T13:07:06.382683+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS9541 (Cyber Internet Services (Pvt) Ltd.)"
+    },
+    "c23aaaaa291dd2ee": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915940+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Rootkit, XMRig, Gafgyt, Downloader"
+    },
+    "a0687609aad04ed2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915947+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Sora, XMRig, Gafgyt, Rootkit, Downloader"
+    },
+    "9e0ad8c2ba70f309": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915963+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 143.244.156.203"
+    },
+    "bd6606255cceea91": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915966+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.191.157.64"
+    },
+    "279e44062582d73a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915969+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 108.173.137.12"
+    },
+    "2bc75d31e6c0f056": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915973+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.215.80.173"
+    },
+    "c6d5017d8c3ff75e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915978+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.36.118.177"
+    },
+    "9a3594627a15bc54": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915982+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS10439 (CariNet, Inc.)"
+    },
+    "f5102d949a07f6fb": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T14:58:29.915986+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS42961 (Mobile Telecommunications Company K.S.C.P.)"
+    },
+    "3b811b70cf966411": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064908+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Mushtik, Downloader, XMRig, Rootkit"
+    },
+    "29cad7d0964efd3f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064916+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Mushtik, Sora, Downloader, XMRig, Rootkit"
+    },
+    "099e126aabdad0e5": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064926+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 185.255.47.190"
+    },
+    "2b46c1187c7e5b3c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064929+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 206.189.192.239"
+    },
+    "8ceb3efb587531ab": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064955+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.245.81.49"
+    },
+    "b0a50b211ede9f03": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064962+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.172.131.149"
+    },
+    "3b81f452a7b0fda2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064968+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS1267 (WIND TRE S.P.A.)"
+    },
+    "1e2234ba6cf98e6d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064973+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS3786 (LG DACOM Corporation)"
+    },
+    "e8593370ccdc9634": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064978+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS4812 (China Telecom (Group))"
+    },
+    "0962550b82a5a771": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T17:00:28.064982+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS37963 (Hangzhou Alibaba Advertising Co.,Ltd.)"
+    },
+    "58aea4ebfa5ec516": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T18:59:23.353783+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, XMRig, Gafgyt, Rootkit, Mushtik"
+    },
+    "a1e924350fa4d4cf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T18:59:23.353792+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, XMRig, Gafgyt, Sora, Rootkit, Mushtik"
+    },
+    "eafdfbd0b67f60ae": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T18:59:23.353810+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 178.20.55.16"
+    },
+    "4e82a854a5ab32b4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149735+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Rootkit, Mushtik, Downloader"
+    },
+    "faa54c9f93b2438e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149741+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Sora, Mushtik, Rootkit, Downloader"
+    },
+    "9ec0099a33da6d50": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149749+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 8.220.210.5"
+    },
+    "7f7e366abb30fad4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149751+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.236.84.126"
+    },
+    "856ad39f2dc042e6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149754+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS151729 (SWIFTIFY PRIVATE LIMITED)"
+    },
+    "d82365e9c0601a51": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T20:37:07.149757+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS36947 (Telecom Algeria)"
+    },
+    "a861f2b347b9ca40": {
+      "fired_count": 3,
+      "last_fired": "2026-03-18T08:45:17.558433+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Downloader, Rootkit, Mushtik"
+    },
+    "e83ab773b07e6517": {
+      "fired_count": 3,
+      "last_fired": "2026-03-18T08:45:17.558442+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Downloader, Rootkit, Mushtik, Sora"
+    },
+    "1afb1997b2c8847c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110401+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 159.203.188.188"
+    },
+    "995bd2b5bd5b7d32": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110404+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 36.134.96.76"
+    },
+    "e5c263267e56e2a1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110407+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.210.249.152"
+    },
+    "1971712204198c03": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110410+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 204.168.132.131"
+    },
+    "7efac34e57977c43": {
+      "fired_count": 1,
+      "last_fired": "2026-03-16T22:31:36.110413+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS45758 (Triple T Broadband Public Company Limited)"
+    },
+    "5bfd9feba8f21faa": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T01:56:04.251845+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 196.11.86.134"
+    },
+    "4d8c932f43042fd7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908805+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Downloader, Mushtik, Rootkit, Gafgyt"
+    },
+    "167c5e6699925f58": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908814+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Sora, XMRig, Downloader, Mushtik, Rootkit, Gafgyt"
+    },
+    "4f4c8111f4006088": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908826+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 159.65.237.121"
+    },
+    "4954271f982115a6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908830+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 161.35.121.57"
+    },
+    "4fded7bcc5cb8d97": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908833+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.94.75.114"
+    },
+    "be61019608e87644": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908837+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 159.223.135.43"
+    },
+    "4602b18d059e38f7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908848+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.239.235.46"
+    },
+    "f45749bf19dc2618": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908853+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.184.45.204"
+    },
+    "f71c477fc96db0b9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T04:19:04.908857+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 46.39.251.94"
+    },
+    "96833da30c8dd83e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048631+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Rootkit, Downloader, XMRig, Gafgyt"
+    },
+    "a67ac1470487f787": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048641+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Sora, Rootkit, Downloader, XMRig, Gafgyt"
+    },
+    "e7098ef0abda426b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048653+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 23.97.62.151"
+    },
+    "b7095fc32a9c3c7e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048657+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 41.216.177.55"
+    },
+    "4266de7d8f2d9989": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048661+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.56.30.33"
+    },
+    "45766039a60cafd2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048669+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.192.39.37"
+    },
+    "29999e3110aec82a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048675+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.192.39.42"
+    },
+    "8dd488ddf494d1d9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048679+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 134.122.18.242"
+    },
+    "23531904457c6036": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048682+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.174.5.146"
+    },
+    "552ccb9bed7af46c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T07:02:07.048686+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS141153 (LCX International Technology Co., Limited)"
+    },
+    "2f068f515a4a87fa": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680202+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, XMRig, Downloader, Mushtik"
+    },
+    "3bd851ec8cfc3a0f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680212+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Sora, Gafgyt, XMRig, Downloader, Mushtik"
+    },
+    "6c4a260c24ba8cd8": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680224+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 183.81.33.183"
+    },
+    "0c5abb5c7fbdf358": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680232+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.36.106.113"
+    },
+    "63edff8263fc691a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680237+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 172.214.209.153"
+    },
+    "7f168873277bec41": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680242+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.139.154.160"
+    },
+    "19825459afccb1c8": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680247+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 35.237.94.18"
+    },
+    "b37c3ccad87b0fb7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680255+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.99.80.40"
+    },
+    "3cb066c39621c33a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680259+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 170.64.231.91"
+    },
+    "947591eb38fe3fdc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680263+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 181.49.3.38"
+    },
+    "c793ed2953c27eb4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T08:52:40.680267+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS12400 (Partner Communications Ltd.)"
+    },
+    "6298a6f5162d4c69": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995781+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Rootkit, XMRig, Mushtik, Downloader"
+    },
+    "5c30b6eddbde9eac": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995786+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Sora, Rootkit, XMRig, Mushtik, Downloader"
+    },
+    "267490b3737c2098": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995794+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 105.96.215.77"
+    },
+    "bf2b45235774db2f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995800+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 23.97.62.131"
+    },
+    "5d3e91cedbe03456": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995802+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.200.216.246"
+    },
+    "8ba3db3bfb3b77d7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995806+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.26.153.102"
+    },
+    "9759329774f30209": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995815+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 88.147.215.127"
+    },
+    "6e77369e9a8d9e93": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T10:50:16.995820+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS4760 (HKT Limited)"
+    },
+    "2ce4f197111ab746": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172492+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Rootkit, XMRig, Downloader, Mushtik"
+    },
+    "8222d99788fc49e5": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172497+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, Rootkit, XMRig, Downloader, Mushtik, Sora"
+    },
+    "a7977eb8677ccef6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172505+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 65.20.204.179"
+    },
+    "483842dd53e39f80": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172508+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 87.121.84.78"
+    },
+    "4ca134d2bf0313a7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172510+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.230.182.1"
+    },
+    "e8687befb29bd9c0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172513+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 186.201.54.90"
+    },
+    "e428663f1aba0377": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T13:07:12.172523+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 125.16.27.190"
+    },
+    "cb6cd4cc5afb3319": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886230+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, XMRig, Gafgyt, Rootkit"
+    },
+    "c2138a33e2dc4656": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886237+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, XMRig, Sora, Gafgyt, Rootkit"
+    },
+    "b8433ef488c174b3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886247+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 8.219.179.9"
+    },
+    "37b2656eb8489fa3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886250+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 8.219.170.195"
+    },
+    "bd00fc7bd722ef4b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886252+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.242.70.231"
+    },
+    "264ad9a104c011db": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886255+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.36.107.233"
+    },
+    "15987775da68af01": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886259+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 185.2.228.48"
+    },
+    "56684acf9abacc47": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T14:54:55.886261+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS10099 (China Unicom Global)"
+    },
+    "d1e6092cd1f20484": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T17:03:00.863402+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Rootkit, Downloader, Mushtik, Gafgyt"
+    },
+    "4bf7f05c985704a1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T17:03:00.863409+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Rootkit, Downloader, Mushtik, Sora, Gafgyt"
+    },
+    "062a6e065176f7f0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T17:03:00.863424+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 188.147.150.163"
+    },
+    "4a66b5c6163fdc4b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T19:00:10.389080+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Downloader, Gafgyt, Rootkit, XMRig"
+    },
+    "07595890151403fa": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T19:00:10.389091+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Downloader, Gafgyt, Rootkit, Sora, XMRig"
+    },
+    "5caeee932d95f66a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T19:00:10.389105+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.207.114.104"
+    },
+    "931be225edbef1fc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T19:00:10.389109+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 107.180.88.176"
+    },
+    "385f36a6a4c39ba9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T19:00:10.389113+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS17488 (Hathway IP Over Cable Internet)"
+    },
+    "188d36391bcda315": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T20:37:33.064292+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, XMRig, Rootkit, Gafgyt, Downloader"
+    },
+    "21c7cda261c12775": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T20:37:33.064309+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, XMRig, Rootkit, Sora, Gafgyt, Downloader"
+    },
+    "af448d505734a2ac": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T20:37:33.064328+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS25159 (PJSC MegaFon)"
+    },
+    "bdc36653bf2cb283": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T22:32:02.381161+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Downloader, Gafgyt, Mushtik"
+    },
+    "40053e3777a3587f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T22:32:02.381168+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Sora, XMRig, Downloader, Gafgyt, Mushtik"
+    },
+    "00c0bfa256ebc704": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T22:32:02.381186+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 192.241.143.237"
+    },
+    "9b1a676bebc03b8e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T22:32:02.381188+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 93.62.72.229"
+    },
+    "d6bcb79f36ae26ec": {
+      "fired_count": 1,
+      "last_fired": "2026-03-17T22:32:02.381191+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 165.22.187.225"
+    },
+    "4a21d2134ea79270": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502105+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 147.189.161.77"
+    },
+    "e5ee56dafc2aeeab": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502108+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 61.145.163.164"
+    },
+    "dd5ba8eac6fd1337": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502111+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 197.155.225.93"
+    },
+    "def8b6ff24464e7f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502114+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 143.244.146.173"
+    },
+    "2052ceca9e47859d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502117+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 120.48.174.68"
+    },
+    "01d664afc618715f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502119+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 116.110.23.141"
+    },
+    "831772b7b1bb0264": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502122+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 116.110.156.14"
+    },
+    "998ddc7ca499ed30": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T02:00:29.502125+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS24086 (Viettel Corporation)"
+    },
+    "78b7ec454d39e94f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T04:31:07.819294+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Sora, Gafgyt, Mushtik, Rootkit, XMRig, Downloader"
+    },
+    "d5317e0488d537cc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T04:31:07.819307+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 137.184.78.9"
+    },
+    "e238147c3b7ed908": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T04:31:07.819311+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 219.153.106.29"
+    },
+    "bcbc858166af2b75": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T04:31:07.819315+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS56046 (China Mobile communications corporation)"
+    },
+    "dde34fe9fdcef442": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T04:31:07.819320+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS134420 (Chongqing Telecom)"
+    },
+    "dc2796a1b1eb9e48": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T07:00:20.287270+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Downloader, Mushtik, Sora, XMRig"
+    },
+    "8422c6826aa32037": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T07:00:20.287278+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.76.245.60"
+    },
+    "de6be55519472871": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T07:00:20.287280+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.7.41.144"
+    },
+    "edec3fd3edd12cc0": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T07:00:20.287286+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 174.138.33.218"
+    },
+    "360232bd4e8ab6fa": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T07:00:20.287289+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 41.111.172.2"
+    },
+    "51e8445aab2013ee": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T08:45:17.558461+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 95.70.212.76"
+    },
+    "7649b2302cdc3c24": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T10:51:30.850333+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Downloader, Mushtik, Gafgyt"
+    },
+    "29fdb4d9e4bd2620": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T10:51:30.850342+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Downloader, Mushtik, Sora, Gafgyt"
+    },
+    "b682111057889ec4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T10:51:30.850357+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 90.173.78.90"
+    },
+    "0acd4fcdd01b824c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T10:51:30.850360+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 120.62.8.17"
+    },
+    "1ddf9b707665b5a7": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T10:51:30.850364+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 197.248.8.33"
+    },
+    "fcc45d0326d77b01": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T10:51:30.850369+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS55836 (Reliance Jio Infocomm Limited)"
+    },
+    "d23ca188a5a8cbda": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297147+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Mushtik, XMRig, Downloader"
+    },
+    "a7c840e0b1592065": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297152+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Gafgyt, Mushtik, XMRig, Downloader, Sora"
+    },
+    "181b72a756fe0d53": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297160+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 177.92.51.57"
+    },
+    "dc59155712dbcea6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297163+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.237.144.204"
+    },
+    "689da5505992b1fb": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297167+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 157.245.94.161"
+    },
+    "51b667b4b7835460": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297173+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.76.175.142"
+    },
+    "898f03fa27855560": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T13:07:02.297179+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 43.100.77.140"
+    },
+    "2ee7c663ca0b1b4c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T15:01:38.061262+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Rootkit, Downloader, Mushtik"
+    },
+    "49fe883c1963466b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T15:01:38.061272+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Gafgyt, XMRig, Rootkit, Downloader, Mushtik, Sora"
+    },
+    "9364062784b6c38d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T15:01:38.061280+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 67.205.184.189"
+    },
+    "cd67f07aab6bcb02": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T15:01:38.061283+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 103.153.190.105"
+    },
+    "196d2111fb52cdd9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304887+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, Sora, XMRig, Rootkit, Gafgyt"
+    },
+    "0e98cfbf1a112207": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304900+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 114.98.63.18"
+    },
+    "a1cda8e76839b7f3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304904+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 179.32.33.161"
+    },
+    "3921a4a103a9755e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304908+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 180.167.96.50"
+    },
+    "8bcb8ea72f4b26b1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304914+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.137.40.250"
+    },
+    "b471a2fb112cdc53": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T16:58:25.304920+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS203214 (Hulum Almustakbal Company for Communication Engineering and Services Ltd)"
+    },
+    "ca888ac09dc82819": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158030+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Downloader, Gafgyt, XMRig, Rootkit"
+    },
+    "40dbfa95dea2cb15": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158037+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Mushtik, Sora, Downloader, Gafgyt, XMRig, Rootkit"
+    },
+    "0085708d9e153ca4": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158045+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 34.135.200.178"
+    },
+    "8d811baea3e58a9e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158048+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 183.91.11.36"
+    },
+    "75f9e2617a2dd77d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158050+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 35.130.111.146"
+    },
+    "41b31e09bcf42ee6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158053+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS10796 (Charter Communications Inc)"
+    },
+    "d387caa9167721d5": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158056+00:00",
+      "severity": "HIGH",
+      "title": "New Attack ASN: AS20115 (Charter Communications LLC)"
+    },
+    "2473e14b7355a86c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158059+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS7552 (Viettel Group)"
+    },
+    "1a56f768f7522307": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T18:57:19.158061+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS3301 (Telia Company AB)"
+    },
+    "40899e623221d9bc": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T20:38:17.390685+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, Gafgyt, XMRig, Rootkit"
+    },
+    "c7fd5fe48c4e208f": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T20:38:17.390694+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Mushtik, Gafgyt, XMRig, Sora, Rootkit"
+    },
+    "054411d0dc4ef75c": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T20:38:17.390713+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.192.60.129"
+    },
+    "9a9590e017e512ee": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T22:31:19.527815+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.139.164.171"
+    },
+    "74de7e538bfe37d1": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T22:31:19.527818+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 102.88.137.80"
+    },
+    "f0409b867ae1b935": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T22:31:19.527820+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 138.186.51.119"
+    },
+    "7120f2f91b90ebc5": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T22:31:19.527824+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 65.20.237.109"
+    },
+    "c74eb0ef0f2a75e6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-18T22:31:19.527827+00:00",
+      "severity": "MEDIUM",
+      "title": "New Attack ASN: AS29465 (MTN NIGERIA Communication limited)"
+    },
+    "9a1b819cf898e760": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T02:01:04.718450+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 38.250.116.128"
+    },
+    "4fe1e4f49be2559d": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T05:21:58.131920+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Gafgyt, Mushtik, Downloader"
+    },
+    "6d4514681108ad48": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T05:21:58.131928+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, XMRig, Gafgyt, Sora, Mushtik, Downloader"
+    },
+    "a408c8e2d0cf558b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T05:21:58.131942+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 45.132.19.15"
+    },
+    "5637f6d39e4fc263": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T05:21:58.131947+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 101.36.122.186"
+    },
+    "d623458e26e8e632": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T05:21:58.131951+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.45.101.159"
+    },
+    "e8ab272d16b2d9d9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T05:21:58.131956+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 106.201.230.195"
+    },
+    "91c15398d51bc235": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T06:56:27.580457+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Downloader, Gafgyt, Mushtik, XMRig, Rootkit, Sora"
+    },
+    "cd84e14a4b98ee19": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T06:56:27.580464+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 61.240.156.16"
+    },
+    "94c9f79bea606b1b": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T06:56:27.580467+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.219.244.16"
+    },
+    "ee5ffd4021a174ae": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T06:56:27.580469+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 118.127.40.41"
+    },
+    "bb3813765a27b803": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T06:56:27.580472+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 197.242.170.10"
+    },
+    "3f7cb9d1ca611ed6": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T08:39:57.044944+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Mushtik, Downloader, Gafgyt, XMRig"
+    },
+    "eb9f9f937c30ff03": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T08:39:57.044958+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: Rootkit, Mushtik, Sora, Downloader, Gafgyt, XMRig"
+    },
+    "369112ba24905fa3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T08:39:57.044971+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.163.119.199"
+    },
+    "0048914a66754cd3": {
+      "fired_count": 1,
+      "last_fired": "2026-03-19T08:39:57.044979+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 14.103.41.98"
     }
   },
   "credential_ips": {
-    "seen_success_ips": {}
+    "seen_success_ips": {
+      "167.71.132.83": "2026-03-15T12:48:39.336695+00:00",
+      "118.194.230.250": "2026-03-15T12:48:39.336695+00:00",
+      "101.52.130.122": "2026-03-15T12:48:39.336695+00:00",
+      "105.27.148.94": "2026-03-15T12:48:39.336695+00:00",
+      "189.152.42.213": "2026-03-15T12:48:39.336695+00:00",
+      "179.183.192.58": "2026-03-15T12:48:39.336695+00:00",
+      "118.193.36.245": "2026-03-15T12:48:39.336695+00:00",
+      "206.189.138.45": "2026-03-15T12:48:39.336695+00:00",
+      "129.222.203.37": "2026-03-15T12:48:39.336695+00:00",
+      "172.210.53.192": "2026-03-15T12:48:39.336695+00:00",
+      "46.101.119.234": "2026-03-15T12:48:39.336695+00:00",
+      "161.35.170.148": "2026-03-15T12:48:39.336695+00:00",
+      "165.22.214.235": "2026-03-15T12:48:39.336695+00:00",
+      "118.194.250.47": "2026-03-15T12:48:39.336695+00:00",
+      "103.95.13.221": "2026-03-15T12:48:39.336695+00:00",
+      "143.244.140.97": "2026-03-15T12:48:39.336695+00:00",
+      "112.81.45.208": "2026-03-15T12:48:39.336695+00:00",
+      "167.99.95.73": "2026-03-15T12:48:39.336695+00:00",
+      "104.248.59.8": "2026-03-15T12:48:39.336695+00:00",
+      "143.110.244.207": "2026-03-15T12:48:39.336695+00:00",
+      "64.227.132.19": "2026-03-15T14:28:55.070265+00:00",
+      "68.183.29.199": "2026-03-15T16:30:17.104062+00:00",
+      "157.15.59.120": "2026-03-15T16:30:17.104062+00:00",
+      "157.245.70.163": "2026-03-15T16:30:17.104062+00:00",
+      "124.239.153.90": "2026-03-15T16:30:17.104062+00:00",
+      "102.210.149.105": "2026-03-15T16:30:17.104062+00:00",
+      "180.76.141.1": "2026-03-15T18:36:09.143811+00:00",
+      "186.4.240.226": "2026-03-15T18:36:09.143811+00:00",
+      "112.184.119.22": "2026-03-15T18:36:09.143811+00:00",
+      "103.158.132.160": "2026-03-15T18:36:09.143811+00:00",
+      "183.232.212.207": "2026-03-15T20:27:21.288570+00:00",
+      "68.183.91.110": "2026-03-15T20:27:21.288570+00:00",
+      "101.126.67.255": "2026-03-15T22:25:39.260145+00:00",
+      "192.241.148.145": "2026-03-15T22:25:39.260145+00:00",
+      "68.183.22.159": "2026-03-15T22:25:39.260145+00:00",
+      "113.141.171.139": "2026-03-15T22:25:39.260145+00:00",
+      "80.71.227.151": "2026-03-16T02:09:23.782287+00:00",
+      "102.88.137.213": "2026-03-16T02:09:23.782287+00:00",
+      "47.237.163.130": "2026-03-16T02:09:23.782287+00:00",
+      "38.137.11.14": "2026-03-16T02:09:23.782287+00:00",
+      "182.53.52.68": "2026-03-16T02:35:00.361200+00:00",
+      "119.200.229.33": "2026-03-16T02:35:00.361200+00:00",
+      "200.105.141.172": "2026-03-16T02:35:00.361200+00:00",
+      "211.223.41.90": "2026-03-16T02:35:00.361200+00:00",
+      "218.149.235.152": "2026-03-16T02:35:00.361200+00:00",
+      "83.206.50.182": "2026-03-16T02:35:00.361200+00:00",
+      "24.47.243.113": "2026-03-16T02:35:00.361200+00:00",
+      "103.220.91.138": "2026-03-16T05:48:56.372997+00:00",
+      "111.70.23.239": "2026-03-16T05:48:56.372997+00:00",
+      "222.116.9.180": "2026-03-16T05:48:56.372997+00:00",
+      "111.70.49.180": "2026-03-16T05:48:56.372997+00:00",
+      "61.79.227.51": "2026-03-16T05:48:56.372997+00:00",
+      "117.205.3.26": "2026-03-16T05:48:56.372997+00:00",
+      "37.153.194.108": "2026-03-16T05:48:56.372997+00:00",
+      "101.36.109.176": "2026-03-16T05:48:56.372997+00:00",
+      "76.132.238.43": "2026-03-16T05:48:56.372997+00:00",
+      "67.43.240.149": "2026-03-16T05:48:56.372997+00:00",
+      "125.20.228.146": "2026-03-16T05:48:56.372997+00:00",
+      "111.70.23.236": "2026-03-16T05:48:56.372997+00:00",
+      "68.7.114.69": "2026-03-16T05:48:56.372997+00:00",
+      "60.220.241.50": "2026-03-16T05:48:56.372997+00:00",
+      "101.13.4.128": "2026-03-16T05:48:56.372997+00:00",
+      "122.187.225.220": "2026-03-16T05:48:56.372997+00:00",
+      "112.194.142.167": "2026-03-16T05:48:56.372997+00:00",
+      "111.171.127.190": "2026-03-16T05:48:56.372997+00:00",
+      "51.68.226.171": "2026-03-16T05:48:56.372997+00:00",
+      "122.170.111.140": "2026-03-16T05:48:56.372997+00:00",
+      "59.34.17.130": "2026-03-16T05:48:56.372997+00:00",
+      "147.182.140.188": "2026-03-16T05:48:56.372997+00:00",
+      "120.48.199.28": "2026-03-16T05:48:56.372997+00:00",
+      "209.38.80.6": "2026-03-16T05:48:56.372997+00:00",
+      "183.237.121.226": "2026-03-16T05:48:56.372997+00:00",
+      "120.48.80.70": "2026-03-16T08:54:42.413648+00:00",
+      "49.43.32.40": "2026-03-16T08:54:42.413648+00:00",
+      "179.33.186.150": "2026-03-16T08:54:42.413648+00:00",
+      "118.185.85.137": "2026-03-16T10:52:23.511672+00:00",
+      "34.93.128.179": "2026-03-16T10:52:23.511672+00:00",
+      "178.62.120.127": "2026-03-16T10:52:23.511672+00:00",
+      "14.224.217.104": "2026-03-16T13:07:06.382317+00:00",
+      "143.198.176.181": "2026-03-16T13:07:06.382317+00:00",
+      "157.245.86.152": "2026-03-16T13:07:06.382317+00:00",
+      "143.244.156.203": "2026-03-16T14:58:29.915586+00:00",
+      "172.191.157.64": "2026-03-16T14:58:29.915586+00:00",
+      "108.173.137.12": "2026-03-16T14:58:29.915586+00:00",
+      "103.215.80.173": "2026-03-16T14:58:29.915586+00:00",
+      "101.36.118.177": "2026-03-16T14:58:29.915586+00:00",
+      "185.255.47.190": "2026-03-16T17:00:28.064480+00:00",
+      "206.189.192.239": "2026-03-16T17:00:28.064480+00:00",
+      "157.245.81.49": "2026-03-16T17:00:28.064480+00:00",
+      "172.172.131.149": "2026-03-16T17:00:28.064480+00:00",
+      "178.20.55.16": "2026-03-16T18:59:23.353446+00:00",
+      "8.220.210.5": "2026-03-16T20:37:07.149384+00:00",
+      "47.236.84.126": "2026-03-16T20:37:07.149384+00:00",
+      "159.203.188.188": "2026-03-16T22:31:36.109916+00:00",
+      "36.134.96.76": "2026-03-16T22:31:36.109916+00:00",
+      "172.210.249.152": "2026-03-16T22:31:36.109916+00:00",
+      "204.168.132.131": "2026-03-16T22:31:36.109916+00:00",
+      "196.11.86.134": "2026-03-17T01:56:04.251723+00:00",
+      "159.65.237.121": "2026-03-17T04:19:04.908590+00:00",
+      "161.35.121.57": "2026-03-17T04:19:04.908590+00:00",
+      "180.94.75.114": "2026-03-17T04:19:04.908590+00:00",
+      "159.223.135.43": "2026-03-17T04:19:04.908590+00:00",
+      "47.239.235.46": "2026-03-17T04:19:04.908590+00:00",
+      "112.184.45.204": "2026-03-17T04:19:04.908590+00:00",
+      "46.39.251.94": "2026-03-17T04:19:04.908590+00:00",
+      "23.97.62.151": "2026-03-17T07:02:07.048395+00:00",
+      "41.216.177.55": "2026-03-17T07:02:07.048395+00:00",
+      "103.56.30.33": "2026-03-17T07:02:07.048395+00:00",
+      "103.192.39.37": "2026-03-17T07:02:07.048395+00:00",
+      "103.192.39.42": "2026-03-17T07:02:07.048395+00:00",
+      "134.122.18.242": "2026-03-17T07:02:07.048395+00:00",
+      "172.174.5.146": "2026-03-17T07:02:07.048395+00:00",
+      "183.81.33.183": "2026-03-17T08:52:40.679932+00:00",
+      "101.36.106.113": "2026-03-17T08:52:40.679932+00:00",
+      "172.214.209.153": "2026-03-17T08:52:40.679932+00:00",
+      "103.139.154.160": "2026-03-17T08:52:40.679932+00:00",
+      "35.237.94.18": "2026-03-17T08:52:40.679932+00:00",
+      "118.99.80.40": "2026-03-17T08:52:40.679932+00:00",
+      "170.64.231.91": "2026-03-17T08:52:40.679932+00:00",
+      "181.49.3.38": "2026-03-17T08:52:40.679932+00:00",
+      "105.96.215.77": "2026-03-17T10:50:16.995445+00:00",
+      "23.97.62.131": "2026-03-17T10:50:16.995445+00:00",
+      "113.200.216.246": "2026-03-17T10:50:16.995445+00:00",
+      "118.26.153.102": "2026-03-17T10:50:16.995445+00:00",
+      "88.147.215.127": "2026-03-17T10:50:16.995445+00:00",
+      "65.20.204.179": "2026-03-17T13:07:12.172156+00:00",
+      "87.121.84.78": "2026-03-17T13:07:12.172156+00:00",
+      "157.230.182.1": "2026-03-17T13:07:12.172156+00:00",
+      "186.201.54.90": "2026-03-17T13:07:12.172156+00:00",
+      "125.16.27.190": "2026-03-17T13:07:12.172156+00:00",
+      "8.219.179.9": "2026-03-17T14:54:55.882245+00:00",
+      "8.219.170.195": "2026-03-17T14:54:55.882245+00:00",
+      "47.242.70.231": "2026-03-17T14:54:55.882245+00:00",
+      "101.36.107.233": "2026-03-17T14:54:55.882245+00:00",
+      "185.2.228.48": "2026-03-17T14:54:55.882245+00:00",
+      "188.147.150.163": "2026-03-17T17:03:00.853976+00:00",
+      "113.207.114.104": "2026-03-17T19:00:10.375080+00:00",
+      "107.180.88.176": "2026-03-17T19:00:10.375080+00:00",
+      "192.241.143.237": "2026-03-17T22:32:02.367171+00:00",
+      "93.62.72.229": "2026-03-17T22:32:02.367171+00:00",
+      "165.22.187.225": "2026-03-17T22:32:02.367171+00:00",
+      "147.189.161.77": "2026-03-18T02:00:29.501929+00:00",
+      "61.145.163.164": "2026-03-18T02:00:29.501929+00:00",
+      "197.155.225.93": "2026-03-18T02:00:29.501929+00:00",
+      "143.244.146.173": "2026-03-18T02:00:29.501929+00:00",
+      "120.48.174.68": "2026-03-18T02:00:29.501929+00:00",
+      "116.110.23.141": "2026-03-18T02:00:29.501929+00:00",
+      "116.110.156.14": "2026-03-18T02:00:29.501929+00:00",
+      "137.184.78.9": "2026-03-18T04:31:07.819120+00:00",
+      "219.153.106.29": "2026-03-18T04:31:07.819120+00:00",
+      "180.76.245.60": "2026-03-18T07:00:20.287061+00:00",
+      "103.7.41.144": "2026-03-18T07:00:20.287061+00:00",
+      "174.138.33.218": "2026-03-18T07:00:20.287061+00:00",
+      "41.111.172.2": "2026-03-18T07:00:20.287061+00:00",
+      "95.70.212.76": "2026-03-18T08:45:17.558249+00:00",
+      "90.173.78.90": "2026-03-18T10:51:30.850075+00:00",
+      "120.62.8.17": "2026-03-18T10:51:30.850075+00:00",
+      "197.248.8.33": "2026-03-18T10:51:30.850075+00:00",
+      "177.92.51.57": "2026-03-18T13:07:02.296891+00:00",
+      "103.237.144.204": "2026-03-18T13:07:02.296891+00:00",
+      "157.245.94.161": "2026-03-18T13:07:02.296891+00:00",
+      "180.76.175.142": "2026-03-18T13:07:02.296891+00:00",
+      "43.100.77.140": "2026-03-18T13:07:02.296891+00:00",
+      "67.205.184.189": "2026-03-18T15:01:38.060995+00:00",
+      "103.153.190.105": "2026-03-18T15:01:38.060995+00:00",
+      "114.98.63.18": "2026-03-18T16:58:25.304585+00:00",
+      "179.32.33.161": "2026-03-18T16:58:25.304585+00:00",
+      "180.167.96.50": "2026-03-18T16:58:25.304585+00:00",
+      "113.137.40.250": "2026-03-18T16:58:25.304585+00:00",
+      "34.135.200.178": "2026-03-18T18:57:19.157621+00:00",
+      "183.91.11.36": "2026-03-18T18:57:19.157621+00:00",
+      "35.130.111.146": "2026-03-18T18:57:19.157621+00:00",
+      "113.192.60.129": "2026-03-18T20:38:17.390420+00:00",
+      "118.139.164.171": "2026-03-18T22:31:19.527491+00:00",
+      "102.88.137.80": "2026-03-18T22:31:19.527491+00:00",
+      "138.186.51.119": "2026-03-18T22:31:19.527491+00:00",
+      "65.20.237.109": "2026-03-18T22:31:19.527491+00:00",
+      "38.250.116.128": "2026-03-19T02:01:04.718336+00:00",
+      "45.132.19.15": "2026-03-19T05:21:58.131773+00:00",
+      "101.36.122.186": "2026-03-19T05:21:58.131773+00:00",
+      "118.45.101.159": "2026-03-19T05:21:58.131773+00:00",
+      "106.201.230.195": "2026-03-19T05:21:58.131773+00:00",
+      "61.240.156.16": "2026-03-19T06:56:27.580281+00:00",
+      "113.219.244.16": "2026-03-19T06:56:27.580281+00:00",
+      "118.127.40.41": "2026-03-19T06:56:27.580281+00:00",
+      "197.242.170.10": "2026-03-19T06:56:27.580281+00:00",
+      "112.163.119.199": "2026-03-19T08:39:57.044796+00:00",
+      "14.103.41.98": "2026-03-19T08:39:57.044796+00:00"
+    }
   },
   "asn_seen": {
-    "seen_asns": []
+    "seen_asns": [
+      "AS4760",
+      "AS45775",
+      "AS10030",
+      "AS3786",
+      "AS36947",
+      "AS1267",
+      "AS10099",
+      "AS134420",
+      "AS9541",
+      "AS4811",
+      "AS8075",
+      "AS25159",
+      "AS138423",
+      "AS137718",
+      "AS9808",
+      "AS6128",
+      "AS20115",
+      "AS398324",
+      "AS56046",
+      "AS18881",
+      "AS7552",
+      "AS3301",
+      "AS16509",
+      "AS4812",
+      "AS151729",
+      "AS24158",
+      "AS4837",
+      "AS9829",
+      "AS33765",
+      "AS24086",
+      "AS29465",
+      "AS3462",
+      "AS203214",
+      "AS141153",
+      "AS63949",
+      "AS10796",
+      "AS38365",
+      "AS135377",
+      "AS7922",
+      "AS141412",
+      "AS12400",
+      "AS14618",
+      "AS37963",
+      "AS45102",
+      "AS4134",
+      "AS46562",
+      "AS17488",
+      "AS212512",
+      "AS10439",
+      "AS17421",
+      "AS396982",
+      "AS42961",
+      "AS45899",
+      "AS4766",
+      "AS4818",
+      "AS22773",
+      "AS45758",
+      "AS55836",
+      "AS18403",
+      "AS14061",
+      "AS9498"
+    ]
   }
 }
