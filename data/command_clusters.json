@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-20T06:52:23.317024+00:00",
-  "total_sessions_with_commands": 4,
+  "generated_at": "2026-03-20T08:37:51.144890+00:00",
+  "total_sessions_with_commands": 5,
   "total_clusters": 2,
   "campaign_clusters": 2,
   "singleton_clusters": 0,
@@ -29,8 +29,8 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 3,
+      "unique_ip_count": 3,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -160,12 +160,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 3,
       "unique_ips": [
         "206.189.191.70",
-        "217.154.35.203"
+        "217.154.35.203",
+        "95.39.82.218"
       ],
-      "unique_ip_count": 2,
+      "unique_ip_count": 3,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -209,6 +210,14 @@
           "isp": "",
           "command_count": 2,
           "timestamp": "2026-03-20T04:53:40.709839Z"
+        },
+        {
+          "session_id": "IR-377a89c2864f",
+          "src_ip": "95.39.82.218",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-20T07:24:09.173618Z"
         }
       ]
     }
