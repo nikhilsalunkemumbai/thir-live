@@ -13,14 +13,14 @@
       "title": "YARA Match: Gafgyt, Sora, Downloader, XMRig, Rootkit, Mushtik"
     },
     "2839681e67a9d320": {
-      "fired_count": 62,
-      "last_fired": "2026-03-20T22:27:09.185115+00:00",
+      "fired_count": 63,
+      "last_fired": "2026-03-21T01:49:37.606378+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
     "6093fd870375fa34": {
-      "fired_count": 62,
-      "last_fired": "2026-03-20T22:27:09.185119+00:00",
+      "fired_count": 63,
+      "last_fired": "2026-03-21T01:49:37.606384+00:00",
       "severity": "CRITICAL",
       "title": "YARA Match: Rootkit"
     },
@@ -2005,8 +2005,8 @@
       "title": "Successful Auth from New IP: 118.193.39.127"
     },
     "cf9c1a54de28dc00": {
-      "fired_count": 13,
-      "last_fired": "2026-03-20T18:45:14.543939+00:00",
+      "fired_count": 15,
+      "last_fired": "2026-03-21T01:49:37.606477+00:00",
       "severity": "HIGH",
       "title": "Attack Campaign Detected: mdrfckr SSH Key Injection"
     },
@@ -2477,6 +2477,144 @@
       "last_fired": "2026-03-20T22:27:09.185139+00:00",
       "severity": "MEDIUM",
       "title": "New Attack ASN: AS3737 (PenTeleData Inc.)"
+    },
+    "b5b6cd053cc88740": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606341+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Gafgyt, Downloader, Mushtik, Rootkit"
+    },
+    "f5707a7d6aa9a9c9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606350+00:00",
+      "severity": "CRITICAL",
+      "title": "YARA Match: XMRig, Gafgyt, Sora, Downloader, Mushtik, Rootkit"
+    },
+    "346cb68dcd591638": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606388+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 139.224.131.169"
+    },
+    "a1aff369c07cb709": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606391+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.238.91.108"
+    },
+    "6f4cc526b00b34ae": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606395+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 218.26.205.154"
+    },
+    "f7c47efc42a0d417": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606399+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 187.49.63.41"
+    },
+    "f571bd60ed2ede5e": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606403+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 112.102.48.129"
+    },
+    "8d72532836133f51": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606407+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 218.206.136.24"
+    },
+    "451352435b758758": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606411+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 60.174.39.82"
+    },
+    "c3c32538cf0f62db": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606416+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 65.181.79.60"
+    },
+    "ef495d10e88a9e84": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606422+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 8.222.205.160"
+    },
+    "43871376304c2691": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606427+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 148.227.90.210"
+    },
+    "8db0cf911bc6ddc9": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606430+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 87.251.69.126"
+    },
+    "6cbf7d6e8de8e03a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606433+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 81.90.25.79"
+    },
+    "feee7416c9ca928a": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606437+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 47.242.68.55"
+    },
+    "32a68f13c839ae59": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606441+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 49.124.153.9"
+    },
+    "3e87eb17ece78335": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606445+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 222.216.2.74"
+    },
+    "82dc8e30009f4882": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606449+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 110.39.181.194"
+    },
+    "b746cb658a7a8ec2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606453+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 171.233.91.172"
+    },
+    "454073715e6a4eb2": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606456+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.176.216.199"
+    },
+    "954ae958576ad1bf": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606460+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 218.15.224.102"
+    },
+    "e03701859d276ac5": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606464+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 113.11.34.221"
+    },
+    "7cc442d8e6ee5983": {
+      "fired_count": 1,
+      "last_fired": "2026-03-21T01:49:37.606468+00:00",
+      "severity": "HIGH",
+      "title": "Successful Auth from New IP: 191.37.18.250"
     }
   },
   "credential_ips": {
@@ -2714,83 +2852,104 @@
       "112.132.158.36": "2026-03-20T20:30:20.074351+00:00",
       "49.124.150.249": "2026-03-20T22:27:09.184851+00:00",
       "181.233.140.250": "2026-03-20T22:27:09.184851+00:00",
-      "139.59.47.91": "2026-03-20T22:27:09.184851+00:00"
+      "139.59.47.91": "2026-03-20T22:27:09.184851+00:00",
+      "139.224.131.169": "2026-03-21T01:49:37.606096+00:00",
+      "47.238.91.108": "2026-03-21T01:49:37.606096+00:00",
+      "218.26.205.154": "2026-03-21T01:49:37.606096+00:00",
+      "187.49.63.41": "2026-03-21T01:49:37.606096+00:00",
+      "112.102.48.129": "2026-03-21T01:49:37.606096+00:00",
+      "218.206.136.24": "2026-03-21T01:49:37.606096+00:00",
+      "60.174.39.82": "2026-03-21T01:49:37.606096+00:00",
+      "65.181.79.60": "2026-03-21T01:49:37.606096+00:00",
+      "8.222.205.160": "2026-03-21T01:49:37.606096+00:00",
+      "148.227.90.210": "2026-03-21T01:49:37.606096+00:00",
+      "87.251.69.126": "2026-03-21T01:49:37.606096+00:00",
+      "81.90.25.79": "2026-03-21T01:49:37.606096+00:00",
+      "47.242.68.55": "2026-03-21T01:49:37.606096+00:00",
+      "49.124.153.9": "2026-03-21T01:49:37.606096+00:00",
+      "222.216.2.74": "2026-03-21T01:49:37.606096+00:00",
+      "110.39.181.194": "2026-03-21T01:49:37.606096+00:00",
+      "171.233.91.172": "2026-03-21T01:49:37.606096+00:00",
+      "113.176.216.199": "2026-03-21T01:49:37.606096+00:00",
+      "218.15.224.102": "2026-03-21T01:49:37.606096+00:00",
+      "113.11.34.221": "2026-03-21T01:49:37.606096+00:00",
+      "191.37.18.250": "2026-03-21T01:49:37.606096+00:00"
     }
   },
   "asn_seen": {
     "seen_asns": [
-      "AS4818",
-      "AS14061",
-      "AS18403",
-      "AS45775",
-      "AS17816",
-      "AS10796",
-      "AS22773",
-      "AS138423",
-      "AS3737",
-      "AS134420",
-      "AS137718",
-      "AS398324",
-      "AS6128",
-      "AS141412",
-      "AS16509",
-      "AS20115",
-      "AS141153",
-      "AS10030",
-      "AS1221",
-      "AS151729",
-      "AS10099",
       "AS212512",
+      "AS10796",
+      "AS6128",
+      "AS134420",
+      "AS16509",
+      "AS18881",
+      "AS10439",
+      "AS7922",
+      "AS7552",
+      "AS17421",
+      "AS151729",
+      "AS12389",
+      "AS4837",
+      "AS9808",
+      "AS141412",
+      "AS1221",
+      "AS24158",
+      "AS203214",
+      "AS4818",
+      "AS20115",
+      "AS17813",
+      "AS22773",
+      "AS8075",
+      "AS3462",
+      "AS45758",
+      "AS9829",
+      "AS4760",
+      "AS45899",
+      "AS4811",
+      "AS396982",
+      "AS3816",
+      "AS29465",
+      "AS25159",
       "AS4134",
+      "AS3786",
+      "AS55836",
+      "AS135089",
+      "AS3737",
+      "AS10030",
       "AS24086",
       "AS42961",
       "AS4808",
-      "AS3462",
-      "AS25159",
-      "AS4837",
-      "AS396982",
-      "AS45758",
+      "AS398324",
       "AS14618",
-      "AS4811",
-      "AS46562",
-      "AS8075",
-      "AS9829",
-      "AS56048",
-      "AS37963",
-      "AS9808",
-      "AS36947",
-      "AS45102",
-      "AS3786",
-      "AS17488",
-      "AS4812",
-      "AS4766",
-      "AS18881",
-      "AS1267",
-      "AS135377",
-      "AS29465",
-      "AS12389",
-      "AS48090",
-      "AS17421",
-      "AS203214",
-      "AS33765",
-      "AS63949",
-      "AS7552",
-      "AS4760",
-      "AS7922",
-      "AS135089",
-      "AS56046",
-      "AS21859",
-      "AS45899",
       "AS9541",
-      "AS38365",
-      "AS24158",
-      "AS3301",
-      "AS12400",
-      "AS17813",
+      "AS46562",
+      "AS33765",
       "AS9498",
-      "AS10439",
-      "AS55836",
-      "AS3816"
+      "AS3301",
+      "AS38365",
+      "AS4766",
+      "AS14061",
+      "AS135377",
+      "AS18403",
+      "AS45775",
+      "AS138423",
+      "AS56046",
+      "AS36947",
+      "AS56048",
+      "AS45102",
+      "AS137718",
+      "AS21859",
+      "AS17816",
+      "AS4812",
+      "AS17488",
+      "AS141153",
+      "AS63949",
+      "AS12400",
+      "AS48090",
+      "AS10099",
+      "AS37963",
+      "AS1267"
     ]
   }
 }
