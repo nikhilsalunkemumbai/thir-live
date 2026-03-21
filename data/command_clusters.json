@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-03-21T01:49:01.061237+00:00",
-  "total_sessions_with_commands": 8,
-  "total_clusters": 2,
+  "generated_at": "2026-03-21T04:04:00.891771+00:00",
+  "total_sessions_with_commands": 29,
+  "total_clusters": 12,
   "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "singleton_clusters": 6,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
@@ -29,8 +29,8 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 7,
-      "unique_ip_count": 4,
+      "session_count": 11,
+      "unique_ip_count": 5,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -152,14 +152,15 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 7,
+      "session_count": 11,
       "unique_ips": [
         "139.224.131.169",
         "47.242.68.55",
+        "47.238.91.108",
         "8.222.205.160",
-        "47.238.91.108"
+        "47.238.247.149"
       ],
-      "unique_ip_count": 4,
+      "unique_ip_count": 5,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -243,6 +244,400 @@
           "isp": "",
           "command_count": 2,
           "timestamp": "2026-03-21T01:33:30.743892Z"
+        },
+        {
+          "session_id": "IR-0040392ccaac",
+          "src_ip": "47.238.247.149",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-21T02:03:46.900750Z"
+        },
+        {
+          "session_id": "IR-19d8377a2796",
+          "src_ip": "47.238.247.149",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-21T02:04:33.022497Z"
+        },
+        {
+          "session_id": "IR-d3cc9c2f2989",
+          "src_ip": "47.238.247.149",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-21T02:08:22.204632Z"
+        },
+        {
+          "session_id": "IR-0486853fc9ca",
+          "src_ip": "47.238.247.149",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-21T02:09:55.332876Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "1bd63f19ff92669a",
+      "ttps": [
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "nproc 2>/dev/null || (grep -c '^processor' /proc/cpuinfo 2>/dev/null) || echo 0",
+        "grep -c ^processor /proc/cpuinfo 2 > /dev/null"
+      ],
+      "members": [
+        {
+          "session_id": "IR-8def47303835",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-21T02:50:33.108490Z"
+        },
+        {
+          "session_id": "IR-6b31fb491040",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-21T03:57:59.446489Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "dd291cd6294bafef",
+      "ttps": [
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "uptime"
+      ],
+      "members": [
+        {
+          "session_id": "IR-6b5b4f934fef",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:16:14.369918Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-005",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e8be2a33d35f6395",
+      "ttps": [],
+      "representative_commands": [
+        "ps aux | head -10"
+      ],
+      "members": [
+        {
+          "session_id": "IR-265cc6c07707",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:20:58.977938Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-006",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "f25297859cf0a70a",
+      "ttps": [],
+      "representative_commands": [
+        "whoami"
+      ],
+      "members": [
+        {
+          "session_id": "IR-a0823d4b598b",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:26:28.723813Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-007",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "352110e27ca54240",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "ls -la /"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f30b1b81635b",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:32:35.710762Z"
+        },
+        {
+          "session_id": "IR-3c2b34230cb6",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:56:35.036065Z"
+        },
+        {
+          "session_id": "IR-c1ec2d742dc7",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:45:29.556332Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-008",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 3,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "7063dece7cccf374",
+      "ttps": [],
+      "representative_commands": [
+        "hostname"
+      ],
+      "members": [
+        {
+          "session_id": "IR-f3b40706f063",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:38:29.240586Z"
+        },
+        {
+          "session_id": "IR-e240930dd3cb",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:02:35.383049Z"
+        },
+        {
+          "session_id": "IR-3b8e33f3ab22",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:39:27.482261Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-009",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "a1159e9df3670d54",
+      "ttps": [],
+      "representative_commands": [
+        "pwd"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b71700a2179b",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T02:44:25.689627Z"
+        },
+        {
+          "session_id": "IR-6dc75d62919b",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:20:47.261806Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-010",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "eff265ce3fe88cc5",
+      "ttps": [],
+      "representative_commands": [
+        "mount | head -5"
+      ],
+      "members": [
+        {
+          "session_id": "IR-b492140806b8",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:08:41.786588Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-011",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "28ba533b0f3c4df6",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -a"
+      ],
+      "members": [
+        {
+          "session_id": "IR-2f9c4c681db2",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:26:53.071090Z"
+        },
+        {
+          "session_id": "IR-73a489f93183",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:51:45.916419Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-012",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "4.236.164.162"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "cbee11b9c5516e39",
+      "ttps": [
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -m 2>/dev/null || echo unknown"
+      ],
+      "members": [
+        {
+          "session_id": "IR-051fab8c2963",
+          "src_ip": "4.236.164.162",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-21T03:33:03.664741Z"
         }
       ]
     }
