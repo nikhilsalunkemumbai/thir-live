@@ -1,13 +1,26 @@
 {
-  "generated_at": "2026-03-21T18:32:54.299107+00:00",
-  "total_sessions_with_commands": 1,
-  "total_clusters": 1,
-  "campaign_clusters": 1,
-  "singleton_clusters": 1,
+  "generated_at": "2026-03-21T20:23:40.839494+00:00",
+  "total_sessions_with_commands": 2,
+  "total_clusters": 2,
+  "campaign_clusters": 2,
+  "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1105",
+        "T1082",
+        "T1592",
+        "T1059.004"
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
       "session_count": 1,
@@ -24,6 +37,72 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "94.154.87.39"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "233704ac9fb3e421",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "cat /proc/mounts; /bin/busybox TUJSK",
+        "cd /dev/shm; cat .s || cp /bin/echo .s; /bin/busybox TUJSK",
+        "tftp; wget; /bin/busybox TUJSK",
+        "dd bs=52 count=1 if=.s || cat .s || while read i; do echo $i; done < .s",
+        "/bin/busybox TUJSK",
+        ">.s; cp .s .i"
+      ],
+      "members": [
+        {
+          "session_id": "IR-cc1dd5f414c3",
+          "src_ip": "94.154.87.39",
+          "country": "",
+          "isp": "",
+          "command_count": 17,
+          "timestamp": "2026-03-21T19:51:58.490545Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -44,7 +123,7 @@
       ],
       "session_count": 1,
       "unique_ips": [
-        "197.248.8.33"
+        "8.216.95.79"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
@@ -76,12 +155,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-4b7cdc836853",
-          "src_ip": "197.248.8.33",
+          "session_id": "IR-656fab488833",
+          "src_ip": "8.216.95.79",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-21T18:14:12.907995Z"
+          "timestamp": "2026-03-21T19:07:09.824889Z"
         }
       ]
     }
