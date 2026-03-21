@@ -151,7 +151,23 @@ jobs:
       # ----------------------------------------------------------------
       # 6. Fetch Cowrie logs from AWS EC2
       #    Uses port 22222 for SCP — NOT port 22 (that goes to Cowrie).
-      #    continue-on-error: true — if VPS unreachable, skip gracefully
+      #    continue-on-error: true — if VPS unreachable, skip gracefully.
+      #
+      #    WATERMARK-BASED INCREMENTAL FETCH (added 2026-03-19):
+      #    cowrie.json on the VPS is an append-only log that grows without
+      #    bound. Fetching + parsing the full file every 2 hours causes:
+      #      - SCP transfer time to grow linearly (22k+ lines = slow)
+      #      - Tool 26 reprocessing identical sessions each run
+      #      - IP count inflation in stats.json / threat_ips.json
+      #
+      #    Strategy: record the last-processed line count in
+      #    data/cowrie_watermark.json after each successful run.
+      #    On the next run, SSH to the VPS and use `tail -n +N` to extract
+      #    only new lines since the watermark. This keeps each pipeline run
+      #    processing only the delta — typically 50-200 lines per 2h window.
+      #
+      #    Fallback: if watermark is missing or VPS line count < watermark
+      #    (log rotation occurred), fall back to full fetch.
       # ----------------------------------------------------------------
       - name: Fetch Cowrie logs from AWS EC2
         id: fetch_logs
@@ -160,18 +176,84 @@ jobs:
         env:
           VPS_IP: ${{ secrets.ORACLE_VPS_IP }}
         run: |
+          COWRIE_LOG="/home/cowrie/cowrie/var/log/cowrie/cowrie.json"
+          WATERMARK_FILE="data/cowrie_watermark.json"
+          LOCAL_LOG="/tmp/cowrie.json"
+
           echo "━━━ [SCP] Fetching cowrie.json from ${VPS_IP}:22222 ━━━"
-          scp \
-            -P 22222 \
+
+          # Read last watermark (line number of last-processed line)
+          LAST_LINE=0
+          if [ -f "$WATERMARK_FILE" ]; then
+            LAST_LINE=$(python3 -c "
+          import json, sys
+          try:
+            d = json.load(open('$WATERMARK_FILE'))
+            print(int(d.get('last_line', 0)))
+          except:
+            print(0)
+          ")
+            echo "[SCP] Watermark: last processed line ${LAST_LINE}"
+          else
+            echo "[SCP] No watermark found — full fetch"
+          fi
+
+          # Get current line count on VPS
+          VPS_LINES=$(ssh \
             -i /tmp/vps_key \
+            -p 22222 \
             -o StrictHostKeyChecking=no \
-            -o ConnectTimeout=60 \
-            -o ServerAliveInterval=30 \
-            -o ServerAliveCountMax=3 \
-            "ubuntu@${VPS_IP}:/home/cowrie/cowrie/var/log/cowrie/cowrie.json" \
-            /tmp/cowrie.json
-          echo "━━━ [SCP] Exit code: $? ━━━"
-          echo "Fetched $(wc -l < /tmp/cowrie.json) log lines"
+            -o ConnectTimeout=30 \
+            -o BatchMode=yes \
+            "ubuntu@${VPS_IP}" \
+            "wc -l < ${COWRIE_LOG}" 2>/dev/null || echo "0")
+          VPS_LINES=$(echo "$VPS_LINES" | tr -d '[:space:]')
+          echo "[SCP] VPS log has ${VPS_LINES} lines total"
+
+          # If watermark > VPS lines, log was rotated — reset and full fetch
+          if [ "$LAST_LINE" -gt "$VPS_LINES" ]; then
+            echo "[SCP] Watermark (${LAST_LINE}) > VPS lines (${VPS_LINES}) — log rotated, resetting"
+            LAST_LINE=0
+          fi
+
+          if [ "$LAST_LINE" -gt 0 ] && [ "$VPS_LINES" -gt "$LAST_LINE" ]; then
+            # Incremental fetch: only new lines since watermark
+            NEW_LINES=$(( VPS_LINES - LAST_LINE ))
+            echo "[SCP] Fetching ${NEW_LINES} new line(s) (lines $((LAST_LINE+1))–${VPS_LINES})"
+            ssh \
+              -i /tmp/vps_key \
+              -p 22222 \
+              -o StrictHostKeyChecking=no \
+              -o ConnectTimeout=60 \
+              -o ServerAliveInterval=30 \
+              -o ServerAliveCountMax=3 \
+              "ubuntu@${VPS_IP}" \
+              "tail -n +$((LAST_LINE+1)) ${COWRIE_LOG}" > "$LOCAL_LOG"
+          else
+            # Full fetch (first run or log rotated)
+            echo "[SCP] Full fetch"
+            scp \
+              -P 22222 \
+              -i /tmp/vps_key \
+              -o StrictHostKeyChecking=no \
+              -o ConnectTimeout=60 \
+              -o ServerAliveInterval=30 \
+              -o ServerAliveCountMax=3 \
+              "ubuntu@${VPS_IP}:${COWRIE_LOG}" \
+              "$LOCAL_LOG"
+          fi
+
+          FETCHED=$(wc -l < "$LOCAL_LOG" 2>/dev/null || echo 0)
+          echo "[SCP] Fetched ${FETCHED} line(s) this run"
+          echo "━━━ [SCP] Done ━━━"
+
+          # Save new watermark (total VPS line count after this fetch)
+          python3 -c "
+          import json
+          wm = {'last_line': int('${VPS_LINES}'), 'updated_at': __import__('datetime').datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')}
+          json.dump(wm, open('$WATERMARK_FILE', 'w'), indent=2)
+          print(f'[SCP] Watermark saved → {wm}')
+          "
 
       # ----------------------------------------------------------------
       # 7. Tool 26 — parse Cowrie sessions → IR cases
@@ -607,10 +689,11 @@ jobs:
             TIMESTAMP=$(date -u '+%Y-%m-%dT%H:%M:%SZ')
             CASE_COUNT=$(python -c "import json; d=json.load(open('data/ir_cases.json')); print(d.get('total_cases',0))" 2>/dev/null || echo "?")
             MALWARE_COUNT=$(python -c "import json; d=json.load(open('data/malware_report.json')); print(d.get('total_files',0))" 2>/dev/null || echo "0")
+            WATERMARK=$(python -c "import json; d=json.load(open('data/cowrie_watermark.json')); print(d.get('last_line','?'))" 2>/dev/null || echo "?")
             if [ "$MALWARE_COUNT" != "0" ]; then
-              git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases, ${MALWARE_COUNT} malware sample(s))"
+              git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases, ${MALWARE_COUNT} malware sample(s), watermark:${WATERMARK})"
             else
-              git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases)"
+              git commit -m "auto: threat data update ${TIMESTAMP} (${CASE_COUNT} cases, watermark:${WATERMARK})"
             fi
             git push
           fi
