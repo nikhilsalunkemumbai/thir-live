@@ -202,10 +202,15 @@ def parse_daily_report(path):
 # Weekly rollup
 # ─────────────────────────────────────────────────────────────────────────────
 
-def rollup_weekly(verbose=False):
+def rollup_weekly(verbose=False, week_label_override=None):
     """
     Runs on Monday. Reads all daily reports from the past 7 days,
     produces a weekly summary Markdown, deletes the rolled-up daily files.
+
+    week_label_override: optional string like '2026-W11'. When set, the date
+    window and output filename are derived from that ISO week rather than
+    calculated from today. Use this for manual backfill when the automatic
+    Monday trigger was missed.
 
     Bug fixed (2026-03-19): Previously returned silently with no output file
     when zero daily reports were found in the window. This caused the weekly
@@ -214,13 +219,27 @@ def rollup_weekly(verbose=False):
     Now writes a stub report in all cases so the slot is always filled and
     downstream monthly rollup has a consistent file to consume.
     """
-    today     = datetime.now(timezone.utc).date()
-    week_ago  = today - timedelta(days=7)
-
-    # ISO week of the PREVIOUS week (we're rolling up Mon→Sun just ended)
-    prev_monday = today - timedelta(days=7)
-    year, week, _ = prev_monday.isocalendar()
-    week_label = f"{year}-W{week:02d}"
+    if week_label_override:
+        # Parse YYYY-WNN into explicit date window (Mon–Sun of that ISO week)
+        try:
+            m = re.match(r"^(\d{4})-W(\d{2})$", week_label_override)
+            if not m:
+                raise ValueError(f"Invalid week label format: {week_label_override!r}. Expected YYYY-WNN e.g. 2026-W11")
+            yr, wk = int(m.group(1)), int(m.group(2))
+            prev_monday = datetime.fromisocalendar(yr, wk, 1).date()   # Monday of target week
+            today       = prev_monday + timedelta(days=7)               # following Monday (exclusive end)
+            week_ago    = prev_monday                                    # inclusive start
+            week_label  = week_label_override
+        except Exception as e:
+            log(f"--week-label error: {e}", "ERROR", True)
+            return
+    else:
+        today     = datetime.now(timezone.utc).date()
+        week_ago  = today - timedelta(days=7)
+        # ISO week of the PREVIOUS week (we're rolling up Mon→Sun just ended)
+        prev_monday = today - timedelta(days=7)
+        year, week, _ = prev_monday.isocalendar()
+        week_label = f"{year}-W{week:02d}"
 
     dest = os.path.join(REPORTS_WEEKLY, f"soc_week_{week_label}.md")
 
@@ -564,6 +583,10 @@ def main():
                         help="Path to stats.json for peak stats update")
     parser.add_argument("--date",    default=None,
                         help="Override date for daily save (YYYY-MM-DD). Defaults to today UTC.")
+    parser.add_argument("--week-label", default=None, dest="week_label",
+                        help="Override ISO week for weekly rollup, e.g. 2026-W11. "
+                             "Use to manually backfill a missed Monday rollup. "
+                             "Derives the date window from that week's Mon–Sun range.")
     parser.add_argument("--verbose", "-v", action="store_true")
 
     args = parser.parse_args()
@@ -578,7 +601,7 @@ def main():
 
     elif args.rollup == "weekly":
         log("Mode: weekly rollup", "INFO", True)
-        rollup_weekly(verbose=args.verbose)
+        rollup_weekly(verbose=args.verbose, week_label_override=args.week_label)
 
     elif args.rollup == "monthly":
         log("Mode: monthly rollup", "INFO", True)
