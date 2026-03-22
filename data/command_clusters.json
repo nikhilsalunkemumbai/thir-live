@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-03-22T16:27:45.692101+00:00",
+  "generated_at": "2026-03-22T18:33:52.065448+00:00",
   "total_sessions_with_commands": 2,
-  "total_clusters": 2,
+  "total_clusters": 1,
   "campaign_clusters": 1,
-  "singleton_clusters": 2,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
+      "session_count": 2,
       "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
@@ -42,9 +42,9 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "172.174.46.118"
+        "129.222.203.222"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
@@ -76,45 +76,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-930ece084fa9",
-          "src_ip": "172.174.46.118",
+          "session_id": "IR-c8c4362a772d",
+          "src_ip": "129.222.203.222",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-22T14:57:19.773683Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "159.65.149.231"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "28ba533b0f3c4df6",
-      "ttps": [
+          "timestamp": "2026-03-22T16:54:13.635849Z"
+        },
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -a"
-      ],
-      "members": [
-        {
-          "session_id": "IR-74ea728a8e4b",
-          "src_ip": "159.65.149.231",
+          "session_id": "IR-5f890480a4c2",
+          "src_ip": "129.222.203.222",
           "country": "",
           "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-03-22T14:47:37.758064Z"
+          "command_count": 2,
+          "timestamp": "2026-03-22T17:01:03.199960Z"
         }
       ]
     }
