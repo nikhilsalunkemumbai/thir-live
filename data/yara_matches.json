@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-23T20:36:35.164294+00:00",
+  "generated_at": "2026-03-23T22:30:16.687613+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 10,
@@ -43,8 +43,8 @@
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
         "XMRig",
-        "Rootkit",
         "Mushtik",
+        "Rootkit",
         "Downloader",
         "Gafgyt"
       ],
@@ -55,9 +55,9 @@
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
         "XMRig",
-        "Rootkit",
         "Sora",
         "Mushtik",
+        "Rootkit",
         "Downloader",
         "Gafgyt"
       ],
@@ -109,8 +109,8 @@
       "classified": true,
       "families": [
         "XMRig",
-        "Rootkit",
         "Mushtik",
+        "Rootkit",
         "Downloader",
         "Gafgyt"
       ],
@@ -235,9 +235,9 @@
       "classified": true,
       "families": [
         "XMRig",
-        "Rootkit",
         "Sora",
         "Mushtik",
+        "Rootkit",
         "Downloader",
         "Gafgyt"
       ],
