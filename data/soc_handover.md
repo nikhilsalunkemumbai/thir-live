@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-03-25 |
-| **Generated At** | 2026-03-25T14:56:47Z |
-| **Shift Time** | 14:56 UTC |
+| **Generated At** | 2026-03-25T17:00:29Z |
+| **Shift Time** | 17:00 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **41** |
-| Confirmed Threats | **36** |
-| False Positives Filtered | **5** (12.2%) |
-| Unique Attacker IPs | **27** |
-| Countries of Origin | **15** |
-| High Severity Cases | **6** |
+| Total Sessions Captured | **60** |
+| Confirmed Threats | **44** |
+| False Positives Filtered | **16** (26.7%) |
+| Unique Attacker IPs | **33** |
+| Countries of Origin | **14** |
+| High Severity Cases | **1** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **35** |
+| Low Severity Cases | **59** |
 | Malware Samples Analyzed | **0** HIGH · **6** MED · 1 empty upload attempt(s) |
 
 ---
@@ -30,52 +30,47 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **24** |
-| Unique Credential Pairs | **18** |
-| Unique Usernames | **16** |
-| Unique Passwords | **16** |
-| Successful Auth Pairs | **6** |
+| Total Auth Attempts | **30** |
+| Unique Credential Pairs | **29** |
+| Unique Usernames | **28** |
+| Unique Passwords | **22** |
+| Successful Auth Pairs | **1** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 6 |
-| `GET / HTTP/1.1` | 2 |
-| `User-Agent: visionheight.com/scan Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126.0.0.0 Safari/537.36` | 2 |
-| `Accept-Encoding: gzip` | 2 |
-| `blank` | 1 |
+| `support` | 2 |
+| `etc` | 2 |
+| `ubuntu` | 1 |
+| `yzh` | 1 |
+| `Centos` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `88` | 2 |
-| `vizxv` | 2 |
-| `12345` | 2 |
-| `Host: 13.235.92.17:23` | 2 |
-| `Accept: */*` | 2 |
+| `12345678` | 4 |
+| `1234` | 3 |
+| `111111` | 3 |
+| `etc` | 2 |
+| `123123` | 1 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `root` | `88` | 2 |
-| `root` | `vizxv` | 2 |
-| `GET / HTTP/1.1` | `Host: 13.235.92.17:23` | 2 |
-| `User-Agent: visionheight.com/scan Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Chrome/126.0.0.0 Safari/537.36` | `Accept: */*` | 2 |
-| `Accept-Encoding: gzip` | `` | 2 |
+| `etc` | `etc` | 2 |
+| `ubuntu` | `123123` | 1 |
+| `yzh` | `1234` | 1 |
+| `Centos` | `123321` | 1 |
+| `support` | `1234` | 1 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `root` | `88` | `65.20.202.4` | 2026-03-25T13:14:09 |
-| `root` | `88` | `59.14.191.130` | 2026-03-25T13:14:21 |
-| `root` | `vizxv` | `27.123.112.126` | 2026-03-25T13:23:12 |
-| `root` | `vizxv` | `50.67.177.253` | 2026-03-25T13:23:21 |
-| `root` | `root2021` | `187.8.3.230` | 2026-03-25T14:26:43 |
-| `root` | `root2021` | `91.144.158.62` | 2026-03-25T14:26:51 |
+| `root` | `P@$$w0rd` | `183.106.59.245` | 2026-03-25T15:50:47 |
 
 ---
 
@@ -83,102 +78,40 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **27** |
-| Unique ASNs | **23** |
-| High-Risk ASNs | **18** |
+| Total IPs Analysed | **33** |
+| Unique ASNs | **27** |
+| High-Risk ASNs | **17** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS203214` | Hulum Almustakbal Company for Communication Engineering and Services Ltd | 3 | HIGH |
-| `AS213412` | ONYPHE SAS | 3 | HIGH |
-| `AS4808` | China Unicom Beijing Province Network | 1 | LOW |
-| `AS8075` | Microsoft Corporation | 1 | LOW |
-| `AS42116` | JSC ER-Telecom Holding | 1 | HIGH |
-| `AS13428` | Surf Air Wireless, LLC | 1 | LOW |
-| `AS4780` | Digital United Inc. | 1 | HIGH |
-| `AS4818` | DiGi Telecommunications Sdn. Bhd. | 1 | HIGH |
+| `AS4134` | CHINANET-BACKBONE | 4 | HIGH |
+| `AS4766` | Korea Telecom | 2 | HIGH |
+| `AS3462` | Data Communication Business Group | 2 | HIGH |
+| `AS396982` | Google LLC | 2 | LOW |
+| `AS41668` | JSC ER-Telecom Holding | 1 | HIGH |
+| `AS5089` | Virgin Media Limited | 1 | LOW |
+| `AS9808` | China Mobile Communications Group Co., Ltd. | 1 | HIGH |
+| `AS31898` | Oracle Corporation | 1 | HIGH |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (6)
+## 🚨 Priority Cases — Immediate Attention (1)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-574669df3b62
+### 🔴 HIGH · IR-3aa996d3fad5
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `65.20.202[.]4` |
-| **First Seen** | 2026-03-25 13:14 |
-| **Last Seen** | 2026-03-25 13:14 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-03-25 13:14:08` | `cowrie.session.connect` |
-| `2026-03-25 13:14:08` | `cowrie.client.version` |
-| `2026-03-25 13:14:08` | `cowrie.client.kex` |
-| `2026-03-25 13:14:09` | `cowrie.login.success` |
-| `2026-03-25 13:14:09` | `cowrie.direct-tcpip.request` |
-| `2026-03-25 13:14:14` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `65.20.202[.]4` to AbuseIPDB if not already reported
-- [ ] Block `65.20.202[.]4` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-dbae42181257
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `59.14.191[.]130` |
-| **First Seen** | 2026-03-25 13:14 |
-| **Last Seen** | 2026-03-25 13:14 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-03-25 13:14:19` | `cowrie.session.connect` |
-| `2026-03-25 13:14:19` | `cowrie.client.version` |
-| `2026-03-25 13:14:19` | `cowrie.client.kex` |
-| `2026-03-25 13:14:21` | `cowrie.login.success` |
-| `2026-03-25 13:14:22` | `cowrie.direct-tcpip.request` |
-| `2026-03-25 13:14:27` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `59.14.191[.]130` to AbuseIPDB if not already reported
-- [ ] Block `59.14.191[.]130` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-ea8a0ef2419f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `27.123.112[.]126` |
-| **First Seen** | 2026-03-25 13:23 |
-| **Last Seen** | 2026-03-25 13:23 |
+| **Source IP** | `183.106.59[.]245` |
+| **First Seen** | 2026-03-25 15:50 |
+| **Last Seen** | 2026-03-25 15:50 |
 | **Session Duration** | 7s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -189,109 +122,16 @@
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-03-25 13:23:10` | `cowrie.session.connect` |
-| `2026-03-25 13:23:10` | `cowrie.client.version` |
-| `2026-03-25 13:23:10` | `cowrie.client.kex` |
-| `2026-03-25 13:23:12` | `cowrie.login.success` |
-| `2026-03-25 13:23:12` | `cowrie.direct-tcpip.request` |
-| `2026-03-25 13:23:17` | `cowrie.session.closed` |
+| `2026-03-25 15:50:44` | `cowrie.session.connect` |
+| `2026-03-25 15:50:45` | `cowrie.client.version` |
+| `2026-03-25 15:50:45` | `cowrie.client.kex` |
+| `2026-03-25 15:50:47` | `cowrie.login.success` |
+| `2026-03-25 15:50:47` | `cowrie.direct-tcpip.request` |
+| `2026-03-25 15:50:52` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `27.123.112[.]126` to AbuseIPDB if not already reported
-- [ ] Block `27.123.112[.]126` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-ad1fe3a29f5a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `50.67.177[.]253` |
-| **First Seen** | 2026-03-25 13:23 |
-| **Last Seen** | 2026-03-25 13:23 |
-| **Session Duration** | 8s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-03-25 13:23:18` | `cowrie.session.connect` |
-| `2026-03-25 13:23:19` | `cowrie.client.version` |
-| `2026-03-25 13:23:19` | `cowrie.client.kex` |
-| `2026-03-25 13:23:21` | `cowrie.login.success` |
-| `2026-03-25 13:23:22` | `cowrie.direct-tcpip.request` |
-| `2026-03-25 13:23:27` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `50.67.177[.]253` to AbuseIPDB if not already reported
-- [ ] Block `50.67.177[.]253` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-e95f06bde815
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `187.8.3[.]230` |
-| **First Seen** | 2026-03-25 14:26 |
-| **Last Seen** | 2026-03-25 14:26 |
-| **Session Duration** | 9s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-03-25 14:26:40` | `cowrie.session.connect` |
-| `2026-03-25 14:26:40` | `cowrie.client.version` |
-| `2026-03-25 14:26:40` | `cowrie.client.kex` |
-| `2026-03-25 14:26:43` | `cowrie.login.success` |
-| `2026-03-25 14:26:44` | `cowrie.direct-tcpip.request` |
-| `2026-03-25 14:26:49` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `187.8.3[.]230` to AbuseIPDB if not already reported
-- [ ] Block `187.8.3[.]230` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-61c4174052a7
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `91.144.158[.]62` |
-| **First Seen** | 2026-03-25 14:26 |
-| **Last Seen** | 2026-03-25 14:26 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-03-25 14:26:49` | `cowrie.session.connect` |
-| `2026-03-25 14:26:50` | `cowrie.client.version` |
-| `2026-03-25 14:26:50` | `cowrie.client.kex` |
-| `2026-03-25 14:26:51` | `cowrie.login.success` |
-| `2026-03-25 14:26:51` | `cowrie.direct-tcpip.request` |
-| `2026-03-25 14:26:56` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `91.144.158[.]62` to AbuseIPDB if not already reported
-- [ ] Block `91.144.158[.]62` at perimeter firewall / security group
+- [ ] Submit `183.106.59[.]245` to AbuseIPDB if not already reported
+- [ ] Block `183.106.59[.]245` at perimeter firewall / security group
 - [ ] Investigate TCP tunnel target — port forwarding via honeypot
 - [ ] Confirm tunnel target is not internal infrastructure
 - [ ] Escalate to Tier 2 if pattern repeats next shift
@@ -305,22 +145,22 @@
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `180.76.176[.]249` | **10** | 2026-03-25 13:37 | 2026-03-25 13:51 | 14m | 1 | `T1110.001 · T1592` | 🟠 MEDIUM |
-| `18.218.118[.]203` | **6** | 2026-03-25 14:06 | 2026-03-25 14:10 | 0m | 6 | `T1110.001` | 🟢 LOW |
-| `102.88.10[.]10` | 1 | 2026-03-25 14:17 | 2026-03-25 14:17 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `121.242.112[.]197` | 1 | 2026-03-25 13:52 | 2026-03-25 13:52 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `175.180.129[.]87` | 1 | 2026-03-25 13:45 | 2026-03-25 13:45 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `190.171.78[.]250` | 1 | 2026-03-25 13:34 | 2026-03-25 13:34 | 0s | 0 | `T1592` | 🟢 LOW |
-| `213.154.80[.]51` | 1 | 2026-03-25 13:56 | 2026-03-25 13:56 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `36.64.36[.]101` | 1 | 2026-03-25 13:35 | 2026-03-25 13:35 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `49.124.151[.]25` | 1 | 2026-03-25 13:14 | 2026-03-25 13:14 | 0s | 0 | `T1592` | 🟢 LOW |
-| `49.206.201[.]253` | 1 | 2026-03-25 14:47 | 2026-03-25 14:47 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `65.20.153[.]146` | 1 | 2026-03-25 14:05 | 2026-03-25 14:05 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `65.20.179[.]251` | 1 | 2026-03-25 13:24 | 2026-03-25 13:24 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `71.12.241[.]225` | 1 | 2026-03-25 14:48 | 2026-03-25 14:48 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `94.231.206[.]12` | 1 | 2026-03-25 14:40 | 2026-03-25 14:40 | 0s | 0 | `T1592` | 🟢 LOW |
-| `94.231.206[.]15` | 1 | 2026-03-25 14:42 | 2026-03-25 14:42 | 1s | 0 | `T1592` | 🟢 LOW |
-| `94.231.206[.]4` | 1 | 2026-03-25 14:40 | 2026-03-25 14:40 | 3s | 0 | `T1592` | 🟢 LOW |
+| `180.138.194[.]82` | **8** | 2026-03-25 15:18 | 2026-03-25 15:38 | 14m | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `196.189.155[.]89` | **8** | 2026-03-25 16:18 | 2026-03-25 16:37 | 0m | 8 | `T1110.001 · T1592` | 🟢 LOW |
+| `58.33.97[.]119` | **8** | 2026-03-25 16:03 | 2026-03-25 16:09 | 10m | 3 | `T1110.001 · T1592` | 🟢 LOW |
+| `77.110.98[.]213` | **7** | 2026-03-25 16:19 | 2026-03-25 16:37 | 0m | 7 | `T1110.001 · T1592` | 🟢 LOW |
+| `111.171.125[.]94` | 1 | 2026-03-25 15:30 | 2026-03-25 15:30 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `112.25.140[.]211` | 1 | 2026-03-25 15:30 | 2026-03-25 15:30 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `120.48.109[.]59` | 1 | 2026-03-25 16:43 | 2026-03-25 16:43 | 6s | 0 | `T1592` | 🟢 LOW |
+| `122.187.229[.]220` | 1 | 2026-03-25 16:53 | 2026-03-25 16:53 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `123.118.230[.]64` | 1 | 2026-03-25 16:41 | 2026-03-25 16:41 | 5s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `140.84.179[.]128` | 1 | 2026-03-25 16:33 | 2026-03-25 16:33 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `183.230.204[.]246` | 1 | 2026-03-25 16:04 | 2026-03-25 16:04 | 0s | 0 | `T1592` | 🟢 LOW |
+| `190.216.132[.]12` | 1 | 2026-03-25 16:13 | 2026-03-25 16:13 | 13s | 0 | `T1592` | 🟢 LOW |
+| `210.86.162[.]220` | 1 | 2026-03-25 15:08 | 2026-03-25 15:08 | 4s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `49.88.156[.]34` | 1 | 2026-03-25 15:01 | 2026-03-25 15:03 | 120s | 0 | `T1592` | 🟢 LOW |
+| `59.126.16[.]66` | 1 | 2026-03-25 16:57 | 2026-03-25 16:57 | 30s | 0 | `T1592` | 🟢 LOW |
+| `92.255.196[.]185` | 1 | 2026-03-25 16:11 | 2026-03-25 16:11 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
 
 ---
 
@@ -346,16 +186,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `49.124.151[.]25` | MY | DiGi Telecommunications Sdn Bhd | **100** ⚠️ | 15 |
-| `65.20.153[.]146` | IQ | Earthlink Telecommunications Equipment Trading & Services DMCC | **100** ⚠️ | 50 |
-| `94.231.206[.]12` | SG | FR ONYPHE | **100** ⚠️ | 35 |
-| `121.242.112[.]197` | IN | Internet Service Provider | **100** ⚠️ | 5 |
-| `50.67.177[.]253` | CA | Shaw Communications | **100** ⚠️ | 16 |
-| `102.88.10[.]10` | NG | MTN Nigeria | **100** ⚠️ | 50 |
-| `71.12.241[.]225` | US | Charter Communications LLC | **100** ⚠️ | 35 |
-| `65.20.179[.]251` | IQ | Earthlink Telecommunications Equipment Trading & Services DMCC | **100** ⚠️ | 50 |
-| `18.218.118[.]203` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
-| `59.14.191[.]130` | KR | Sudogwonseobubonbu | **100** ⚠️ | 0 |
+| `120.48.109[.]59` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 12 |
+| `111.171.125[.]94` | KR | SK Broadband Co Ltd | **100** ⚠️ | 50 |
+| `183.106.59[.]245` | KR | Korea Telecom | **100** ⚠️ | 26 |
+| `183.230.204[.]246` | CN | China Mobile Communications Corporation | **100** ⚠️ | 44 |
+| `196.189.155[.]89` | ET | Ethio Telecom | **100** ⚠️ | 50 |
+| `122.187.229[.]220` | IN | BHARTI TELENET LTD. NEW DELHI | **100** ⚠️ | 50 |
+| `92.255.196[.]185` | RU | CJSC Company ER-Telecom Kazan' | **100** ⚠️ | 50 |
+| `59.126.16[.]66` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 0 |
+| `49.88.156[.]34` | CN | CHINANET jiangsu province network | **100** ⚠️ | 0 |
+| `77.110.98[.]213` | DE | AEZA GROUP LLC | **100** ⚠️ | 0 |
 
 ---
 
@@ -363,18 +203,21 @@
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 31 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 14 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 6 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 49 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 29 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 1 |
 
 ---
 
-## 🔕 False Positive Summary (5 filtered)
+## 🔕 False Positive Summary (16 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 4 |
+| AbuseIPDB score 0 below threshold 25 | 3 |
+| AbuseIPDB score 13 below threshold 25 | 1 |
+| AbuseIPDB score 3 below threshold 25 | 1 |
+| AbuseIPDB score 4 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 10 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -385,19 +228,19 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 41 cases |
-| Tool 34  | Credential Extractor        | ✅ 24 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 60 cases |
+| Tool 34  | Credential Extractor        | ✅ 30 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 27 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 5 filtered (12.2%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 33 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 16 filtered (26.7%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 23 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 27 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 11 files |
 | Tool 33  | YARA Classifier             | ✅ 4 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 6 priority case(s) shown individually · 16 recon entry/entries in table (2 group(s) consolidating 16 session(s)).
+> **Report grouping:** 1 priority case(s) shown individually · 16 recon entry/entries in table (4 group(s) consolidating 31 session(s)).
 
 ---
 
@@ -413,4 +256,4 @@
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-03-25T14:56:47Z_
+_Report time: 2026-03-25T17:00:29Z_
