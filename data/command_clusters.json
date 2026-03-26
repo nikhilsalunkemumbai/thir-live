@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-25T22:33:46.130752+00:00",
-  "total_sessions_with_commands": 8,
-  "total_clusters": 3,
+  "generated_at": "2026-03-26T02:05:35.474150+00:00",
+  "total_sessions_with_commands": 5,
+  "total_clusters": 1,
   "campaign_clusters": 1,
-  "singleton_clusters": 2,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 6,
-      "unique_ip_count": 6,
+      "session_count": 5,
+      "unique_ip_count": 5,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -42,16 +42,15 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 6,
+      "session_count": 5,
       "unique_ips": [
-        "47.238.164.111",
-        "8.222.187.152",
-        "172.174.72.225",
-        "47.237.90.197",
-        "120.62.8.17",
-        "47.88.49.190"
+        "187.251.132.2",
+        "180.93.137.63",
+        "34.122.129.31",
+        "172.190.24.225",
+        "40.117.97.0"
       ],
-      "unique_ip_count": 6,
+      "unique_ip_count": 5,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -81,113 +80,44 @@
       ],
       "members": [
         {
-          "session_id": "IR-1a02131a149f",
-          "src_ip": "120.62.8.17",
+          "session_id": "IR-10ba9d3c47dc",
+          "src_ip": "172.190.24.225",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-25T20:56:28.021426Z"
+          "timestamp": "2026-03-26T00:31:25.159919Z"
         },
         {
-          "session_id": "IR-84d6312981bf",
-          "src_ip": "47.88.49.190",
+          "session_id": "IR-fabddeea6f9d",
+          "src_ip": "40.117.97.0",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-25T20:57:28.855281Z"
+          "timestamp": "2026-03-26T00:37:59.263005Z"
         },
         {
-          "session_id": "IR-1f7d681f10bb",
-          "src_ip": "8.222.187.152",
+          "session_id": "IR-636e993c6323",
+          "src_ip": "180.93.137.63",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-25T20:58:04.262097Z"
+          "timestamp": "2026-03-26T01:12:11.803960Z"
         },
         {
-          "session_id": "IR-58cd9c510078",
-          "src_ip": "47.238.164.111",
+          "session_id": "IR-5f0067af674a",
+          "src_ip": "34.122.129.31",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-25T20:58:09.652538Z"
+          "timestamp": "2026-03-26T01:29:08.479920Z"
         },
         {
-          "session_id": "IR-af9e6bb82cbb",
-          "src_ip": "172.174.72.225",
+          "session_id": "IR-e4223ef27133",
+          "src_ip": "187.251.132.2",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-25T20:58:28.033375Z"
-        },
-        {
-          "session_id": "IR-d2f4af8b0865",
-          "src_ip": "47.237.90.197",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-03-25T20:58:44.631256Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "47.83.161.4"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "7063dece7cccf374",
-      "ttps": [],
-      "representative_commands": [
-        "hostname"
-      ],
-      "members": [
-        {
-          "session_id": "IR-c01ce24de53f",
-          "src_ip": "47.83.161.4",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-03-25T20:59:08.628372Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "47.83.161.4"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "ea82fe82924bbdcd",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -m"
-      ],
-      "members": [
-        {
-          "session_id": "IR-452e4a943a1d",
-          "src_ip": "47.83.161.4",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-03-25T21:01:48.081471Z"
+          "timestamp": "2026-03-26T01:38:39.139938Z"
         }
       ]
     }
