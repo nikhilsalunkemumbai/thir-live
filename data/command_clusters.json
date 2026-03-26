@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-03-26T15:01:48.719788+00:00",
-  "total_sessions_with_commands": 1,
+  "generated_at": "2026-03-26T16:58:17.114091+00:00",
+  "total_sessions_with_commands": 2,
   "total_clusters": 1,
   "campaign_clusters": 1,
-  "singleton_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -42,11 +42,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "34.71.30.159"
+        "101.32.128.193",
+        "103.171.69.82"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -76,12 +77,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-55f344f922e5",
-          "src_ip": "34.71.30.159",
+          "session_id": "IR-382ebd276228",
+          "src_ip": "101.32.128.193",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-26T14:21:03.977343Z"
+          "timestamp": "2026-03-26T15:51:26.458167Z"
+        },
+        {
+          "session_id": "IR-4eeee967e48f",
+          "src_ip": "103.171.69.82",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-03-26T16:30:59.706410Z"
         }
       ]
     }
