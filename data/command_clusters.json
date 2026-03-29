@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-03-29T07:00:22.228090+00:00",
-  "total_sessions_with_commands": 1,
-  "total_clusters": 1,
+  "generated_at": "2026-03-29T08:37:21.487091+00:00",
+  "total_sessions_with_commands": 2,
+  "total_clusters": 2,
   "campaign_clusters": 1,
-  "singleton_clusters": 1,
+  "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-001",
+      "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
       "session_count": 1,
@@ -24,6 +24,55 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "213.103.131.143"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "c74cbeb6eac6dc54",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "/ip cloud print",
+        "ifconfig",
+        "uname -a",
+        "cat /proc/cpuinfo",
+        "ps | grep '[Mm]iner'",
+        "ps -ef | grep '[Mm]iner'",
+        "ls -la ~/.local/share/TelegramDesktop/tdata /home/*/.local/share/TelegramDesktop/tdata /dev/ttyGSM* /dev/ttyUSB-mod* /var/spool/sms/* /var/log/smsd.log /etc/smsd.conf* /usr/bin/qmuxd /var/qmux_connect_socket /etc/config/simman /dev/modem* /var/config/sms/*",
+        "locate D877F783D5D3EF8Cs",
+        "echo Hi | cat -n"
+      ],
+      "members": [
+        {
+          "session_id": "IR-1c801d96117d",
+          "src_ip": "213.103.131.143",
+          "country": "",
+          "isp": "",
+          "command_count": 9,
+          "timestamp": "2026-03-29T07:22:52.167037Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -44,7 +93,7 @@
       ],
       "session_count": 1,
       "unique_ips": [
-        "113.193.234.210"
+        "43.245.143.215"
       ],
       "unique_ip_count": 1,
       "sequence_hash": "98af0db988d5971c",
@@ -76,12 +125,12 @@
       ],
       "members": [
         {
-          "session_id": "IR-bc2aba5de2c6",
-          "src_ip": "113.193.234.210",
+          "session_id": "IR-c9bb89d7ff69",
+          "src_ip": "43.245.143.215",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-03-29T06:40:41.537436Z"
+          "timestamp": "2026-03-29T07:29:01.702998Z"
         }
       ]
     }
