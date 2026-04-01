@@ -80,18 +80,30 @@ def classify_kex(kex_string: str) -> str:
     return None
 
 
-def compute_hassh(kex_algs: str, encryption_algs_client: str,
-                  mac_algs: str, compression_algs: str) -> str:
+def _normalise_alg(val) -> str:
+    """
+    Cowrie logs algorithm fields as lists in NDJSON
+    (e.g. kexAlgs: ["curve25519-sha256", "diffie-hellman-group14-sha256"]).
+    HASSH spec requires a comma-joined string. Accept both forms.
+    """
+    if isinstance(val, list):
+        return ",".join(str(v) for v in val)
+    return val or ""
+
+
+def compute_hassh(kex_algs, encryption_algs_client,
+                  mac_algs, compression_algs) -> str:
     """
     Compute HASSH fingerprint (MD5 of concatenated algorithm strings).
     Original HASSH spec: https://github.com/salesforce/hassh
     hassh = md5(kex;enc;mac;comp)
+    Accepts both str and list values — Cowrie logs alg fields as lists.
     """
     components = ";".join([
-        kex_algs or "",
-        encryption_algs_client or "",
-        mac_algs or "",
-        compression_algs or "",
+        _normalise_alg(kex_algs),
+        _normalise_alg(encryption_algs_client),
+        _normalise_alg(mac_algs),
+        _normalise_alg(compression_algs),
     ])
     return hashlib.md5(components.encode()).hexdigest()
 
@@ -149,10 +161,10 @@ def extract_fingerprints(cases: list) -> dict:
                 sessions[session]["version"] = ver
 
             elif etype == "cowrie.client.kex":
-                sessions[session]["kex_algs"] = evt.get("kexAlgs", evt.get("kex_algs", ""))
-                sessions[session]["enc_algs_client"] = evt.get("encCS", evt.get("enc_algs_client", ""))
-                sessions[session]["mac_algs"] = evt.get("macCS", evt.get("mac_algs", ""))
-                sessions[session]["comp_algs"] = evt.get("compCS", evt.get("comp_algs", ""))
+                sessions[session]["kex_algs"]       = _normalise_alg(evt.get("kexAlgs",  evt.get("kex_algs", "")))
+                sessions[session]["enc_algs_client"] = _normalise_alg(evt.get("encCS",    evt.get("enc_algs_client", "")))
+                sessions[session]["mac_algs"]        = _normalise_alg(evt.get("macCS",    evt.get("mac_algs", "")))
+                sessions[session]["comp_algs"]       = _normalise_alg(evt.get("compCS",   evt.get("comp_algs", "")))
 
     return dict(sessions)
 
