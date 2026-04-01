@@ -128,7 +128,9 @@ def extract_fingerprints(cases: list) -> dict:
     })
 
     for case in cases:
-        events = case.get("events", [])
+        # Fix: Tool 26 writes events under 'timeline', not 'events'.
+        # Fallback to 'events' kept for forward compatibility.
+        events = case.get("timeline", case.get("events", []))
         case_id = case.get("case_id", "")
         src_ip = case.get("src_ip", case.get("attacker_ip", ""))
 

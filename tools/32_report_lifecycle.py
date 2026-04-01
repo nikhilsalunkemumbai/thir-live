@@ -234,12 +234,26 @@ def rollup_weekly(verbose=False, week_label_override=None):
             log(f"--week-label error: {e}", "ERROR", True)
             return
     else:
-        today     = datetime.now(timezone.utc).date()
-        week_ago  = today - timedelta(days=7)
-        # ISO week of the PREVIOUS week (we're rolling up Mon→Sun just ended)
-        prev_monday = today - timedelta(days=7)
-        year, week, _ = prev_monday.isocalendar()
-        week_label = f"{year}-W{week:02d}"
+        today = datetime.now(timezone.utc).date()
+
+        # Fix: derive previous week using proper ISO week boundaries (Mon–Sun).
+        # Previously used today-7 which shifted the window 1 day forward:
+        # e.g. on Mon Mar-24, old code gave Mar17–Mar23 instead of Mar16–Mar22.
+        year, week, _ = today.isocalendar()           # current ISO week
+        prev_week = week - 1
+        prev_year = year
+        if prev_week == 0:                            # handle Jan year-boundary
+            prev_year -= 1
+            prev_week = datetime(prev_year, 12, 28).isocalendar()[1]
+
+        prev_monday = datetime.fromisocalendar(prev_year, prev_week, 1).date()
+        prev_sunday = prev_monday + timedelta(days=6)
+        week_ago    = prev_monday                     # inclusive start (Monday)
+        today       = prev_sunday + timedelta(days=1) # exclusive end (following Monday)
+        week_label  = f"{prev_year}-W{prev_week:02d}"
+
+        log(f"Weekly rollup — label: {week_label}", "INFO", True)
+        log(f"Weekly rollup — window: {week_ago} → {prev_sunday} (inclusive)", "INFO", True)
 
     dest = os.path.join(REPORTS_WEEKLY, f"soc_week_{week_label}.md")
 

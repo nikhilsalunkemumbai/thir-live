@@ -335,8 +335,14 @@ def build_ir_case(session_id: str, events: List[Dict]) -> Dict[str, Any]:
 
     ttps     = map_ttps(events_sorted)
 
+    # Build timeline: preserve payload fields needed by Tool 35 (SSH fingerprinting).
+    # Previously only timestamp+event were kept, stripping version/kexAlgs/encCS/macCS/compCS.
+    # Tool 35 reads cowrie.client.version and cowrie.client.kex payloads from timeline events
+    # via the 'events' key — so the full raw event dict is stored, with only unsafe/bulky
+    # fields removed (src_ip already captured at case level, input handled via commands list).
+    _TIMELINE_STRIP = {"session", "message", "sensor"}  # redundant or large fields
     timeline = [
-        {"timestamp": e.get("timestamp", ""), "event": e.get("eventid", "")}
+        {k: v for k, v in e.items() if k not in _TIMELINE_STRIP}
         for e in events_sorted
     ]
 
