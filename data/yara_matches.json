@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-02T16:55:30.085928+00:00",
+  "generated_at": "2026-04-02T18:54:55.337404+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 19,
@@ -17,7 +17,7 @@
       "count": 2
     },
     {
-      "family": "Gafgyt",
+      "family": "XMRig",
       "count": 2
     },
     {
@@ -25,7 +25,7 @@
       "count": 2
     },
     {
-      "family": "XMRig",
+      "family": "Gafgyt",
       "count": 2
     },
     {
@@ -42,11 +42,11 @@
       "filename": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
-        "Rootkit",
         "Downloader",
-        "Gafgyt",
+        "Rootkit",
+        "XMRig",
         "Mushtik",
-        "XMRig"
+        "Gafgyt"
       ],
       "severity": "CRITICAL"
     },
@@ -62,12 +62,12 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "Rootkit",
-        "Sora",
         "Downloader",
-        "Gafgyt",
+        "Sora",
+        "Rootkit",
+        "XMRig",
         "Mushtik",
-        "XMRig"
+        "Gafgyt"
       ],
       "severity": "CRITICAL"
     },
@@ -149,11 +149,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
         "Downloader",
-        "Gafgyt",
+        "Rootkit",
+        "XMRig",
         "Mushtik",
-        "XMRig"
+        "Gafgyt"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -335,12 +335,12 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Rootkit",
-        "Sora",
         "Downloader",
-        "Gafgyt",
+        "Sora",
+        "Rootkit",
+        "XMRig",
         "Mushtik",
-        "XMRig"
+        "Gafgyt"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
