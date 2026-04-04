@@ -1,12 +1,26 @@
 {
-  "generated_at": "2026-04-03T22:30:36Z",
+  "generated_at": "2026-04-04T01:57:53Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 30,
-  "unique_asns": 29,
+  "total_ips_analyzed": 34,
+  "unique_asns": 30,
   "top_attack_asns": [
     {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "asn": "AS8473",
+      "asn_name": "Bahnhof AB",
+      "ip_count": 3,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS18881",
+      "asn_name": "TELEFÔNICA BRASIL S.A",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -15,182 +29,98 @@
       "asn": "AS199739",
       "asn_name": "Earthlink Telecommunications Equipment Trading \u0026 Services DMCC",
       "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS25159",
-      "asn_name": "PJSC MegaFon",
-      "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
     },
     {
-      "asn": "AS14754",
-      "asn_name": "TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS212512",
-      "asn_name": "Detai Prosperous Technologies Limited",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS24158",
-      "asn_name": "Taiwan Mobile Co., Ltd.",
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS51852",
-      "asn_name": "Private Layer INC",
+      "asn": "AS8151",
+      "asn_name": "UNINET",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS203214",
-      "asn_name": "Hulum Almustakbal Company for Communication Engineering and Services Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS135758",
-      "asn_name": "Alacriy Net System Service Private Limited",
+      "asn": "AS10030",
+      "asn_name": "Celcom Axiata Berhad",
       "ip_count": 1,
       "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS8434",
+      "asn_name": "Telenor Sverige AB",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "asn": "AS8473",
+      "asn_name": "Bahnhof AB",
+      "ip_count": 3,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS25159",
-      "asn_name": "PJSC MegaFon",
+      "asn": "AS18881",
+      "asn_name": "TELEFÔNICA BRASIL S.A",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS199739",
+      "asn_name": "Earthlink Telecommunications Equipment Trading \u0026 Services DMCC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS14754",
-      "asn_name": "TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS24158",
-      "asn_name": "Taiwan Mobile Co., Ltd.",
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS51852",
-      "asn_name": "Private Layer INC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS203214",
-      "asn_name": "Hulum Almustakbal Company for Communication Engineering and Services Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS20485",
-      "asn_name": "Joint Stock Company TransTeleCom",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS262826",
-      "asn_name": "PW INFORMATICA E TECNOLOGIA LTDA",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS197667",
-      "asn_name": "Telekom System sp.z o.o.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS135377",
-      "asn_name": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS11290",
-      "asn_name": "Cogeco Connexion inc",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS19108",
-      "asn_name": "Optimum",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS3301",
-      "asn_name": "Telia Company AB",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS24086",
-      "asn_name": "Viettel Corporation",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS39442",
-      "asn_name": "JSC RDE \"Unico\"",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
+      "asn": "AS8151",
+      "asn_name": "UNINET",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -203,29 +133,113 @@
       "anon_count": 0
     },
     {
-      "asn": "AS134540",
-      "asn_name": "Tata Teleservices (Maharashtra) Ltd",
+      "asn": "AS20001",
+      "asn_name": "Charter Communications Inc",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS38283",
-      "asn_name": "CHINANET SiChuan Telecom Internet Data Center",
+      "asn": "AS138995",
+      "asn_name": "Antbox Networks Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS9365",
-      "asn_name": "its communications Inc.",
+      "asn": "AS29465",
+      "asn_name": "MTN NIGERIA Communication limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS16276",
-      "asn_name": "OVH SAS",
+      "asn": "AS132199",
+      "asn_name": "Globe Telecom Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS6939",
+      "asn_name": "Hurricane Electric LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4818",
+      "asn_name": "DiGi Telecommunications Sdn. Bhd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9121",
+      "asn_name": "Turk Telekomunikasyon Anonim Sirketi",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS17598",
+      "asn_name": "LG HelloVision Corp.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS48453",
+      "asn_name": "CNETWORK SRL",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS36992",
+      "asn_name": "ETISALAT MISR",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS147195",
+      "asn_name": "VAIDIK NETSOL OPC PVT LTD",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS10429",
+      "asn_name": "TELEFÔNICA BRASIL S.A",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS55990",
+      "asn_name": "Huawei Cloud Service data center",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -234,115 +248,133 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "CN",
-      "code": "",
-      "count": 5
-    },
-    {
-      "country": "RU",
-      "code": "",
-      "count": 3
-    },
-    {
-      "country": "IN",
-      "code": "",
-      "count": 2
-    },
-    {
       "country": "US",
       "code": "",
-      "count": 2
+      "count": 8
     },
     {
       "country": "SE",
       "code": "",
-      "count": 2
-    },
-    {
-      "country": "TW",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "IQ",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "PL",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "CH",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "FR",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "KR",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "GT",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "SG",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "CA",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "JP",
-      "code": "",
-      "count": 1
+      "count": 4
     },
     {
       "country": "BR",
       "code": "",
-      "count": 1
+      "count": 3
     },
     {
-      "country": "VN",
+      "country": "CN",
       "code": "",
-      "count": 1
+      "count": 3
+    },
+    {
+      "country": "KR",
+      "code": "",
+      "count": 2
     },
     {
       "country": "MY",
       "code": "",
-      "count": 1
+      "count": 2
+    },
+    {
+      "country": "PK",
+      "code": "",
+      "count": 2
     },
     {
       "country": "HK",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "MX",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "PH",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "NG",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "RO",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "TR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "EG",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IN",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IQ",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "asn": "AS8473",
+      "asn_name": "Bahnhof AB",
+      "ip_count": 3,
+      "unique_ips": [
+        "155.4.79.254",
+        "46.59.97.98",
+        "79.136.8.69"
+      ],
+      "countries": [
+        "SE"
+      ],
+      "top_country": "SE",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:53Z",
+      "isps": [
+        "Bahnhof AB",
+        "Bahnhof AB, Sweden"
+      ]
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
       "ip_count": 2,
       "unique_ips": [
-        "120.48.147.81",
-        "180.76.104.208"
+        "139.135.46.161",
+        "144.48.121.126"
       ],
       "countries": [
-        "CN"
+        "PK"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
+      "top_country": "PK",
+      "avg_abuse_score": 93,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -355,338 +387,19 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:33Z",
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
       "isps": [
-        "Beijing Baidu Netcom Science and Technology Co., Ltd."
+        "Cyber Internet Services Pakistan"
       ]
     },
     {
-      "asn": "AS199739",
-      "asn_name": "Earthlink Telecommunications Equipment Trading \u0026 Services DMCC",
-      "ip_count": 1,
+      "asn": "AS18881",
+      "asn_name": "TELEFÔNICA BRASIL S.A",
+      "ip_count": 2,
       "unique_ips": [
-        "169.224.95.55"
-      ],
-      "countries": [
-        "IQ"
-      ],
-      "top_country": "IQ",
-      "avg_abuse_score": 9,
-      "max_abuse_score": 9,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
-      "isps": [
-        "Earthlink Telecommunications Equipment Trading \u0026 Services DMCC"
-      ]
-    },
-    {
-      "asn": "AS25159",
-      "asn_name": "PJSC MegaFon",
-      "ip_count": 1,
-      "unique_ips": [
-        "178.178.222.58"
-      ],
-      "countries": [
-        "RU"
-      ],
-      "top_country": "RU",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
-      "isps": [
-        "PJSC MegaFon"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "52.234.43.177"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 15,
-      "max_abuse_score": 15,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
-      "isps": [
-        "Microsoft Corporation"
-      ]
-    },
-    {
-      "asn": "AS14754",
-      "asn_name": "TELECOMUNICACIONES DE GUATEMALA, SOCIEDAD ANONIMA",
-      "ip_count": 1,
-      "unique_ips": [
-        "190.149.113.86"
-      ],
-      "countries": [
-        "GT"
-      ],
-      "top_country": "GT",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
-      "isps": [
-        "Telgua"
-      ]
-    },
-    {
-      "asn": "AS212512",
-      "asn_name": "Detai Prosperous Technologies Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "45.82.78.118"
-      ],
-      "countries": [
-        "SG"
-      ],
-      "top_country": "SG",
-      "avg_abuse_score": 22,
-      "max_abuse_score": 22,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
-      "isps": [
-        "Detai Prosperous Technologies Limited"
-      ]
-    },
-    {
-      "asn": "AS24158",
-      "asn_name": "Taiwan Mobile Co., Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "101.13.2.183"
-      ],
-      "countries": [
-        "TW"
-      ],
-      "top_country": "TW",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
-      "isps": [
-        "Taiwan Mobile Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS51852",
-      "asn_name": "Private Layer INC",
-      "ip_count": 1,
-      "unique_ips": [
-        "179.43.186.241"
-      ],
-      "countries": [
-        "CH"
-      ],
-      "top_country": "CH",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
-      "isps": [
-        "PRIVATE LAYER INC"
-      ]
-    },
-    {
-      "asn": "AS203214",
-      "asn_name": "Hulum Almustakbal Company for Communication Engineering and Services Ltd",
-      "ip_count": 1,
-      "unique_ips": [
-        "65.20.163.103"
-      ],
-      "countries": [
-        "IQ"
-      ],
-      "top_country": "IQ",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
-      "isps": [
-        "Earthlink Telecommunications Equipment Trading \u0026 Services DMCC"
-      ]
-    },
-    {
-      "asn": "AS135758",
-      "asn_name": "Alacriy Net System Service Private Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "103.134.180.164"
-      ],
-      "countries": [
-        "IN"
-      ],
-      "top_country": "IN",
-      "avg_abuse_score": 51,
-      "max_abuse_score": 51,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
-      "isps": [
-        "Rds It Solutions"
-      ]
-    },
-    {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
-      "ip_count": 1,
-      "unique_ips": [
-        "121.142.70.6"
-      ],
-      "countries": [
-        "KR"
-      ],
-      "top_country": "KR",
-      "avg_abuse_score": 57,
-      "max_abuse_score": 57,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
-      "isps": [
-        "Korea Telecom"
-      ]
-    },
-    {
-      "asn": "AS20485",
-      "asn_name": "Joint Stock Company TransTeleCom",
-      "ip_count": 1,
-      "unique_ips": [
-        "217.150.37.249"
-      ],
-      "countries": [
-        "RU"
-      ],
-      "top_country": "RU",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
-      "isps": [
-        "Joint Stock Company TransTeleCom"
-      ]
-    },
-    {
-      "asn": "AS262826",
-      "asn_name": "PW INFORMATICA E TECNOLOGIA LTDA",
-      "ip_count": 1,
-      "unique_ips": [
-        "186.251.71.202"
+        "179.184.218.49",
+        "179.185.227.77"
       ],
       "countries": [
         "BR"
@@ -705,10 +418,160 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:34Z",
-      "last_seen": "2026-04-03T22:30:34Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:53Z",
       "isps": [
-        "PW INFORMATICA E TECNOLOGIA LTDA"
+        "TELEFÔNICA BRASIL S.A"
+      ]
+    },
+    {
+      "asn": "AS199739",
+      "asn_name": "Earthlink Telecommunications Equipment Trading \u0026 Services DMCC",
+      "ip_count": 1,
+      "unique_ips": [
+        "37.238.45.202"
+      ],
+      "countries": [
+        "IQ"
+      ],
+      "top_country": "IQ",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:53Z",
+      "last_seen": "2026-04-04T01:57:53Z",
+      "isps": [
+        "EarthLink Ltd. Communications\u0026Internet Services"
+      ]
+    },
+    {
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 1,
+      "unique_ips": [
+        "147.185.132.51"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 0,
+      "max_abuse_score": 0,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-04T01:57:47Z",
+      "last_seen": "2026-04-04T01:57:47Z",
+      "isps": [
+        "Palo Alto Networks, Inc"
+      ]
+    },
+    {
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
+      "ip_count": 1,
+      "unique_ips": [
+        "183.3.133.47"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "CHINANET Guangdong province network"
+      ]
+    },
+    {
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "106.252.57.21"
+      ],
+      "countries": [
+        "KR"
+      ],
+      "top_country": "KR",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "LG DACOM Corporation"
+      ]
+    },
+    {
+      "asn": "AS8151",
+      "asn_name": "UNINET",
+      "ip_count": 1,
+      "unique_ips": [
+        "187.218.57.50"
+      ],
+      "countries": [
+        "MX"
+      ],
+      "top_country": "MX",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "UNINET"
       ]
     },
     {
@@ -716,14 +579,14 @@
       "asn_name": "Celcom Axiata Berhad",
       "ip_count": 1,
       "unique_ips": [
-        "183.171.57.77"
+        "183.171.148.163"
       ],
       "countries": [
         "MY"
       ],
       "top_country": "MY",
-      "avg_abuse_score": 75,
-      "max_abuse_score": 75,
+      "avg_abuse_score": 71,
+      "max_abuse_score": 71,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -733,23 +596,23 @@
       "critical_count": 0,
       "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
       "isps": [
         "Celcom Axiata Berhad"
       ]
     },
     {
-      "asn": "AS197667",
-      "asn_name": "Telekom System sp.z o.o.",
+      "asn": "AS8434",
+      "asn_name": "Telenor Sverige AB",
       "ip_count": 1,
       "unique_ips": [
-        "31.41.81.65"
+        "83.227.140.125"
       ],
       "countries": [
-        "PL"
+        "SE"
       ],
-      "top_country": "PL",
+      "top_country": "SE",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -763,25 +626,25 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
       "isps": [
-        "Telekom System sp.z o.o."
+        "Telenor Sverige AB"
       ]
     },
     {
-      "asn": "AS135377",
-      "asn_name": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
+      "asn": "AS22773",
+      "asn_name": "Cox Communications Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "118.193.34.157"
+        "70.166.167.59"
       ],
       "countries": [
-        "HK"
+        "US"
       ],
-      "top_country": "HK",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "US",
+      "avg_abuse_score": 57,
+      "max_abuse_score": 57,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -789,53 +652,20 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-03T22:30:33Z",
-      "last_seen": "2026-04-03T22:30:33Z",
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
       "isps": [
-        "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED"
+        "Cox Communications"
       ]
     },
     {
-      "asn": "AS11290",
-      "asn_name": "Cogeco Connexion inc",
+      "asn": "AS20001",
+      "asn_name": "Charter Communications Inc",
       "ip_count": 1,
       "unique_ips": [
-        "24.75.185.101"
-      ],
-      "countries": [
-        "CA"
-      ],
-      "top_country": "CA",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
-      "isps": [
-        "Cogeco Connexion inc"
-      ]
-    },
-    {
-      "asn": "AS19108",
-      "asn_name": "Optimum",
-      "ip_count": 1,
-      "unique_ips": [
-        "74.192.139.7"
+        "75.80.65.214"
       ],
       "countries": [
         "US"
@@ -854,23 +684,51 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
       "isps": [
-        "Optimum"
+        "Charter Communications Inc"
       ]
     },
     {
-      "asn": "AS3301",
-      "asn_name": "Telia Company AB",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "78.67.161.64"
+        "172.184.219.208"
       ],
       "countries": [
-        "SE"
+        "US"
       ],
-      "top_country": "SE",
+      "top_country": "US",
+      "avg_abuse_score": 18,
+      "max_abuse_score": 18,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-04T01:57:44Z",
+      "last_seen": "2026-04-04T01:57:44Z",
+      "isps": [
+        "Microsoft Limited"
+      ]
+    },
+    {
+      "asn": "AS138995",
+      "asn_name": "Antbox Networks Limited",
+      "ip_count": 1,
+      "unique_ips": [
+        "45.194.37.246"
+      ],
+      "countries": [
+        "HK"
+      ],
+      "top_country": "HK",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -884,25 +742,115 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
       "isps": [
-        "Telia Network Services"
+        "Antbox Network Limited"
       ]
     },
     {
-      "asn": "AS9416",
-      "asn_name": "Hoshin Multimedia Center Inc.",
+      "asn": "AS29465",
+      "asn_name": "MTN NIGERIA Communication limited",
       "ip_count": 1,
       "unique_ips": [
-        "202.151.63.198"
+        "102.89.17.238"
       ],
       "countries": [
-        "TW"
+        "NG"
       ],
-      "top_country": "TW",
-      "avg_abuse_score": 51,
-      "max_abuse_score": 51,
+      "top_country": "NG",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "MTNN-OJOTA-REGION-PREFIXES"
+      ]
+    },
+    {
+      "asn": "AS132199",
+      "asn_name": "Globe Telecom Inc.",
+      "ip_count": 1,
+      "unique_ips": [
+        "120.28.109.188"
+      ],
+      "countries": [
+        "PH"
+      ],
+      "top_country": "PH",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
+      "isps": [
+        "Globe Telecom/Innove Communication"
+      ]
+    },
+    {
+      "asn": "AS6939",
+      "asn_name": "Hurricane Electric LLC",
+      "ip_count": 1,
+      "unique_ips": [
+        "64.62.156.192"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
+      "isps": [
+        "The Shadowserver Foundation, Inc."
+      ]
+    },
+    {
+      "asn": "AS45102",
+      "asn_name": "Alibaba (US) Technology Co., Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "43.99.90.40"
+      ],
+      "countries": [
+        "HK"
+      ],
+      "top_country": "HK",
+      "avg_abuse_score": 52,
+      "max_abuse_score": 52,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -912,23 +860,23 @@
       "critical_count": 0,
       "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
       "isps": [
-        "Homeplus Digital Co., Ltd."
+        "Alibaba Cloud (Singapore) Private Limited"
       ]
     },
     {
-      "asn": "AS24086",
-      "asn_name": "Viettel Corporation",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "116.109.110.164"
+        "66.132.172.141"
       ],
       "countries": [
-        "VN"
+        "US"
       ],
-      "top_country": "VN",
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -942,18 +890,48 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:33Z",
-      "last_seen": "2026-04-03T22:30:33Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
       "isps": [
-        "Viettel Group"
+        "Censys, Inc."
       ]
     },
     {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
+      "asn": "AS4818",
+      "asn_name": "DiGi Telecommunications Sdn. Bhd.",
       "ip_count": 1,
       "unique_ips": [
-        "14.103.115.106"
+        "49.124.152.216"
+      ],
+      "countries": [
+        "MY"
+      ],
+      "top_country": "MY",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "DiGi Telecommunications Sdn Bhd"
+      ]
+    },
+    {
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "101.126.54.36"
       ],
       "countries": [
         "CN"
@@ -972,23 +950,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:36Z",
-      "last_seen": "2026-04-03T22:30:36Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
       "isps": [
         "Beijing Volcano Engine Technology Co., Ltd."
       ]
     },
     {
-      "asn": "AS39442",
-      "asn_name": "JSC RDE \"Unico\"",
+      "asn": "AS9121",
+      "asn_name": "Turk Telekomunikasyon Anonim Sirketi",
       "ip_count": 1,
       "unique_ips": [
-        "217.149.191.246"
+        "85.105.255.56"
       ],
       "countries": [
-        "RU"
+        "TR"
       ],
-      "top_country": "RU",
+      "top_country": "TR",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1002,23 +980,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:31Z",
-      "last_seen": "2026-04-03T22:30:31Z",
+      "first_seen": "2026-04-04T01:57:44Z",
+      "last_seen": "2026-04-04T01:57:44Z",
       "isps": [
-        "JSC RDE Unico"
+        "Turk Telekomunikasyon Anonim Sirketi"
       ]
     },
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
+      "asn": "AS17598",
+      "asn_name": "LG HelloVision Corp.",
       "ip_count": 1,
       "unique_ips": [
-        "123.129.245.249"
+        "115.86.227.79"
       ],
       "countries": [
-        "CN"
+        "KR"
       ],
-      "top_country": "CN",
+      "top_country": "KR",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1032,23 +1010,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
       "isps": [
-        "China Unicom Shandong Province Network"
+        "HVYeongseo"
       ]
     },
     {
-      "asn": "AS8434",
-      "asn_name": "Telenor Sverige AB",
+      "asn": "AS48453",
+      "asn_name": "CNETWORK SRL",
       "ip_count": 1,
       "unique_ips": [
-        "85.229.46.153"
+        "85.122.54.241"
       ],
       "countries": [
-        "SE"
+        "RO"
       ],
-      "top_country": "SE",
+      "top_country": "RO",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1062,18 +1040,107 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
       "isps": [
-        "Telenor Sverige AB"
+        "SC CNETWORK SRL"
       ]
     },
     {
-      "asn": "AS134540",
-      "asn_name": "Tata Teleservices (Maharashtra) Ltd",
+      "asn": "AS46562",
+      "asn_name": "Performive LLC",
       "ip_count": 1,
       "unique_ips": [
-        "123.252.234.206"
+        "142.54.226.210"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 52,
+      "max_abuse_score": 52,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "ZeroLag Communications"
+      ]
+    },
+    {
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "unique_ips": [
+        "172.236.228.39"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse",
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
+      "isps": [
+        "Linode"
+      ]
+    },
+    {
+      "asn": "AS36992",
+      "asn_name": "ETISALAT MISR",
+      "ip_count": 1,
+      "unique_ips": [
+        "197.199.224.52"
+      ],
+      "countries": [
+        "EG"
+      ],
+      "top_country": "EG",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:46Z",
+      "last_seen": "2026-04-04T01:57:46Z",
+      "isps": [
+        "ETISALAT MISR"
+      ]
+    },
+    {
+      "asn": "AS147195",
+      "asn_name": "VAIDIK NETSOL OPC PVT LTD",
+      "ip_count": 1,
+      "unique_ips": [
+        "103.174.145.35"
       ],
       "countries": [
         "IN"
@@ -1092,18 +1159,48 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-03T22:30:32Z",
-      "last_seen": "2026-04-03T22:30:32Z",
+      "first_seen": "2026-04-04T01:57:52Z",
+      "last_seen": "2026-04-04T01:57:52Z",
       "isps": [
-        "Tata Teleservices Maharashtra Ltd"
+        "VAIDIK NETSOL OPC PVT LTD"
       ]
     },
     {
-      "asn": "AS38283",
-      "asn_name": "CHINANET SiChuan Telecom Internet Data Center",
+      "asn": "AS10429",
+      "asn_name": "TELEFÔNICA BRASIL S.A",
       "ip_count": 1,
       "unique_ips": [
-        "118.123.116.93"
+        "189.56.0.19"
+      ],
+      "countries": [
+        "BR"
+      ],
+      "top_country": "BR",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-04T01:57:45Z",
+      "last_seen": "2026-04-04T01:57:45Z",
+      "isps": [
+        "TELEFÔNICA BRASIL S.A"
+      ]
+    },
+    {
+      "asn": "AS55990",
+      "asn_name": "Huawei Cloud Service data center",
+      "ip_count": 1,
+      "unique_ips": [
+        "1.92.145.107"
       ],
       "countries": [
         "CN"
@@ -1120,73 +1217,13 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:36Z",
-      "last_seen": "2026-04-03T22:30:36Z",
-      "isps": [
-        "CHINANET Sichuan province network"
-      ]
-    },
-    {
-      "asn": "AS9365",
-      "asn_name": "its communications Inc.",
-      "ip_count": 1,
-      "unique_ips": [
-        "115.165.40.167"
-      ],
-      "countries": [
-        "JP"
-      ],
-      "top_country": "JP",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-03T22:30:36Z",
-      "last_seen": "2026-04-03T22:30:36Z",
-      "isps": [
-        "its communications Inc."
-      ]
-    },
-    {
-      "asn": "AS16276",
-      "asn_name": "OVH SAS",
-      "ip_count": 1,
-      "unique_ips": [
-        "51.68.226.87"
-      ],
-      "countries": [
-        "FR"
-      ],
-      "top_country": "FR",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
         "high-abuse",
         "cloud-provider"
       ],
-      "first_seen": "2026-04-03T22:30:34Z",
-      "last_seen": "2026-04-03T22:30:34Z",
+      "first_seen": "2026-04-04T01:57:44Z",
+      "last_seen": "2026-04-04T01:57:44Z",
       "isps": [
-        "OVH SAS"
+        "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
       ]
     }
   ]
