@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-05T02:11:41.463544+00:00",
+  "generated_at": "2026-04-05T05:44:38.610730+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 19,
@@ -13,11 +13,7 @@
       "count": 7
     },
     {
-      "family": "Gafgyt",
-      "count": 2
-    },
-    {
-      "family": "XMRig",
+      "family": "Downloader",
       "count": 2
     },
     {
@@ -25,7 +21,11 @@
       "count": 2
     },
     {
-      "family": "Downloader",
+      "family": "Gafgyt",
+      "count": 2
+    },
+    {
+      "family": "XMRig",
       "count": 2
     },
     {
@@ -42,11 +42,11 @@
       "filename": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
-        "Gafgyt",
-        "Rootkit",
-        "XMRig",
+        "Downloader",
         "Mushtik",
-        "Downloader"
+        "Gafgyt",
+        "XMRig",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -62,12 +62,12 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "Sora",
-        "Gafgyt",
-        "Rootkit",
-        "XMRig",
+        "Downloader",
         "Mushtik",
-        "Downloader"
+        "Gafgyt",
+        "Sora",
+        "XMRig",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -149,11 +149,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
-        "Rootkit",
-        "XMRig",
+        "Downloader",
         "Mushtik",
-        "Downloader"
+        "Gafgyt",
+        "XMRig",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -335,12 +335,12 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Sora",
-        "Gafgyt",
-        "Rootkit",
-        "XMRig",
+        "Downloader",
         "Mushtik",
-        "Downloader"
+        "Gafgyt",
+        "Sora",
+        "XMRig",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
