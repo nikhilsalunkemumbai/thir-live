@@ -1,45 +1,15 @@
 {
-  "generated_at": "2026-04-06T02:12:11Z",
+  "generated_at": "2026-04-06T02:38:49Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 4,
-  "unique_asns": 4,
+  "total_ips_analyzed": 2,
+  "unique_asns": 2,
   "top_attack_asns": [
-    {
-      "asn": "AS19108",
-      "asn_name": "Optimum",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
-    }
-  ],
-  "high_risk_asns": [
-    {
-      "asn": "AS19108",
-      "asn_name": "Optimum",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
     },
     {
       "asn": "AS14061",
@@ -47,10 +17,12 @@
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
-    },
+    }
+  ],
+  "high_risk_asns": [
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -61,28 +33,23 @@
     {
       "country": "US",
       "code": "",
-      "count": 3
-    },
-    {
-      "country": "CN",
-      "code": "",
-      "count": 1
+      "count": 2
     }
   ],
   "clusters": [
     {
-      "asn": "AS19108",
-      "asn_name": "Optimum",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "75.111.180.138"
+        "145.132.103.64"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "avg_abuse_score": 9,
+      "max_abuse_score": 9,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -90,14 +57,12 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-06T02:12:10Z",
-      "last_seen": "2026-04-06T02:12:10Z",
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-06T02:38:48Z",
+      "last_seen": "2026-04-06T02:38:48Z",
       "isps": [
-        "Optimum"
+        "Microsoft Limited"
       ]
     },
     {
@@ -124,68 +89,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-06T02:12:11Z",
-      "last_seen": "2026-04-06T02:12:11Z",
+      "first_seen": "2026-04-06T02:38:49Z",
+      "last_seen": "2026-04-06T02:38:49Z",
       "isps": [
         "DigitalOcean, LLC"
-      ]
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "unique_ips": [
-        "116.140.173.57"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 91,
-      "max_abuse_score": 91,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-06T02:12:10Z",
-      "last_seen": "2026-04-06T02:12:10Z",
-      "isps": [
-        "China United Network Communications Corporation Limited"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "13.83.162.1"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-06T02:12:10Z",
-      "last_seen": "2026-04-06T02:12:10Z",
-      "isps": [
-        "Microsoft Corporation"
       ]
     }
   ]

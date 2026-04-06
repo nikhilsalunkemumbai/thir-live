@@ -1,28 +1,13 @@
 {
-  "generated_at": "2026-04-06T02:12:11Z",
-  "total_ips": 4,
+  "generated_at": "2026-04-06T02:38:49Z",
+  "total_ips": 2,
   "ips": [
     {
-      "indicator": "116.140.173.57",
+      "indicator": "145.132.103.64",
       "type": "ip",
-      "abuse_score": 91,
-      "country": "CN",
-      "isp": "China United Network Communications Corporation Limited",
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "org": "AS4837 CHINA UNICOM China169 Backbone",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 0,
-      "last_seen": "2026-04-06T02:12:10Z"
-    },
-    {
-      "indicator": "13.83.162.1",
-      "type": "ip",
-      "abuse_score": 0,
+      "abuse_score": 9,
       "country": "US",
-      "isp": "Microsoft Corporation",
+      "isp": "Microsoft Limited",
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "org": "AS8075 Microsoft Corporation",
@@ -30,22 +15,7 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-06T02:12:10Z"
-    },
-    {
-      "indicator": "75.111.180.138",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "Optimum",
-      "asn": "AS19108",
-      "asn_name": "Optimum",
-      "org": "AS19108 Optimum",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 10,
-      "last_seen": "2026-04-06T02:12:10Z"
+      "last_seen": "2026-04-06T02:38:48Z"
     },
     {
       "indicator": "161.35.8.199",
@@ -60,7 +30,7 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 13,
-      "last_seen": "2026-04-06T02:12:11Z"
+      "last_seen": "2026-04-06T02:38:49Z"
     }
   ]
 }

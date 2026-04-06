@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-06 |
-| **Generated At** | 2026-04-06T02:12:59Z |
-| **Shift Time** | 02:12 UTC |
+| **Generated At** | 2026-04-06T02:39:33Z |
+| **Shift Time** | 02:39 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -17,8 +17,8 @@
 | Total Sessions Captured | **7** |
 | Confirmed Threats | **6** |
 | False Positives Filtered | **1** (14.3%) |
-| Unique Attacker IPs | **4** |
-| Countries of Origin | **2** |
+| Unique Attacker IPs | **2** |
+| Countries of Origin | **1** |
 | High Severity Cases | **2** |
 | Medium Severity Cases | **0** |
 | Low Severity Cases | **5** |
@@ -30,10 +30,10 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **4** |
-| Unique Credential Pairs | **4** |
-| Unique Usernames | **3** |
-| Unique Passwords | **4** |
+| Total Auth Attempts | **6** |
+| Unique Credential Pairs | **6** |
+| Unique Usernames | **5** |
+| Unique Passwords | **6** |
 | Successful Auth Pairs | **2** |
 
 **Top Usernames:**
@@ -41,15 +41,18 @@
 | Username | Attempts |
 |---|---|
 | `root` | 2 |
-| `chat` | 1 |
+| `stage` | 1 |
+| `postgres` | 1 |
 | `345gs5662d34` | 1 |
+| `pepe` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `chat` | 1 |
-| `ZZxx123123` | 1 |
+| `stage` | 1 |
+| `postgres#2025` | 1 |
+| `Root6666` | 1 |
 | `345gs5662d34` | 1 |
 | `3245gs5662d34` | 1 |
 
@@ -57,8 +60,9 @@
 
 | Username | Password | Attempts |
 |---|---|---|
-| `chat` | `chat` | 1 |
-| `root` | `ZZxx123123` | 1 |
+| `stage` | `stage` | 1 |
+| `postgres` | `postgres#2025` | 1 |
+| `root` | `Root6666` | 1 |
 | `345gs5662d34` | `345gs5662d34` | 1 |
 | `root` | `3245gs5662d34` | 1 |
 
@@ -66,8 +70,8 @@
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `root` | `ZZxx123123` | `161.35.8.199` | 2026-04-06T01:45:42 |
-| `root` | `3245gs5662d34` | `161.35.8.199` | 2026-04-06T01:45:47 |
+| `root` | `Root6666` | `161.35.8.199` | 2026-04-06T02:35:59 |
+| `root` | `3245gs5662d34` | `161.35.8.199` | 2026-04-06T02:36:04 |
 
 ---
 
@@ -83,19 +87,19 @@
 
 | Client Family | Sessions |
 |---|---|
-| libssh | 4 |
+| libssh | 6 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `03a80b21afa8...` | Modern SSH client | 4 | 1 |
+| `03a80b21afa8...` | Modern SSH client | 6 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `03a80b21afa8...` | libssh | 4 | 1 | Modern SSH client |
+| `03a80b21afa8...` | libssh | 6 | 1 | Modern SSH client |
 
 ---
 
@@ -132,19 +136,17 @@ Source IPs: `161.35.8.199`
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **4** |
-| Unique ASNs | **4** |
-| High-Risk ASNs | **3** |
+| Total IPs Analysed | **2** |
+| Unique ASNs | **2** |
+| High-Risk ASNs | **1** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS19108` | Optimum | 1 | HIGH |
-| `AS14061` | DigitalOcean, LLC | 1 | HIGH |
-| `AS4837` | CHINA UNICOM China169 Backbone | 1 | HIGH |
 | `AS8075` | Microsoft Corporation | 1 | LOW |
+| `AS14061` | DigitalOcean, LLC | 1 | HIGH |
 
 ---
 
@@ -155,13 +157,13 @@ Source IPs: `161.35.8.199`
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-70b4c7a62da6
+### 🔴 HIGH · IR-9e1c5bc4cb9d
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `161.35.8[.]199` |
-| **First Seen** | 2026-04-06 01:45 |
-| **Last Seen** | 2026-04-06 01:45 |
+| **First Seen** | 2026-04-06 02:35 |
+| **Last Seen** | 2026-04-06 02:36 |
 | **Session Duration** | 6s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -174,19 +176,19 @@ Source IPs: `161.35.8.199`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-04-06 01:45:41` | `cowrie.session.connect` |
-| `2026-04-06 01:45:41` | `cowrie.client.version` |
-| `2026-04-06 01:45:41` | `cowrie.client.kex` |
-| `2026-04-06 01:45:42` | `cowrie.login.success` |
-| `2026-04-06 01:45:42` | `cowrie.session.params` |
-| `2026-04-06 01:45:42` | `cowrie.command.input` |
-| `2026-04-06 01:45:42` | `cowrie.command.failed` |
-| `2026-04-06 01:45:43` | `cowrie.log.closed` |
-| `2026-04-06 01:45:43` | `cowrie.session.params` |
-| `2026-04-06 01:45:43` | `cowrie.command.input` |
-| `2026-04-06 01:45:43` | `cowrie.session.file_download` |
-| `2026-04-06 01:45:43` | `cowrie.log.closed` |
-| `2026-04-06 01:45:47` | `cowrie.session.closed` |
+| `2026-04-06 02:35:58` | `cowrie.session.connect` |
+| `2026-04-06 02:35:58` | `cowrie.client.version` |
+| `2026-04-06 02:35:58` | `cowrie.client.kex` |
+| `2026-04-06 02:35:59` | `cowrie.login.success` |
+| `2026-04-06 02:35:59` | `cowrie.session.params` |
+| `2026-04-06 02:35:59` | `cowrie.command.input` |
+| `2026-04-06 02:35:59` | `cowrie.command.failed` |
+| `2026-04-06 02:35:59` | `cowrie.log.closed` |
+| `2026-04-06 02:36:00` | `cowrie.session.params` |
+| `2026-04-06 02:36:00` | `cowrie.command.input` |
+| `2026-04-06 02:36:00` | `cowrie.session.file_download` |
+| `2026-04-06 02:36:00` | `cowrie.log.closed` |
+| `2026-04-06 02:36:04` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `161.35.8[.]199` to AbuseIPDB if not already reported
@@ -195,13 +197,13 @@ Source IPs: `161.35.8.199`
 - [ ] Submit download hash(es) to VirusTotal
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-ad9502b2640b
+### 🔴 HIGH · IR-cdeae6175358
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `161.35.8[.]199` |
-| **First Seen** | 2026-04-06 01:45 |
-| **Last Seen** | 2026-04-06 01:45 |
+| **First Seen** | 2026-04-06 02:36 |
+| **Last Seen** | 2026-04-06 02:36 |
 | **Session Duration** | 1s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -211,11 +213,11 @@ Source IPs: `161.35.8.199`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-04-06 01:45:46` | `cowrie.session.connect` |
-| `2026-04-06 01:45:46` | `cowrie.client.version` |
-| `2026-04-06 01:45:46` | `cowrie.client.kex` |
-| `2026-04-06 01:45:47` | `cowrie.login.success` |
-| `2026-04-06 01:45:47` | `cowrie.session.closed` |
+| `2026-04-06 02:36:03` | `cowrie.session.connect` |
+| `2026-04-06 02:36:03` | `cowrie.client.version` |
+| `2026-04-06 02:36:03` | `cowrie.client.kex` |
+| `2026-04-06 02:36:04` | `cowrie.login.success` |
+| `2026-04-06 02:36:04` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `161.35.8[.]199` to AbuseIPDB if not already reported
@@ -231,9 +233,7 @@ Source IPs: `161.35.8.199`
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `161.35.8[.]199` | **2** | 2026-04-06 01:38 | 2026-04-06 01:45 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
-| `116.140.173[.]57` | 1 | 2026-04-06 00:10 | 2026-04-06 00:10 | 13s | 0 | `T1592` | 🟢 LOW |
-| `75.111.180[.]138` | 1 | 2026-04-06 01:14 | 2026-04-06 01:14 | 13s | 0 | `T1592` | 🟢 LOW |
+| `161.35.8[.]199` | **4** | 2026-04-06 02:32 | 2026-04-06 02:38 | 0m | 4 | `T1110.001 · T1592` | 🟢 LOW |
 
 ---
 
@@ -269,9 +269,8 @@ Source IPs: `161.35.8.199`
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `75.111.180[.]138` | US | Optimum | **100** ⚠️ | 10 |
 | `161.35.8[.]199` | US | DigitalOcean, LLC | **100** ⚠️ | 13 |
-| `116.140.173[.]57` | CN | China United Network Communications Corporation Limited | **91** ⚠️ | 0 |
+| `145.132.103[.]64` | US | Microsoft Limited | 9 | 0 |
 
 ---
 
@@ -279,9 +278,9 @@ Source IPs: `161.35.8.199`
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 4 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 6 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 4 |
 | [T1078](https://attack.mitre.org/techniques/T1078) | 2 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 2 |
 | [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 1 |
 | [T1105](https://attack.mitre.org/techniques/T1105) | 1 |
 
@@ -291,7 +290,7 @@ Source IPs: `161.35.8.199`
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 1 |
+| AbuseIPDB score 9 below threshold 25 | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -303,18 +302,18 @@ Source IPs: `161.35.8.199`
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
 | Tool 26  | Incident Timeline Generator | ✅ 7 cases |
-| Tool 34  | Credential Extractor        | ✅ 4 attempts |
+| Tool 34  | Credential Extractor        | ✅ 6 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 1 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 4 IPs enriched |
+| Tool 27  | Threat Intel Feeder         | ✅ 2 IPs enriched |
 | Tool 29  | False Positive Tracker      | ✅ 1 filtered (14.3%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 4 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 2 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 21 files |
 | Tool 33  | YARA Classifier             | ✅ 7 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 2 priority case(s) shown individually · 3 recon entry/entries in table (1 group(s) consolidating 2 session(s)).
+> **Report grouping:** 2 priority case(s) shown individually · 1 recon entry/entries in table (1 group(s) consolidating 4 session(s)).
 
 ---
 
@@ -330,4 +329,4 @@ Source IPs: `161.35.8.199`
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-06T02:12:59Z_
+_Report time: 2026-04-06T02:39:33Z_
