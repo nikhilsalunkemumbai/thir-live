@@ -1,11 +1,26 @@
 {
-  "generated_at": "2026-04-06T18:55:38Z",
-  "total_ips": 4,
+  "generated_at": "2026-04-06T20:35:40Z",
+  "total_ips": 2,
   "ips": [
     {
-      "indicator": "104.209.12.66",
+      "indicator": "183.220.237.230",
       "type": "ip",
-      "abuse_score": 14,
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "China Mobile Communications Corporation",
+      "asn": "AS9808",
+      "asn_name": "China Mobile Communications Group Co., Ltd.",
+      "org": "AS9808 China Mobile Communications Group Co., Ltd.",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 42,
+      "last_seen": "2026-04-06T20:35:40Z"
+    },
+    {
+      "indicator": "20.55.15.232",
+      "type": "ip",
+      "abuse_score": 0,
       "country": "US",
       "isp": "Microsoft Corporation",
       "asn": "AS8075",
@@ -15,52 +30,7 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-06T18:55:37Z"
-    },
-    {
-      "indicator": "60.227.178.119",
-      "type": "ip",
-      "abuse_score": 86,
-      "country": "AU",
-      "isp": "Telstra Limited",
-      "asn": "AS1221",
-      "asn_name": "Telstra Limited",
-      "org": "AS1221 Telstra Limited",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 0,
-      "last_seen": "2026-04-06T18:55:37Z"
-    },
-    {
-      "indicator": "143.198.196.195",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "SG",
-      "isp": "DigitalOcean, LLC",
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "org": "AS14061 DigitalOcean, LLC",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-06T18:55:37Z"
-    },
-    {
-      "indicator": "120.48.109.159",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "org": "AS38365 Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-06T18:55:38Z"
+      "last_seen": "2026-04-06T20:35:40Z"
     }
   ]
 }
