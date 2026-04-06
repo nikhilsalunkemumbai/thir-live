@@ -1,21 +1,14 @@
 {
-  "generated_at": "2026-04-06T14:44:10Z",
+  "generated_at": "2026-04-06T16:43:12Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 5,
-  "unique_asns": 5,
+  "total_ips_analyzed": 7,
+  "unique_asns": 6,
   "top_attack_asns": [
-    {
-      "asn": "AS13110",
-      "asn_name": "INEA sp. z o.o.",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
     {
       "asn": "AS396982",
       "asn_name": "Google LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
+      "ip_count": 2,
+      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
@@ -26,15 +19,29 @@
       "anon_count": 0
     },
     {
-      "asn": "AS701",
-      "asn_name": "Verizon Business",
+      "asn": "AS9829",
+      "asn_name": "National Internet Backbone",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS24544",
-      "asn_name": "Overcasts Limited",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS2527",
+      "asn_name": "Sony Network Communications Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS142403",
+      "asn_name": "YISU CLOUD LTD",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -42,22 +49,29 @@
   ],
   "high_risk_asns": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS9829",
+      "asn_name": "National Internet Backbone",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS701",
-      "asn_name": "Verizon Business",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS24544",
-      "asn_name": "Overcasts Limited",
+      "asn": "AS2527",
+      "asn_name": "Sony Network Communications Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS142403",
+      "asn_name": "YISU CLOUD LTD",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -68,7 +82,7 @@
     {
       "country": "US",
       "code": "",
-      "count": 3
+      "count": 2
     },
     {
       "country": "HK",
@@ -76,82 +90,40 @@
       "count": 1
     },
     {
-      "country": "PL",
+      "country": "TW",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IN",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "CN",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "JP",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS13110",
-      "asn_name": "INEA sp. z o.o.",
-      "ip_count": 1,
-      "unique_ips": [
-        "85.221.139.71"
-      ],
-      "countries": [
-        "PL"
-      ],
-      "top_country": "PL",
-      "avg_abuse_score": 45,
-      "max_abuse_score": 45,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-06T14:44:05Z",
-      "last_seen": "2026-04-06T14:44:05Z",
-      "isps": [
-        "INEA sp. z o.o."
-      ]
-    },
-    {
       "asn": "AS396982",
       "asn_name": "Google LLC",
-      "ip_count": 1,
+      "ip_count": 2,
       "unique_ips": [
-        "35.202.9.133"
+        "198.235.24.55",
+        "205.210.31.91"
       ],
       "countries": [
+        "TW",
         "US"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-06T14:44:10Z",
-      "last_seen": "2026-04-06T14:44:10Z",
-      "isps": [
-        "Google LLC"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "20.109.38.246"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
+      "top_country": "TW",
       "avg_abuse_score": 0,
       "max_abuse_score": 0,
       "total_reports": 0,
@@ -162,24 +134,54 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-06T14:44:02Z",
-      "last_seen": "2026-04-06T14:44:02Z",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-06T16:43:12Z",
+      "last_seen": "2026-04-06T16:43:12Z",
       "isps": [
-        "Microsoft Corporation"
+        "Palo Alto Networks, Inc"
       ]
     },
     {
-      "asn": "AS701",
-      "asn_name": "Verizon Business",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "100.35.7.246"
+        "20.81.159.115"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
+      "avg_abuse_score": 14,
+      "max_abuse_score": 14,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-06T16:43:11Z",
+      "last_seen": "2026-04-06T16:43:11Z",
+      "isps": [
+        "Microsoft Corporation"
+      ]
+    },
+    {
+      "asn": "AS9829",
+      "asn_name": "National Internet Backbone",
+      "ip_count": 1,
+      "unique_ips": [
+        "117.245.141.97"
+      ],
+      "countries": [
+        "IN"
+      ],
+      "top_country": "IN",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -193,18 +195,78 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-06T14:44:03Z",
-      "last_seen": "2026-04-06T14:44:03Z",
+      "first_seen": "2026-04-06T16:43:11Z",
+      "last_seen": "2026-04-06T16:43:11Z",
       "isps": [
-        "Verizon Business"
+        "BSNL GSM North Zone, O/o Sr GM (CMTS), NC, Chandigarh"
       ]
     },
     {
-      "asn": "AS24544",
-      "asn_name": "Overcasts Limited",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
       "ip_count": 1,
       "unique_ips": [
-        "103.243.26.174"
+        "175.9.34.70"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-06T16:43:11Z",
+      "last_seen": "2026-04-06T16:43:11Z",
+      "isps": [
+        "CHINANET HUNAN PROVINCE NETWORK"
+      ]
+    },
+    {
+      "asn": "AS2527",
+      "asn_name": "Sony Network Communications Inc.",
+      "ip_count": 1,
+      "unique_ips": [
+        "150.246.249.149"
+      ],
+      "countries": [
+        "JP"
+      ],
+      "top_country": "JP",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-06T16:43:11Z",
+      "last_seen": "2026-04-06T16:43:11Z",
+      "isps": [
+        "So-net Service"
+      ]
+    },
+    {
+      "asn": "AS142403",
+      "asn_name": "YISU CLOUD LTD",
+      "ip_count": 1,
+      "unique_ips": [
+        "39.109.104.252"
       ],
       "countries": [
         "HK"
@@ -221,12 +283,13 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse"
+        "high-abuse",
+        "cloud-provider"
       ],
-      "first_seen": "2026-04-06T14:44:03Z",
-      "last_seen": "2026-04-06T14:44:03Z",
+      "first_seen": "2026-04-06T16:43:12Z",
+      "last_seen": "2026-04-06T16:43:12Z",
       "isps": [
-        "HongKong Virtual Internal Server Company Limited"
+        "YISU CLOUD LTD"
       ]
     }
   ]
