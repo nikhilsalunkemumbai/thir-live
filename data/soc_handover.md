@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-06 |
-| **Generated At** | 2026-04-06T20:35:41Z |
-| **Shift Time** | 20:35 UTC |
+| **Generated At** | 2026-04-06T22:34:25Z |
+| **Shift Time** | 22:34 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **2** |
-| Confirmed Threats | **1** |
-| False Positives Filtered | **1** (50.0%) |
-| Unique Attacker IPs | **2** |
-| Countries of Origin | **2** |
-| High Severity Cases | **0** |
+| Total Sessions Captured | **5** |
+| Confirmed Threats | **3** |
+| False Positives Filtered | **2** (40.0%) |
+| Unique Attacker IPs | **5** |
+| Countries of Origin | **3** |
+| High Severity Cases | **1** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **2** |
+| Low Severity Cases | **4** |
 | Malware Samples Analyzed | **0** HIGH · **15** MED · 2 empty upload attempt(s) |
 
 ---
@@ -30,11 +30,65 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **0** |
-| Unique Credential Pairs | **0** |
-| Unique Usernames | **0** |
-| Unique Passwords | **0** |
-| Successful Auth Pairs | **0** |
+| Total Auth Attempts | **2** |
+| Unique Credential Pairs | **2** |
+| Unique Usernames | **1** |
+| Unique Passwords | **2** |
+| Successful Auth Pairs | **1** |
+
+**Top Usernames:**
+
+| Username | Attempts |
+|---|---|
+| `root` | 2 |
+
+**Top Passwords:**
+
+| Password | Attempts |
+|---|---|
+| `` | 1 |
+| `admin` | 1 |
+
+**Top Credential Pairs:**
+
+| Username | Password | Attempts |
+|---|---|---|
+| `root` | `` | 1 |
+| `root` | `admin` | 1 |
+
+**⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
+
+| Username | Password | Source IP | Timestamp |
+|---|---|---|---|
+| `root` | `admin` | `80.67.167.81` | 2026-04-06T21:04:03 |
+
+---
+
+## 🖥 SSH Fingerprint Intelligence
+
+| Metric | Value |
+|---|---|
+| Total Sessions Parsed | **5** |
+| Sessions with Fingerprint | **1** |
+| Unique HASSH Fingerprints | **1** |
+
+**Client Family Distribution:**
+
+| Client Family | Sessions |
+|---|---|
+| OpenSSH | 1 |
+
+**⚠️ Botnet/Scanner KEX Signatures Detected:**
+
+| HASSH | Signature | Sessions | IPs |
+|---|---|---|---|
+| `1cc79c7da9b5...` | libssh-based | 1 | 1 |
+
+**Top Fingerprints:**
+
+| HASSH | Client | Sessions | IPs | Botnet Sig |
+|---|---|---|---|---|
+| `1cc79c7da9b5...` | OpenSSH | 1 | 1 | libssh-based |
 
 ---
 
@@ -42,28 +96,64 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **2** |
-| Unique ASNs | **2** |
-| High-Risk ASNs | **1** |
+| Total IPs Analysed | **5** |
+| Unique ASNs | **5** |
+| High-Risk ASNs | **2** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS9808` | China Mobile Communications Group Co., Ltd. | 1 | HIGH |
 | `AS8075` | Microsoft Corporation | 1 | LOW |
+| `AS14618` | Amazon.com, Inc. | 1 | MEDIUM |
+| `AS37963` | Hangzhou Alibaba Advertising Co.,Ltd. | 1 | HIGH |
+| `AS4134` | CHINANET-BACKBONE | 1 | MEDIUM |
+| `AS2027` | MilkyWan Association | 1 | HIGH |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (0)
+## 🚨 Priority Cases — Immediate Attention (1)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-_No priority cases this shift. All confirmed sessions were credential scans only._
+### 🔴 HIGH · IR-0fecaa4ebc32
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `80.67.167[.]81` |
+| **First Seen** | 2026-04-06 21:04 |
+| **Last Seen** | 2026-04-06 21:04 |
+| **Session Duration** | 20s |
+| **Login Attempts** | 2 |
+| **Auth Success** | ✅ Yes — session established |
+| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
+| **TTPs (MITRE)** | T1078 · T1110.001 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-04-06 21:04:01` | `cowrie.session.connect` |
+| `2026-04-06 21:04:01` | `cowrie.client.version` |
+| `2026-04-06 21:04:01` | `cowrie.client.kex` |
+| `2026-04-06 21:04:03` | `cowrie.client.fingerprint` |
+| `2026-04-06 21:04:03` | `cowrie.login.failed` |
+| `2026-04-06 21:04:03` | `cowrie.login.success` |
+| `2026-04-06 21:04:21` | `cowrie.direct-tcpip.request` |
+| `2026-04-06 21:04:21` | `cowrie.direct-tcpip.ja4` |
+| `2026-04-06 21:04:21` | `cowrie.direct-tcpip.data` |
+| `2026-04-06 21:04:22` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `80.67.167[.]81` to AbuseIPDB if not already reported
+- [ ] Block `80.67.167[.]81` at perimeter firewall / security group
+- [ ] Investigate TCP tunnel target — port forwarding via honeypot
+- [ ] Confirm tunnel target is not internal infrastructure
+- [ ] Escalate to Tier 2 if pattern repeats next shift
 
 ---
 
@@ -74,7 +164,8 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `183.220.237[.]230` | 1 | 2026-04-06 20:09 | 2026-04-06 20:09 | 0s | 0 | `T1592` | 🟢 LOW |
+| `120.27.154[.]152` | 1 | 2026-04-06 21:04 | 2026-04-06 21:04 | 36s | 0 | `T1592` | 🟢 LOW |
+| `42.202.20[.]53` | 1 | 2026-04-06 20:36 | 2026-04-06 20:36 | 13s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -110,15 +201,29 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `183.220.237[.]230` | CN | China Mobile Communications Corporation | **100** ⚠️ | 42 |
+| `120.27.154[.]152` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 50 |
+| `80.67.167[.]81` | FR | Association MilkyWan | **100** ⚠️ | 0 |
+| `42.202.20[.]53` | CN | CHINANET Liaoning province network | **88** ⚠️ | 0 |
+| `18.97.26[.]51` | US | Amazon Technologies Inc. | **65** | 17 |
 
 ---
 
-## 🔕 False Positive Summary (1 filtered)
+## 🎯 Top TTPs Observed (MITRE ATT&CK)
+
+| TTP ID | Count |
+|---|---|
+| [T1078](https://attack.mitre.org/techniques/T1078) | 1 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 1 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 1 |
+
+---
+
+## 🔕 False Positive Summary (2 filtered)
 
 | Reason | Count |
 |---|---|
 | AbuseIPDB score 0 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -129,19 +234,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 2 cases |
-| Tool 34  | Credential Extractor        | ✅ 0 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
+| Tool 26  | Incident Timeline Generator | ✅ 5 cases |
+| Tool 34  | Credential Extractor        | ✅ 2 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 2 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 1 filtered (50.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 5 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 2 filtered (40.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 2 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 5 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 21 files |
 | Tool 33  | YARA Classifier             | ✅ 7 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 1 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
+> **Report grouping:** 1 priority case(s) shown individually · 2 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
 
 ---
 
@@ -157,4 +262,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-06T20:35:41Z_
+_Report time: 2026-04-06T22:34:25Z_

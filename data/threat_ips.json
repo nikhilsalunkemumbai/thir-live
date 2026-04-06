@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-04-06T20:35:40Z",
-  "total_ips": 2,
+  "generated_at": "2026-04-06T22:34:24Z",
+  "total_ips": 5,
   "ips": [
     {
-      "indicator": "183.220.237.230",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Mobile Communications Corporation",
-      "asn": "AS9808",
-      "asn_name": "China Mobile Communications Group Co., Ltd.",
-      "org": "AS9808 China Mobile Communications Group Co., Ltd.",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 42,
-      "last_seen": "2026-04-06T20:35:40Z"
-    },
-    {
-      "indicator": "20.55.15.232",
+      "indicator": "20.57.47.229",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
@@ -30,7 +15,67 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-06T20:35:40Z"
+      "last_seen": "2026-04-06T22:34:16Z"
+    },
+    {
+      "indicator": "18.97.26.51",
+      "type": "ip",
+      "abuse_score": 65,
+      "country": "US",
+      "isp": "Amazon Technologies Inc.",
+      "asn": "AS14618",
+      "asn_name": "Amazon.com, Inc.",
+      "org": "AS14618 Amazon.com, Inc.",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 17,
+      "last_seen": "2026-04-06T22:34:16Z"
+    },
+    {
+      "indicator": "120.27.154.152",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Aliyun Computing Co., LTD",
+      "asn": "AS37963",
+      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "org": "AS37963 Hangzhou Alibaba Advertising Co.,Ltd.",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 50,
+      "last_seen": "2026-04-06T22:34:17Z"
+    },
+    {
+      "indicator": "42.202.20.53",
+      "type": "ip",
+      "abuse_score": 88,
+      "country": "CN",
+      "isp": "CHINANET Liaoning province network",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
+      "org": "AS4134 CHINANET-BACKBONE",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 0,
+      "last_seen": "2026-04-06T22:34:24Z"
+    },
+    {
+      "indicator": "80.67.167.81",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "FR",
+      "isp": "Association MilkyWan",
+      "asn": "AS2027",
+      "asn_name": "MilkyWan Association",
+      "org": "AS2027 MilkyWan Association",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 0,
+      "last_seen": "2026-04-06T22:34:24Z"
     }
   ]
 }
