@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-04-07T16:55:55Z",
+  "generated_at": "2026-04-07T19:00:18Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 7,
-  "unique_asns": 6,
+  "total_ips_analyzed": 8,
+  "unique_asns": 8,
   "top_attack_asns": [
     {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
@@ -19,10 +19,31 @@
       "anon_count": 0
     },
     {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
+      "asn": "AS56041",
+      "asn_name": "China Mobile communications corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS58519",
+      "asn_name": "Cloud Computing Corporation",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
+      "ip_count": 1,
+      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
@@ -33,28 +54,14 @@
       "anon_count": 0
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS27843",
-      "asn_name": "ON EMPRESAS S.A.C.",
+      "asn": "AS701",
+      "asn_name": "Verizon Business",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
     {
       "asn": "AS328847",
       "asn_name": "THE KONZA TECHNOPOLIS DEVELOPMENT AUTHORITY",
@@ -63,22 +70,29 @@
       "anon_count": 0
     },
     {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
+      "asn": "AS56041",
+      "asn_name": "China Mobile communications corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS58519",
+      "asn_name": "Cloud Computing Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS27843",
-      "asn_name": "ON EMPRESAS S.A.C.",
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS701",
+      "asn_name": "Verizon Business",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -94,10 +108,10 @@
     {
       "country": "US",
       "code": "",
-      "count": 2
+      "count": 3
     },
     {
-      "country": "PE",
+      "country": "PK",
       "code": "",
       "count": 1
     },
@@ -109,19 +123,18 @@
   ],
   "clusters": [
     {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 2,
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
       "unique_ips": [
-        "101.126.91.34",
-        "115.190.87.35"
+        "45.79.185.54"
       ],
       "countries": [
-        "CN"
+        "US"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "US",
+      "avg_abuse_score": 34,
+      "max_abuse_score": 34,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -129,14 +142,14 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
+      "risk_tier": "LOW",
       "tags": [
-        "high-abuse"
+        "cloud-provider"
       ],
-      "first_seen": "2026-04-07T16:55:48Z",
-      "last_seen": "2026-04-07T16:55:55Z",
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
       "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
+        "Linode"
       ]
     },
     {
@@ -163,18 +176,18 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T16:55:48Z",
-      "last_seen": "2026-04-07T16:55:48Z",
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
       "isps": [
         "New IP First Block2"
       ]
     },
     {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
+      "asn": "AS56041",
+      "asn_name": "China Mobile communications corporation",
       "ip_count": 1,
       "unique_ips": [
-        "14.103.37.34"
+        "39.171.240.69"
       ],
       "countries": [
         "CN"
@@ -193,25 +206,86 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T16:55:48Z",
-      "last_seen": "2026-04-07T16:55:48Z",
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
+      "isps": [
+        "China Mobile Communications Corporation"
+      ]
+    },
+    {
+      "asn": "AS58519",
+      "asn_name": "Cloud Computing Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "203.189.195.8"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse",
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
+      "isps": [
+        "CHINANET Guangdong province network"
+      ]
+    },
+    {
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "101.126.88.251"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-07T19:00:18Z",
+      "last_seen": "2026-04-07T19:00:18Z",
       "isps": [
         "Beijing Volcano Engine Technology Co., Ltd."
       ]
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
       "ip_count": 1,
       "unique_ips": [
-        "52.159.247.225"
+        "124.29.224.62"
       ],
       "countries": [
-        "US"
+        "PK"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 18,
-      "max_abuse_score": 18,
+      "top_country": "PK",
+      "avg_abuse_score": 44,
+      "max_abuse_score": 44,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -221,18 +295,46 @@
       "critical_count": 0,
       "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-07T16:55:46Z",
-      "last_seen": "2026-04-07T16:55:46Z",
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
       "isps": [
-        "Microsoft Corporation"
+        "Broadband Services"
       ]
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "157.245.243.118"
+        "172.214.97.236"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 0,
+      "max_abuse_score": 0,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
+      "isps": [
+        "Microsoft Limited"
+      ]
+    },
+    {
+      "asn": "AS701",
+      "asn_name": "Verizon Business",
+      "ip_count": 1,
+      "unique_ips": [
+        "152.208.26.91"
       ],
       "countries": [
         "US"
@@ -251,40 +353,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T16:55:47Z",
-      "last_seen": "2026-04-07T16:55:47Z",
+      "first_seen": "2026-04-07T19:00:17Z",
+      "last_seen": "2026-04-07T19:00:17Z",
       "isps": [
-        "DigitalOcean, LLC"
-      ]
-    },
-    {
-      "asn": "AS27843",
-      "asn_name": "ON EMPRESAS S.A.C.",
-      "ip_count": 1,
-      "unique_ips": [
-        "38.19.156.18"
-      ],
-      "countries": [
-        "PE"
-      ],
-      "top_country": "PE",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-07T16:55:47Z",
-      "last_seen": "2026-04-07T16:55:47Z",
-      "isps": [
-        "ON EMPRESAS S.A.C."
+        "Verizon Business"
       ]
     }
   ]
