@@ -1,16 +1,9 @@
 {
-  "generated_at": "2026-04-07T20:43:41Z",
+  "generated_at": "2026-04-07T22:35:57Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 14,
-  "unique_asns": 10,
+  "total_ips_analyzed": 11,
+  "unique_asns": 8,
   "top_attack_asns": [
-    {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "ip_count": 4,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
@@ -19,57 +12,50 @@
       "anon_count": 0
     },
     {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
+      "asn": "AS45102",
+      "asn_name": "Alibaba (US) Technology Co., Ltd.",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 2,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS202425",
+      "asn_name": "IP Volume inc",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS9808",
-      "asn_name": "China Mobile Communications Group Co., Ltd.",
+      "asn": "AS16135",
+      "asn_name": "Turkcell A.S.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS577",
-      "asn_name": "Bell Canada",
+      "asn": "AS9829",
+      "asn_name": "National Internet Backbone",
       "ip_count": 1,
-      "risk_tier": "HIGH",
+      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS1257",
-      "asn_name": "Tele2 Sverige AB",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS1267",
-      "asn_name": "WIND TRE S.P.A.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
+      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
       "asn": "AS18206",
       "asn_name": "TM TECHNOLOGY SERVICES SDN. BHD.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS210457",
-      "asn_name": "Kyonix Networks Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -77,13 +63,6 @@
   ],
   "high_risk_asns": [
     {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "ip_count": 4,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "ip_count": 2,
@@ -91,36 +70,22 @@
       "anon_count": 0
     },
     {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
+      "asn": "AS45102",
+      "asn_name": "Alibaba (US) Technology Co., Ltd.",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS202425",
+      "asn_name": "IP Volume inc",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS9808",
-      "asn_name": "China Mobile Communications Group Co., Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS577",
-      "asn_name": "Bell Canada",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS1267",
-      "asn_name": "WIND TRE S.P.A.",
+      "asn": "AS16135",
+      "asn_name": "Turkcell A.S.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -128,13 +93,6 @@
     {
       "asn": "AS18206",
       "asn_name": "TM TECHNOLOGY SERVICES SDN. BHD.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS210457",
-      "asn_name": "Kyonix Networks Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -143,17 +101,17 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "CN",
-      "code": "",
-      "count": 7
-    },
-    {
       "country": "US",
       "code": "",
-      "count": 2
+      "count": 4
     },
     {
-      "country": "IT",
+      "country": "TR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IN",
       "code": "",
       "count": 1
     },
@@ -163,68 +121,40 @@
       "count": 1
     },
     {
-      "country": "DE",
+      "country": "SG",
       "code": "",
       "count": 1
     },
     {
-      "country": "CA",
+      "country": "HK",
       "code": "",
       "count": 1
     },
     {
-      "country": "SE",
+      "country": "BR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "NL",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "ip_count": 4,
-      "unique_ips": [
-        "106.12.29.184",
-        "180.76.105.16",
-        "180.76.137.24",
-        "180.76.96.235"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-07T20:43:36Z",
-      "last_seen": "2026-04-07T20:43:37Z",
-      "isps": [
-        "Beijing Baidu Netcom Science and Technology Co., Ltd."
-      ]
-    },
-    {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "ip_count": 2,
       "unique_ips": [
-        "172.172.158.1",
-        "40.124.174.226"
+        "20.189.181.66",
+        "20.65.137.218"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 51,
+      "avg_abuse_score": 50,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -237,24 +167,25 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T20:43:36Z",
-      "last_seen": "2026-04-07T20:43:37Z",
+      "first_seen": "2026-04-07T22:35:55Z",
+      "last_seen": "2026-04-07T22:35:56Z",
       "isps": [
-        "Microsoft Corporation",
-        "Microsoft Limited"
+        "Microsoft Corporation"
       ]
     },
     {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
-      "ip_count": 1,
+      "asn": "AS45102",
+      "asn_name": "Alibaba (US) Technology Co., Ltd.",
+      "ip_count": 2,
       "unique_ips": [
-        "49.232.42.214"
+        "47.237.29.129",
+        "47.239.41.206"
       ],
       "countries": [
-        "CN"
+        "HK",
+        "SG"
       ],
-      "top_country": "CN",
+      "top_country": "HK",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -268,23 +199,56 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T20:43:37Z",
-      "last_seen": "2026-04-07T20:43:37Z",
+      "first_seen": "2026-04-07T22:35:56Z",
+      "last_seen": "2026-04-07T22:35:56Z",
       "isps": [
-        "Tencent cloud computing (Beijing) Co., Ltd."
+        "ALIBABA CLOUD - HK",
+        "Alibaba Cloud LLC"
       ]
     },
     {
-      "asn": "AS9808",
-      "asn_name": "China Mobile Communications Group Co., Ltd.",
-      "ip_count": 1,
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 2,
       "unique_ips": [
-        "120.196.66.80"
+        "147.185.132.60",
+        "205.210.31.171"
       ],
       "countries": [
-        "CN"
+        "BR",
+        "US"
       ],
-      "top_country": "CN",
+      "top_country": "BR",
+      "avg_abuse_score": 0,
+      "max_abuse_score": 0,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-07T22:35:56Z",
+      "last_seen": "2026-04-07T22:35:56Z",
+      "isps": [
+        "Palo Alto Networks, Inc"
+      ]
+    },
+    {
+      "asn": "AS202425",
+      "asn_name": "IP Volume inc",
+      "ip_count": 1,
+      "unique_ips": [
+        "80.82.70.133"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "top_country": "NL",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -298,25 +262,25 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T20:43:37Z",
-      "last_seen": "2026-04-07T20:43:37Z",
+      "first_seen": "2026-04-07T22:35:57Z",
+      "last_seen": "2026-04-07T22:35:57Z",
       "isps": [
-        "China Mobile Communications Corporation"
+        "FiberXpress BV"
       ]
     },
     {
-      "asn": "AS577",
-      "asn_name": "Bell Canada",
+      "asn": "AS16135",
+      "asn_name": "Turkcell A.S.",
       "ip_count": 1,
       "unique_ips": [
-        "70.54.182.130"
+        "178.244.253.119"
       ],
       "countries": [
-        "CA"
+        "TR"
       ],
-      "top_country": "CA",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "TR",
+      "avg_abuse_score": 96,
+      "max_abuse_score": 96,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -328,25 +292,25 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T20:43:38Z",
-      "last_seen": "2026-04-07T20:43:38Z",
+      "first_seen": "2026-04-07T22:35:55Z",
+      "last_seen": "2026-04-07T22:35:55Z",
       "isps": [
-        "Bell Canada"
+        "TURKCELL INTERNET"
       ]
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
+      "asn": "AS9829",
+      "asn_name": "National Internet Backbone",
       "ip_count": 1,
       "unique_ips": [
-        "180.108.64.6"
+        "117.207.39.133"
       ],
       "countries": [
-        "CN"
+        "IN"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "IN",
+      "avg_abuse_score": 46,
+      "max_abuse_score": 46,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -354,57 +318,27 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-07T20:43:41Z",
-      "last_seen": "2026-04-07T20:43:41Z",
-      "isps": [
-        "Chinanet Jiangsu Province Network"
-      ]
-    },
-    {
-      "asn": "AS1257",
-      "asn_name": "Tele2 Sverige AB",
-      "ip_count": 1,
-      "unique_ips": [
-        "83.188.238.4"
-      ],
-      "countries": [
-        "SE"
-      ],
-      "top_country": "SE",
-      "avg_abuse_score": 64,
-      "max_abuse_score": 64,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
+      "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-07T20:43:36Z",
-      "last_seen": "2026-04-07T20:43:36Z",
+      "first_seen": "2026-04-07T22:35:55Z",
+      "last_seen": "2026-04-07T22:35:55Z",
       "isps": [
-        "Comviq"
+        "Broadband Multiplay Project, O/o DGM BB, NOC BSNL Bangalore"
       ]
     },
     {
-      "asn": "AS1267",
-      "asn_name": "WIND TRE S.P.A.",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
       "unique_ips": [
-        "151.48.206.71"
+        "23.239.13.54"
       ],
       "countries": [
-        "IT"
+        "US"
       ],
-      "top_country": "IT",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "US",
+      "avg_abuse_score": 4,
+      "max_abuse_score": 4,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -412,14 +346,14 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
+      "risk_tier": "LOW",
       "tags": [
-        "high-abuse"
+        "cloud-provider"
       ],
-      "first_seen": "2026-04-07T20:43:36Z",
-      "last_seen": "2026-04-07T20:43:36Z",
+      "first_seen": "2026-04-07T22:35:56Z",
+      "last_seen": "2026-04-07T22:35:56Z",
       "isps": [
-        "WIND Telecomunicazioni S.p.A"
+        "Linode"
       ]
     },
     {
@@ -446,40 +380,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-07T20:43:36Z",
-      "last_seen": "2026-04-07T20:43:36Z",
+      "first_seen": "2026-04-07T22:35:56Z",
+      "last_seen": "2026-04-07T22:35:56Z",
       "isps": [
         "TM TECHNOLOGY SERVICES SDN. BHD."
-      ]
-    },
-    {
-      "asn": "AS210457",
-      "asn_name": "Kyonix Networks Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "2.27.63.102"
-      ],
-      "countries": [
-        "DE"
-      ],
-      "top_country": "DE",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-07T20:43:37Z",
-      "last_seen": "2026-04-07T20:43:37Z",
-      "isps": [
-        "Kyonix Hosting - kyonix.com"
       ]
     }
   ]
