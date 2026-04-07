@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-06T22:34:12Z",
-  "total_cases": 5,
+  "generated_at": "2026-04-07T02:07:57Z",
+  "total_cases": 52,
   "cases": [
     {
-      "case_id": "IR-cd395d0bff01",
-      "src_ip": "42.202.20.53",
-      "first_seen": "2026-04-06T20:36:18.323354Z",
-      "last_seen": "2026-04-06T20:36:31.811876Z",
-      "duration_seconds": 13,
+      "case_id": "IR-eff8c2c61cca",
+      "src_ip": "47.100.201.178",
+      "first_seen": "2026-04-07T00:17:31.076100Z",
+      "last_seen": "2026-04-07T00:18:03.085125Z",
+      "duration_seconds": 32,
       "login_attempts": 0,
       "login_success": false,
       "commands": [],
@@ -17,32 +17,32 @@
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "42.202.20.53",
-          "src_port": 54537,
+          "src_ip": "47.100.201.178",
+          "src_port": 59766,
           "dst_ip": "172.31.34.72",
           "dst_port": 2223,
           "protocol": "telnet",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T20:36:18.323354Z",
+          "timestamp": "2026-04-07T00:17:31.076100Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.session.closed",
-          "duration": 13.488613843917847,
+          "duration": 32.00911259651184,
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T20:36:31.811876Z",
-          "src_ip": "42.202.20.53",
+          "timestamp": "2026-04-07T00:18:03.085125Z",
+          "src_ip": "47.100.201.178",
           "protocol": "telnet",
           "event": "cowrie.session.closed"
         }
       ]
     },
     {
-      "case_id": "IR-fb9aec1baa07",
-      "src_ip": "18.97.26.51",
-      "first_seen": "2026-04-06T21:00:52.685575Z",
-      "last_seen": "2026-04-06T21:00:57.960985Z",
-      "duration_seconds": 5,
+      "case_id": "IR-6bc6e1267291",
+      "src_ip": "47.100.201.178",
+      "first_seen": "2026-04-07T00:17:40.818090Z",
+      "last_seen": "2026-04-07T00:18:12.093448Z",
+      "duration_seconds": 31,
       "login_attempts": 0,
       "login_success": false,
       "commands": [],
@@ -52,257 +52,31 @@
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "18.97.26.51",
-          "src_port": 44340,
+          "src_ip": "47.100.201.178",
+          "src_port": 59798,
           "dst_ip": "172.31.34.72",
           "dst_port": 2223,
           "protocol": "telnet",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:00:52.685575Z",
+          "timestamp": "2026-04-07T00:17:40.818090Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.session.closed",
-          "duration": 5.2754967212677,
+          "duration": 31.275442600250244,
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:00:57.960985Z",
-          "src_ip": "18.97.26.51",
+          "timestamp": "2026-04-07T00:18:12.093448Z",
+          "src_ip": "47.100.201.178",
           "protocol": "telnet",
           "event": "cowrie.session.closed"
         }
       ]
     },
     {
-      "case_id": "IR-0fecaa4ebc32",
-      "src_ip": "80.67.167.81",
-      "first_seen": "2026-04-06T21:04:01.640694Z",
-      "last_seen": "2026-04-06T21:04:22.158975Z",
-      "duration_seconds": 20,
-      "login_attempts": 2,
-      "login_success": true,
-      "commands": [],
-      "downloads": [],
-      "ttps": [
-        "T1078",
-        "T1110.001",
-        "T1592"
-      ],
-      "severity": "HIGH",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "80.67.167.81",
-          "src_port": 40934,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:01.640694Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.client.version",
-          "version": "SSH-2.0-OpenSSH_9.9",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:01.882743Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.client.version"
-        },
-        {
-          "eventid": "cowrie.client.kex",
-          "hassh": "1cc79c7da9b5d5eead2c60983332a556",
-          "hasshAlgorithms": "sntrup761x25519-sha512,sntrup761x25519-sha512@openssh.com,mlkem768x25519-sha256,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group14-sha256,diffie-hellman-group1-sha1,ext-info-c,kex-strict-c-v00@openssh.com;chacha20-poly1305@openssh.com,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,3des-cbc;umac-64-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-64@openssh.com,umac-128@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1;none,zlib@openssh.com",
-          "kexAlgs": [
-            "sntrup761x25519-sha512",
-            "sntrup761x25519-sha512@openssh.com",
-            "mlkem768x25519-sha256",
-            "curve25519-sha256",
-            "curve25519-sha256@libssh.org",
-            "ecdh-sha2-nistp256",
-            "ecdh-sha2-nistp384",
-            "ecdh-sha2-nistp521",
-            "diffie-hellman-group-exchange-sha256",
-            "diffie-hellman-group16-sha512",
-            "diffie-hellman-group18-sha512",
-            "diffie-hellman-group14-sha256",
-            "diffie-hellman-group1-sha1",
-            "ext-info-c",
-            "kex-strict-c-v00@openssh.com"
-          ],
-          "keyAlgs": [
-            "ssh-ed25519-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp384-cert-v01@openssh.com",
-            "ecdsa-sha2-nistp521-cert-v01@openssh.com",
-            "sk-ssh-ed25519-cert-v01@openssh.com",
-            "sk-ecdsa-sha2-nistp256-cert-v01@openssh.com",
-            "rsa-sha2-512-cert-v01@openssh.com",
-            "rsa-sha2-256-cert-v01@openssh.com",
-            "ssh-ed25519",
-            "ecdsa-sha2-nistp256",
-            "ecdsa-sha2-nistp384",
-            "ecdsa-sha2-nistp521",
-            "sk-ssh-ed25519@openssh.com",
-            "sk-ecdsa-sha2-nistp256@openssh.com",
-            "rsa-sha2-512",
-            "rsa-sha2-256",
-            "ssh-rsa",
-            "ssh-dss"
-          ],
-          "encCS": [
-            "chacha20-poly1305@openssh.com",
-            "aes128-ctr",
-            "aes192-ctr",
-            "aes256-ctr",
-            "aes128-gcm@openssh.com",
-            "aes256-gcm@openssh.com",
-            "3des-cbc"
-          ],
-          "macCS": [
-            "umac-64-etm@openssh.com",
-            "umac-128-etm@openssh.com",
-            "hmac-sha2-256-etm@openssh.com",
-            "hmac-sha2-512-etm@openssh.com",
-            "hmac-sha1-etm@openssh.com",
-            "umac-64@openssh.com",
-            "umac-128@openssh.com",
-            "hmac-sha2-256",
-            "hmac-sha2-512",
-            "hmac-sha1"
-          ],
-          "compCS": [
-            "none",
-            "zlib@openssh.com"
-          ],
-          "langCS": [
-            ""
-          ],
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:01.998437Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.client.kex"
-        },
-        {
-          "eventid": "cowrie.client.fingerprint",
-          "username": "root",
-          "fingerprint": "d4:98:c4:f3:12:ef:3e:29:38:34:62:21:fd:99:ec:ef",
-          "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdmvEhhfC8Hkqvut8spTxhahy1wKRJ/Bgy8HRDj6n+9EWntZc/L9zfjgReYfwWiZbNX5ziI4dv5lsUAMyCjbqxI4R0Vr5zoQf+YUrQ9nLwIjmkggnqPObpHoEz/n3xvNudIKXjWpEL3b5Be17y8vF01jzFc75asMXz5rLbYOi0EamMu5E+FxhaqNfMMasAkhpom4XfdF3/FZH41UTiaWhoZoPc8KcLJqotmlIZ/z04m0HI9w7l9l+wrUVuEGYbFTN4g3cCtDI21d4AH2JtIJkkKApW4ElLNGasOpid5lDWUHbhbrD4/6Um1u1SqyOmdKopIzkllPFqxJZMjwcw8f9v",
-          "type": "ssh-rsa",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:03.160038Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.client.fingerprint"
-        },
-        {
-          "eventid": "cowrie.login.failed",
-          "username": "root",
-          "fingerprint": "d4:98:c4:f3:12:ef:3e:29:38:34:62:21:fd:99:ec:ef",
-          "key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDdmvEhhfC8Hkqvut8spTxhahy1wKRJ/Bgy8HRDj6n+9EWntZc/L9zfjgReYfwWiZbNX5ziI4dv5lsUAMyCjbqxI4R0Vr5zoQf+YUrQ9nLwIjmkggnqPObpHoEz/n3xvNudIKXjWpEL3b5Be17y8vF01jzFc75asMXz5rLbYOi0EamMu5E+FxhaqNfMMasAkhpom4XfdF3/FZH41UTiaWhoZoPc8KcLJqotmlIZ/z04m0HI9w7l9l+wrUVuEGYbFTN4g3cCtDI21d4AH2JtIJkkKApW4ElLNGasOpid5lDWUHbhbrD4/6Um1u1SqyOmdKopIzkllPFqxJZMjwcw8f9v",
-          "type": "ssh-rsa",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:03.160622Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.login.failed"
-        },
-        {
-          "eventid": "cowrie.login.success",
-          "username": "root",
-          "password": "admin",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:03.477019Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.login.success"
-        },
-        {
-          "eventid": "cowrie.direct-tcpip.request",
-          "dst_ip": "google.com",
-          "dst_port": 443,
-          "src_ip": "80.67.167.81",
-          "src_port": 46168,
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:21.560450Z",
-          "protocol": "ssh",
-          "event": "cowrie.direct-tcpip.request"
-        },
-        {
-          "eventid": "cowrie.direct-tcpip.ja4",
-          "dst_ip": "google.com",
-          "dst_port": 443,
-          "ja4": "t12d3112h2_e8f1e7e78f70_64f78f54e6a2",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:21.838362Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.direct-tcpip.ja4"
-        },
-        {
-          "eventid": "cowrie.direct-tcpip.data",
-          "dst_ip": "google.com",
-          "dst_port": 443,
-          "data": "b\"\\x16\\x03\\x01\\x02\\x00\\x01\\x00\\x01\\xfc\\x03\\x03\\xee\\x94o\\xeao_\\x7fb\\x83\\xa1\\x11D\\xe2\\xdd\\xed\\xe7\\x1c\\xad\\x9a\\xe9\\xba\\x07l\\xe4\\xb0\\xe7\\xa6-\\xf4L[\\x07 \\x06\\xb87w)m'>\\x9a5_8D\\xb3\\xfa\\x15\\x81\\xc0\\xb3\\xeb\\xd7\\x0eI\\x7f\\xb2C\\xe4%\\x01\\xa7D\\x01\\x00>\\x13\\x02\\x13\\x03\\x13\\x01\\xc0,\\xc00\\x00\\x9f\\xcc\\xa9\\xcc\\xa8\\xcc\\xaa\\xc0+\\xc0/\\x00\\x9e\\xc0$\\xc0(\\x00k\\xc0#\\xc0'\\x00g\\xc0\\n\\xc0\\x14\\x009\\xc0\\t\\xc0\\x13\\x003\\x00\\x9d\\x00\\x9c\\x00=\\x00<\\x005\\x00/\\x00\\xff\\x01\\x00\\x01u\\x00\\x00\\x00\\x0f\\x00\\r\\x00\\x00\\ngoogle.com\\x00\\x0b\\x00\\x04\\x03\\x00\\x01\\x02\\x00\\n\\x00\\x0c\\x00\\n\\x00\\x1d\\x00\\x17\\x00\\x1e\\x00\\x19\\x00\\x18\\x00\\x10\\x00\\x0e\\x00\\x0c\\x02h2\\x08http/1.1\\x00\\x16\\x00\\x00\\x00\\x17\\x00\\x00\\x001\\x00\\x00\\x00\\r\\x000\\x00.\\x04\\x03\\x05\\x03\\x06\\x03\\x08\\x07\\x08\\x08\\x08\\t\\x08\\n\\x08\\x0b\\x08\\x04\\x08\\x05\\x08\\x06\\x04\\x01\\x05\\x01\\x06\\x01\\x03\\x03\\x02\\x03\\x03\\x01\\x02\\x01\\x03\\x02\\x02\\x02\\x04\\x02\\x05\\x02\\x06\\x02\\x00+\\x00\\x05\\x04\\x03\\x04\\x03\\x03\\x00-\\x00\\x02\\x01\\x01\\x003\\x00&\\x00$\\x00\\x1d\\x00 v\\x91\\xcb`\\xf2\\xa4\\x133\\x1b\\xab\\xdf2\\x12F\\xc3\\x01\\xe8N \\xfbT\\xd053{!\\x0f\\xd9\\x99\\x80\\x13[\\x00\\x15\\x00\\xbb\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\\x00\"",
-          "id": 0,
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:21.839063Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.direct-tcpip.data"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "20.5",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:22.158975Z",
-          "src_ip": "80.67.167.81",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-46c206861bc1",
-      "src_ip": "120.27.154.152",
-      "first_seen": "2026-04-06T21:04:11.603366Z",
-      "last_seen": "2026-04-06T21:04:48.268038Z",
-      "duration_seconds": 36,
-      "login_attempts": 0,
-      "login_success": false,
-      "commands": [],
-      "downloads": [],
-      "ttps": [],
-      "severity": "LOW",
-      "timeline": [
-        {
-          "eventid": "cowrie.session.connect",
-          "src_ip": "120.27.154.152",
-          "src_port": 65466,
-          "dst_ip": "172.31.34.72",
-          "dst_port": 2222,
-          "protocol": "ssh",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:11.603366Z",
-          "event": "cowrie.session.connect"
-        },
-        {
-          "eventid": "cowrie.session.closed",
-          "duration": "36.7",
-          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T21:04:48.268038Z",
-          "src_ip": "120.27.154.152",
-          "protocol": "ssh",
-          "event": "cowrie.session.closed"
-        }
-      ]
-    },
-    {
-      "case_id": "IR-682a39de0657",
-      "src_ip": "20.57.47.229",
-      "first_seen": "2026-04-06T22:34:03.837319Z",
-      "last_seen": "2026-04-06T22:34:03.838233Z",
+      "case_id": "IR-f2f0ed3864b3",
+      "src_ip": "47.100.201.178",
+      "first_seen": "2026-04-07T00:17:43.038662Z",
+      "last_seen": "2026-04-07T00:17:43.039434Z",
       "duration_seconds": 0,
       "login_attempts": 0,
       "login_success": false,
@@ -313,21 +87,1718 @@
       "timeline": [
         {
           "eventid": "cowrie.session.connect",
-          "src_ip": "20.57.47.229",
-          "src_port": 2112,
+          "src_ip": "47.100.201.178",
+          "src_port": 59176,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:17:43.038662Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 0.0008759498596191406,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:17:43.039434Z",
+          "src_ip": "47.100.201.178",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-4d9c52a29092",
+      "src_ip": "47.100.201.178",
+      "first_seen": "2026-04-07T00:17:43.112607Z",
+      "last_seen": "2026-04-07T00:17:43.113415Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "47.100.201.178",
+          "src_port": 59160,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:17:43.112607Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 0.0009021759033203125,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:17:43.113415Z",
+          "src_ip": "47.100.201.178",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-dc106ca1b0a5",
+      "src_ip": "47.100.201.178",
+      "first_seen": "2026-04-07T00:17:45.082052Z",
+      "last_seen": "2026-04-07T00:17:45.082884Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "47.100.201.178",
+          "src_port": 59226,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:17:45.082052Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 0.0009331703186035156,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:17:45.082884Z",
+          "src_ip": "47.100.201.178",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-4a3697788314",
+      "src_ip": "47.100.201.178",
+      "first_seen": "2026-04-07T00:18:05.716623Z",
+      "last_seen": "2026-04-07T00:18:40.116441Z",
+      "duration_seconds": 34,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "47.100.201.178",
+          "src_port": 60674,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:18:05.716623Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 34.39990711212158,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T00:18:40.116441Z",
+          "src_ip": "47.100.201.178",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-173f90607bff",
+      "src_ip": "66.132.186.170",
+      "first_seen": "2026-04-07T01:08:15.081620Z",
+      "last_seen": "2026-04-07T01:08:16.376365Z",
+      "duration_seconds": 1,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "66.132.186.170",
+          "src_port": 45472,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:15.081620Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 1.2948336601257324,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:16.376365Z",
+          "src_ip": "66.132.186.170",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e11b542e23c4",
+      "src_ip": "66.132.186.170",
+      "first_seen": "2026-04-07T01:08:16.632114Z",
+      "last_seen": "2026-04-07T01:08:16.796921Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "66.132.186.170",
+          "src_port": 45476,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:16.632114Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 0.16492891311645508,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:16.796921Z",
+          "src_ip": "66.132.186.170",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-05fd63b9aeff",
+      "src_ip": "66.132.186.170",
+      "first_seen": "2026-04-07T01:08:17.240084Z",
+      "last_seen": "2026-04-07T01:08:20.527049Z",
+      "duration_seconds": 3,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "66.132.186.170",
+          "src_port": 45478,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:17.240084Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 3.287045478820801,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:20.527049Z",
+          "src_ip": "66.132.186.170",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-edea2e545e5f",
+      "src_ip": "66.132.186.170",
+      "first_seen": "2026-04-07T01:08:24.133307Z",
+      "last_seen": "2026-04-07T01:08:34.589153Z",
+      "duration_seconds": 10,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "66.132.186.170",
+          "src_port": 60676,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:24.133307Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 10.455931425094604,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:08:34.589153Z",
+          "src_ip": "66.132.186.170",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-66c847f8b9e8",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:14:52.994886Z",
+      "last_seen": "2026-04-07T01:15:24.897205Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 46896,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:14:52.994886Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.90241003036499,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:24.897205Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-25fb6d20da7b",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:15:07.918122Z",
+      "last_seen": "2026-04-07T01:15:39.531004Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 54698,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:07.918122Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.612975120544434,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:39.531004Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-11f51db89e61",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:15:10.174347Z",
+      "last_seen": "2026-04-07T01:15:41.125801Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 54708,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:10.174347Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.951539993286133,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:41.125801Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1f5dfe835647",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:15:15.207358Z",
+      "last_seen": "2026-04-07T01:15:46.139607Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 52860,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:15.207358Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.93233585357666,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:46.139607Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-3056b72bd0c3",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:15:39.172778Z",
+      "last_seen": "2026-04-07T01:16:10.521782Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 40128,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:15:39.172778Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.349131107330322,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:10.521782Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-13ad16caa1bb",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:16:06.159290Z",
+      "last_seen": "2026-04-07T01:16:37.281362Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 58566,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:06.159290Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.122978925704956,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:37.281362Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-7f64c22bd114",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:16:19.605604Z",
+      "last_seen": "2026-04-07T01:16:50.159499Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 52742,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:19.605604Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.553980112075806,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:50.159499Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-1e8a3de9ad27",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:16:23.763837Z",
+      "last_seen": "2026-04-07T01:16:55.478164Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 52762,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:23.763837Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.714459896087646,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:55.478164Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e628977d6d2d",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:16:25.154125Z",
+      "last_seen": "2026-04-07T01:16:57.005995Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 52756,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:25.154125Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.851985931396484,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:16:57.005995Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6eb8c9cb654e",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:17:47.399095Z",
+      "last_seen": "2026-04-07T01:18:18.316205Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 47198,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:17:47.399095Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.91720414161682,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:18:18.316205Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-3a99b9c3ab16",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:18:28.821221Z",
+      "last_seen": "2026-04-07T01:18:59.759994Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 35200,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:18:28.821221Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.93886160850525,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:18:59.759994Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-8ed0224e9a4b",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:20:58.701061Z",
+      "last_seen": "2026-04-07T01:21:30.019930Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 54132,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:20:58.701061Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.31895422935486,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:21:30.019930Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-39337194f3e4",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:22:32.257908Z",
+      "last_seen": "2026-04-07T01:23:03.467978Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 33206,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:22:32.257908Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.21017551422119,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:23:03.467978Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-4dd138fbbeb8",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:22:48.648439Z",
+      "last_seen": "2026-04-07T01:23:19.847910Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 35158,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:22:48.648439Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.199565410614014,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:23:19.847910Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-001ac26d9ada",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:25:23.587147Z",
+      "last_seen": "2026-04-07T01:25:55.099314Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 50966,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:25:23.587147Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.512251615524292,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:25:55.099314Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a97972d26e02",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:25:45.858986Z",
+      "last_seen": "2026-04-07T01:26:16.440446Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 59432,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:25:45.858986Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.58154273033142,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:26:16.440446Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e4866e96db1c",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:26:14.145765Z",
+      "last_seen": "2026-04-07T01:26:45.547280Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 39096,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:26:14.145765Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.401644706726074,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:26:45.547280Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-02ddc57caaeb",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:37:46.952040Z",
+      "last_seen": "2026-04-07T01:38:18.832139Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 40916,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:37:46.952040Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.88018035888672,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:38:18.832139Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-957bec94d049",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:38:26.365050Z",
+      "last_seen": "2026-04-07T01:38:57.715382Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 54884,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:38:26.365050Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.350438833236694,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:38:57.715382Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-2b2a151bc7c4",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:38:33.280361Z",
+      "last_seen": "2026-04-07T01:39:04.991892Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 54900,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:38:33.280361Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.711618423461914,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:04.991892Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-face7c1823da",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:38:52.407474Z",
+      "last_seen": "2026-04-07T01:39:23.996234Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 51618,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:38:52.407474Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.588842153549194,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:23.996234Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f4eacbed5e22",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:39:02.738054Z",
+      "last_seen": "2026-04-07T01:39:33.163868Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 49380,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:02.738054Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.42590022087097,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:33.163868Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-99032faf9214",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:39:17.910273Z",
+      "last_seen": "2026-04-07T01:39:48.991050Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 49678,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:17.910273Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.080860137939453,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:48.991050Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-68f549b8c95f",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:39:26.433134Z",
+      "last_seen": "2026-04-07T01:39:57.197893Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 56526,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:26.433134Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.764843940734863,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:57.197893Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-f1ed04613a29",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:39:31.655114Z",
+      "last_seen": "2026-04-07T01:40:04.493732Z",
+      "duration_seconds": 32,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 56540,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:31.655114Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 32.83867526054382,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:04.493732Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6bc526a85dc9",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:39:48.758787Z",
+      "last_seen": "2026-04-07T01:40:19.808307Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 34104,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:48.758787Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.049636363983154,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:19.808307Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-98bdf7175fd5",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:39:50.596957Z",
+      "last_seen": "2026-04-07T01:40:21.219865Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 52580,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:39:50.596957Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.622998476028442,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:21.219865Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-05be60e8dc80",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:40:09.301165Z",
+      "last_seen": "2026-04-07T01:40:40.233446Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 43504,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:09.301165Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.93238925933838,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:40.233446Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-6373fbbcd873",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:40:12.759909Z",
+      "last_seen": "2026-04-07T01:40:43.846462Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 43508,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:12.759909Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.086647033691406,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:43.846462Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-5145cdca3390",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:40:31.518353Z",
+      "last_seen": "2026-04-07T01:41:02.957081Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 35124,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:40:31.518353Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.43880867958069,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:41:02.957081Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-7fedf10389fb",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:42:35.655580Z",
+      "last_seen": "2026-04-07T01:43:06.256979Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 35152,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:42:35.655580Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.601497411727905,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:43:06.256979Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-edc1beb20bdc",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:44:42.435010Z",
+      "last_seen": "2026-04-07T01:45:13.378659Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 49600,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:44:42.435010Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.943745613098145,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:45:13.378659Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-dff2e91f5f79",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:46:00.586262Z",
+      "last_seen": "2026-04-07T01:46:31.536120Z",
+      "duration_seconds": 30,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 38974,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:46:00.586262Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 30.94994807243347,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:46:31.536120Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-13b5fc85b978",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:46:10.975075Z",
+      "last_seen": "2026-04-07T01:46:42.494573Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 41384,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:46:10.975075Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.519585847854614,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:46:42.494573Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-7b254e8a5a71",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:49:29.607188Z",
+      "last_seen": "2026-04-07T01:50:00.890020Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 33202,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:49:29.607188Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.282914638519287,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:50:00.890020Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-25c65f47c2a9",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:49:54.242990Z",
+      "last_seen": "2026-04-07T01:50:25.561637Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 35330,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:49:54.242990Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.318739891052246,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:50:25.561637Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e1f4a528aa54",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:51:55.283048Z",
+      "last_seen": "2026-04-07T01:52:26.380599Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 46798,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:51:55.283048Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.09763216972351,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:52:26.380599Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a34aa64ad0a5",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:55:05.743127Z",
+      "last_seen": "2026-04-07T01:55:36.750977Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 33774,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:55:05.743127Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.007951498031616,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:55:36.750977Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-980fc8753bf1",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T01:55:07.931909Z",
+      "last_seen": "2026-04-07T01:55:39.626094Z",
+      "duration_seconds": 31,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 33782,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:55:07.931909Z",
+          "event": "cowrie.session.connect"
+        },
+        {
+          "eventid": "cowrie.session.closed",
+          "duration": 31.694294691085815,
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T01:55:39.626094Z",
+          "src_ip": "20.0.164.98",
+          "protocol": "telnet",
+          "event": "cowrie.session.closed"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-e777b04b99c6",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T02:07:28.730653Z",
+      "last_seen": "2026-04-07T02:07:28.730653Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 43982,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2223,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T02:07:28.730653Z",
+          "event": "cowrie.session.connect"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-a18b6aeeb6c0",
+      "src_ip": "20.0.164.98",
+      "first_seen": "2026-04-07T02:07:31.091492Z",
+      "last_seen": "2026-04-07T02:07:31.091492Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "20.0.164.98",
+          "src_port": 51800,
+          "dst_ip": "172.31.34.72",
+          "dst_port": 2323,
+          "protocol": "telnet",
+          "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
+          "timestamp": "2026-04-07T02:07:31.091492Z",
+          "event": "cowrie.session.connect"
+        }
+      ]
+    },
+    {
+      "case_id": "IR-95c75cc28a68",
+      "src_ip": "40.76.181.209",
+      "first_seen": "2026-04-07T02:07:47.118296Z",
+      "last_seen": "2026-04-07T02:07:47.119354Z",
+      "duration_seconds": 0,
+      "login_attempts": 0,
+      "login_success": false,
+      "commands": [],
+      "downloads": [],
+      "ttps": [],
+      "severity": "LOW",
+      "timeline": [
+        {
+          "eventid": "cowrie.session.connect",
+          "src_ip": "40.76.181.209",
+          "src_port": 7040,
           "dst_ip": "172.31.34.72",
           "dst_port": 2222,
           "protocol": "ssh",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T22:34:03.837319Z",
+          "timestamp": "2026-04-07T02:07:47.118296Z",
           "event": "cowrie.session.connect"
         },
         {
           "eventid": "cowrie.session.closed",
           "duration": "0.0",
           "uuid": "4ceededc-1a01-11f1-b858-add93ad71686",
-          "timestamp": "2026-04-06T22:34:03.838233Z",
-          "src_ip": "20.57.47.229",
+          "timestamp": "2026-04-07T02:07:47.119354Z",
+          "src_ip": "40.76.181.209",
           "protocol": "ssh",
           "event": "cowrie.session.closed"
         }

@@ -1,9 +1,39 @@
 {
-  "generated_at": "2026-04-06T22:34:24Z",
-  "total_ips": 5,
+  "generated_at": "2026-04-07T02:08:09Z",
+  "total_ips": 4,
   "ips": [
     {
-      "indicator": "20.57.47.229",
+      "indicator": "20.0.164.98",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "GB",
+      "isp": "Microsoft Corporation",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "org": "AS8075 Microsoft Corporation",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 0,
+      "last_seen": "2026-04-07T02:08:01Z"
+    },
+    {
+      "indicator": "66.132.186.170",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Censys, Inc.",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
+      "org": "AS398324 Censys, Inc.",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 15,
+      "last_seen": "2026-04-07T02:08:01Z"
+    },
+    {
+      "indicator": "40.76.181.209",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
@@ -15,25 +45,10 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-06T22:34:16Z"
+      "last_seen": "2026-04-07T02:08:01Z"
     },
     {
-      "indicator": "18.97.26.51",
-      "type": "ip",
-      "abuse_score": 65,
-      "country": "US",
-      "isp": "Amazon Technologies Inc.",
-      "asn": "AS14618",
-      "asn_name": "Amazon.com, Inc.",
-      "org": "AS14618 Amazon.com, Inc.",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 17,
-      "last_seen": "2026-04-06T22:34:16Z"
-    },
-    {
-      "indicator": "120.27.154.152",
+      "indicator": "47.100.201.178",
       "type": "ip",
       "abuse_score": 100,
       "country": "CN",
@@ -44,38 +59,8 @@
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-06T22:34:17Z"
-    },
-    {
-      "indicator": "42.202.20.53",
-      "type": "ip",
-      "abuse_score": 88,
-      "country": "CN",
-      "isp": "CHINANET Liaoning province network",
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "org": "AS4134 CHINANET-BACKBONE",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-06T22:34:24Z"
-    },
-    {
-      "indicator": "80.67.167.81",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "FR",
-      "isp": "Association MilkyWan",
-      "asn": "AS2027",
-      "asn_name": "MilkyWan Association",
-      "org": "AS2027 MilkyWan Association",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 0,
-      "last_seen": "2026-04-06T22:34:24Z"
+      "last_seen": "2026-04-07T02:08:09Z"
     }
   ]
 }

@@ -1,21 +1,14 @@
 {
-  "generated_at": "2026-04-06T22:34:24Z",
+  "generated_at": "2026-04-07T02:08:09Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 5,
-  "unique_asns": 5,
+  "total_ips_analyzed": 4,
+  "unique_asns": 3,
   "top_attack_asns": [
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14618",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
@@ -26,15 +19,8 @@
       "anon_count": 0
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS2027",
-      "asn_name": "MilkyWan Association",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -42,6 +28,13 @@
   ],
   "high_risk_asns": [
     {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
       "asn": "AS37963",
       "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
       "ip_count": 1,
@@ -49,8 +42,8 @@
       "anon_count": 0
     },
     {
-      "asn": "AS2027",
-      "asn_name": "MilkyWan Association",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -64,12 +57,12 @@
       "count": 2
     },
     {
-      "country": "CN",
+      "country": "GB",
       "code": "",
-      "count": 2
+      "count": 1
     },
     {
-      "country": "FR",
+      "country": "CN",
       "code": "",
       "count": 1
     }
@@ -78,16 +71,18 @@
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
+      "ip_count": 2,
       "unique_ips": [
-        "20.57.47.229"
+        "20.0.164.98",
+        "40.76.181.209"
       ],
       "countries": [
+        "GB",
         "US"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
+      "top_country": "GB",
+      "avg_abuse_score": 50,
+      "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -95,42 +90,14 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-06T22:34:16Z",
-      "last_seen": "2026-04-06T22:34:16Z",
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-07T02:08:01Z",
+      "last_seen": "2026-04-07T02:08:01Z",
       "isps": [
         "Microsoft Corporation"
-      ]
-    },
-    {
-      "asn": "AS14618",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
-      "unique_ips": [
-        "18.97.26.51"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 65,
-      "max_abuse_score": 65,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-06T22:34:16Z",
-      "last_seen": "2026-04-06T22:34:16Z",
-      "isps": [
-        "Amazon Technologies Inc."
       ]
     },
     {
@@ -138,7 +105,7 @@
       "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
       "ip_count": 1,
       "unique_ips": [
-        "120.27.154.152"
+        "47.100.201.178"
       ],
       "countries": [
         "CN"
@@ -157,51 +124,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-06T22:34:17Z",
-      "last_seen": "2026-04-06T22:34:17Z",
+      "first_seen": "2026-04-07T02:08:09Z",
+      "last_seen": "2026-04-07T02:08:09Z",
       "isps": [
         "Aliyun Computing Co., LTD"
       ]
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "42.202.20.53"
+        "66.132.186.170"
       ],
       "countries": [
-        "CN"
+        "US"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 88,
-      "max_abuse_score": 88,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-04-06T22:34:24Z",
-      "last_seen": "2026-04-06T22:34:24Z",
-      "isps": [
-        "CHINANET Liaoning province network"
-      ]
-    },
-    {
-      "asn": "AS2027",
-      "asn_name": "MilkyWan Association",
-      "ip_count": 1,
-      "unique_ips": [
-        "80.67.167.81"
-      ],
-      "countries": [
-        "FR"
-      ],
-      "top_country": "FR",
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -215,10 +154,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-06T22:34:24Z",
-      "last_seen": "2026-04-06T22:34:24Z",
+      "first_seen": "2026-04-07T02:08:01Z",
+      "last_seen": "2026-04-07T02:08:01Z",
       "isps": [
-        "Association MilkyWan"
+        "Censys, Inc."
       ]
     }
   ]
