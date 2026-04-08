@@ -190,7 +190,8 @@ def parse_daily_report(path):
         "total_sessions":     _extract_metric(text, "Total Sessions Captured"),
         "confirmed_threats":  _extract_metric(text, "Confirmed Threats"),
         "false_positives":    _extract_metric(text, "False Positives Filtered"),
-        "unique_ips":         _extract_metric(text, "Unique Attacker IPs"),
+        "unique_ips":         _extract_metric(text, "Unique Attacker IPs (cumulative)") or
+                              _extract_metric(text, "Unique Attacker IPs"),
         "countries":          _extract_metric(text, "Countries of Origin"),
         "high_sev":           _extract_metric(text, "High Severity Cases"),
         "medium_sev":         _extract_metric(text, "Medium Severity Cases"),
