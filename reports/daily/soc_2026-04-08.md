@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-08 |
-| **Generated At** | 2026-04-08T15:07:32Z |
-| **Shift Time** | 15:07 UTC |
+| **Generated At** | 2026-04-08T16:59:33Z |
+| **Shift Time** | 16:59 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **7** |
-| Confirmed Threats | **2** |
-| False Positives Filtered | **5** (71.4%) |
-| Unique Attacker IPs | **7** |
-| Countries of Origin | **3** |
+| Total Sessions Captured | **13** |
+| Confirmed Threats | **3** |
+| False Positives Filtered | **10** (76.9%) |
+| Unique Attacker IPs | **6** |
+| Countries of Origin | **6** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **7** |
+| Low Severity Cases | **13** |
 | Malware Samples Analyzed | **0** HIGH · **15** MED · 2 empty upload attempt(s) |
 
 ---
@@ -30,11 +30,41 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **0** |
-| Unique Credential Pairs | **0** |
-| Unique Usernames | **0** |
-| Unique Passwords | **0** |
+| Total Auth Attempts | **5** |
+| Unique Credential Pairs | **5** |
+| Unique Usernames | **5** |
+| Unique Passwords | **5** |
 | Successful Auth Pairs | **0** |
+
+**Top Usernames:**
+
+| Username | Attempts |
+|---|---|
+| `GET / HTTP/1.1` | 1 |
+| `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36` | 1 |
+| `Accept-Encoding: gzip` | 1 |
+| `*1` | 1 |
+| `user` | 1 |
+
+**Top Passwords:**
+
+| Password | Attempts |
+|---|---|
+| `Host: 13.235.92.17:23` | 1 |
+| `Accept: */*` | 1 |
+| `` | 1 |
+| `$4` | 1 |
+| `user` | 1 |
+
+**Top Credential Pairs:**
+
+| Username | Password | Attempts |
+|---|---|---|
+| `GET / HTTP/1.1` | `Host: 13.235.92.17:23` | 1 |
+| `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36` | `Accept: */*` | 1 |
+| `Accept-Encoding: gzip` | `` | 1 |
+| `*1` | `$4` | 1 |
+| `user` | `user` | 1 |
 
 ---
 
@@ -42,7 +72,7 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **7** |
+| Total Sessions Parsed | **13** |
 | Sessions with Fingerprint | **2** |
 | Unique HASSH Fingerprints | **2** |
 
@@ -51,20 +81,21 @@
 | Client Family | Sessions |
 |---|---|
 | Go SSH scanner | 1 |
-| Unknown | 1 |
+| AsyncSSH (Python) | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `2aec6b44b06b...` | Mirai/variant | 1 | 1 |
+| `e54ef3ec27fe...` | Generic scanner | 1 | 1 |
+| `fda360b1b4f4...` | Mirai/variant | 1 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `2aec6b44b06b...` | Go SSH scanner | 1 | 1 | Mirai/variant |
-| `95420f9d932d...` | Unknown | 1 | 1 | — |
+| `e54ef3ec27fe...` | Go SSH scanner | 1 | 1 | Generic scanner |
+| `fda360b1b4f4...` | AsyncSSH (Python) | 1 | 1 | Mirai/variant |
 
 ---
 
@@ -72,21 +103,21 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **7** |
+| Total IPs Analysed | **6** |
 | Unique ASNs | **6** |
-| High-Risk ASNs | **2** |
+| High-Risk ASNs | **3** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS4134` | CHINANET-BACKBONE | 2 | LOW |
-| `AS12271` | Charter Communications Inc | 1 | HIGH |
-| `AS213412` | ONYPHE SAS | 1 | HIGH |
-| `AS4657` | StarHub Ltd | 1 | LOW |
 | `AS8075` | Microsoft Corporation | 1 | LOW |
-| `AS4837` | CHINA UNICOM China169 Backbone | 1 | MEDIUM |
+| `AS14061` | DigitalOcean, LLC | 1 | LOW |
+| `AS7552` | Viettel Group | 1 | HIGH |
+| `AS37963` | Hangzhou Alibaba Advertising Co.,Ltd. | 1 | HIGH |
+| `AS12389` | PJSC Rostelecom | 1 | HIGH |
+| `AS396982` | Google LLC | 1 | LOW |
 
 ---
 
@@ -108,8 +139,9 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `184.152.101[.]151` | 1 | 2026-04-08 14:59 | 2026-04-08 14:59 | 12s | 0 | `T1592` | 🟢 LOW |
-| `94.231.206[.]36` | 1 | 2026-04-08 13:36 | 2026-04-08 13:36 | 0s | 0 | `T1592` | 🟢 LOW |
+| `101.201.104[.]216` | 1 | 2026-04-08 16:30 | 2026-04-08 16:30 | 0s | 0 | `T1592` | 🟢 LOW |
+| `27.79.43[.]155` | 1 | 2026-04-08 16:58 | 2026-04-08 16:58 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `90.189.152[.]114` | 1 | 2026-04-08 16:56 | 2026-04-08 16:56 | 12s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -145,13 +177,10 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `184.152.101[.]151` | US | Charter Communications Inc | **100** ⚠️ | 13 |
-| `94.231.206[.]36` | SG | FR ONYPHE | **100** ⚠️ | 38 |
-| `27.13.42[.]49` | CN | China Unicom Chongqing Province Network | **68** | 0 |
-| `124.117.192[.]184` | CN | CHINANET Xinjiang province network | **66** | 8 |
-| `202.156.18[.]187` | SG | StarHub Cable Vision Ltd | **38** | 8 |
-| `59.52.102[.]148` | CN | CHINANET Jiangxi province network | 23 | 3 |
-| `172.208.127[.]241` | US | Microsoft Limited | 13 | 0 |
+| `27.79.43[.]155` | VN | Viettel Group | **100** ⚠️ | 0 |
+| `101.201.104[.]216` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 14 |
+| `90.189.152[.]114` | RU | OJSC Sibirtelecom | **100** ⚠️ | 16 |
+| `152.42.175[.]146` | SG | DigitalOcean, LLC | 3 | 0 |
 
 ---
 
@@ -159,17 +188,17 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | TTP ID | Count |
 |---|---|
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 3 |
 | [T1592](https://attack.mitre.org/techniques/T1592) | 2 |
 
 ---
 
-## 🔕 False Positive Summary (5 filtered)
+## 🔕 False Positive Summary (10 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 13 below threshold 25 | 1 |
-| AbuseIPDB score 23 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 3 |
+| AbuseIPDB score 0 below threshold 25 | 2 |
+| AbuseIPDB score 3 below threshold 25 | 8 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -180,19 +209,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 7 cases |
-| Tool 34  | Credential Extractor        | ✅ 0 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 13 cases |
+| Tool 34  | Credential Extractor        | ✅ 5 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 7 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 5 filtered (71.4%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 6 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 10 filtered (76.9%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
 | Tool 30b | ASN Clustering              | ✅ 6 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 21 files |
 | Tool 33  | YARA Classifier             | ✅ 7 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 2 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 3 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
 
 ---
 
@@ -208,4 +237,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-08T15:07:32Z_
+_Report time: 2026-04-08T16:59:33Z_
