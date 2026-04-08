@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-08T19:13:11.022085+00:00",
+  "generated_at": "2026-04-08T20:39:43.332706+00:00",
   "total_sessions_with_commands": 1,
   "total_clusters": 1,
   "campaign_clusters": 0,
@@ -16,28 +16,22 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "64.236.145.64"
+        "135.232.201.240"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "1bd63f19ff92669a",
-      "ttps": [
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        }
-      ],
+      "sequence_hash": "f25297859cf0a70a",
+      "ttps": [],
       "representative_commands": [
-        "nproc 2>/dev/null || (grep -c '^processor' /proc/cpuinfo 2>/dev/null) || echo 0",
-        "grep -c ^processor /proc/cpuinfo 2 > /dev/null"
+        "whoami"
       ],
       "members": [
         {
-          "session_id": "IR-18ed431bc878",
-          "src_ip": "64.236.145.64",
+          "session_id": "IR-c271f75738c5",
+          "src_ip": "135.232.201.240",
           "country": "",
           "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-08T18:44:47.316342Z"
+          "command_count": 1,
+          "timestamp": "2026-04-08T19:54:49.349989Z"
         }
       ]
     }

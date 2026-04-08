@@ -1,49 +1,42 @@
 {
-  "generated_at": "2026-04-08T19:13:16Z",
+  "generated_at": "2026-04-08T20:39:49Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 8,
-  "unique_asns": 6,
+  "total_ips_analyzed": 6,
+  "unique_asns": 5,
   "top_attack_asns": [
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 3,
+      "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS7552",
-      "asn_name": "Viettel Group",
+      "asn": "AS45090",
+      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS29852",
-      "asn_name": "Honest Networks, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS132165",
+      "asn_name": "Connect Communications",
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
     },
     {
-      "asn": "AS6849",
-      "asn_name": "JSC Ukrtelecom",
+      "asn": "AS11776",
+      "asn_name": "Breezeline",
       "ip_count": 1,
       "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS58470",
+      "asn_name": "IX Peering for Mobilink and Link Direct International.",
+      "ip_count": 1,
+      "risk_tier": "LOW",
       "anon_count": 0
     }
   ],
@@ -51,34 +44,20 @@
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 3,
+      "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS7552",
-      "asn_name": "Viettel Group",
+      "asn": "AS45090",
+      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS29852",
-      "asn_name": "Honest Networks, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS6849",
-      "asn_name": "JSC Ukrtelecom",
+      "asn": "AS11776",
+      "asn_name": "Breezeline",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -89,25 +68,15 @@
     {
       "country": "US",
       "code": "",
-      "count": 4
+      "count": 3
     },
     {
-      "country": "JP",
+      "country": "PK",
       "code": "",
-      "count": 1
+      "count": 2
     },
     {
-      "country": "BR",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "UA",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "VN",
+      "country": "CN",
       "code": "",
       "count": 1
     }
@@ -116,17 +85,16 @@
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 3,
+      "ip_count": 2,
       "unique_ips": [
-        "52.154.20.194",
-        "52.180.146.167",
-        "64.236.145.64"
+        "135.232.201.240",
+        "64.236.140.193"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 66.66666666666667,
+      "avg_abuse_score": 50,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -139,24 +107,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-08T19:13:15Z",
-      "last_seen": "2026-04-08T19:13:15Z",
+      "first_seen": "2026-04-08T20:39:48Z",
+      "last_seen": "2026-04-08T20:39:48Z",
       "isps": [
-        "Microsoft Corporation",
         "Microsoft Limited"
       ]
     },
     {
-      "asn": "AS7552",
-      "asn_name": "Viettel Group",
+      "asn": "AS45090",
+      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
       "ip_count": 1,
       "unique_ips": [
-        "27.79.43.155"
+        "106.52.55.240"
       ],
       "countries": [
-        "VN"
+        "CN"
       ],
-      "top_country": "VN",
+      "top_country": "CN",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -170,86 +137,25 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-08T19:13:15Z",
-      "last_seen": "2026-04-08T19:13:15Z",
+      "first_seen": "2026-04-08T20:39:48Z",
+      "last_seen": "2026-04-08T20:39:48Z",
       "isps": [
-        "Viettel Group"
+        "Tencent cloud computing (Beijing) Co., Ltd."
       ]
     },
     {
-      "asn": "AS29852",
-      "asn_name": "Honest Networks, LLC",
+      "asn": "AS132165",
+      "asn_name": "Connect Communications",
       "ip_count": 1,
       "unique_ips": [
-        "147.185.154.204"
+        "118.103.233.236"
       ],
       "countries": [
-        "US"
+        "PK"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-08T19:13:15Z",
-      "last_seen": "2026-04-08T19:13:15Z",
-      "isps": [
-        "Honest Networks, LLC"
-      ]
-    },
-    {
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
-      "ip_count": 1,
-      "unique_ips": [
-        "172.104.93.159"
-      ],
-      "countries": [
-        "JP"
-      ],
-      "top_country": "JP",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-08T19:13:16Z",
-      "last_seen": "2026-04-08T19:13:16Z",
-      "isps": [
-        "Linode"
-      ]
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
-      "unique_ips": [
-        "205.210.31.210"
-      ],
-      "countries": [
-        "BR"
-      ],
-      "top_country": "BR",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
+      "top_country": "PK",
+      "avg_abuse_score": 39,
+      "max_abuse_score": 39,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -258,26 +164,24 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-08T19:13:16Z",
-      "last_seen": "2026-04-08T19:13:16Z",
+      "tags": [],
+      "first_seen": "2026-04-08T20:39:48Z",
+      "last_seen": "2026-04-08T20:39:48Z",
       "isps": [
-        "Palo Alto Networks, Inc"
+        "Metro Ethernet Network"
       ]
     },
     {
-      "asn": "AS6849",
-      "asn_name": "JSC Ukrtelecom",
+      "asn": "AS11776",
+      "asn_name": "Breezeline",
       "ip_count": 1,
       "unique_ips": [
-        "46.200.77.171"
+        "172.85.26.41"
       ],
       "countries": [
-        "UA"
+        "US"
       ],
-      "top_country": "UA",
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -291,10 +195,38 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-08T19:13:16Z",
-      "last_seen": "2026-04-08T19:13:16Z",
+      "first_seen": "2026-04-08T20:39:48Z",
+      "last_seen": "2026-04-08T20:39:48Z",
       "isps": [
-        "JSC Ukrtelecom"
+        "Atlantic Broadband"
+      ]
+    },
+    {
+      "asn": "AS58470",
+      "asn_name": "IX Peering for Mobilink and Link Direct International.",
+      "ip_count": 1,
+      "unique_ips": [
+        "119.30.117.161"
+      ],
+      "countries": [
+        "PK"
+      ],
+      "top_country": "PK",
+      "avg_abuse_score": 32,
+      "max_abuse_score": 32,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-08T20:39:48Z",
+      "last_seen": "2026-04-08T20:39:48Z",
+      "isps": [
+        "LINKdotNET Telecom Limited"
       ]
     }
   ]
