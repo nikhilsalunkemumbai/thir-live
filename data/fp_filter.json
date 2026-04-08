@@ -1,65 +1,31 @@
 {
-  "generated_at": "2026-04-08T16:59:33Z",
+  "generated_at": "2026-04-08T19:13:16Z",
   "threshold_used": 25,
-  "total_cases_in": 13,
-  "confirmed_threats": 3,
-  "flagged_as_fp": 10,
-  "fp_rate": 0.7692,
+  "total_cases_in": 11,
+  "confirmed_threats": 9,
+  "flagged_as_fp": 2,
+  "fp_rate": 0.1818,
   "fp_cases": [
     {
-      "case_id": "IR-2bfddf0e3688",
-      "src_ip": "198.235.24.120",
+      "case_id": "IR-1af04c08847d",
+      "src_ip": "205.210.31.210",
       "reason": "AbuseIPDB score 0 below threshold 25"
     },
     {
-      "case_id": "IR-1466bae7defc",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-22f39e4f5829",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-778c55371284",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-ae89cf67f1b5",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-bde2e90da89f",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-2f600306b208",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-a5386c2625c7",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-4bf54b2df384",
-      "src_ip": "152.42.175.146",
-      "reason": "AbuseIPDB score 3 below threshold 25"
-    },
-    {
-      "case_id": "IR-c71e1edb5931",
-      "src_ip": "172.184.210.244",
+      "case_id": "IR-10d1e6775938",
+      "src_ip": "52.154.20.194",
       "reason": "AbuseIPDB score 0 below threshold 25"
     }
   ],
   "clean_cases": [
-    "IR-7ad8b7d298e2",
-    "IR-a5e3f4ce2e48",
-    "IR-35d22720fe95"
+    "IR-fdf0a06d9423",
+    "IR-47ea08a0a95a",
+    "IR-4bf6aeccfd17",
+    "IR-d549c04ce2cf",
+    "IR-d25b9239be5a",
+    "IR-a187587193c5",
+    "IR-18ed431bc878",
+    "IR-8456c4aa738b",
+    "IR-71c79874e8ab"
   ]
 }

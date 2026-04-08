@@ -1,21 +1,14 @@
 {
-  "generated_at": "2026-04-08T16:59:33Z",
+  "generated_at": "2026-04-08T19:13:16Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 6,
+  "total_ips_analyzed": 8,
   "unique_asns": 6,
   "top_attack_asns": [
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "risk_tier": "LOW",
+      "ip_count": 3,
+      "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
@@ -26,15 +19,15 @@
       "anon_count": 0
     },
     {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "asn": "AS29852",
+      "asn_name": "Honest Networks, LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS12389",
-      "asn_name": "PJSC Rostelecom",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -45,9 +38,23 @@
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
+    },
+    {
+      "asn": "AS6849",
+      "asn_name": "JSC Ukrtelecom",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
     }
   ],
   "high_risk_asns": [
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 3,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
     {
       "asn": "AS7552",
       "asn_name": "Viettel Group",
@@ -56,15 +63,22 @@
       "anon_count": 0
     },
     {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "asn": "AS29852",
+      "asn_name": "Honest Networks, LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS12389",
-      "asn_name": "PJSC Rostelecom",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS6849",
+      "asn_name": "JSC Ukrtelecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -75,30 +89,25 @@
     {
       "country": "US",
       "code": "",
+      "count": 4
+    },
+    {
+      "country": "JP",
+      "code": "",
       "count": 1
     },
     {
-      "country": "SG",
+      "country": "BR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "UA",
       "code": "",
       "count": 1
     },
     {
       "country": "VN",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "CN",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "RU",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "TW",
       "code": "",
       "count": 1
     }
@@ -107,16 +116,18 @@
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
+      "ip_count": 3,
       "unique_ips": [
-        "172.184.210.244"
+        "52.154.20.194",
+        "52.180.146.167",
+        "64.236.145.64"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
+      "avg_abuse_score": 66.66666666666667,
+      "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -124,40 +135,15 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-08T16:59:31Z",
-      "last_seen": "2026-04-08T16:59:31Z",
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-08T19:13:15Z",
+      "last_seen": "2026-04-08T19:13:15Z",
       "isps": [
+        "Microsoft Corporation",
         "Microsoft Limited"
-      ]
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "unique_ips": [
-        "152.42.175.146"
-      ],
-      "countries": [
-        "SG"
-      ],
-      "top_country": "SG",
-      "avg_abuse_score": 3,
-      "max_abuse_score": 3,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-08T16:59:31Z",
-      "last_seen": "2026-04-08T16:59:31Z",
-      "isps": [
-        "DigitalOcean, LLC"
       ]
     },
     {
@@ -184,23 +170,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-08T16:59:31Z",
-      "last_seen": "2026-04-08T16:59:31Z",
+      "first_seen": "2026-04-08T19:13:15Z",
+      "last_seen": "2026-04-08T19:13:15Z",
       "isps": [
         "Viettel Group"
       ]
     },
     {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "asn": "AS29852",
+      "asn_name": "Honest Networks, LLC",
       "ip_count": 1,
       "unique_ips": [
-        "101.201.104.216"
+        "147.185.154.204"
       ],
       "countries": [
-        "CN"
+        "US"
       ],
-      "top_country": "CN",
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -214,23 +200,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-08T16:59:31Z",
-      "last_seen": "2026-04-08T16:59:31Z",
+      "first_seen": "2026-04-08T19:13:15Z",
+      "last_seen": "2026-04-08T19:13:15Z",
       "isps": [
-        "Aliyun Computing Co., LTD"
+        "Honest Networks, LLC"
       ]
     },
     {
-      "asn": "AS12389",
-      "asn_name": "PJSC Rostelecom",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
       "unique_ips": [
-        "90.189.152.114"
+        "172.104.93.159"
       ],
       "countries": [
-        "RU"
+        "JP"
       ],
-      "top_country": "RU",
+      "top_country": "JP",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -242,12 +228,13 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse"
+        "high-abuse",
+        "cloud-provider"
       ],
-      "first_seen": "2026-04-08T16:59:31Z",
-      "last_seen": "2026-04-08T16:59:31Z",
+      "first_seen": "2026-04-08T19:13:16Z",
+      "last_seen": "2026-04-08T19:13:16Z",
       "isps": [
-        "OJSC Sibirtelecom"
+        "Linode"
       ]
     },
     {
@@ -255,12 +242,12 @@
       "asn_name": "Google LLC",
       "ip_count": 1,
       "unique_ips": [
-        "198.235.24.120"
+        "205.210.31.210"
       ],
       "countries": [
-        "TW"
+        "BR"
       ],
-      "top_country": "TW",
+      "top_country": "BR",
       "avg_abuse_score": 0,
       "max_abuse_score": 0,
       "total_reports": 0,
@@ -274,10 +261,40 @@
       "tags": [
         "cloud-provider"
       ],
-      "first_seen": "2026-04-08T16:59:33Z",
-      "last_seen": "2026-04-08T16:59:33Z",
+      "first_seen": "2026-04-08T19:13:16Z",
+      "last_seen": "2026-04-08T19:13:16Z",
       "isps": [
         "Palo Alto Networks, Inc"
+      ]
+    },
+    {
+      "asn": "AS6849",
+      "asn_name": "JSC Ukrtelecom",
+      "ip_count": 1,
+      "unique_ips": [
+        "46.200.77.171"
+      ],
+      "countries": [
+        "UA"
+      ],
+      "top_country": "UA",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-08T19:13:16Z",
+      "last_seen": "2026-04-08T19:13:16Z",
+      "isps": [
+        "JSC Ukrtelecom"
       ]
     }
   ]

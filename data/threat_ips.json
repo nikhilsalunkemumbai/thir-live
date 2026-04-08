@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-04-08T16:59:33Z",
-  "total_ips": 6,
+  "generated_at": "2026-04-08T19:13:16Z",
+  "total_ips": 8,
   "ips": [
     {
-      "indicator": "172.184.210.244",
+      "indicator": "52.154.20.194",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
-      "isp": "Microsoft Limited",
+      "isp": "Microsoft Corporation",
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "org": "AS8075 Microsoft Corporation",
@@ -15,22 +15,7 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-08T16:59:31Z"
-    },
-    {
-      "indicator": "152.42.175.146",
-      "type": "ip",
-      "abuse_score": 3,
-      "country": "SG",
-      "isp": "DigitalOcean, LLC",
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "org": "AS14061 DigitalOcean, LLC",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 0,
-      "last_seen": "2026-04-08T16:59:31Z"
+      "last_seen": "2026-04-08T19:13:15Z"
     },
     {
       "indicator": "27.79.43.155",
@@ -44,44 +29,74 @@
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
+      "otx_pulses": 1,
+      "last_seen": "2026-04-08T19:13:15Z"
+    },
+    {
+      "indicator": "147.185.154.204",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "US",
+      "isp": "Honest Networks, LLC",
+      "asn": "AS29852",
+      "asn_name": "Honest Networks, LLC",
+      "org": "AS29852 Honest Networks, LLC",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-08T16:59:31Z"
+      "last_seen": "2026-04-08T19:13:15Z"
     },
     {
-      "indicator": "101.201.104.216",
+      "indicator": "52.180.146.167",
       "type": "ip",
       "abuse_score": 100,
-      "country": "CN",
-      "isp": "Aliyun Computing Co., LTD",
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "org": "AS37963 Hangzhou Alibaba Advertising Co.,Ltd.",
+      "country": "US",
+      "isp": "Microsoft Corporation",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "org": "AS8075 Microsoft Corporation",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
-      "otx_pulses": 14,
-      "last_seen": "2026-04-08T16:59:31Z"
+      "otx_pulses": 50,
+      "last_seen": "2026-04-08T19:13:15Z"
     },
     {
-      "indicator": "90.189.152.114",
+      "indicator": "64.236.145.64",
       "type": "ip",
       "abuse_score": 100,
-      "country": "RU",
-      "isp": "OJSC Sibirtelecom",
-      "asn": "AS12389",
-      "asn_name": "PJSC Rostelecom",
-      "org": "AS12389 PJSC Rostelecom",
+      "country": "US",
+      "isp": "Microsoft Limited",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "org": "AS8075 Microsoft Corporation",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
-      "otx_pulses": 16,
-      "last_seen": "2026-04-08T16:59:31Z"
+      "otx_pulses": 0,
+      "last_seen": "2026-04-08T19:13:15Z"
     },
     {
-      "indicator": "198.235.24.120",
+      "indicator": "172.104.93.159",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "JP",
+      "isp": "Linode",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "org": "AS63949 Akamai Connected Cloud",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 50,
+      "last_seen": "2026-04-08T19:13:16Z"
+    },
+    {
+      "indicator": "205.210.31.210",
       "type": "ip",
       "abuse_score": 0,
-      "country": "TW",
+      "country": "BR",
       "isp": "Palo Alto Networks, Inc",
       "asn": "AS396982",
       "asn_name": "Google LLC",
@@ -90,7 +105,22 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-08T16:59:33Z"
+      "last_seen": "2026-04-08T19:13:16Z"
+    },
+    {
+      "indicator": "46.200.77.171",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "UA",
+      "isp": "JSC Ukrtelecom",
+      "asn": "AS6849",
+      "asn_name": "JSC Ukrtelecom",
+      "org": "AS6849 JSC Ukrtelecom",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 2,
+      "last_seen": "2026-04-08T19:13:16Z"
     }
   ]
 }
