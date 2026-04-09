@@ -1,99 +1,22 @@
 {
-  "generated_at": "2026-04-09T10:56:38Z",
+  "generated_at": "2026-04-09T13:22:03Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 8,
-  "unique_asns": 8,
+  "total_ips_analyzed": 15,
+  "unique_asns": 1,
   "top_attack_asns": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS26077",
-      "asn_name": "Nextlink Broadband",
-      "ip_count": 1,
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 15,
       "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9583",
-      "asn_name": "Sify Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS58563",
-      "asn_name": "CHINANET Hubei province network",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS5378",
-      "asn_name": "Vodafone Limited",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "risk_tier": "LOW",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS26077",
-      "asn_name": "Nextlink Broadband",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9583",
-      "asn_name": "Sify Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS58563",
-      "asn_name": "CHINANET Hubei province network",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 15,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
@@ -101,129 +24,68 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
+      "country": "CN",
+      "code": "",
+      "count": 7
+    },
+    {
       "country": "US",
       "code": "",
       "count": 4
     },
     {
-      "country": "CN",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "GB",
+      "country": "NL",
       "code": "",
       "count": 1
     },
     {
-      "country": "IN",
+      "country": "JP",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "SE",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "VN",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 15,
       "unique_ips": [
-        "147.185.132.255"
+        "1.30.199.218",
+        "106.12.173.59",
+        "117.50.51.119",
+        "14.103.114.231",
+        "14.103.116.98",
+        "14.103.121.146",
+        "14.103.76.140",
+        "150.246.249.149",
+        "160.191.244.236",
+        "165.245.175.148",
+        "18.206.156.151",
+        "195.178.110.204",
+        "20.169.75.241",
+        "3.129.187.38",
+        "46.236.65.51"
       ],
       "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-09T10:56:35Z",
-      "last_seen": "2026-04-09T10:56:35Z",
-      "isps": [
-        "Palo Alto Networks, Inc"
-      ]
-    },
-    {
-      "asn": "AS26077",
-      "asn_name": "Nextlink Broadband",
-      "ip_count": 1,
-      "unique_ips": [
-        "107.178.7.126"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-09T10:56:35Z",
-      "last_seen": "2026-04-09T10:56:35Z",
-      "isps": [
-        "Nextlink Broadband"
-      ]
-    },
-    {
-      "asn": "AS9583",
-      "asn_name": "Sify Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "124.7.227.98"
-      ],
-      "countries": [
-        "IN"
-      ],
-      "top_country": "IN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-09T10:56:36Z",
-      "last_seen": "2026-04-09T10:56:36Z",
-      "isps": [
-        "Sify Limited"
-      ]
-    },
-    {
-      "asn": "AS58563",
-      "asn_name": "CHINANET Hubei province network",
-      "ip_count": 1,
-      "unique_ips": [
-        "119.96.158.87"
-      ],
-      "countries": [
-        "CN"
+        "CN",
+        "JP",
+        "NL",
+        "SE",
+        "US",
+        "VN"
       ],
       "top_country": "CN",
-      "avg_abuse_score": 100,
+      "avg_abuse_score": 94.4,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -234,128 +96,23 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse"
+        "high-abuse",
+        "bulk-attacker"
       ],
-      "first_seen": "2026-04-09T10:56:36Z",
-      "last_seen": "2026-04-09T10:56:36Z",
+      "first_seen": "2026-04-09T13:21:54Z",
+      "last_seen": "2026-04-09T13:22:03Z",
       "isps": [
-        "CHINANET Hubei province network"
-      ]
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "unique_ips": [
-        "143.198.161.12"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-09T10:56:36Z",
-      "last_seen": "2026-04-09T10:56:36Z",
-      "isps": [
-        "DigitalOcean, LLC"
-      ]
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "unique_ips": [
-        "14.103.121.146"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-09T10:56:38Z",
-      "last_seen": "2026-04-09T10:56:38Z",
-      "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS5378",
-      "asn_name": "Vodafone Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "90.251.127.200"
-      ],
-      "countries": [
-        "GB"
-      ],
-      "top_country": "GB",
-      "avg_abuse_score": 25,
-      "max_abuse_score": 25,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-09T10:56:35Z",
-      "last_seen": "2026-04-09T10:56:35Z",
-      "isps": [
-        "Vodafone Wholesale Broadband"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "13.83.166.229"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 33,
-      "max_abuse_score": 33,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-09T10:56:35Z",
-      "last_seen": "2026-04-09T10:56:35Z",
-      "isps": [
-        "Microsoft Corporation"
+        "Amazon Technologies Inc.",
+        "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+        "Beijing Volcano Engine Technology Co., Ltd.",
+        "Bredband2 AB",
+        "China unicom InnerMongolia province network",
+        "DigitalOcean, LLC",
+        "Hoang Dieu Cloud Computing Company Limited",
+        "Microsoft Corporation",
+        "Shanghai UCloud Information Technology Company Limited",
+        "So-net Service",
+        "TECHOFF SRV LIMITED"
       ]
     }
   ]
