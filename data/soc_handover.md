@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-10 |
-| **Generated At** | 2026-04-10T09:06:31Z |
-| **Shift Time** | 09:06 UTC |
+| **Generated At** | 2026-04-10T10:52:00Z |
+| **Shift Time** | 10:52 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **8** |
+| Total Sessions Captured | **9** |
 | Confirmed Threats | **8** |
-| False Positives Filtered | **0** (0.0%) |
-| Unique Attacker IPs | **7** |
-| Countries of Origin | **5** |
+| False Positives Filtered | **1** (11.1%) |
+| Unique Attacker IPs | **5** |
+| Countries of Origin | **2** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **8** |
+| Low Severity Cases | **9** |
 | Malware Samples Analyzed | **0** HIGH · **15** MED · 2 empty upload attempt(s) |
 
 ---
@@ -30,31 +30,11 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **2** |
-| Unique Credential Pairs | **2** |
-| Unique Usernames | **1** |
-| Unique Passwords | **2** |
+| Total Auth Attempts | **0** |
+| Unique Credential Pairs | **0** |
+| Unique Usernames | **0** |
+| Unique Passwords | **0** |
 | Successful Auth Pairs | **0** |
-
-**Top Usernames:**
-
-| Username | Attempts |
-|---|---|
-| `pi` | 2 |
-
-**Top Passwords:**
-
-| Password | Attempts |
-|---|---|
-| `raspberry` | 1 |
-| `raspberryraspberry993311` | 1 |
-
-**Top Credential Pairs:**
-
-| Username | Password | Attempts |
-|---|---|---|
-| `pi` | `raspberry` | 1 |
-| `pi` | `raspberryraspberry993311` | 1 |
 
 ---
 
@@ -62,27 +42,31 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **8** |
-| Sessions with Fingerprint | **1** |
-| Unique HASSH Fingerprints | **1** |
+| Total Sessions Parsed | **9** |
+| Sessions with Fingerprint | **3** |
+| Unique HASSH Fingerprints | **3** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| OpenSSH | 2 |
+| libssh | 3 |
+| Go SSH scanner | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `ec7378c1a92f...` | Generic scanner | 2 | 1 |
+| `e37f354a101a...` | Mirai/variant | 2 | 1 |
+| `084386fa7ae5...` | Mirai/variant | 1 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `ec7378c1a92f...` | OpenSSH | 2 | 1 | Generic scanner |
+| `e37f354a101a...` | libssh | 2 | 1 | Mirai/variant |
+| `084386fa7ae5...` | Go SSH scanner | 1 | 1 | Mirai/variant |
+| `95420f9d932d...` | libssh | 1 | 1 | — |
 
 ---
 
@@ -90,21 +74,19 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **7** |
-| Unique ASNs | **6** |
-| High-Risk ASNs | **5** |
+| Total IPs Analysed | **5** |
+| Unique ASNs | **4** |
+| High-Risk ASNs | **4** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS45102` | Alibaba (US) Technology Co., Ltd. | 2 | HIGH |
-| `AS42610` | PJSC Rostelecom | 1 | HIGH |
-| `AS8075` | Microsoft Corporation | 1 | MEDIUM |
-| `AS4766` | Korea Telecom | 1 | HIGH |
-| `AS37963` | Hangzhou Alibaba Advertising Co.,Ltd. | 1 | HIGH |
-| `AS3786` | LG DACOM Corporation | 1 | HIGH |
+| `AS8075` | Microsoft Corporation | 2 | HIGH |
+| `AS55990` | Huawei Cloud Service data center | 1 | HIGH |
+| `AS135089` | China Telecom | 1 | HIGH |
+| `AS23724` | IDC, China Telecommunications Corporation | 1 | HIGH |
 
 ---
 
@@ -126,13 +108,10 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `112.164.20[.]69` | **2** | 2026-04-10 07:36 | 2026-04-10 07:36 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
-| `112.74.242[.]167` | 1 | 2026-04-10 08:29 | 2026-04-10 08:29 | 31s | 0 | `T1592` | 🟢 LOW |
-| `115.95.176[.]182` | 1 | 2026-04-10 07:28 | 2026-04-10 07:28 | 30s | 0 | `T1592` | 🟢 LOW |
-| `135.232.232[.]66` | 1 | 2026-04-10 09:06 | 2026-04-10 09:06 | 0s | 0 | `T1592` | 🟢 LOW |
-| `8.222.188[.]255` | 1 | 2026-04-10 08:39 | 2026-04-10 08:39 | 30s | 0 | `T1592` | 🟢 LOW |
-| `8.222.190[.]17` | 1 | 2026-04-10 08:29 | 2026-04-10 08:29 | 30s | 0 | `T1592` | 🟢 LOW |
-| `95.84.146[.]9` | 1 | 2026-04-10 08:19 | 2026-04-10 08:20 | 30s | 0 | `T1592` | 🟢 LOW |
+| `49.7.233[.]99` | **4** | 2026-04-10 10:47 | 2026-04-10 10:47 | 0m | 0 | `T1592` | 🟢 LOW |
+| `135.233.97[.]43` | **2** | 2026-04-10 10:41 | 2026-04-10 10:41 | 0m | 0 | `T1592` | 🟢 LOW |
+| `124.71.29[.]170` | 1 | 2026-04-10 10:09 | 2026-04-10 10:09 | 8s | 0 | `T1592` | 🟢 LOW |
+| `183.56.235[.]140` | 1 | 2026-04-10 10:46 | 2026-04-10 10:48 | 120s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -169,13 +148,10 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `95.84.146[.]9` | RU | PJSC Rostelecom | **100** ⚠️ | 9 |
-| `112.164.20[.]69` | KR | Korea Telecom | **100** ⚠️ | 34 |
-| `8.222.188[.]255` | SG | Alibaba Cloud (Singapore) Private Limited | **100** ⚠️ | 24 |
-| `112.74.242[.]167` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 50 |
-| `8.222.190[.]17` | SG | Alibaba Cloud (Singapore) Private Limited | **100** ⚠️ | 50 |
-| `115.95.176[.]182` | KR | LG DACOM Corporation | **100** ⚠️ | 23 |
-| `135.232.232[.]66` | US | Microsoft Limited | **82** ⚠️ | 47 |
+| `124.71.29[.]170` | CN | Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co) | **100** ⚠️ | 1 |
+| `183.56.235[.]140` | CN | CHINANET Guangdong province network | **100** ⚠️ | 11 |
+| `49.7.233[.]99` | CN | ChinaTelecom Group Beijing Ltd,Co | **100** ⚠️ | 13 |
+| `135.233.97[.]43` | US | Microsoft Limited | **100** ⚠️ | 50 |
 
 ---
 
@@ -183,12 +159,15 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | TTP ID | Count |
 |---|---|
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 2 |
-| [T1592](https://attack.mitre.org/techniques/T1592) | 2 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 4 |
 
 ---
 
-## 🔕 False Positive Summary (0 filtered)
+## 🔕 False Positive Summary (1 filtered)
+
+| Reason | Count |
+|---|---|
+| AbuseIPDB score 0 below threshold 25 | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -199,19 +178,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 8 cases |
-| Tool 34  | Credential Extractor        | ✅ 2 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
+| Tool 26  | Incident Timeline Generator | ✅ 9 cases |
+| Tool 34  | Credential Extractor        | ✅ 0 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 3 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 7 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 0 filtered (0.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 5 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 1 filtered (11.1%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 6 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 4 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 22 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 7 recon entry/entries in table (1 group(s) consolidating 2 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 4 recon entry/entries in table (2 group(s) consolidating 6 session(s)).
 
 ---
 
@@ -227,4 +206,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-10T09:06:31Z_
+_Report time: 2026-04-10T10:52:00Z_
