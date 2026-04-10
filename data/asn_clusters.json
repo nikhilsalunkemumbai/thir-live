@@ -1,13 +1,27 @@
 {
-  "generated_at": "2026-04-09T22:38:48Z",
+  "generated_at": "2026-04-10T02:13:36Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 16,
-  "unique_asns": 1,
+  "total_ips_analyzed": 26,
+  "unique_asns": 3,
   "top_attack_asns": [
     {
       "asn": "AS0",
       "asn_name": "",
-      "ip_count": 16,
+      "ip_count": 24,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS36352",
+      "asn_name": "HostPapa",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS6713",
+      "asn_name": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+      "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
@@ -16,7 +30,21 @@
     {
       "asn": "AS0",
       "asn_name": "",
-      "ip_count": 16,
+      "ip_count": 24,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS36352",
+      "asn_name": "HostPapa",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS6713",
+      "asn_name": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+      "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
@@ -26,35 +54,25 @@
     {
       "country": "CN",
       "code": "",
-      "count": 7
+      "count": 8
+    },
+    {
+      "country": "MA",
+      "code": "",
+      "count": 5
     },
     {
       "country": "US",
       "code": "",
-      "count": 1
+      "count": 4
     },
     {
-      "country": "TR",
+      "country": "NL",
       "code": "",
-      "count": 1
+      "count": 3
     },
     {
-      "country": "AU",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "JP",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "KR",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "BR",
+      "country": "AM",
       "code": "",
       "count": 1
     },
@@ -64,12 +82,22 @@
       "count": 1
     },
     {
-      "country": "GB",
+      "country": "PK",
       "code": "",
       "count": 1
     },
     {
-      "country": "ID",
+      "country": "IN",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "TH",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "UZ",
       "code": "",
       "count": 1
     }
@@ -78,39 +106,47 @@
     {
       "asn": "AS0",
       "asn_name": "",
-      "ip_count": 16,
+      "ip_count": 24,
       "unique_ips": [
-        "101.126.91.34",
-        "113.249.104.20",
-        "119.203.251.187",
-        "120.48.181.192",
-        "120.48.22.219",
-        "120.48.80.70",
-        "121.224.115.232",
-        "123.48.142.249",
-        "180.76.235.114",
-        "187.62.87.27",
-        "36.93.249.106",
-        "37.143.61.84",
-        "40.82.214.8",
-        "47.236.203.81",
-        "52.154.132.163",
-        "92.45.193.63"
+        "103.213.112.140",
+        "119.96.158.87",
+        "120.48.43.176",
+        "121.227.31.13",
+        "124.109.2.211",
+        "14.103.159.224",
+        "14.18.122.240",
+        "140.246.108.106",
+        "154.144.225.226",
+        "176.65.148.166",
+        "180.76.245.60",
+        "195.178.110.204",
+        "195.250.72.168",
+        "196.92.7.247",
+        "196.92.7.249",
+        "20.80.7.225",
+        "222.240.1.32",
+        "36.255.3.203",
+        "45.33.14.5",
+        "52.187.9.8",
+        "74.235.151.5",
+        "81.192.138.65",
+        "89.126.211.227",
+        "93.123.109.222"
       ],
       "countries": [
-        "AU",
-        "BR",
+        "AM",
         "CN",
-        "GB",
-        "ID",
-        "JP",
-        "KR",
+        "IN",
+        "MA",
+        "NL",
+        "PK",
         "SG",
-        "TR",
-        "US"
+        "TH",
+        "US",
+        "UZ"
       ],
       "top_country": "CN",
-      "avg_abuse_score": 90.9375,
+      "avg_abuse_score": 93.95833333333333,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -124,21 +160,86 @@
         "high-abuse",
         "bulk-attacker"
       ],
-      "first_seen": "2026-04-09T22:38:37Z",
-      "last_seen": "2026-04-09T22:38:47Z",
+      "first_seen": "2026-04-10T02:13:26Z",
+      "last_seen": "2026-04-10T02:13:36Z",
       "isps": [
-        "Alibaba Cloud LLC",
         "Beijing Baidu Netcom Science and Technology Co., Ltd.",
         "Beijing Volcano Engine Technology Co., Ltd.",
-        "CHINANET Chongqing Province Network",
+        "CHINANET Guangdong province network",
+        "CHINANET Hubei province network",
+        "CHINANET SHANDONG PROVINCE NETWORK",
         "CHINANET jiangsu province network",
-        "Chubu Telecommunications Co.,Inc.",
-        "INFINITYGO TELECOM LTDA",
-        "Internet Utilities Europe and Asia Limited",
-        "Korea Telecom",
+        "CHINANET-HN Changsha node network",
+        "Cyber Internet Services Pakistan",
+        "GNC-Alfa CJSC",
+        "Linode",
         "Microsoft Corporation",
-        "PT Telekomunikasi Indonesia",
-        "TR-SOLNET-BB-VAE-ANADOLU"
+        "Mira Consulting",
+        "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+        "Pfcloud UG",
+        "ServeNet Solution Limited Partnership",
+        "TECHOFF SRV LIMITED",
+        "Uzbektelekom Joint Stock Company"
+      ]
+    },
+    {
+      "asn": "AS36352",
+      "asn_name": "HostPapa",
+      "ip_count": 1,
+      "unique_ips": [
+        "23.94.52.3"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-10T02:13:26Z",
+      "last_seen": "2026-04-10T02:13:26Z",
+      "isps": [
+        "RackNerd LLC"
+      ]
+    },
+    {
+      "asn": "AS6713",
+      "asn_name": "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM",
+      "ip_count": 1,
+      "unique_ips": [
+        "196.92.7.246"
+      ],
+      "countries": [
+        "MA"
+      ],
+      "top_country": "MA",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-10T02:13:34Z",
+      "last_seen": "2026-04-10T02:13:34Z",
+      "isps": [
+        "Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM"
       ]
     }
   ]
