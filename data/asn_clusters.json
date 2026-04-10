@@ -1,33 +1,68 @@
 {
-  "generated_at": "2026-04-10T10:52:00Z",
+  "generated_at": "2026-04-10T13:04:43Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 5,
-  "unique_asns": 4,
+  "total_ips_analyzed": 10,
+  "unique_asns": 9,
   "top_attack_asns": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS16509",
+      "asn_name": "Amazon.com, Inc.",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS55990",
-      "asn_name": "Huawei Cloud Service data center",
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS135089",
-      "asn_name": "China Telecom",
+      "asn": "AS138245",
+      "asn_name": "Xpress Net Solution",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS139549",
+      "asn_name": "Crisp Enterprises",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS37963",
+      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS23724",
-      "asn_name": "IDC, China Telecommunications Corporation",
+      "asn": "AS14618",
+      "asn_name": "Amazon.com, Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS20115",
+      "asn_name": "Charter Communications LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS134756",
+      "asn_name": "CHINANET Nanjing Jishan IDC network",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -35,29 +70,43 @@
   ],
   "high_risk_asns": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS16509",
+      "asn_name": "Amazon.com, Inc.",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS55990",
-      "asn_name": "Huawei Cloud Service data center",
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS135089",
-      "asn_name": "China Telecom",
+      "asn": "AS37963",
+      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS23724",
-      "asn_name": "IDC, China Telecommunications Corporation",
+      "asn": "AS14618",
+      "asn_name": "Amazon.com, Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS20115",
+      "asn_name": "Charter Communications LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS134756",
+      "asn_name": "CHINANET Nanjing Jishan IDC network",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -66,30 +115,68 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "CN",
+      "country": "US",
+      "code": "",
+      "count": 4
+    },
+    {
+      "country": "IN",
       "code": "",
       "count": 3
     },
     {
-      "country": "US",
+      "country": "CN",
       "code": "",
-      "count": 2
+      "count": 3
     }
   ],
   "clusters": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS16509",
+      "asn_name": "Amazon.com, Inc.",
       "ip_count": 2,
       "unique_ips": [
-        "135.233.97.43",
-        "172.202.102.213"
+        "13.233.179.153",
+        "3.131.220.121"
       ],
       "countries": [
+        "IN",
         "US"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 50,
+      "top_country": "IN",
+      "avg_abuse_score": 74,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse",
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
+      "isps": [
+        "Amazon Data Services India",
+        "Amazon Technologies Inc."
+      ]
+    },
+    {
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "180.76.143.203"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -102,23 +189,109 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-10T10:51:58Z",
-      "last_seen": "2026-04-10T10:52:00Z",
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
       "isps": [
-        "Microsoft Limited"
+        "Beijing Baidu Netcom Science and Technology Co., Ltd."
       ]
     },
     {
-      "asn": "AS55990",
-      "asn_name": "Huawei Cloud Service data center",
+      "asn": "AS138245",
+      "asn_name": "Xpress Net Solution",
       "ip_count": 1,
       "unique_ips": [
-        "124.71.29.170"
+        "103.181.160.47"
+      ],
+      "countries": [
+        "IN"
+      ],
+      "top_country": "IN",
+      "avg_abuse_score": 23,
+      "max_abuse_score": 23,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
+      "isps": [
+        "MONGA TELECOM"
+      ]
+    },
+    {
+      "asn": "AS139549",
+      "asn_name": "Crisp Enterprises",
+      "ip_count": 1,
+      "unique_ips": [
+        "103.146.111.106"
+      ],
+      "countries": [
+        "IN"
+      ],
+      "top_country": "IN",
+      "avg_abuse_score": 35,
+      "max_abuse_score": 35,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
+      "isps": [
+        "Crisp Enterprises"
+      ]
+    },
+    {
+      "asn": "AS37963",
+      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "112.124.1.210"
       ],
       "countries": [
         "CN"
       ],
       "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
+      "isps": [
+        "Aliyun Computing Co., LTD"
+      ]
+    },
+    {
+      "asn": "AS14618",
+      "asn_name": "Amazon.com, Inc.",
+      "ip_count": 1,
+      "unique_ips": [
+        "3.92.180.146"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -133,18 +306,76 @@
         "high-abuse",
         "cloud-provider"
       ],
-      "first_seen": "2026-04-10T10:51:58Z",
-      "last_seen": "2026-04-10T10:51:58Z",
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
       "isps": [
-        "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+        "Amazon Data Services Northern Virginia"
       ]
     },
     {
-      "asn": "AS135089",
-      "asn_name": "China Telecom",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "183.56.235.140"
+        "13.83.216.97"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 17,
+      "max_abuse_score": 17,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
+      "isps": [
+        "Microsoft Corporation"
+      ]
+    },
+    {
+      "asn": "AS20115",
+      "asn_name": "Charter Communications LLC",
+      "ip_count": 1,
+      "unique_ips": [
+        "97.93.152.80"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-10T13:04:42Z",
+      "last_seen": "2026-04-10T13:04:42Z",
+      "isps": [
+        "Charter Communications LLC"
+      ]
+    },
+    {
+      "asn": "AS134756",
+      "asn_name": "CHINANET Nanjing Jishan IDC network",
+      "ip_count": 1,
+      "unique_ips": [
+        "180.110.149.157"
       ],
       "countries": [
         "CN"
@@ -163,40 +394,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-10T10:51:58Z",
-      "last_seen": "2026-04-10T10:51:58Z",
+      "first_seen": "2026-04-10T13:04:43Z",
+      "last_seen": "2026-04-10T13:04:43Z",
       "isps": [
-        "CHINANET Guangdong province network"
-      ]
-    },
-    {
-      "asn": "AS23724",
-      "asn_name": "IDC, China Telecommunications Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "49.7.233.99"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-10T10:51:59Z",
-      "last_seen": "2026-04-10T10:51:59Z",
-      "isps": [
-        "ChinaTelecom Group Beijing Ltd,Co"
+        "Chinanet Jiangsu Province Network"
       ]
     }
   ]
