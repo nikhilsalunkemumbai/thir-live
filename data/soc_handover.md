@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-11 |
-| **Generated At** | 2026-04-11T18:40:40Z |
-| **Shift Time** | 18:40 UTC |
+| **Generated At** | 2026-04-11T20:29:59Z |
+| **Shift Time** | 20:29 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **8** |
-| Confirmed Threats | **6** |
-| False Positives Filtered | **2** (25.0%) |
-| Unique Attacker IPs | **7** |
-| Countries of Origin | **5** |
+| Total Sessions Captured | **6** |
+| Confirmed Threats | **5** |
+| False Positives Filtered | **1** (16.7%) |
+| Unique Attacker IPs | **5** |
+| Countries of Origin | **3** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **8** |
+| Low Severity Cases | **6** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 2 empty upload attempt(s) |
 
 ---
@@ -30,29 +30,11 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **2** |
-| Unique Credential Pairs | **1** |
-| Unique Usernames | **1** |
-| Unique Passwords | **1** |
+| Total Auth Attempts | **0** |
+| Unique Credential Pairs | **0** |
+| Unique Usernames | **0** |
+| Unique Passwords | **0** |
 | Successful Auth Pairs | **0** |
-
-**Top Usernames:**
-
-| Username | Attempts |
-|---|---|
-| `centos` | 2 |
-
-**Top Passwords:**
-
-| Password | Attempts |
-|---|---|
-| `88888` | 2 |
-
-**Top Credential Pairs:**
-
-| Username | Password | Attempts |
-|---|---|---|
-| `centos` | `88888` | 2 |
 
 ---
 
@@ -60,7 +42,7 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **8** |
+| Total Sessions Parsed | **6** |
 | Sessions with Fingerprint | **1** |
 | Unique HASSH Fingerprints | **1** |
 
@@ -68,19 +50,13 @@
 
 | Client Family | Sessions |
 |---|---|
-| OpenSSH | 2 |
-
-**⚠️ Botnet/Scanner KEX Signatures Detected:**
-
-| HASSH | Signature | Sessions | IPs |
-|---|---|---|---|
-| `acaa53e0a7d7...` | Mirai/variant | 2 | 1 |
+| Unknown | 2 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `acaa53e0a7d7...` | OpenSSH | 2 | 1 | Mirai/variant |
+| `95420f9d932d...` | Unknown | 2 | 2 | — |
 
 ---
 
@@ -88,22 +64,18 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **7** |
-| Unique ASNs | **7** |
-| High-Risk ASNs | **5** |
+| Total IPs Analysed | **5** |
+| Unique ASNs | **3** |
+| High-Risk ASNs | **2** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS396982` | Google LLC | 1 | LOW |
-| `AS25369` | Hydra Communications Ltd | 1 | HIGH |
-| `AS8075` | Microsoft Corporation | 1 | LOW |
-| `AS2860` | NOS COMUNICACOES, S.A. | 1 | HIGH |
-| `AS50360` | Tamatiya EOOD | 1 | HIGH |
-| `AS9318` | SK Broadband Co Ltd | 1 | HIGH |
-| `AS3786` | LG DACOM Corporation | 1 | HIGH |
+| `AS213790` | Limited Network LTD | 3 | HIGH |
+| `AS28840` | PJSC TATTELECOM | 1 | MEDIUM |
+| `AS8075` | Microsoft Corporation | 1 | HIGH |
 
 ---
 
@@ -125,11 +97,10 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `78.128.114[.]118` | **2** | 2026-04-11 16:35 | 2026-04-11 16:44 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
-| `1.214.179[.]202` | 1 | 2026-04-11 17:30 | 2026-04-11 17:30 | 30s | 0 | `T1592` | 🟢 LOW |
-| `110.13.169[.]166` | 1 | 2026-04-11 18:27 | 2026-04-11 18:28 | 13s | 0 | `T1592` | 🟢 LOW |
-| `193.124.20[.]242` | 1 | 2026-04-11 17:32 | 2026-04-11 17:32 | 0s | 0 | `T1592` | 🟢 LOW |
-| `85.139.79[.]249` | 1 | 2026-04-11 16:39 | 2026-04-11 16:39 | 12s | 0 | `T1592` | 🟢 LOW |
+| `185.93.89[.]190` | **2** | 2026-04-11 19:24 | 2026-04-11 19:24 | 0m | 0 | `T1592` | 🟢 LOW |
+| `172.182.193[.]129` | 1 | 2026-04-11 20:29 | 2026-04-11 20:29 | 0s | 0 | `T1592` | 🟢 LOW |
+| `185.93.89[.]192` | 1 | 2026-04-11 19:24 | 2026-04-11 19:24 | 0s | 0 | `T1592` | 🟢 LOW |
+| `185.93.89[.]193` | 1 | 2026-04-11 19:24 | 2026-04-11 19:24 | 0s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -166,11 +137,11 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `193.124.20[.]242` | DE | Hydra Communications Ltd | **100** ⚠️ | 0 |
-| `85.139.79[.]249` | PT | NOS COMUNICACOES S.A. | **100** ⚠️ | 0 |
-| `78.128.114[.]118` | BG | Tamatiya EOOD | **100** ⚠️ | 50 |
-| `110.13.169[.]166` | KR | SK Broadband Co Ltd | **100** ⚠️ | 4 |
-| `1.214.179[.]202` | KR | LG Uplus | **100** ⚠️ | 26 |
+| `185.93.89[.]192` | NL | Limited Network LTD | **100** ⚠️ | 33 |
+| `185.93.89[.]193` | NL | Limited Network LTD | **100** ⚠️ | 41 |
+| `185.93.89[.]190` | NL | Limited Network LTD | **100** ⚠️ | 50 |
+| `172.182.193[.]129` | US | Microsoft Limited | **91** ⚠️ | 13 |
+| `178.205.35[.]26` | RU | Kazan Broad-band access pools | **76** | 0 |
 
 ---
 
@@ -178,16 +149,15 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | TTP ID | Count |
 |---|---|
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 2 |
 | [T1592](https://attack.mitre.org/techniques/T1592) | 2 |
 
 ---
 
-## 🔕 False Positive Summary (2 filtered)
+## 🔕 False Positive Summary (1 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 2 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -198,19 +168,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 8 cases |
-| Tool 34  | Credential Extractor        | ✅ 2 attempts |
+| Tool 26  | Incident Timeline Generator | ✅ 6 cases |
+| Tool 34  | Credential Extractor        | ✅ 0 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 7 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 2 filtered (25.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 5 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 1 filtered (16.7%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 7 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 3 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 22 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 5 recon entry/entries in table (1 group(s) consolidating 2 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 4 recon entry/entries in table (1 group(s) consolidating 2 session(s)).
 
 ---
 
@@ -226,4 +196,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-11T18:40:40Z_
+_Report time: 2026-04-11T20:29:59Z_

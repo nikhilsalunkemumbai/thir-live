@@ -1,54 +1,26 @@
 {
-  "generated_at": "2026-04-11T18:40:40Z",
+  "generated_at": "2026-04-11T20:29:58Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 7,
-  "unique_asns": 7,
+  "total_ips_analyzed": 5,
+  "unique_asns": 3,
   "top_attack_asns": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
-      "risk_tier": "LOW",
+      "asn": "AS213790",
+      "asn_name": "Limited Network LTD",
+      "ip_count": 3,
+      "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS25369",
-      "asn_name": "Hydra Communications Ltd",
+      "asn": "AS28840",
+      "asn_name": "PJSC TATTELECOM",
       "ip_count": 1,
-      "risk_tier": "HIGH",
+      "risk_tier": "MEDIUM",
       "anon_count": 0
     },
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS2860",
-      "asn_name": "NOS COMUNICACOES, S.A.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS50360",
-      "asn_name": "Tamatiya EOOD",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9318",
-      "asn_name": "SK Broadband Co Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS3786",
-      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -56,36 +28,15 @@
   ],
   "high_risk_asns": [
     {
-      "asn": "AS25369",
-      "asn_name": "Hydra Communications Ltd",
-      "ip_count": 1,
+      "asn": "AS213790",
+      "asn_name": "Limited Network LTD",
+      "ip_count": 3,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS2860",
-      "asn_name": "NOS COMUNICACOES, S.A.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS50360",
-      "asn_name": "Tamatiya EOOD",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9318",
-      "asn_name": "SK Broadband Co Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS3786",
-      "asn_name": "LG DACOM Corporation",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -94,73 +45,35 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "KR",
+      "country": "NL",
       "code": "",
-      "count": 2
+      "count": 3
+    },
+    {
+      "country": "RU",
+      "code": "",
+      "count": 1
     },
     {
       "country": "US",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "PT",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "BG",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "DE",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
+      "asn": "AS213790",
+      "asn_name": "Limited Network LTD",
+      "ip_count": 3,
       "unique_ips": [
-        "147.185.132.75"
+        "185.93.89.190",
+        "185.93.89.192",
+        "185.93.89.193"
       ],
       "countries": [
-        "US"
+        "NL"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-11T18:40:40Z",
-      "last_seen": "2026-04-11T18:40:40Z",
-      "isps": [
-        "Palo Alto Networks, Inc"
-      ]
-    },
-    {
-      "asn": "AS25369",
-      "asn_name": "Hydra Communications Ltd",
-      "ip_count": 1,
-      "unique_ips": [
-        "193.124.20.242"
-      ],
-      "countries": [
-        "DE"
-      ],
-      "top_country": "DE",
+      "top_country": "NL",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -174,10 +87,38 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-11T18:40:39Z",
-      "last_seen": "2026-04-11T18:40:39Z",
+      "first_seen": "2026-04-11T20:29:57Z",
+      "last_seen": "2026-04-11T20:29:58Z",
       "isps": [
-        "Hydra Communications Ltd"
+        "Limited Network LTD"
+      ]
+    },
+    {
+      "asn": "AS28840",
+      "asn_name": "PJSC TATTELECOM",
+      "ip_count": 1,
+      "unique_ips": [
+        "178.205.35.26"
+      ],
+      "countries": [
+        "RU"
+      ],
+      "top_country": "RU",
+      "avg_abuse_score": 76,
+      "max_abuse_score": 76,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-11T20:29:57Z",
+      "last_seen": "2026-04-11T20:29:57Z",
+      "isps": [
+        "Kazan Broad-band access pools"
       ]
     },
     {
@@ -185,42 +126,14 @@
       "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "52.150.28.32"
+        "172.182.193.129"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-11T18:40:39Z",
-      "last_seen": "2026-04-11T18:40:39Z",
-      "isps": [
-        "Microsoft Corporation"
-      ]
-    },
-    {
-      "asn": "AS2860",
-      "asn_name": "NOS COMUNICACOES, S.A.",
-      "ip_count": 1,
-      "unique_ips": [
-        "85.139.79.249"
-      ],
-      "countries": [
-        "PT"
-      ],
-      "top_country": "PT",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "avg_abuse_score": 91,
+      "max_abuse_score": 91,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -232,100 +145,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-11T18:40:39Z",
-      "last_seen": "2026-04-11T18:40:39Z",
+      "first_seen": "2026-04-11T20:29:58Z",
+      "last_seen": "2026-04-11T20:29:58Z",
       "isps": [
-        "NOS COMUNICACOES S.A."
-      ]
-    },
-    {
-      "asn": "AS50360",
-      "asn_name": "Tamatiya EOOD",
-      "ip_count": 1,
-      "unique_ips": [
-        "78.128.114.118"
-      ],
-      "countries": [
-        "BG"
-      ],
-      "top_country": "BG",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T18:40:39Z",
-      "last_seen": "2026-04-11T18:40:39Z",
-      "isps": [
-        "Tamatiya EOOD"
-      ]
-    },
-    {
-      "asn": "AS9318",
-      "asn_name": "SK Broadband Co Ltd",
-      "ip_count": 1,
-      "unique_ips": [
-        "110.13.169.166"
-      ],
-      "countries": [
-        "KR"
-      ],
-      "top_country": "KR",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T18:40:39Z",
-      "last_seen": "2026-04-11T18:40:39Z",
-      "isps": [
-        "SK Broadband Co Ltd"
-      ]
-    },
-    {
-      "asn": "AS3786",
-      "asn_name": "LG DACOM Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "1.214.179.202"
-      ],
-      "countries": [
-        "KR"
-      ],
-      "top_country": "KR",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T18:40:39Z",
-      "last_seen": "2026-04-11T18:40:39Z",
-      "isps": [
-        "LG Uplus"
+        "Microsoft Limited"
       ]
     }
   ]
