@@ -1,47 +1,26 @@
 {
-  "generated_at": "2026-04-11T12:53:24Z",
+  "generated_at": "2026-04-11T14:35:00Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 8,
-  "unique_asns": 7,
+  "total_ips_analyzed": 5,
+  "unique_asns": 5,
   "top_attack_asns": [
     {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9829",
-      "asn_name": "National Internet Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS42831",
-      "asn_name": "UK Dedicated Servers Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS16509",
+      "asn": "AS14618",
       "asn_name": "Amazon.com, Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS214664",
+      "asn_name": "JSC Buduschee",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9318",
+      "asn_name": "SK Broadband Co Ltd",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -52,40 +31,40 @@
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
+    },
+    {
+      "asn": "AS24835",
+      "asn_name": "Vodafone Data",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9829",
-      "asn_name": "National Internet Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS42831",
-      "asn_name": "UK Dedicated Servers Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS16509",
+      "asn": "AS14618",
       "asn_name": "Amazon.com, Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS214664",
+      "asn_name": "JSC Buduschee",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9318",
+      "asn_name": "SK Broadband Co Ltd",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS24835",
+      "asn_name": "Vodafone Data",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -94,194 +73,33 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "PK",
-      "code": "",
-      "count": 2
-    },
-    {
       "country": "US",
       "code": "",
       "count": 2
     },
     {
-      "country": "IN",
+      "country": "EG",
       "code": "",
       "count": 1
     },
     {
-      "country": "GB",
+      "country": "RU",
       "code": "",
       "count": 1
     },
     {
-      "country": "CN",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "TW",
+      "country": "KR",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 2,
-      "unique_ips": [
-        "14.1.104.124",
-        "202.47.56.38"
-      ],
-      "countries": [
-        "PK"
-      ],
-      "top_country": "PK",
-      "avg_abuse_score": 82,
-      "max_abuse_score": 91,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T12:53:15Z",
-      "last_seen": "2026-04-11T12:53:24Z",
-      "isps": [
-        "Cyber Internet Services Pakistan"
-      ]
-    },
-    {
-      "asn": "AS9829",
-      "asn_name": "National Internet Backbone",
-      "ip_count": 1,
-      "unique_ips": [
-        "210.212.28.141"
-      ],
-      "countries": [
-        "IN"
-      ],
-      "top_country": "IN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T12:53:16Z",
-      "last_seen": "2026-04-11T12:53:16Z",
-      "isps": [
-        "National Internet Backbone"
-      ]
-    },
-    {
-      "asn": "AS42831",
-      "asn_name": "UK Dedicated Servers Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "191.101.59.100"
-      ],
-      "countries": [
-        "GB"
-      ],
-      "top_country": "GB",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T12:53:16Z",
-      "last_seen": "2026-04-11T12:53:16Z",
-      "isps": [
-        "Internet Utilities Europe and Asia Limited"
-      ]
-    },
-    {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "39.100.183.18"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T12:53:17Z",
-      "last_seen": "2026-04-11T12:53:17Z",
-      "isps": [
-        "Aliyun Computing Co., LTD"
-      ]
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
-      "unique_ips": [
-        "198.235.24.46"
-      ],
-      "countries": [
-        "TW"
-      ],
-      "top_country": "TW",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-11T12:53:17Z",
-      "last_seen": "2026-04-11T12:53:17Z",
-      "isps": [
-        "Palo Alto Networks, Inc"
-      ]
-    },
-    {
-      "asn": "AS16509",
+      "asn": "AS14618",
       "asn_name": "Amazon.com, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "18.116.101.220"
+        "54.91.236.142"
       ],
       "countries": [
         "US"
@@ -301,10 +119,70 @@
         "high-abuse",
         "cloud-provider"
       ],
-      "first_seen": "2026-04-11T12:53:20Z",
-      "last_seen": "2026-04-11T12:53:20Z",
+      "first_seen": "2026-04-11T14:34:52Z",
+      "last_seen": "2026-04-11T14:34:52Z",
       "isps": [
-        "Amazon Technologies Inc."
+        "Amazon Data Services Northern Virginia"
+      ]
+    },
+    {
+      "asn": "AS214664",
+      "asn_name": "JSC Buduschee",
+      "ip_count": 1,
+      "unique_ips": [
+        "45.91.64.7"
+      ],
+      "countries": [
+        "RU"
+      ],
+      "top_country": "RU",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-11T14:34:52Z",
+      "last_seen": "2026-04-11T14:34:52Z",
+      "isps": [
+        "F6"
+      ]
+    },
+    {
+      "asn": "AS9318",
+      "asn_name": "SK Broadband Co Ltd",
+      "ip_count": 1,
+      "unique_ips": [
+        "175.118.127.138"
+      ],
+      "countries": [
+        "KR"
+      ],
+      "top_country": "KR",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-11T14:34:52Z",
+      "last_seen": "2026-04-11T14:34:52Z",
+      "isps": [
+        "SK Broadband Co Ltd"
       ]
     },
     {
@@ -312,7 +190,7 @@
       "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "68.154.118.241"
+        "172.208.62.162"
       ],
       "countries": [
         "US"
@@ -329,10 +207,40 @@
       "critical_count": 0,
       "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-11T12:53:15Z",
-      "last_seen": "2026-04-11T12:53:15Z",
+      "first_seen": "2026-04-11T14:34:55Z",
+      "last_seen": "2026-04-11T14:34:55Z",
       "isps": [
-        "Microsoft Corporation"
+        "Microsoft Limited"
+      ]
+    },
+    {
+      "asn": "AS24835",
+      "asn_name": "Vodafone Data",
+      "ip_count": 1,
+      "unique_ips": [
+        "196.204.71.189"
+      ],
+      "countries": [
+        "EG"
+      ],
+      "top_country": "EG",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-11T14:35:00Z",
+      "last_seen": "2026-04-11T14:35:00Z",
+      "isps": [
+        "Local ISP"
       ]
     }
   ]
