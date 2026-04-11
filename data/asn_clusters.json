@@ -1,43 +1,22 @@
 {
-  "generated_at": "2026-04-11T20:29:58Z",
+  "generated_at": "2026-04-11T22:29:49Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 5,
-  "unique_asns": 3,
+  "total_ips_analyzed": 9,
+  "unique_asns": 1,
   "top_attack_asns": [
     {
-      "asn": "AS213790",
-      "asn_name": "Limited Network LTD",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS28840",
-      "asn_name": "PJSC TATTELECOM",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 9,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS213790",
-      "asn_name": "Limited Network LTD",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 9,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
@@ -45,36 +24,50 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "NL",
+      "country": "US",
+      "code": "",
+      "count": 4
+    },
+    {
+      "country": "CN",
       "code": "",
       "count": 3
     },
     {
-      "country": "RU",
+      "country": "EG",
       "code": "",
       "count": 1
     },
     {
-      "country": "US",
+      "country": "ES",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS213790",
-      "asn_name": "Limited Network LTD",
-      "ip_count": 3,
+      "asn": "AS0",
+      "asn_name": "",
+      "ip_count": 9,
       "unique_ips": [
-        "185.93.89.190",
-        "185.93.89.192",
-        "185.93.89.193"
+        "120.48.39.73",
+        "120.78.9.93",
+        "196.204.71.189",
+        "40.76.99.43",
+        "45.55.151.3",
+        "49.88.156.34",
+        "62.174.15.54",
+        "64.236.161.19",
+        "69.48.204.173"
       ],
       "countries": [
-        "NL"
+        "CN",
+        "EG",
+        "ES",
+        "US"
       ],
-      "top_country": "NL",
-      "avg_abuse_score": 100,
+      "top_country": "US",
+      "avg_abuse_score": 80.55555555555556,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -87,68 +80,18 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-11T20:29:57Z",
-      "last_seen": "2026-04-11T20:29:58Z",
+      "first_seen": "2026-04-11T22:29:41Z",
+      "last_seen": "2026-04-11T22:29:49Z",
       "isps": [
-        "Limited Network LTD"
-      ]
-    },
-    {
-      "asn": "AS28840",
-      "asn_name": "PJSC TATTELECOM",
-      "ip_count": 1,
-      "unique_ips": [
-        "178.205.35.26"
-      ],
-      "countries": [
-        "RU"
-      ],
-      "top_country": "RU",
-      "avg_abuse_score": 76,
-      "max_abuse_score": 76,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-04-11T20:29:57Z",
-      "last_seen": "2026-04-11T20:29:57Z",
-      "isps": [
-        "Kazan Broad-band access pools"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "172.182.193.129"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 91,
-      "max_abuse_score": 91,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-11T20:29:58Z",
-      "last_seen": "2026-04-11T20:29:58Z",
-      "isps": [
-        "Microsoft Limited"
+        "Aliyun Computing Co., LTD",
+        "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+        "CHINANET jiangsu province network",
+        "DigitalOcean, LLC",
+        "IONOS Inc.",
+        "Local ISP",
+        "Microsoft Corporation",
+        "Microsoft Limited",
+        "ONO"
       ]
     }
   ]
