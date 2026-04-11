@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-11T02:02:29.980339+00:00",
+  "generated_at": "2026-04-11T06:59:17.926215+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 20,
@@ -47,9 +47,9 @@
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
         "XMRig",
+        "Rootkit",
         "Downloader",
         "Gafgyt",
-        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL"
@@ -68,9 +68,9 @@
       "families": [
         "XMRig",
         "Sora",
+        "Rootkit",
         "Downloader",
         "Gafgyt",
-        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL"
@@ -80,8 +80,8 @@
       "sha256": "8daf92f0870c58ece8b68a3057c3ab6e8477215f853c54cdfe790acf1141161d",
       "families": [
         "Rootkit",
-        "Gafgyt",
-        "Mirai"
+        "Mirai",
+        "Gafgyt"
       ],
       "severity": "CRITICAL"
     },
@@ -164,9 +164,9 @@
       "classified": true,
       "families": [
         "XMRig",
+        "Rootkit",
         "Downloader",
         "Gafgyt",
-        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL",
@@ -351,9 +351,9 @@
       "families": [
         "XMRig",
         "Sora",
+        "Rootkit",
         "Downloader",
         "Gafgyt",
-        "Rootkit",
         "Mushtik"
       ],
       "severity": "CRITICAL",
@@ -482,8 +482,8 @@
       "classified": true,
       "families": [
         "Rootkit",
-        "Gafgyt",
-        "Mirai"
+        "Mirai",
+        "Gafgyt"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
