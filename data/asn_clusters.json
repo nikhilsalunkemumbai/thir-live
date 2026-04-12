@@ -1,63 +1,42 @@
 {
-  "generated_at": "2026-04-12T14:38:07Z",
+  "generated_at": "2026-04-12T16:36:09Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 7,
-  "unique_asns": 7,
+  "total_ips_analyzed": 4,
+  "unique_asns": 4,
   "top_attack_asns": [
+    {
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS216246",
+      "asn_name": "Aeza Group LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS16509",
+      "asn_name": "Amazon.com, Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
-    },
-    {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS16509",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS134765",
-      "asn_name": "CHINANET Yunnan province IDC1 network",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
+      "asn": "AS216246",
+      "asn_name": "Aeza Group LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -65,27 +44,6 @@
     {
       "asn": "AS16509",
       "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS134765",
-      "asn_name": "CHINANET Yunnan province IDC1 network",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -94,35 +52,30 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "CN",
-      "code": "",
-      "count": 4
-    },
-    {
       "country": "US",
       "code": "",
-      "count": 2
+      "count": 3
     },
     {
-      "country": "KR",
+      "country": "DE",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
       "unique_ips": [
-        "128.24.160.224"
+        "172.104.27.14"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 33,
-      "max_abuse_score": 33,
+      "avg_abuse_score": 14,
+      "max_abuse_score": 14,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -131,26 +84,28 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-12T14:37:58Z",
-      "last_seen": "2026-04-12T14:37:58Z",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-12T16:36:08Z",
+      "last_seen": "2026-04-12T16:36:08Z",
       "isps": [
-        "Microsoft Limited"
+        "Linode"
       ]
     },
     {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
+      "asn": "AS216246",
+      "asn_name": "Aeza Group LLC",
       "ip_count": 1,
       "unique_ips": [
-        "222.97.11.71"
+        "193.233.89.47"
       ],
       "countries": [
-        "KR"
+        "DE"
       ],
-      "top_country": "KR",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "DE",
+      "avg_abuse_score": 94,
+      "max_abuse_score": 94,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -162,10 +117,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-12T14:37:59Z",
-      "last_seen": "2026-04-12T14:37:59Z",
+      "first_seen": "2026-04-12T16:36:08Z",
+      "last_seen": "2026-04-12T16:36:08Z",
       "isps": [
-        "Korea Telecom"
+        "Quality Network US LLC"
       ]
     },
     {
@@ -173,7 +128,7 @@
       "asn_name": "Amazon.com, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "18.218.118.203"
+        "3.131.220.121"
       ],
       "countries": [
         "US"
@@ -193,85 +148,25 @@
         "high-abuse",
         "cloud-provider"
       ],
-      "first_seen": "2026-04-12T14:37:59Z",
-      "last_seen": "2026-04-12T14:37:59Z",
+      "first_seen": "2026-04-12T16:36:08Z",
+      "last_seen": "2026-04-12T16:36:08Z",
       "isps": [
         "Amazon Technologies Inc."
       ]
     },
     {
-      "asn": "AS134765",
-      "asn_name": "CHINANET Yunnan province IDC1 network",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "116.55.245.26"
+        "4.236.158.86"
       ],
       "countries": [
-        "CN"
+        "US"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-12T14:38:00Z",
-      "last_seen": "2026-04-12T14:38:00Z",
-      "isps": [
-        "CHINANET YUNNAN PROVINCE NETWORK"
-      ]
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "unique_ips": [
-        "14.103.115.208"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-12T14:38:01Z",
-      "last_seen": "2026-04-12T14:38:01Z",
-      "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "43.139.124.9"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 22,
-      "max_abuse_score": 22,
+      "top_country": "US",
+      "avg_abuse_score": 0,
+      "max_abuse_score": 0,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -281,40 +176,10 @@
       "critical_count": 0,
       "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-12T14:38:04Z",
-      "last_seen": "2026-04-12T14:38:04Z",
+      "first_seen": "2026-04-12T16:36:09Z",
+      "last_seen": "2026-04-12T16:36:09Z",
       "isps": [
-        "Tencent Cloud Computing (Beijing) Co., Ltd"
-      ]
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "115.190.106.110"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-12T14:38:06Z",
-      "last_seen": "2026-04-12T14:38:06Z",
-      "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
+        "Microsoft Corporation"
       ]
     }
   ]
