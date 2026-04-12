@@ -1,24 +1,9 @@
 {
-  "generated_at": "2026-04-12T05:52:39Z",
-  "total_ips": 19,
+  "generated_at": "2026-04-12T07:10:46Z",
+  "total_ips": 16,
   "ips": [
     {
-      "indicator": "45.33.78.39",
-      "type": "ip",
-      "abuse_score": 21,
-      "country": "US",
-      "isp": "Linode",
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
-      "org": "AS63949 Akamai Connected Cloud",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 6,
-      "last_seen": "2026-04-12T05:52:35Z"
-    },
-    {
-      "indicator": "48.217.251.128",
+      "indicator": "172.178.119.112",
       "type": "ip",
       "abuse_score": 0,
       "country": "US",
@@ -30,12 +15,12 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-12T05:52:35Z"
+      "last_seen": "2026-04-12T07:10:39Z"
     },
     {
-      "indicator": "45.33.91.125",
+      "indicator": "173.255.235.124",
       "type": "ip",
-      "abuse_score": 24,
+      "abuse_score": 15,
       "country": "US",
       "isp": "Linode",
       "asn": "AS63949",
@@ -44,53 +29,23 @@
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
-      "otx_pulses": 2,
-      "last_seen": "2026-04-12T05:52:36Z"
+      "otx_pulses": 3,
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
-      "indicator": "90.25.145.86",
+      "indicator": "175.212.12.133",
       "type": "ip",
       "abuse_score": 100,
-      "country": "FR",
-      "isp": "Orange S.A.",
-      "asn": "AS3215",
-      "asn_name": "Orange S.A.",
-      "org": "AS3215 Orange S.A.",
+      "country": "KR",
+      "isp": "Chungbukbonbujang",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
+      "org": "AS4766 Korea Telecom",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 6,
-      "last_seen": "2026-04-12T05:52:36Z"
-    },
-    {
-      "indicator": "81.56.96.82",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "IT",
-      "isp": "Iliad / Free SAS",
-      "asn": "AS29447",
-      "asn_name": "Scaleway SAS",
-      "org": "AS29447 Scaleway SAS",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 21,
-      "last_seen": "2026-04-12T05:52:36Z"
-    },
-    {
-      "indicator": "102.140.97.134",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "NG",
-      "isp": "FOR INTERNET",
-      "asn": "AS30988",
-      "asn_name": "IS InternetSolutions Limited",
-      "org": "AS30988 IS InternetSolutions Limited",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:36Z"
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
       "indicator": "79.45.101.239",
@@ -105,112 +60,52 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 9,
-      "last_seen": "2026-04-12T05:52:36Z"
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
-      "indicator": "14.103.127.233",
+      "indicator": "64.225.101.76",
       "type": "ip",
       "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "org": "AS4811 China Telecom (Group)",
+      "country": "DE",
+      "isp": "DigitalOcean, LLC",
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
+      "org": "AS14061 DigitalOcean, LLC",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:36Z"
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
-      "indicator": "20.153.204.5",
+      "indicator": "99.240.71.234",
       "type": "ip",
-      "abuse_score": 100,
-      "country": "JP",
-      "isp": "Microsoft Corporation",
-      "asn": "AS8069",
-      "asn_name": "Microsoft Corporation",
-      "org": "AS8069 Microsoft Corporation",
+      "abuse_score": 85,
+      "country": "CA",
+      "isp": "Rogers Cable Inc. FLFRD",
+      "asn": "AS812",
+      "asn_name": "Rogers Communications Canada Inc.",
+      "org": "AS812 Rogers Communications Canada Inc.",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
-      "otx_pulses": 21,
-      "last_seen": "2026-04-12T05:52:37Z"
+      "otx_pulses": 4,
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
-      "indicator": "123.139.116.220",
+      "indicator": "23.88.103.45",
       "type": "ip",
       "abuse_score": 100,
-      "country": "CN",
-      "isp": "China Unicom Shannxi province network",
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "org": "AS4837 CHINA UNICOM China169 Backbone",
+      "country": "DE",
+      "isp": "Hetzner Online GmbH",
+      "asn": "AS24940",
+      "asn_name": "Hetzner Online GmbH",
+      "org": "AS24940 Hetzner Online GmbH",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:37Z"
-    },
-    {
-      "indicator": "69.149.23.135",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "US",
-      "isp": "AT\u0026T Enterprises, LLC",
-      "asn": "AS7018",
-      "asn_name": "AT\u0026T Enterprises, LLC",
-      "org": "AS7018 AT\u0026T Enterprises, LLC",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:37Z"
-    },
-    {
-      "indicator": "210.79.191.199",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "ID",
-      "isp": "PT Kebun Nara Santosa",
-      "asn": "AS136052",
-      "asn_name": "PT Cloud Hosting Indonesia",
-      "org": "AS136052 PT Cloud Hosting Indonesia",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:37Z"
-    },
-    {
-      "indicator": "101.126.11.137",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "CN",
-      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "org": "AS137718 Beijing Volcano Engine Technology Co., Ltd.",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:37Z"
-    },
-    {
-      "indicator": "154.204.183.232",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "SG",
-      "isp": "Fastmos Co Limited",
-      "asn": "AS61112",
-      "asn_name": "AkileCloud Network",
-      "org": "AS61112 AkileCloud Network",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 9,
-      "last_seen": "2026-04-12T05:52:37Z"
+      "otx_pulses": 4,
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
       "indicator": "14.103.127.66",
@@ -225,10 +120,10 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:37Z"
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
-      "indicator": "222.109.205.160",
+      "indicator": "220.77.235.89",
       "type": "ip",
       "abuse_score": 100,
       "country": "KR",
@@ -239,8 +134,53 @@
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
+      "otx_pulses": 21,
+      "last_seen": "2026-04-12T07:10:40Z"
+    },
+    {
+      "indicator": "221.229.220.180",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "CHINANET jiangsu province network",
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
+      "org": "AS4134 CHINANET-BACKBONE",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:37Z"
+      "last_seen": "2026-04-12T07:10:40Z"
+    },
+    {
+      "indicator": "103.186.1.59",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "ID",
+      "isp": "CV Ansa Project",
+      "asn": "AS136052",
+      "asn_name": "PT Cloud Hosting Indonesia",
+      "org": "AS136052 PT Cloud Hosting Indonesia",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 50,
+      "last_seen": "2026-04-12T07:10:40Z"
+    },
+    {
+      "indicator": "222.71.205.34",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "CHINANET shanghai province network",
+      "asn": "AS4812",
+      "asn_name": "China Telecom (Group)",
+      "org": "AS4812 China Telecom (Group)",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 34,
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
       "indicator": "197.153.57.103",
@@ -255,7 +195,7 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:38Z"
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
       "indicator": "102.210.148.92",
@@ -270,10 +210,25 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:38Z"
+      "last_seen": "2026-04-12T07:10:40Z"
     },
     {
-      "indicator": "14.103.76.234",
+      "indicator": "101.126.11.137",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Volcano Engine Technology Co., Ltd.",
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "org": "AS137718 Beijing Volcano Engine Technology Co., Ltd.",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 50,
+      "last_seen": "2026-04-12T07:10:44Z"
+    },
+    {
+      "indicator": "14.103.131.112",
       "type": "ip",
       "abuse_score": 100,
       "country": "CN",
@@ -285,7 +240,7 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-12T05:52:39Z"
+      "last_seen": "2026-04-12T07:10:46Z"
     }
   ]
 }
