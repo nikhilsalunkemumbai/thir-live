@@ -48,9 +48,7 @@ name: THIR Live Pipeline
 on:
   schedule:
     - cron: '0 */2 * * *'    # every 2 hours — normal pipeline run
-    - cron: '5 0 * * 1'      # Monday 00:05 UTC — weekly rollup trigger
-    - cron: '10 0 1 * *'     # 1st of month 00:10 UTC — monthly rollup trigger
-  workflow_dispatch:          # manual trigger from Actions tab
+s  workflow_dispatch:          # manual trigger from Actions tab
 
 # Prevent overlapping runs if previous hour's job is still running
 concurrency:
@@ -591,36 +589,72 @@ jobs:
             --verbose
 
       # ----------------------------------------------------------------
-      # 11.f Tool 32 — Conditional rollup (weekly / monthly)
-      #   Monday 00:00 UTC       → weekly rollup
-      #   1st of month 00:00 UTC → monthly rollup + 6-month prune
-      #   All other runs         → no-op
+      # 11.f Tool 32 — Sentinel-based rollup (weekly / monthly)
+      #
+      #   Sentinel files replace the old HOUR-gated cron approach.
+      #   Problem with old approach: the HOUR=00 gate raced with the
+      #   bi-hourly run at 00:00, and continue-on-error silently ate
+      #   failures — leaving weekly gaps for 4+ weeks.
+      #
+      #   How sentinels work:
+      #     - On Monday:    write data/.rollup_weekly_pending
+      #     - On 1st:       write data/.rollup_monthly_pending
+      #     - Every run:    check for sentinel files and execute if found
+      #     - After success: delete the sentinel
+      #
+      #   The sentinel is committed with the rest of data/ on the run
+      #   that writes it. If rollup fails that same run, the sentinel
+      #   persists in the repo and the NEXT run picks it up and retries.
+      #   No missed Mondays. No HOUR dependency.
       # ----------------------------------------------------------------
-      - name: Tool 32 — Conditional rollup (weekly / monthly)
+      - name: Tool 32 — Sentinel-based rollup (weekly / monthly)
         continue-on-error: true
         run: |
           DAY_OF_WEEK=$(date -u +%u)
           DAY_OF_MONTH=$(date -u +%d)
-          HOUR=$(date -u +%H)
 
-          echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}, Hour: ${HOUR}"
+          echo "[Tool 32] Day-of-week: ${DAY_OF_WEEK}, Day-of-month: ${DAY_OF_MONTH}"
 
-          if [ "$DAY_OF_MONTH" = "01" ] && [ "$HOUR" = "00" ]; then
-            echo "[Tool 32] Triggering MONTHLY rollup"
+          # Write sentinels based on calendar day — no HOUR dependency
+          if [ "$DAY_OF_MONTH" = "01" ]; then
+            echo "[Tool 32] 1st of month — writing monthly sentinel"
+            touch data/.rollup_monthly_pending
+          fi
+
+          if [ "$DAY_OF_WEEK" = "1" ]; then
+            echo "[Tool 32] Monday — writing weekly sentinel"
+            touch data/.rollup_weekly_pending
+          fi
+
+          # Execute rollup if sentinel exists — monthly takes priority
+          if [ -f "data/.rollup_monthly_pending" ]; then
+            echo "[Tool 32] Monthly sentinel found — triggering MONTHLY rollup"
             python tools/32_report_lifecycle.py \
               --rollup monthly \
               --stats data/stats.json \
               --verbose
+            if [ $? -eq 0 ]; then
+              rm data/.rollup_monthly_pending
+              echo "[Tool 32] Monthly rollup succeeded — sentinel cleared"
+            else
+              echo "[Tool 32] Monthly rollup failed — sentinel retained for retry"
+            fi
 
-          elif [ "$DAY_OF_WEEK" = "1" ] && [ "$HOUR" = "00" ]; then
-            echo "[Tool 32] Triggering WEEKLY rollup"
+          elif [ -f "data/.rollup_weekly_pending" ]; then
+            echo "[Tool 32] Weekly sentinel found — triggering WEEKLY rollup"
             python tools/32_report_lifecycle.py \
               --rollup weekly \
               --stats data/stats.json \
               --verbose
+            if [ $? -eq 0 ]; then
+              rm data/.rollup_weekly_pending
+              echo "[Tool 32] Weekly rollup succeeded — sentinel cleared"
+            else
+              echo "[Tool 32] Weekly rollup failed — sentinel retained for retry"
+            fi
 
           else
-            echo "[Tool 32] No rollup needed this run — skipping"
+            echo "[Tool 32] No sentinel found — skipping rollup this run"
           fi
 
       # ----------------------------------------------------------------
