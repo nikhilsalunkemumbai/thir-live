@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-15 |
-| **Generated At** | 2026-04-15T13:46:13Z |
-| **Shift Time** | 13:46 UTC |
+| **Generated At** | 2026-04-15T15:08:56Z |
+| **Shift Time** | 15:08 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **3** |
-| Confirmed Threats | **1** |
-| False Positives Filtered | **2** (66.7%) |
-| Unique Attacker IPs | **3** |
-| Countries of Origin | **1** |
+| Total Sessions Captured | **8** |
+| Confirmed Threats | **2** |
+| False Positives Filtered | **6** (75.0%) |
+| Unique Attacker IPs | **4** |
+| Countries of Origin | **2** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **3** |
+| Low Severity Cases | **8** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 2 empty upload attempt(s) |
 
 ---
@@ -38,39 +38,11 @@
 
 ---
 
-## 🖥 SSH Fingerprint Intelligence
-
-| Metric | Value |
-|---|---|
-| Total Sessions Parsed | **3** |
-| Sessions with Fingerprint | **1** |
-| Unique HASSH Fingerprints | **1** |
-
-**Client Family Distribution:**
-
-| Client Family | Sessions |
-|---|---|
-| Go SSH scanner | 1 |
-
-**⚠️ Botnet/Scanner KEX Signatures Detected:**
-
-| HASSH | Signature | Sessions | IPs |
-|---|---|---|---|
-| `9052c4ab4164...` | Mirai/variant | 1 | 1 |
-
-**Top Fingerprints:**
-
-| HASSH | Client | Sessions | IPs | Botnet Sig |
-|---|---|---|---|---|
-| `9052c4ab4164...` | Go SSH scanner | 1 | 1 | Mirai/variant |
-
----
-
 ## 🌐 ASN Cluster Intelligence
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **3** |
+| Total IPs Analysed | **4** |
 | Unique ASNs | **3** |
 | High-Risk ASNs | **1** |
 | Anon Infrastructure ASNs | **0** |
@@ -79,8 +51,8 @@
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS14618` | Amazon.com, Inc. | 1 | HIGH |
-| `AS8075` | Microsoft Corporation | 1 | LOW |
+| `AS8075` | Microsoft Corporation | 2 | HIGH |
+| `AS12737` | KrasPromStroy, LLC | 1 | LOW |
 | `AS63949` | Akamai Connected Cloud | 1 | LOW |
 
 ---
@@ -103,7 +75,7 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `54.226.154[.]2` | 1 | 2026-04-15 12:55 | 2026-04-15 12:55 | 0s | 0 | `T1592` | 🟢 LOW |
+| `20.65.195[.]61` | **2** | 2026-04-15 14:15 | 2026-04-15 14:15 | 0m | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -140,26 +112,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `54.226.154[.]2` | US | Amazon Technologies Inc. | **100** ⚠️ | 20 |
-| `20.49.14[.]178` | US | Microsoft Corporation | 22 | 0 |
-| `173.255.230[.]86` | US | Linode | 16 | 0 |
+| `20.65.195[.]61` | US | Microsoft Corporation | **100** ⚠️ | 0 |
+| `5.189.245[.]37` | RU | KrasPromStroy, LLC | 24 | 0 |
+| `97.107.140[.]242` | US | Linode | 16 | 0 |
 
 ---
 
-## 🎯 Top TTPs Observed (MITRE ATT&CK)
-
-| TTP ID | Count |
-|---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 1 |
-
----
-
-## 🔕 False Positive Summary (2 filtered)
+## 🔕 False Positive Summary (6 filtered)
 
 | Reason | Count |
 |---|---|
+| AbuseIPDB score 0 below threshold 25 | 1 |
 | AbuseIPDB score 16 below threshold 25 | 1 |
-| AbuseIPDB score 22 below threshold 25 | 1 |
+| AbuseIPDB score 24 below threshold 25 | 4 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -170,19 +135,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 3 cases |
+| Tool 26  | Incident Timeline Generator | ✅ 8 cases |
 | Tool 34  | Credential Extractor        | ✅ 0 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 3 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 2 filtered (66.7%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 4 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 6 filtered (75.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
 | Tool 30b | ASN Clustering              | ✅ 3 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 22 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 1 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 1 recon entry/entries in table (1 group(s) consolidating 2 session(s)).
 
 ---
 
@@ -198,4 +163,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-15T13:46:13Z_
+_Report time: 2026-04-15T15:08:56Z_

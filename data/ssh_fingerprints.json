@@ -1,47 +1,10 @@
 {
-  "generated_at": "2026-04-15T13:46:00.840633+00:00",
-  "total_sessions_parsed": 3,
-  "sessions_with_fingerprint": 1,
-  "sessions_without_kex": 2,
-  "unique_fingerprints": 1,
-  "top_families": [
-    {
-      "family": "Go SSH scanner",
-      "sessions": 1
-    }
-  ],
-  "botnet_signals": [
-    {
-      "hassh": "9052c4ab4164c78256e71143dcfc7eac",
-      "signature": "Mirai/variant",
-      "session_count": 1,
-      "unique_ips": [
-        "54.226.154.2"
-      ]
-    }
-  ],
-  "fingerprints": [
-    {
-      "hassh": "9052c4ab4164c78256e71143dcfc7eac",
-      "client_family": "Go SSH scanner",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-Go"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "54.226.154.2"
-      ],
-      "sessions": [
-        "IR-d52e9efab6ca"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc,aes128-ctr,aes192-ctr,aes256-ctr,aes128-gcm@openssh.com,aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,arcfour256,arcfour128,arcfour,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-256,hmac-sha1,hmac-sha1-96",
-      "comp_algs": "none",
-      "first_seen": "2026-04-15T12:55:14.566392Z",
-      "last_seen": "2026-04-15T12:55:14.566392Z",
-      "unique_ip_count": 1
-    }
-  ]
+  "generated_at": "2026-04-15T15:08:43.414283+00:00",
+  "total_sessions_parsed": 8,
+  "sessions_with_fingerprint": 0,
+  "sessions_without_kex": 8,
+  "unique_fingerprints": 0,
+  "top_families": [],
+  "botnet_signals": [],
+  "fingerprints": []
 }

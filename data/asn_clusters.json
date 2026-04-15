@@ -1,19 +1,19 @@
 {
-  "generated_at": "2026-04-15T13:46:13Z",
+  "generated_at": "2026-04-15T15:08:56Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 3,
+  "total_ips_analyzed": 4,
   "unique_asns": 3,
   "top_attack_asns": [
     {
-      "asn": "AS14618",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS12737",
+      "asn_name": "KrasPromStroy, LLC",
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
@@ -28,9 +28,9 @@
   ],
   "high_risk_asns": [
     {
-      "asn": "AS14618",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
@@ -41,21 +41,27 @@
       "country": "US",
       "code": "",
       "count": 3
+    },
+    {
+      "country": "RU",
+      "code": "",
+      "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS14618",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
       "unique_ips": [
-        "54.226.154.2"
+        "172.184.211.149",
+        "20.65.195.61"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 100,
+      "avg_abuse_score": 50,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -66,28 +72,28 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse",
-        "cloud-provider"
+        "high-abuse"
       ],
-      "first_seen": "2026-04-15T13:46:05Z",
-      "last_seen": "2026-04-15T13:46:05Z",
+      "first_seen": "2026-04-15T15:08:47Z",
+      "last_seen": "2026-04-15T15:08:55Z",
       "isps": [
-        "Amazon Technologies Inc."
+        "Microsoft Corporation",
+        "Microsoft Limited"
       ]
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS12737",
+      "asn_name": "KrasPromStroy, LLC",
       "ip_count": 1,
       "unique_ips": [
-        "20.49.14.178"
+        "5.189.245.37"
       ],
       "countries": [
-        "US"
+        "RU"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 22,
-      "max_abuse_score": 22,
+      "top_country": "RU",
+      "avg_abuse_score": 24,
+      "max_abuse_score": 24,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -97,10 +103,10 @@
       "critical_count": 0,
       "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-15T13:46:13Z",
-      "last_seen": "2026-04-15T13:46:13Z",
+      "first_seen": "2026-04-15T15:08:47Z",
+      "last_seen": "2026-04-15T15:08:47Z",
       "isps": [
-        "Microsoft Corporation"
+        "KrasPromStroy, LLC"
       ]
     },
     {
@@ -108,7 +114,7 @@
       "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
       "unique_ips": [
-        "173.255.230.86"
+        "97.107.140.242"
       ],
       "countries": [
         "US"
@@ -127,8 +133,8 @@
       "tags": [
         "cloud-provider"
       ],
-      "first_seen": "2026-04-15T13:46:13Z",
-      "last_seen": "2026-04-15T13:46:13Z",
+      "first_seen": "2026-04-15T15:08:48Z",
+      "last_seen": "2026-04-15T15:08:48Z",
       "isps": [
         "Linode"
       ]
