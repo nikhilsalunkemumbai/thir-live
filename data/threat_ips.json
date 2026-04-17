@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-04-17T19:06:41Z",
+  "generated_at": "2026-04-17T20:51:31Z",
   "total_ips": 4,
   "ips": [
     {
-      "indicator": "52.161.82.99",
+      "indicator": "20.98.23.161",
       "type": "ip",
-      "abuse_score": 2,
+      "abuse_score": 18,
       "country": "US",
       "isp": "Microsoft Corporation",
       "asn": "AS8075",
@@ -15,52 +15,52 @@
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 0,
-      "last_seen": "2026-04-17T19:06:39Z"
+      "last_seen": "2026-04-17T20:51:29Z"
     },
     {
-      "indicator": "103.239.252.132",
+      "indicator": "61.98.8.154",
       "type": "ip",
       "abuse_score": 100,
-      "country": "BD",
-      "isp": "Carnival Internet",
-      "asn": "AS63526",
-      "asn_name": "Systems Solutions \u0026 development Technologies Limited",
-      "org": "AS63526 Systems Solutions \u0026 development Technologies Limited",
+      "country": "KR",
+      "isp": "SK Broadband Co Ltd",
+      "asn": "AS9318",
+      "asn_name": "SK Broadband Co Ltd",
+      "org": "AS9318 SK Broadband Co Ltd",
+      "is_tor": false,
+      "is_proxy": false,
+      "is_vpn": false,
+      "otx_pulses": 11,
+      "last_seen": "2026-04-17T20:51:29Z"
+    },
+    {
+      "indicator": "120.48.42.17",
+      "type": "ip",
+      "abuse_score": 100,
+      "country": "CN",
+      "isp": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "org": "AS38365 Beijing Baidu Netcom Science and Technology Co., Ltd.",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-17T19:06:40Z"
+      "last_seen": "2026-04-17T20:51:30Z"
     },
     {
-      "indicator": "36.255.3.203",
+      "indicator": "209.141.47.217",
       "type": "ip",
       "abuse_score": 100,
-      "country": "IN",
-      "isp": "Mira Consulting",
-      "asn": "AS18229",
-      "asn_name": "CtrlS",
-      "org": "AS18229 CtrlS",
+      "country": "US",
+      "isp": "FranTech Solutions",
+      "asn": "AS53667",
+      "asn_name": "FranTech Solutions",
+      "org": "AS53667 FranTech Solutions",
       "is_tor": false,
       "is_proxy": false,
       "is_vpn": false,
       "otx_pulses": 50,
-      "last_seen": "2026-04-17T19:06:41Z"
-    },
-    {
-      "indicator": "45.78.201.248",
-      "type": "ip",
-      "abuse_score": 100,
-      "country": "SG",
-      "isp": "BYTEPLUS",
-      "asn": "AS150436",
-      "asn_name": "Byteplus Pte. Ltd.",
-      "org": "AS150436 Byteplus Pte. Ltd.",
-      "is_tor": false,
-      "is_proxy": false,
-      "is_vpn": false,
-      "otx_pulses": 50,
-      "last_seen": "2026-04-17T19:06:41Z"
+      "last_seen": "2026-04-17T20:51:31Z"
     }
   ]
 }
