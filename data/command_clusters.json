@@ -1,44 +1,10 @@
 {
-  "generated_at": "2026-04-18T05:43:01.772876+00:00",
-  "total_sessions_with_commands": 1,
-  "total_clusters": 1,
+  "generated_at": "2026-04-18T07:14:20.895344+00:00",
+  "total_sessions_with_commands": 0,
+  "total_clusters": 0,
   "campaign_clusters": 0,
-  "singleton_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "NONE",
   "active_campaigns": [],
-  "clusters": [
-    {
-      "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "120.26.150.54"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "6fa4c8ac58e7a1d9",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -s -m"
-      ],
-      "members": [
-        {
-          "session_id": "IR-117830aad068",
-          "src_ip": "120.26.150.54",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-04-18T04:13:46.661596Z"
-        }
-      ]
-    }
-  ]
+  "clusters": []
 }
