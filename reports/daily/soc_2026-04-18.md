@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-18 |
-| **Generated At** | 2026-04-18T20:41:29Z |
-| **Shift Time** | 20:41 UTC |
+| **Generated At** | 2026-04-18T22:39:12Z |
+| **Shift Time** | 22:39 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **31** |
-| Confirmed Threats | **18** |
-| False Positives Filtered | **13** (41.9%) |
-| Unique Attacker IPs | **14** |
-| Countries of Origin | **8** |
-| High Severity Cases | **3** |
+| Total Sessions Captured | **6** |
+| Confirmed Threats | **1** |
+| False Positives Filtered | **5** (83.3%) |
+| Unique Attacker IPs | **5** |
+| Countries of Origin | **3** |
+| High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **28** |
+| Low Severity Cases | **6** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 2 empty upload attempt(s) |
 
 ---
@@ -30,48 +30,32 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **7** |
-| Unique Credential Pairs | **7** |
-| Unique Usernames | **4** |
-| Unique Passwords | **6** |
-| Successful Auth Pairs | **3** |
+| Total Auth Attempts | **2** |
+| Unique Credential Pairs | **2** |
+| Unique Usernames | **2** |
+| Unique Passwords | **2** |
+| Successful Auth Pairs | **0** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 4 |
 | `GET / HTTP/1.1` | 1 |
-| `User-Agent: Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.6312.86 Safari/537.36` | 1 |
-| `Accept-Encoding: gzip` | 1 |
+| `User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `` | 2 |
-| `---fuck_you----` | 1 |
-| `ubuntu` | 1 |
-| `admin` | 1 |
 | `Host: 13.235.92.17:2323` | 1 |
+| `Accept-Encoding: gzip` | 1 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `root` | `---fuck_you----` | 1 |
-| `root` | `ubuntu` | 1 |
-| `root` | `` | 1 |
-| `root` | `admin` | 1 |
 | `GET / HTTP/1.1` | `Host: 13.235.92.17:2323` | 1 |
-
-**⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
-
-| Username | Password | Source IP | Timestamp |
-|---|---|---|---|
-| `root` | `---fuck_you----` | `113.249.159.58` | 2026-04-18T18:58:44 |
-| `root` | `ubuntu` | `109.122.217.21` | 2026-04-18T19:44:02 |
-| `root` | `admin` | `185.220.101.139` | 2026-04-18T20:05:10 |
+| `User-Agent: Hello from Palo Alto Networks, find out more about our scans in https://docs-cortex.paloaltonetworks.com/r/1/Cortex-Xpanse/Scanning-activity` | `Accept-Encoding: gzip` | 1 |
 
 ---
 
@@ -79,32 +63,21 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **31** |
-| Sessions with Fingerprint | **3** |
-| Unique HASSH Fingerprints | **3** |
+| Total Sessions Parsed | **6** |
+| Sessions with Fingerprint | **1** |
+| Unique HASSH Fingerprints | **1** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| Go SSH scanner | 2 |
-| OpenSSH | 1 |
-
-**⚠️ Botnet/Scanner KEX Signatures Detected:**
-
-| HASSH | Signature | Sessions | IPs |
-|---|---|---|---|
-| `98f63c4d9c87...` | Generic scanner | 1 | 1 |
-| `98ddc5604ef6...` | Modern SSH client | 1 | 1 |
-| `1cc79c7da9b5...` | libssh-based | 1 | 1 |
+| Unknown | 2 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `98f63c4d9c87...` | Go SSH scanner | 1 | 1 | Generic scanner |
-| `98ddc5604ef6...` | Go SSH scanner | 1 | 1 | Modern SSH client |
-| `1cc79c7da9b5...` | OpenSSH | 1 | 1 | libssh-based |
+| `95420f9d932d...` | Unknown | 2 | 1 | — |
 
 ---
 
@@ -112,127 +85,29 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **14** |
-| Unique ASNs | **10** |
-| High-Risk ASNs | **5** |
+| Total IPs Analysed | **5** |
+| Unique ASNs | **3** |
+| High-Risk ASNs | **1** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS211680` | NSEC - Sistemas Informaticos, S.A. | 4 | HIGH |
-| `AS4766` | Korea Telecom | 2 | HIGH |
-| `AS4760` | HKT Limited | 1 | MEDIUM |
-| `AS62214` | Rackforest Zrt. | 1 | HIGH |
-| `AS134420` | Chongqing Telecom | 1 | MEDIUM |
-| `AS14618` | Amazon.com, Inc. | 1 | MEDIUM |
-| `AS60729` | Stiftung Erneuerbare Freiheit | 1 | HIGH |
-| `AS131275` | Logon Broadband Pvt. Limited | 1 | LOW |
+| `AS396982` | Google LLC | 3 | LOW |
+| `AS8075` | Microsoft Corporation | 1 | LOW |
+| `AS57717` | FiberXpress BV | 1 | HIGH |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (3)
+## 🚨 Priority Cases — Immediate Attention (0)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-d54cea900993
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `113.249.159[.]58` |
-| **First Seen** | 2026-04-18 18:58 |
-| **Last Seen** | 2026-04-18 18:58 |
-| **Session Duration** | 3s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `uname -s -m` |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-04-18 18:58:42` | `cowrie.session.connect` |
-| `2026-04-18 18:58:42` | `cowrie.client.version` |
-| `2026-04-18 18:58:42` | `cowrie.client.kex` |
-| `2026-04-18 18:58:44` | `cowrie.login.success` |
-| `2026-04-18 18:58:44` | `cowrie.session.params` |
-| `2026-04-18 18:58:44` | `cowrie.command.input` |
-| `2026-04-18 18:58:45` | `cowrie.log.closed` |
-| `2026-04-18 18:58:45` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `113.249.159[.]58` to AbuseIPDB if not already reported
-- [ ] Block `113.249.159[.]58` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b8b098c75261
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `109.122.217[.]21` |
-| **First Seen** | 2026-04-18 19:44 |
-| **Last Seen** | 2026-04-18 19:44 |
-| **Session Duration** | 45s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-04-18 19:44:01` | `cowrie.session.connect` |
-| `2026-04-18 19:44:01` | `cowrie.client.version` |
-| `2026-04-18 19:44:01` | `cowrie.client.kex` |
-| `2026-04-18 19:44:02` | `cowrie.login.success` |
-| `2026-04-18 19:44:46` | `cowrie.session.file_upload` |
-| `2026-04-18 19:44:46` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `109.122.217[.]21` to AbuseIPDB if not already reported
-- [ ] Block `109.122.217[.]21` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-3c9c11ad515c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `185.220.101[.]139` |
-| **First Seen** | 2026-04-18 20:05 |
-| **Last Seen** | 2026-04-18 20:05 |
-| **Session Duration** | 24s |
-| **Login Attempts** | 2 |
-| **Auth Success** | ✅ Yes — session established |
-| **TCP Tunnel** | ⚠️ `cowrie.direct-tcpip` — port forwarding / proxy attempt |
-| **TTPs (MITRE)** | T1078 · T1110.001 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-04-18 20:05:08` | `cowrie.session.connect` |
-| `2026-04-18 20:05:08` | `cowrie.client.version` |
-| `2026-04-18 20:05:08` | `cowrie.client.kex` |
-| `2026-04-18 20:05:09` | `cowrie.client.fingerprint` |
-| `2026-04-18 20:05:09` | `cowrie.login.failed` |
-| `2026-04-18 20:05:10` | `cowrie.login.success` |
-| `2026-04-18 20:05:32` | `cowrie.direct-tcpip.request` |
-| `2026-04-18 20:05:32` | `cowrie.direct-tcpip.ja4` |
-| `2026-04-18 20:05:32` | `cowrie.direct-tcpip.data` |
-| `2026-04-18 20:05:32` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `185.220.101[.]139` to AbuseIPDB if not already reported
-- [ ] Block `185.220.101[.]139` at perimeter firewall / security group
-- [ ] Investigate TCP tunnel target — port forwarding via honeypot
-- [ ] Confirm tunnel target is not internal infrastructure
-- [ ] Escalate to Tier 2 if pattern repeats next shift
+_No priority cases this shift. All confirmed sessions were credential scans only._
 
 ---
 
@@ -243,14 +118,7 @@
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `45.156.128[.]91` | **5** | 2026-04-18 20:21 | 2026-04-18 20:21 | 0m | 3 | `T1110.001` | 🟢 LOW |
-| `45.156.128[.]94` | **3** | 2026-04-18 20:21 | 2026-04-18 20:21 | 0m | 0 | `T1592` | 🟢 LOW |
-| `45.156.128[.]93` | **2** | 2026-04-18 20:21 | 2026-04-18 20:21 | 0m | 0 | `T1592` | 🟢 LOW |
-| `121.147.143[.]81` | 1 | 2026-04-18 19:08 | 2026-04-18 19:08 | 31s | 0 | `T1592` | 🟢 LOW |
-| `20.55.222[.]81` | 1 | 2026-04-18 20:41 | 2026-04-18 20:41 | 0s | 0 | `T1592` | 🟢 LOW |
-| `219.78.212[.]97` | 1 | 2026-04-18 20:21 | 2026-04-18 20:21 | 30s | 0 | `T1592` | 🟢 LOW |
-| `45.156.128[.]92` | 1 | 2026-04-18 20:21 | 2026-04-18 20:21 | 8s | 0 | `T1592` | 🟢 LOW |
-| `59.7.135[.]117` | 1 | 2026-04-18 20:32 | 2026-04-18 20:32 | 13s | 0 | `T1592` | 🟢 LOW |
+| `185.216.140[.]186` | 1 | 2026-04-18 20:51 | 2026-04-18 20:51 | 0s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -287,16 +155,8 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `45.156.128[.]92` | NL | INAP-AMS-1 | **100** ⚠️ | 50 |
-| `59.7.135[.]117` | KR | Sudogwonseobubonbu | **100** ⚠️ | 30 |
-| `109.122.217[.]21` | HU | RackForest | **100** ⚠️ | 8 |
-| `121.147.143[.]81` | KR | Korea Telecom | **100** ⚠️ | 50 |
-| `45.156.128[.]91` | NL | INAP-AMS-1 | **100** ⚠️ | 50 |
-| `45.156.128[.]93` | NL | INAP-AMS-1 | **100** ⚠️ | 50 |
-| `45.156.128[.]94` | NL | INAP-AMS-1 | **100** ⚠️ | 50 |
-| `185.220.101[.]139` | DE | CIA TRIAD SECURITY LLC | **100** ⚠️ | 0 |
-| `20.55.222[.]81` | US | Microsoft Corporation | **97** ⚠️ | 0 |
-| `219.78.212[.]97` | HK | Hong Kong Telecommunications (HKT) Limited Mass Internet | **85** ⚠️ | 7 |
+| `185.216.140[.]186` | NL | NG-NL | **100** ⚠️ | 36 |
+| `57.151.123[.]241` | US | Microsoft Limited | 2 | 0 |
 
 ---
 
@@ -304,18 +164,17 @@
 
 | TTP ID | Count |
 |---|---|
-| [T1078](https://attack.mitre.org/techniques/T1078) | 3 |
-| [T1592](https://attack.mitre.org/techniques/T1592) | 3 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 2 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 1 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 2 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 1 |
 
 ---
 
-## 🔕 False Positive Summary (13 filtered)
+## 🔕 False Positive Summary (5 filtered)
 
 | Reason | Count |
 |---|---|
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 13 |
+| AbuseIPDB score 0 below threshold 25 | 4 |
+| AbuseIPDB score 2 below threshold 25 | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -326,19 +185,19 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 31 cases |
-| Tool 34  | Credential Extractor        | ✅ 7 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 3 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 1 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 14 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 13 filtered (41.9%) |
+| Tool 26  | Incident Timeline Generator | ✅ 6 cases |
+| Tool 34  | Credential Extractor        | ✅ 2 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 0 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 5 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 5 filtered (83.3%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 10 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 3 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 22 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 3 priority case(s) shown individually · 8 recon entry/entries in table (3 group(s) consolidating 10 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 1 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
 
 ---
 
@@ -354,4 +213,4 @@
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-18T20:41:29Z_
+_Report time: 2026-04-18T22:39:12Z_
