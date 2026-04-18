@@ -1,12 +1,19 @@
 {
-  "generated_at": "2026-04-18T07:14:25Z",
+  "generated_at": "2026-04-18T08:56:10Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 4,
-  "unique_asns": 4,
+  "total_ips_analyzed": 6,
+  "unique_asns": 5,
   "top_attack_asns": [
     {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS138423",
+      "asn_name": "CMPak Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -19,24 +26,45 @@
       "anon_count": 0
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS55933",
+      "asn_name": "Cloudie Limited",
       "ip_count": 1,
-      "risk_tier": "LOW",
+      "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
+      "asn": "AS31244",
+      "asn_name": "MY SERVER MEDIA SRL",
       "ip_count": 1,
-      "risk_tier": "LOW",
+      "risk_tier": "HIGH",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS138423",
+      "asn_name": "CMPak Limited",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS55933",
+      "asn_name": "Cloudie Limited",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS31244",
+      "asn_name": "MY SERVER MEDIA SRL",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -47,31 +75,67 @@
     {
       "country": "US",
       "code": "",
-      "count": 2
+      "count": 3
     },
     {
-      "country": "KR",
+      "country": "PK",
       "code": "",
       "count": 1
     },
     {
-      "country": "TW",
+      "country": "HK",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "RO",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
-      "ip_count": 1,
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
       "unique_ips": [
-        "220.132.49.144"
+        "20.161.67.210",
+        "74.235.203.125"
       ],
       "countries": [
-        "TW"
+        "US"
       ],
-      "top_country": "TW",
+      "top_country": "US",
+      "avg_abuse_score": 80.5,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-18T08:56:09Z",
+      "last_seen": "2026-04-18T08:56:09Z",
+      "isps": [
+        "Microsoft Corporation"
+      ]
+    },
+    {
+      "asn": "AS138423",
+      "asn_name": "CMPak Limited",
+      "ip_count": 1,
+      "unique_ips": [
+        "223.123.35.131"
+      ],
+      "countries": [
+        "PK"
+      ],
+      "top_country": "PK",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -85,10 +149,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-18T07:14:25Z",
-      "last_seen": "2026-04-18T07:14:25Z",
+      "first_seen": "2026-04-18T08:56:01Z",
+      "last_seen": "2026-04-18T08:56:01Z",
       "isps": [
-        "Chunghwa Telecom Co.,Ltd."
+        "CMPak Limited"
       ]
     },
     {
@@ -96,37 +160,7 @@
       "asn_name": "Google LLC",
       "ip_count": 1,
       "unique_ips": [
-        "34.70.121.57"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 41,
-      "max_abuse_score": 41,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-18T07:14:25Z",
-      "last_seen": "2026-04-18T07:14:25Z",
-      "isps": [
-        "Google LLC"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "57.151.138.0"
+        "162.216.150.45"
       ],
       "countries": [
         "US"
@@ -142,26 +176,28 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-18T07:14:25Z",
-      "last_seen": "2026-04-18T07:14:25Z",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-18T08:56:03Z",
+      "last_seen": "2026-04-18T08:56:03Z",
       "isps": [
-        "Microsoft Limited"
+        "Google LLC"
       ]
     },
     {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
+      "asn": "AS55933",
+      "asn_name": "Cloudie Limited",
       "ip_count": 1,
       "unique_ips": [
-        "175.205.118.123"
+        "103.215.80.173"
       ],
       "countries": [
-        "KR"
+        "HK"
       ],
-      "top_country": "KR",
-      "avg_abuse_score": 15,
-      "max_abuse_score": 15,
+      "top_country": "HK",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -169,12 +205,45 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-18T07:14:25Z",
-      "last_seen": "2026-04-18T07:14:25Z",
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse",
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-18T08:56:09Z",
+      "last_seen": "2026-04-18T08:56:09Z",
       "isps": [
-        "Chungbukbonbujang"
+        "Asia Pacific Network Information Centre"
+      ]
+    },
+    {
+      "asn": "AS31244",
+      "asn_name": "MY SERVER MEDIA SRL",
+      "ip_count": 1,
+      "unique_ips": [
+        "193.25.113.17"
+      ],
+      "countries": [
+        "RO"
+      ],
+      "top_country": "RO",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-18T08:56:09Z",
+      "last_seen": "2026-04-18T08:56:09Z",
+      "isps": [
+        "MY SERVER MEDIA SRL"
       ]
     }
   ]

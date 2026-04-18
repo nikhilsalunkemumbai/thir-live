@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-18 |
-| **Generated At** | 2026-04-18T07:14:25Z |
-| **Shift Time** | 07:14 UTC |
+| **Generated At** | 2026-04-18T08:56:10Z |
+| **Shift Time** | 08:56 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **5** |
-| Confirmed Threats | **1** |
-| False Positives Filtered | **4** (80.0%) |
-| Unique Attacker IPs | **4** |
-| Countries of Origin | **3** |
+| Total Sessions Captured | **25** |
+| Confirmed Threats | **23** |
+| False Positives Filtered | **2** (8.0%) |
+| Unique Attacker IPs | **6** |
+| Countries of Origin | **4** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **5** |
+| Low Severity Cases | **25** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 2 empty upload attempt(s) |
 
 ---
@@ -30,11 +30,62 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **0** |
-| Unique Credential Pairs | **0** |
-| Unique Usernames | **0** |
-| Unique Passwords | **0** |
+| Total Auth Attempts | **1** |
+| Unique Credential Pairs | **1** |
+| Unique Usernames | **1** |
+| Unique Passwords | **1** |
 | Successful Auth Pairs | **0** |
+
+**Top Usernames:**
+
+| Username | Attempts |
+|---|---|
+| `release` | 1 |
+
+**Top Passwords:**
+
+| Password | Attempts |
+|---|---|
+| `release` | 1 |
+
+**Top Credential Pairs:**
+
+| Username | Password | Attempts |
+|---|---|---|
+| `release` | `release` | 1 |
+
+---
+
+## 🖥 SSH Fingerprint Intelligence
+
+| Metric | Value |
+|---|---|
+| Total Sessions Parsed | **25** |
+| Sessions with Fingerprint | **3** |
+| Unique HASSH Fingerprints | **3** |
+
+**Client Family Distribution:**
+
+| Client Family | Sessions |
+|---|---|
+| Go SSH scanner | 1 |
+| Unknown | 1 |
+| libssh | 1 |
+
+**⚠️ Botnet/Scanner KEX Signatures Detected:**
+
+| HASSH | Signature | Sessions | IPs |
+|---|---|---|---|
+| `084386fa7ae5...` | Mirai/variant | 1 | 1 |
+| `03a80b21afa8...` | Modern SSH client | 1 | 1 |
+
+**Top Fingerprints:**
+
+| HASSH | Client | Sessions | IPs | Botnet Sig |
+|---|---|---|---|---|
+| `084386fa7ae5...` | Go SSH scanner | 1 | 1 | Mirai/variant |
+| `95420f9d932d...` | Unknown | 1 | 1 | — |
+| `03a80b21afa8...` | libssh | 1 | 1 | Modern SSH client |
 
 ---
 
@@ -42,19 +93,20 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **4** |
-| Unique ASNs | **4** |
-| High-Risk ASNs | **1** |
+| Total IPs Analysed | **6** |
+| Unique ASNs | **5** |
+| High-Risk ASNs | **4** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS3462` | Data Communication Business Group | 1 | HIGH |
+| `AS8075` | Microsoft Corporation | 2 | HIGH |
+| `AS138423` | CMPak Limited | 1 | HIGH |
 | `AS396982` | Google LLC | 1 | LOW |
-| `AS8075` | Microsoft Corporation | 1 | LOW |
-| `AS4766` | Korea Telecom | 1 | LOW |
+| `AS55933` | Cloudie Limited | 1 | HIGH |
+| `AS31244` | MY SERVER MEDIA SRL | 1 | HIGH |
 
 ---
 
@@ -76,7 +128,10 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `220.132.49[.]144` | 1 | 2026-04-18 06:48 | 2026-04-18 06:49 | 30s | 0 | `T1592` | 🟢 LOW |
+| `223.123.35[.]131` | **19** | 2026-04-18 08:00 | 2026-04-18 08:04 | 3m | 0 | `T1592` | 🟠 MEDIUM |
+| `74.235.203[.]125` | **2** | 2026-04-18 08:46 | 2026-04-18 08:46 | 0m | 0 | `T1592` | 🟢 LOW |
+| `103.215.80[.]173` | 1 | 2026-04-18 08:54 | 2026-04-18 08:54 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `193.25.113[.]17` | 1 | 2026-04-18 07:38 | 2026-04-18 07:38 | 30s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -113,18 +168,28 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `220.132.49[.]144` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 3 |
-| `34.70.121[.]57` | US | Google LLC | **41** | 0 |
-| `175.205.118[.]123` | KR | Chungbukbonbujang | 15 | 0 |
+| `223.123.35[.]131` | PK | CMPak Limited | **100** ⚠️ | 1 |
+| `74.235.203[.]125` | US | Microsoft Corporation | **100** ⚠️ | 0 |
+| `103.215.80[.]173` | HK | Asia Pacific Network Information Centre | **100** ⚠️ | 0 |
+| `193.25.113[.]17` | RO | MY SERVER MEDIA SRL | **100** ⚠️ | 0 |
+| `20.161.67[.]210` | US | Microsoft Corporation | **61** | 0 |
 
 ---
 
-## 🔕 False Positive Summary (4 filtered)
+## 🎯 Top TTPs Observed (MITRE ATT&CK)
+
+| TTP ID | Count |
+|---|---|
+| [T1592](https://attack.mitre.org/techniques/T1592) | 3 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 1 |
+
+---
+
+## 🔕 False Positive Summary (2 filtered)
 
 | Reason | Count |
 |---|---|
 | AbuseIPDB score 0 below threshold 25 | 1 |
-| AbuseIPDB score 15 below threshold 25 | 2 |
 | Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 1 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
@@ -136,19 +201,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 5 cases |
-| Tool 34  | Credential Extractor        | ✅ 0 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
+| Tool 26  | Incident Timeline Generator | ✅ 25 cases |
+| Tool 34  | Credential Extractor        | ✅ 1 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 3 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 4 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 4 filtered (80.0%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 6 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 2 filtered (8.0%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 4 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 5 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 22 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 1 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 4 recon entry/entries in table (2 group(s) consolidating 21 session(s)).
 
 ---
 
@@ -164,4 +229,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-18T07:14:25Z_
+_Report time: 2026-04-18T08:56:10Z_
