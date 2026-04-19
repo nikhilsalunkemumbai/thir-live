@@ -1,28 +1,49 @@
 {
-  "generated_at": "2026-04-19T18:57:19Z",
+  "generated_at": "2026-04-19T20:42:49Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 13,
+  "total_ips_analyzed": 10,
   "unique_asns": 10,
   "top_attack_asns": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 2,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS40545",
-      "asn_name": "Empire Access",
+      "asn": "AS3462",
+      "asn_name": "Data Communication Business Group",
       "ip_count": 1,
       "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS271812",
+      "asn_name": "CONEXT VENEZUELA, C.A.",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS61461",
+      "asn_name": "Airtek Solutions C.A.",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 1,
+      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
@@ -33,87 +54,59 @@
       "anon_count": 0
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS38283",
+      "asn_name": "CHINANET SiChuan Telecom Internet Data Center",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS137047",
-      "asn_name": "TELECOMMUNICATION AND TECHNOLOGY MASTERS (PVT.) LIMITED",
+      "asn": "AS136052",
+      "asn_name": "PT Cloud Hosting Indonesia",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS45102",
-      "asn_name": "Alibaba (US) Technology Co., Ltd.",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS20860",
-      "asn_name": "IOMART CLOUD SERVICES LIMITED",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS18403",
-      "asn_name": "FPT Telecom Company",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS268468",
-      "asn_name": "MXCONECT SERVICOS DE COMUNICACAO LTDA",
-      "ip_count": 1,
-      "risk_tier": "LOW",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS40545",
-      "asn_name": "Empire Access",
+      "asn": "AS3462",
+      "asn_name": "Data Communication Business Group",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS137047",
-      "asn_name": "TELECOMMUNICATION AND TECHNOLOGY MASTERS (PVT.) LIMITED",
+      "asn": "AS38283",
+      "asn_name": "CHINANET SiChuan Telecom Internet Data Center",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS45102",
-      "asn_name": "Alibaba (US) Technology Co., Ltd.",
+      "asn": "AS136052",
+      "asn_name": "PT Cloud Hosting Indonesia",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS20860",
-      "asn_name": "IOMART CLOUD SERVICES LIMITED",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -122,114 +115,48 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "US",
+      "country": "CN",
       "code": "",
-      "count": 6
+      "count": 3
     },
     {
-      "country": "CN",
+      "country": "VE",
       "code": "",
       "count": 2
     },
     {
-      "country": "PK",
+      "country": "US",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "TW",
       "code": "",
       "count": 1
     },
     {
-      "country": "SG",
+      "country": "ID",
       "code": "",
       "count": 1
     },
     {
-      "country": "GB",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "VN",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "BR",
+      "country": "KR",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 3,
-      "unique_ips": [
-        "20.168.122.192",
-        "52.165.250.240",
-        "74.249.129.4"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 78.33333333333333,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:19Z",
-      "isps": [
-        "Microsoft Corporation"
-      ]
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 2,
-      "unique_ips": [
-        "122.194.13.102",
-        "122.97.137.231"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 31.5,
-      "max_abuse_score": 37,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
-      "isps": [
-        "China Unicom Jiangsu province network"
-      ]
-    },
-    {
-      "asn": "AS40545",
-      "asn_name": "Empire Access",
+      "asn": "AS3462",
+      "asn_name": "Data Communication Business Group",
       "ip_count": 1,
       "unique_ips": [
-        "38.145.191.251"
+        "59.127.80.34"
       ],
       "countries": [
-        "US"
+        "TW"
       ],
-      "top_country": "US",
+      "top_country": "TW",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -243,10 +170,152 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
+      "first_seen": "2026-04-19T20:42:46Z",
+      "last_seen": "2026-04-19T20:42:46Z",
       "isps": [
-        "Empire Access"
+        "Chunghwa Telecom Co.,Ltd."
+      ]
+    },
+    {
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "120.48.102.177"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-19T20:42:46Z",
+      "last_seen": "2026-04-19T20:42:46Z",
+      "isps": [
+        "Beijing Baidu Netcom Science and Technology Co., Ltd."
+      ]
+    },
+    {
+      "asn": "AS271812",
+      "asn_name": "CONEXT VENEZUELA, C.A.",
+      "ip_count": 1,
+      "unique_ips": [
+        "181.232.181.229"
+      ],
+      "countries": [
+        "VE"
+      ],
+      "top_country": "VE",
+      "avg_abuse_score": 67,
+      "max_abuse_score": 67,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-19T20:42:47Z",
+      "last_seen": "2026-04-19T20:42:47Z",
+      "isps": [
+        "CONEXT VENEZUELA, C.A."
+      ]
+    },
+    {
+      "asn": "AS4134",
+      "asn_name": "CHINANET-BACKBONE",
+      "ip_count": 1,
+      "unique_ips": [
+        "14.17.110.253"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 58,
+      "max_abuse_score": 58,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-19T20:42:45Z",
+      "last_seen": "2026-04-19T20:42:45Z",
+      "isps": [
+        "CHINANET Guangdong province network"
+      ]
+    },
+    {
+      "asn": "AS61461",
+      "asn_name": "Airtek Solutions C.A.",
+      "ip_count": 1,
+      "unique_ips": [
+        "206.62.175.206"
+      ],
+      "countries": [
+        "VE"
+      ],
+      "top_country": "VE",
+      "avg_abuse_score": 63,
+      "max_abuse_score": 63,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-19T20:42:45Z",
+      "last_seen": "2026-04-19T20:42:45Z",
+      "isps": [
+        "Corporacion Matrix TV, C.A. (Airtek)"
+      ]
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "20.172.192.243"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 0,
+      "max_abuse_score": 0,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-19T20:42:45Z",
+      "last_seen": "2026-04-19T20:42:45Z",
+      "isps": [
+        "Microsoft Corporation"
       ]
     },
     {
@@ -254,7 +323,7 @@
       "asn_name": "Google LLC",
       "ip_count": 1,
       "unique_ips": [
-        "205.210.31.8"
+        "162.216.150.182"
       ],
       "countries": [
         "US"
@@ -273,23 +342,23 @@
       "tags": [
         "cloud-provider"
       ],
-      "first_seen": "2026-04-19T18:57:18Z",
-      "last_seen": "2026-04-19T18:57:18Z",
+      "first_seen": "2026-04-19T20:42:48Z",
+      "last_seen": "2026-04-19T20:42:48Z",
       "isps": [
-        "Palo Alto Networks, Inc"
+        "Google LLC"
       ]
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS38283",
+      "asn_name": "CHINANET SiChuan Telecom Internet Data Center",
       "ip_count": 1,
       "unique_ips": [
-        "159.65.219.252"
+        "118.122.147.195"
       ],
       "countries": [
-        "US"
+        "CN"
       ],
-      "top_country": "US",
+      "top_country": "CN",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -303,83 +372,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
+      "first_seen": "2026-04-19T20:42:47Z",
+      "last_seen": "2026-04-19T20:42:47Z",
       "isps": [
-        "DigitalOcean, LLC"
+        "CHINANET Sichuan province network"
       ]
     },
     {
-      "asn": "AS137047",
-      "asn_name": "TELECOMMUNICATION AND TECHNOLOGY MASTERS (PVT.) LIMITED",
+      "asn": "AS136052",
+      "asn_name": "PT Cloud Hosting Indonesia",
       "ip_count": 1,
       "unique_ips": [
-        "119.160.215.50"
+        "103.76.120.225"
       ],
       "countries": [
-        "PK"
+        "ID"
       ],
-      "top_country": "PK",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
-      "isps": [
-        "ULTRA LINK (PRIVATE) LIMITED"
-      ]
-    },
-    {
-      "asn": "AS45102",
-      "asn_name": "Alibaba (US) Technology Co., Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "47.236.143.27"
-      ],
-      "countries": [
-        "SG"
-      ],
-      "top_country": "SG",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
-      "isps": [
-        "Alibaba Cloud LLC"
-      ]
-    },
-    {
-      "asn": "AS20860",
-      "asn_name": "IOMART CLOUD SERVICES LIMITED",
-      "ip_count": 1,
-      "unique_ips": [
-        "212.38.189.186"
-      ],
-      "countries": [
-        "GB"
-      ],
-      "top_country": "GB",
+      "top_country": "ID",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -392,27 +401,28 @@
       "risk_tier": "HIGH",
       "tags": [
         "high-abuse",
-        "cloud-provider"
+        "cloud-provider",
+        "hosting-provider"
       ],
-      "first_seen": "2026-04-19T18:57:12Z",
-      "last_seen": "2026-04-19T18:57:12Z",
+      "first_seen": "2026-04-19T20:42:47Z",
+      "last_seen": "2026-04-19T20:42:47Z",
       "isps": [
-        "Iomart Group Plc"
+        "PT Cloud Hosting Indonesia"
       ]
     },
     {
-      "asn": "AS18403",
-      "asn_name": "FPT Telecom Company",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "unique_ips": [
-        "42.118.160.175"
+        "222.109.205.160"
       ],
       "countries": [
-        "VN"
+        "KR"
       ],
-      "top_country": "VN",
-      "avg_abuse_score": 16,
-      "max_abuse_score": 16,
+      "top_country": "KR",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -420,40 +430,14 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
-      "isps": [
-        "FPT Telecom Company"
-      ]
-    },
-    {
-      "asn": "AS268468",
-      "asn_name": "MXCONECT SERVICOS DE COMUNICACAO LTDA",
-      "ip_count": 1,
-      "unique_ips": [
-        "45.239.203.131"
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
       ],
-      "countries": [
-        "BR"
-      ],
-      "top_country": "BR",
-      "avg_abuse_score": 6,
-      "max_abuse_score": 6,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-19T18:57:11Z",
-      "last_seen": "2026-04-19T18:57:11Z",
+      "first_seen": "2026-04-19T20:42:48Z",
+      "last_seen": "2026-04-19T20:42:48Z",
       "isps": [
-        "MXCONECT SERVICOS DE COMUNICACAO LTDA"
+        "Korea Telecom"
       ]
     }
   ]
