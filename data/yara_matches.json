@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-20T13:51:16.752388+00:00",
+  "generated_at": "2026-04-20T17:09:10.475917+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 20,
@@ -21,11 +21,11 @@
       "count": 2
     },
     {
-      "family": "Mushtik",
+      "family": "Downloader",
       "count": 2
     },
     {
-      "family": "Downloader",
+      "family": "Mushtik",
       "count": 2
     },
     {
@@ -48,9 +48,9 @@
       "families": [
         "XMRig",
         "Gafgyt",
-        "Mushtik",
+        "Rootkit",
         "Downloader",
-        "Rootkit"
+        "Mushtik"
       ],
       "severity": "CRITICAL"
     },
@@ -66,12 +66,12 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "Sora",
         "XMRig",
         "Gafgyt",
-        "Mushtik",
+        "Rootkit",
         "Downloader",
-        "Rootkit"
+        "Sora",
+        "Mushtik"
       ],
       "severity": "CRITICAL"
     },
@@ -79,9 +79,9 @@
       "filename": "8daf92f0870c58ece8b68a3057c3ab6e8477215f853c54cdfe790acf1141161d",
       "sha256": "8daf92f0870c58ece8b68a3057c3ab6e8477215f853c54cdfe790acf1141161d",
       "families": [
-        "Gafgyt",
+        "Rootkit",
         "Mirai",
-        "Rootkit"
+        "Gafgyt"
       ],
       "severity": "CRITICAL"
     },
@@ -165,9 +165,9 @@
       "families": [
         "XMRig",
         "Gafgyt",
-        "Mushtik",
+        "Rootkit",
         "Downloader",
-        "Rootkit"
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -349,12 +349,12 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Sora",
         "XMRig",
         "Gafgyt",
-        "Mushtik",
+        "Rootkit",
         "Downloader",
-        "Rootkit"
+        "Sora",
+        "Mushtik"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
@@ -481,9 +481,9 @@
       "file_type": "ELF 32-bit executable",
       "classified": true,
       "families": [
-        "Gafgyt",
+        "Rootkit",
         "Mirai",
-        "Rootkit"
+        "Gafgyt"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
