@@ -1,23 +1,9 @@
 {
-  "generated_at": "2026-04-20T17:08:21Z",
+  "generated_at": "2026-04-20T19:12:02Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 21,
-  "unique_asns": 14,
+  "total_ips_analyzed": 8,
+  "unique_asns": 7,
   "top_attack_asns": [
-    {
-      "asn": "AS38365",
-      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "ip_count": 4,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
     {
       "asn": "AS396982",
       "asn_name": "Google LLC",
@@ -26,52 +12,45 @@
       "anon_count": 0
     },
     {
+      "asn": "AS5713",
+      "asn_name": "Telkom SA Ltd.",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS38365",
+      "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS17638",
-      "asn_name": "ASN for TIANJIN Provincial Net of CT",
       "ip_count": 1,
       "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS55990",
-      "asn_name": "Huawei Cloud Service data center",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
       "asn": "AS4837",
       "asn_name": "CHINA UNICOM China169 Backbone",
       "ip_count": 1,
-      "risk_tier": "LOW",
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
       "anon_count": 0
     }
   ],
@@ -79,62 +58,20 @@
     {
       "asn": "AS38365",
       "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "ip_count": 4,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS55990",
-      "asn_name": "Huawei Cloud Service data center",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS262794",
-      "asn_name": "VERO S.A",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS134768",
-      "asn_name": "CHINANET SHAANXI province Cloud Base network",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -143,40 +80,101 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "CN",
-      "code": "",
-      "count": 14
-    },
-    {
-      "country": "US",
-      "code": "",
-      "count": 3
-    },
-    {
-      "country": "BR",
+      "country": "GB",
       "code": "",
       "count": 2
     },
     {
-      "country": "VN",
+      "country": "CN",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "US",
       "code": "",
       "count": 1
     },
     {
-      "country": "BE",
+      "country": "KR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "ZA",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "JP",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 2,
+      "unique_ips": [
+        "35.203.210.189",
+        "35.203.211.219"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "top_country": "GB",
+      "avg_abuse_score": 0,
+      "max_abuse_score": 0,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-20T19:12:01Z",
+      "last_seen": "2026-04-20T19:12:02Z",
+      "isps": [
+        "Google LLC"
+      ]
+    },
+    {
+      "asn": "AS5713",
+      "asn_name": "Telkom SA Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "165.165.121.178"
+      ],
+      "countries": [
+        "ZA"
+      ],
+      "top_country": "ZA",
+      "avg_abuse_score": 5,
+      "max_abuse_score": 5,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-20T19:12:00Z",
+      "last_seen": "2026-04-20T19:12:00Z",
+      "isps": [
+        "Telkom SA Limited"
+      ]
+    },
+    {
       "asn": "AS38365",
       "asn_name": "Beijing Baidu Netcom Science and Technology Co., Ltd.",
-      "ip_count": 4,
+      "ip_count": 1,
       "unique_ips": [
-        "120.48.168.33",
-        "120.48.64.89",
-        "180.76.146.235",
         "180.76.61.133"
       ],
       "countries": [
@@ -196,26 +194,24 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:21Z",
+      "first_seen": "2026-04-20T19:12:00Z",
+      "last_seen": "2026-04-20T19:12:00Z",
       "isps": [
         "Beijing Baidu Netcom Science and Technology Co., Ltd."
       ]
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "ip_count": 3,
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
       "unique_ips": [
-        "1.83.125.223",
-        "1.85.218.250",
-        "14.29.214.161"
+        "172.104.93.159"
       ],
       "countries": [
-        "CN"
+        "JP"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 55.666666666666664,
+      "top_country": "JP",
+      "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -226,181 +222,28 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:16Z",
-      "isps": [
-        "CHINANET Guangdong province network",
-        "CHINANET SHAANXI PROVINCE NETWORK"
-      ]
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 2,
-      "unique_ips": [
-        "198.235.24.197",
-        "205.210.31.161"
-      ],
-      "countries": [
-        "BE",
-        "BR"
-      ],
-      "top_country": "BE",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [
+        "high-abuse",
         "cloud-provider"
       ],
-      "first_seen": "2026-04-20T17:08:14Z",
-      "last_seen": "2026-04-20T17:08:21Z",
+      "first_seen": "2026-04-20T19:12:00Z",
+      "last_seen": "2026-04-20T19:12:00Z",
       "isps": [
-        "Palo Alto Networks, Inc"
+        "Linode"
       ]
     },
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
+      "ip_count": 1,
       "unique_ips": [
-        "135.237.126.116",
-        "64.236.169.115"
+        "52.224.244.98"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 54.5,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:14Z",
-      "isps": [
-        "Microsoft Limited"
-      ]
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "unique_ips": [
-        "14.103.118.167"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:13Z",
-      "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS45090",
-      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "43.136.110.113"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-20T17:08:15Z",
-      "last_seen": "2026-04-20T17:08:15Z",
-      "isps": [
-        "Tencent Cloud Computing (Beijing) Co., Ltd"
-      ]
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "101.126.54.36"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-20T17:08:16Z",
-      "last_seen": "2026-04-20T17:08:16Z",
-      "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS17638",
-      "asn_name": "ASN for TIANJIN Provincial Net of CT",
-      "ip_count": 1,
-      "unique_ips": [
-        "36.106.167.29"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 70,
-      "max_abuse_score": 70,
+      "avg_abuse_score": 60,
+      "max_abuse_score": 60,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -410,41 +253,10 @@
       "critical_count": 0,
       "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:13Z",
+      "first_seen": "2026-04-20T19:11:59Z",
+      "last_seen": "2026-04-20T19:11:59Z",
       "isps": [
-        "CHINANET TIANJIN PROVINCE NETWORK"
-      ]
-    },
-    {
-      "asn": "AS55990",
-      "asn_name": "Huawei Cloud Service data center",
-      "ip_count": 1,
-      "unique_ips": [
-        "113.44.214.138"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:13Z",
-      "isps": [
-        "Huawei Public Cloud Service (Huawei Software Technologies Ltd.Co)"
+        "Microsoft Corporation"
       ]
     },
     {
@@ -452,14 +264,14 @@
       "asn_name": "CHINA UNICOM China169 Backbone",
       "ip_count": 1,
       "unique_ips": [
-        "150.255.177.85"
+        "175.165.82.143"
       ],
       "countries": [
         "CN"
       ],
       "top_country": "CN",
-      "avg_abuse_score": 15,
-      "max_abuse_score": 15,
+      "avg_abuse_score": 66,
+      "max_abuse_score": 66,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -467,83 +279,25 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "LOW",
+      "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:13Z",
+      "first_seen": "2026-04-20T19:11:59Z",
+      "last_seen": "2026-04-20T19:11:59Z",
       "isps": [
-        "China Unicom Hainan province network"
+        "CHINA UNICOM Liaoning province network"
       ]
     },
     {
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "unique_ips": [
-        "192.155.88.173"
+        "175.213.118.146"
       ],
       "countries": [
-        "US"
+        "KR"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 4,
-      "max_abuse_score": 4,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:13Z",
-      "isps": [
-        "Linode"
-      ]
-    },
-    {
-      "asn": "AS45899",
-      "asn_name": "VNPT Corp",
-      "ip_count": 1,
-      "unique_ips": [
-        "222.252.31.106"
-      ],
-      "countries": [
-        "VN"
-      ],
-      "top_country": "VN",
-      "avg_abuse_score": 15,
-      "max_abuse_score": 15,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-20T17:08:13Z",
-      "last_seen": "2026-04-20T17:08:13Z",
-      "isps": [
-        "Hanoi Post and Telecom Company"
-      ]
-    },
-    {
-      "asn": "AS262794",
-      "asn_name": "VERO S.A",
-      "ip_count": 1,
-      "unique_ips": [
-        "201.76.120.30"
-      ],
-      "countries": [
-        "BR"
-      ],
-      "top_country": "BR",
+      "top_country": "KR",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -557,41 +311,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-20T17:08:14Z",
-      "last_seen": "2026-04-20T17:08:14Z",
+      "first_seen": "2026-04-20T19:11:59Z",
+      "last_seen": "2026-04-20T19:11:59Z",
       "isps": [
-        "VERO S.A"
-      ]
-    },
-    {
-      "asn": "AS134768",
-      "asn_name": "CHINANET SHAANXI province Cloud Base network",
-      "ip_count": 1,
-      "unique_ips": [
-        "113.137.40.250"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-20T17:08:15Z",
-      "last_seen": "2026-04-20T17:08:15Z",
-      "isps": [
-        "CHINANET SHAANXI PROVINCE NETWORK"
+        "Sudogwongangbukbonbujang"
       ]
     }
   ]
