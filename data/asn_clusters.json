@@ -1,21 +1,28 @@
 {
-  "generated_at": "2026-04-20T06:18:45Z",
+  "generated_at": "2026-04-20T10:02:20Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 13,
-  "unique_asns": 12,
+  "total_ips_analyzed": 14,
+  "unique_asns": 11,
   "top_attack_asns": [
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 4,
+      "risk_tier": "MEDIUM",
       "anon_count": 0
     },
     {
-      "asn": "AS12400",
-      "asn_name": "Partner Communications Ltd.",
+      "asn": "AS14618",
+      "asn_name": "Amazon.com, Inc.",
       "ip_count": 1,
-      "risk_tier": "HIGH",
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS61461",
+      "asn_name": "Airtek Solutions C.A.",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
       "anon_count": 0
     },
     {
@@ -26,8 +33,22 @@
       "anon_count": 0
     },
     {
-      "asn": "AS61461",
-      "asn_name": "Airtek Solutions C.A.",
+      "asn": "AS9808",
+      "asn_name": "China Mobile Communications Group Co., Ltd.",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS138423",
+      "asn_name": "CMPak Limited",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS271812",
+      "asn_name": "CONEXT VENEZUELA, C.A.",
       "ip_count": 1,
       "risk_tier": "MEDIUM",
       "anon_count": 0
@@ -40,56 +61,21 @@
       "anon_count": 0
     },
     {
-      "asn": "AS271812",
-      "asn_name": "CONEXT VENEZUELA, C.A.",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS701",
-      "asn_name": "Verizon Business",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS201814",
-      "asn_name": "MEVSPACE sp. z o.o.",
+      "asn": "AS10439",
+      "asn_name": "CariNet, Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
-      "ip_count": 1,
-      "risk_tier": "LOW",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS12400",
-      "asn_name": "Partner Communications Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
     {
       "asn": "AS137718",
       "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
@@ -98,22 +84,22 @@
       "anon_count": 0
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
+      "asn": "AS138423",
+      "asn_name": "CMPak Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS201814",
-      "asn_name": "MEVSPACE sp. z o.o.",
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS9981",
-      "asn_name": "Saero Network Service LTD",
+      "asn": "AS10439",
+      "asn_name": "CariNet, Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -122,12 +108,12 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "CN",
+      "country": "US",
       "code": "",
       "count": 4
     },
     {
-      "country": "US",
+      "country": "BE",
       "code": "",
       "count": 3
     },
@@ -137,12 +123,17 @@
       "count": 2
     },
     {
-      "country": "IL",
+      "country": "CN",
+      "code": "",
+      "count": 2
+    },
+    {
+      "country": "JP",
       "code": "",
       "count": 1
     },
     {
-      "country": "PL",
+      "country": "PK",
       "code": "",
       "count": 1
     },
@@ -150,28 +141,26 @@
       "country": "KR",
       "code": "",
       "count": 1
-    },
-    {
-      "country": "GB",
-      "code": "",
-      "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 2,
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 4,
       "unique_ips": [
-        "112.232.63.145",
-        "125.39.179.192"
+        "34.38.58.26",
+        "34.97.4.172",
+        "35.190.193.205",
+        "35.205.172.208"
       ],
       "countries": [
-        "CN"
+        "BE",
+        "JP"
       ],
-      "top_country": "CN",
-      "avg_abuse_score": 92.5,
-      "max_abuse_score": 100,
+      "top_country": "BE",
+      "avg_abuse_score": 65.25,
+      "max_abuse_score": 76,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -179,30 +168,29 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
+      "risk_tier": "MEDIUM",
       "tags": [
-        "high-abuse"
+        "cloud-provider"
       ],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:44Z",
+      "first_seen": "2026-04-20T10:02:15Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
-        "Beijing Shenglian Venture Technology Co., Ltd.",
-        "China Unicom Shandong province network"
+        "Google LLC"
       ]
     },
     {
-      "asn": "AS12400",
-      "asn_name": "Partner Communications Ltd.",
+      "asn": "AS14618",
+      "asn_name": "Amazon.com, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "87.71.148.246"
+        "44.220.185.206"
       ],
       "countries": [
-        "IL"
+        "US"
       ],
-      "top_country": "IL",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "top_country": "US",
+      "avg_abuse_score": 65,
+      "max_abuse_score": 65,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -210,44 +198,14 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
+      "risk_tier": "MEDIUM",
       "tags": [
-        "high-abuse"
+        "cloud-provider"
       ],
-      "first_seen": "2026-04-20T06:18:41Z",
-      "last_seen": "2026-04-20T06:18:41Z",
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
-        "Partner Communications Ltd."
-      ]
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "101.96.199.144"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
-      "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
+        "Amazon Data Services Northern Virginia"
       ]
     },
     {
@@ -261,8 +219,8 @@
         "VE"
       ],
       "top_country": "VE",
-      "avg_abuse_score": 63,
-      "max_abuse_score": 63,
+      "avg_abuse_score": 61,
+      "max_abuse_score": 61,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -272,74 +230,18 @@
       "critical_count": 0,
       "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
         "Corporacion Matrix TV, C.A. (Airtek)"
       ]
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
       "ip_count": 1,
       "unique_ips": [
-        "40.76.119.214"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 40,
-      "max_abuse_score": 40,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
-      "isps": [
-        "Microsoft Corporation"
-      ]
-    },
-    {
-      "asn": "AS271812",
-      "asn_name": "CONEXT VENEZUELA, C.A.",
-      "ip_count": 1,
-      "unique_ips": [
-        "181.232.181.229"
-      ],
-      "countries": [
-        "VE"
-      ],
-      "top_country": "VE",
-      "avg_abuse_score": 67,
-      "max_abuse_score": 67,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
-      "isps": [
-        "CONEXT VENEZUELA, C.A."
-      ]
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET-BACKBONE",
-      "ip_count": 1,
-      "unique_ips": [
-        "222.88.163.203"
+        "101.126.4.215"
       ],
       "countries": [
         "CN"
@@ -358,25 +260,25 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-20T06:18:44Z",
-      "last_seen": "2026-04-20T06:18:44Z",
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
-        "CHINANET henan province network"
+        "Beijing Volcano Engine Technology Co., Ltd."
       ]
     },
     {
-      "asn": "AS701",
-      "asn_name": "Verizon Business",
+      "asn": "AS9808",
+      "asn_name": "China Mobile Communications Group Co., Ltd.",
       "ip_count": 1,
       "unique_ips": [
-        "100.35.247.81"
+        "120.231.236.7"
       ],
       "countries": [
-        "US"
+        "CN"
       ],
-      "top_country": "US",
-      "avg_abuse_score": 80,
-      "max_abuse_score": 80,
+      "top_country": "CN",
+      "avg_abuse_score": 5,
+      "max_abuse_score": 5,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -384,25 +286,25 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "MEDIUM",
+      "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-20T06:18:41Z",
-      "last_seen": "2026-04-20T06:18:41Z",
+      "first_seen": "2026-04-20T10:02:19Z",
+      "last_seen": "2026-04-20T10:02:19Z",
       "isps": [
-        "Verizon Business"
+        "China Mobile Communications Corporation"
       ]
     },
     {
-      "asn": "AS201814",
-      "asn_name": "MEVSPACE sp. z o.o.",
+      "asn": "AS138423",
+      "asn_name": "CMPak Limited",
       "ip_count": 1,
       "unique_ips": [
-        "195.3.223.100"
+        "223.123.124.183"
       ],
       "countries": [
-        "PL"
+        "PK"
       ],
-      "top_country": "PL",
+      "top_country": "PK",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -416,25 +318,53 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
-        "MEVSPACE sp. z o.o."
+        "CMPak Limited"
       ]
     },
     {
-      "asn": "AS63949",
-      "asn_name": "Akamai Connected Cloud",
+      "asn": "AS271812",
+      "asn_name": "CONEXT VENEZUELA, C.A.",
       "ip_count": 1,
       "unique_ips": [
-        "69.164.212.215"
+        "181.232.181.229"
+      ],
+      "countries": [
+        "VE"
+      ],
+      "top_country": "VE",
+      "avg_abuse_score": 65,
+      "max_abuse_score": 65,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
+      "isps": [
+        "CONEXT VENEZUELA, C.A."
+      ]
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "128.24.162.148"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 27,
-      "max_abuse_score": 27,
+      "avg_abuse_score": 22,
+      "max_abuse_score": 22,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -443,21 +373,19 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
+      "tags": [],
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
-        "Linode"
+        "Microsoft Limited"
       ]
     },
     {
-      "asn": "AS9981",
-      "asn_name": "Saero Network Service LTD",
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "113.59.150.123"
+        "1.214.179.202"
       ],
       "countries": [
         "KR"
@@ -476,25 +404,55 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-20T06:18:42Z",
-      "last_seen": "2026-04-20T06:18:42Z",
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
       "isps": [
-        "kt HCN Co.,Ltd."
+        "LG Uplus"
       ]
     },
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS10439",
+      "asn_name": "CariNet, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "35.203.211.153"
+        "66.240.236.109"
       ],
       "countries": [
-        "GB"
+        "US"
       ],
-      "top_country": "GB",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
+      "top_country": "US",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-20T10:02:16Z",
+      "last_seen": "2026-04-20T10:02:16Z",
+      "isps": [
+        "CariNet, Inc."
+      ]
+    },
+    {
+      "asn": "AS63949",
+      "asn_name": "Akamai Connected Cloud",
+      "ip_count": 1,
+      "unique_ips": [
+        "66.228.34.225"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 22,
+      "max_abuse_score": 22,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -506,10 +464,10 @@
       "tags": [
         "cloud-provider"
       ],
-      "first_seen": "2026-04-20T06:18:43Z",
-      "last_seen": "2026-04-20T06:18:43Z",
+      "first_seen": "2026-04-20T10:02:18Z",
+      "last_seen": "2026-04-20T10:02:18Z",
       "isps": [
-        "Google LLC"
+        "Linode"
       ]
     }
   ]
