@@ -1,19 +1,84 @@
 {
-  "generated_at": "2026-04-21T20:57:43Z",
+  "generated_at": "2026-04-21T22:45:13Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 5,
-  "unique_asns": 4,
+  "total_ips_analyzed": 7,
+  "unique_asns": 7,
   "top_attack_asns": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
+      "asn": "AS132124",
+      "asn_name": "Information and Communication Technology Agency of Sri Lanka",
+      "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS212238",
-      "asn_name": "Datacamp Limited",
+      "asn": "AS17917",
+      "asn_name": "Quadrant Televentures Limited",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4837",
+      "asn_name": "CHINA UNICOM China169 Backbone",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    }
+  ],
+  "high_risk_asns": [
+    {
+      "asn": "AS132124",
+      "asn_name": "Information and Communication Technology Agency of Sri Lanka",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS17917",
+      "asn_name": "Quadrant Televentures Limited",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4837",
+      "asn_name": "CHINA UNICOM China169 Backbone",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -22,36 +87,6 @@
       "asn": "AS14061",
       "asn_name": "DigitalOcean, LLC",
       "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9891",
-      "asn_name": "CS LOXINFO Public Company Limited.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    }
-  ],
-  "high_risk_asns": [
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS212238",
-      "asn_name": "Datacamp Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9891",
-      "asn_name": "CS LOXINFO Public Company Limited.",
-      "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     }
@@ -59,12 +94,17 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "US",
+      "country": "GB",
       "code": "",
       "count": 2
     },
     {
-      "country": "RO",
+      "country": "US",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "LK",
       "code": "",
       "count": 1
     },
@@ -74,56 +114,28 @@
       "count": 1
     },
     {
-      "country": "TH",
+      "country": "PK",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "CN",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
-      "unique_ips": [
-        "172.182.212.50",
-        "4.247.141.61"
-      ],
-      "countries": [
-        "IN",
-        "US"
-      ],
-      "top_country": "IN",
-      "avg_abuse_score": 58.5,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-21T20:57:34Z",
-      "last_seen": "2026-04-21T20:57:41Z",
-      "isps": [
-        "Microsoft Corporation",
-        "Microsoft Limited"
-      ]
-    },
-    {
-      "asn": "AS212238",
-      "asn_name": "Datacamp Limited",
+      "asn": "AS132124",
+      "asn_name": "Information and Communication Technology Agency of Sri Lanka",
       "ip_count": 1,
       "unique_ips": [
-        "94.156.14.80"
+        "43.224.126.107"
       ],
       "countries": [
-        "RO"
+        "LK"
       ],
-      "top_country": "RO",
+      "top_country": "LK",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -137,23 +149,113 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-21T20:57:34Z",
-      "last_seen": "2026-04-21T20:57:34Z",
+      "first_seen": "2026-04-21T22:45:12Z",
+      "last_seen": "2026-04-21T22:45:12Z",
       "isps": [
-        "Internet Utilities Europe and Asia Limited"
+        "Lanka Government Cloud"
       ]
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS17917",
+      "asn_name": "Quadrant Televentures Limited",
       "ip_count": 1,
       "unique_ips": [
-        "159.203.103.122"
+        "112.196.78.4"
       ],
       "countries": [
-        "US"
+        "IN"
       ],
-      "top_country": "US",
+      "top_country": "IN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-21T22:45:12Z",
+      "last_seen": "2026-04-21T22:45:12Z",
+      "isps": [
+        "Chandigarh"
+      ]
+    },
+    {
+      "asn": "AS9541",
+      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "101.53.236.155"
+      ],
+      "countries": [
+        "PK"
+      ],
+      "top_country": "PK",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-21T22:45:13Z",
+      "last_seen": "2026-04-21T22:45:13Z",
+      "isps": [
+        "Cyber Internet Services Pakistan"
+      ]
+    },
+    {
+      "asn": "AS4837",
+      "asn_name": "CHINA UNICOM China169 Backbone",
+      "ip_count": 1,
+      "unique_ips": [
+        "139.170.141.170"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-21T22:45:13Z",
+      "last_seen": "2026-04-21T22:45:13Z",
+      "isps": [
+        "China Unicom Qinghai province network"
+      ]
+    },
+    {
+      "asn": "AS396982",
+      "asn_name": "Google LLC",
+      "ip_count": 1,
+      "unique_ips": [
+        "35.203.210.245"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "top_country": "GB",
       "avg_abuse_score": 0,
       "max_abuse_score": 0,
       "total_reports": 0,
@@ -164,24 +266,26 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-21T20:57:34Z",
-      "last_seen": "2026-04-21T20:57:34Z",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-21T22:45:13Z",
+      "last_seen": "2026-04-21T22:45:13Z",
       "isps": [
-        "DigitalOcean, LLC"
+        "Google LLC"
       ]
     },
     {
-      "asn": "AS9891",
-      "asn_name": "CS LOXINFO Public Company Limited.",
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
       "ip_count": 1,
       "unique_ips": [
-        "147.50.227.79"
+        "188.166.169.94"
       ],
       "countries": [
-        "TH"
+        "GB"
       ],
-      "top_country": "TH",
+      "top_country": "GB",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -195,10 +299,38 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-21T20:57:42Z",
-      "last_seen": "2026-04-21T20:57:42Z",
+      "first_seen": "2026-04-21T22:45:11Z",
+      "last_seen": "2026-04-21T22:45:11Z",
       "isps": [
-        "CS Loxinfo Public Company Limited"
+        "DigitalOcean, LLC"
+      ]
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "172.208.153.23"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
+      "avg_abuse_score": 80,
+      "max_abuse_score": 80,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-21T22:45:11Z",
+      "last_seen": "2026-04-21T22:45:11Z",
+      "isps": [
+        "Microsoft Limited"
       ]
     }
   ]
