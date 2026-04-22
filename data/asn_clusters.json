@@ -1,54 +1,33 @@
 {
-  "generated_at": "2026-04-22T21:00:15Z",
+  "generated_at": "2026-04-22T22:52:17Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 8,
-  "unique_asns": 7,
+  "total_ips_analyzed": 6,
+  "unique_asns": 4,
   "top_attack_asns": [
     {
       "asn": "AS213412",
       "asn_name": "ONYPHE SAS",
-      "ip_count": 2,
+      "ip_count": 3,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
+      "asn": "AS38264",
+      "asn_name": "National WiMAX/IMS environment",
       "ip_count": 1,
-      "risk_tier": "HIGH",
+      "risk_tier": "MEDIUM",
       "anon_count": 0
     },
     {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
       "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
     },
     {
-      "asn": "AS7713",
-      "asn_name": "PT Telekomunikasi Indonesia",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS136180",
-      "asn_name": "Beijing Tiantexin Tech. Co., Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS30600",
-      "asn_name": "Metronet",
+      "asn": "AS198610",
+      "asn_name": "Beget LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -58,34 +37,13 @@
     {
       "asn": "AS213412",
       "asn_name": "ONYPHE SAS",
-      "ip_count": 2,
+      "ip_count": 3,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS7713",
-      "asn_name": "PT Telekomunikasi Indonesia",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS136180",
-      "asn_name": "Beijing Tiantexin Tech. Co., Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS30600",
-      "asn_name": "Metronet",
+      "asn": "AS198610",
+      "asn_name": "Beget LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -99,17 +57,12 @@
       "count": 4
     },
     {
-      "country": "FR",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "CN",
+      "country": "RU",
       "code": "",
       "count": 1
     },
     {
-      "country": "ID",
+      "country": "PK",
       "code": "",
       "count": 1
     }
@@ -118,77 +71,48 @@
     {
       "asn": "AS213412",
       "asn_name": "ONYPHE SAS",
-      "ip_count": 2,
+      "ip_count": 3,
       "unique_ips": [
-        "91.196.152.46",
-        "91.196.152.64"
-      ],
-      "countries": [
-        "FR"
-      ],
-      "top_country": "FR",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-22T21:00:08Z",
-      "last_seen": "2026-04-22T21:00:10Z",
-      "isps": [
-        "FR ONYPHE"
-      ]
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "unique_ips": [
-        "60.218.58.58"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-22T21:00:07Z",
-      "last_seen": "2026-04-22T21:00:07Z",
-      "isps": [
-        "China Unicom Heilongjiang Province Network"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "52.165.250.242"
+        "91.230.168.57",
+        "91.230.168.60",
+        "91.230.168.61"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 60,
-      "max_abuse_score": 60,
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-22T22:52:16Z",
+      "last_seen": "2026-04-22T22:52:16Z",
+      "isps": [
+        "FR ONYPHE"
+      ]
+    },
+    {
+      "asn": "AS38264",
+      "asn_name": "National WiMAX/IMS environment",
+      "ip_count": 1,
+      "unique_ips": [
+        "110.36.26.33"
+      ],
+      "countries": [
+        "PK"
+      ],
+      "top_country": "PK",
+      "avg_abuse_score": 75,
+      "max_abuse_score": 75,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -198,25 +122,25 @@
       "critical_count": 0,
       "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-22T21:00:08Z",
-      "last_seen": "2026-04-22T21:00:08Z",
+      "first_seen": "2026-04-22T22:52:16Z",
+      "last_seen": "2026-04-22T22:52:16Z",
       "isps": [
-        "Microsoft Corporation"
+        "National Wimax/IMS environment"
       ]
     },
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "162.216.149.30"
+        "64.236.153.154"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
+      "avg_abuse_score": 2,
+      "max_abuse_score": 2,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -225,26 +149,24 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-22T21:00:08Z",
-      "last_seen": "2026-04-22T21:00:08Z",
+      "tags": [],
+      "first_seen": "2026-04-22T22:52:08Z",
+      "last_seen": "2026-04-22T22:52:08Z",
       "isps": [
-        "Google LLC"
+        "Microsoft Limited"
       ]
     },
     {
-      "asn": "AS7713",
-      "asn_name": "PT Telekomunikasi Indonesia",
+      "asn": "AS198610",
+      "asn_name": "Beget LLC",
       "ip_count": 1,
       "unique_ips": [
-        "36.64.68.99"
+        "155.212.186.169"
       ],
       "countries": [
-        "ID"
+        "RU"
       ],
-      "top_country": "ID",
+      "top_country": "RU",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -258,70 +180,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-22T21:00:09Z",
-      "last_seen": "2026-04-22T21:00:09Z",
+      "first_seen": "2026-04-22T22:52:10Z",
+      "last_seen": "2026-04-22T22:52:10Z",
       "isps": [
-        "PT TELKOM INDONESIA Menara Multimedia Lt.7 Jl. Kebon sirih No.12 JAKARTA"
-      ]
-    },
-    {
-      "asn": "AS136180",
-      "asn_name": "Beijing Tiantexin Tech. Co., Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "103.203.57.19"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-22T21:00:10Z",
-      "last_seen": "2026-04-22T21:00:10Z",
-      "isps": [
-        "Beijing Tiantexin Tech. Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS30600",
-      "asn_name": "Metronet",
-      "ip_count": 1,
-      "unique_ips": [
-        "162.221.222.179"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-22T21:00:15Z",
-      "last_seen": "2026-04-22T21:00:15Z",
-      "isps": [
-        "Metronet"
+        "Beget LLC"
       ]
     }
   ]

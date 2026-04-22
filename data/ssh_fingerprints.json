@@ -1,75 +1,10 @@
 {
-  "generated_at": "2026-04-22T21:00:03.072362+00:00",
-  "total_sessions_parsed": 10,
-  "sessions_with_fingerprint": 2,
-  "sessions_without_kex": 6,
-  "unique_fingerprints": 2,
-  "top_families": [
-    {
-      "family": "libssh",
-      "sessions": 3
-    },
-    {
-      "family": "Unknown",
-      "sessions": 1
-    }
-  ],
-  "botnet_signals": [
-    {
-      "hassh": "af8223ac9914f509afdadfaf5f7ee94e",
-      "signature": "libssh-based",
-      "session_count": 3,
-      "unique_ips": [
-        "36.64.68.99"
-      ]
-    }
-  ],
-  "fingerprints": [
-    {
-      "hassh": "af8223ac9914f509afdadfaf5f7ee94e",
-      "client_family": "libssh",
-      "botnet_signature": "libssh-based",
-      "version_strings": [
-        "SSH-2.0-libssh_0.12.0"
-      ],
-      "session_count": 3,
-      "unique_ips": [
-        "36.64.68.99"
-      ],
-      "sessions": [
-        "IR-7604e4f8013c",
-        "IR-632883f6343a",
-        "IR-0d761f8c7ce5"
-      ],
-      "kex_algs": "mlkem768x25519-sha256,mlkem768nistp256-sha256,sntrup761x25519-sha512,sntrup761x25519-sha512@openssh.com,curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,ext-info-c,kex-strict-c-v00@openssh.com",
-      "enc_algs": "chacha20-poly1305@openssh.com,aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha2-512",
-      "comp_algs": "none,zlib@openssh.com",
-      "first_seen": "2026-04-22T20:50:09.387720Z",
-      "last_seen": "2026-04-22T20:50:11.944189Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "95420f9d932ddd22833f17b96a80bedb",
-      "client_family": "Unknown",
-      "botnet_signature": null,
-      "version_strings": [
-        "\u0016\u0003\u0003\u0001\\xa5\u0001\u0000\u0001\\xa1\u0003\u0003\\xcaO\b\\xf0\\xf2\\xf4\\x86\\xffg\\xee\\xa9\\\u0012\\xef\\xba>\\x8a\\xaf\\xd6.\u03e7\\xdb\\xc83\\xfd:c\\xac\u001e:\\x9e \\xbf\\xb3&Y\\xa3\\xf5s\\xbd1\\x9d\\xfa\\xa3\\xb3zK\\xda3\\xa0\r\\xfa#\u001a\u001a\\xbb\\x83*\\x96$\\xbb\\xd5\u0002>\u0000\\x8a\u0000\u0016\u00003\u0000g\\xc0\\x9e\\xc0\\xa2\u0000\\x9e\u00009\u0000k\\xc0\\x9f\\xc0\\xa3\u0000\\x9f\u0000E\u0000\\xbe\u0000\\x88\u0000\\xc4\u0000\\x9a\\xc0\b\\xc0\t\\xc0#\\xc0\\xac\\xc0\\xae\\xc0+\\xc0"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "91.196.152.64"
-      ],
-      "sessions": [
-        "IR-1e9bbb54ea64"
-      ],
-      "kex_algs": null,
-      "enc_algs": null,
-      "mac_algs": null,
-      "comp_algs": null,
-      "first_seen": "2026-04-22T20:00:17.421989Z",
-      "last_seen": "2026-04-22T20:00:17.421989Z",
-      "unique_ip_count": 1
-    }
-  ]
+  "generated_at": "2026-04-22T22:52:04.193607+00:00",
+  "total_sessions_parsed": 16,
+  "sessions_with_fingerprint": 0,
+  "sessions_without_kex": 16,
+  "unique_fingerprints": 0,
+  "top_families": [],
+  "botnet_signals": [],
+  "fingerprints": []
 }
