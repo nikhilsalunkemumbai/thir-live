@@ -1,47 +1,40 @@
 {
-  "generated_at": "2026-04-21T22:45:13Z",
+  "generated_at": "2026-04-22T02:52:51Z",
   "source_file": "data/threat_ips.json",
   "total_ips_analyzed": 7,
   "unique_asns": 7,
   "top_attack_asns": [
     {
-      "asn": "AS132124",
-      "asn_name": "Information and Communication Technology Agency of Sri Lanka",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS17917",
-      "asn_name": "Quadrant Televentures Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS1037",
+      "asn_name": "RBDC, Inc.",
       "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
     },
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS212238",
+      "asn_name": "Datacamp Limited",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS1680",
+      "asn_name": "Cellcom Fixed Line Communication L.P",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS48090",
+      "asn_name": "TECHOFF SRV LIMITED",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS56040",
+      "asn_name": "China Mobile communications corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -52,40 +45,26 @@
       "ip_count": 1,
       "risk_tier": "MEDIUM",
       "anon_count": 0
+    },
+    {
+      "asn": "AS5713",
+      "asn_name": "Telkom SA Ltd.",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS132124",
-      "asn_name": "Information and Communication Technology Agency of Sri Lanka",
+      "asn": "AS212238",
+      "asn_name": "Datacamp Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS17917",
-      "asn_name": "Quadrant Televentures Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS56040",
+      "asn_name": "China Mobile communications corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -94,17 +73,12 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "GB",
-      "code": "",
-      "count": 2
-    },
-    {
       "country": "US",
       "code": "",
       "count": 1
     },
     {
-      "country": "LK",
+      "country": "ZA",
       "code": "",
       "count": 1
     },
@@ -114,7 +88,17 @@
       "count": 1
     },
     {
-      "country": "PK",
+      "country": "RO",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "IL",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "NL",
       "code": "",
       "count": 1
     },
@@ -126,48 +110,18 @@
   ],
   "clusters": [
     {
-      "asn": "AS132124",
-      "asn_name": "Information and Communication Technology Agency of Sri Lanka",
+      "asn": "AS1037",
+      "asn_name": "RBDC, Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "43.224.126.107"
-      ],
-      "countries": [
-        "LK"
-      ],
-      "top_country": "LK",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-21T22:45:12Z",
-      "last_seen": "2026-04-21T22:45:12Z",
-      "isps": [
-        "Lanka Government Cloud"
-      ]
-    },
-    {
-      "asn": "AS17917",
-      "asn_name": "Quadrant Televentures Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "112.196.78.4"
+        "172.83.83.85"
       ],
       "countries": [
         "IN"
       ],
       "top_country": "IN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "avg_abuse_score": 31,
+      "max_abuse_score": 31,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -175,27 +129,25 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-21T22:45:12Z",
-      "last_seen": "2026-04-21T22:45:12Z",
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-22T02:52:50Z",
+      "last_seen": "2026-04-22T02:52:50Z",
       "isps": [
-        "Chandigarh"
+        "RBDC, Inc."
       ]
     },
     {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
+      "asn": "AS212238",
+      "asn_name": "Datacamp Limited",
       "ip_count": 1,
       "unique_ips": [
-        "101.53.236.155"
+        "94.156.14.80"
       ],
       "countries": [
-        "PK"
+        "RO"
       ],
-      "top_country": "PK",
+      "top_country": "RO",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -209,18 +161,74 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-21T22:45:13Z",
-      "last_seen": "2026-04-21T22:45:13Z",
+      "first_seen": "2026-04-22T02:52:50Z",
+      "last_seen": "2026-04-22T02:52:50Z",
       "isps": [
-        "Cyber Internet Services Pakistan"
+        "Internet Utilities Europe and Asia Limited"
       ]
     },
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
+      "asn": "AS1680",
+      "asn_name": "Cellcom Fixed Line Communication L.P",
       "ip_count": 1,
       "unique_ips": [
-        "139.170.141.170"
+        "109.186.48.18"
+      ],
+      "countries": [
+        "IL"
+      ],
+      "top_country": "IL",
+      "avg_abuse_score": 16,
+      "max_abuse_score": 16,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-22T02:52:50Z",
+      "last_seen": "2026-04-22T02:52:50Z",
+      "isps": [
+        "013 Netvision"
+      ]
+    },
+    {
+      "asn": "AS48090",
+      "asn_name": "TECHOFF SRV LIMITED",
+      "ip_count": 1,
+      "unique_ips": [
+        "93.123.109.222"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "top_country": "NL",
+      "avg_abuse_score": 46,
+      "max_abuse_score": 46,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-22T02:52:50Z",
+      "last_seen": "2026-04-22T02:52:50Z",
+      "isps": [
+        "TECHOFF SRV LIMITED"
+      ]
+    },
+    {
+      "asn": "AS56040",
+      "asn_name": "China Mobile communications corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "120.241.79.66"
       ],
       "countries": [
         "CN"
@@ -239,23 +247,51 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-21T22:45:13Z",
-      "last_seen": "2026-04-21T22:45:13Z",
+      "first_seen": "2026-04-22T02:52:51Z",
+      "last_seen": "2026-04-22T02:52:51Z",
       "isps": [
-        "China Unicom Qinghai province network"
+        "China Mobile Communications Corporation"
       ]
     },
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "35.203.210.245"
+        "52.190.183.81"
       ],
       "countries": [
-        "GB"
+        "US"
       ],
-      "top_country": "GB",
+      "top_country": "US",
+      "avg_abuse_score": 73,
+      "max_abuse_score": 73,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-22T02:52:50Z",
+      "last_seen": "2026-04-22T02:52:50Z",
+      "isps": [
+        "Microsoft Corporation"
+      ]
+    },
+    {
+      "asn": "AS5713",
+      "asn_name": "Telkom SA Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "165.165.120.41"
+      ],
+      "countries": [
+        "ZA"
+      ],
+      "top_country": "ZA",
       "avg_abuse_score": 0,
       "max_abuse_score": 0,
       "total_reports": 0,
@@ -266,71 +302,11 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-21T22:45:13Z",
-      "last_seen": "2026-04-21T22:45:13Z",
-      "isps": [
-        "Google LLC"
-      ]
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 1,
-      "unique_ips": [
-        "188.166.169.94"
-      ],
-      "countries": [
-        "GB"
-      ],
-      "top_country": "GB",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-21T22:45:11Z",
-      "last_seen": "2026-04-21T22:45:11Z",
-      "isps": [
-        "DigitalOcean, LLC"
-      ]
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "unique_ips": [
-        "172.208.153.23"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 80,
-      "max_abuse_score": 80,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
       "tags": [],
-      "first_seen": "2026-04-21T22:45:11Z",
-      "last_seen": "2026-04-21T22:45:11Z",
+      "first_seen": "2026-04-22T02:52:50Z",
+      "last_seen": "2026-04-22T02:52:50Z",
       "isps": [
-        "Microsoft Limited"
+        "Telkom SA Limited"
       ]
     }
   ]
