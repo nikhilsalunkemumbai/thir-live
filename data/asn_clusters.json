@@ -1,54 +1,33 @@
 {
-  "generated_at": "2026-04-24T09:48:09Z",
+  "generated_at": "2026-04-24T11:09:16Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 13,
-  "unique_asns": 10,
+  "total_ips_analyzed": 6,
+  "unique_asns": 5,
   "top_attack_asns": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
-      "risk_tier": "LOW",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
+      "asn": "AS211680",
+      "asn_name": "NSEC - Sistemas Informaticos, S.A.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS329473",
-      "asn_name": "Click Connect Proprietary Limited",
+      "asn": "AS45090",
+      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS680",
-      "asn_name": "Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS7545",
-      "asn_name": "TPG Telecom Limited",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -56,20 +35,6 @@
     {
       "asn": "AS4811",
       "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 1,
-      "risk_tier": "MEDIUM",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS16509",
-      "asn_name": "Amazon.com, Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -77,43 +42,29 @@
   ],
   "high_risk_asns": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
+      "asn": "AS211680",
+      "asn_name": "NSEC - Sistemas Informaticos, S.A.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS329473",
-      "asn_name": "Click Connect Proprietary Limited",
+      "asn": "AS45090",
+      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS680",
-      "asn_name": "Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS7545",
-      "asn_name": "TPG Telecom Limited",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -121,13 +72,6 @@
     {
       "asn": "AS4811",
       "asn_name": "China Telecom (Group)",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS16509",
-      "asn_name": "Amazon.com, Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -138,7 +82,7 @@
     {
       "country": "CN",
       "code": "",
-      "count": 3
+      "count": 2
     },
     {
       "country": "US",
@@ -146,121 +90,31 @@
       "count": 2
     },
     {
-      "country": "BE",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "TW",
+      "country": "KR",
       "code": "",
       "count": 1
     },
     {
-      "country": "DE",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "AU",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "PK",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "BW",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "GB",
+      "country": "NL",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
-      "ip_count": 3,
-      "unique_ips": [
-        "34.14.71.20",
-        "34.53.180.148",
-        "35.203.211.73"
-      ],
-      "countries": [
-        "BE",
-        "GB"
-      ],
-      "top_country": "BE",
-      "avg_abuse_score": 66,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:06Z",
-      "isps": [
-        "Google LLC"
-      ]
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
-      "ip_count": 2,
-      "unique_ips": [
-        "113.250.143.5",
-        "180.106.80.16"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 52.5,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:09Z",
-      "isps": [
-        "CHINANET Chongqing Province Network",
-        "Chinanet Jiangsu Province Network"
-      ]
-    },
-    {
       "asn": "AS8075",
       "asn_name": "Microsoft Corporation",
-      "ip_count": 1,
+      "ip_count": 2,
       "unique_ips": [
-        "135.232.201.244"
+        "145.132.100.83",
+        "20.80.88.7"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 18,
-      "max_abuse_score": 18,
+      "avg_abuse_score": 74.5,
+      "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -268,25 +122,28 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:05Z",
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-24T11:09:08Z",
+      "last_seen": "2026-04-24T11:09:08Z",
       "isps": [
+        "Microsoft Corporation",
         "Microsoft Limited"
       ]
     },
     {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
+      "asn": "AS211680",
+      "asn_name": "NSEC - Sistemas Informaticos, S.A.",
       "ip_count": 1,
       "unique_ips": [
-        "59.127.80.34"
+        "45.156.128.37"
       ],
       "countries": [
-        "TW"
+        "NL"
       ],
-      "top_country": "TW",
+      "top_country": "NL",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -300,23 +157,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:05Z",
+      "first_seen": "2026-04-24T11:09:15Z",
+      "last_seen": "2026-04-24T11:09:15Z",
       "isps": [
-        "Chunghwa Telecom Co.,Ltd."
+        "INAP-AMS-1"
       ]
     },
     {
-      "asn": "AS329473",
-      "asn_name": "Click Connect Proprietary Limited",
+      "asn": "AS45090",
+      "asn_name": "Shenzhen Tencent Computer Systems Company Limited",
       "ip_count": 1,
       "unique_ips": [
-        "102.208.34.7"
+        "119.91.218.233"
       ],
       "countries": [
-        "BW"
+        "CN"
       ],
-      "top_country": "BW",
+      "top_country": "CN",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -330,23 +187,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:05Z",
+      "first_seen": "2026-04-24T11:09:08Z",
+      "last_seen": "2026-04-24T11:09:08Z",
       "isps": [
-        "Click Connect Proprietary Limited"
+        "Tencent cloud computing (Beijing) Co., Ltd."
       ]
     },
     {
-      "asn": "AS680",
-      "asn_name": "Verein zur Foerderung eines Deutschen Forschungsnetzes e.V.",
+      "asn": "AS4766",
+      "asn_name": "Korea Telecom",
       "ip_count": 1,
       "unique_ips": [
-        "139.19.117.130"
+        "183.108.0.232"
       ],
       "countries": [
-        "DE"
+        "KR"
       ],
-      "top_country": "DE",
+      "top_country": "KR",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -360,40 +217,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:05Z",
+      "first_seen": "2026-04-24T11:09:08Z",
+      "last_seen": "2026-04-24T11:09:08Z",
       "isps": [
-        "Max-Planck-Institut fuer Informatik"
-      ]
-    },
-    {
-      "asn": "AS7545",
-      "asn_name": "TPG Telecom Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "60.242.32.230"
-      ],
-      "countries": [
-        "AU"
-      ],
-      "top_country": "AU",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:05Z",
-      "isps": [
-        "TPG Internet Pty Ltd."
+        "Korea Telecom"
       ]
     },
     {
@@ -401,7 +228,7 @@
       "asn_name": "China Telecom (Group)",
       "ip_count": 1,
       "unique_ips": [
-        "14.103.111.135"
+        "14.103.112.243"
       ],
       "countries": [
         "CN"
@@ -420,69 +247,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-24T09:48:06Z",
-      "last_seen": "2026-04-24T09:48:06Z",
+      "first_seen": "2026-04-24T11:09:09Z",
+      "last_seen": "2026-04-24T11:09:09Z",
       "isps": [
         "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS9541",
-      "asn_name": "Cyber Internet Services (Pvt) Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "101.53.233.72"
-      ],
-      "countries": [
-        "PK"
-      ],
-      "top_country": "PK",
-      "avg_abuse_score": 82,
-      "max_abuse_score": 82,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-04-24T09:48:05Z",
-      "last_seen": "2026-04-24T09:48:05Z",
-      "isps": [
-        "Cyber Internet Services Pakistan"
-      ]
-    },
-    {
-      "asn": "AS16509",
-      "asn_name": "Amazon.com, Inc.",
-      "ip_count": 1,
-      "unique_ips": [
-        "18.116.101.220"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-24T09:48:06Z",
-      "last_seen": "2026-04-24T09:48:06Z",
-      "isps": [
-        "Amazon Technologies Inc."
       ]
     }
   ]
