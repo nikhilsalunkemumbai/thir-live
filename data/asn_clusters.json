@@ -1,28 +1,14 @@
 {
-  "generated_at": "2026-04-24T15:11:28Z",
+  "generated_at": "2026-04-24T17:01:48Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 9,
-  "unique_asns": 7,
+  "total_ips_analyzed": 11,
+  "unique_asns": 10,
   "top_attack_asns": [
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS4811",
+      "asn_name": "China Telecom (Group)",
       "ip_count": 2,
       "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS135377",
-      "asn_name": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
-      "ip_count": 1,
-      "risk_tier": "LOW",
       "anon_count": 0
     },
     {
@@ -33,59 +19,94 @@
       "anon_count": 0
     },
     {
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS23724",
+      "asn_name": "IDC, China Telecommunications Corporation",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
       "asn": "AS3462",
       "asn_name": "Data Communication Business Group",
       "ip_count": 1,
-      "risk_tier": "HIGH",
+      "risk_tier": "MEDIUM",
       "anon_count": 0
     },
     {
-      "asn": "AS141319",
-      "asn_name": "Net Hub",
+      "asn": "AS24940",
+      "asn_name": "Hetzner Online GmbH",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS8434",
+      "asn_name": "Telenor Sverige AB",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS136052",
-      "asn_name": "PT Cloud Hosting Indonesia",
+      "asn": "AS209373",
+      "asn_name": "SWISSNET LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS3255",
+      "asn_name": "UARNet-Eksintech",
+      "ip_count": 1,
+      "risk_tier": "LOW",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS37963",
+      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "ip_count": 1,
+      "risk_tier": "MEDIUM",
       "anon_count": 0
     }
   ],
   "high_risk_asns": [
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS4811",
+      "asn_name": "China Telecom (Group)",
       "ip_count": 2,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS135377",
-      "asn_name": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS3462",
-      "asn_name": "Data Communication Business Group",
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS141319",
-      "asn_name": "Net Hub",
+      "asn": "AS23724",
+      "asn_name": "IDC, China Telecommunications Corporation",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS136052",
-      "asn_name": "PT Cloud Hosting Indonesia",
+      "asn": "AS8434",
+      "asn_name": "Telenor Sverige AB",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS209373",
+      "asn_name": "SWISSNET LLC",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -94,49 +115,59 @@
   "anon_infrastructure": [],
   "country_summary": [
     {
-      "country": "US",
-      "code": "",
-      "count": 3
-    },
-    {
-      "country": "HK",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "IN",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "ID",
-      "code": "",
-      "count": 1
-    },
-    {
       "country": "CN",
       "code": "",
-      "count": 1
+      "count": 4
     },
     {
       "country": "TW",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "DE",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "US",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "SE",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "NL",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "KR",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "UA",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
+      "asn": "AS4811",
+      "asn_name": "China Telecom (Group)",
       "ip_count": 2,
       "unique_ips": [
-        "209.38.69.153",
-        "45.55.185.224"
+        "106.75.214.209",
+        "14.103.63.16"
       ],
       "countries": [
-        "US"
+        "CN"
       ],
-      "top_country": "US",
+      "top_country": "CN",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -150,70 +181,11 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-24T15:11:23Z",
-      "last_seen": "2026-04-24T15:11:24Z",
+      "first_seen": "2026-04-24T17:01:46Z",
+      "last_seen": "2026-04-24T17:01:47Z",
       "isps": [
-        "DigitalOcean, LLC"
-      ]
-    },
-    {
-      "asn": "AS135377",
-      "asn_name": "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED",
-      "ip_count": 2,
-      "unique_ips": [
-        "103.149.27.208",
-        "165.154.6.177"
-      ],
-      "countries": [
-        "HK"
-      ],
-      "top_country": "HK",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-04-24T15:11:24Z",
-      "last_seen": "2026-04-24T15:11:24Z",
-      "isps": [
-        "UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED"
-      ]
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
-      "ip_count": 1,
-      "unique_ips": [
-        "125.73.32.184"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 14,
-      "max_abuse_score": 14,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-04-24T15:11:27Z",
-      "last_seen": "2026-04-24T15:11:27Z",
-      "isps": [
-        "CHINANET Guangxi province network"
+        "Beijing Volcano Engine Technology Co., Ltd.",
+        "Shanghai UCloud Information Technology Company Limited"
       ]
     },
     {
@@ -221,14 +193,14 @@
       "asn_name": "Microsoft Corporation",
       "ip_count": 1,
       "unique_ips": [
-        "48.217.251.105"
+        "172.215.216.226"
       ],
       "countries": [
         "US"
       ],
       "top_country": "US",
-      "avg_abuse_score": 2,
-      "max_abuse_score": 2,
+      "avg_abuse_score": 25,
+      "max_abuse_score": 25,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -238,10 +210,70 @@
       "critical_count": 0,
       "risk_tier": "LOW",
       "tags": [],
-      "first_seen": "2026-04-24T15:11:23Z",
-      "last_seen": "2026-04-24T15:11:23Z",
+      "first_seen": "2026-04-24T17:01:45Z",
+      "last_seen": "2026-04-24T17:01:45Z",
       "isps": [
         "Microsoft Limited"
+      ]
+    },
+    {
+      "asn": "AS3786",
+      "asn_name": "LG DACOM Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "115.93.19.12"
+      ],
+      "countries": [
+        "KR"
+      ],
+      "top_country": "KR",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-24T17:01:46Z",
+      "last_seen": "2026-04-24T17:01:46Z",
+      "isps": [
+        "LG DACOM Corporation"
+      ]
+    },
+    {
+      "asn": "AS23724",
+      "asn_name": "IDC, China Telecommunications Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "106.75.77.231"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-04-24T17:01:46Z",
+      "last_seen": "2026-04-24T17:01:46Z",
+      "isps": [
+        "Shanghai UCloud Information Technology Company Limited"
       ]
     },
     {
@@ -249,14 +281,14 @@
       "asn_name": "Data Communication Business Group",
       "ip_count": 1,
       "unique_ips": [
-        "114.34.187.209"
+        "118.163.113.53"
       ],
       "countries": [
         "TW"
       ],
       "top_country": "TW",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
+      "avg_abuse_score": 87,
+      "max_abuse_score": 87,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -264,27 +296,55 @@
       "anon_count": 0,
       "high_risk_count": 0,
       "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-04-24T15:11:23Z",
-      "last_seen": "2026-04-24T15:11:23Z",
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-24T17:01:47Z",
+      "last_seen": "2026-04-24T17:01:47Z",
       "isps": [
         "Chunghwa Telecom Co.,Ltd."
       ]
     },
     {
-      "asn": "AS141319",
-      "asn_name": "Net Hub",
+      "asn": "AS24940",
+      "asn_name": "Hetzner Online GmbH",
       "ip_count": 1,
       "unique_ips": [
-        "103.158.40.65"
+        "91.99.206.46"
       ],
       "countries": [
-        "IN"
+        "DE"
       ],
-      "top_country": "IN",
+      "top_country": "DE",
+      "avg_abuse_score": 74,
+      "max_abuse_score": 74,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [
+        "cloud-provider"
+      ],
+      "first_seen": "2026-04-24T17:01:45Z",
+      "last_seen": "2026-04-24T17:01:45Z",
+      "isps": [
+        "Hetzner Online GmbH"
+      ]
+    },
+    {
+      "asn": "AS8434",
+      "asn_name": "Telenor Sverige AB",
+      "ip_count": 1,
+      "unique_ips": [
+        "84.216.60.18"
+      ],
+      "countries": [
+        "SE"
+      ],
+      "top_country": "SE",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -298,23 +358,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-04-24T15:11:24Z",
-      "last_seen": "2026-04-24T15:11:24Z",
+      "first_seen": "2026-04-24T17:01:45Z",
+      "last_seen": "2026-04-24T17:01:45Z",
       "isps": [
-        "Net Hub"
+        "Ownit Broadband"
       ]
     },
     {
-      "asn": "AS136052",
-      "asn_name": "PT Cloud Hosting Indonesia",
+      "asn": "AS209373",
+      "asn_name": "SWISSNET LLC",
       "ip_count": 1,
       "unique_ips": [
-        "103.146.202.174"
+        "31.56.209.39"
       ],
       "countries": [
-        "ID"
+        "NL"
       ],
-      "top_country": "ID",
+      "top_country": "NL",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -326,14 +386,68 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse",
-        "cloud-provider",
-        "hosting-provider"
+        "high-abuse"
       ],
-      "first_seen": "2026-04-24T15:11:25Z",
-      "last_seen": "2026-04-24T15:11:25Z",
+      "first_seen": "2026-04-24T17:01:45Z",
+      "last_seen": "2026-04-24T17:01:45Z",
       "isps": [
-        "PT Cloud Hosting Indonesia"
+        "SWISSNET LLC"
+      ]
+    },
+    {
+      "asn": "AS3255",
+      "asn_name": "UARNet-Eksintech",
+      "ip_count": 1,
+      "unique_ips": [
+        "194.44.110.114"
+      ],
+      "countries": [
+        "UA"
+      ],
+      "top_country": "UA",
+      "avg_abuse_score": 47,
+      "max_abuse_score": 47,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-04-24T17:01:46Z",
+      "last_seen": "2026-04-24T17:01:46Z",
+      "isps": [
+        "TzOV Biznes i Technologii"
+      ]
+    },
+    {
+      "asn": "AS37963",
+      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
+      "ip_count": 1,
+      "unique_ips": [
+        "39.96.222.211"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 73,
+      "max_abuse_score": 73,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "MEDIUM",
+      "tags": [],
+      "first_seen": "2026-04-24T17:01:45Z",
+      "last_seen": "2026-04-24T17:01:45Z",
+      "isps": [
+        "Aliyun Computing Co., LTD"
       ]
     }
   ]
