@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-04-27T19:28:24.818233+00:00",
-  "total_sessions_with_commands": 4,
-  "total_clusters": 2,
+  "generated_at": "2026-04-27T21:06:40.068312+00:00",
+  "total_sessions_with_commands": 3,
+  "total_clusters": 1,
   "campaign_clusters": 1,
-  "singleton_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
@@ -44,9 +44,9 @@
       ],
       "session_count": 3,
       "unique_ips": [
-        "103.106.194.74",
-        "211.186.79.173",
-        "203.116.129.55"
+        "34.93.128.179",
+        "119.92.70.82",
+        "189.194.140.170"
       ],
       "unique_ip_count": 3,
       "sequence_hash": "98af0db988d5971c",
@@ -78,61 +78,28 @@
       ],
       "members": [
         {
-          "session_id": "IR-76f48e7ae1eb",
-          "src_ip": "211.186.79.173",
+          "session_id": "IR-567f60d16fb0",
+          "src_ip": "119.92.70.82",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-27T17:31:16.192135Z"
+          "timestamp": "2026-04-27T19:43:14.114214Z"
         },
         {
-          "session_id": "IR-2c995bdf3050",
-          "src_ip": "203.116.129.55",
+          "session_id": "IR-02df1cf2ff4f",
+          "src_ip": "189.194.140.170",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-27T18:06:46.101929Z"
+          "timestamp": "2026-04-27T19:48:38.853617Z"
         },
         {
-          "session_id": "IR-7cd18dfcaa3b",
-          "src_ip": "103.106.194.74",
+          "session_id": "IR-a93ea6bfa352",
+          "src_ip": "34.93.128.179",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-27T18:39:44.126882Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "91.134.231.188"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "6fa4c8ac58e7a1d9",
-      "ttps": [
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        }
-      ],
-      "representative_commands": [
-        "uname -s -m"
-      ],
-      "members": [
-        {
-          "session_id": "IR-517cc7a9fd52",
-          "src_ip": "91.134.231.188",
-          "country": "",
-          "isp": "",
-          "command_count": 1,
-          "timestamp": "2026-04-27T19:21:41.994678Z"
+          "timestamp": "2026-04-27T20:41:17.533328Z"
         }
       ]
     }
