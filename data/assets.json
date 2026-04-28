@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T21:09:56.059335709Z",
+  "generated_at": "2026-04-28T22:58:28.406505549Z",
   "nist_control": "ID.AM-1",
   "nist_function": "IDENTIFY",
   "description": "Physical devices and systems within the THIR honeypot infrastructure are inventoried. Updated hourly by Tool 05.",
@@ -18,8 +18,8 @@
       "platform": "AWS EC2 Ubuntu",
       "status": "UP",
       "first_seen": "2026-03-08T10:09:22.669814933Z",
-      "last_seen": "2026-04-28T21:09:56.059331301Z",
-      "last_checked": "2026-04-28T21:09:56.059331301Z",
+      "last_seen": "2026-04-28T22:58:28.406502093Z",
+      "last_checked": "2026-04-28T22:58:28.406502093Z",
       "nist_control": "ID.AM-1",
       "nist_function": "IDENTIFY"
     }
