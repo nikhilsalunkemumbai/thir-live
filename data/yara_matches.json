@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T03:33:53.294043+00:00",
+  "generated_at": "2026-04-28T06:33:48.416931+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 21,
@@ -68,10 +68,10 @@
       "families": [
         "Gafgyt",
         "Mushtik",
+        "Sora",
         "Downloader",
         "XMRig",
-        "Rootkit",
-        "Sora"
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -351,10 +351,10 @@
       "families": [
         "Gafgyt",
         "Mushtik",
+        "Sora",
         "Downloader",
         "XMRig",
-        "Rootkit",
-        "Sora"
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
