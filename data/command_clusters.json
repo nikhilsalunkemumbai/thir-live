@@ -1,31 +1,17 @@
 {
-  "generated_at": "2026-04-28T19:45:47.320803+00:00",
+  "generated_at": "2026-04-28T21:10:07.195829+00:00",
   "total_sessions_with_commands": 3,
-  "total_clusters": 2,
-  "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "total_clusters": 1,
+  "campaign_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
-      "name": "Mirai/IoT Botnet",
-      "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
-      "ttps": [
-        "T1105",
-        "T1083",
-        "T1070",
-        "T1140",
-        "T1059.004"
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 1,
+      "session_count": 3,
+      "unique_ip_count": 3,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -38,76 +24,6 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
-      "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-      "matched_campaigns": [
-        {
-          "name": "Mirai/IoT Botnet",
-          "ttps": [
-            "T1105",
-            "T1059.004"
-          ],
-          "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 2,
-          "pattern_total": 3
-        }
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "27.43.204.187"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "08def998795ae6e4",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
-        },
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1059.004",
-          "name": "T1059.004"
-        }
-      ],
-      "representative_commands": [
-        "start",
-        "enable",
-        "config terminal",
-        "system",
-        "linuxshell",
-        "su",
-        "shell",
-        "sh",
-        "cd /tmp || cd /var/ || cd /var/run || cd /mnt || cd /root || cd /;/bin/busybox echo -ne '\\x45\\x4c\\x46'",
-        "/bin/busybox wget;/bin/busybox echo -ne '\\x45\\x4c\\x46'"
-      ],
-      "members": [
-        {
-          "session_id": "IR-e0891dc061cf",
-          "src_ip": "27.43.204.187",
-          "country": "",
-          "isp": "",
-          "command_count": 16,
-          "timestamp": "2026-04-28T18:38:05.600178Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -126,11 +42,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 3,
       "unique_ips": [
-        "20.193.141.133"
+        "103.226.139.139",
+        "209.38.20.25",
+        "94.180.238.116"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 3,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -160,20 +78,28 @@
       ],
       "members": [
         {
-          "session_id": "IR-a07b4ae06c46",
-          "src_ip": "20.193.141.133",
+          "session_id": "IR-60fd77958f01",
+          "src_ip": "209.38.20.25",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-28T19:24:30.619545Z"
+          "timestamp": "2026-04-28T20:20:55.774343Z"
         },
         {
-          "session_id": "IR-d1f3d2ab88ef",
-          "src_ip": "20.193.141.133",
+          "session_id": "IR-a1b821e53a0d",
+          "src_ip": "94.180.238.116",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-28T19:36:25.886344Z"
+          "timestamp": "2026-04-28T20:44:20.554781Z"
+        },
+        {
+          "session_id": "IR-22f70f7cf8d4",
+          "src_ip": "103.226.139.139",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-28T20:50:07.165462Z"
         }
       ]
     }
