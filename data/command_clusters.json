@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-28T22:58:38.192945+00:00",
-  "total_sessions_with_commands": 2,
-  "total_clusters": 1,
+  "generated_at": "2026-04-29T03:31:12.050241+00:00",
+  "total_sessions_with_commands": 12,
+  "total_clusters": 4,
   "campaign_clusters": 1,
-  "singleton_clusters": 0,
+  "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-001",
+      "cluster_id": "CLU-003",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
+      "session_count": 8,
       "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
@@ -24,6 +24,79 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "187.120.189.6"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "1fb64ad0e7e4f5a4",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "?",
+        "ls",
+        "cd ~",
+        "> a6s87d6as8zdgtdyas.ini",
+        "ls",
+        "exit"
+      ],
+      "members": [
+        {
+          "session_id": "IR-3f1992b60e9d",
+          "src_ip": "187.120.189.6",
+          "country": "",
+          "isp": "",
+          "command_count": 6,
+          "timestamp": "2026-04-29T01:16:48.041490Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "187.120.189.6"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "21e277d451203fee",
+      "ttps": [
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        }
+      ],
+      "representative_commands": [
+        "?",
+        "cd ~",
+        "ls"
+      ],
+      "members": [
+        {
+          "session_id": "IR-bbcdf422afff",
+          "src_ip": "187.120.189.6",
+          "country": "",
+          "isp": "",
+          "command_count": 3,
+          "timestamp": "2026-04-29T01:17:22.363426Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -42,10 +115,10 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 8,
       "unique_ips": [
-        "109.91.4.177",
-        "112.217.199.222"
+        "177.17.92.158",
+        "163.7.6.74"
       ],
       "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
@@ -77,20 +150,122 @@
       ],
       "members": [
         {
-          "session_id": "IR-248699b80d36",
-          "src_ip": "112.217.199.222",
+          "session_id": "IR-e7b5f7883faa",
+          "src_ip": "163.7.6.74",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-28T21:18:33.263323Z"
+          "timestamp": "2026-04-29T00:08:12.405638Z"
         },
         {
-          "session_id": "IR-6630c89df042",
-          "src_ip": "109.91.4.177",
+          "session_id": "IR-16e24d6298f5",
+          "src_ip": "163.7.6.74",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-04-28T22:04:26.092529Z"
+          "timestamp": "2026-04-29T00:09:15.947621Z"
+        },
+        {
+          "session_id": "IR-249dfa2d9277",
+          "src_ip": "177.17.92.158",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T02:20:37.180377Z"
+        },
+        {
+          "session_id": "IR-16b11e7c3d8e",
+          "src_ip": "177.17.92.158",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T02:24:28.398926Z"
+        },
+        {
+          "session_id": "IR-baa012b3d45a",
+          "src_ip": "177.17.92.158",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T02:28:11.474176Z"
+        },
+        {
+          "session_id": "IR-a6eee8afeea8",
+          "src_ip": "177.17.92.158",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T02:35:22.417059Z"
+        },
+        {
+          "session_id": "IR-eb7588de4e9c",
+          "src_ip": "177.17.92.158",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T02:38:43.737353Z"
+        },
+        {
+          "session_id": "IR-890187918f26",
+          "src_ip": "177.17.92.158",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T02:45:51.954131Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-004",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 2,
+      "unique_ips": [
+        "31.56.209.39"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "5769bf594afef6e5",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "Ingress Tool Transfer"
+        },
+        {
+          "id": "T1083",
+          "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        }
+      ],
+      "representative_commands": [
+        "echo \"cat /proc/1/mounts && ls /proc/1/; curl2; ps aux; ps\" | sh",
+        "cat /proc/1/mounts && ls /proc/1/; curl2; ps aux; ps"
+      ],
+      "members": [
+        {
+          "session_id": "IR-ad40dedc2c36",
+          "src_ip": "31.56.209.39",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T00:17:50.486934Z"
+        },
+        {
+          "session_id": "IR-0fd16d6b0c52",
+          "src_ip": "31.56.209.39",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-04-29T00:17:51.382126Z"
         }
       ]
     }
