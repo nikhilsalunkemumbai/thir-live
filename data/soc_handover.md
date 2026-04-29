@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-04-29 |
-| **Generated At** | 2026-04-29T21:09:52Z |
-| **Shift Time** | 21:09 UTC |
+| **Generated At** | 2026-04-29T22:59:55Z |
+| **Shift Time** | 22:59 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **42** |
-| Confirmed Threats | **35** |
-| False Positives Filtered | **7** (16.7%) |
-| Unique Attacker IPs | **12** |
-| Countries of Origin | **10** |
+| Total Sessions Captured | **58** |
+| Confirmed Threats | **23** |
+| False Positives Filtered | **35** (60.3%) |
+| Unique Attacker IPs | **22** |
+| Countries of Origin | **13** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **42** |
+| Low Severity Cases | **58** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 3 empty upload attempt(s) |
 
 ---
@@ -40,22 +40,22 @@
 
 | Username | Attempts |
 |---|---|
-| `scan` | 1 |
-| `arma3server` | 1 |
+| `wetserver` | 1 |
+| `ubuntu` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `` | 1 |
-| `arma3server123` | 1 |
+| `wetserver` | 1 |
+| `Passw0rd1111` | 1 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `scan` | `` | 1 |
-| `arma3server` | `arma3server123` | 1 |
+| `wetserver` | `wetserver` | 1 |
+| `ubuntu` | `Passw0rd1111` | 1 |
 
 ---
 
@@ -63,33 +63,30 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **42** |
-| Sessions with Fingerprint | **4** |
-| Unique HASSH Fingerprints | **4** |
+| Total Sessions Parsed | **58** |
+| Sessions with Fingerprint | **3** |
+| Unique HASSH Fingerprints | **3** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| libssh | 28 |
-| Go SSH scanner | 1 |
+| libssh | 16 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `03a80b21afa8...` | Modern SSH client | 19 | 1 |
-| `0a07365cc01f...` | Generic scanner | 1 | 1 |
-| `af8223ac9914...` | libssh-based | 1 | 1 |
+| `03a80b21afa8...` | Modern SSH client | 12 | 4 |
+| `af8223ac9914...` | libssh-based | 2 | 2 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `03a80b21afa8...` | libssh | 19 | 1 | Modern SSH client |
-| `95420f9d932d...` | libssh | 8 | 1 | — |
-| `0a07365cc01f...` | Go SSH scanner | 1 | 1 | Generic scanner |
-| `af8223ac9914...` | libssh | 1 | 1 | libssh-based |
+| `03a80b21afa8...` | libssh | 12 | 4 | Modern SSH client |
+| `af8223ac9914...` | libssh | 2 | 2 | libssh-based |
+| `95420f9d932d...` | libssh | 2 | 1 | — |
 
 ---
 
@@ -97,23 +94,23 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **12** |
-| Unique ASNs | **11** |
-| High-Risk ASNs | **4** |
+| Total IPs Analysed | **22** |
+| Unique ASNs | **18** |
+| High-Risk ASNs | **10** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS38365` | Beijing Baidu Netcom Science and Technology Co., Ltd. | 2 | HIGH |
-| `AS45090` | Shenzhen Tencent Computer Systems Company Limited | 1 | HIGH |
-| `AS35819` | Etihad Etisalat, a joint stock company | 1 | LOW |
-| `AS8075` | Microsoft Corporation | 1 | LOW |
-| `AS263703` | VIGINET C.A | 1 | LOW |
-| `AS8452` | TE-AS | 1 | MEDIUM |
-| `AS8562` | A1 Telekom Austria AG | 1 | HIGH |
-| `AS264456` | GBATELECOM LTDA | 1 | LOW |
+| `AS9121` | Turk Telekomunikasyon Anonim Sirketi | 2 | LOW |
+| `AS137718` | Beijing Volcano Engine Technology Co., Ltd. | 2 | HIGH |
+| `AS8075` | Microsoft Corporation | 2 | HIGH |
+| `AS36925` | MEDITELECOM | 2 | LOW |
+| `AS21859` | Zenlayer Inc | 1 | HIGH |
+| `AS37342` | Movitel, SA | 1 | LOW |
+| `AS17621` | China Unicom Shanghai network | 1 | HIGH |
+| `AS45102` | Alibaba (US) Technology Co., Ltd. | 1 | HIGH |
 
 ---
 
@@ -135,11 +132,17 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `106.13.142[.]171` | **28** | 2026-04-29 19:56 | 2026-04-29 20:09 | 26m | 1 | `T1110.001 · T1592` | 🟠 MEDIUM |
-| `160.119.76[.]62` | **4** | 2026-04-29 19:44 | 2026-04-29 19:51 | 0m | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `1.14.73[.]146` | 1 | 2026-04-29 20:47 | 2026-04-29 20:48 | 30s | 0 | `T1592` | 🟢 LOW |
-| `120.48.78[.]222` | 1 | 2026-04-29 19:55 | 2026-04-29 19:57 | 120s | 0 | `T1592` | 🟢 LOW |
-| `90.152.202[.]214` | 1 | 2026-04-29 20:32 | 2026-04-29 20:32 | 30s | 0 | `T1592` | 🟢 LOW |
+| `180.76.170[.]111` | **9** | 2026-04-29 22:54 | 2026-04-29 22:59 | 2m | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `39.174.42[.]18` | **3** | 2026-04-29 22:52 | 2026-04-29 22:58 | 4m | 0 | `T1592` | 🟢 LOW |
+| `101.126.4[.]215` | **2** | 2026-04-29 21:41 | 2026-04-29 21:43 | 2m | 0 | `T1592` | 🟢 LOW |
+| `109.105.210[.]92` | **2** | 2026-04-29 21:22 | 2026-04-29 21:22 | 0m | 0 | `T1592` | 🟢 LOW |
+| `106.75.224[.]96` | 1 | 2026-04-29 22:57 | 2026-04-29 22:59 | 120s | 0 | `T1592` | 🟢 LOW |
+| `118.145.228[.]55` | 1 | 2026-04-29 22:43 | 2026-04-29 22:45 | 120s | 0 | `T1592` | 🟢 LOW |
+| `180.93.75[.]229` | 1 | 2026-04-29 22:06 | 2026-04-29 22:06 | 0s | 0 | `T1592` | 🟢 LOW |
+| `20.187.65[.]213` | 1 | 2026-04-29 21:37 | 2026-04-29 21:38 | 15s | 0 | `T1592` | 🟢 LOW |
+| `34.39.58[.]191` | 1 | 2026-04-29 22:53 | 2026-04-29 22:53 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `8.222.178[.]0` | 1 | 2026-04-29 21:16 | 2026-04-29 21:16 | 30s | 0 | `T1592` | 🟢 LOW |
+| `91.230.168[.]31` | 1 | 2026-04-29 22:39 | 2026-04-29 22:39 | 0s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -178,13 +181,16 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `1.14.73[.]146` | CN | Tencent cloud computing (Beijing) Co., Ltd. | **100** ⚠️ | 0 |
-| `120.48.78[.]222` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 3 |
-| `160.119.76[.]62` | NL | HostUS Solutions LLC | **100** ⚠️ | 1 |
-| `90.152.202[.]214` | AT | A1 Telekom Austria AG | **100** ⚠️ | 25 |
-| `106.13.142[.]171` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 50 |
-| `41.38.31[.]83` | EG | TE Data | **50** | 7 |
-| `190.97.246[.]20` | VE | VIGINET C.A | 20 | 5 |
+| `20.187.65[.]213` | HK | Microsoft Corporation | **100** ⚠️ | 4 |
+| `91.230.168[.]31` | US | FR ONYPHE | **100** ⚠️ | 50 |
+| `106.75.224[.]96` | CN | Shanghai UCloud Information Technology Company Limited | **100** ⚠️ | 11 |
+| `39.174.42[.]18` | CN | China Mobile Communications Corporation | **100** ⚠️ | 35 |
+| `101.126.4[.]215` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 50 |
+| `180.93.75[.]229` | VN | Saigon Postel Corporation | **100** ⚠️ | 14 |
+| `118.145.228[.]55` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 3 |
+| `8.222.178[.]0` | SG | Alibaba Cloud (Singapore) Private Limited | **100** ⚠️ | 50 |
+| `109.105.210[.]92` | US | ICG-ZEN-DFW | **100** ⚠️ | 50 |
+| `34.39.58[.]191` | GB | Google LLC | **100** ⚠️ | 50 |
 
 ---
 
@@ -192,18 +198,18 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 29 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 16 |
 | [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 2 |
 
 ---
 
-## 🔕 False Positive Summary (7 filtered)
+## 🔕 False Positive Summary (35 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 5 |
-| AbuseIPDB score 20 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 1 |
+| AbuseIPDB score 0 below threshold 25 | 8 |
+| AbuseIPDB score 16 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 26 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -214,19 +220,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 42 cases |
+| Tool 26  | Incident Timeline Generator | ✅ 58 cases |
 | Tool 34  | Credential Extractor        | ✅ 2 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 4 fingerprints |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 3 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 12 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 7 filtered (16.7%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 22 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 35 filtered (60.3%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 11 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 18 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 24 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 5 recon entry/entries in table (2 group(s) consolidating 32 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 11 recon entry/entries in table (4 group(s) consolidating 16 session(s)).
 
 ---
 
@@ -242,4 +248,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-04-29T21:09:52Z_
+_Report time: 2026-04-29T22:59:55Z_
