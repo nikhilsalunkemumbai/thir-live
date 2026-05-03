@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-03T03:35:39.426288+00:00",
+  "generated_at": "2026-05-03T06:30:16.472376+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 22,
@@ -21,11 +21,11 @@
       "count": 2
     },
     {
-      "family": "Mushtik",
+      "family": "Downloader",
       "count": 2
     },
     {
-      "family": "Downloader",
+      "family": "Mushtik",
       "count": 2
     },
     {
@@ -47,10 +47,10 @@
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
         "XMRig",
-        "Mushtik",
+        "Downloader",
         "Gafgyt",
-        "Rootkit",
-        "Downloader"
+        "Mushtik",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -67,11 +67,11 @@
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
         "XMRig",
-        "Mushtik",
+        "Downloader",
         "Sora",
         "Gafgyt",
-        "Rootkit",
-        "Downloader"
+        "Mushtik",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -80,8 +80,8 @@
       "sha256": "8daf92f0870c58ece8b68a3057c3ab6e8477215f853c54cdfe790acf1141161d",
       "families": [
         "Mirai",
-        "Gafgyt",
-        "Rootkit"
+        "Rootkit",
+        "Gafgyt"
       ],
       "severity": "CRITICAL"
     },
@@ -172,10 +172,10 @@
       "classified": true,
       "families": [
         "XMRig",
-        "Mushtik",
+        "Downloader",
         "Gafgyt",
-        "Rootkit",
-        "Downloader"
+        "Mushtik",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -371,11 +371,11 @@
       "classified": true,
       "families": [
         "XMRig",
-        "Mushtik",
+        "Downloader",
         "Sora",
         "Gafgyt",
-        "Rootkit",
-        "Downloader"
+        "Mushtik",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
@@ -503,8 +503,8 @@
       "classified": true,
       "families": [
         "Mirai",
-        "Gafgyt",
-        "Rootkit"
+        "Rootkit",
+        "Gafgyt"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
