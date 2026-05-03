@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-05-03 |
-| **Generated At** | 2026-05-03T13:19:10Z |
-| **Shift Time** | 13:19 UTC |
+| **Generated At** | 2026-05-03T14:52:33Z |
+| **Shift Time** | 14:52 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **102** |
-| Confirmed Threats | **45** |
-| False Positives Filtered | **57** (55.9%) |
-| Unique Attacker IPs | **29** |
-| Countries of Origin | **17** |
+| Total Sessions Captured | **177** |
+| Confirmed Threats | **58** |
+| False Positives Filtered | **119** (67.2%) |
+| Unique Attacker IPs | **22** |
+| Countries of Origin | **14** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **102** |
+| Low Severity Cases | **177** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 4 empty upload attempt(s) |
 
 ---
@@ -30,35 +30,41 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **3** |
-| Unique Credential Pairs | **3** |
-| Unique Usernames | **3** |
-| Unique Passwords | **3** |
+| Total Auth Attempts | **8** |
+| Unique Credential Pairs | **8** |
+| Unique Usernames | **6** |
+| Unique Passwords | **8** |
 | Successful Auth Pairs | **0** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `GET / HTTP/1.1` | 1 |
-| `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36` | 1 |
-| `Accept-Encoding: gzip` | 1 |
+| `admin` | 3 |
+| `ovpn` | 1 |
+| `test2` | 1 |
+| `btserver` | 1 |
+| `testuser` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `Host: 13.235.92.17:23` | 1 |
-| `Accept: */*` | 1 |
-| `` | 1 |
+| `admin@654321` | 1 |
+| `0123456789` | 1 |
+| `ovpn123` | 1 |
+| `admin` | 1 |
+| `1q2w3e4r` | 1 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `GET / HTTP/1.1` | `Host: 13.235.92.17:23` | 1 |
-| `User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36` | `Accept: */*` | 1 |
-| `Accept-Encoding: gzip` | `` | 1 |
+| `admin` | `admin@654321` | 1 |
+| `admin` | `0123456789` | 1 |
+| `ovpn` | `ovpn123` | 1 |
+| `admin` | `admin` | 1 |
+| `test2` | `1q2w3e4r` | 1 |
 
 ---
 
@@ -66,29 +72,32 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **102** |
-| Sessions with Fingerprint | **2** |
-| Unique HASSH Fingerprints | **2** |
+| Total Sessions Parsed | **177** |
+| Sessions with Fingerprint | **3** |
+| Unique HASSH Fingerprints | **3** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| Go SSH scanner | 3 |
+| libssh | 31 |
+| Go SSH scanner | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `17a5327c6d98...` | Mirai/variant | 2 | 1 |
-| `9052c4ab4164...` | Mirai/variant | 1 | 1 |
+| `03a80b21afa8...` | Modern SSH client | 26 | 1 |
+| `af8223ac9914...` | libssh-based | 5 | 2 |
+| `873a5fb5fedc...` | Mirai/variant | 1 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `17a5327c6d98...` | Go SSH scanner | 2 | 1 | Mirai/variant |
-| `9052c4ab4164...` | Go SSH scanner | 1 | 1 | Mirai/variant |
+| `03a80b21afa8...` | libssh | 26 | 1 | Modern SSH client |
+| `af8223ac9914...` | libssh | 5 | 2 | libssh-based |
+| `873a5fb5fedc...` | Go SSH scanner | 1 | 1 | Mirai/variant |
 
 ---
 
@@ -96,23 +105,23 @@
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **29** |
-| Unique ASNs | **27** |
-| High-Risk ASNs | **9** |
+| Total IPs Analysed | **22** |
+| Unique ASNs | **22** |
+| High-Risk ASNs | **8** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS4134` | CHINANET BACKBONE | 2 | LOW |
-| `AS8075` | Microsoft Corporation | 2 | HIGH |
-| `AS150862` | VPSTTT COMPUTER COMPANY LIMITED | 1 | MEDIUM |
-| `AS48090` | TECHOFF SRV LIMITED | 1 | LOW |
-| `AS48557` | PE Aristambayeva Taisiia Anatolyevna | 1 | LOW |
-| `AS49604` | Zone Media OU | 1 | MEDIUM |
-| `AS137718` | Beijing Volcano Engine Technology Co., Ltd. | 1 | HIGH |
-| `AS14618` | Amazon.com, Inc. | 1 | HIGH |
+| `AS17638` | ASN for TIANJIN Provincial Net of CT | 1 | HIGH |
+| `AS36903` | Office National des Postes et Telecommunications ONPT (Maroc Telecom) / IAM | 1 | LOW |
+| `AS141995` | Contabo Asia Private Limited | 1 | MEDIUM |
+| `AS11664` | Techtel LMDS Comunicaciones Interactivas S.A. | 1 | LOW |
+| `AS27837` | Dialnet de Colombia S.A. E.S.P. | 1 | LOW |
+| `AS263402` | INFORMATICA.COM LTDA | 1 | LOW |
+| `AS270570` | JuniorNet Fibra | 1 | LOW |
+| `AS3462` | Data Communication Business Group | 1 | HIGH |
 
 ---
 
@@ -134,16 +143,15 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `43.229.63[.]36` | **29** | 2026-05-03 12:14 | 2026-05-03 12:17 | 15m | 0 | `T1592` | 🟠 MEDIUM |
-| `103.193.145[.]239` | **5** | 2026-05-03 11:15 | 2026-05-03 11:17 | 10m | 0 | `T1592` | 🟢 LOW |
-| `101.96.200[.]56` | **2** | 2026-05-03 11:00 | 2026-05-03 11:04 | 4m | 0 | `T1592` | 🟢 LOW |
-| `18.218.118[.]203` | **2** | 2026-05-03 11:41 | 2026-05-03 11:44 | 0m | 0 | `T1592` | 🟢 LOW |
-| `52.188.189[.]6` | **2** | 2026-05-03 12:22 | 2026-05-03 12:23 | 0m | 0 | `T1592` | 🟢 LOW |
-| `111.170.153[.]236` | 1 | 2026-05-03 11:38 | 2026-05-03 11:38 | 0s | 0 | `T1592` | 🟢 LOW |
-| `120.78.9[.]93` | 1 | 2026-05-03 11:47 | 2026-05-03 11:47 | 30s | 0 | `T1592` | 🟢 LOW |
-| `18.215.159[.]152` | 1 | 2026-05-03 12:56 | 2026-05-03 12:56 | 0s | 0 | `T1592` | 🟢 LOW |
-| `58.151.173[.]28` | 1 | 2026-05-03 12:04 | 2026-05-03 12:05 | 30s | 0 | `T1592` | 🟢 LOW |
-| `93.123.109[.]222` | 1 | 2026-05-03 11:09 | 2026-05-03 11:09 | 0s | 3 | `T1110.001` | 🟢 LOW |
+| `180.213.44[.]242` | **26** | 2026-05-03 14:18 | 2026-05-03 14:52 | 44m | 2 | `T1110.001 · T1592` | 🟠 MEDIUM |
+| `62.72.47[.]216` | **22** | 2026-05-03 14:11 | 2026-05-03 14:52 | 9m | 0 | `T1592` | 🟠 MEDIUM |
+| `173.249.52[.]138` | **4** | 2026-05-03 14:24 | 2026-05-03 14:43 | 0m | 4 | `T1110.001 · T1592` | 🟢 LOW |
+| `134.185.117[.]241` | 1 | 2026-05-03 14:06 | 2026-05-03 14:07 | 30s | 0 | `T1592` | 🟢 LOW |
+| `183.64.171[.]136` | 1 | 2026-05-03 14:26 | 2026-05-03 14:27 | 61s | 1 | `T1110.001` | 🟢 LOW |
+| `201.17.133[.]138` | 1 | 2026-05-03 14:23 | 2026-05-03 14:23 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `45.229.156[.]171` | 1 | 2026-05-03 13:51 | 2026-05-03 13:53 | 120s | 0 | `T1592` | 🟢 LOW |
+| `59.127.80[.]34` | 1 | 2026-05-03 13:57 | 2026-05-03 13:57 | 30s | 0 | `T1592` | 🟢 LOW |
+| `66.132.172[.]182` | 1 | 2026-05-03 14:12 | 2026-05-03 14:12 | 15s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -184,15 +192,15 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `103.193.145[.]239` | ID | PT Jaringan Kabel Nusantara | **100** ⚠️ | 2 |
-| `18.218.118[.]203` | US | Amazon Technologies Inc. | **100** ⚠️ | 50 |
-| `111.170.153[.]236` | CN | CHINANET HUBEI PROVINCE NETWORK | **100** ⚠️ | 7 |
-| `101.96.200[.]56` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 7 |
-| `43.229.63[.]36` | AU | BINARY LANE PTY LTD | **100** ⚠️ | 0 |
-| `18.215.159[.]152` | US | Amazon Technologies Inc. | **100** ⚠️ | 45 |
-| `58.151.173[.]28` | KR | LG Uplus | **100** ⚠️ | 29 |
-| `120.78.9[.]93` | CN | Aliyun Computing Co., LTD | **100** ⚠️ | 50 |
-| `52.188.189[.]6` | US | Microsoft Corporation | **100** ⚠️ | 0 |
+| `134.185.117[.]241` | KR | Oracle Corporation | **100** ⚠️ | 50 |
+| `183.64.171[.]136` | CN | CHINANET Chongqing Province Network | **100** ⚠️ | 6 |
+| `59.127.80[.]34` | TW | Chunghwa Telecom Co.,Ltd. | **100** ⚠️ | 6 |
+| `66.132.172[.]182` | US | Censys, Inc. | **100** ⚠️ | 50 |
+| `201.17.133[.]138` | BR | Claro NXT Telecomunicacoes Ltda | **100** ⚠️ | 50 |
+| `173.249.52[.]138` | FR | Contabo GmbH | **100** ⚠️ | 50 |
+| `180.213.44[.]242` | CN | CHINANET TIANJIN PROVINCE NETWORK | **100** ⚠️ | 40 |
+| `45.229.156[.]171` | BR | Brnet Telecomunicacoes LTDA - ME | **97** ⚠️ | 1 |
+| `62.72.47[.]216` | SG | Contabo GmbH | **89** ⚠️ | 0 |
 | `217.146.67[.]166` | EE | Zone Media LLC | **70** | 0 |
 
 ---
@@ -201,22 +209,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 3 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 1 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 32 |
+| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 8 |
 
 ---
 
-## 🔕 False Positive Summary (57 filtered)
+## 🔕 False Positive Summary (119 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 6 |
-| AbuseIPDB score 15 below threshold 25 | 1 |
-| AbuseIPDB score 16 below threshold 25 | 1 |
-| AbuseIPDB score 21 below threshold 25 | 1 |
-| AbuseIPDB score 22 below threshold 25 | 1 |
-| AbuseIPDB score 24 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 46 |
+| AbuseIPDB score 0 below threshold 25 | 5 |
+| AbuseIPDB score 12 below threshold 25 | 1 |
+| AbuseIPDB score 24 below threshold 25 | 2 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 111 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -227,19 +232,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 102 cases |
-| Tool 34  | Credential Extractor        | ✅ 3 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
+| Tool 26  | Incident Timeline Generator | ✅ 177 cases |
+| Tool 34  | Credential Extractor        | ✅ 8 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 3 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 29 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 57 filtered (55.9%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 22 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 119 filtered (67.2%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 27 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 22 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 26 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 10 recon entry/entries in table (5 group(s) consolidating 40 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 9 recon entry/entries in table (3 group(s) consolidating 52 session(s)).
 
 ---
 
@@ -255,4 +260,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-05-03T13:19:10Z_
+_Report time: 2026-05-03T14:52:33Z_
