@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-05-05 |
-| **Generated At** | 2026-05-05T21:06:37Z |
-| **Shift Time** | 21:06 UTC |
+| **Generated At** | 2026-05-05T22:59:08Z |
+| **Shift Time** | 22:59 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **20** |
-| Confirmed Threats | **5** |
-| False Positives Filtered | **15** (75.0%) |
-| Unique Attacker IPs | **16** |
-| Countries of Origin | **11** |
-| High Severity Cases | **2** |
+| Total Sessions Captured | **44** |
+| Confirmed Threats | **20** |
+| False Positives Filtered | **24** (54.5%) |
+| Unique Attacker IPs | **27** |
+| Countries of Origin | **17** |
+| High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **18** |
+| Low Severity Cases | **44** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 4 empty upload attempt(s) |
 
 ---
@@ -30,38 +30,29 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **3** |
-| Unique Credential Pairs | **2** |
-| Unique Usernames | **2** |
-| Unique Passwords | **2** |
-| Successful Auth Pairs | **1** |
+| Total Auth Attempts | **1** |
+| Unique Credential Pairs | **1** |
+| Unique Usernames | **1** |
+| Unique Passwords | **1** |
+| Successful Auth Pairs | **0** |
 
 **Top Usernames:**
 
 | Username | Attempts |
 |---|---|
-| `root` | 2 |
 | `admin` | 1 |
 
 **Top Passwords:**
 
 | Password | Attempts |
 |---|---|
-| `iDirect` | 2 |
-| `Symbol` | 1 |
+| `default` | 1 |
 
 **Top Credential Pairs:**
 
 | Username | Password | Attempts |
 |---|---|---|
-| `root` | `iDirect` | 2 |
-| `admin` | `Symbol` | 1 |
-
-**⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
-
-| Username | Password | Source IP | Timestamp |
-|---|---|---|---|
-| `root` | `iDirect` | `49.118.251.14` | 2026-05-05T20:40:48 |
+| `admin` | `default` | 1 |
 
 ---
 
@@ -69,55 +60,32 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **20** |
-| Sessions with Fingerprint | **2** |
-| Unique HASSH Fingerprints | **2** |
+| Total Sessions Parsed | **44** |
+| Sessions with Fingerprint | **3** |
+| Unique HASSH Fingerprints | **3** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| Unknown | 2 |
-| OpenSSH | 2 |
+| libssh | 10 |
+| Unknown | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `f8e6c99abb65...` | Mirai/variant | 2 | 1 |
+| `af8223ac9914...` | libssh-based | 8 | 2 |
+| `03a80b21afa8...` | Modern SSH client | 2 | 2 |
+| `dd9bcf093c35...` | Mirai/variant | 1 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `95420f9d932d...` | Unknown | 2 | 1 | — |
-| `f8e6c99abb65...` | OpenSSH | 2 | 1 | Mirai/variant |
-
----
-
-## ⚔️ Attack Campaign Intelligence
-
-| Metric | Value |
-|---|---|
-| Total Command Clusters | **1** |
-| Campaign Clusters | **1** |
-| Highest Severity | **HIGH** |
-
-**Active Campaigns:**
-
-| Campaign | Severity | Sessions | IPs | TTPs |
-|---|---|---|---|---|
-| **Mirai/IoT Botnet** | 🔴 HIGH | 2 | 1 | `T1105, T1059.004` |
-
-**🔴 HIGH · Mirai/IoT Botnet**
-
-> Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.
-
-Representative commands:
-```
-/bin/busybox junI2lF1
-```
-Source IPs: `49.118.251.14`
+| `af8223ac9914...` | libssh | 8 | 2 | libssh-based |
+| `03a80b21afa8...` | libssh | 2 | 2 | Modern SSH client |
+| `dd9bcf093c35...` | Unknown | 1 | 1 | Mirai/variant |
 
 ---
 
@@ -125,23 +93,23 @@ Source IPs: `49.118.251.14`
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **16** |
-| Unique ASNs | **16** |
-| High-Risk ASNs | **3** |
+| Total IPs Analysed | **27** |
+| Unique ASNs | **25** |
+| High-Risk ASNs | **7** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS264628` | CORPORACION FIBEX TELECOM, C.A. | 1 | LOW |
-| `AS23520` | Columbus Networks USA, Inc. | 1 | LOW |
-| `AS14061` | DigitalOcean, LLC | 1 | LOW |
-| `AS267978` | JOTA NET TELECOMUNICACOES LTDA - ME | 1 | LOW |
-| `AS27717` | Corporacion Digitel C.A. | 1 | LOW |
-| `AS273244` | EXPERTOS EN TECNOLOGIA Y TELECOMUNICACIONES S.A.S | 1 | LOW |
-| `AS28026` | Grape S.A. | 1 | MEDIUM |
-| `AS47118` | MAN net Ltd. | 1 | HIGH |
+| `AS4134` | CHINANET BACKBONE | 3 | LOW |
+| `AS396982` | Google LLC | 1 | LOW |
+| `AS14061` | DigitalOcean, LLC | 1 | HIGH |
+| `AS58965` | ANJANI BROADBAND SOLUTIONS PVT.LTD. | 1 | LOW |
+| `AS4766` | Korea Telecom | 1 | HIGH |
+| `AS61490` | Cable Norte Tv SA | 1 | MEDIUM |
+| `AS37053` | RSAWEB (PTY) LTD | 1 | LOW |
+| `AS43766` | Mobile Telecommunication Company Saudi Arabia Joint-Stock company | 1 | LOW |
 
 ---
 
@@ -163,9 +131,13 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `198.49.65[.]122` | **3** | 2026-05-05 20:52 | 2026-05-05 21:06 | 0m | 0 | `T1592` | 🟢 LOW |
-| `176.251.64[.]35` | 1 | 2026-05-05 20:26 | 2026-05-05 20:28 | 120s | 0 | `T1592` | 🟢 LOW |
-| `91.203.177[.]121` | 1 | 2026-05-05 21:04 | 2026-05-05 21:04 | 31s | 0 | `T1592` | 🟢 LOW |
+| `223.223.199[.]221` | **7** | 2026-05-05 21:53 | 2026-05-05 22:07 | 10m | 0 | `T1592` | 🟢 LOW |
+| `198.49.65[.]122` | **6** | 2026-05-05 21:06 | 2026-05-05 21:44 | 3m | 0 | `T1592` | 🟢 LOW |
+| `183.171.158[.]170` | **3** | 2026-05-05 22:32 | 2026-05-05 22:38 | 6m | 0 | `T1592` | 🟢 LOW |
+| `120.48.168[.]33` | 1 | 2026-05-05 21:53 | 2026-05-05 21:55 | 120s | 0 | `T1592` | 🟢 LOW |
+| `121.153.60[.]137` | 1 | 2026-05-05 22:02 | 2026-05-05 22:02 | 3s | 1 | `T1110.001 · T1592` | 🟢 LOW |
+| `139.59.30[.]74` | 1 | 2026-05-05 22:24 | 2026-05-05 22:25 | 33s | 0 | `T1592` | 🟢 LOW |
+| `14.103.123[.]166` | 1 | 2026-05-05 21:55 | 2026-05-05 21:57 | 120s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -206,16 +178,16 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
+| `183.171.158[.]170` | MY | Celcom Axiata Berhad | **100** ⚠️ | 1 |
+| `223.223.199[.]221` | CN | BeiJing guangdianxinchuang communication & | **100** ⚠️ | 20 |
+| `120.48.168[.]33` | CN | Beijing Baidu Netcom Science and Technology Co., Ltd. | **100** ⚠️ | 30 |
+| `14.103.123[.]166` | CN | Beijing Volcano Engine Technology Co., Ltd. | **100** ⚠️ | 50 |
+| `121.153.60[.]137` | KR | Korea Telecom | **100** ⚠️ | 33 |
+| `139.59.30[.]74` | IN | DigitalOcean, LLC | **100** ⚠️ | 0 |
 | `198.49.65[.]122` | US | HostDime.com, Inc. | **100** ⚠️ | 0 |
-| `176.251.64[.]35` | GB | Sky UK Limited | **100** ⚠️ | 11 |
-| `91.203.177[.]121` | RU | MAN net Ltd. | **100** ⚠️ | 16 |
-| `190.106.106[.]24` | AR | Grape S.A. | **73** | 6 |
-| `186.167.113[.]91` | VE | VEARCO TELECOM, C.A - SAN FERNANDO | **42** | 0 |
-| `72.252.148[.]217` | JM | Columbus Networks USA, Inc. | **36** | 27 |
-| `157.230.222[.]77` | US | DigitalOcean, LLC | **36** | 1 |
-| `45.197.195[.]129` | VE | CORPORACION FIBEX TELECOM, C.A. | **33** | 0 |
-| `49.118.251[.]14` | CN | CHINANET xinjiang province network | 23 | 0 |
-| `201.252.8[.]56` | AR | Apolo -Gold-Telecom-Per | 23 | 0 |
+| `201.27.43[.]200` | BR | TELEFÔNICA BRASIL S.A | **65** | 0 |
+| `131.108.143[.]245` | AR | Cable Norte Tv SA | **62** | 0 |
+| `16.146.250[.]211` | US | Amazon.com, Inc. | **41** | 0 |
 
 ---
 
@@ -223,22 +195,22 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 4 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 2 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 11 |
 | [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 1 |
 
 ---
 
-## 🔕 False Positive Summary (15 filtered)
+## 🔕 False Positive Summary (24 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 3 |
-| AbuseIPDB score 16 below threshold 25 | 1 |
-| AbuseIPDB score 2 below threshold 25 | 1 |
-| AbuseIPDB score 23 below threshold 25 | 3 |
-| AbuseIPDB score 4 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 6 |
+| AbuseIPDB score 0 below threshold 25 | 8 |
+| AbuseIPDB score 12 below threshold 25 | 1 |
+| AbuseIPDB score 15 below threshold 25 | 1 |
+| AbuseIPDB score 18 below threshold 25 | 1 |
+| AbuseIPDB score 23 below threshold 25 | 2 |
+| AbuseIPDB score 24 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 10 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -249,19 +221,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 20 cases |
-| Tool 34  | Credential Extractor        | ✅ 3 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 1 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 16 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 15 filtered (75.0%) |
+| Tool 26  | Incident Timeline Generator | ✅ 44 cases |
+| Tool 34  | Credential Extractor        | ✅ 1 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 3 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 0 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 27 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 24 filtered (54.5%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 16 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 25 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 26 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 3 recon entry/entries in table (1 group(s) consolidating 3 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 7 recon entry/entries in table (3 group(s) consolidating 16 session(s)).
 
 ---
 
@@ -277,4 +249,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-05-05T21:06:37Z_
+_Report time: 2026-05-05T22:59:08Z_
