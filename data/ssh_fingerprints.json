@@ -1,73 +1,10 @@
 {
-  "generated_at": "2026-05-06T21:13:50.400307+00:00",
-  "total_sessions_parsed": 21,
-  "sessions_with_fingerprint": 2,
-  "sessions_without_kex": 19,
-  "unique_fingerprints": 2,
-  "top_families": [
-    {
-      "family": "Unknown",
-      "sessions": 1
-    },
-    {
-      "family": "Perl Net::SSH",
-      "sessions": 1
-    }
-  ],
-  "botnet_signals": [
-    {
-      "hassh": "3c0eaacec19ba322a90a5541dac09a06",
-      "signature": "Mirai/variant",
-      "session_count": 1,
-      "unique_ips": [
-        "94.231.206.107"
-      ]
-    }
-  ],
-  "fingerprints": [
-    {
-      "hassh": "95420f9d932ddd22833f17b96a80bedb",
-      "client_family": "Unknown",
-      "botnet_signature": null,
-      "version_strings": [
-        "\u0016\u0003\u0003\u0002a\u0001\u0000\u0002]\u0003\u0003\u0000'\\x88\\xfd\\xe3\\xe1\u001b\\xbaAH\\xa8\\xaf\u0002?\\xf0\\x9e\\xc7\"5\\x9f\u0016\\x84\\xf3}\\xca\u00031\\xfa\\xd2y\\xa1\u0011 6B\\xa8\\xaf\\xcb\\xcb\u000b\\xec\\xfcF4\\xbdC\\xe1\\x96B=\u0000\\xd8\\xe7k#'\\x93\\xb0\\xdb\u001d\\xcf\\xf4iiC\u0000\\x8a\u0000\u0016\u00003\u0000g\\xc0\\x9e\\xc0\\xa2\u0000\\x9e\u00009\u0000k\\xc0\\x9f\\xc0\\xa3\u0000\\x9f\u0000E\u0000\\xbe\u0000\\x88\u0000\\xc4\u0000\\x9a\\xc0\b\\xc0\t\\xc0#\\xc0\\xac\\xc0\\xae\\xc0+\\xc0"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "94.231.206.37"
-      ],
-      "sessions": [
-        "IR-e27e75a1e5fc"
-      ],
-      "kex_algs": null,
-      "enc_algs": null,
-      "mac_algs": null,
-      "comp_algs": null,
-      "first_seen": "2026-05-06T20:12:11.116513Z",
-      "last_seen": "2026-05-06T20:12:11.116513Z",
-      "unique_ip_count": 1
-    },
-    {
-      "hassh": "3c0eaacec19ba322a90a5541dac09a06",
-      "client_family": "Perl Net::SSH",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-perlssh"
-      ],
-      "session_count": 1,
-      "unique_ips": [
-        "94.231.206.107"
-      ],
-      "sessions": [
-        "IR-2e528615b03a"
-      ],
-      "kex_algs": "diffie-hellman-group-exchange-sha256,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1",
-      "enc_algs": "aes128-ctr,aes192-ctr,aes256-ctr,arcfour256,arcfour128,aes128-cbc,3des-cbc,blowfish-cbc,cast128-cbc,aes192-cbc,aes256-cbc,arcfour,rijndael-cbc@lysator.liu.se",
-      "mac_algs": "hmac-md5,hmac-sha1,umac-64@openssh.com,hmac-ripemd160,hmac-ripemd160@openssh.com,hmac-sha1-96,hmac-md5-96",
-      "comp_algs": "none",
-      "first_seen": "2026-05-06T20:14:10.728879Z",
-      "last_seen": "2026-05-06T20:14:10.728879Z",
-      "unique_ip_count": 1
-    }
-  ]
+  "generated_at": "2026-05-06T22:55:34.875988+00:00",
+  "total_sessions_parsed": 22,
+  "sessions_with_fingerprint": 0,
+  "sessions_without_kex": 22,
+  "unique_fingerprints": 0,
+  "top_families": [],
+  "botnet_signals": [],
+  "fingerprints": []
 }

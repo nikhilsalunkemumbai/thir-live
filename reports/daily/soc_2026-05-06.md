@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-05-06 |
-| **Generated At** | 2026-05-06T21:13:57Z |
-| **Shift Time** | 21:13 UTC |
+| **Generated At** | 2026-05-06T22:55:41Z |
+| **Shift Time** | 22:55 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **21** |
-| Confirmed Threats | **8** |
-| False Positives Filtered | **13** (61.9%) |
-| Unique Attacker IPs | **17** |
-| Countries of Origin | **9** |
+| Total Sessions Captured | **22** |
+| Confirmed Threats | **3** |
+| False Positives Filtered | **19** (86.4%) |
+| Unique Attacker IPs | **15** |
+| Countries of Origin | **8** |
 | High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **21** |
+| Low Severity Cases | **22** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 4 empty upload attempt(s) |
 
 ---
@@ -38,57 +38,27 @@
 
 ---
 
-## 🖥 SSH Fingerprint Intelligence
-
-| Metric | Value |
-|---|---|
-| Total Sessions Parsed | **21** |
-| Sessions with Fingerprint | **2** |
-| Unique HASSH Fingerprints | **2** |
-
-**Client Family Distribution:**
-
-| Client Family | Sessions |
-|---|---|
-| Unknown | 1 |
-| Perl Net::SSH | 1 |
-
-**⚠️ Botnet/Scanner KEX Signatures Detected:**
-
-| HASSH | Signature | Sessions | IPs |
-|---|---|---|---|
-| `3c0eaacec19b...` | Mirai/variant | 1 | 1 |
-
-**Top Fingerprints:**
-
-| HASSH | Client | Sessions | IPs | Botnet Sig |
-|---|---|---|---|---|
-| `95420f9d932d...` | Unknown | 1 | 1 | — |
-| `3c0eaacec19b...` | Perl Net::SSH | 1 | 1 | Mirai/variant |
-
----
-
 ## 🌐 ASN Cluster Intelligence
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **17** |
-| Unique ASNs | **13** |
-| High-Risk ASNs | **4** |
+| Total IPs Analysed | **15** |
+| Unique ASNs | **14** |
+| High-Risk ASNs | **3** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS213412` | ONYPHE SAS | 3 | HIGH |
-| `AS4134` | CHINANET BACKBONE | 3 | HIGH |
-| `AS23693` | PT. Telekomunikasi Selular | 1 | LOW |
-| `AS62240` | Clouvider | 1 | MEDIUM |
-| `AS199739` | Earthlink Telecommunications Equipment Trading & Services DMCC | 1 | LOW |
-| `AS35807` | SkyNet Ltd. | 1 | LOW |
-| `AS211298` | Driftnet Ltd | 1 | HIGH |
+| `AS4134` | CHINANET BACKBONE | 2 | LOW |
+| `AS10439` | CariNet, Inc. | 1 | HIGH |
+| `AS37457` | Telkom SA Ltd. | 1 | LOW |
+| `AS29256` | STE PDN Internal AS | 1 | MEDIUM |
+| `AS55836` | Reliance Jio Infocomm Limited | 1 | MEDIUM |
+| `AS9498` | BHARTI Airtel Ltd. | 1 | HIGH |
 | `AS8075` | Microsoft Corporation | 1 | LOW |
+| `AS24560` | Bharti Airtel Ltd., Telemedia Services | 1 | LOW |
 
 ---
 
@@ -110,12 +80,9 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `18.191.16[.]102` | **3** | 2026-05-06 20:23 | 2026-05-06 20:23 | 0m | 0 | `T1592` | 🟢 LOW |
-| `220.190.103[.]234` | 1 | 2026-05-06 20:48 | 2026-05-06 20:48 | 13s | 0 | `T1592` | 🟢 LOW |
-| `87.236.176[.]165` | 1 | 2026-05-06 20:28 | 2026-05-06 20:28 | 2s | 0 | `T1592` | 🟢 LOW |
-| `94.231.206[.]107` | 1 | 2026-05-06 20:14 | 2026-05-06 20:14 | 0s | 0 | `T1592` | 🟢 LOW |
-| `94.231.206[.]35` | 1 | 2026-05-06 20:12 | 2026-05-06 20:12 | 3s | 0 | `T1592` | 🟢 LOW |
-| `94.231.206[.]37` | 1 | 2026-05-06 20:12 | 2026-05-06 20:12 | 0s | 0 | `T1592` | 🟢 LOW |
+| `122.186.168[.]242` | 1 | 2026-05-06 21:47 | 2026-05-06 21:48 | 14s | 0 | `T1592` | 🟢 LOW |
+| `139.28.49[.]204` | 1 | 2026-05-06 21:42 | 2026-05-06 21:42 | 14s | 0 | `T1592` | 🟢 LOW |
+| `66.240.223[.]240` | 1 | 2026-05-06 22:00 | 2026-05-06 22:00 | 10s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -156,37 +123,28 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
-| `94.231.206[.]107` | SG | FR ONYPHE | **100** ⚠️ | 50 |
-| `94.231.206[.]35` | SG | FR ONYPHE | **100** ⚠️ | 47 |
-| `18.191.16[.]102` | US | Amazon Technologies Inc. | **100** ⚠️ | 13 |
-| `220.190.103[.]234` | CN | CHINANET-ZJ Wenzhou node network | **100** ⚠️ | 2 |
-| `87.236.176[.]165` | GB | Driftnet Ltd | **100** ⚠️ | 50 |
-| `94.231.206[.]37` | SG | FR ONYPHE | **100** ⚠️ | 50 |
+| `139.28.49[.]204` | SY | Telecom SY | **100** ⚠️ | 1 |
+| `66.240.223[.]240` | US | CariNet, Inc. | **100** ⚠️ | 50 |
+| `122.186.168[.]242` | IN | BHARTI TELENET LTD. NEW DELHI | **99** ⚠️ | 20 |
+| `152.58.33[.]53` | IN | Reliance Jio Infocomm Limited | **75** | 0 |
+| `37.53.89[.]117` | UA | JSC Ukrtelecom | **68** | 2 |
 | `92.119.19[.]57` | US | US, Atlanta, GA Network | **64** | 34 |
-| `115.204.169[.]194` | CN | CHINANET-ZJ Hangzhou node network | **56** | 0 |
-| `38.172.56[.]72` | VE | Cogent Communications, LLC | **41** | 1 |
-| `112.102.85[.]215` | CN | CHINANET HEILONGJIANG PROVINCE NETWORK | 15 | 0 |
+| `193.43.159[.]208` | SY | STE PDN Internal AS | **51** | 1 |
+| `60.182.229[.]63` | CN | CHINANET-ZJ Jinhua node network | **44** | 0 |
+| `149.106.145[.]178` | IL | Bezeq- THE ISRAEL TELECOMMUNICATION CORP. LTD. | **32** | 0 |
+| `45.224.201[.]105` | BR | NetLink Telecom | 24 | 0 |
 
 ---
 
-## 🎯 Top TTPs Observed (MITRE ATT&CK)
-
-| TTP ID | Count |
-|---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 2 |
-
----
-
-## 🔕 False Positive Summary (13 filtered)
+## 🔕 False Positive Summary (19 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 4 |
-| AbuseIPDB score 12 below threshold 25 | 1 |
-| AbuseIPDB score 15 below threshold 25 | 1 |
-| AbuseIPDB score 5 below threshold 25 | 1 |
-| AbuseIPDB score 7 below threshold 25 | 1 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 5 |
+| AbuseIPDB score 0 below threshold 25 | 2 |
+| AbuseIPDB score 15 below threshold 25 | 2 |
+| AbuseIPDB score 24 below threshold 25 | 1 |
+| AbuseIPDB score 4 below threshold 25 | 2 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 12 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -197,19 +155,19 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 21 cases |
+| Tool 26  | Incident Timeline Generator | ✅ 22 cases |
 | Tool 34  | Credential Extractor        | ✅ 0 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 0 fingerprints |
 | Tool 36  | Command Clustering          | ✅ 0 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 17 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 13 filtered (61.9%) |
+| Tool 27  | Threat Intel Feeder         | ✅ 15 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 19 filtered (86.4%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 13 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 14 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 26 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 0 priority case(s) shown individually · 6 recon entry/entries in table (1 group(s) consolidating 3 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 3 recon entry/entries in table (0 group(s) consolidating 0 session(s)).
 
 ---
 
@@ -225,4 +183,4 @@ _No priority cases this shift. All confirmed sessions were credential scans only
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-05-06T21:13:57Z_
+_Report time: 2026-05-06T22:55:41Z_
