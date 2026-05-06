@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-06T10:21:59.895414+00:00",
-  "total_sessions_with_commands": 4,
-  "total_clusters": 3,
+  "generated_at": "2026-05-06T14:26:00.794907+00:00",
+  "total_sessions_with_commands": 3,
+  "total_clusters": 1,
   "campaign_clusters": 1,
-  "singleton_clusters": 2,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 2,
-      "unique_ip_count": 2,
+      "session_count": 3,
+      "unique_ip_count": 3,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -42,12 +42,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 2,
+      "session_count": 3,
       "unique_ips": [
-        "103.56.115.187",
-        "45.251.115.132"
+        "129.121.77.79",
+        "102.213.34.99",
+        "163.7.5.228"
       ],
-      "unique_ip_count": 2,
+      "unique_ip_count": 3,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -77,104 +78,28 @@
       ],
       "members": [
         {
-          "session_id": "IR-76f8ef0c12f8",
-          "src_ip": "45.251.115.132",
+          "session_id": "IR-9a6577042e25",
+          "src_ip": "129.121.77.79",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-06T07:24:07.729153Z"
+          "timestamp": "2026-05-06T10:25:52.360986Z"
         },
         {
-          "session_id": "IR-89ad91c3f5b2",
-          "src_ip": "103.56.115.187",
+          "session_id": "IR-f4913cb1c0cb",
+          "src_ip": "163.7.5.228",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-06T08:34:06.735140Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-002",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "192.42.116.14"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "c330a4ab743af9b3",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
+          "timestamp": "2026-05-06T11:19:22.963214Z"
         },
         {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        }
-      ],
-      "representative_commands": [
-        "echo \"bash --help; ls /proc/1/; cat /proc/1/mounts; cat /proc/cpuinfo; echo __1778059630093037574\" | sh",
-        "bash --help; ls /proc/1/; cat /proc/1/mounts; cat /proc/cpuinfo; echo __1778059630093037574"
-      ],
-      "members": [
-        {
-          "session_id": "IR-ef5ae90a8f1e",
-          "src_ip": "192.42.116.14",
+          "session_id": "IR-347744eb8e9b",
+          "src_ip": "102.213.34.99",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-06T09:27:07.169097Z"
-        }
-      ]
-    },
-    {
-      "cluster_id": "CLU-003",
-      "is_campaign": false,
-      "campaign_name": null,
-      "campaign_severity": null,
-      "campaign_description": null,
-      "matched_campaigns": [],
-      "session_count": 1,
-      "unique_ips": [
-        "23.129.64.207"
-      ],
-      "unique_ip_count": 1,
-      "sequence_hash": "495b80e777ad9ac6",
-      "ttps": [
-        {
-          "id": "T1083",
-          "name": "File & Directory Discovery"
-        },
-        {
-          "id": "T1082",
-          "name": "System Information Discovery"
-        },
-        {
-          "id": "T1592",
-          "name": "Gather Victim Host Info"
-        }
-      ],
-      "representative_commands": [
-        "echo \"bash --help; ls /proc/1/; cat /proc/1/mounts; cat /proc/cpuinfo; echo __1778059700745346435\" | sh",
-        "bash --help; ls /proc/1/; cat /proc/1/mounts; cat /proc/cpuinfo; echo __1778059700745346435"
-      ],
-      "members": [
-        {
-          "session_id": "IR-dc45397e2e0b",
-          "src_ip": "23.129.64.207",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-06T09:28:16.173078Z"
+          "timestamp": "2026-05-06T13:36:50.653450Z"
         }
       ]
     }
