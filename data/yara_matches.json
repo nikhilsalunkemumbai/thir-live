@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-05T19:27:29.248203+00:00",
+  "generated_at": "2026-05-06T03:31:25.309488+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
   "files_scanned": 22,
@@ -17,7 +17,7 @@
       "count": 3
     },
     {
-      "family": "Downloader",
+      "family": "Mushtik",
       "count": 2
     },
     {
@@ -25,7 +25,7 @@
       "count": 2
     },
     {
-      "family": "Mushtik",
+      "family": "Downloader",
       "count": 2
     },
     {
@@ -46,11 +46,11 @@
       "filename": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
-        "Downloader",
-        "Gafgyt",
-        "Rootkit",
+        "Mushtik",
         "XMRig",
-        "Mushtik"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -66,12 +66,12 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "Downloader",
-        "Gafgyt",
-        "Sora",
+        "Mushtik",
         "XMRig",
-        "Rootkit",
-        "Mushtik"
+        "Sora",
+        "Gafgyt",
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL"
     },
@@ -79,9 +79,9 @@
       "filename": "8daf92f0870c58ece8b68a3057c3ab6e8477215f853c54cdfe790acf1141161d",
       "sha256": "8daf92f0870c58ece8b68a3057c3ab6e8477215f853c54cdfe790acf1141161d",
       "families": [
-        "Mirai",
         "Rootkit",
-        "Gafgyt"
+        "Gafgyt",
+        "Mirai"
       ],
       "severity": "CRITICAL"
     },
@@ -171,11 +171,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Downloader",
-        "Gafgyt",
-        "Rootkit",
+        "Mushtik",
         "XMRig",
-        "Mushtik"
+        "Gafgyt",
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -370,12 +370,12 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "Downloader",
-        "Gafgyt",
-        "Sora",
+        "Mushtik",
         "XMRig",
-        "Rootkit",
-        "Mushtik"
+        "Sora",
+        "Gafgyt",
+        "Downloader",
+        "Rootkit"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
@@ -502,9 +502,9 @@
       "file_type": "ELF 32-bit executable",
       "classified": true,
       "families": [
-        "Mirai",
         "Rootkit",
-        "Gafgyt"
+        "Gafgyt",
+        "Mirai"
       ],
       "severity": "CRITICAL",
       "match_count": 3,
