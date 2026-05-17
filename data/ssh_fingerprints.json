@@ -1,58 +1,10 @@
 {
-  "generated_at": "2026-05-17T20:57:39.819919+00:00",
-  "total_sessions_parsed": 280,
-  "sessions_with_fingerprint": 1,
-  "sessions_without_kex": 270,
-  "unique_fingerprints": 1,
-  "top_families": [
-    {
-      "family": "libssh",
-      "sessions": 10
-    }
-  ],
-  "botnet_signals": [
-    {
-      "hassh": "f555226df1963d1d3c09daf865abdc9a",
-      "signature": "Mirai/variant",
-      "session_count": 10,
-      "unique_ips": [
-        "190.60.242.28",
-        "43.153.110.229"
-      ]
-    }
-  ],
-  "fingerprints": [
-    {
-      "hassh": "f555226df1963d1d3c09daf865abdc9a",
-      "client_family": "libssh",
-      "botnet_signature": "Mirai/variant",
-      "version_strings": [
-        "SSH-2.0-libssh_0.9.6"
-      ],
-      "session_count": 10,
-      "unique_ips": [
-        "190.60.242.28",
-        "43.153.110.229"
-      ],
-      "sessions": [
-        "IR-262ee3e2c37e",
-        "IR-fa10e7917139",
-        "IR-047451ff19f5",
-        "IR-9ccc8610b06e",
-        "IR-557ca58c20c1",
-        "IR-4057fda4b2c4",
-        "IR-9a0c778a5344",
-        "IR-39e834ef4652",
-        "IR-5ae4cecd80fe",
-        "IR-a0d6c9dc8dd9"
-      ],
-      "kex_algs": "curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group18-sha512,diffie-hellman-group16-sha512,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group14-sha1,diffie-hellman-group1-sha1,ext-info-c",
-      "enc_algs": "aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes128-ctr,aes256-cbc,aes192-cbc,aes128-cbc,3des-cbc",
-      "mac_algs": "hmac-sha2-256-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha1-etm@openssh.com,hmac-sha2-256,hmac-sha2-512,hmac-sha1",
-      "comp_algs": "none",
-      "first_seen": "2026-05-17T19:14:36.595496Z",
-      "last_seen": "2026-05-17T19:24:34.085423Z",
-      "unique_ip_count": 2
-    }
-  ]
+  "generated_at": "2026-05-17T22:56:22.082350+00:00",
+  "total_sessions_parsed": 251,
+  "sessions_with_fingerprint": 0,
+  "sessions_without_kex": 251,
+  "unique_fingerprints": 0,
+  "top_families": [],
+  "botnet_signals": [],
+  "fingerprints": []
 }
