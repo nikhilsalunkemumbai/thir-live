@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-30T15:11:29.739941+00:00",
-  "total_sessions_with_commands": 9,
+  "generated_at": "2026-05-30T17:12:02.052400+00:00",
+  "total_sessions_with_commands": 7,
   "total_clusters": 1,
   "campaign_clusters": 1,
   "singleton_clusters": 0,
@@ -10,8 +10,8 @@
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 9,
-      "unique_ip_count": 5,
+      "session_count": 7,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -42,15 +42,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 9,
+      "session_count": 7,
       "unique_ips": [
-        "178.128.51.84",
-        "14.103.118.79",
-        "49.43.241.11",
-        "102.210.148.92",
-        "129.226.213.238"
+        "223.233.83.104",
+        "103.191.92.236"
       ],
-      "unique_ip_count": 5,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -80,76 +77,60 @@
       ],
       "members": [
         {
-          "session_id": "IR-b79aee3d7ffa",
-          "src_ip": "14.103.118.79",
+          "session_id": "IR-826a0acb9b1d",
+          "src_ip": "223.233.83.104",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:15:13.524499Z"
+          "timestamp": "2026-05-30T15:43:54.829264Z"
         },
         {
-          "session_id": "IR-6c8a850d3e9f",
-          "src_ip": "129.226.213.238",
+          "session_id": "IR-a2c3edf77ccb",
+          "src_ip": "103.191.92.236",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:19:02.390278Z"
+          "timestamp": "2026-05-30T15:53:25.663693Z"
         },
         {
-          "session_id": "IR-d6bc3709e6e7",
-          "src_ip": "178.128.51.84",
+          "session_id": "IR-d1873f7fa413",
+          "src_ip": "103.191.92.236",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:20:18.487327Z"
+          "timestamp": "2026-05-30T15:53:54.110274Z"
         },
         {
-          "session_id": "IR-abc26d698ec7",
-          "src_ip": "49.43.241.11",
+          "session_id": "IR-22c30bc54641",
+          "src_ip": "103.191.92.236",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:22:35.944624Z"
+          "timestamp": "2026-05-30T15:54:15.288542Z"
         },
         {
-          "session_id": "IR-a3a39ea22710",
-          "src_ip": "102.210.148.92",
+          "session_id": "IR-4634f5967317",
+          "src_ip": "103.191.92.236",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:26:29.642080Z"
+          "timestamp": "2026-05-30T15:54:34.905459Z"
         },
         {
-          "session_id": "IR-e33bd2d8d293",
-          "src_ip": "102.210.148.92",
+          "session_id": "IR-5d1b2f9642cb",
+          "src_ip": "103.191.92.236",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:30:21.179671Z"
+          "timestamp": "2026-05-30T15:54:56.343069Z"
         },
         {
-          "session_id": "IR-e9ae997c2f56",
-          "src_ip": "102.210.148.92",
+          "session_id": "IR-df19f5fff976",
+          "src_ip": "103.191.92.236",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-05-30T14:33:54.222877Z"
-        },
-        {
-          "session_id": "IR-7e7e958de645",
-          "src_ip": "102.210.148.92",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-30T14:35:43.522934Z"
-        },
-        {
-          "session_id": "IR-0bfb4c1606fa",
-          "src_ip": "102.210.148.92",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-05-30T14:37:37.046342Z"
+          "timestamp": "2026-05-30T15:55:22.505342Z"
         }
       ]
     }
