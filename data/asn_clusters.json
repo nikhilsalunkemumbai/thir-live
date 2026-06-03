@@ -1,41 +1,20 @@
 {
-  "generated_at": "2026-06-02T23:49:07Z",
+  "generated_at": "2026-06-03T04:26:35Z",
   "source_file": "data/threat_ips.json",
-  "total_ips_analyzed": 64,
-  "unique_asns": 41,
+  "total_ips_analyzed": 38,
+  "unique_asns": 30,
   "top_attack_asns": [
     {
-      "asn": "AS142627",
-      "asn_name": "Multilink International",
-      "ip_count": 11,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 5,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
-      "ip_count": 3,
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
+      "ip_count": 4,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
       "asn": "AS137718",
       "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "ip_count": 2,
+      "ip_count": 3,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
@@ -47,220 +26,29 @@
       "anon_count": 0
     },
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
       "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4811",
+      "asn_name": "China Telecom (Group)",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS140687",
+      "asn_name": "I Seven",
+      "ip_count": 1,
       "risk_tier": "LOW",
       "anon_count": 0
     },
     {
-      "asn": "AS5384",
-      "asn_name": "Emirates Internet",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS23724",
-      "asn_name": "IDC, China Telecommunications Corporation",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    }
-  ],
-  "high_risk_asns": [
-    {
-      "asn": "AS142627",
-      "asn_name": "Multilink International",
-      "ip_count": 11,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 5,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
-      "ip_count": 3,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS137718",
-      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS8075",
-      "asn_name": "Microsoft Corporation",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS5384",
-      "asn_name": "Emirates Internet",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS23724",
-      "asn_name": "IDC, China Telecommunications Corporation",
-      "ip_count": 2,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS41745",
-      "asn_name": "Baykov Ilya Sergeevich",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS3243",
-      "asn_name": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4760",
-      "asn_name": "HKT Limited",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS37204",
-      "asn_name": "Telone PVT Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS132199",
-      "asn_name": "Globe Telecom Inc.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS45773",
-      "asn_name": "PERN AS Content Servie Provider, Islamabad, Pakistan",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS19871",
-      "asn_name": "Network Solutions, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS31898",
-      "asn_name": "Oracle Corporation",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS8560",
-      "asn_name": "IONOS SE",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS215125",
-      "asn_name": "Church of Cyberology",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS58461",
-      "asn_name": "CT HangZhou IDC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS16276",
-      "asn_name": "OVH SAS",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS55803",
-      "asn_name": "Hostopia Australia Web Pty Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS26496",
-      "asn_name": "GoDaddy.com, LLC",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS58224",
-      "asn_name": "Iran Telecommunication Company PJS",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS134762",
-      "asn_name": "CHINANET Liaoning province Dalian MAN network",
+      "asn": "AS215540",
+      "asn_name": "GLOBAL CONNECTIVITY SOLUTIONS LLP",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -273,6 +61,169 @@
       "anon_count": 0
     },
     {
+      "asn": "AS41275",
+      "asn_name": "Lovitel LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS7018",
+      "asn_name": "AT\u0026T Enterprises, LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    }
+  ],
+  "high_risk_asns": [
+    {
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
+      "ip_count": 4,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS137718",
+      "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
+      "ip_count": 3,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS8075",
+      "asn_name": "Microsoft Corporation",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS4811",
+      "asn_name": "China Telecom (Group)",
+      "ip_count": 2,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS215540",
+      "asn_name": "GLOBAL CONNECTIVITY SOLUTIONS LLP",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS58563",
+      "asn_name": "CHINANET Hubei province network",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS41275",
+      "asn_name": "Lovitel LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS7018",
+      "asn_name": "AT\u0026T Enterprises, LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS262207",
+      "asn_name": "Corporacion de Internet, Sociedad Anonima.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS3243",
+      "asn_name": "MEO - SERVICOS DE COMUNICACOES E MULTIMEDIA S.A.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS134756",
+      "asn_name": "CHINANET Nanjing Jishan IDC network",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS31898",
+      "asn_name": "Oracle Corporation",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS132199",
+      "asn_name": "Globe Telecom Inc.",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS31205",
+      "asn_name": "PJSC MegaFon",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS28890",
+      "asn_name": "INSYS ISP",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS26496",
+      "asn_name": "GoDaddy.com, LLC",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS25369",
+      "asn_name": "Hydra Communications Ltd",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS51396",
+      "asn_name": "Pfcloud UG",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS7552",
+      "asn_name": "Viettel Group",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
+      "asn": "AS23724",
+      "asn_name": "IDC, China Telecommunications Corporation",
+      "ip_count": 1,
+      "risk_tier": "HIGH",
+      "anon_count": 0
+    },
+    {
       "asn": "AS51167",
       "asn_name": "Contabo GmbH",
       "ip_count": 1,
@@ -280,57 +231,36 @@
       "anon_count": 0
     },
     {
-      "asn": "AS12874",
-      "asn_name": "Fastweb SpA",
+      "asn": "AS22773",
+      "asn_name": "Cox Communications Inc.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS141679",
-      "asn_name": "China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch",
+      "asn": "AS9808",
+      "asn_name": "China Mobile Communications Group Co., Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS12389",
-      "asn_name": "PJSC Rostelecom",
+      "asn": "AS7545",
+      "asn_name": "TPG Telecom Limited",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS3786",
-      "asn_name": "LG DACOM Corporation",
+      "asn": "AS50482",
+      "asn_name": "JSC Kazakhtelecom",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
     },
     {
-      "asn": "AS58593",
-      "asn_name": "Shanghai Blue Cloud Technology Co.,Ltd",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS17451",
-      "asn_name": "BIZNET NETWORKS",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS150436",
-      "asn_name": "Byteplus Pte. Ltd.",
-      "ip_count": 1,
-      "risk_tier": "HIGH",
-      "anon_count": 0
-    },
-    {
-      "asn": "AS18734",
-      "asn_name": "Operbes, S.A. de C.V.",
+      "asn": "AS56005",
+      "asn_name": "Zhengzhou Fastidc Technology Co.,Ltd.",
       "ip_count": 1,
       "risk_tier": "HIGH",
       "anon_count": 0
@@ -341,85 +271,25 @@
     {
       "country": "CN",
       "code": "",
-      "count": 20
-    },
-    {
-      "country": "BD",
-      "code": "",
       "count": 11
-    },
-    {
-      "country": "KR",
-      "code": "",
-      "count": 4
-    },
-    {
-      "country": "DE",
-      "code": "",
-      "count": 3
     },
     {
       "country": "US",
       "code": "",
+      "count": 9
+    },
+    {
+      "country": "IN",
+      "code": "",
       "count": 3
     },
     {
-      "country": "AE",
+      "country": "RU",
       "code": "",
-      "count": 2
-    },
-    {
-      "country": "HK",
-      "code": "",
-      "count": 2
-    },
-    {
-      "country": "SE",
-      "code": "",
-      "count": 1
+      "count": 3
     },
     {
       "country": "PT",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "NL",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "ID",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "ZW",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "SG",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "FR",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "PH",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "PK",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "CA",
       "code": "",
       "count": 1
     },
@@ -429,17 +299,7 @@
       "count": 1
     },
     {
-      "country": "BE",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "IN",
-      "code": "",
-      "count": 1
-    },
-    {
-      "country": "EE",
+      "country": "PH",
       "code": "",
       "count": 1
     },
@@ -449,84 +309,64 @@
       "count": 1
     },
     {
-      "country": "TW",
+      "country": "FR",
       "code": "",
       "count": 1
     },
     {
-      "country": "IR",
+      "country": "SG",
       "code": "",
       "count": 1
     },
     {
-      "country": "RU",
+      "country": "TR",
       "code": "",
       "count": 1
     },
     {
-      "country": "MX",
+      "country": "GT",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "VN",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "KZ",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "GB",
+      "code": "",
+      "count": 1
+    },
+    {
+      "country": "NL",
       "code": "",
       "count": 1
     }
   ],
   "clusters": [
     {
-      "asn": "AS142627",
-      "asn_name": "Multilink International",
-      "ip_count": 11,
+      "asn": "AS14061",
+      "asn_name": "DigitalOcean, LLC",
+      "ip_count": 4,
       "unique_ips": [
-        "103.171.69.66",
-        "103.171.69.71",
-        "103.171.69.74",
-        "103.171.69.76",
-        "103.171.69.77",
-        "103.171.69.79",
-        "103.171.69.82",
-        "103.171.69.83",
-        "103.171.69.84",
-        "103.171.69.86",
-        "103.171.69.93"
+        "138.197.33.109",
+        "159.65.240.31",
+        "165.232.181.59",
+        "178.128.51.84"
       ],
       "countries": [
-        "BD"
+        "IN",
+        "SG",
+        "US"
       ],
-      "top_country": "BD",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "bulk-attacker"
-      ],
-      "first_seen": "2026-06-02T23:48:56Z",
-      "last_seen": "2026-06-02T23:49:04Z",
-      "isps": [
-        "Multilink International"
-      ]
-    },
-    {
-      "asn": "AS4811",
-      "asn_name": "China Telecom (Group)",
-      "ip_count": 5,
-      "unique_ips": [
-        "14.103.115.25",
-        "14.103.117.84",
-        "14.103.118.197",
-        "14.103.123.65",
-        "14.103.73.80"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
+      "top_country": "US",
+      "avg_abuse_score": 82.5,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -539,51 +379,20 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:58Z",
-      "last_seen": "2026-06-02T23:49:01Z",
+      "first_seen": "2026-06-03T04:26:25Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS4766",
-      "asn_name": "Korea Telecom",
-      "ip_count": 3,
-      "unique_ips": [
-        "118.35.127.66",
-        "125.138.175.113",
-        "61.76.136.25"
-      ],
-      "countries": [
-        "KR"
-      ],
-      "top_country": "KR",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:56Z",
-      "last_seen": "2026-06-02T23:48:57Z",
-      "isps": [
-        "Korea Telecom"
+        "DigitalOcean, LLC"
       ]
     },
     {
       "asn": "AS137718",
       "asn_name": "Beijing Volcano Engine Technology Co., Ltd.",
-      "ip_count": 2,
+      "ip_count": 3,
       "unique_ips": [
-        "101.126.24.71",
-        "180.184.36.192"
+        "101.126.71.100",
+        "101.126.91.34",
+        "115.190.215.101"
       ],
       "countries": [
         "CN"
@@ -602,41 +411,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:58Z",
-      "last_seen": "2026-06-02T23:48:58Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:28Z",
       "isps": [
         "Beijing Volcano Engine Technology Co., Ltd."
-      ]
-    },
-    {
-      "asn": "AS37963",
-      "asn_name": "Hangzhou Alibaba Advertising Co.,Ltd.",
-      "ip_count": 2,
-      "unique_ips": [
-        "8.152.209.0",
-        "8.154.0.104"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:49:00Z",
-      "isps": [
-        "Aliyun Computing Co.LTD"
       ]
     },
     {
@@ -644,15 +422,14 @@
       "asn_name": "Microsoft Corporation",
       "ip_count": 2,
       "unique_ips": [
-        "104.208.108.166",
-        "20.25.10.66"
+        "20.127.214.209",
+        "20.163.6.104"
       ],
       "countries": [
-        "HK",
         "US"
       ],
-      "top_country": "HK",
-      "avg_abuse_score": 56,
+      "top_country": "US",
+      "avg_abuse_score": 72.5,
       "max_abuse_score": 100,
       "total_reports": 0,
       "tor_count": 0,
@@ -665,27 +442,87 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:56Z",
-      "last_seen": "2026-06-02T23:48:59Z",
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:35Z",
       "isps": [
         "Microsoft Corporation"
       ]
     },
     {
-      "asn": "AS396982",
-      "asn_name": "Google LLC",
+      "asn": "AS398324",
+      "asn_name": "Censys, Inc.",
       "ip_count": 2,
       "unique_ips": [
-        "198.235.24.139",
-        "198.235.24.67"
+        "66.132.186.176",
+        "66.132.186.181"
       ],
       "countries": [
-        "BE",
-        "TW"
+        "US"
       ],
-      "top_country": "BE",
-      "avg_abuse_score": 0,
-      "max_abuse_score": 0,
+      "top_country": "US",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:27Z",
+      "isps": [
+        "Censys, Inc."
+      ]
+    },
+    {
+      "asn": "AS4811",
+      "asn_name": "China Telecom (Group)",
+      "ip_count": 2,
+      "unique_ips": [
+        "14.103.107.31",
+        "14.103.64.39"
+      ],
+      "countries": [
+        "CN"
+      ],
+      "top_country": "CN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:28Z",
+      "isps": [
+        "Beijing Volcano Engine Technology Co., Ltd."
+      ]
+    },
+    {
+      "asn": "AS140687",
+      "asn_name": "I Seven",
+      "ip_count": 1,
+      "unique_ips": [
+        "103.26.11.83"
+      ],
+      "countries": [
+        "IN"
+      ],
+      "top_country": "IN",
+      "avg_abuse_score": 12,
+      "max_abuse_score": 12,
       "total_reports": 0,
       "tor_count": 0,
       "proxy_count": 0,
@@ -694,60 +531,24 @@
       "high_risk_count": 0,
       "critical_count": 0,
       "risk_tier": "LOW",
-      "tags": [
-        "cloud-provider"
-      ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:49:01Z",
+      "tags": [],
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "Palo Alto Networks, Inc"
+        "IPXO"
       ]
     },
     {
-      "asn": "AS5384",
-      "asn_name": "Emirates Internet",
-      "ip_count": 2,
+      "asn": "AS215540",
+      "asn_name": "GLOBAL CONNECTIVITY SOLUTIONS LLP",
+      "ip_count": 1,
       "unique_ips": [
-        "31.215.229.94",
-        "86.98.113.226"
+        "185.39.204.145"
       ],
       "countries": [
-        "AE"
+        "TR"
       ],
-      "top_country": "AE",
-      "avg_abuse_score": 82,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:56Z",
-      "last_seen": "2026-06-02T23:49:07Z",
-      "isps": [
-        "Emirates Telecommunications Corporation",
-        "SKY CITY INTERNET"
-      ]
-    },
-    {
-      "asn": "AS14061",
-      "asn_name": "DigitalOcean, LLC",
-      "ip_count": 2,
-      "unique_ips": [
-        "159.203.20.239",
-        "161.35.65.86"
-      ],
-      "countries": [
-        "CA",
-        "DE"
-      ],
-      "top_country": "CA",
+      "top_country": "TR",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -761,19 +562,18 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:49:04Z",
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
       "isps": [
-        "DigitalOcean, LLC"
+        "GLOBAL CONNECTIVITY SOLUTIONS LLP"
       ]
     },
     {
-      "asn": "AS23724",
-      "asn_name": "IDC, China Telecommunications Corporation",
-      "ip_count": 2,
+      "asn": "AS58563",
+      "asn_name": "CHINANET Hubei province network",
+      "ip_count": 1,
       "unique_ips": [
-        "117.50.51.198",
-        "118.186.18.243"
+        "119.96.173.169"
       ],
       "countries": [
         "CN"
@@ -792,24 +592,53 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:49:02Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "Beijing xhxt technology development co., LTD",
-        "Shanghai UCloud Information Technology Company Limited"
+        "CHINANET Hubei province network"
       ]
     },
     {
-      "asn": "AS41745",
-      "asn_name": "Baykov Ilya Sergeevich",
+      "asn": "AS41275",
+      "asn_name": "Lovitel LLC",
       "ip_count": 1,
       "unique_ips": [
-        "109.206.241.199"
+        "84.22.132.108"
       ],
       "countries": [
-        "EE"
+        "RU"
       ],
-      "top_country": "EE",
+      "top_country": "RU",
+      "avg_abuse_score": 92,
+      "max_abuse_score": 92,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-06-03T04:26:25Z",
+      "last_seen": "2026-06-03T04:26:25Z",
+      "isps": [
+        "Lovitel LLC"
+      ]
+    },
+    {
+      "asn": "AS7018",
+      "asn_name": "AT\u0026T Enterprises, LLC",
+      "ip_count": 1,
+      "unique_ips": [
+        "108.207.104.70"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -823,10 +652,40 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
       "isps": [
-        "Neterra Ltd."
+        "AT\u0026T Enterprises, LLC"
+      ]
+    },
+    {
+      "asn": "AS262207",
+      "asn_name": "Corporacion de Internet, Sociedad Anonima.",
+      "ip_count": 1,
+      "unique_ips": [
+        "190.151.130.5"
+      ],
+      "countries": [
+        "GT"
+      ],
+      "top_country": "GT",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
+      "isps": [
+        "Corporacion de Internet, Sociedad Anonima."
       ]
     },
     {
@@ -853,51 +712,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:49:06Z",
-      "last_seen": "2026-06-02T23:49:06Z",
+      "first_seen": "2026-06-03T04:26:28Z",
+      "last_seen": "2026-06-03T04:26:28Z",
       "isps": [
         "PT Comunicacoes S.A."
       ]
     },
     {
-      "asn": "AS137266",
-      "asn_name": "CHINATELECOM Hubei province Wuhan 5G network",
+      "asn": "AS134756",
+      "asn_name": "CHINANET Nanjing Jishan IDC network",
       "ip_count": 1,
       "unique_ips": [
-        "171.83.81.122"
+        "121.229.202.143"
       ],
       "countries": [
         "CN"
       ],
       "top_country": "CN",
-      "avg_abuse_score": 54,
-      "max_abuse_score": 54,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-06-02T23:49:05Z",
-      "last_seen": "2026-06-02T23:49:05Z",
-      "isps": [
-        "CHINANET Hubei province network"
-      ]
-    },
-    {
-      "asn": "AS4760",
-      "asn_name": "HKT Limited",
-      "ip_count": 1,
-      "unique_ips": [
-        "42.200.66.164"
-      ],
-      "countries": [
-        "HK"
-      ],
-      "top_country": "HK",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -911,130 +742,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:58Z",
-      "last_seen": "2026-06-02T23:48:58Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "Hong Kong Telecommunications (HKT) Limited Business Internet"
-      ]
-    },
-    {
-      "asn": "AS37204",
-      "asn_name": "Telone PVT Ltd",
-      "ip_count": 1,
-      "unique_ips": [
-        "197.221.232.44"
-      ],
-      "countries": [
-        "ZW"
-      ],
-      "top_country": "ZW",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
-      "isps": [
-        "TelOne LTE Broadband Network"
-      ]
-    },
-    {
-      "asn": "AS132199",
-      "asn_name": "Globe Telecom Inc.",
-      "ip_count": 1,
-      "unique_ips": [
-        "120.28.109.188"
-      ],
-      "countries": [
-        "PH"
-      ],
-      "top_country": "PH",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:58Z",
-      "last_seen": "2026-06-02T23:48:58Z",
-      "isps": [
-        "Globe Telecom/Innove Communication"
-      ]
-    },
-    {
-      "asn": "AS45773",
-      "asn_name": "PERN AS Content Servie Provider, Islamabad, Pakistan",
-      "ip_count": 1,
-      "unique_ips": [
-        "111.68.98.152"
-      ],
-      "countries": [
-        "PK"
-      ],
-      "top_country": "PK",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:49:00Z",
-      "last_seen": "2026-06-02T23:49:00Z",
-      "isps": [
-        "PERN-Pakistan Education \u0026 Research Network is an"
-      ]
-    },
-    {
-      "asn": "AS19871",
-      "asn_name": "Network Solutions, LLC",
-      "ip_count": 1,
-      "unique_ips": [
-        "50.116.72.139"
-      ],
-      "countries": [
-        "US"
-      ],
-      "top_country": "US",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:56Z",
-      "last_seen": "2026-06-02T23:48:56Z",
-      "isps": [
-        "WEBSITEWELCOME.COM (gator1711.hostgator.com)"
+        "CHINANET jiangsu province network"
       ]
     },
     {
@@ -1061,23 +772,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
         "P.D.R Solutions FZC"
       ]
     },
     {
-      "asn": "AS4837",
-      "asn_name": "CHINA UNICOM China169 Backbone",
+      "asn": "AS132199",
+      "asn_name": "Globe Telecom Inc.",
       "ip_count": 1,
       "unique_ips": [
-        "61.240.156.16"
+        "120.28.109.188"
       ],
       "countries": [
-        "CN"
+        "PH"
       ],
-      "top_country": "CN",
+      "top_country": "PH",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1091,23 +802,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
+      "first_seen": "2026-06-03T04:26:29Z",
+      "last_seen": "2026-06-03T04:26:29Z",
       "isps": [
-        "China Unicom"
+        "Globe Telecom/Innove Communication"
       ]
     },
     {
-      "asn": "AS4134",
-      "asn_name": "CHINANET BACKBONE",
+      "asn": "AS31205",
+      "asn_name": "PJSC MegaFon",
       "ip_count": 1,
       "unique_ips": [
-        "49.64.85.138"
+        "31.173.247.254"
       ],
       "countries": [
-        "CN"
+        "RU"
       ],
-      "top_country": "CN",
+      "top_country": "RU",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1121,23 +832,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:28Z",
+      "last_seen": "2026-06-03T04:26:28Z",
       "isps": [
-        "CHINANET jiangsu province network"
+        "Siberian Branch of OJSC MegaFon - Public.sib"
       ]
     },
     {
-      "asn": "AS8560",
-      "asn_name": "IONOS SE",
+      "asn": "AS28890",
+      "asn_name": "INSYS ISP",
       "ip_count": 1,
       "unique_ips": [
-        "87.106.29.151"
+        "46.163.144.31"
       ],
       "countries": [
-        "DE"
+        "RU"
       ],
-      "top_country": "DE",
+      "top_country": "RU",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1151,159 +862,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:49:05Z",
-      "last_seen": "2026-06-02T23:49:05Z",
+      "first_seen": "2026-06-03T04:26:28Z",
+      "last_seen": "2026-06-03T04:26:28Z",
       "isps": [
-        "IONOS SE"
-      ]
-    },
-    {
-      "asn": "AS17968",
-      "asn_name": "Daqing zhongji petroleum telecommunication construction limited cpmpany",
-      "ip_count": 1,
-      "unique_ips": [
-        "175.46.253.75"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 16,
-      "max_abuse_score": 16,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "LOW",
-      "tags": [],
-      "first_seen": "2026-06-02T23:49:05Z",
-      "last_seen": "2026-06-02T23:49:05Z",
-      "isps": [
-        "Daqing Zhongji Petroleum Communication Construction Co.,Ltd."
-      ]
-    },
-    {
-      "asn": "AS215125",
-      "asn_name": "Church of Cyberology",
-      "ip_count": 1,
-      "unique_ips": [
-        "192.42.116.17"
-      ],
-      "countries": [
-        "NL"
-      ],
-      "top_country": "NL",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:49:05Z",
-      "last_seen": "2026-06-02T23:49:05Z",
-      "isps": [
-        "TOR EXIT AND MORE"
-      ]
-    },
-    {
-      "asn": "AS58461",
-      "asn_name": "CT HangZhou IDC",
-      "ip_count": 1,
-      "unique_ips": [
-        "125.122.36.17"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:49:06Z",
-      "last_seen": "2026-06-02T23:49:06Z",
-      "isps": [
-        "CHINANET-ZJ Hangzhou node network"
-      ]
-    },
-    {
-      "asn": "AS16276",
-      "asn_name": "OVH SAS",
-      "ip_count": 1,
-      "unique_ips": [
-        "54.37.74.179"
-      ],
-      "countries": [
-        "DE"
-      ],
-      "top_country": "DE",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
-      "isps": [
-        "OVH GmbH"
-      ]
-    },
-    {
-      "asn": "AS55803",
-      "asn_name": "Hostopia Australia Web Pty Ltd",
-      "ip_count": 1,
-      "unique_ips": [
-        "223.27.18.80"
-      ],
-      "countries": [
-        "AU"
-      ],
-      "top_country": "AU",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:49:06Z",
-      "last_seen": "2026-06-02T23:49:06Z",
-      "isps": [
-        "Hostopia Australia Web Pty Ltd"
+        "INSYS LLC"
       ]
     },
     {
@@ -1330,23 +892,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
       "isps": [
         "GoDaddy.com, LLC"
       ]
     },
     {
-      "asn": "AS58224",
-      "asn_name": "Iran Telecommunication Company PJS",
+      "asn": "AS25369",
+      "asn_name": "Hydra Communications Ltd",
       "ip_count": 1,
       "unique_ips": [
-        "2.180.32.104"
+        "195.206.182.211"
       ],
       "countries": [
-        "IR"
+        "GB"
       ],
-      "top_country": "IR",
+      "top_country": "GB",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1360,18 +922,79 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
       "isps": [
-        "Iran Information Technology Company PJSC"
+        "Infrawatch Limited"
       ]
     },
     {
-      "asn": "AS134762",
-      "asn_name": "CHINANET Liaoning province Dalian MAN network",
+      "asn": "AS51396",
+      "asn_name": "Pfcloud UG",
       "ip_count": 1,
       "unique_ips": [
-        "43.226.47.99"
+        "176.65.148.93"
+      ],
+      "countries": [
+        "NL"
+      ],
+      "top_country": "NL",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse",
+        "cloud-provider"
+      ],
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
+      "isps": [
+        "Pfcloud UG"
+      ]
+    },
+    {
+      "asn": "AS7552",
+      "asn_name": "Viettel Group",
+      "ip_count": 1,
+      "unique_ips": [
+        "171.244.37.97"
+      ],
+      "countries": [
+        "VN"
+      ],
+      "top_country": "VN",
+      "avg_abuse_score": 100,
+      "max_abuse_score": 100,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "HIGH",
+      "tags": [
+        "high-abuse"
+      ],
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
+      "isps": [
+        "Viettel Group"
+      ]
+    },
+    {
+      "asn": "AS23724",
+      "asn_name": "IDC, China Telecommunications Corporation",
+      "ip_count": 1,
+      "unique_ips": [
+        "117.50.70.125"
       ],
       "countries": [
         "CN"
@@ -1390,68 +1013,10 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:28Z",
+      "last_seen": "2026-06-03T04:26:28Z",
       "isps": [
-        "Shenzhen Qianhai bird cloud computing Co. Ltd."
-      ]
-    },
-    {
-      "asn": "AS58563",
-      "asn_name": "CHINANET Hubei province network",
-      "ip_count": 1,
-      "unique_ips": [
-        "119.96.157.188"
-      ],
-      "countries": [
-        "CN"
-      ],
-      "top_country": "CN",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:48:58Z",
-      "last_seen": "2026-06-02T23:48:58Z",
-      "isps": [
-        "CHINANET Hubei province network"
-      ]
-    },
-    {
-      "asn": "AS1257",
-      "asn_name": "Tele2 Sverige AB",
-      "ip_count": 1,
-      "unique_ips": [
-        "83.186.254.239"
-      ],
-      "countries": [
-        "SE"
-      ],
-      "top_country": "SE",
-      "avg_abuse_score": 62,
-      "max_abuse_score": 62,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "MEDIUM",
-      "tags": [],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
-      "isps": [
-        "Mobile Services"
+        "Shanghai UCloud Information Technology Company Limited"
       ]
     },
     {
@@ -1478,23 +1043,51 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
         "Contabo GmbH"
       ]
     },
     {
-      "asn": "AS12874",
-      "asn_name": "Fastweb SpA",
+      "asn": "AS1267",
+      "asn_name": "WIND TRE S.P.A.",
       "ip_count": 1,
       "unique_ips": [
-        "93.40.0.123"
+        "151.53.132.160"
       ],
       "countries": [
         "IT"
       ],
       "top_country": "IT",
+      "avg_abuse_score": 47,
+      "max_abuse_score": 47,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
+      "isps": [
+        "WIND TRE S.P.A."
+      ]
+    },
+    {
+      "asn": "AS22773",
+      "asn_name": "Cox Communications Inc.",
+      "ip_count": 1,
+      "unique_ips": [
+        "70.182.78.81"
+      ],
+      "countries": [
+        "US"
+      ],
+      "top_country": "US",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1508,18 +1101,18 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:49:02Z",
-      "last_seen": "2026-06-02T23:49:02Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "Fastweb SpA"
+        "Cox Communications"
       ]
     },
     {
-      "asn": "AS141679",
-      "asn_name": "China Telecom Beijing Tianjin Hebei Big Data Industry Park Branch",
+      "asn": "AS9808",
+      "asn_name": "China Mobile Communications Group Co., Ltd.",
       "ip_count": 1,
       "unique_ips": [
-        "203.83.234.180"
+        "120.196.66.80"
       ],
       "countries": [
         "CN"
@@ -1538,23 +1131,23 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "CHINANET Guangdong province network"
+        "China Mobile Communications Corporation"
       ]
     },
     {
-      "asn": "AS12389",
-      "asn_name": "PJSC Rostelecom",
+      "asn": "AS7545",
+      "asn_name": "TPG Telecom Limited",
       "ip_count": 1,
       "unique_ips": [
-        "95.167.225.76"
+        "58.6.206.239"
       ],
       "countries": [
-        "RU"
+        "AU"
       ],
-      "top_country": "RU",
+      "top_country": "AU",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1568,23 +1161,51 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
       "isps": [
-        "PJSC Rostelecom"
+        "iiNet Limited"
       ]
     },
     {
-      "asn": "AS3786",
-      "asn_name": "LG DACOM Corporation",
+      "asn": "AS4134",
+      "asn_name": "CHINANET BACKBONE",
       "ip_count": 1,
       "unique_ips": [
-        "1.214.179.202"
+        "123.168.180.72"
       ],
       "countries": [
-        "KR"
+        "CN"
       ],
-      "top_country": "KR",
+      "top_country": "CN",
+      "avg_abuse_score": 16,
+      "max_abuse_score": 16,
+      "total_reports": 0,
+      "tor_count": 0,
+      "proxy_count": 0,
+      "vpn_count": 0,
+      "anon_count": 0,
+      "high_risk_count": 0,
+      "critical_count": 0,
+      "risk_tier": "LOW",
+      "tags": [],
+      "first_seen": "2026-06-03T04:26:27Z",
+      "last_seen": "2026-06-03T04:26:27Z",
+      "isps": [
+        "CHINANET SHANDONG PROVINCE NETWORK"
+      ]
+    },
+    {
+      "asn": "AS50482",
+      "asn_name": "JSC Kazakhtelecom",
+      "ip_count": 1,
+      "unique_ips": [
+        "212.154.234.9"
+      ],
+      "countries": [
+        "KZ"
+      ],
+      "top_country": "KZ",
       "avg_abuse_score": 100,
       "max_abuse_score": 100,
       "total_reports": 0,
@@ -1598,18 +1219,18 @@
       "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:57Z",
-      "last_seen": "2026-06-02T23:48:57Z",
+      "first_seen": "2026-06-03T04:26:26Z",
+      "last_seen": "2026-06-03T04:26:26Z",
       "isps": [
-        "LG Uplus"
+        "Co-location"
       ]
     },
     {
-      "asn": "AS58593",
-      "asn_name": "Shanghai Blue Cloud Technology Co.,Ltd",
+      "asn": "AS56005",
+      "asn_name": "Zhengzhou Fastidc Technology Co.,Ltd.",
       "ip_count": 1,
       "unique_ips": [
-        "143.64.168.136"
+        "42.51.40.180"
       ],
       "countries": [
         "CN"
@@ -1626,103 +1247,12 @@
       "critical_count": 0,
       "risk_tier": "HIGH",
       "tags": [
-        "high-abuse",
-        "cloud-provider"
-      ],
-      "first_seen": "2026-06-02T23:48:58Z",
-      "last_seen": "2026-06-02T23:48:58Z",
-      "isps": [
-        "Shanghai Blue Cloud Technology Co.,Ltd"
-      ]
-    },
-    {
-      "asn": "AS17451",
-      "asn_name": "BIZNET NETWORKS",
-      "ip_count": 1,
-      "unique_ips": [
-        "182.253.156.184"
-      ],
-      "countries": [
-        "ID"
-      ],
-      "top_country": "ID",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
         "high-abuse"
       ],
-      "first_seen": "2026-06-02T23:48:59Z",
-      "last_seen": "2026-06-02T23:48:59Z",
+      "first_seen": "2026-06-03T04:26:29Z",
+      "last_seen": "2026-06-03T04:26:29Z",
       "isps": [
-        "Biznet Networks"
-      ]
-    },
-    {
-      "asn": "AS150436",
-      "asn_name": "Byteplus Pte. Ltd.",
-      "ip_count": 1,
-      "unique_ips": [
-        "45.78.198.177"
-      ],
-      "countries": [
-        "SG"
-      ],
-      "top_country": "SG",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:49:03Z",
-      "last_seen": "2026-06-02T23:49:03Z",
-      "isps": [
-        "BYTEPLUS"
-      ]
-    },
-    {
-      "asn": "AS18734",
-      "asn_name": "Operbes, S.A. de C.V.",
-      "ip_count": 1,
-      "unique_ips": [
-        "201.140.123.130"
-      ],
-      "countries": [
-        "MX"
-      ],
-      "top_country": "MX",
-      "avg_abuse_score": 100,
-      "max_abuse_score": 100,
-      "total_reports": 0,
-      "tor_count": 0,
-      "proxy_count": 0,
-      "vpn_count": 0,
-      "anon_count": 0,
-      "high_risk_count": 0,
-      "critical_count": 0,
-      "risk_tier": "HIGH",
-      "tags": [
-        "high-abuse"
-      ],
-      "first_seen": "2026-06-02T23:49:04Z",
-      "last_seen": "2026-06-02T23:49:04Z",
-      "isps": [
-        "Operbes, S.A. de C.V."
+        "Henan Telcom Union Technology Co., LTD"
       ]
     }
   ]
