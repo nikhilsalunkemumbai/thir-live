@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-06-07T04:15:49.813581+00:00",
+  "generated_at": "2026-06-07T09:19:53.135154+00:00",
   "downloads_dir": "/tmp/cowrie-downloads",
   "downloads_found": true,
-  "files_scanned": 28,
+  "files_scanned": 29,
   "files_skipped": 4,
   "files_classified": 10,
   "yara_available": false,
@@ -17,15 +17,15 @@
       "count": 3
     },
     {
+      "family": "Mushtik",
+      "count": 2
+    },
+    {
       "family": "XMRig",
       "count": 2
     },
     {
       "family": "Downloader",
-      "count": 2
-    },
-    {
-      "family": "Mushtik",
       "count": 2
     },
     {
@@ -38,7 +38,7 @@
     }
   ],
   "severity_summary": {
-    "UNKNOWN": 18,
+    "UNKNOWN": 19,
     "CRITICAL": 10
   },
   "critical_samples": [
@@ -46,11 +46,11 @@
       "filename": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "sha256": "17b7944a9b8a4e3edb1b1f2e743ae5d06dae0a8c3a9531e94970aa3261c2cab5",
       "families": [
-        "XMRig",
+        "Mushtik",
         "Gafgyt",
         "Rootkit",
-        "Downloader",
-        "Mushtik"
+        "XMRig",
+        "Downloader"
       ],
       "severity": "CRITICAL"
     },
@@ -82,12 +82,12 @@
       "filename": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "sha256": "7a9da7d10aa80b0f9e2e3f9e518030c86026a636e0b6de35905e15dd4c8e3e2d",
       "families": [
-        "XMRig",
-        "Sora",
+        "Mushtik",
         "Gafgyt",
         "Rootkit",
-        "Downloader",
-        "Mushtik"
+        "Sora",
+        "XMRig",
+        "Downloader"
       ],
       "severity": "CRITICAL"
     },
@@ -200,11 +200,11 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "XMRig",
+        "Mushtik",
         "Gafgyt",
         "Rootkit",
-        "Downloader",
-        "Mushtik"
+        "XMRig",
+        "Downloader"
       ],
       "severity": "CRITICAL",
       "match_count": 5,
@@ -493,12 +493,12 @@
       "file_type": "ELF 64-bit executable",
       "classified": true,
       "families": [
-        "XMRig",
-        "Sora",
+        "Mushtik",
         "Gafgyt",
         "Rootkit",
-        "Downloader",
-        "Mushtik"
+        "Sora",
+        "XMRig",
+        "Downloader"
       ],
       "severity": "CRITICAL",
       "match_count": 6,
@@ -889,6 +889,19 @@
         }
       ],
       "analysis_method": "heuristic"
+    },
+    {
+      "filename": "fc6f8ae5f64e4f17481f7e3be29a1c56949f216a998414188003eae1db20c9e5",
+      "sha256": "fc6f8ae5f64e4f17481f7e3be29a1c56949f216a998414188003eae1db20c9e5",
+      "md5": "3988ac93e8e894b74de7794c93d3ff7d",
+      "file_size_bytes": 3528264,
+      "file_type": "Gzip archive",
+      "classified": false,
+      "families": [],
+      "severity": "UNKNOWN",
+      "match_count": 0,
+      "matches": [],
+      "analysis_method": "none"
     },
     {
       "filename": "tmp41sthfqu",
