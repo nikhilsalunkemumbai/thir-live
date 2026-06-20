@@ -1,10 +1,80 @@
 {
-  "generated_at": "2026-06-20T17:37:37.451789+00:00",
-  "total_sessions_with_commands": 0,
-  "total_clusters": 0,
-  "campaign_clusters": 0,
+  "generated_at": "2026-06-20T19:41:38.476949+00:00",
+  "total_sessions_with_commands": 2,
+  "total_clusters": 1,
+  "campaign_clusters": 1,
   "singleton_clusters": 0,
-  "highest_severity": "NONE",
-  "active_campaigns": [],
-  "clusters": []
+  "highest_severity": "HIGH",
+  "active_campaigns": [
+    {
+      "cluster_id": "CLU-001",
+      "name": "Mirai/IoT Botnet",
+      "severity": "HIGH",
+      "session_count": 2,
+      "unique_ip_count": 1,
+      "ttps": [
+        "T1105",
+        "T1059.004"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "cluster_id": "CLU-001",
+      "is_campaign": true,
+      "campaign_name": "Mirai/IoT Botnet",
+      "campaign_severity": "HIGH",
+      "campaign_description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+      "matched_campaigns": [
+        {
+          "name": "Mirai/IoT Botnet",
+          "ttps": [
+            "T1105",
+            "T1059.004"
+          ],
+          "severity": "HIGH",
+          "description": "Mirai-family IoT botnet. Executes busybox payloads for DDoS bot recruitment.",
+          "pattern_hits": 2,
+          "pattern_total": 3
+        }
+      ],
+      "session_count": 2,
+      "unique_ips": [
+        "49.118.249.73"
+      ],
+      "unique_ip_count": 1,
+      "sequence_hash": "42a9a949d57157f4",
+      "ttps": [
+        {
+          "id": "T1105",
+          "name": "T1105"
+        },
+        {
+          "id": "T1059.004",
+          "name": "T1059.004"
+        }
+      ],
+      "representative_commands": [
+        "/bin/busybox junI2lF1"
+      ],
+      "members": [
+        {
+          "session_id": "IR-e30595b44016",
+          "src_ip": "49.118.249.73",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-20T18:35:50.358127Z"
+        },
+        {
+          "session_id": "IR-b7d2529ca061",
+          "src_ip": "49.118.249.73",
+          "country": "",
+          "isp": "",
+          "command_count": 1,
+          "timestamp": "2026-06-20T18:38:25.564612Z"
+        }
+      ]
+    }
+  ]
 }
