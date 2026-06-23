@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-06-23T20:19:23.657134+00:00",
-  "total_sessions_with_commands": 4,
+  "generated_at": "2026-06-23T23:10:19.916012+00:00",
+  "total_sessions_with_commands": 2,
   "total_clusters": 1,
   "campaign_clusters": 1,
   "singleton_clusters": 0,
@@ -10,8 +10,8 @@
       "cluster_id": "CLU-001",
       "name": "mdrfckr SSH Key Injection",
       "severity": "HIGH",
-      "session_count": 4,
-      "unique_ip_count": 1,
+      "session_count": 2,
+      "unique_ip_count": 2,
       "ttps": [
         "T1021.004",
         "T1078",
@@ -42,11 +42,12 @@
           "pattern_total": 3
         }
       ],
-      "session_count": 4,
+      "session_count": 2,
       "unique_ips": [
-        "124.228.34.69"
+        "45.197.12.65",
+        "20.245.71.147"
       ],
-      "unique_ip_count": 1,
+      "unique_ip_count": 2,
       "sequence_hash": "98af0db988d5971c",
       "ttps": [
         {
@@ -76,36 +77,20 @@
       ],
       "members": [
         {
-          "session_id": "IR-5f3589c9fc5e",
-          "src_ip": "124.228.34.69",
+          "session_id": "IR-74a9e627dbb4",
+          "src_ip": "45.197.12.65",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-23T19:58:25.149374Z"
+          "timestamp": "2026-06-23T21:55:07.401028Z"
         },
         {
-          "session_id": "IR-6b4ccf4d7657",
-          "src_ip": "124.228.34.69",
+          "session_id": "IR-7ccd5e70b0cb",
+          "src_ip": "20.245.71.147",
           "country": "",
           "isp": "",
           "command_count": 2,
-          "timestamp": "2026-06-23T20:00:11.990838Z"
-        },
-        {
-          "session_id": "IR-1f0128f2ca97",
-          "src_ip": "124.228.34.69",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-06-23T20:01:56.800828Z"
-        },
-        {
-          "session_id": "IR-ee54944ea6c8",
-          "src_ip": "124.228.34.69",
-          "country": "",
-          "isp": "",
-          "command_count": 2,
-          "timestamp": "2026-06-23T20:02:31.952314Z"
+          "timestamp": "2026-06-23T22:32:06.441507Z"
         }
       ]
     }
