@@ -40,7 +40,7 @@ Full triage and investigation available in thir-ha historical corpus.
 
 // The feed runs whether or not you're reading.
 
-```
+---
 
 ## Architecture
 
