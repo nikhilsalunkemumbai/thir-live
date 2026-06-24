@@ -1,7 +1,7 @@
 # THIR — Threat Hunter Intelligence Range (ARCHIVED)
 
 > **This repository is archived and read-only.**
-> The live project continues at [thir-ha](https://github.com/[user]/thir-ha).
+> The live project continues at [thir-ha](https://github.com/Aegispub/thir-ha).
 > The live dashboard continues at [thirha.aegispub.com](https://thirha.aegispub.com).
 
 ## What This Repository Was
