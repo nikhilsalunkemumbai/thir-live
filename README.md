@@ -1,10 +1,46 @@
-# THIR — Threat Hunter Intelligence Range
+# THIR — Threat Hunter Intelligence Range (ARCHIVED)
 
-A live honeypot threat intelligence dashboard. A Cowrie SSH honeypot runs on AWS EC2, feeding a GitHub Actions pipeline every two hours. Attacker sessions are parsed, enriched, false-positive filtered, clustered, malware-analyzed, alerted, and published to a live dashboard with automated SOC reporting.
+> **This repository is archived and read-only.**
+> The live project continues at [thir-ha](https://github.com/[user]/thir-ha).
+> The live dashboard continues at [thirha.aegispub.com](https://thirha.aegispub.com).
 
-**Live:** [threats.aegispub.com](https://threats.aegispub.com)
+## What This Repository Was
 
----
+THIR (Threat Hunter Intelligence Range) was a live SSH honeypot threat 
+intelligence pipeline running on AWS EC2. This repository contains the 
+single-node AWS deployment — the predecessor to the current 
+two-node Oracle HA architecture in thir-ha.
+
+## Operation Period
+
+March 7 2026 — June 2026 (pipeline migrated to Oracle Cloud)
+
+## Raw Log Archive
+
+All 59 days of raw Cowrie NDJSON logs are archived at:
+Cloudflare R2 — bucket: thir-raw-archive
+
+Total: ~985MB uncompressed, ~100MB compressed across cowrie-json/ and cowrie-log/
+
+## Notable Finding — Apr 19–22 2026 Campaign
+
+Three anomaly days account for 46% of all collected JSON data:
+- Apr 19: 74MB (25× normal daily volume)
+- Apr 20: 142MB (55× normal — largest single day in corpus)
+- Apr 22: 34MB (campaign resumption after 1-day gap)
+
+Full triage and investigation available in thir-ha historical corpus.
+
+## Where the Project Continues
+
+- Live repo: thir-ha
+- Live dashboard: thirha.aegispub.com
+- Architecture: Oracle Cloud Always Free — 2× VM.Standard.E2.1.Micro
+- Historical corpus: 59-day AWS baseline processed via Tool 00
+
+// The feed runs whether or not you're reading.
+
+```
 
 ## Architecture
 
